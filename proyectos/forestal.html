@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EcoForest Solutions | Demo</title>
+    <link rel="icon" type="image/png" href="../assets/img/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Banner de Demo -->
+    <div class="bg-gradient-to-r from-emerald-600 to-green-500 text-white text-center py-2 text-sm font-medium">
+        <a href="../index.html" class="inline-flex items-center hover:underline">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Volver al portafolio
+        </a>
+        <span class="mx-3">|</span>
+        Modelo de demostración creado por <a href="../index.html" class="underline font-bold">YA Dev</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-white/95 backdrop-blur shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">Eco<span class="text-emerald-600">Forest</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">Inicio</a>
+                    <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">Servicios</a>
+                    <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">Proyectos</a>
+                    <a href="#" class="text-gray-600 hover:text-emerald-600 transition-colors">Sostenibilidad</a>
+                    <a href="#" class="bg-emerald-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-emerald-700 transition-colors">Contactar</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative min-h-[90vh] flex items-center text-white overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?w=1920&q=80" alt="Bosque y Naturaleza" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-emerald-900/80"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur rounded-full px-4 py-2 mb-6">
+                    <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
+                    <span class="text-green-300 text-sm font-medium">Comprometidos con el medio ambiente</span>
+                </div>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                    Gestión forestal <span class="text-green-400">sostenible</span> para un futuro mejor
+                </h1>
+                <p class="text-xl text-emerald-100 mb-8 max-w-2xl">
+                    Expertos en servicios forestales, reforestación y consultoría ambiental. Cuidamos los bosques de hoy para las generaciones del mañana.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="bg-green-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-600 transition-colors flex items-center space-x-2">
+                        <span>Conocer Servicios</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                    <a href="#" class="border border-white/30 px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                        Nuestros Proyectos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Numbers -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-emerald-600">50K+</p>
+                    <p class="text-gray-600 mt-2">Hectáreas reforestadas</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-emerald-600">1M+</p>
+                    <p class="text-gray-600 mt-2">Árboles plantados</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-emerald-600">200+</p>
+                    <p class="text-gray-600 mt-2">Proyectos completados</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-4xl font-bold text-emerald-600">15</p>
+                    <p class="text-gray-600 mt-2">Años de experiencia</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-emerald-600 font-medium mb-2 tracking-wider uppercase">Nuestros Servicios</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Soluciones forestales integrales</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Reforestación</h3>
+                    <p class="text-gray-600">Programas de reforestación con especies nativas adaptadas a cada ecosistema.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Conservación</h3>
+                    <p class="text-gray-600">Protección y manejo de áreas forestales para preservar la biodiversidad.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Consultoría Ambiental</h3>
+                    <p class="text-gray-600">Estudios de impacto ambiental y planes de manejo forestal.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Bonos de Carbono</h3>
+                    <p class="text-gray-600">Gestión de proyectos para certificación y comercialización de bonos de carbono.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-emerald-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Educación Ambiental</h3>
+                    <p class="text-gray-600">Programas de capacitación y concientización sobre sostenibilidad.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all hover:-translate-y-1">
+                    <div class="w-14 h-14 bg-green-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Inventarios Forestales</h3>
+                    <p class="text-gray-600">Monitoreo y evaluación del estado de los recursos forestales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission -->
+    <section class="py-20 bg-emerald-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-green-400 font-medium mb-4 tracking-wider uppercase">Nuestra Misión</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold mb-6">Comprometidos con la sostenibilidad</h2>
+                    <p class="text-emerald-100 text-lg mb-6">
+                        En EcoForest Solutions creemos que la gestión forestal responsable es clave para combatir el cambio climático y preservar nuestros ecosistemas para las futuras generaciones.
+                    </p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Certificación FSC y PEFC</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Equipo de ingenieros forestales especializados</span>
+                        </li>
+                        <li class="flex items-center space-x-3">
+                            <svg class="w-6 h-6 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            <span>Tecnología de monitoreo satelital</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
+                        <p class="text-3xl font-bold text-green-400">-30%</p>
+                        <p class="text-emerald-200 text-sm mt-2">Reducción de huella de carbono</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-6 mt-8">
+                        <p class="text-3xl font-bold text-green-400">100%</p>
+                        <p class="text-emerald-200 text-sm mt-2">Especies nativas</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-6">
+                        <p class="text-3xl font-bold text-green-400">Zero</p>
+                        <p class="text-emerald-200 text-sm mt-2">Deforestación ilegal</p>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-6 mt-8">
+                        <p class="text-3xl font-bold text-green-400">24/7</p>
+                        <p class="text-emerald-200 text-sm mt-2">Monitoreo activo</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-green-500 to-emerald-600">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Únete a nuestra misión verde</h2>
+            <p class="text-xl text-green-100 mb-8">Trabajemos juntos por un futuro más sostenible. Contáctanos para conocer cómo podemos ayudarte.</p>
+            <a href="#" class="inline-block bg-white text-emerald-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+                Solicitar Información
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <div class="w-10 h-10 bg-emerald-600 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold">EcoForest Solutions</span>
+                </div>
+                <p class="text-gray-400 text-sm">Demo creado por <a href="../index.html" class="text-green-400 hover:underline">YA Dev</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

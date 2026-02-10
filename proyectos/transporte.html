@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TransLogix | Demo</title>
+    <link rel="icon" type="image/png" href="../assets/img/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Banner de Demo -->
+    <div class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-center py-2 text-sm font-medium">
+        <a href="../index.html" class="inline-flex items-center hover:underline">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Volver al portafolio
+        </a>
+        <span class="mx-3">|</span>
+        Modelo de demostración creado por <a href="../index.html" class="underline font-bold">YA Dev</a>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17h8m-8-4h8m-8-4h8M3 5h18v14H3z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold text-gray-800">Trans<span class="text-blue-600">Logix</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Inicio</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Servicios</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Rastreo</a>
+                    <a href="#" class="text-gray-600 hover:text-blue-600 transition-colors">Tarifas</a>
+                    <a href="#" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-medium hover:bg-blue-700 transition-colors">Cotizar Envío</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="relative text-white py-24 overflow-hidden">
+        <div class="absolute inset-0">
+            <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=1920&q=80" alt="Transporte y Logística" class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-blue-900/85"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <p class="text-cyan-300 font-medium mb-4 tracking-wider uppercase">Logística inteligente</p>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+                        Tu carga, nuestra <span class="text-cyan-400">prioridad</span>
+                    </h1>
+                    <p class="text-xl text-blue-100 mb-8">
+                        Soluciones de transporte y logística con seguimiento en tiempo real. Entregas seguras y puntuales a nivel nacional.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#" class="bg-cyan-500 text-white px-8 py-4 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
+                            Rastrear Envío
+                        </a>
+                        <a href="#" class="border border-white/30 px-8 py-4 rounded-lg font-semibold hover:bg-white/10 transition-colors">
+                            Cotizar Ahora
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <!-- Tracking Box -->
+                    <div class="bg-white/10 backdrop-blur rounded-2xl p-8">
+                        <h3 class="text-xl font-bold mb-6">Rastrear tu envío</h3>
+                        <div class="space-y-4">
+                            <input type="text" placeholder="Número de guía" class="w-full px-4 py-3 rounded-lg bg-white/10 border border-white/20 text-white placeholder-white/50 focus:outline-none focus:border-cyan-400">
+                            <button class="w-full bg-cyan-500 text-white py-3 rounded-lg font-semibold hover:bg-cyan-600 transition-colors">
+                                Buscar
+                            </button>
+                        </div>
+                        <div class="mt-6 pt-6 border-t border-white/20">
+                            <div class="flex items-center justify-between text-sm">
+                                <span class="text-blue-200">Envíos entregados hoy</span>
+                                <span class="text-2xl font-bold text-cyan-400">1,247</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="py-12 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <p class="text-3xl font-bold text-blue-600">50K+</p>
+                    <p class="text-gray-600">Envíos mensuales</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-blue-600">99.2%</p>
+                    <p class="text-gray-600">Entregas a tiempo</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-blue-600">150+</p>
+                    <p class="text-gray-600">Vehículos</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-blue-600">32</p>
+                    <p class="text-gray-600">Ciudades</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-blue-600 font-medium mb-2 tracking-wider uppercase">Nuestros Servicios</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Soluciones para cada necesidad</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Express</h3>
+                    <p class="text-gray-600 text-sm">Entregas en 24 horas a principales ciudades.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center">
+                    <div class="w-16 h-16 bg-cyan-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Carga Pesada</h3>
+                    <p class="text-gray-600 text-sm">Transporte de mercancías de gran volumen.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Carga Segura</h3>
+                    <p class="text-gray-600 text-sm">Transporte de valores y mercancía delicada.</p>
+                </div>
+                <div class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow text-center">
+                    <div class="w-16 h-16 bg-cyan-100 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                        <svg class="w-8 h-8 text-cyan-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-800 mb-2">Última Milla</h3>
+                    <p class="text-gray-600 text-sm">Distribución urbana puerta a puerta.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-blue-600 font-medium mb-2 tracking-wider uppercase">Proceso simple</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">Cómo funciona</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Solicita tu envío</h3>
+                    <p class="text-gray-600">Ingresa los datos de origen y destino. Recibe tu cotización al instante.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Recogemos tu paquete</h3>
+                    <p class="text-gray-600">Pasamos a recoger tu envío en la dirección indicada.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Entrega garantizada</h3>
+                    <p class="text-gray-600">Rastreo en tiempo real y entrega segura en destino.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-r from-blue-600 to-cyan-500">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Comienza a enviar con nosotros</h2>
+            <p class="text-xl text-blue-100 mb-8">Regístrate gratis y obtén tu primera guía sin costo.</p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#" class="bg-white text-blue-600 px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition-colors">
+                    Crear Cuenta Gratis
+                </a>
+                <a href="#" class="border border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white/10 transition-colors">
+                    Hablar con Ventas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center justify-between">
+                <div class="flex items-center space-x-2 mb-4 md:mb-0">
+                    <div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 17h8m-8-4h8m-8-4h8M3 5h18v14H3z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold">TransLogix</span>
+                </div>
+                <p class="text-gray-400 text-sm">Demo creado por <a href="../index.html" class="text-cyan-400 hover:underline">YA Dev</a></p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
