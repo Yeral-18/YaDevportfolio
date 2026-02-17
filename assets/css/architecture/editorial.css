@@ -1,0 +1,240 @@
+/* ============================================
+   YADEV ARCHITECTURE - EDITORIAL
+   Estilo: Magazine, storytelling, tipografía dominante
+   Inspiración: Patagonia, National Geographic, Medium
+   ============================================ */
+
+[data-architecture="editorial"] {
+    /* Typography Scale - Más dramático */
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Source Serif Pro', Georgia, serif;
+}
+
+/* ===== TYPOGRAPHY OVERRIDES ===== */
+[data-architecture="editorial"] body {
+    font-family: var(--font-body, Georgia, serif);
+    font-size: 1.125rem;
+    line-height: 1.8;
+    letter-spacing: -0.01em;
+}
+
+[data-architecture="editorial"] h1,
+[data-architecture="editorial"] h2,
+[data-architecture="editorial"] h3 {
+    font-family: var(--font-display, Georgia, serif);
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    line-height: 1.1;
+}
+
+/* ===== HERO - Full Bleed Editorial ===== */
+[data-architecture="editorial"] .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr auto;
+    padding: 0;
+}
+
+[data-architecture="editorial"] .hero__title {
+    font-size: clamp(3rem, 12vw, 8rem);
+    font-weight: 400;
+    letter-spacing: -0.04em;
+    line-height: 0.95;
+    max-width: none;
+}
+
+[data-architecture="editorial"] .hero__subtitle {
+    font-size: 1.5rem;
+    font-style: italic;
+    max-width: 50ch;
+    margin-top: 2rem;
+}
+
+/* ===== SECTIONS - Magazine Layout ===== */
+[data-architecture="editorial"] .section {
+    padding: 120px 0;
+}
+
+[data-architecture="editorial"] .section__header {
+    text-align: left;
+    margin-bottom: 80px;
+    max-width: 800px;
+}
+
+[data-architecture="editorial"] .section__label {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 1rem;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+[data-architecture="editorial"] .section__title {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 400;
+    margin-top: 8px;
+}
+
+[data-architecture="editorial"] .section__subtitle {
+    font-size: 1.375rem;
+    line-height: 1.7;
+    max-width: 60ch;
+    margin: 0;
+}
+
+/* ===== GRID - Asymmetric Editorial ===== */
+[data-architecture="editorial"] .grid--3 {
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 48px;
+}
+
+[data-architecture="editorial"] .grid--3 > *:first-child {
+    grid-row: span 2;
+}
+
+[data-architecture="editorial"] .grid--4 {
+    grid-template-columns: repeat(12, 1fr);
+    gap: 24px;
+}
+
+[data-architecture="editorial"] .grid--4 > *:nth-child(1) { grid-column: span 5; }
+[data-architecture="editorial"] .grid--4 > *:nth-child(2) { grid-column: span 7; }
+[data-architecture="editorial"] .grid--4 > *:nth-child(3) { grid-column: span 4; }
+[data-architecture="editorial"] .grid--4 > *:nth-child(4) { grid-column: span 8; }
+
+/* ===== CARDS - Editorial Style ===== */
+[data-architecture="editorial"] .card {
+    border-radius: 0;
+    border: none;
+    border-top: 1px solid var(--border-default);
+    padding: 32px 0;
+    background: transparent;
+    box-shadow: none;
+}
+
+[data-architecture="editorial"] .card:hover {
+    transform: none;
+    box-shadow: none;
+    background: transparent;
+}
+
+[data-architecture="editorial"] .card__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 0;
+    background: transparent;
+    border: 2px solid var(--accent);
+}
+
+[data-architecture="editorial"] .card__title {
+    font-family: var(--font-display);
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+[data-architecture="editorial"] .card__text {
+    font-size: 1.125rem;
+    line-height: 1.7;
+}
+
+/* ===== BUTTONS - Editorial ===== */
+[data-architecture="editorial"] .btn {
+    border-radius: 0;
+    padding: 16px 32px;
+    font-family: var(--font-body);
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.875rem;
+}
+
+[data-architecture="editorial"] .btn--primary {
+    box-shadow: none;
+}
+
+[data-architecture="editorial"] .btn--secondary {
+    border-width: 1px;
+}
+
+/* ===== NAVBAR - Minimal Editorial ===== */
+[data-architecture="editorial"] .navbar {
+    border-bottom: none;
+    padding: 24px 0;
+}
+
+[data-architecture="editorial"] .navbar__link {
+    font-family: var(--font-body);
+    font-size: 0.875rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    border-radius: 0;
+}
+
+/* ===== STATS - Large Numbers ===== */
+[data-architecture="editorial"] .stat__value {
+    font-family: var(--font-display);
+    font-size: 5rem;
+    font-weight: 400;
+    letter-spacing: -0.04em;
+}
+
+[data-architecture="editorial"] .stat__label {
+    font-style: italic;
+    font-size: 1rem;
+}
+
+/* ===== FOOTER - Editorial ===== */
+[data-architecture="editorial"] .footer {
+    padding: 80px 0 40px;
+}
+
+[data-architecture="editorial"] .footer__title {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+/* ===== SPECIAL: Pull Quotes ===== */
+[data-architecture="editorial"] blockquote,
+[data-architecture="editorial"] .pull-quote {
+    font-family: var(--font-display);
+    font-size: 2rem;
+    font-style: italic;
+    line-height: 1.4;
+    border-left: 3px solid var(--accent);
+    padding-left: 32px;
+    margin: 48px 0;
+}
+
+/* ===== SPECIAL: Drop Cap ===== */
+[data-architecture="editorial"] .drop-cap::first-letter {
+    font-family: var(--font-display);
+    float: left;
+    font-size: 5rem;
+    line-height: 0.8;
+    padding-right: 16px;
+    padding-top: 8px;
+    color: var(--accent);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    [data-architecture="editorial"] .grid--3 {
+        grid-template-columns: 1fr;
+    }
+    [data-architecture="editorial"] .grid--3 > *:first-child {
+        grid-row: auto;
+    }
+    [data-architecture="editorial"] .grid--4 > * {
+        grid-column: span 6 !important;
+    }
+}
+
+@media (max-width: 640px) {
+    [data-architecture="editorial"] .grid--4 > * {
+        grid-column: span 12 !important;
+    }
+    [data-architecture="editorial"] .hero__title {
+        font-size: clamp(2.5rem, 10vw, 4rem);
+    }
+}

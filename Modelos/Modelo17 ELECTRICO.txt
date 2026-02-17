@@ -1,0 +1,1173 @@
+
+<!doctype html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+
+	<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v26.9 - https://yoast.com/product/yoast-seo-wordpress/ -->
+	<title>Nosotros - Certiretie S.A.S.</title>
+	<link rel="canonical" href="https://certiretie.com/nosotros/" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="Nosotros - Certiretie S.A.S." />
+	<meta property="og:description" content="Nosotros Acreditación ONAC Un “Certificado de Conformidad” o DICTAMEN es necesario para la aprobación del servicio de: -Instalaciones eléctricas nuevas, ampliaciones o remodelaciones de carga (RETIE) -Instalaciones de iluminación y alumbrado público (RETILAP) -Instalaciones de redes internas de telecomunicaciones (RITEL) Solo un ORGANISMO DE INSPECCIÓN ACREDITADO por el ONAC puede hacer las certificaciones RETIE, RETILAP [&hellip;]" />
+	<meta property="og:url" content="https://certiretie.com/nosotros/" />
+	<meta property="og:site_name" content="Certiretie S.A.S." />
+	<meta property="article:publisher" content="https://web.facebook.com/profile.php?id=61587318813414" />
+	<meta property="article:modified_time" content="2026-02-09T20:32:50+00:00" />
+	<meta property="og:image" content="https://certiretie.com/wp-content/uploads/2023/03/ab-bg.jpg" />
+	<meta property="og:image:width" content="830" />
+	<meta property="og:image:height" content="865" />
+	<meta property="og:image:type" content="image/jpeg" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<meta name="twitter:label1" content="Tiempo de lectura" />
+	<meta name="twitter:data1" content="2 minutos" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://certiretie.com/nosotros/","url":"https://certiretie.com/nosotros/","name":"Nosotros - Certiretie S.A.S.","isPartOf":{"@id":"https://certiretie.com/#website"},"primaryImageOfPage":{"@id":"https://certiretie.com/nosotros/#primaryimage"},"image":{"@id":"https://certiretie.com/nosotros/#primaryimage"},"thumbnailUrl":"https://certiretie.com/wp-content/uploads/2023/03/ab-bg.jpg","datePublished":"2026-02-07T03:58:13+00:00","dateModified":"2026-02-09T20:32:50+00:00","breadcrumb":{"@id":"https://certiretie.com/nosotros/#breadcrumb"},"inLanguage":"es","potentialAction":[{"@type":"ReadAction","target":["https://certiretie.com/nosotros/"]}]},{"@type":"ImageObject","inLanguage":"es","@id":"https://certiretie.com/nosotros/#primaryimage","url":"https://certiretie.com/wp-content/uploads/2023/03/ab-bg.jpg","contentUrl":"https://certiretie.com/wp-content/uploads/2023/03/ab-bg.jpg","width":830,"height":865},{"@type":"BreadcrumbList","@id":"https://certiretie.com/nosotros/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Portada","item":"https://certiretie.com/"},{"@type":"ListItem","position":2,"name":"Nosotros"}]},{"@type":"WebSite","@id":"https://certiretie.com/#website","url":"https://certiretie.com/","name":"Certiretie S.A.S.","description":"ORGANISMO DE INSPECCIONES RETIE-RETILAP-RITEL","publisher":{"@id":"https://certiretie.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://certiretie.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"es"},{"@type":"Organization","@id":"https://certiretie.com/#organization","name":"Certiretie S.A.S.","url":"https://certiretie.com/","logo":{"@type":"ImageObject","inLanguage":"es","@id":"https://certiretie.com/#/schema/logo/image/","url":"https://certiretie.com/wp-content/uploads/2026/02/logo_certiretie.png","contentUrl":"https://certiretie.com/wp-content/uploads/2026/02/logo_certiretie.png","width":768,"height":361,"caption":"Certiretie S.A.S."},"image":{"@id":"https://certiretie.com/#/schema/logo/image/"},"sameAs":["https://web.facebook.com/profile.php?id=61587318813414"]}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//challenges.cloudflare.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel="alternate" type="application/rss+xml" title="Certiretie S.A.S. &raquo; Feed" href="https://certiretie.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Certiretie S.A.S. &raquo; Feed de los comentarios" href="https://certiretie.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://certiretie.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcertiretie.com%2Fnosotros%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://certiretie.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcertiretie.com%2Fnosotros%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id='classic-theme-styles-inline-css'>
+/*! This file is auto-generated */
+.wp-block-button__link{color:#fff;background-color:#32373c;border-radius:9999px;box-shadow:none;text-decoration:none;padding:calc(.667em + 2px) calc(1.333em + 2px);font-size:1.125em}.wp-block-file__button{background:#32373c;color:#fff;text-decoration:none}
+/*# sourceURL=/wp-includes/css/classic-themes.min.css */
+</style>
+<style id='joinchat-button-style-inline-css'>
+.wp-block-joinchat-button{border:none!important;text-align:center}.wp-block-joinchat-button figure{display:table;margin:0 auto;padding:0}.wp-block-joinchat-button figcaption{font:normal normal 400 .6em/2em var(--wp--preset--font-family--system-font,sans-serif);margin:0;padding:0}.wp-block-joinchat-button .joinchat-button__qr{background-color:#fff;border:6px solid #25d366;border-radius:30px;box-sizing:content-box;display:block;height:200px;margin:auto;overflow:hidden;padding:10px;width:200px}.wp-block-joinchat-button .joinchat-button__qr canvas,.wp-block-joinchat-button .joinchat-button__qr img{display:block;margin:auto}.wp-block-joinchat-button .joinchat-button__link{align-items:center;background-color:#25d366;border:6px solid #25d366;border-radius:30px;display:inline-flex;flex-flow:row nowrap;justify-content:center;line-height:1.25em;margin:0 auto;text-decoration:none}.wp-block-joinchat-button .joinchat-button__link:before{background:transparent var(--joinchat-ico) no-repeat center;background-size:100%;content:"";display:block;height:1.5em;margin:-.75em .75em -.75em 0;width:1.5em}.wp-block-joinchat-button figure+.joinchat-button__link{margin-top:10px}@media (orientation:landscape)and (min-height:481px),(orientation:portrait)and (min-width:481px){.wp-block-joinchat-button.joinchat-button--qr-only figure+.joinchat-button__link{display:none}}@media (max-width:480px),(orientation:landscape)and (max-height:480px){.wp-block-joinchat-button figure{display:none}}
+
+/*# sourceURL=https://certiretie.com/wp-content/plugins/creame-whatsapp-me/gutenberg/build/style-index.css */
+</style>
+<style id='global-styles-inline-css'>
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+:where(.wp-block-post-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-post-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-term-template.is-layout-flex){gap: 1.25em;}:where(.wp-block-term-template.is-layout-grid){gap: 1.25em;}
+:where(.wp-block-columns.is-layout-flex){gap: 2em;}:where(.wp-block-columns.is-layout-grid){gap: 2em;}
+:root :where(.wp-block-pullquote){font-size: 1.5em;line-height: 1.6;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://certiretie.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.5' media='all' />
+<link rel='stylesheet' id='elecrix-google-fonts-css' href='https://fonts.googleapis.com/css?family=Inter%3A100%2C200%2C300%2C400%2C500%2C600%2C700%2C800%2C900&#038;subset=latin' media='all' />
+<link rel='stylesheet' id='bootstrap-css' href='https://certiretie.com/wp-content/themes/elecrix/assets/css/bootstrap.min.css?ver=6.9.1' media='all' />
+<link rel='stylesheet' id='fontawesome-all-1-css' href='https://certiretie.com/wp-content/themes/elecrix/assets/css/fontawesome-all.css?ver=6.9.1' media='all' />
+<link rel='stylesheet' id='flaticon-css' href='https://certiretie.com/wp-content/themes/elecrix/assets/css/flaticon.css?ver=6.9.1' media='all' />
+<link rel='stylesheet' id='splitting-css' href='https://certiretie.com/wp-content/themes/elecrix/assets/css/splitting.css?ver=6.9.1' media='all' />
+<link rel='stylesheet' id='animate-css' href='https://certiretie.com/wp-content/themes/elecrix/assets/css/animate.css?ver=6.9.1' media='all' />
+<link rel='stylesheet' id='video-css' href='https://certiretie.com/wp-content/themes/elecrix/assets/css/video.min.css?ver=6.9.1' media='all' />
+<link rel='stylesheet' id='slick-theme-css' href='https://certiretie.com/wp-content/themes/elecrix/assets/css/slick-theme.css?ver=6.9.1' media='all' />
+<link rel='stylesheet' id='slick-css' href='https://certiretie.com/wp-content/themes/elecrix/assets/css/slick.css?ver=6.9.1' media='all' />
+<link rel='stylesheet' id='global-css' href='https://certiretie.com/wp-content/themes/elecrix/assets/css/global.css?ver=6.9.1' media='all' />
+<link rel='stylesheet' id='odometer-theme-default-css' href='https://certiretie.com/wp-content/themes/elecrix/assets/css/odometer-theme-default.css?ver=6.9.1' media='all' />
+<link rel='stylesheet' id='elecrix-main-css' href='https://certiretie.com/wp-content/themes/elecrix/assets/css/style.css?ver=6.9.1' media='all' />
+<link rel='stylesheet' id='elecrix-style-css' href='https://certiretie.com/wp-content/themes/elecrix/style.css?ver=6.9.1' media='all' />
+<link rel='stylesheet' id='elecrix-theme-custom-style-css' href='https://certiretie.com/wp-content/themes/elecrix/assets/css/custom-style.css?ver=6.9.1' media='all' />
+<style id='elecrix-theme-custom-style-inline-css'>
+        
+        :root {
+            --base-color:  #99ca3c;
+            }
+                
+            :root {
+                --base-color-2:  #2a1b50;
+            }
+        
+/*# sourceURL=elecrix-theme-custom-style-inline-css */
+</style>
+<link rel='stylesheet' id='elementor-frontend-css' href='https://certiretie.com/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.35.4' media='all' />
+<link rel='stylesheet' id='elementor-post-13-css' href='https://certiretie.com/wp-content/uploads/elementor/css/post-13.css?ver=1770947121' media='all' />
+<link rel='stylesheet' id='widget-divider-css' href='https://certiretie.com/wp-content/plugins/elementor/assets/css/widget-divider.min.css?ver=3.35.4' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://certiretie.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.35.4' media='all' />
+<link rel='stylesheet' id='widget-image-css' href='https://certiretie.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.35.4' media='all' />
+<link rel='stylesheet' id='elementor-post-1555-css' href='https://certiretie.com/wp-content/uploads/elementor/css/post-1555.css?ver=1770947121' media='all' />
+<link rel='stylesheet' id='csf-google-web-fonts-css' href='//fonts.googleapis.com/css?family=Montserrat:500,400&#038;display=swap' media='all' />
+<link rel='stylesheet' id='elementor-gf-roboto-css' href='https://fonts.googleapis.com/css?family=Roboto:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<link rel='stylesheet' id='elementor-gf-robotoslab-css' href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<link rel='stylesheet' id='elementor-gf-inter-css' href='https://fonts.googleapis.com/css?family=Inter:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<link rel='stylesheet' id='elementor-gf-montserrat-css' href='https://fonts.googleapis.com/css?family=Montserrat:100,100italic,200,200italic,300,300italic,400,400italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic&#038;display=swap' media='all' />
+<script src="https://certiretie.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://certiretie.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<link rel="https://api.w.org/" href="https://certiretie.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://certiretie.com/wp-json/wp/v2/pages/1555" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://certiretie.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.1" />
+<link rel='shortlink' href='https://certiretie.com/?p=1555' />
+<meta name="generator" content="Elementor 3.35.4; features: e_font_icon_svg, additional_custom_breakpoints; settings: css_print_method-external, google_font-enabled, font_display-swap">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<meta name="generator" content="Powered by Slider Revolution 6.7.41 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<style type="text/css">body{font-family:"Montserrat";font-weight:500;}h1, h2, h3, h4, h5, h6{font-family:"Montserrat";font-weight:normal;}</style><link rel="icon" href="https://certiretie.com/wp-content/uploads/2026/02/favicon_certiretie-150x150.png" sizes="32x32" />
+<link rel="icon" href="https://certiretie.com/wp-content/uploads/2026/02/favicon_certiretie-300x300.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://certiretie.com/wp-content/uploads/2026/02/favicon_certiretie-300x300.png" />
+<meta name="msapplication-TileImage" content="https://certiretie.com/wp-content/uploads/2026/02/favicon_certiretie-300x300.png" />
+<script>function setREVStartSize(e){
+			//window.requestAnimationFrame(function() {
+				window.RSIW = window.RSIW===undefined ? window.innerWidth : window.RSIW;
+				window.RSIH = window.RSIH===undefined ? window.innerHeight : window.RSIH;
+				try {
+					var pw = document.getElementById(e.c).parentNode.offsetWidth,
+						newh;
+					pw = pw===0 || isNaN(pw) || (e.l=="fullwidth" || e.layout=="fullwidth") ? window.RSIW : pw;
+					e.tabw = e.tabw===undefined ? 0 : parseInt(e.tabw);
+					e.thumbw = e.thumbw===undefined ? 0 : parseInt(e.thumbw);
+					e.tabh = e.tabh===undefined ? 0 : parseInt(e.tabh);
+					e.thumbh = e.thumbh===undefined ? 0 : parseInt(e.thumbh);
+					e.tabhide = e.tabhide===undefined ? 0 : parseInt(e.tabhide);
+					e.thumbhide = e.thumbhide===undefined ? 0 : parseInt(e.thumbhide);
+					e.mh = e.mh===undefined || e.mh=="" || e.mh==="auto" ? 0 : parseInt(e.mh,0);
+					if(e.layout==="fullscreen" || e.l==="fullscreen")
+						newh = Math.max(e.mh,window.RSIH);
+					else{
+						e.gw = Array.isArray(e.gw) ? e.gw : [e.gw];
+						for (var i in e.rl) if (e.gw[i]===undefined || e.gw[i]===0) e.gw[i] = e.gw[i-1];
+						e.gh = e.el===undefined || e.el==="" || (Array.isArray(e.el) && e.el.length==0)? e.gh : e.el;
+						e.gh = Array.isArray(e.gh) ? e.gh : [e.gh];
+						for (var i in e.rl) if (e.gh[i]===undefined || e.gh[i]===0) e.gh[i] = e.gh[i-1];
+											
+						var nl = new Array(e.rl.length),
+							ix = 0,
+							sl;
+						e.tabw = e.tabhide>=pw ? 0 : e.tabw;
+						e.thumbw = e.thumbhide>=pw ? 0 : e.thumbw;
+						e.tabh = e.tabhide>=pw ? 0 : e.tabh;
+						e.thumbh = e.thumbhide>=pw ? 0 : e.thumbh;
+						for (var i in e.rl) nl[i] = e.rl[i]<window.RSIW ? 0 : e.rl[i];
+						sl = nl[0];
+						for (var i in nl) if (sl>nl[i] && nl[i]>0) { sl = nl[i]; ix=i;}
+						var m = pw>(e.gw[ix]+e.tabw+e.thumbw) ? 1 : (pw-(e.tabw+e.thumbw)) / (e.gw[ix]);
+						newh =  (e.gh[ix] * m) + (e.tabh + e.thumbh);
+					}
+					var el = document.getElementById(e.c);
+					if (el!==null && el) el.style.height = newh+"px";
+					el = document.getElementById(e.c+"_wrapper");
+					if (el!==null && el) {
+						el.style.height = newh+"px";
+						el.style.display = "block";
+					}
+				} catch(e){
+					console.log("Failure at Presize of Slider:" + e)
+				}
+			//});
+		  };</script>
+		<style id="wp-custom-css">
+			/*Custom by JorgBot*/
+
+/*logo*/
+.elx-header-content-wrap .brand-logo {
+    background-color: #fbfafa !important;
+}
+@media screen and (max-width: 1450px) {
+    .elx-header-content-wrap .brand-logo img {
+        max-width: 170px !important;
+    }
+}
+
+/*boton pse*/
+.elx-hd-cta-btn a {
+    background-image: url("/wp-content/uploads/2026/02/logo_pse.png");
+    background-repeat: no-repeat;
+    background-position: left center;
+    background-size: contain;
+    padding-left: 60px; 
+    display: inline-block; 
+}
+
+/*Menu espacios*/
+.elx-main-navigation-area li a {
+    padding: 0px 3px 40px !important;
+}
+.elx-main-navigation-area .dropdown:after {
+    right: -7px !important;
+}
+
+/*ruta paginas*/
+.elx-breadcrumb-list {
+    display: none !important;
+}
+
+/*icon*/
+.elx-contact-info .info-item-area .inner-icon svg {
+    width: 35px;
+    height: 35px;
+}
+
+/*menu activo*/
+.elx-main-navigation-area li.current-menu-item > a {
+    position: relative;
+}
+.elx-main-navigation-area li.current-menu-item > a::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 0;
+    height: 4px;
+    background: #8BC34A;
+    border-radius: 3px;
+}
+
+/*form AQR*/
+.elx-contact-form-area, .formview {
+    max-width: 800px;
+}
+
+/* INPUTS */
+.wpcf7 input,
+.wpcf7 select,
+.wpcf7 textarea {
+	margin: 5px;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 8px;
+  border: 1px solid #b3b3b3;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+/* FOCUS */
+.wpcf7 input:focus,
+.wpcf7 select:focus,
+.wpcf7 textarea:focus {
+  border-color: #99ca3c;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(153, 202, 60, 0.25);
+}
+
+/* BOTÓN */
+.wpcf7 input[type="submit"] {
+  background: #2a1b50;
+  color: #fff;
+  border: none;
+  padding: 14px 30px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+/* HOVER BOTÓN */
+.wpcf7 input[type="submit"]:hover {
+  background: #99ca3c;
+  color: #2a1b50;
+}
+
+/* TEXTO LEGAL */
+.form-legal {
+  font-size: 13px;
+  color: #6f6f6f;
+  text-align: center;
+  margin-top: 14px;
+}
+
+.form-legal a {
+  color: #2a1b50;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.form-legal a:hover {
+  color: #99ca3c;
+}
+
+/*oficinas*/
+/* CONTENEDOR DE LOS BOTONES */
+.elx-why-choose-tab-btn ul {
+  gap: 12px; /* espacio entre botones */
+}
+
+/* BOTÓN NUMÉRICO */
+.elx-why-choose-tab-btn li {
+  width: 36px;
+  height: 36px;
+  line-height: 36px;
+  margin-bottom: 14px;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+/* BOTÓN INTERNO */
+.elx-why-choose-tab-btn li button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ACTIVO */
+.elx-why-choose-tab-btn li.active {
+  background: #99ca3c;
+  color: #2a1b50;
+}
+
+/* HOVER */
+.elx-why-choose-tab-btn li:hover {
+  background: #e9f4dc;
+}
+
+/*Logros Oficina*/
+/* Centrar números y texto en sección de métricas */
+.elementor-element-89f6534 .elementor-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.elementor-element-89f6534 .elementor-column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Números y textos en negro */
+.elementor-element-89f6534,
+.elementor-element-89f6534 * {
+    color: #2a1b50 !important;
+}
+
+
+/* CENTRAR TODO EL FOOTER EN MÓVIL */
+@media (max-width: 767px) {
+
+  /* Centra columnas */
+  #elx-footer .row {
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
+  /* Centra widgets */
+  #elx-footer .elx-footer-widget,
+  #elx-footer .address-widget,
+  #elx-footer .contact-widget {
+    text-align: center !important;
+    margin: 0 auto !important;
+  }
+
+  /* Centra items de contacto */
+  #elx-footer .elx-contact-item-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* Forzar centrado REAL del bloque horario */
+  #elx-footer .elx-open-hours {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
+    text-align: center !important;
+    width: 100%;
+  }
+
+  /* Centrar cada línea del horario */
+  #elx-footer .elx-open-hours p,
+  #elx-footer .elx-open-hours span,
+  #elx-footer .elx-open-hours li {
+    text-align: center !important;
+    width: 100%;
+  }
+
+  /* Centra redes sociales */
+  #elx-footer .footer-social {
+    display: flex !important;
+    justify-content: center !important;
+    gap: 12px;
+    margin-top: 15px;
+  }
+
+}
+
+/* Ocultar versión desktop PAGAR */
+@media (min-width: 1025px) {
+    header .menu-item-2039 {
+        display: none !important;
+    }
+}
+
+/* SOLO EN MÓVIL - CORRECCIÓN BOTÓN PSE */
+@media (max-width: 1024px) {
+
+    /* Contenedor del ítem */
+    .mobile_menu_content .menu-item-2039 {
+        margin: 15px 20px 20px 20px;
+        list-style: none;
+    }
+
+    /* Enlace tipo botón */
+    .mobile_menu_content .menu-item-2039 > a {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important; /* Centra el conjunto logo+texto */
+        background-color: #1d144d !important; /* Cambié el verde por el azul oscuro de tu logo para que se vea premium */
+        border-radius: 8px;
+        height: 55px;
+        text-decoration: none;
+        font-weight: 700;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 16px;
+        color: #ffffff !important; /* El texto ahora es blanco y visible */
+        text-transform: uppercase;
+        
+        /* Ajuste del Logo */
+        background-image: url("/wp-content/uploads/2026/02/logo_pse.png") !important;
+        background-repeat: no-repeat !important;
+        background-position: 15px center !important; /* Mueve el logo a la izquierda */
+        background-size: 40px auto !important; /* Logo más pequeño para que no pise el texto */
+        
+        /* Espaciado para que el texto no toque el logo */
+        padding-left: 50px !important; 
+    }
+
+    /* Efecto al tocar el botón */
+    .mobile_menu_content .menu-item-2039 > a:hover {
+        background-color: #2a1f6e !important; /* Un azul un poco más claro al presionar */
+    }
+}
+/*inicio experiencia*/
+.elx-about-counter-item p {
+    font-size: 15px !important;
+}		</style>
+		</head>
+
+<body class="wp-singular page-template page-template-elecrix-template page-template-elecrix-template-php page page-id-1555 wp-theme-elecrix elementor-default elementor-kit-13 elementor-page elementor-page-1555">
+	<div id="preloader"></div>
+<div class="up">
+	<a href="#" class="scrollup text-center"><i class="fas fa-chevron-up"></i></a>
+</div>
+<div class="cursor"></div>
+<div id="page" class="site body_wrap">	
+<header id="elx-header" class="elx-header-section">
+    <div class="elx-header-content-wrap d-flex">
+    <div class="brand-logo d-flex align-items-center justify-content-center">
+                    <a href="https://certiretie.com/" >
+        <img src="https://certiretie.com/wp-content/uploads/2026/02/logo_certiretie.png" alt="Certiretie S.A.S.">
+        </a>
+        </div>
+    <div class="elx-header-top-menu-content">
+        <!-- Top BAR -->
+        <div class="elx-header-top-content d-flex justify-content-between">
+    <div class="header-top-info ul-li">
+        <ul>
+                            <li><i class="fas fa-map-marker-alt "></i>  Cll. 1 #9E-16 Barrio Quinta Oriental Cúcuta, Colombia</li>
+                                        <li><i class="fas fa-phone-alt"></i>  (60) 75922761</li>
+                    </ul>
+    </div>
+    <div class="header-top-social-info d-flex align-items-center">
+        <div class="header-top-info ul-li">
+            <ul>
+                                    <li><i class="far fa-envelope-open"></i>  <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="a0c3cfced4c1c3d4cfe0c3c5d2d4c9d2c5d4c9c58ec3cfcd">[email&#160;protected]</a></li>
+                            </ul>
+        </div>
+                <div class="header-social">
+                            <a href="https://web.facebook.com/certiretie"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/certiretie_sas"><i class="fab fa-instagram"></i></a>
+                    </div>
+            </div>
+</div>
+        <div class="elx-header-menu-cta-btn d-flex justify-content-between align-items-center">
+            <div class="elx-header-menu-navigation">
+                <nav class="elx-main-navigation-area clearfix ul-li">
+                    <ul id="main-nav" class="nav navbar-nav clearfix"><li id="menu-item-904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-904"><a href="https://certiretie.com/">Inicio</a></li>
+<li id="menu-item-1645" class="menu-item menu-item-type-custom menu-item-object-custom dropdown menu-item-1645"><a href="#">Dictámenes</a>
+<ul class="dropdown-menu clearfix">
+	<li id="menu-item-1672" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1672"><a href="https://certiretie.com/consultar-dictamen/">Consultar Dictamen</a></li>
+	<li id="menu-item-1781" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1781"><a href="https://certiretie.com/consultar-en-sicerco/">Consultar SICERCO</a></li>
+</ul>
+</li>
+<li id="menu-item-1514" class="menu-item menu-item-type-custom menu-item-object-custom dropdown menu-item-1514"><a href="#">Cotizar</a>
+<ul class="dropdown-menu clearfix">
+	<li id="menu-item-1527" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1527"><a href="https://certiretie.com/cotizacion-retie/">Cotización RETIE</a></li>
+	<li id="menu-item-1533" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1533"><a href="https://certiretie.com/cotizacion-retilap/">Cotización RETILAP</a></li>
+	<li id="menu-item-1539" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1539"><a href="https://certiretie.com/cotizacion-ritel/">Cotización RITEL</a></li>
+</ul>
+</li>
+<li id="menu-item-1828" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1555 current_page_item menu-item-1828"><a href="https://certiretie.com/nosotros/" aria-current="page">Nosotros</a></li>
+<li id="menu-item-1563" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1563"><a href="https://certiretie.com/oficinas/">Oficinas</a></li>
+<li id="menu-item-1436" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1436"><a href="https://certiretie.com/aqr/">AQR</a></li>
+<li id="menu-item-907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907"><a href="https://certiretie.com/contacto/">Contacto</a></li>
+<li id="menu-item-2039" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2039"><a href="https://www.zonapagos.com/t_Certiretie">PAGAR AHORA</a></li>
+</ul>                </nav>
+            </div>
+            <div class="elx-header-cta-search-btn d-flex align-items-center">
+                                <div class="elx-header-cta d-flex align-items-center">
+                    <div class="inner-icon">
+                        <i class="fas fa-phone-volume"></i>
+                    </div>
+                    <div class="inner-text">
+                        <span class="title">Contáctenos</span>
+                        <span> 3103423961 - 3112655589</span>
+                    </div>
+                </div>
+                                <div class="elx-header-search-sidebar-btn d-flex align-items-center">
+                                                        </div>
+                                <div class="elx-hd-cta-btn text-uppercase">
+                    <a href="https://www.zonapagos.com/t_Certiretie">PAGAR AHORA</a>
+                </div>
+                            </div>
+            <!-- Mobile Menu  -->
+                <div class="mobile_menu position-relative">
+        <div class="mobile_menu_button open_mobile_menu">
+            <i class="fal fa-bars"></i>
+        </div>
+        <div class="mobile_menu_wrap">
+            <div class="mobile_menu_overlay open_mobile_menu"></div>
+            <div class="mobile_menu_content">
+                <div class="mobile_menu_close open_mobile_menu">
+                    <i class="far fa-times"></i>
+                </div>
+                <div class="m-brand-logo">
+                                <a href="https://certiretie.com/" >
+        <img src="https://certiretie.com/wp-content/uploads/2026/02/logo_certiretie.png" alt="Certiretie S.A.S.">
+        </a>
+                    </div>
+                <nav class="mobile-main-navigation  clearfix ul-li">
+                    <ul id="main-nav" class="nav navbar-nav clearfix"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-904"><a href="https://certiretie.com/">Inicio</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom dropdown menu-item-1645"><a href="#">Dictámenes</a>
+<ul class="dropdown-menu clearfix">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1672"><a href="https://certiretie.com/consultar-dictamen/">Consultar Dictamen</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1781"><a href="https://certiretie.com/consultar-en-sicerco/">Consultar SICERCO</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom dropdown menu-item-1514"><a href="#">Cotizar</a>
+<ul class="dropdown-menu clearfix">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1527"><a href="https://certiretie.com/cotizacion-retie/">Cotización RETIE</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1533"><a href="https://certiretie.com/cotizacion-retilap/">Cotización RETILAP</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1539"><a href="https://certiretie.com/cotizacion-ritel/">Cotización RITEL</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1555 current_page_item menu-item-1828"><a href="https://certiretie.com/nosotros/" aria-current="page">Nosotros</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1563"><a href="https://certiretie.com/oficinas/">Oficinas</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1436"><a href="https://certiretie.com/aqr/">AQR</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-907"><a href="https://certiretie.com/contacto/">Contacto</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2039"><a href="https://www.zonapagos.com/t_Certiretie">PAGAR AHORA</a></li>
+</ul>                </nav>
+            </div>
+        </div>
+        <!-- /Mobile-Menu -->
+    </div>
+        </div>
+    </div>
+
+</div>
+    <div class="xs-sidebar-group info-group">
+		<div class="xs-overlay xs-bg-black">
+			<div class="row loader-area">
+				<div class="col-3 preloader-wrap">
+					<div class="loader-bg"></div>
+				</div>
+				<div class="col-3 preloader-wrap">
+					<div class="loader-bg"></div>
+				</div>
+				<div class="col-3 preloader-wrap">
+					<div class="loader-bg"></div>
+				</div>
+				<div class="col-3 preloader-wrap">
+					<div class="loader-bg"></div>
+				</div>
+			</div>
+		</div>
+		<div class="xs-sidebar-widget">
+			<div class="sidebar-widget-container">
+				<div class="widget-heading">
+					<a href="#" class="close-side-widget">
+						X					</a>
+				</div>
+				<div class="sidebar-textwidget">
+
+					<div class="sidebar-info-contents headline pera-content">
+						<div class="content-inner">
+                            							<div class="logo">
+								<a href="https://certiretie.com/"><img src="https://certiretie.com/wp-content/uploads/2026/02/logo_certiretie.png" alt=""></a>
+							</div>
+                            							<div class="content-box">
+								<h5>About Us</h5>
+								<p class="text">The argument in favor of using filler text goes something like this: If you use real content in the Consulting Process, anytime you reach a review point you’ll end up reviewing and negotiating the content itself and not the design.</p>
+							</div>
+							<div class="gallery-box ul-li">
+                                								    <h5>Gallery</h5>
+                                								<ul class="zoom-gallery">
+                                    									    <li><a href="" data-source=""><img src="" alt="Gallery"></a></li>
+                                    									    <li><a href="" data-source=""><img src="" alt="Gallery"></a></li>
+                                    									    <li><a href="" data-source=""><img src="" alt="Gallery"></a></li>
+                                    									    <li><a href="" data-source=""><img src="" alt="Gallery"></a></li>
+                                    									    <li><a href="" data-source=""><img src="" alt="Gallery"></a></li>
+                                    									    <li><a href="" data-source=""><img src="" alt="Gallery"></a></li>
+                                    								</ul>
+							</div>
+							<div class="content-box">
+                                                                    <h5>Social Account</h5>
+                                                                								<ul class="social-box">
+                                    									    <li><a href="#" class="fab fa-facebook-f"></a></li>
+                                    									    <li><a href="#" class="fab fa-twitter"></a></li>
+                                    									    <li><a href="#" class="fab fa-instagram"></a></li>
+                                    									    <li><a href="#" class="fab fa-youtube"></a></li>
+                                    								</ul>
+                                							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+    <div class="search-body">
+		<div class="search-form">
+			<form method="post" action="https://certiretie.com/" class="search-form-area">
+				<input class="search-input" type="search" name="s" value="" placeholder="Search Here">
+				<button type="submit" class="search-btn1">
+					<i class="fas fa-search"></i>
+				</button>	
+			</form>
+			<div class="outer-close text-center search-btn">
+				<i class="far fa-times"></i>
+			</div>
+		</div>
+	</div>
+</header>
+
+
+<div class="clearfix"></div>
+
+<div id="elementor_page_builder">
+					<div data-elementor-type="wp-page" data-elementor-id="1555" class="elementor elementor-1555" data-elementor-post-type="page">
+						<section class="elementor-section elementor-top-section elementor-element elementor-element-cb65227 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="cb65227" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-a4a94ee" data-id="a4a94ee" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-a9efee1 elementor-absolute elementor-widget-divider--view-line elementor-widget elementor-widget-divider" data-id="a9efee1" data-element_type="widget" data-e-type="widget" data-settings="{&quot;_position&quot;:&quot;absolute&quot;}" data-widget_type="divider.default">
+							<div class="elementor-divider">
+			<span class="elementor-divider-separator">
+						</span>
+		</div>
+						</div>
+				<div class="elementor-element elementor-element-2a34d3a elementor-widget elementor-widget-heading" data-id="2a34d3a" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Nosotros</h2>				</div>
+				<div class="elementor-element elementor-element-02b48b5 elementor-widget elementor-widget-heading" data-id="02b48b5" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Acreditación ONAC</h2>				</div>
+				<div class="elementor-element elementor-element-8d68c92 elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-id="8d68c92" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img fetchpriority="high" decoding="async" width="640" height="667" src="https://certiretie.com/wp-content/uploads/2023/03/ab-bg.jpg" class="attachment-large size-large wp-image-442" alt="" srcset="https://certiretie.com/wp-content/uploads/2023/03/ab-bg.jpg 830w, https://certiretie.com/wp-content/uploads/2023/03/ab-bg-288x300.jpg 288w, https://certiretie.com/wp-content/uploads/2023/03/ab-bg-768x800.jpg 768w" sizes="(max-width: 640px) 100vw, 640px" />															</div>
+				<div class="elementor-element elementor-element-5810697 elementor-widget elementor-widget-text-editor" data-id="5810697" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p>Un “Certificado de Conformidad” o DICTAMEN es necesario para la aprobación del servicio de:</p><p>-Instalaciones eléctricas nuevas, ampliaciones o remodelaciones de carga (RETIE)</p><p>-Instalaciones de iluminación y alumbrado público (RETILAP)</p><p>-Instalaciones de redes internas de telecomunicaciones (RITEL)</p><p>Solo un ORGANISMO DE INSPECCIÓN ACREDITADO por el ONAC puede hacer las certificaciones RETIE, RETILAP y RITEL, que avalan la SEGURIDAD de una instalación.</p><p>En CERTIRETIE SAS contamos con acreditación ONAC, vigente a la fecha, con código de acreditación 14-OIN-041 bajo la norma NTC ISO IEC 17020.</p><p>Desde entonces, trabajamos todos los días para garantizar con idoneidad, independencia e imparcialidad, que nuestras inspecciones son correctas y sus instalaciones eléctricas son seguras</p>								</div>
+				<div class="elementor-element elementor-element-671cc54 elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="671cc54" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+										<a class="elementor-button elementor-button-link elementor-size-sm" href="https://certiretie.com/wp-content/uploads/2026/02/14-OIN-041-5.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text"> Certificado de acreditación ONAC</span>
+					</span>
+					</a>
+								</div>
+				<div class="elementor-element elementor-element-156da96 elementor-mobile-align-center elementor-widget elementor-widget-button" data-id="156da96" data-element_type="widget" data-e-type="widget" data-widget_type="button.default">
+										<a class="elementor-button elementor-button-link elementor-size-sm" href="https://certiretie.com/wp-content/uploads/2026/02/Q-MC-R-29-DERECHOS-Y-DEBERES-v5.pdf" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text"> Deberes y derechos del OI y de los clientes exposición</span>
+					</span>
+					</a>
+								</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-5dca3b7" data-id="5dca3b7" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap">
+							</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-81c4461 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="81c4461" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-2df674e" data-id="2df674e" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2cfa45e elementor-hidden-desktop elementor-hidden-tablet elementor-widget elementor-widget-image" data-id="2cfa45e" data-element_type="widget" data-e-type="widget" data-widget_type="image.default">
+															<img decoding="async" width="640" height="667" src="https://certiretie.com/wp-content/uploads/2026/02/m-v-nosotros-m2.jpg" class="attachment-large size-large wp-image-1909" alt="" srcset="https://certiretie.com/wp-content/uploads/2026/02/m-v-nosotros-m2.jpg 830w, https://certiretie.com/wp-content/uploads/2026/02/m-v-nosotros-m2-288x300.jpg 288w, https://certiretie.com/wp-content/uploads/2026/02/m-v-nosotros-m2-768x800.jpg 768w" sizes="(max-width: 640px) 100vw, 640px" />															</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-99a843d" data-id="99a843d" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-d666edf elementor-widget elementor-widget-heading" data-id="d666edf" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Misión</h2>				</div>
+				<div class="elementor-element elementor-element-8f1f1db elementor-widget elementor-widget-text-editor" data-id="8f1f1db" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p style="text-align: justify;">CERTIRETIE S.A.S. es una empresa prestadora de servicios de inspección de tercera parte tipo A, que Evalúa el cumplimiento de las instalaciones con el Reglamento Técnico de Instalaciones Eléctricas, El Reglamento Técnico de Iluminación y Alumbrado Público, el Reglamento Técnico de Redes Internas de Telecomunicaciones, estos servicios se prestan basados en nuestras políticas de Independencia, Imparcialidad, Integridad, y confidencialidad, garantizando la satisfacción de los requerimientos de nuestros clientes, los requisitos legales, reglamentarios y técnicos aplicables al organismo de Inspección.</p>								</div>
+				<div class="elementor-element elementor-element-684ae36 elementor-widget elementor-widget-heading" data-id="684ae36" data-element_type="widget" data-e-type="widget" data-widget_type="heading.default">
+					<h2 class="elementor-heading-title elementor-size-default">Visión</h2>				</div>
+				<div class="elementor-element elementor-element-13702dc elementor-widget elementor-widget-text-editor" data-id="13702dc" data-element_type="widget" data-e-type="widget" data-widget_type="text-editor.default">
+									<p style="text-align: justify;">CERTIRETIE S.A.S. para el 2030 será un organismo de Inspección, fortalecido comercialmente, líder con una cobertura nacional en las principales ciudades del país, brindando un amplio portafolio de servicios en la inspección de Instalaciones Eléctricas, inspección de infraestructura de iluminación y alumbrado público e Inspeccione de Instalaciones de Redes internas de Telecomunicaciones, basadas en los reglamentos Técnicos RETIE, RETILAP y RITEL respectivamente, que permita a nuestros clientes vernos como la mejor opción en calidad y cobertura para la inspección de sus instalaciones impactando positivamente nuestras partes interesadas y generando beneficios socio-económicos para sus asociados y para el país.</p>								</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				<section class="elementor-section elementor-top-section elementor-element elementor-element-89f6534 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="89f6534" data-element_type="section" data-e-type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+						<div class="elementor-container elementor-column-gap-default">
+					<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-3e81991" data-id="3e81991" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-faaec47 elementor-widget elementor-widget-ele-counter-id" data-id="faaec47" data-element_type="widget" data-e-type="widget" data-widget_type="ele-counter-id.default">
+				<div class="elementor-widget-container">
+						<div class="elx-fun-fact-item headline pera-content">
+        <h3><span class="odometer" data-count="16"></span>+</h3>
+        <p class="text-uppercase">Años</p>
+    </div>
+    				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-1ab056f" data-id="1ab056f" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-2cb6fe0 elementor-widget elementor-widget-ele-counter-id" data-id="2cb6fe0" data-element_type="widget" data-e-type="widget" data-widget_type="ele-counter-id.default">
+				<div class="elementor-widget-container">
+						<div class="elx-fun-fact-item headline pera-content">
+        <h3><span class="odometer" data-count="30"></span>+</h3>
+        <p class="text-uppercase">Conferencias</p>
+    </div>
+    				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-3db9636" data-id="3db9636" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-5905eb0 elementor-widget elementor-widget-ele-counter-id" data-id="5905eb0" data-element_type="widget" data-e-type="widget" data-widget_type="ele-counter-id.default">
+				<div class="elementor-widget-container">
+						<div class="elx-fun-fact-item headline pera-content">
+        <h3><span class="odometer" data-count="130000"></span>+</h3>
+        <p class="text-uppercase">Inspecciones</p>
+    </div>
+    				</div>
+				</div>
+					</div>
+		</div>
+				<div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-70756df" data-id="70756df" data-element_type="column" data-e-type="column">
+			<div class="elementor-widget-wrap elementor-element-populated">
+						<div class="elementor-element elementor-element-b4aa6e7 elementor-widget elementor-widget-ele-counter-id" data-id="b4aa6e7" data-element_type="widget" data-e-type="widget" data-widget_type="ele-counter-id.default">
+				<div class="elementor-widget-container">
+						<div class="elx-fun-fact-item headline pera-content">
+        <h3><span class="odometer" data-count="6"></span>+</h3>
+        <p class="text-uppercase">Oficinas</p>
+    </div>
+    				</div>
+				</div>
+					</div>
+		</div>
+					</div>
+		</section>
+				</div>
+			</div><!-- #main -->
+
+<div class="clearfix"></div>
+
+
+<footer id="elx-footer" class="elx-footer-section ">
+    <div class="container">
+                <div class="elx-footer-widget-wrapper">
+            <div class="row">
+                <div class="col-lg-3 col-md-6">
+                    <div class="elx-footer-widget headline pera-content ul-li-block">
+                        <div class="address-widget">
+                            <h3 class="widget-title">CERTIRETIE S.A.S.</h3>
+                            <p><p style="text-align: left">Organismo de inspección Tipo A, con principios de independencia, imparcialidad e integridad, conforme a RETIE, RETILAP y RITEL.</p>
+</p>
+                                                        <div class="footer-social">
+                                                                    <a href="https://web.facebook.com/certiretie"><i class="fab fa-facebook-f"></i></a>
+                                                                    <a href="https://www.instagram.com/certiretie_sas"><i class="fab fa-instagram"></i></a>
+                                                            </div>
+                                                    </div>
+                    </div>
+                </div>
+                                    <div class="col-lg-3 col-md-6">
+                        <div id="nav_menu-1" class="elx-footer-widget headline pera-content ul-li-block"><div class="menu-widget"><h3 class="widget-title">Cotiza aquí</h3><div class="menu-cotiza-aqui-container"><ul id="menu-cotiza-aqui" class="menu"><li id="menu-item-1542" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1542"><a href="https://certiretie.com/cotizacion-retie/">RETIE</a></li>
+<li id="menu-item-1541" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1541"><a href="https://certiretie.com/cotizacion-retilap/">RETILAP</a></li>
+<li id="menu-item-1540" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1540"><a href="https://certiretie.com/cotizacion-ritel/">RITEL</a></li>
+<li id="menu-item-1275" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1275"><a href="https://www.zonapagos.com/t_Certiretie">PAGAR AHORA</a></li>
+</ul></div></div></div>                    </div>
+                                                    <div class="col-lg-3 col-md-6">
+                        <div id="nav_menu-2" class="elx-footer-widget headline pera-content ul-li-block"><div class="menu-widget"><h3 class="widget-title">Información</h3><div class="menu-menu-container"><ul id="menu-menu" class="menu"><li id="menu-item-1267" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1267"><a href="https://certiretie.com/">Inicio</a></li>
+<li id="menu-item-1829" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-1555 current_page_item menu-item-1829"><a href="https://certiretie.com/nosotros/" aria-current="page">Nosotros</a></li>
+<li id="menu-item-1663" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1663"><a href="https://certiretie.com/oficinas/">Oficinas</a></li>
+<li id="menu-item-1504" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1504"><a href="https://certiretie.com/aqr/">AQR</a></li>
+<li id="menu-item-1428" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1428"><a href="https://certiretie.com/contacto/">Contacto</a></li>
+</ul></div></div></div>                    </div>
+                                <div class="col-lg-3 col-md-6">
+                    <div class="elx-footer-widget headline pera-content ul-li-block">
+                        <div class="contact-widget">
+                                                            <h3 class="widget-title">Contáctenos</h3>
+                                                                                    <div class="elx-contact-item-area">
+                                                                <div class="elx-contact-item d-flex">
+                                    <div class="inner-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="inner-text">
+                                         Cll. 1 #9E-16 Barrio Quinta Oriental Cúcuta, Colombia                                    </div>
+                                </div>
+                                                                <div class="elx-contact-item d-flex">
+                                    <div class="inner-icon">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                    <div class="inner-text">
+                                        (60) 75922761                                    </div>
+                                </div>
+                                                            </div>
+                                                                                    <div class="elx-open-hours">
+                                <h4>Horario:</h4>
+                                <p>Lun - Vie: 7:00 a.m. - 5:00 p.m</p>
+                            </div>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+                <div class="elx-footer-copyright d-flex justify-content-between align-items-center">
+            <div class="copyright-logo">
+                            <a href="https://certiretie.com/" >
+        <img src="https://certiretie.com/wp-content/uploads/2026/02/logo_certiretie_footer_blanco.png" alt="Certiretie S.A.S.">
+        </a>
+                </div>
+            <div class="copyright-text">
+                 Copyright © 2026 Certiretie S.A.S. | Cúcuta, Colombia 
+            </div>
+        </div>
+    </div>
+</footer></div><!-- #page -->
+
+
+		<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+			window.RS_MODULES = window.RS_MODULES || {};
+			window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+			window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+			window.RS_MODULES.defered = true;
+			window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+			window.RS_MODULES.type = 'compiled';
+		</script>
+		<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/elecrix/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+<!--Start of Tawk.to Script (0.9.3)-->
+<script id="tawk-script" type="text/javascript">
+var Tawk_API = Tawk_API || {};
+var Tawk_LoadStart=new Date();
+(function(){
+	var s1 = document.createElement( 'script' ),s0=document.getElementsByTagName( 'script' )[0];
+	s1.async = true;
+	s1.src = 'https://embed.tawk.to/5e16048427773e0d832c83bb/default';
+	s1.charset = 'UTF-8';
+	s1.setAttribute( 'crossorigin','*' );
+	s0.parentNode.insertBefore( s1, s0 );
+})();
+</script>
+<!--End of Tawk.to Script (0.9.3)-->
+
+
+
+<!--Custom by JorgBot-->
+
+<!-- BOTÓN AVISO -->
+<div class="aviso-float-btn" onclick="openAvisoModal()" title="Aviso importante">
+  ⚠️
+</div>
+
+<!-- MODAL -->
+<div id="avisoModal" class="aviso-modal">
+  <div class="aviso-modal-content">
+    <span class="aviso-close" onclick="closeAvisoModal()">&times;</span>
+
+    <h3>Estimado cliente</h3>
+
+    <p>
+      Toda cotización se relizará, única y exclusivamente, a través del correo
+      <strong><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="680b071c0112090b0107060d1b280b0d1a1c011a0d1c010d460b0705">[email&#160;protected]</a></strong>.
+    </p>
+
+    <p>
+      Todas nuestras comunicaciones son emitidas desde correos corporativos <strong>@certiretie.com</strong>.
+    </p>
+
+    <p>
+      Todo pago debe realizarse a nuestra única cuenta empresarial a nombre de
+      <strong>CERTIRETIE S.A.S</strong>, sin excepciones.
+    </p>
+
+    <p>
+      Utilice nuestros canales de contacto web como el botón de <strong>WhatsApp</strong> y el chat <strong>en línea en el área inferior del sitio</strong>.
+    </p>
+
+    <div class="aviso-modal-footer">
+      ¡Ayúdenos a garantizar la correcta certificación y la seguridad de sus instalaciones!
+    </div>
+  </div>
+</div>
+
+<style>
+/* BOTÓN AVISO FLOTANTE */
+.aviso-float-btn {
+  position: fixed;
+  width: 56px;
+  height: 56px;
+  background-color: #2a1b50;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,.25);
+  z-index: 9999;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  .aviso-float-btn {
+    left: 20px;
+    bottom: 90px;
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 769px) {
+  .aviso-float-btn {
+    left: 30px;
+    bottom: 110px;
+  }
+}
+
+.aviso-float-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 22px rgba(0,0,0,.35);
+}
+
+/* MODAL FONDO */
+.aviso-modal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  inset: 0;
+  background: rgba(0,0,0,.55);
+  backdrop-filter: blur(2px);
+}
+
+/* MODAL CAJA */
+.aviso-modal-content {
+  background: #fff;
+  max-width: 520px;
+  margin: 10% auto;
+  padding: 34px 38px;
+  border-radius: 14px;
+  font-family: 'Montserrat', sans-serif;
+  color: #333;
+  position: relative;
+  animation: modalFade .25s ease;
+}
+
+@keyframes modalFade {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.aviso-modal-content h3 {
+  font-size: 24px;
+  margin-bottom: 18px;
+  color: #2a1b50;
+  font-weight: 700;
+}
+
+.aviso-modal-content p {
+  font-size: 14.8px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+.aviso-modal-content strong {
+  color: #2a1b50;
+}
+
+/* FOOTER */
+.aviso-modal-footer {
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #e6e6e6;
+  font-size: 13.8px;
+  text-align: center;
+  font-weight: 600;
+  color: #555;
+}
+
+/* BOTÓN CERRAR */
+.aviso-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 26px;
+  color: #999;
+  cursor: pointer;
+}
+
+.aviso-close:hover {
+  color: #2a1b50;
+}
+</style>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+function openAvisoModal() {
+  document.getElementById("avisoModal").style.display = "block";
+}
+
+function closeAvisoModal() {
+  document.getElementById("avisoModal").style.display = "none";
+}
+
+window.onclick = function(event) {
+  const modal = document.getElementById("avisoModal");
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+
+<div class="joinchat joinchat--left joinchat--btn" data-settings='{"telephone":"573103423961","mobile_only":false,"button_delay":3,"whatsapp_web":true,"qr":false,"message_views":2,"message_delay":-10,"message_badge":false,"message_send":"","message_hash":""}' hidden aria-hidden="false">
+	<div class="joinchat__button" role="button" tabindex="0" aria-label="Contactar por WhatsApp">
+							</div>
+			</div>
+			<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			<link rel='stylesheet' id='joinchat-css' href='https://certiretie.com/wp-content/plugins/creame-whatsapp-me/public/css/joinchat-btn.min.css?ver=6.0.10' media='all' />
+<link rel='stylesheet' id='rs-plugin-settings-css' href='//certiretie.com/wp-content/plugins/revslider/sr6/assets/css/rs6.css?ver=6.7.41' media='all' />
+<style id='rs-plugin-settings-inline-css'>
+#rs-demo-id {}
+/*# sourceURL=rs-plugin-settings-inline-css */
+</style>
+<script src="https://certiretie.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script src="https://certiretie.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script src="https://certiretie.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.5" id="swv-js"></script>
+<script id="contact-form-7-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2025-12-01 15:45:40+0000","generator":"GlotPress\/4.0.3","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"es"},"This contact form is placed in the wrong place.":["Este formulario de contacto est\u00e1 situado en el lugar incorrecto."],"Error:":["Error:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+</script>
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/certiretie.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+//# sourceURL=contact-form-7-js-before
+</script>
+<script src="https://certiretie.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.5" id="contact-form-7-js"></script>
+<script src="//certiretie.com/wp-content/plugins/revslider/sr6/assets/js/rbtools.min.js?ver=6.7.41" defer async id="tp-tools-js"></script>
+<script src="//certiretie.com/wp-content/plugins/revslider/sr6/assets/js/rs6.min.js?ver=6.7.41" defer async id="revmin-js"></script>
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js" id="cloudflare-turnstile-js" data-wp-strategy="async"></script>
+<script id="cloudflare-turnstile-js-after">
+document.addEventListener( 'wpcf7submit', e => turnstile.reset() );
+//# sourceURL=cloudflare-turnstile-js-after
+</script>
+<script src="https://certiretie.com/wp-includes/js/imagesloaded.min.js?ver=5.0.0" id="imagesloaded-js"></script>
+<script src="https://certiretie.com/wp-includes/js/masonry.min.js?ver=4.2.2" id="masonry-js"></script>
+<script src="https://certiretie.com/wp-content/themes/elecrix/assets/js/bootstrap.min.js?ver=1.0" id="bootstrap-js"></script>
+<script src="https://certiretie.com/wp-content/themes/elecrix/assets/js/popper.min.js?ver=1.0" id="popper-js"></script>
+<script src="https://certiretie.com/wp-content/themes/elecrix/assets/js/appear.js?ver=1.0" id="appear-js"></script>
+<script src="https://certiretie.com/wp-content/themes/elecrix/assets/js/slick.js?ver=1.0" id="slick-js"></script>
+<script src="https://certiretie.com/wp-content/themes/elecrix/assets/js/wow.min.js?ver=1.0" id="wow-js"></script>
+<script src="https://certiretie.com/wp-content/themes/elecrix/assets/js/rbtools.min.js?ver=1.0" defer async id="rbtools-js"></script>
+<script src="https://certiretie.com/wp-content/themes/elecrix/assets/js/twin.js?ver=1.0" id="twin-js"></script>
+<script src="https://certiretie.com/wp-content/themes/elecrix/assets/js/odometer.js?ver=1.0" id="odometer-js"></script>
+<script src="https://certiretie.com/wp-content/themes/elecrix/assets/js/splitting.js?ver=1.0" id="splitting-js"></script>
+<script src="https://certiretie.com/wp-content/themes/elecrix/assets/js/scroll-out.js?ver=1.0" id="scroll-out-js"></script>
+<script src="https://certiretie.com/wp-content/themes/elecrix/assets/js/parallax-scroll.js?ver=1.0" id="parallax-scroll-js"></script>
+<script src="https://certiretie.com/wp-content/themes/elecrix/assets/js/jquery.magnific-popup.min.js?ver=1.0" id="jquery-magnific-popup-js"></script>
+<script src="https://certiretie.com/wp-content/themes/elecrix/assets/js/script.js?ver=1.0" id="script-js"></script>
+<script src="https://certiretie.com/wp-content/plugins/creame-whatsapp-me/public/js/joinchat.min.js?ver=6.0.10" id="joinchat-js" defer data-wp-strategy="defer" fetchpriority="low"></script>
+<script src="https://certiretie.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.35.4" id="elementor-webpack-runtime-js"></script>
+<script src="https://certiretie.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.35.4" id="elementor-frontend-modules-js"></script>
+<script src="https://certiretie.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartir en Facebook","shareOnTwitter":"Compartir en Twitter","pinIt":"Pinear","download":"Descargar","downloadImage":"Descargar imagen","fullscreen":"Pantalla completa","zoom":"Zoom","share":"Compartir","playVideo":"Reproducir v\u00eddeo","previous":"Anterior","next":"Siguiente","close":"Cerrar","a11yCarouselPrevSlideMessage":"Diapositiva anterior","a11yCarouselNextSlideMessage":"Diapositiva siguiente","a11yCarouselFirstSlideMessage":"Esta es la primera diapositiva","a11yCarouselLastSlideMessage":"Esta es la \u00faltima diapositiva","a11yCarouselPaginationBulletMessage":"Ir a la diapositiva"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"M\u00f3vil vertical","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"M\u00f3vil horizontal","value":880,"default_value":880,"direction":"max","is_enabled":false},"tablet":{"label":"Tableta vertical","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tableta horizontal","value":1200,"default_value":1200,"direction":"max","is_enabled":false},"laptop":{"label":"Port\u00e1til","value":1366,"default_value":1366,"direction":"max","is_enabled":false},"widescreen":{"label":"Pantalla grande","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":false},"version":"3.35.4","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"e_optimized_markup":true,"theme_builder_v2":true,"e_pro_free_trial_popup":true,"nested-elements":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true,"e_components":true,"e_interactions":true,"e_editor_one":true,"import-export-customization":true,"mega-menu":true,"e_pro_variables":true},"urls":{"assets":"https:\/\/certiretie.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/certiretie.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/certiretie.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"38f806d28a"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_tablet"],"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description"},"post":{"id":1555,"title":"Nosotros%20-%20Certiretie%20S.A.S.","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+<script src="https://certiretie.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.35.4" id="elementor-frontend-js"></script>
+<script src="https://certiretie.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.35.0" id="elementor-pro-webpack-runtime-js"></script>
+<script id="elementor-pro-frontend-js-before">
+var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/certiretie.com\/wp-admin\/admin-ajax.php","nonce":"1ab930c412","urls":{"assets":"https:\/\/certiretie.com\/wp-content\/plugins\/elementor-pro\/assets\/","rest":"https:\/\/certiretie.com\/wp-json\/"},"settings":{"lazy_load_background_images":true},"popup":{"hasPopUps":true},"shareButtonsNetworks":{"facebook":{"title":"Facebook","has_counter":true},"twitter":{"title":"Twitter"},"linkedin":{"title":"LinkedIn","has_counter":true},"pinterest":{"title":"Pinterest","has_counter":true},"reddit":{"title":"Reddit","has_counter":true},"vk":{"title":"VK","has_counter":true},"odnoklassniki":{"title":"OK","has_counter":true},"tumblr":{"title":"Tumblr"},"digg":{"title":"Digg"},"skype":{"title":"Skype"},"stumbleupon":{"title":"StumbleUpon","has_counter":true},"mix":{"title":"Mix"},"telegram":{"title":"Telegram"},"pocket":{"title":"Pocket","has_counter":true},"xing":{"title":"XING","has_counter":true},"whatsapp":{"title":"WhatsApp"},"email":{"title":"Email"},"print":{"title":"Print"},"x-twitter":{"title":"X"},"threads":{"title":"Threads"}},"facebook_sdk":{"lang":"es_ES","app_id":""},"lottie":{"defaultAnimationUrl":"https:\/\/certiretie.com\/wp-content\/plugins\/elementor-pro\/modules\/lottie\/assets\/animations\/default.json"}};
+//# sourceURL=elementor-pro-frontend-js-before
+</script>
+<script src="https://certiretie.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.35.0" id="elementor-pro-frontend-js"></script>
+<script src="https://certiretie.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.35.0" id="pro-elements-handlers-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://certiretie.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.1"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://certiretie.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"8c81811cc64d40c5b37392cadcfdcb1c","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

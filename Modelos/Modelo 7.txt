@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+    <html lang="en" prefix="og: http://ogp.me/ns#">
+      <head>
+        <link rel="stylesheet" type="text/css" href="https://neuralink.com/assets/static/index.DVC7kSP0.css">
+        <link rel="stylesheet" type="text/css" href="https://neuralink.com/assets/static/index.B8rxkwsU.css">
+        <link rel="stylesheet" type="text/css" href="https://neuralink.com/assets/static/index.CE6NLekm.css">
+        <link rel="stylesheet" type="text/css" href="https://neuralink.com/assets/static/index.Pnuxy43E.css">
+        <link rel="stylesheet" type="text/css" href="https://neuralink.com/assets/static/index.B6SlO2qD.css">
+        <link rel="stylesheet" type="text/css" href="https://neuralink.com/assets/static/index.CqSEbUTj.css">
+        <link rel="stylesheet" type="text/css" href="https://neuralink.com/assets/static/default.page.server.Db41snkZ.css">
+        <link rel="stylesheet" type="text/css" href="https://neuralink.com/assets/static/default.page.BwupRFsK.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta name="theme-color" content="#000000">
+
+        <!-- Language -->
+        <meta charset="UTF-8">
+        <meta property="og:locale" content="en_US">
+
+        
+
+        <!-- Title -->
+        <title>Technology | Neuralink</title>
+        <meta property="og:title" content="Technology | Neuralink">
+        <meta property="og:site_name" content="Neuralink">
+
+        <!-- Description -->
+        <meta name="description" content="Discover your future at Neuralink, where we lead the development of cutting-edge brain-computer interfaces.">
+        <meta property="og:description" content="Discover your future at Neuralink, where we lead the development of cutting-edge brain-computer interfaces.">
+
+        <!-- Canonical and Alternate URLs -->
+        <link rel="canonical" href="https://neuralink.com/technology/">
+        <meta property="og:url" content="https://neuralink.com/technology/">
+
+        <!-- Icon and Image -->
+        <meta name="twitter:card" content="summary_large_image">
+        <link rel="icon" href="https://neuralink.com/favicon.png">
+        <meta property="og:image" content="https://neuralink.com/assets/static/Accelerated_Lifetime_Test.Dlp16oHe.webp">
+        <meta property="og:image:alt" content="A man placing a plastic box containing a Neuralink implant into a grid of other, similar boxes. Each box has wires connected it.">
+        <meta property="og:image:width" content="2048">
+        <meta property="og:image:height" content="1366">
+
+        <!-- Authorship -->
+        <meta name="twitter:site" content="@neuralink">
+        <meta name="twitter:creator" content="@neuralink">
+        <meta name="author" content="Neuralink">
+        <meta name="copyright" content="Copyright 2026 Neuralink">
+
+        
+          <!-- Miscellaneous SEO -->
+          <meta name="robots" content="index,follow">
+          <meta name="googlebot" content="index,follow">
+          <link rel="sitemap" type="application/xml" href="https://neuralink.com/sitemap.xml">
+          <meta name="keywords" content="neuralink,bci,brain computer interface,clinical trial,human trial,prime study,quadriplegia,paraplegia,als">
+        
+
+        
+          <meta property="og:type" content="website">
+        
+
+        <!-- Schema.org -->
+        <script type="application/ld+json">
+          {"@context":"https://schema.org","@type":"WebSite","url":"https://neuralink.com/technology/","name":"Technology | Neuralink","abstract":"Discover your future at Neuralink, where we lead the development of cutting-edge brain-computer interfaces.","image":{"@type":"ImageObject","url":"https://neuralink.com/assets/static/Accelerated_Lifetime_Test.Dlp16oHe.webp","caption":"A man placing a plastic box containing a Neuralink implant into a grid of other, similar boxes. Each box has wires connected it.","width":2048,"height":1366},"author":[{"@type":"Organization","name":"Neuralink","logo":{"@type":"ImageObject","url":"https://neuralink.com/favicon.png","caption":"Neuralink Logo","width":96,"height":96}}]}
+        </script>
+
+        <!-- Google tag (gtag.js) -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-FR4E2J5WBJ"></script>
+        <script>
+          window.dataLayer = window.dataLayer || [];
+          window.gtag = function() { dataLayer.push(arguments); }
+
+          // @see https://developers.google.com/tag-platform/security/guides/consent?consentmode=advanced
+          // @see src/page/cookie-popup-shell/grant.ts
+
+          // Grant permissions by default in the U.S. and Canada.
+          gtag('consent', 'default', {
+            'region': [ 'US', 'CA' ],
+            'wait_for_update': 1000,
+
+            'ad_user_data': 'granted',
+            'ad_personalization': 'granted',
+            'ad_storage': 'granted',
+            'analytics_storage': 'granted',
+          });
+
+          // But deny by default everywhere else.
+          gtag('consent', 'default', {
+            'wait_for_update': 1000,
+
+            'ad_user_data': 'denied',
+            'ad_personalization': 'denied',
+            'ad_storage': 'denied',
+            'analytics_storage': 'denied',
+          });
+
+          gtag('js', new Date());
+
+          gtag('config', 'G-FR4E2J5WBJ');
+        </script>
+      </head>
+      <body>
+        <div id="page-view"></div>
+        <script type="module" src="https://neuralink.com/assets/entries/entry-server-routing.ChujVUVO.js" defer></script>
+        <link rel="modulepreload" href="https://neuralink.com/assets/entries/pages_technology_index.page.B6-W8wTX.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-Bn7kwhP1.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-CNF2rtMd.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-CFshlFj7.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-DO-wvkZN.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-2PRjh2Ou.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-CRsAwEIf.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-aLfjG8Xb.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-DrrBCYwv.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-DX6rZLP_.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-cLMFH8ff.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-CIWYfOmV.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/entries/renderer_default.page.client.CLrLIBRh.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-CZdcAzkH.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-D1r46rap.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-C0uf5GLO.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/entries/renderer_default.page.server.extractAssets.ztbCiuS8.js" as="script" type="text/javascript" crossorigin>
+        <link rel="modulepreload" href="https://neuralink.com/assets/chunks/chunk-BBhcfcQV.js" as="script" type="text/javascript" crossorigin>
+        <script id="vite-plugin-ssr_pageContext" type="application/json">{"pageProps":"!undefined","urlPathname":"/technology","abortReason":"!undefined","_urlRewrite":null,"_urlRedirect":"!undefined","abortStatusCode":"!undefined","_abortCall":"!undefined","_pageContextInitHasClientData":"!undefined","_pageId":"/pages/technology/index"}</script>
+      </body>
+    </html>

@@ -1,0 +1,600 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<link rel="icon" type="image/png" href="favicon.png">
+<meta name="generator" content="Damos Soluciones Ltda. www.damossoluciones.net">
+<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>Editor CMS - Administrador de contenidos</title>        <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Medula+One' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/minificados.css" type="text/css" media="screen">
+        <link rel="stylesheet" href="js/jquery.fancybox.min.css" >
+        <link rel="stylesheet" href="css/style_arreglo_modal.min.css" type="text/css" media="screen">
+        <!--[if lt IE 8]> <div style='text-align:center'><a href="https://www.microsoft.com/windows/internet-explorer/default.aspx?ocid=ie6_countdown_bannercode"><img src="https://www.theie6countdown.com/img/upgrade.jpg"border="0"alt=""/></a></div> <![endif]--> <!--[if lt IE 9]> <link rel="stylesheet" href="css/ie.css" type="text/css" media="screen">  <script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
+  <style>
+      .card{
+        margin-bottom: 20px;
+        padding: 0px 10px;
+      }
+      .card-body{
+        padding: 20px 10px 20px 10px;
+        }
+      .item-menu{
+        display: inline-block;
+        width: 180px;
+        /*margin: 10px;*/
+        text-align: center;
+        box-shadow: none;
+        border: 1px solid transparent;
+        transition: all 0.3s;
+        padding: 18px 0px 0px 0px;
+        top: 0;
+        position: relative;
+        vertical-align: top;
+
+        min-height: 220px;
+      }
+
+      .item-menu:after{
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 0px;
+            left: 0px;
+            transition: all 0.3s;
+            top: 100%;
+            background: radial-gradient( ellipse at 50% -50%, rgba(0,0,0,0.4), rgba(0,0,0,0) 80%);
+            border-radius: 0;
+        }
+
+        .item-menu:hover:after{
+            /*top: 100%;*/
+            height: 8px;
+            transition: all 0.3s;
+            border-radius: 50%;
+        }
+
+      .item-menu:hover,.item-menu:focus{
+        box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        border-color: #eee;
+        transition: all 0.3s;
+        top: -3px;
+      }
+      .item-menu a{
+        display: block;
+        margin-bottom: 8px;
+      }
+      .item-menu .im-img,.item-menu .im-texto{
+        padding: 5px;
+      }
+      .item-menu .im-img{
+        padding:0 30px 12px 30px;
+      }
+      .actions-btn{
+        float: right;
+        padding-right: 10px;
+        top: -4px;
+        position: relative;
+    }
+
+    .box-btn{
+        font-size: 20px;
+        color: #333;
+        width: 30px;
+        height: 30px;
+        display: inline-block;
+        line-height: 30px;
+        text-align: center;
+    }
+    .card-title{
+        padding: 10px 0px 10px 10px;
+        margin-top: 0;
+    }
+
+
+	@media (max-width: 450px) {
+		.item-menu {
+			width: 140px;
+		}
+
+		/*.im-texto p {
+			display: none;
+		}*/
+
+	}
+
+    .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
+        border: 1px solid #dad55e;
+        background: #fffa90;
+        color: #777620;
+        width: 180px;
+        height: 220px;
+        position: absolute;
+        top: 0;
+        left: -999px;
+    }
+  </style>
+</head>
+
+<body>
+    <input type="hidden" id="phpscript" value="menu.php">
+
+    <header class="sub-header">
+        <div class="container">
+            <div class="row">
+                <div class="span12">
+                    <h1 class="brand">
+    <a href="../" title="Visualizar Front-end" target="_blank" >
+        <img
+	class="img_phone"
+	src="theme_custom/img/logo-editor.png"
+	style="height: 40px; width: auto; margin: 6px 0 0 0;"
+	alt="Cliente"
+>
+    </a>
+</h1>
+        <div class="navbar navbar_ clearfix">
+           <div class="navbar-inner">
+              <div class="nav-collapse nav-collapse_ collapse">
+                <ul class="nav sf-menu clearfix">
+                  <li class="active"><a href="menu.php">Menú</a></li>
+                  <!--<li><a href="index-1.html">company</a></li>-->
+                  <li><a href="contacto.php">soporte</a></li>
+
+                  <style type="text/css">
+                        .mejoradojahir {
+                            padding: 21px 45px 0 45px !important;
+                            height: 60px;
+                        }
+
+                        .mejoradojahir:hover {
+                            background: white !important;
+                        }
+
+
+                        .mejoradojahir:hover span a {
+                            color: black !important;
+                        }
+                  </style>
+                  <li class="sub-menu mejoradojahir">
+                        <span><a href="modulos/administradores/edita.php?id=4"> Marcos Velasquez </a></span>
+
+                    <ul>
+                      <!--<li><a href="miperfil.php">Mi perfil</a></li>-->
+					<!--<li><a href="cambiopass.php">Olvido su contraseña</a></li>-->
+                      <li><a href="logout.php">Cerrar sesión</a></li>
+                      <!--<li class="sub-menu"><a href="#">SEO Marketing</a>
+                        <ul>
+                          <li><a href="#">Sales and marketing</a></li>
+                          <li><a href="#">IT &amp; e-commerce</a></li>
+                          <li><a href="#">Exploit your ideas</a></li>
+                        </ul>
+                      </li>-->
+                    </ul>
+                  </li>
+
+
+
+                 <li>
+                                                    <img src="fotosadministradores/admin_marcos.jpg" width="70" height="70" />
+                                   				                                   </li>
+
+                </ul>
+              </div>
+            </div>
+         </div>                </div>
+            </div>
+        </div>
+    </header>
+    <!--==============================content=================================-->
+    <div id="content">
+        <div class="content-block">
+            <!--inicia contenido-->
+            <div class="container">
+                <div class="row">
+                    <br><br>
+                    <div class="span12">
+
+                        
+
+
+                        <div class="card">
+                            <div class="card-title">
+                                <span class="lead lead2">Herramientas administrativas y de configuración</span>
+                                <div class="actions-btn">
+                                    <a class="box-btn btn-open text-info" body-open="#body-panel1" id="panel1zeus">
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="card-body sortable" id="body-panel1" style="display: none;">
+                            
+                                
+
+                                
+
+                                
+
+                                
+
+                                
+
+                                                                <div class="item-menu" id="aRegistrosId-1">
+                                    <div class="im-img">
+                                        <a href="modulos/administradores/lista.php">
+                                            <img src="img/iconos/administradores.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="im-texto">
+                                        <a href="modulos/administradores/lista.php" class="lead lead2">Administradores</a>
+                                        <p>Gestione y cree nuevos usuarios administradores para el gestor de contenidos</p>
+                                    </div>
+                                    <!-- <div class="ui-sortable-placeholder ui-state-highlight"></div> -->
+                                </div>
+                                                                    <div class="item-menu" id="aRegistrosId-2">
+                                        <div class="im-img">
+                                            <a href="modulos/posicionamiento/lista.php">
+                                                <img src="img/iconos/posicionamiento.jpg" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="im-texto">
+                                            <a href="modulos/posicionamiento/lista.php" class="lead lead2">Posicionamiento</a>
+                                            <p>Modifique los metadatos, palabras claves y demás parámetros de SEO</p>
+                                        </div>
+                                        <!-- <div class="ui-sortable-placeholder ui-state-highlight"></div> -->
+                                    </div>
+                                                                    <div class="item-menu" id="aRegistrosId-3">
+                                        <div class="im-img">
+                                            <a href="modulos/contacto/lista.php">
+                                                <img src="img/iconos/correos.jpg" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="im-texto">
+                                            <a href="modulos/contacto/lista.php" class="lead lead2">Contacto</a>
+                                            <p>Gestiones los datos de contacto y las cuentas de correo de los formularios</p>
+                                        </div>
+                                        <!-- <div class="ui-sortable-placeholder ui-state-highlight"></div> -->
+                                    </div>
+                                                                    <div class="item-menu" id="aRegistrosId-26">
+                                        <div class="im-img">
+                                            <a href="modulos/correos">
+                                                <img src="img/iconos/webmail.jpg" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="im-texto">
+                                            <a href="modulos/correos" class="lead lead2">Correos</a>
+                                            <p>Modifique cuentas de correo, contraseñas y cuotas de espacio (Webmail)</p>
+                                        </div>
+                                        <!-- <div class="ui-sortable-placeholder ui-state-highlight"></div> -->
+                                    </div>
+                                                                    <div class="item-menu" id="aRegistrosId-27">
+                                        <div class="im-img">
+                                            <a href="modulos/estadisticas">
+                                                <img src="img/iconos/awstats.jpg" alt="" class="img-responsive">
+                                            </a>
+                                        </div>
+                                        <div class="im-texto">
+                                            <a href="modulos/estadisticas" class="lead lead2">Estadísticas</a>
+                                            <p>Acceso a las estadísticas, tráfico y distintas métricas del portal web</p>
+                                        </div>
+
+                                        <!-- <div class="ui-sortable-placeholder ui-state-highlight"></div> -->
+                                    </div>
+                                
+
+                                                            </div>
+                        </div>
+
+
+                        <div class="card">
+                            <div class="card-title">
+                                <span class="lead lead2">Herramientas de contenido</span>
+                                <div class="actions-btn">
+                                    <a class="box-btn btn-open text-info" body-open="#body-panel2" id="panel2zeus">
+                                        <i class="fa fa-angle-down"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="card-body sortable" id="body-panel2" style="display: none;">
+                            
+
+                                
+
+                                
+                                
+                                
+                                
+
+                                
+
+                                
+                                
+
+                                
+
+                                
+
+                                
+
+                                
+
+                                
+
+                                
+
+                                
+                                
+
+                                
+
+                                
+
+                                
+
+                                
+
+                                
+
+                                
+
+
+                                
+                                
+
+                                
+
+                                
+
+                                
+
+                                
+
+                                
+                                
+                                                                <div class="item-menu" id="aRegistrosId-21">
+                                    <div class="im-img">
+                                        <a href="modulos/editorial/lista.php">
+                                            <img src="img/iconos/editorial.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="im-texto">
+                                        <a href="modulos/editorial/lista.php" class="lead lead2">Textos de Inicio</a>
+                                        <p>Editar los textos de varios bloques del home (inicio)</p>
+                                    </div>
+                                    <!-- <div class="ui-sortable-placeholder ui-state-highlight"></div> -->
+                                </div>
+                                                                <div class="item-menu" id="aRegistrosId-4">
+                                    <div class="im-img">
+                                        <a href="modulos/secciones/lista.php">
+                                            <img src="img/iconos/secciones.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="im-texto">
+                                        <a href="modulos/secciones/lista.php" class="lead lead2">Secciones</a>
+                                        <p>Modifique los elementos del menú principal</p>
+                                    </div>
+                                    <!-- <div class="ui-sortable-placeholder ui-state-highlight"></div> -->
+                                </div>
+                                                                <div class="item-menu" id="aRegistrosId-5">
+                                    <div class="im-img">
+                                        <a href="modulos/subsecciones/lista.php">
+                                            <img src="img/iconos/subsecciones.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="im-texto">
+                                        <a href="modulos/subsecciones/lista.php" class="lead lead2">Subsecciones</a>
+                                        <p>Gestiones las subsecciones y sus contenidos</p>
+                                    </div>
+                                    <!-- <div class="ui-sortable-placeholder ui-state-highlight"></div> -->
+                                </div>
+                                                                <div class="item-menu" id="aRegistrosId-7">
+                                    <div class="im-img">
+                                        <a href="modulos/dictamenes">
+                                            <img src="img/iconos/dictamenes.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="im-texto">
+                                        <a href="modulos/dictamenes" class="lead lead2">Dictámenes</a>
+                                        <p>Gestión en la base de datos de dictámenes</p>
+                                    </div>
+                                    <!-- <div class="ui-sortable-placeholder ui-state-highlight"></div> -->
+                                </div>
+                                                                <div class="item-menu" id="aRegistrosId-10">
+                                    <div class="im-img">
+                                        <a href="modulos/testimonios/lista.php">
+                                            <img src="img/iconos/testimonios.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="im-texto">
+                                        <a href="modulos/testimonios/lista.php" class="lead lead2">Testimonios</a>
+                                        <p>Gestione los testimonios de sus clientes</p>
+                                    </div>
+                                    <!-- <div class="ui-sortable-placeholder ui-state-highlight"></div> -->
+                                </div>
+                                                                <div class="item-menu" id="aRegistrosId-8">
+                                    <div class="im-img">
+                                        <a href="modulos/noticias/lista.php">
+                                            <img src="img/iconos/noticias.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="im-texto">
+                                        <a href="modulos/noticias/lista.php" class="lead lead2">Publicaciones</a>
+                                        <p>Categorías y nuestras entradas del blog </p>
+                                    </div>
+                                    <!-- <div class="ui-sortable-placeholder ui-state-highlight"></div> -->
+                                </div>
+                                                                <div class="item-menu" id="aRegistrosId-13">
+                                    <div class="im-img">
+                                        <a href="modulos/cabezotes/lista.php">
+                                            <img src="img/iconos/cabezotes.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="im-texto">
+                                        <a href="modulos/cabezotes/lista.php" class="lead lead2">Cabezotes</a>
+                                        <p>Agregue y modifique el encabezado del inicio</p>
+                                    </div>
+                                    <!-- <div class="ui-sortable-placeholder ui-state-highlight"></div> -->
+                                </div>
+                                                                <div class="item-menu" id="aRegistrosId-25">
+                                    <div class="im-img">
+                                        <a href="modulos/unidad_movil/lista.php">
+                                            <img src="img/iconos/unidad_movil.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="im-texto">
+                                        <a href="modulos/unidad_movil/lista.php" class="lead lead2">Página de Contacto</a>
+                                        <p>Editar el pin en el mapa de ubicación</p>
+                                    </div>
+                                    <!-- <div class="ui-sortable-placeholder ui-state-highlight"></div> -->
+                                </div>
+                                                                <div class="item-menu" id="aRegistrosId-33">
+                                    <div class="im-img">
+                                        <a href="modulos/whatsapp/lista_categorias.php">
+                                            <img src="modulos/whatsapp/whatsapp.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="im-texto">
+                                        <a href="modulos/whatsapp/lista_categorias.php" class="lead lead2">Whatsapp</a>
+                                        <p>Editar el botón de whatsapp</p>
+                                    </div>
+                                    <!-- <div class="ui-sortable-placeholder ui-state-highlight"></div> -->
+                                </div>
+                                
+                                <div class="item-menu">
+                                    <div class="im-img">
+                                        <a href="modulos/formularios/lista.php">
+                                            <img src="modulos/formularios/formularios.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="im-texto">
+                                        <a href="modulos/formularios/lista.php" class="lead lead2">Formularios</a>
+                                        <p>Agregue y modifique formularios en las subsecciones</p>
+                                    </div>
+                                </div>
+
+                                <div class="item-menu">
+                                    <div class="im-img">
+                                        <a href="modulos/landing/edita_categoria.php?id=1">
+                                            <img src="img/iconos/landing.jpg" alt="" class="img-responsive">
+                                        </a>
+                                    </div>
+                                    <div class="im-texto">
+                                        <a href="modulos/landing/edita_categoria.php?id=1" class="lead lead2">Landing page</a>
+                                        <p>Gestione todos los textos, imágenes y ciudades</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!--==============================footer=================================-->
+    <footer>
+        <div class="container">
+	<div class="row">
+		<div class="span6">
+			<ul class="logos">
+				<li><br />CMS desarrollado por:</a></li>
+				<li><a href="#"><img src="https://www.damossoluciones.com/superadmin/img/logo-3.png" alt=""></a></li>
+			</ul>
+		</div>
+		<div class="footer-lists span6">
+			<div class="span2">
+				<ul class="list2">
+					<li><a href="terminos.php">Términos y condiciones</a></li>
+				</ul>
+			</div>
+			<div class="span2">
+				<ul class="list2">
+					<li><a href="contacto.php">Soporte y Contacto</a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="span12">Version 1.2.2</div>
+	</div>
+</div>    </footer>
+
+    <script type="text/javascript" src="js/minificados_old.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            'use strict';
+            $('.btn-open').on('click', function(){
+                // console.log($($(this).children('i')));
+                if( $(this).hasClass('open') )
+                {
+                    $($(this).attr('body-open')).hide(500);
+                    $(this).removeClass('open');
+                    $($(this).children('i')).addClass('fa-angle-down').removeClass('fa-angle-up');
+
+                    localStorage.setItem($(this).attr('id'), false);
+
+                    return;
+                }
+                $($(this).attr('body-open')).show(500);
+                $(this).addClass('open');
+                $($(this).children('i')).addClass('fa-angle-up').removeClass('fa-angle-down');
+                localStorage.setItem($(this).attr('id'), true);
+            });
+
+            if(localStorage.getItem('panel0zeus') == null)
+            {
+                // localStorage.setItem('panel0zeus', true);
+                // $('#panel0zeus').click();
+            }
+            else if(localStorage.getItem('panel0zeus') == 'true')
+            {
+               $('#panel0zeus').click();
+            }
+
+            if(localStorage.getItem('panel1zeus') == null)
+            {
+                localStorage.setItem('panel1zeus', true);
+                $('#panel1zeus').click();
+            }
+            else if(localStorage.getItem('panel1zeus') == 'true')
+            {
+               $('#panel1zeus').click();
+            }
+            if(localStorage.getItem('panel2zeus') == null)
+            {
+                localStorage.setItem('panel2zeus', true);
+                $('#panel2zeus').click();
+            }
+            else if(localStorage.getItem('panel2zeus') == 'true')
+            {
+               $('#panel2zeus').click();
+            }
+        })
+
+    </script>
+
+
+    <script>
+        $( function() {
+            $( ".sortable" ).sortable(
+                {
+                    placeholder: "ui-state-highlight",opacity: 0.6, cursor: 'move', update: function() {
+                        var order = $(this).sortable("serialize");
+                        var phpscript = $('#phpscript').val();
+                        console.log(order);
+                        $.post(phpscript, order, function(respuesta){
+                            // $(".msg").html(respuesta).fadeIn("fast").fadeOut(2500);
+                        });
+                    }
+                }
+            );
+            $( "#sortable" ).disableSelection();
+        } );
+    </script>
+</body>
+</html>

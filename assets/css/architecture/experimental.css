@@ -1,0 +1,284 @@
+/* ============================================
+   YADEV ARCHITECTURE - EXPERIMENTAL
+   Estilo: Creativo, artístico, vanguardia
+   Inspiración: Awwwards, Designspiration, Brutalist
+   ============================================ */
+
+[data-architecture="experimental"] {
+    --font-display: 'Space Grotesk', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+    --border-radius: 24px;
+}
+
+/* ===== BASE OVERRIDES ===== */
+[data-architecture="experimental"] body {
+    font-family: var(--font-body);
+}
+
+[data-architecture="experimental"] h1,
+[data-architecture="experimental"] h2,
+[data-architecture="experimental"] h3 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+}
+
+/* ===== HERO - Experimental Split ===== */
+[data-architecture="experimental"] .hero {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    padding: 0;
+}
+
+[data-architecture="experimental"] .hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 80px;
+}
+
+[data-architecture="experimental"] .hero__title {
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 800;
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    mix-blend-mode: difference;
+}
+
+[data-architecture="experimental"] .hero__title span {
+    display: block;
+    transform: translateX(-10%);
+}
+
+[data-architecture="experimental"] .hero__subtitle {
+    font-size: 1.25rem;
+    max-width: 40ch;
+    margin-top: 32px;
+    opacity: 0.8;
+}
+
+/* ===== SECTIONS - Overlapping ===== */
+[data-architecture="experimental"] .section {
+    padding: 100px 0;
+    position: relative;
+}
+
+[data-architecture="experimental"] .section:nth-child(even) {
+    margin-top: -60px;
+    padding-top: 120px;
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+}
+
+[data-architecture="experimental"] .section__header {
+    text-align: left;
+    margin-bottom: 60px;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 40px;
+    align-items: end;
+}
+
+[data-architecture="experimental"] .section__label {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 0.75rem;
+    padding: 16px 8px;
+    background: var(--accent-soft);
+    border-radius: 8px;
+}
+
+[data-architecture="experimental"] .section__title {
+    font-size: clamp(2rem, 5vw, 4rem);
+    line-height: 1;
+}
+
+/* ===== GRID - Bento Box ===== */
+[data-architecture="experimental"] .grid--3 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 16px;
+}
+
+[data-architecture="experimental"] .grid--3 > *:nth-child(1) {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+[data-architecture="experimental"] .grid--3 > *:nth-child(2) {
+    grid-column: span 2;
+}
+
+[data-architecture="experimental"] .grid--3 > *:nth-child(3) {
+    grid-column: span 2;
+}
+
+[data-architecture="experimental"] .grid--4 {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+}
+
+[data-architecture="experimental"] .grid--4 > *:nth-child(1) { grid-column: span 2; }
+[data-architecture="experimental"] .grid--4 > *:nth-child(2) { grid-column: span 4; }
+[data-architecture="experimental"] .grid--4 > *:nth-child(3) { grid-column: span 3; }
+[data-architecture="experimental"] .grid--4 > *:nth-child(4) { grid-column: span 3; }
+
+/* ===== CARDS - Experimental ===== */
+[data-architecture="experimental"] .card {
+    border-radius: var(--border-radius);
+    padding: 32px;
+    position: relative;
+    overflow: hidden;
+}
+
+[data-architecture="experimental"] .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+[data-architecture="experimental"] .card:hover {
+    transform: rotate(-1deg) scale(1.02);
+}
+
+[data-architecture="experimental"] .card__icon {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    margin-bottom: 24px;
+}
+
+[data-architecture="experimental"] .card__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+/* ===== BUTTONS - Playful ===== */
+[data-architecture="experimental"] .btn {
+    border-radius: 100px;
+    padding: 16px 40px;
+    font-weight: 700;
+    position: relative;
+    overflow: hidden;
+}
+
+[data-architecture="experimental"] .btn--primary::after {
+    content: '→';
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+[data-architecture="experimental"] .btn--primary:hover::after {
+    transform: translateX(4px);
+}
+
+[data-architecture="experimental"] .btn--secondary {
+    border-width: 3px;
+    border-style: dashed;
+}
+
+/* ===== NAVBAR - Floating ===== */
+[data-architecture="experimental"] .navbar {
+    margin: 16px;
+    border-radius: 100px;
+    max-width: calc(100% - 32px);
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+[data-architecture="experimental"] .navbar__container {
+    height: 64px;
+    padding: 0 32px;
+}
+
+[data-architecture="experimental"] .navbar__link {
+    border-radius: 100px;
+    font-weight: 600;
+}
+
+/* ===== STATS - Scattered ===== */
+[data-architecture="experimental"] .stat {
+    transform: rotate(var(--rotation, 0deg));
+    --rotation: 0deg;
+}
+
+[data-architecture="experimental"] .stat:nth-child(1) { --rotation: -3deg; }
+[data-architecture="experimental"] .stat:nth-child(2) { --rotation: 2deg; }
+[data-architecture="experimental"] .stat:nth-child(3) { --rotation: -2deg; }
+[data-architecture="experimental"] .stat:nth-child(4) { --rotation: 3deg; }
+
+[data-architecture="experimental"] .stat__value {
+    font-family: var(--font-display);
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+/* ===== FOOTER - Experimental ===== */
+[data-architecture="experimental"] .footer {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+    margin-top: -30px;
+    padding-top: 80px;
+}
+
+/* ===== ANIMATIONS ===== */
+[data-architecture="experimental"] .reveal {
+    transform: translateY(60px) rotate(3deg);
+}
+
+[data-architecture="experimental"] .reveal.visible {
+    transform: translateY(0) rotate(0deg);
+}
+
+[data-architecture="experimental"] .hover-lift:hover {
+    transform: translateY(-8px) rotate(-1deg);
+}
+
+/* ===== DECORATIVE ELEMENTS ===== */
+[data-architecture="experimental"] .blob {
+    position: absolute;
+    border-radius: 50% 40% 60% 50%;
+    filter: blur(40px);
+    opacity: 0.5;
+    animation: blob-morph 8s ease-in-out infinite;
+}
+
+@keyframes blob-morph {
+    0%, 100% { border-radius: 50% 40% 60% 50%; }
+    50% { border-radius: 40% 60% 50% 60%; }
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    [data-architecture="experimental"] .hero {
+        grid-template-columns: 1fr;
+    }
+    [data-architecture="experimental"] .grid--3,
+    [data-architecture="experimental"] .grid--4 {
+        grid-template-columns: 1fr 1fr;
+    }
+    [data-architecture="experimental"] .grid--3 > *,
+    [data-architecture="experimental"] .grid--4 > * {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+}
+
+@media (max-width: 640px) {
+    [data-architecture="experimental"] .grid--3,
+    [data-architecture="experimental"] .grid--4 {
+        grid-template-columns: 1fr;
+    }
+    [data-architecture="experimental"] .navbar {
+        margin: 8px;
+        border-radius: 20px;
+    }
+}

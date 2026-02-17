@@ -1,0 +1,2346 @@
+
+
+<!DOCTYPE html>
+<html lang="es-CO">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+
+	<!-- This site is optimized with the Yoast SEO plugin v26.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Home - Dispetrocom</title>
+	<meta name="description" content="Nos dedicamos a la distribución, transporte y manejo de productos líquidos derivados del petróleo, para clientes NACIONALES de diferentes sectores industriales" />
+	<link rel="canonical" href="https://dispetrocom.com/" />
+	<meta property="og:locale" content="es_ES" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Home - Dispetrocom" />
+	<meta property="og:description" content="Nos dedicamos a la distribución, transporte y manejo de productos líquidos derivados del petróleo, para clientes NACIONALES de diferentes sectores industriales" />
+	<meta property="og:url" content="https://dispetrocom.com/" />
+	<meta property="og:site_name" content="Dispetrocom" />
+	<meta property="article:modified_time" content="2025-10-23T15:23:12+00:00" />
+	<meta property="og:image" content="https://dispetrocom.dev.emagostudio.com/wp-content/uploads/2025/07/96_Placeholder_vo.png" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://dispetrocom.com/","url":"https://dispetrocom.com/","name":"Home - Dispetrocom","isPartOf":{"@id":"https://dispetrocom.com/#website"},"primaryImageOfPage":{"@id":"https://dispetrocom.com/#primaryimage"},"image":{"@id":"https://dispetrocom.com/#primaryimage"},"thumbnailUrl":"https://dispetrocom.dev.emagostudio.com/wp-content/uploads/2025/07/96_Placeholder_vo.png","datePublished":"2025-07-21T19:55:19+00:00","dateModified":"2025-10-23T15:23:12+00:00","description":"Nos dedicamos a la distribución, transporte y manejo de productos líquidos derivados del petróleo, para clientes NACIONALES de diferentes sectores industriales","breadcrumb":{"@id":"https://dispetrocom.com/#breadcrumb"},"inLanguage":"es-CO","potentialAction":[{"@type":"ReadAction","target":["https://dispetrocom.com/"]}]},{"@type":"ImageObject","inLanguage":"es-CO","@id":"https://dispetrocom.com/#primaryimage","url":"https://dispetrocom.dev.emagostudio.com/wp-content/uploads/2025/07/96_Placeholder_vo.png","contentUrl":"https://dispetrocom.dev.emagostudio.com/wp-content/uploads/2025/07/96_Placeholder_vo.png"},{"@type":"BreadcrumbList","@id":"https://dispetrocom.com/#breadcrumb","itemListElement":[{"@type":"ListItem","position":1,"name":"Inicio"}]},{"@type":"WebSite","@id":"https://dispetrocom.com/#website","url":"https://dispetrocom.com/","name":"Dispetrocom","description":"","potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://dispetrocom.com/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"es-CO"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//cdn.amcharts.com' />
+<link rel='dns-prefetch' href='//www.googletagmanager.com' />
+<link rel="alternate" type="application/rss+xml" title="Dispetrocom &raquo; Feed" href="https://dispetrocom.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Dispetrocom &raquo; RSS de los comentarios" href="https://dispetrocom.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://dispetrocom.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdispetrocom.com%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://dispetrocom.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdispetrocom.com%2F&#038;format=xml" />
+<style id='wp-img-auto-sizes-contain-inline-css'>
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+<link rel='stylesheet' id='elementor-frontend-css' href='https://dispetrocom.com/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1770891868' media='all' />
+<link rel='stylesheet' id='elementor-post-7-css' href='https://dispetrocom.com/wp-content/uploads/elementor/css/post-7.css?ver=1770891868' media='all' />
+<link rel='stylesheet' id='elementor-post-227-css' href='https://dispetrocom.com/wp-content/uploads/elementor/css/post-227.css?ver=1770891868' media='all' />
+<link rel='stylesheet' id='pa-frontend-css' href='https://dispetrocom.com/wp-content/uploads/premium-addons-elementor/pa-frontend-921b64552.min.css?ver=1771261562' media='all' />
+<style id='wp-emoji-styles-inline-css'>
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<link rel='stylesheet' id='contact-form-7-css' href='https://dispetrocom.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.1' media='all' />
+<link rel='stylesheet' id='sr7css-css' href='//dispetrocom.com/wp-content/plugins/revslider/public/css/sr7.css?ver=6.7.34' media='all' />
+<link rel='stylesheet' id='hello-elementor-css' href='https://dispetrocom.com/wp-content/themes/hello-elementor/assets/css/reset.css?ver=3.4.4' media='all' />
+<link rel='stylesheet' id='hello-elementor-theme-style-css' href='https://dispetrocom.com/wp-content/themes/hello-elementor/assets/css/theme.css?ver=3.4.4' media='all' />
+<link rel='stylesheet' id='hello-elementor-header-footer-css' href='https://dispetrocom.com/wp-content/themes/hello-elementor/assets/css/header-footer.css?ver=3.4.4' media='all' />
+<link rel='stylesheet' id='elementor-post-6-css' href='https://dispetrocom.com/wp-content/uploads/elementor/css/post-6.css?ver=1770891868' media='all' />
+<link rel='stylesheet' id='font-awesome-5-all-css' href='https://dispetrocom.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=4.11.44' media='all' />
+<link rel='stylesheet' id='font-awesome-4-shim-css' href='https://dispetrocom.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.31.2' media='all' />
+<link rel='stylesheet' id='e-animation-slideInLeft-css' href='https://dispetrocom.com/wp-content/plugins/elementor/assets/lib/animations/styles/slideInLeft.min.css?ver=3.31.2' media='all' />
+<link rel='stylesheet' id='widget-heading-css' href='https://dispetrocom.com/wp-content/plugins/elementor/assets/css/widget-heading.min.css?ver=3.31.2' media='all' />
+<link rel='stylesheet' id='widget-icon-list-css' href='https://dispetrocom.com/wp-content/uploads/elementor/css/custom-widget-icon-list.min.css?ver=1770891868' media='all' />
+<link rel='stylesheet' id='widget-image-box-css' href='https://dispetrocom.com/wp-content/uploads/elementor/css/custom-widget-image-box.min.css?ver=1770891868' media='all' />
+<link rel='stylesheet' id='pa-slick-css' href='https://dispetrocom.com/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-css/slick.min.css?ver=4.11.44' media='all' />
+<link rel='stylesheet' id='widget-counter-css' href='https://dispetrocom.com/wp-content/plugins/elementor/assets/css/widget-counter.min.css?ver=3.31.2' media='all' />
+<link rel='stylesheet' id='widget-image-css' href='https://dispetrocom.com/wp-content/plugins/elementor/assets/css/widget-image.min.css?ver=3.31.2' media='all' />
+<link rel='stylesheet' id='elementor-post-1470-css' href='https://dispetrocom.com/wp-content/uploads/elementor/css/post-1470.css?ver=1770893547' media='all' />
+<link rel='stylesheet' id='ekit-widget-styles-css' href='https://dispetrocom.com/wp-content/plugins/elementskit-lite/widgets/init/assets/css/widget-styles.css?ver=3.7.4' media='all' />
+<link rel='stylesheet' id='ekit-responsive-css' href='https://dispetrocom.com/wp-content/plugins/elementskit-lite/widgets/init/assets/css/responsive.css?ver=3.7.4' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-mulish-css' href='https://dispetrocom.com/wp-content/uploads/elementor/google-fonts/css/mulish.css?ver=1761230316' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-poppins-css' href='https://dispetrocom.com/wp-content/uploads/elementor/google-fonts/css/poppins.css?ver=1761230321' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-lato-css' href='https://dispetrocom.com/wp-content/uploads/elementor/google-fonts/css/lato.css?ver=1761230323' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-roboto-css' href='https://dispetrocom.com/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1761230342' media='all' />
+<link rel='stylesheet' id='elementor-icons-ekiticons-css' href='https://dispetrocom.com/wp-content/plugins/elementskit-lite/modules/elementskit-icon-pack/assets/css/ekiticons.css?ver=3.7.4' media='all' />
+<script src="https://dispetrocom.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1" id="jquery-core-js"></script>
+<script src="https://dispetrocom.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1" id="jquery-migrate-js"></script>
+<script src="//dispetrocom.com/wp-content/plugins/revslider/public/js/libs/tptools.js?ver=6.7.34" id="tp-tools-js" async data-wp-strategy="async"></script>
+<script src="//dispetrocom.com/wp-content/plugins/revslider/public/js/sr7.js?ver=6.7.34" id="sr7-js" async data-wp-strategy="async"></script>
+
+<!-- Google tag (gtag.js) snippet added by Site Kit -->
+<!-- Fragmento de código de Google Analytics añadido por Site Kit -->
+<script src="https://www.googletagmanager.com/gtag/js?id=GT-PJSNMGNC" id="google_gtagjs-js" async></script>
+<script id="google_gtagjs-js-after">
+window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}
+gtag("set","linker",{"domains":["dispetrocom.com"]});
+gtag("js", new Date());
+gtag("set", "developer_id.dZTNiMT", true);
+gtag("config", "GT-PJSNMGNC");
+ window._googlesitekit = window._googlesitekit || {}; window._googlesitekit.throttledEvents = []; window._googlesitekit.gtagEvent = (name, data) => { var key = JSON.stringify( { name, data } ); if ( !! window._googlesitekit.throttledEvents[ key ] ) { return; } window._googlesitekit.throttledEvents[ key ] = true; setTimeout( () => { delete window._googlesitekit.throttledEvents[ key ]; }, 5 ); gtag( "event", name, { ...data, event_source: "site-kit" } ); }; 
+//# sourceURL=google_gtagjs-js-after
+</script>
+<script src="https://dispetrocom.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.31.2" id="font-awesome-4-shim-js"></script>
+<link rel="https://api.w.org/" href="https://dispetrocom.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://dispetrocom.com/wp-json/wp/v2/pages/1470" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://dispetrocom.com/xmlrpc.php?rsd" />
+<meta name="generator" content="WordPress 6.9.1" />
+<link rel='shortlink' href='https://dispetrocom.com/' />
+<!-- start Simple Custom CSS and JS -->
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1010802851130067');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1010802851130067&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Google tag (gtag.js) --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-474506945"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-474506945'); </script> <!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<style>
+
+
+@media(min-width:769px){
+	#map_3232 {
+	  width: 100% !important;
+	  height:600px !important; 
+	  min-height: 400px;          /* evita que colapse en móvil */
+	}
+}
+
+@media(max-width:768px){
+	#map_3232 {
+			  width: 100% !important;
+
+  height:400px !important; 
+			  min-height: 400px;          /* evita que colapse en móvil */
+
+}
+}
+
+#map_wrapper_3232,
+#map_wrapper_3232 .map_box,
+#map_wrapper_3232 .map_container {
+  width: 100% !important;
+  height: 100% !important;
+  max-width: 2000px;
+}</style>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<style>
+  .search-container {
+      position: relative;
+      display: flex;
+      align-items: center;
+	   padding: 8px 15px;
+    border-radius: 25px;
+	  width:200px;
+	  justify-content:end;
+	  
+    }
+
+    input[type=text].search-input,input[type=text].search-input:focus,input[type=text].search-input:active {
+      width: 0;
+      padding: 0;
+      opacity: 0;
+      border: none;
+      background: transparent;
+      transition: width 0.3s ease, opacity 0.3s ease;
+      font-size: 14px;
+      outline: none;
+    }
+
+    .search-container.active input[type=text].search-input,.search-container.active input[type=text].search-input:active,.search-container.active input[type=text].search-input:focus {
+      width: 100%;
+      padding: 0;
+      opacity: 1;
+	outline:none;
+    }
+
+.search-container.active{
+	    background: white;
+   
+}
+
+    .search-btn, .search-btn:active,.search-btn:focus,.search-btn:hover{
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      color: #333;
+		padding:0;
+		outline:none;
+    }
+
+.search-btn i{
+	font-size:25px;
+}
+
+.ekit-popup-b1db0c0 .ekit_modal-searchPanel .ekit-search-group .ekit_search-button svg{
+	fill:white;
+}
+
+/****/
+
+.search-results-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+	margin-top:110px;
+	min-height:75vh;
+}
+
+.search-results-container .search-title{
+	margin-bottom:50px;
+		    font-family: "Mulish", sans-serif;
+
+	
+}
+
+@media(max-width:768px){
+	.search-results-container .search-title{
+	font-size:22px;
+	
+}
+
+}
+
+.search-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.search-card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.search-card:hover {
+  transform: translateY(-5px);
+}
+
+.search-card-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.search-card-content {
+  padding: 1rem;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.search-card-title {
+  font-size: 18px;
+  font-weight:bold;
+  margin: 0 0 0.5rem;
+  color: #00463a;
+	    font-family: "Mulish", sans-serif;
+}
+
+.search-card-excerpt {
+  color: #666;
+  font-size: 14px;
+		    font-family: "Mulish", sans-serif;
+
+}
+.search-card-image{
+	position:relative;
+}
+.search-card-categories {
+  margin-bottom: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+	position: absolute;
+    top: 10px;
+}
+
+.category-pill {
+  background-color: #c1ee57;
+  color: #00463a;
+  font-size: 0.75rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.category-pill:hover {
+  opacity:0.9;
+}
+
+.search-card-cta {
+  margin-top: auto;
+  text-align: left;
+}
+
+.search-card-link {
+  font-weight: 500;
+  color: #00463a; /* o el verde institucional */
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+.search-card-link svg{
+	width:20px;
+	fill:   #00463a;
+}
+
+.search-sin-resultados{
+	padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    opacity: 0.3;
+    text-transform: uppercase;
+    font-family: "Mulish", sans-serif;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+</style>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<style>
+ .elementor-counter-title{
+	flex-direction:column;
+}
+ .elementor-counter-title .titulo{
+	font-size:18px;
+}
+</style>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<style>
+
+.fade-in-left,
+.fade-in-right {
+  opacity: 0;
+  transition: all 0.6s ease-out;
+  will-change: opacity, transform;
+}
+
+.fade-in-left {
+  transform: translateX(-200px);
+}
+
+.fade-in-right {
+  transform: translateX(200px); 
+}
+
+.fade-in-left.visible,
+.fade-in-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.contenedor-efecto-scroll {
+  overflow-x: hidden;
+}
+</style>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<style>
+body.single-post .site-main{
+	width:100%;
+	max-width:100%;
+	
+}
+
+.disp-card-blog .ekit-wid-con .elementskit-post-image-card .elementskit-entry-header .elementskit-entry-thumb{
+	position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    border-radius: 20px;
+}
+
+.disp-card-blog .ekit-wid-con .elementskit-post-image-card .elementskit-entry-header .elementskit-entry-thumb::before{
+	 content: "";
+    position: absolute;
+    background: #0000007a;
+    z-index: 0;
+    width: 100%;
+    top: 0;
+    left: 0;
+       height: calc(100% - 5px);
+}
+
+.disp-card-blog.disp-card-blog-2 .elementskit-post-image-card .elementskit-post-body {
+	padding-top:90px !important;
+	padding-bottom:0 !important;
+	
+}
+
+.disp-card-blog .elementskit-post-image-card .elementskit-post-body {
+	padding-top:80px !important;
+	
+}
+
+.disp-card-blog.disp-card-blog-2  .ekit-wid-con .elementskit-meta-categories{
+	left:unset !important;
+	right:30px;
+}
+
+.disp-card-blog .elementskit-meta-wraper span:nth-child(n+4) {
+    display: none;
+}
+
+.disp-btn-boton{
+	gap:5px;
+}
+
+.disp-blog-descatadas .elementskit-blog-block-post{
+	padding:0 !important;
+}
+
+
+
+.ekit-wid-con .elementskit-post-image-card .elementskit-entry-header .elementskit-entry-thumb>img{
+	  aspect-ratio: 16 / 9;
+	object-fit:cover;
+	object-position:center;
+}
+
+@media(min-width:991px){
+	.sidebar-fija {
+  position: sticky;
+  top: 100px; /* puedes ajustar este valor según tu header */
+  align-self: flex-start; /* importante para columnas flexibles */
+  z-index: 10;
+}
+}
+
+
+.custom-post-title{
+	font-family: "CookConthic", Sans-serif;
+    font-size: 55px;
+    font-weight: 500;
+    color: var(--e-global-color-fddc2b2);
+	margin-top:80px;
+	text-transform:uppercase;
+	margin-bottom:20px;
+}
+
+.custom-post-container {
+    max-width:100%;
+    box-sizing: border-box;
+}
+
+.custom-post-inner-container{
+	    max-width: 55%;
+    margin: 0 auto;
+    padding: 40px 20px;
+    box-sizing: border-box;
+	margin-bottom: 50px;
+}
+
+.custom-featured-image img {
+max-height: 500px;
+    object-fit: cover;
+    width: 100%;
+    object-position: center;
+	
+}
+
+.custom-content {
+    font-size: 1rem;
+    line-height: 1.6;
+	    font-family: "Mulish", Sans-serif;
+}
+
+@media(max-width:1500px){
+	
+.custom-post-inner-container {
+	max-width: 75%;
+	}
+}
+
+@media(max-width:1200px){
+	
+.custom-post-inner-container {
+	max-width: 80%;
+	}
+}
+
+@media(max-width:768px){
+	
+.custom-post-inner-container {
+	max-width: 90%;
+	}
+	
+	.custom-post-title{
+		font-size:28px;
+			margin-top:10px;
+
+	}
+	
+
+}
+
+.custom-share{
+	font-weight:bold;
+	margin-bottom:40px;
+	display:flex;
+	align-items:center;
+	gap:8px;
+}
+
+.custom-share a{
+	color: #007a31;
+}
+
+.custom-share i{
+	    font-size: 20px;
+}
+
+/* Estilo general del área de comentarios */
+#comments {
+    background: #f8f8f8;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    margin-top: 2rem;
+    font-family: "Segoe UI", sans-serif;
+}
+
+/* Título de comentarios */
+.comments-title {
+    color: #006633;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Lista de comentarios */
+.comment-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 2rem;
+}
+
+.comment-list li {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+}
+
+/* Formulario de comentario */
+.comment-form textarea,
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"] {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #fff;
+    transition: border 0.3s ease;
+}
+
+.comment-form input:focus,
+.comment-form textarea:focus {
+    border-color: #006633;
+    outline: none;
+}
+
+/* Botón de enviar */
+.comment-form input[type="submit"] {
+    background-color: #006633;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.comment-form input[type="submit"]:hover {
+    opacity:0.9;
+}
+
+/* Mensajes, notas */
+.comment-notes,
+.logged-in-as,
+.form-allowed-tags {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+
+.volver-blog-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.boton-volver-blog {
+    background-color: #006633; /* verde oscuro del logo */
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.boton-volver-blog:hover {
+        opacity:0.9;
+	color:white;
+
+}
+
+.disp-pa-blog .premium-blog-even .premium-blog-post-container{
+	position:relative;
+}
+
+.disp-pa-blog .premium-blog-entry-meta{
+	    line-height: 1.3em;
+    font-size: 12px;
+    margin-bottom: 13px;
+    color: #adadad;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+	
+}
+
+
+.disp-pa-blog .premium-blog-post-categories.premium-blog-meta-data{
+	display:flex;
+	flex-wrap: wrap;
+    gap: 5px;
+}
+
+.disp-pa-blog .premium-blog-entry-meta .fa {
+	display:none;
+}
+
+.disp-pa-blog  .premium-blog-meta-data a{
+	    background: #c1ee57;
+    padding: 2px 15px;
+    border-radius: 20px;
+}
+
+.disp-pa-blog.disp-pa-blog-azul  .premium-blog-meta-data a{
+	    background: #42A9E3;
+	color:white;
+    
+}</style>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<style>
+.disp-tabs {
+  position: relative;
+  overflow: hidden;
+  padding: 0 40px; /* Espacio para las flechas */
+}
+
+/* Scroll horizontal */
+.disp-tabs .e-n-tabs-heading {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 15px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.disp-tabs .e-n-tabs-heading::-webkit-scrollbar {
+  display: none; /* Chrome */
+}
+
+/* Asegura que los botones no se encajen */
+.disp-tabs .e-n-tab-title {
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+/* Flechas de navegación */
+.disp-tabs::before,
+.disp-tabs::after {
+    content: '\f104';
+	    font-family: 'Font Awesome 5 Free';
+    position: absolute;
+    top: 2.5%;
+    transform: translateY(-50%);
+    background: #FD8603;
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+    font-size: 22px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    font-weight: bold;
+    padding: 0;
+}
+
+@media(max-width:768px){
+	.disp-tabs::before, .disp-tabs::after {
+		    top: 1.5%;
+	}
+}
+
+.disp-tabs::before,
+.disp-tabs::after {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s;
+}
+
+
+.disp-tabs::before {
+  left: 5px;
+}
+
+.disp-tabs::after {
+  content: '\f105';
+  right: 5px;
+}
+
+.disp-tabs .e-n-tab-title{
+	width:190px;
+}
+.disp-tabs.no-left::before {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.disp-tabs.no-right::after {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+</style>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<style>
+.color-verde-oscuro{
+	color:#00463A;
+}
+
+.disp-subtitulo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    font-weight: bold;
+    font-family: 'lato';
+    white-space: nowrap;
+    border-radius: 20px;
+    border: solid 1px #EBFCA6;
+    padding: 2px 10px;
+    border-style: dashed;
+    width: 220px;
+    justify-content: center;
+	margin-bottom:20px;
+}
+
+.disp-subtitulo img{
+	width: 30px;
+}
+
+.disp-subtitulo.verde{
+	border-color:#00463A;
+	color:#00463A;
+	width:280px;
+}
+
+.margin-0{
+	margin:0;
+}
+
+.disp-contador .elementor-counter-title{
+	text-align:center;
+}
+
+@media(max-width:768px){
+	#map_wrapper_251{
+		height:300px;
+	}
+}
+
+input.wpcf7-form-control,textarea.wpcf7-form-control,select.wpcf7-form-control,
+input.wpcf7-form-control:active,textarea.wpcf7-form-control:active,select.wpcf7-form-control:active,
+input.wpcf7-form-control:focus,textarea.wpcf7-form-control:focus,select.wpcf7-form-control:focus{
+	border-radius: 0;
+    height: 45px;
+    border: solid 1px #d3d3d3;
+    font-family: "Mulish", Sans-serif;
+    letter-spacing: 0.5px;
+	outline:none;
+}
+
+textarea.wpcf7-form-control,textarea.wpcf7-form-control:focus,textarea.wpcf7-form-control:active{
+	height:80px;
+}
+
+input.wpcf7-form-control.wpcf7-submit.has-spinner{
+	background: #00463a;
+    color: white;
+    border: 0;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.wpcf7-form small{
+	    font-family: "Mulish", Sans-serif;
+	line-height:15px;
+
+}
+
+.disp-hero{
+	margin-top:0 !important;
+}</style>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<style>
+
+</style>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<style>
+.dp-timeline{
+	position:relative;
+}
+.timeline-wrapper {
+      overflow-x: hidden;
+    padding: 2rem 0;
+}
+
+@media(max-width:991px){
+	.timeline-wrapper {
+      overflow-x: scroll;
+}
+}
+
+.timeline-horizontal {
+  display: flex;
+  flex-direction: row;
+  gap: 24px;
+  align-items: stretch;
+}
+
+.timeline-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-width: 500px;
+  max-width: 530px;
+}
+
+.timeline-larga {
+  justify-content: stretch;
+}
+
+.timeline-larga .timeline-card {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.timeline-doble {
+  justify-content: space-between;
+}
+
+.timeline-card {
+     background: #f7f7f7;
+    border-radius: 12px;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+
+.timeline-card img {
+  max-width: 100%;
+  border-radius: 8px 0 0 8px; 
+  object-fit: cover;
+   width: 40%;
+
+}
+
+.timeline-doble .timeline-card img{
+			    width: 30%;
+}
+
+.timeline-card .timeline-content {
+      margin-top: 12px;
+    font-family: 'mulish';
+    font-size: 14px;
+	padding:25px 20px;
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+	     color:#024639;
+
+}
+
+.timeline-card .timeline-content p{
+	margin:0;
+}
+
+.timeline-card .timeline-content h5{
+	margin:0;
+	font-size:18px;
+	color:#027A32;
+	font-weight:600;
+}
+
+.timeline-card .timeline-content h4{
+	font-family: "CookConthic", Sans-serif;
+    color: #024639;
+    text-transform: uppercase;
+	margin:0;
+	font-size:22px;
+}
+
+.timeline-wrapper::-webkit-scrollbar {
+  height: 12px; /* Altura del scrollbar horizontal */
+}
+
+.timeline-wrapper::-webkit-scrollbar-track {
+  background: #e0e0e0; /* Color de fondo del track */
+  border-radius: 8px;
+}
+
+.timeline-wrapper::-webkit-scrollbar-thumb {
+  background-color: #024639; /* Tu color */
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Para Firefox */
+.timeline-wrapper {
+  scrollbar-color: #024639 #e0e0e0; /* thumb track */
+  scrollbar-width: thin;
+}
+
+.timeline-filter{
+	    font-family: 'mulish';
+}
+
+.timeline-filter select{
+	width: 220px;
+    margin-top: 10px;
+    border: solid 1px #eaeaea;
+    height: 40px;
+    padding: 0 15px;
+}
+
+@media(max-width:768px){
+	.timeline-filter{
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+	
+	.timeline-doble .timeline-card img{
+		width:20%;
+	}
+	
+	.timeline-card .timeline-content p{
+		font-size:12px;
+	}
+}
+
+/* Scroll personalizado */
+.custom-scrollbar {
+  position: absolute;
+  right: -20px;
+  top: 1rem;
+  width: 8px;
+  height: 100%;
+  background-color: rgba(0,0,0,0.1);
+  border-radius: 4px;
+}
+
+@media(max-width:768px){
+	.custom-scrollbar {
+		right:5px;
+		display:none !important;
+	}
+}
+
+.custom-thumb {
+  width: 100%;
+  height: 80px;
+  background-color: #555;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+}
+
+.custom-buttons-scroll{
+	display: flex;
+    gap: 5px;
+	margin-top:10px;
+	justify-content:end;
+}
+
+@media(min-width:992px){
+	
+	.custom-buttons-scroll{
+		display:none;
+	}
+}
+
+.timeline-btn-left,.timeline-btn-right{
+	    background: #00463a;
+    color: #c1ee57;
+    border: 0;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+}
+
+.timeline-btn-left:active,.timeline-btn-right:active,.timeline-btn-left:focus,.timeline-btn-right:focus{
+		    background: #00463a;
+  opacity:0.9;
+}
+
+/*POR SI SE DESEA RECUPERAR*/
+.timeline-filter{
+	display:none !important;
+}</style>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<style>
+.disp-header{
+	z-index:100;
+}
+
+.disp-overflow{
+	overflow:hidden !important;
+}
+
+.disp-header{
+		position: fixed;
+    left: 0px;
+	z-index:1000;
+top:0;
+}
+
+
+.disp-ajuste-header{
+	margin-top:60px;
+}
+
+.enlace-footer a{
+	color:white;
+}</style>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const searchContainer = document.querySelector(".search-container");
+  const toggleBtn = document.getElementById("search-toggle");
+  const input = document.querySelector(".search-input");
+
+  // Abrir solo si está cerrado
+  toggleBtn.addEventListener("click", function(e) {
+    e.preventDefault();
+    if (!searchContainer.classList.contains("active")) {
+      searchContainer.classList.add("active");
+      input.focus();
+    }
+  });
+
+  // Enviar búsqueda al presionar Enter
+  input.addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+      e.target.form.submit();
+    }
+  });
+
+  // Cerrar si se hace click fuera
+  document.addEventListener("click", function(e) {
+    if (!searchContainer.contains(e.target)) {
+      searchContainer.classList.remove("active");
+      input.value = ""; // opcional: limpiar al cerrar
+    }
+  });
+});</script>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('select.con-placeholder').forEach(function(select){
+    // Crear opción placeholder
+    const placeholder = document.createElement('option');
+    placeholder.textContent = 'Frecuencia';
+    placeholder.value = '';
+    placeholder.disabled = true;
+    placeholder.selected = true;
+
+    // Insertarla al inicio
+    select.insertBefore(placeholder, select.firstChild);
+  });
+});</script>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const elements = document.querySelectorAll('.fade-in-left, .fade-in-right');
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible');
+      }
+    });
+  }, {
+    threshold: 0.2
+  });
+
+  elements.forEach(el => observer.observe(el));
+});</script>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const postContainers = document.querySelectorAll('.disp-blog-descatadas .elementskit-blog-block-post');
+	
+
+  if (postContainers) {
+	 
+	 postContainers.forEach(function(postContainer){
+		    const children = postContainer.querySelectorAll('.col-md-6');
+    if (children.length >= 2) {
+      children[0].classList.replace('col-md-6', 'col-md-4');
+      children[1].classList.replace('col-md-6', 'col-md-8');
+    }
+	 })
+	  
+ 
+  }
+	
+
+});
+
+jQuery(document).ready(function($) {
+
+  function limpiarCategoriasBlog() {
+    $('.premium-blog-post-outer-container').each(function() {
+      var $container = $(this).find('.premium-blog-post-categories');
+
+      if ($container.length) {
+        let $links = $container.find('a');
+        let filteredLinks = [];
+
+        $links.each(function() {
+          let text = $(this).text().trim().toLowerCase();
+          if (text !== 'uncategorized' && filteredLinks.length < 3) {
+            filteredLinks.push($(this));
+          }
+        });
+
+        // Limpiar contenido anterior
+        $container.html('<i class="fa fa-align-left fa-fw" aria-hidden="true"></i>');
+
+        // Agregar solo los primeros 3 (sin uncategorized)
+        filteredLinks.forEach(function($link, index) {
+          if (index > 0) $container.append(' ');
+          $container.append($link);
+        });
+      }
+    });
+  }
+
+  // Ejecutar al inicio
+  limpiarCategoriasBlog();
+
+  // Ejecutar al hacer clic en paginación
+  $(document).on('click', '.page-numbers', function() {
+    // Usamos un timeout para esperar que se cargue el nuevo contenido (en caso de AJAX)
+    setTimeout(() => {
+      limpiarCategoriasBlog();
+    }, 500); // ajusta si el contenido carga más lento
+  });
+
+});</script>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const container = document.querySelector('.disp-tabs .e-n-tabs-heading');
+  const parent = document.querySelector('.disp-tabs');
+  const scrollAmount = 200;
+
+  if (!container || !parent) return;
+	
+  // Detect click en flechas usando ::before y ::after como pseudo-elementos
+  parent.addEventListener('click', function (e) {
+    const bounds = parent.getBoundingClientRect();
+    const x = e.clientX - bounds.left;
+
+    if (x < 40) {
+      // click en flecha izquierda
+      container.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    } else if (x > bounds.width - 40) {
+      // click en flecha derecha
+      container.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+  });
+	
+	  function updateArrows() {
+    const maxScroll = container.scrollWidth - container.clientWidth;
+
+    if (container.scrollLeft <= 0) {
+      parent.classList.add('no-left');
+    } else {
+      parent.classList.remove('no-left');
+    }
+
+    if (container.scrollLeft >= maxScroll - 1) {
+      parent.classList.add('no-right');
+    } else {
+      parent.classList.remove('no-right');
+    }
+  }
+	
+	  // Ejecutar al inicio y cada vez que se hace scroll o resize
+  container.addEventListener('scroll', updateArrows);
+  window.addEventListener('resize', updateArrows);
+  updateArrows();
+});
+
+
+
+
+</script>
+<!-- end Simple Custom CSS and JS -->
+<!-- start Simple Custom CSS and JS -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  const select = document.getElementById('year-filter');
+
+  if (!select) return;
+
+  select.addEventListener('change', function () {
+    const year = this.value;
+
+    // Mostrar/ocultar cada tarjeta individual
+    const cards = document.querySelectorAll('.timeline-card');
+
+    cards.forEach(card => {
+      const cardYear = card.dataset.anio;
+      if (!year || cardYear === year) {
+        card.style.display = 'flex';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+
+    // Revisión de cada columna para ver si debe mostrarse o no
+    const cols = document.querySelectorAll('.timeline-col');
+
+    cols.forEach(col => {
+      const visibleCards = col.querySelectorAll('.timeline-card:not([style*="display: none"])');
+      if (visibleCards.length > 0) {
+        col.style.display = 'flex'; // Mostrar la columna
+      } else {
+        col.style.display = 'none'; // Ocultarla si no tiene tarjetas visibles
+      }
+    });
+  });
+	
+const timelineWrapper = document.querySelector('.timeline-wrapper');
+
+if (timelineWrapper) {
+    timelineWrapper.addEventListener('wheel', function (e) {
+        const atStart = timelineWrapper.scrollLeft <= 0;
+        const atEnd = timelineWrapper.scrollLeft + timelineWrapper.clientWidth >= timelineWrapper.scrollWidth;
+
+        // Si no está al inicio o al final, hacemos scroll horizontal
+        if (!(atStart && e.deltaY < 0) && !(atEnd && e.deltaY > 0)) {
+            e.preventDefault();
+            timelineWrapper.scrollLeft += e.deltaY;
+        }
+        // Si está en un extremo y el usuario intenta seguir en esa dirección, dejamos el scroll nativo
+    }, { passive: false });
+}
+
+});
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const scrollContent = document.querySelector('.timeline-wrapper');
+    const scrollThumb = document.getElementById('scrollThumb');
+
+  
+	  
+	if(scrollContent&& scrollThumb){
+		
+		    const scrollbarHeight = document.querySelector('.custom-scrollbar').offsetHeight;
+
+		  const updateThumb = () => {
+      const contentScrollWidth = scrollContent.scrollWidth - scrollContent.clientWidth;
+      const scrollRatio = scrollContent.scrollLeft / contentScrollWidth;
+      const thumbMaxTop = scrollbarHeight - scrollThumb.offsetHeight;
+      scrollThumb.style.top = (scrollRatio * thumbMaxTop) + 'px';
+    };
+		
+		    scrollContent.addEventListener('scroll', updateThumb);
+			window.addEventListener('resize', updateThumb);
+			updateThumb();
+		
+					// Dragging la thumb
+			let isDragging = false;
+			let startY, startTop;
+
+			scrollThumb.addEventListener('mousedown', (e) => {
+			  isDragging = true;
+			  startY = e.clientY;
+			  startTop = scrollThumb.offsetTop;
+			  document.body.style.userSelect = 'none';
+			});
+		
+		
+
+    document.addEventListener('mousemove', (e) => {
+      if (!isDragging) return;
+
+      const deltaY = e.clientY - startY;
+      const thumbMaxTop = scrollbarHeight - scrollThumb.offsetHeight;
+      let newTop = Math.min(Math.max(0, startTop + deltaY), thumbMaxTop);
+
+      scrollThumb.style.top = newTop + 'px';
+
+      // Map de posición del thumb al scroll horizontal
+      const scrollRatio = newTop / thumbMaxTop;
+      const contentScrollWidth = scrollContent.scrollWidth - scrollContent.clientWidth;
+      scrollContent.scrollLeft = scrollRatio * contentScrollWidth;
+		console.log(scrollContent.scrollLeft)
+    });
+
+    document.addEventListener('mouseup', () => {
+      isDragging = false;
+      document.body.style.userSelect = '';
+    });
+		
+
+		    const scrollContainer = document.querySelector('.timeline-wrapper');
+  const btnLeft = document.querySelectorAll('.timeline-btn-left')[0];
+  const btnRight = document.querySelectorAll('.timeline-btn-right')[0];
+
+  // Distancia a mover en cada click (puedes ajustar)
+  const scrollAmount = 200; 
+
+  btnLeft.addEventListener('click', () => {
+    scrollContainer.scrollBy({
+      left: -scrollAmount,
+      behavior: 'smooth'
+    });
+  });
+
+  btnRight.addEventListener('click', () => {
+    scrollContainer.scrollBy({
+      left: scrollAmount,
+      behavior: 'smooth'
+    });
+  });
+
+	}  
+	  
+	
+
+
+
+
+  });
+
+</script>
+<!-- end Simple Custom CSS and JS -->
+<meta name="generator" content="Site Kit by Google 1.168.0" /><meta name="generator" content="Elementor 3.31.2; features: e_font_icon_svg, additional_custom_breakpoints, e_element_cache; settings: css_print_method-external, google_font-enabled, font_display-swap">
+			<style>
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload),
+				.e-con.e-parent:nth-of-type(n+4):not(.e-lazyloaded):not(.e-no-lazyload) * {
+					background-image: none !important;
+				}
+				@media screen and (max-height: 1024px) {
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+3):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+				@media screen and (max-height: 640px) {
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload),
+					.e-con.e-parent:nth-of-type(n+2):not(.e-lazyloaded):not(.e-no-lazyload) * {
+						background-image: none !important;
+					}
+				}
+			</style>
+			<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+<meta name="generator" content="Powered by Slider Revolution 6.7.34 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface." />
+<link rel="icon" href="https://dispetrocom.com/wp-content/uploads/2025/07/cropped-favicon-32x32.png" sizes="32x32" />
+<link rel="icon" href="https://dispetrocom.com/wp-content/uploads/2025/07/cropped-favicon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://dispetrocom.com/wp-content/uploads/2025/07/cropped-favicon-180x180.png" />
+<meta name="msapplication-TileImage" content="https://dispetrocom.com/wp-content/uploads/2025/07/cropped-favicon-270x270.png" />
+<script>
+	window._tpt			??= {};
+	window.SR7			??= {};
+	_tpt.R				??= {};
+	_tpt.R.fonts		??= {};
+	_tpt.R.fonts.customFonts??= {};
+	SR7.devMode			=  false;
+	SR7.F 				??= {};
+	SR7.G				??= {};
+	SR7.LIB				??= {};
+	SR7.E				??= {};
+	SR7.E.gAddons		??= {};
+	SR7.E.php 			??= {};
+	SR7.E.nonce			= '421f2a5f63';
+	SR7.E.ajaxurl		= 'https://dispetrocom.com/wp-admin/admin-ajax.php';
+	SR7.E.resturl		= 'https://dispetrocom.com/wp-json/';
+	SR7.E.slug_path		= 'revslider/revslider.php';
+	SR7.E.slug			= 'revslider';
+	SR7.E.plugin_url	= 'https://dispetrocom.com/wp-content/plugins/revslider/';
+	SR7.E.wp_plugin_url = 'https://dispetrocom.com/wp-content/plugins/';
+	SR7.E.revision		= '6.7.34';
+	SR7.E.fontBaseUrl	= '//fonts.googleapis.com/css2?family=';
+	SR7.G.breakPoints 	= [1240,1024,778,480];
+	SR7.E.modules 		= ['module','page','slide','layer','draw','animate','srtools','canvas','defaults','carousel','navigation','media','modifiers','migration'];
+	SR7.E.libs 			= ['WEBGL'];
+	SR7.E.css 			= ['csslp','cssbtns','cssfilters','cssnav','cssmedia'];
+	SR7.E.resources		= {};
+	SR7.E.ytnc			= false;
+	SR7.JSON			??= {};
+/*! Slider Revolution 7.0 - Page Processor */
+!function(){"use strict";window.SR7??={},window._tpt??={},SR7.version="Slider Revolution 6.7.16",_tpt.getMobileZoom=()=>_tpt.is_mobile?document.documentElement.clientWidth/window.innerWidth:1,_tpt.getWinDim=function(t){_tpt.screenHeightWithUrlBar??=window.innerHeight;let e=SR7.F?.modal?.visible&&SR7.M[SR7.F.module.getIdByAlias(SR7.F.modal.requested)];_tpt.scrollBar=window.innerWidth!==document.documentElement.clientWidth||e&&window.innerWidth!==e.c.module.clientWidth,_tpt.winW=_tpt.getMobileZoom()*window.innerWidth-(_tpt.scrollBar||"prepare"==t?_tpt.scrollBarW??_tpt.mesureScrollBar():0),_tpt.winH=_tpt.getMobileZoom()*window.innerHeight,_tpt.winWAll=document.documentElement.clientWidth},_tpt.getResponsiveLevel=function(t,e){SR7.M[e];return _tpt.closestGE(t,_tpt.winWAll)},_tpt.mesureScrollBar=function(){let t=document.createElement("div");return t.className="RSscrollbar-measure",t.style.width="100px",t.style.height="100px",t.style.overflow="scroll",t.style.position="absolute",t.style.top="-9999px",document.body.appendChild(t),_tpt.scrollBarW=t.offsetWidth-t.clientWidth,document.body.removeChild(t),_tpt.scrollBarW},_tpt.loadCSS=async function(t,e,s){return s?_tpt.R.fonts.required[e].status=1:(_tpt.R[e]??={},_tpt.R[e].status=1),new Promise(((i,n)=>{if(_tpt.isStylesheetLoaded(t))s?_tpt.R.fonts.required[e].status=2:_tpt.R[e].status=2,i();else{const o=document.createElement("link");o.rel="stylesheet";let l="text",r="css";o["type"]=l+"/"+r,o.href=t,o.onload=()=>{s?_tpt.R.fonts.required[e].status=2:_tpt.R[e].status=2,i()},o.onerror=()=>{s?_tpt.R.fonts.required[e].status=3:_tpt.R[e].status=3,n(new Error(`Failed to load CSS: ${t}`))},document.head.appendChild(o)}}))},_tpt.addContainer=function(t){const{tag:e="div",id:s,class:i,datas:n,textContent:o,iHTML:l}=t,r=document.createElement(e);if(s&&""!==s&&(r.id=s),i&&""!==i&&(r.className=i),n)for(const[t,e]of Object.entries(n))"style"==t?r.style.cssText=e:r.setAttribute(`data-${t}`,e);return o&&(r.textContent=o),l&&(r.innerHTML=l),r},_tpt.collector=function(){return{fragment:new DocumentFragment,add(t){var e=_tpt.addContainer(t);return this.fragment.appendChild(e),e},append(t){t.appendChild(this.fragment)}}},_tpt.isStylesheetLoaded=function(t){let e=t.split("?")[0];return Array.from(document.querySelectorAll('link[rel="stylesheet"], link[rel="preload"]')).some((t=>t.href.split("?")[0]===e))},_tpt.preloader={requests:new Map,preloaderTemplates:new Map,show:function(t,e){if(!e||!t)return;const{type:s,color:i}=e;if(s<0||"off"==s)return;const n=`preloader_${s}`;let o=this.preloaderTemplates.get(n);o||(o=this.build(s,i),this.preloaderTemplates.set(n,o)),this.requests.has(t)||this.requests.set(t,{count:0});const l=this.requests.get(t);clearTimeout(l.timer),l.count++,1===l.count&&(l.timer=setTimeout((()=>{l.preloaderClone=o.cloneNode(!0),l.anim&&l.anim.kill(),void 0!==_tpt.gsap?l.anim=_tpt.gsap.fromTo(l.preloaderClone,1,{opacity:0},{opacity:1}):l.preloaderClone.classList.add("sr7-fade-in"),t.appendChild(l.preloaderClone)}),150))},hide:function(t){if(!this.requests.has(t))return;const e=this.requests.get(t);e.count--,e.count<0&&(e.count=0),e.anim&&e.anim.kill(),0===e.count&&(clearTimeout(e.timer),e.preloaderClone&&(e.preloaderClone.classList.remove("sr7-fade-in"),e.anim=_tpt.gsap.to(e.preloaderClone,.3,{opacity:0,onComplete:function(){e.preloaderClone.remove()}})))},state:function(t){if(!this.requests.has(t))return!1;return this.requests.get(t).count>0},build:(t,e="#ffffff",s="")=>{if(t<0||"off"===t)return null;const i=parseInt(t);if(t="prlt"+i,isNaN(i))return null;if(_tpt.loadCSS(SR7.E.plugin_url+"public/css/preloaders/t"+i+".css","preloader_"+t),isNaN(i)||i<6){const n=`background-color:${e}`,o=1===i||2==i?n:"",l=3===i||4==i?n:"",r=_tpt.collector();["dot1","dot2","bounce1","bounce2","bounce3"].forEach((t=>r.add({tag:"div",class:t,datas:{style:l}})));const d=_tpt.addContainer({tag:"sr7-prl",class:`${t} ${s}`,datas:{style:o}});return r.append(d),d}{let n={};if(7===i){let t;e.startsWith("#")?(t=e.replace("#",""),t=`rgba(${parseInt(t.substring(0,2),16)}, ${parseInt(t.substring(2,4),16)}, ${parseInt(t.substring(4,6),16)}, `):e.startsWith("rgb")&&(t=e.slice(e.indexOf("(")+1,e.lastIndexOf(")")).split(",").map((t=>t.trim())),t=`rgba(${t[0]}, ${t[1]}, ${t[2]}, `),t&&(n.style=`border-top-color: ${t}0.65); border-bottom-color: ${t}0.15); border-left-color: ${t}0.65); border-right-color: ${t}0.15)`)}else 12===i&&(n.style=`background:${e}`);const o=[10,0,4,2,5,9,0,4,4,2][i-6],l=_tpt.collector(),r=l.add({tag:"div",class:"sr7-prl-inner",datas:n});Array.from({length:o}).forEach((()=>r.appendChild(l.add({tag:"span",datas:{style:`background:${e}`}}))));const d=_tpt.addContainer({tag:"sr7-prl",class:`${t} ${s}`});return l.append(d),d}}},SR7.preLoader={show:(t,e)=>{"off"!==(SR7.M[t]?.settings?.pLoader?.type??"off")&&_tpt.preloader.show(e||SR7.M[t].c.module,SR7.M[t]?.settings?.pLoader??{color:"#fff",type:10})},hide:(t,e)=>{"off"!==(SR7.M[t]?.settings?.pLoader?.type??"off")&&_tpt.preloader.hide(e||SR7.M[t].c.module)},state:(t,e)=>_tpt.preloader.state(e||SR7.M[t].c.module)},_tpt.prepareModuleHeight=function(t){window.SR7.M??={},window.SR7.M[t.id]??={},"ignore"==t.googleFont&&(SR7.E.ignoreGoogleFont=!0);let e=window.SR7.M[t.id];if(null==_tpt.scrollBarW&&_tpt.mesureScrollBar(),e.c??={},e.states??={},e.settings??={},e.settings.size??={},t.fixed&&(e.settings.fixed=!0),e.c.module=document.querySelector("sr7-module#"+t.id),e.c.adjuster=e.c.module.getElementsByTagName("sr7-adjuster")[0],e.c.content=e.c.module.getElementsByTagName("sr7-content")[0],"carousel"==t.type&&(e.c.carousel=e.c.content.getElementsByTagName("sr7-carousel")[0]),null==e.c.module||null==e.c.module)return;t.plType&&t.plColor&&(e.settings.pLoader={type:t.plType,color:t.plColor}),void 0===t.plType||"off"===t.plType||SR7.preLoader.state(t.id)&&SR7.preLoader.state(t.id,e.c.module)||SR7.preLoader.show(t.id,e.c.module),_tpt.winW||_tpt.getWinDim("prepare"),_tpt.getWinDim();let s=""+e.c.module.dataset?.modal;"modal"==s||"true"==s||"undefined"!==s&&"false"!==s||(e.settings.size.fullWidth=t.size.fullWidth,e.LEV??=_tpt.getResponsiveLevel(window.SR7.G.breakPoints,t.id),t.vpt=_tpt.fillArray(t.vpt,5),e.settings.vPort=t.vpt[e.LEV],void 0!==t.el&&"720"==t.el[4]&&t.gh[4]!==t.el[4]&&"960"==t.el[3]&&t.gh[3]!==t.el[3]&&"768"==t.el[2]&&t.gh[2]!==t.el[2]&&delete t.el,e.settings.size.height=null==t.el||null==t.el[e.LEV]||0==t.el[e.LEV]||"auto"==t.el[e.LEV]?_tpt.fillArray(t.gh,5,-1):_tpt.fillArray(t.el,5,-1),e.settings.size.width=_tpt.fillArray(t.gw,5,-1),e.settings.size.minHeight=_tpt.fillArray(t.mh??[0],5,-1),e.cacheSize={fullWidth:e.settings.size?.fullWidth,fullHeight:e.settings.size?.fullHeight},void 0!==t.off&&(t.off?.t&&(e.settings.size.m??={})&&(e.settings.size.m.t=t.off.t),t.off?.b&&(e.settings.size.m??={})&&(e.settings.size.m.b=t.off.b),t.off?.l&&(e.settings.size.p??={})&&(e.settings.size.p.l=t.off.l),t.off?.r&&(e.settings.size.p??={})&&(e.settings.size.p.r=t.off.r),e.offsetPrepared=!0),_tpt.updatePMHeight(t.id,t,!0))},_tpt.updatePMHeight=(t,e,s)=>{let i=SR7.M[t];var n=i.settings.size.fullWidth?_tpt.winW:i.c.module.parentNode.offsetWidth;n=0===n||isNaN(n)?_tpt.winW:n;let o=i.settings.size.width[i.LEV]||i.settings.size.width[i.LEV++]||i.settings.size.width[i.LEV--]||n,l=i.settings.size.height[i.LEV]||i.settings.size.height[i.LEV++]||i.settings.size.height[i.LEV--]||0,r=i.settings.size.minHeight[i.LEV]||i.settings.size.minHeight[i.LEV++]||i.settings.size.minHeight[i.LEV--]||0;if(l="auto"==l?0:l,l=parseInt(l),"carousel"!==e.type&&(n-=parseInt(e.onw??0)||0),i.MP=!i.settings.size.fullWidth&&n<o||_tpt.winW<o?Math.min(1,n/o):1,e.size.fullScreen||e.size.fullHeight){let t=parseInt(e.fho)||0,s=(""+e.fho).indexOf("%")>-1;e.newh=_tpt.winH-(s?_tpt.winH*t/100:t)}else e.newh=i.MP*Math.max(l,r);if(e.newh+=(parseInt(e.onh??0)||0)+(parseInt(e.carousel?.pt)||0)+(parseInt(e.carousel?.pb)||0),void 0!==e.slideduration&&(e.newh=Math.max(e.newh,parseInt(e.slideduration)/3)),e.shdw&&_tpt.buildShadow(e.id,e),i.c.adjuster.style.height=e.newh+"px",i.c.module.style.height=e.newh+"px",i.c.content.style.height=e.newh+"px",i.states.heightPrepared=!0,i.dims??={},i.dims.moduleRect=i.c.module.getBoundingClientRect(),i.c.content.style.left="-"+i.dims.moduleRect.left+"px",!i.settings.size.fullWidth)return s&&requestAnimationFrame((()=>{n!==i.c.module.parentNode.offsetWidth&&_tpt.updatePMHeight(e.id,e)})),void _tpt.bgStyle(e.id,e,window.innerWidth==_tpt.winW,!0);_tpt.bgStyle(e.id,e,window.innerWidth==_tpt.winW,!0),requestAnimationFrame((function(){s&&requestAnimationFrame((()=>{n!==i.c.module.parentNode.offsetWidth&&_tpt.updatePMHeight(e.id,e)}))})),i.earlyResizerFunction||(i.earlyResizerFunction=function(){requestAnimationFrame((function(){_tpt.getWinDim(),_tpt.moduleDefaults(e.id,e),_tpt.updateSlideBg(t,!0)}))},window.addEventListener("resize",i.earlyResizerFunction))},_tpt.buildShadow=function(t,e){let s=SR7.M[t];null==s.c.shadow&&(s.c.shadow=document.createElement("sr7-module-shadow"),s.c.shadow.classList.add("sr7-shdw-"+e.shdw),s.c.content.appendChild(s.c.shadow))},_tpt.bgStyle=async(t,e,s,i,n)=>{const o=SR7.M[t];if((e=e??o.settings).fixed&&!o.c.module.classList.contains("sr7-top-fixed")&&(o.c.module.classList.add("sr7-top-fixed"),o.c.module.style.position="fixed",o.c.module.style.width="100%",o.c.module.style.top="0px",o.c.module.style.left="0px",o.c.module.style.pointerEvents="none",o.c.module.style.zIndex=5e3,o.c.content.style.pointerEvents="none"),null==o.c.bgcanvas){let t=document.createElement("sr7-module-bg"),l=!1;if("string"==typeof e?.bg?.color&&e?.bg?.color.includes("{"))if(_tpt.gradient&&_tpt.gsap)e.bg.color=_tpt.gradient.convert(e.bg.color);else try{let t=JSON.parse(e.bg.color);(t?.orig||t?.string)&&(e.bg.color=JSON.parse(e.bg.color))}catch(t){return}let r="string"==typeof e?.bg?.color?e?.bg?.color||"transparent":e?.bg?.color?.string??e?.bg?.color?.orig??e?.bg?.color?.color??"transparent";if(t.style["background"+(String(r).includes("grad")?"":"Color")]=r,("transparent"!==r||n)&&(l=!0),o.offsetPrepared&&(t.style.visibility="hidden"),e?.bg?.image?.src&&(t.style.backgroundImage=`url(${e?.bg?.image.src})`,t.style.backgroundSize=""==(e.bg.image?.size??"")?"cover":e.bg.image.size,t.style.backgroundPosition=e.bg.image.position,t.style.backgroundRepeat=""==e.bg.image.repeat||null==e.bg.image.repeat?"no-repeat":e.bg.image.repeat,l=!0),!l)return;o.c.bgcanvas=t,e.size.fullWidth?t.style.width=_tpt.winW-(s&&_tpt.winH<document.body.offsetHeight?_tpt.scrollBarW:0)+"px":i&&(t.style.width=o.c.module.offsetWidth+"px"),e.sbt?.use?o.c.content.appendChild(o.c.bgcanvas):o.c.module.appendChild(o.c.bgcanvas)}o.c.bgcanvas.style.height=void 0!==e.newh?e.newh+"px":("carousel"==e.type?o.dims.module.h:o.dims.content.h)+"px",o.c.bgcanvas.style.left=!s&&e.sbt?.use||o.c.bgcanvas.closest("SR7-CONTENT")?"0px":"-"+(o?.dims?.moduleRect?.left??0)+"px"},_tpt.updateSlideBg=function(t,e){const s=SR7.M[t];let i=s.settings;s?.c?.bgcanvas&&(i.size.fullWidth?s.c.bgcanvas.style.width=_tpt.winW-(e&&_tpt.winH<document.body.offsetHeight?_tpt.scrollBarW:0)+"px":preparing&&(s.c.bgcanvas.style.width=s.c.module.offsetWidth+"px"))},_tpt.moduleDefaults=(t,e)=>{let s=SR7.M[t];null!=s&&null!=s.c&&null!=s.c.module&&(s.dims??={},s.dims.moduleRect=s.c.module.getBoundingClientRect(),s.c.content.style.left="-"+s.dims.moduleRect.left+"px",s.c.content.style.width=_tpt.winW-_tpt.scrollBarW+"px","carousel"==e.type&&(s.c.module.style.overflow="visible"),_tpt.bgStyle(t,e,window.innerWidth==_tpt.winW))},_tpt.getOffset=t=>{var e=t.getBoundingClientRect(),s=window.pageXOffset||document.documentElement.scrollLeft,i=window.pageYOffset||document.documentElement.scrollTop;return{top:e.top+i,left:e.left+s}},_tpt.fillArray=function(t,e){let s,i;t=Array.isArray(t)?t:[t];let n=Array(e),o=t.length;for(i=0;i<t.length;i++)n[i+(e-o)]=t[i],null==s&&"#"!==t[i]&&(s=t[i]);for(let t=0;t<e;t++)void 0!==n[t]&&"#"!=n[t]||(n[t]=s),s=n[t];return n},_tpt.closestGE=function(t,e){let s=Number.MAX_VALUE,i=-1;for(let n=0;n<t.length;n++)t[n]-1>=e&&t[n]-1-e<s&&(s=t[n]-1-e,i=n);return++i}}();</script>
+</head>
+
+<body class="home wp-singular page-template page-template-elementor_header_footer page page-id-1470 wp-embed-responsive wp-theme-hello-elementor hello-elementor-default elementor-default elementor-template-full-width elementor-kit-6 elementor-page elementor-page-1470">
+
+	
+			<a class="skip-link screen-reader-text" href="#content">
+			Skip to content		</a>
+	
+	
+	<div class="ekit-template-content-markup ekit-template-content-header ekit-template-content-theme-support">
+				<div data-elementor-type="wp-post" data-elementor-id="7" class="elementor elementor-7">
+				<div class="elementor-element elementor-element-68d11b6 e-con-full disp-header e-flex e-con e-parent" data-id="68d11b6" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-a2a3ce5 e-con-full e-flex e-con e-child" data-id="a2a3ce5" data-element_type="container">
+				<div class="elementor-element elementor-element-ff77450 elementor-widget elementor-widget-ekit-nav-menu" data-id="ff77450" data-element_type="widget" data-widget_type="ekit-nav-menu.default">
+				<div class="elementor-widget-container">
+							<nav class="ekit-wid-con ekit_menu_responsive_tablet" 
+			data-hamburger-icon="icon icon-options" 
+			data-hamburger-icon-type="icon" 
+			data-responsive-breakpoint="1024">
+			            <button class="elementskit-menu-hamburger elementskit-menu-toggler"  type="button" aria-label="hamburger-icon">
+                <i aria-hidden="true" class="ekit-menu-icon icon icon-options"></i>            </button>
+            <div id="ekit-megamenu-principal" class="elementskit-menu-container elementskit-menu-offcanvas-elements elementskit-navbar-nav-default ekit-nav-menu-one-page-no ekit-nav-dropdown-hover"><ul id="menu-principal" class="elementskit-navbar-nav elementskit-menu-po-left submenu-click-on-icon"><li id="menu-item-2576" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2576 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="/" class="ekit-menu-nav-link">Home</a></li>
+<li id="menu-item-19" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-19 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="/quienes-somos/" class="ekit-menu-nav-link">Nosotros</a></li>
+<li id="menu-item-20" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-20 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="/servicios/" class="ekit-menu-nav-link">Servicios</a></li>
+<li id="menu-item-21" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-21 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="/industrias" class="ekit-menu-nav-link">Industrias</a></li>
+<li id="menu-item-22" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-22 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="/certificaciones" class="ekit-menu-nav-link">Certificaciones</a></li>
+<li id="menu-item-23" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-23 nav-item elementskit-mobile-builder-content" data-vertical-menu=750px><a href="/blog" class="ekit-menu-nav-link">Blog</a></li>
+</ul><div class="elementskit-nav-identity-panel"><button class="elementskit-menu-close elementskit-menu-toggler" type="button">X</button></div></div>			
+			<div class="elementskit-menu-overlay elementskit-menu-offcanvas-elements elementskit-menu-toggler ekit-nav-menu--overlay"></div>        </nav>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-889df48 e-con-full e-flex e-con e-child" data-id="889df48" data-element_type="container">
+				<div class="elementor-element elementor-element-c54a775 elementor-widget elementor-widget-image" data-id="c54a775" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+																<a href="/">
+							<img width="427" height="93" src="https://dispetrocom.com/wp-content/uploads/2025/06/logo-dispetrocom-largo.png" class="attachment-large size-large wp-image-14" alt="" srcset="https://dispetrocom.com/wp-content/uploads/2025/06/logo-dispetrocom-largo.png 427w, https://dispetrocom.com/wp-content/uploads/2025/06/logo-dispetrocom-largo-300x65.png 300w" sizes="(max-width: 427px) 100vw, 427px" />								</a>
+															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-4852ccc e-con-full e-flex e-con e-child" data-id="4852ccc" data-element_type="container">
+				<div class="elementor-element elementor-element-59e783a elementor-hidden-mobile_extra elementor-hidden-mobile elementor-widget elementor-widget-shortcode" data-id="59e783a" data-element_type="widget" data-widget_type="shortcode.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-shortcode">    
+    <div class="search-container">
+    
+      <form role="search" method="get" action="https://dispetrocom.com/">
+        <input type="text" class="search-input" name="s" placeholder="Buscar...">
+      </form>
+		  <button class="search-btn" id="search-toggle">
+        <i class="fas fa-search"></i> <!-- Font Awesome -->
+      </button>
+    </div>
+    
+    </div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-b1db0c0 elementor-hidden-desktop elementor-hidden-laptop elementor-hidden-tablet_extra elementor-hidden-tablet elementor-widget elementor-widget-elementskit-header-search" data-id="b1db0c0" data-element_type="widget" data-widget_type="elementskit-header-search.default">
+				<div class="elementor-widget-container">
+					<div class="ekit-wid-con" >        <a href="#ekit_modal-popup-b1db0c0" class="ekit_navsearch-button ekit-modal-popup" aria-label="navsearch-button">
+            <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>        </a>
+        <!-- language switcher strart -->
+        <!-- xs modal -->
+        <div class="zoom-anim-dialog mfp-hide ekit_modal-searchPanel" id="ekit_modal-popup-b1db0c0">
+            <div class="ekit-search-panel">
+            <!-- Polylang search - thanks to Alain Melsens -->
+                <form role="search" method="get" class="ekit-search-group" action="https://dispetrocom.com/">
+                    <input type="search" class="ekit_search-field" aria-label="search-form" placeholder="Buscar" value="" name="s">
+					<button type="submit" class="ekit_search-button" aria-label="search-button">
+                        <svg aria-hidden="true" class="e-font-icon-svg e-fas-search" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z"></path></svg>                    </button>
+                </form>
+            </div>
+        </div><!-- End xs modal -->
+        <!-- end language switcher strart -->
+        </div>				</div>
+				</div>
+				<div class="elementor-element elementor-element-92db2ec elementor-hidden-mobile elementor-widget elementor-widget-button" data-id="92db2ec" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://api.whatsapp.com/send/?phone=573138487357&#038;text=Hola%2C+estoy+interesado+en+m%C3%A1s+informaci%C3%B3n+sobre+Dispetrocom&#038;type=phone_number&#038;app_absent=0" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">CONTÁCTANOS</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+				</div>
+				</div>
+			</div>
+
+			<div data-elementor-type="wp-page" data-elementor-id="1470" class="elementor elementor-1470">
+				<div class="elementor-element elementor-element-7388a46 e-con-full disp-hero e-flex e-con e-parent" data-id="7388a46" data-element_type="container">
+				<div class="elementor-element elementor-element-04e1b9f elementor-widget elementor-widget-slider_revolution" data-id="04e1b9f" data-element_type="widget" data-widget_type="slider_revolution.default">
+				<div class="elementor-widget-container">
+					
+		<div class="wp-block-themepunch-revslider">
+				<p class="rs-p-wp-fix"></p>
+				<sr7-module data-alias="slider-1" data-id="1" id="SR7_1_1" class="rs-ov-hidden" data-version="6.7.34">
+					<sr7-adjuster></sr7-adjuster>
+					<sr7-content>
+						<sr7-slide id="SR7_1_1-1" data-key="1">
+							<sr7-bg id="SR7_1_1-1-5" class="sr7-layer"><noscript><img decoding="async" src="https://dispetrocom.com/wp-content/uploads/2025/09/5.webp" alt="" title="5"></noscript></sr7-bg>
+							<sr7-txt id="SR7_1_1-1-1" class="sr7-layer">SUMINISTRO ESTRATÉGICO<br />
+DE ENERGÍA</sr7-txt>
+							<a id="SR7_1_1-1-4" class="sr7-layer" href="https://api.whatsapp.com/send/?phone=573138487357&#038;text=Hola%2C+estoy+interesado+en+m%C3%A1s+informaci%C3%B3n+sobre+Dispetrocom&#038;type=phone_number&#038;app_absent=0" target="_blank" rel="noopener">HABLEMOS</a>
+						</sr7-slide>
+						<sr7-slide id="SR7_1_1-4" data-key="4">
+							<sr7-bg id="SR7_1_1-4-4" class="sr7-layer"><noscript><img decoding="async" src="https://dispetrocom.com/wp-content/uploads/2025/09/1.webp" alt="" title="1"></noscript></sr7-bg>
+							<sr7-txt id="SR7_1_1-4-1" class="sr7-layer">SEGURIDAD QUE SE PLANIFICA</sr7-txt>
+							<a id="SR7_1_1-4-3" class="sr7-layer" href="https://api.whatsapp.com/send/?phone=573138487357&#038;text=Hola%2C+estoy+interesado+en+m%C3%A1s+informaci%C3%B3n+sobre+Dispetrocom&#038;type=phone_number&#038;app_absent=0" target="_blank" rel="noopener">COTIZA</a>
+						</sr7-slide>
+						<sr7-slide id="SR7_1_1-5" data-key="5">
+							<sr7-bg id="SR7_1_1-5-5" class="sr7-layer"><noscript><img decoding="async" src="https://dispetrocom.com/wp-content/uploads/2025/09/IMG_5880_opt.webp" alt="" title="IMG_5880_opt"></noscript></sr7-bg>
+							<sr7-txt id="SR7_1_1-5-1" class="sr7-layer">PRECISIÓN Y COMPROMISO</sr7-txt>
+							<a id="SR7_1_1-5-4" class="sr7-layer" href="https://api.whatsapp.com/send/?phone=573138487357&#038;text=Hola%2C+estoy+interesado+en+m%C3%A1s+informaci%C3%B3n+sobre+Dispetrocom&#038;type=phone_number&#038;app_absent=0" target="_blank" rel="noopener">HABLEMOS</a>
+						</sr7-slide>
+						<sr7-slide id="SR7_1_1-6" data-key="6">
+							<sr7-bg id="SR7_1_1-6-5" class="sr7-layer"><noscript><img decoding="async" src="https://dispetrocom.com/wp-content/uploads/2025/08/Multimedia.jpeg" alt="" title="Multimedia"></noscript></sr7-bg>
+							<sr7-txt id="SR7_1_1-6-1" class="sr7-layer">CONFIANZA Y RESPALDO</sr7-txt>
+							<a id="SR7_1_1-6-4" class="sr7-layer" href="https://api.whatsapp.com/send/?phone=573138487357&#038;text=Hola%2C+estoy+interesado+en+m%C3%A1s+informaci%C3%B3n+sobre+Dispetrocom&#038;type=phone_number&#038;app_absent=0" target="_blank" rel="noopener">COTIZA</a>
+						</sr7-slide>
+						<sr7-slide id="SR7_1_1-2" data-key="2">
+						</sr7-slide>
+					</sr7-content>
+					<image_lists style="display:none">
+						<img data-src="//dispetrocom.com/wp-content/uploads/2025/09/5.webp" data-libid="3316" data-lib="medialibrary" title="5" width="0" height="0" data-dbsrc="Ly9kaXNwZXRyb2NvbS5jb20vd3AtY29udGVudC91cGxvYWRzLzIwMjUvMDkvNS53ZWJw"/>
+						<img loading="lazy" data-src="//dispetrocom.com/wp-content/uploads/2025/09/1.webp" data-libid="3317" data-lib="medialibrary" title="1" width="0" height="0" data-dbsrc="Ly9kaXNwZXRyb2NvbS5jb20vd3AtY29udGVudC91cGxvYWRzLzIwMjUvMDkvMS53ZWJw"/>
+						<img loading="lazy" data-src="//dispetrocom.com/wp-content/uploads/2025/09/IMG_5880_opt.webp" data-libid="3302" data-lib="medialibrary" title="IMG_5880_opt" width="0" height="0" data-dbsrc="Ly9kaXNwZXRyb2NvbS5jb20vd3AtY29udGVudC91cGxvYWRzLzIwMjUvMDkvSU1HXzU4ODBfb3B0LndlYnA="/>
+						<img loading="lazy" data-src="//dispetrocom.com/wp-content/uploads/2025/08/Multimedia.jpeg" data-libid="2816" data-lib="medialibrary" title="Multimedia" width="0" height="0" data-dbsrc="Ly9kaXNwZXRyb2NvbS5jb20vd3AtY29udGVudC91cGxvYWRzLzIwMjUvMDgvTXVsdGltZWRpYS5qcGVn"/>
+					</image_lists>
+				</sr7-module>
+				<script>
+					SR7.PMH ??={}; SR7.PMH["SR7_1_1"] = {cn:100,state:false,fn: function() { if (_tpt!==undefined && _tpt.prepareModuleHeight !== undefined) {  _tpt.prepareModuleHeight({id:"SR7_1_1",el:[900,900,768,960,720],type:'standard',shdw:'0',gh:[900,900,768,960,720],gw:[1240,1240,1024,778,480],vpt:['-100px&#039;,&#039;-100px&#039;,&#039;-100px&#039;,&#039;-100px&#039;,&#039;-100px'],size:{fullWidth:true, fullHeight:true},fho:'',mh:'0',onh:0,onw:0,bg:{color:'{"orig":"transparent","type":"solid","string":"transparent"}'}});   SR7.PMH["SR7_1_1"].state=true;} else if(SR7.PMH["SR7_1_1"].cn-->0)	setTimeout( SR7.PMH["SR7_1_1"].fn,19);}};SR7.PMH["SR7_1_1" ].fn();
+				</script>
+</div>
+
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-dfdc6e6 e-flex e-con-boxed e-con e-parent" data-id="dfdc6e6" data-element_type="container">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-5009336 e-con-full e-flex e-con e-child" data-id="5009336" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-f2a6acf elementor-invisible elementor-widget elementor-widget-heading" data-id="f2a6acf" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInLeft&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">NUESTROS</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-cd3f16d elementor-invisible elementor-widget elementor-widget-heading" data-id="cd3f16d" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInLeft&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">SERVICIOS</h2>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-e60e1fb e-con-full e-flex e-con e-child" data-id="e60e1fb" data-element_type="container">
+				<div class="elementor-element elementor-element-31f90e3 elementor-widget elementor-widget-text-editor" data-id="31f90e3" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Entendemos que en las industrias la operación no se puede detener. Dispetrocom existe para ofrecer tranquilidad operativa a quienes construyen país.</p><p><strong>No solo entregamos combustible:</strong><br />Resolvemos integralmente el problema del suministro energético mediante:</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-6b66ef7 elementor-align-left elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="6b66ef7" data-element_type="widget" data-widget_type="icon-list.default">
+				<div class="elementor-widget-container">
+							<ul class="elementor-icon-list-items">
+							<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<svg aria-hidden="true" class="e-font-icon-svg e-fas-bullseye" viewBox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><path d="M248 8C111.03 8 0 119.03 0 256s111.03 248 248 248 248-111.03 248-248S384.97 8 248 8zm0 432c-101.69 0-184-82.29-184-184 0-101.69 82.29-184 184-184 101.69 0 184 82.29 184 184 0 101.69-82.29 184-184 184zm0-312c-70.69 0-128 57.31-128 128s57.31 128 128 128 128-57.31 128-128-57.31-128-128-128zm0 192c-35.29 0-64-28.71-64-64s28.71-64 64-64 64 28.71 64 64-28.71 64-64 64z"></path></svg>						</span>
+										<span class="elementor-icon-list-text">Precisión en cada entrega, adaptándonos a las necesidades específicas de cada operación.</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<svg aria-hidden="true" class="e-font-icon-svg e-far-clock" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M256 8C119 8 8 119 8 256s111 248 248 248 248-111 248-248S393 8 256 8zm0 448c-110.5 0-200-89.5-200-200S145.5 56 256 56s200 89.5 200 200-89.5 200-200 200zm61.8-104.4l-84.9-61.7c-3.1-2.3-4.9-5.9-4.9-9.7V116c0-6.6 5.4-12 12-12h32c6.6 0 12 5.4 12 12v141.7l66.8 48.6c5.4 3.9 6.5 11.4 2.6 16.8L334.6 349c-3.9 5.3-11.4 6.5-16.8 2.6z"></path></svg>						</span>
+										<span class="elementor-icon-list-text">Oportunidad, garantizando que el suministro llegue cuándo y dónde se necesita.</span>
+									</li>
+								<li class="elementor-icon-list-item">
+											<span class="elementor-icon-list-icon">
+							<svg aria-hidden="true" class="e-font-icon-svg e-fas-shield-alt" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM256.1 446.3l-.1-381 175.9 73.3c-3.3 151.4-82.1 261.1-175.8 307.7z"></path></svg>						</span>
+										<span class="elementor-icon-list-text">Respaldo constante, con acompañamiento técnico y operativo</span>
+									</li>
+						</ul>
+						</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-a1b8bca e-flex e-con-boxed e-con e-parent" data-id="a1b8bca" data-element_type="container">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-1dec485 e-con-full e-flex e-con e-child" data-id="1dec485" data-element_type="container">
+		<div class="elementor-element elementor-element-cd8caee e-con-full e-flex e-con e-child" data-id="cd8caee" data-element_type="container">
+				<div class="elementor-element elementor-element-0931bdb elementor-position-top elementor-widget elementor-widget-image-box" data-id="0931bdb" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img loading="lazy" decoding="async" width="65" height="65" src="https://dispetrocom.com/wp-content/uploads/2025/07/96_Placeholder_vo.png" class="attachment-full size-full wp-image-1441" alt="" /></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Suministro estratégico  <br>de combustibles </h3></div></div>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-be4032f e-con-full e-flex e-con e-child" data-id="be4032f" data-element_type="container">
+				<div class="elementor-element elementor-element-8b8bd67 elementor-position-top elementor-widget elementor-widget-image-box" data-id="8b8bd67" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img loading="lazy" decoding="async" width="65" height="65" src="https://dispetrocom.com/wp-content/uploads/2025/07/67_Cone_vo.png" class="attachment-full size-full wp-image-1440" alt="" /></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Transporte seguro y  <br>eficiente</h3></div></div>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-bd52171 e-con-full e-flex e-con e-child" data-id="bd52171" data-element_type="container">
+				<div class="elementor-element elementor-element-c44639e elementor-position-top elementor-widget elementor-widget-image-box" data-id="c44639e" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img loading="lazy" decoding="async" width="65" height="65" src="https://dispetrocom.com/wp-content/uploads/2025/07/16_Flash_vo.png" class="attachment-full size-full wp-image-1437" alt="" /></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Energización de <br> Proyectos</h3></div></div>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-686a8c2 e-con-full e-flex e-con e-child" data-id="686a8c2" data-element_type="container">
+				<div class="elementor-element elementor-element-2f347d0 elementor-position-top elementor-widget elementor-widget-image-box" data-id="2f347d0" data-element_type="widget" data-widget_type="image-box.default">
+				<div class="elementor-widget-container">
+					<div class="elementor-image-box-wrapper"><figure class="elementor-image-box-img"><img loading="lazy" decoding="async" width="65" height="65" src="https://dispetrocom.com/wp-content/uploads/2025/07/95_Shield_vo.png" class="attachment-full size-full wp-image-1439" alt="" /></figure><div class="elementor-image-box-content"><h3 class="elementor-image-box-title">Garantías y respaldo<br> técnico</h3></div></div>				</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-4b9bf0e e-flex e-con-boxed e-con e-parent" data-id="4b9bf0e" data-element_type="container">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-1e3b8ec premium-carousel-ripple-yes pa-carousel-template elementor-widget elementor-widget-premium-carousel-widget" data-id="1e3b8ec" data-element_type="widget" data-widget_type="premium-carousel-widget.default">
+				<div class="elementor-widget-container">
+							<div id="premium-carousel-wrapper-1e3b8ec" class="premium-carousel-wrapper premium-carousel-hidden carousel-wrapper-1e3b8ec  premium-carousel-dots-below" data-settings="{&quot;vertical&quot;:false,&quot;appearance&quot;:&quot;all&quot;,&quot;slidesToShow&quot;:1,&quot;infinite&quot;:true,&quot;speed&quot;:300,&quot;fade&quot;:false,&quot;autoplay&quot;:true,&quot;autoplaySpeed&quot;:13000,&quot;draggable&quot;:true,&quot;touchMove&quot;:true,&quot;adaptiveHeight&quot;:false,&quot;variableWidth&quot;:false,&quot;cssEase&quot;:&quot;ease&quot;,&quot;pauseOnHover&quot;:false,&quot;centerMode&quot;:false,&quot;arrows&quot;:false,&quot;dots&quot;:true,&quot;slidesDesk&quot;:1,&quot;slidesTab&quot;:1,&quot;slidesMob&quot;:1,&quot;animation&quot;:&quot;null&quot;,&quot;tabletBreak&quot;:1025,&quot;mobileBreak&quot;:768,&quot;navigation&quot;:[&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;],&quot;carouselNavigation&quot;:&quot;dots&quot;,&quot;templatesNumber&quot;:4}">
+								<div class="premium-carousel-nav-dot">
+										<i class="fas fa-circle" aria-hidden="true"></i>
+										</div>
+									<div id="premium-carousel-1e3b8ec" class="premium-carousel-inner">
+										<div class="premium-carousel-template item-wrapper">
+							<style>.elementor-264 .elementor-element.elementor-element-ae05fec{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--padding-top:0%;--padding-bottom:02%;--padding-left:0%;--padding-right:0%;}.elementor-264 .elementor-element.elementor-element-55a9cf9{--display:flex;--min-height:300px;--justify-content:flex-end;--align-items:center;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--gap:0px 0px;--row-gap:0px;--column-gap:0px;--border-radius:20px 20px 20px 20px;--padding-top:100px;--padding-bottom:100px;--padding-left:90px;--padding-right:90px;}.elementor-264 .elementor-element.elementor-element-55a9cf9:not(.elementor-motion-effects-element-type-background), .elementor-264 .elementor-element.elementor-element-55a9cf9 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("https://dispetrocom.com/wp-content/uploads/2025/06/4.webp");background-position:center center;background-repeat:no-repeat;background-size:cover;}.elementor-264 .elementor-element.elementor-element-9682548{--display:flex;--justify-content:center;--gap:1px 1px;--row-gap:1px;--column-gap:1px;--padding-top:50px;--padding-bottom:50px;--padding-left:075px;--padding-right:75px;}.elementor-widget-heading .elementor-heading-title{font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( --e-global-typography-primary-font-weight );color:var( --e-global-color-primary );}.elementor-264 .elementor-element.elementor-element-63d512e{text-align:left;}.elementor-264 .elementor-element.elementor-element-63d512e .elementor-heading-title{font-family:"Mulish", Sans-serif;font-size:16px;font-weight:700;color:var( --e-global-color-313d989 );}.elementor-264 .elementor-element.elementor-element-35ba958{text-align:left;}.elementor-264 .elementor-element.elementor-element-35ba958 .elementor-heading-title{font-family:"CookConthic", Sans-serif;font-size:80px;font-weight:500;letter-spacing:0px;color:var( --e-global-color-fddc2b2 );}.elementor-widget-text-editor{font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight );color:var( --e-global-color-text );}.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:var( --e-global-color-primary );}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap, .elementor-widget-text-editor.elementor-drop-cap-view-default .elementor-drop-cap{color:var( --e-global-color-primary );border-color:var( --e-global-color-primary );}.elementor-264 .elementor-element.elementor-element-4f8f003 > .elementor-widget-container{padding:20px 0px 10px 0px;}.elementor-264 .elementor-element.elementor-element-4f8f003{text-align:justify;font-family:"Mulish", Sans-serif;font-weight:400;color:#424242;}.elementor-widget-button .elementor-button{background-color:var( --e-global-color-accent );font-family:var( --e-global-typography-accent-font-family ), Sans-serif;font-weight:var( --e-global-typography-accent-font-weight );}.elementor-264 .elementor-element.elementor-element-040137f .elementor-button{background-color:var( --e-global-color-fddc2b2 );font-family:"Mulish", Sans-serif;font-weight:500;text-decoration:none;border-radius:20px 20px 20px 20px;}@media(min-width:768px){.elementor-264 .elementor-element.elementor-element-ae05fec{--content-width:1350px;}}@media(max-width:1600px){.elementor-264 .elementor-element.elementor-element-35ba958 .elementor-heading-title{font-size:55px;}.elementor-264 .elementor-element.elementor-element-4f8f003{font-size:14px;}}@media(max-width:1200px){.elementor-264 .elementor-element.elementor-element-9682548{--padding-top:50px;--padding-bottom:50px;--padding-left:50px;--padding-right:50px;}.elementor-264 .elementor-element.elementor-element-35ba958 .elementor-heading-title{font-size:50px;}}@media(max-width:1024px){.elementor-264 .elementor-element.elementor-element-9682548{--padding-top:30px;--padding-bottom:30px;--padding-left:30px;--padding-right:30px;}.elementor-264 .elementor-element.elementor-element-35ba958 .elementor-heading-title{font-size:40px;}}@media(max-width:880px){.elementor-264 .elementor-element.elementor-element-9682548{--padding-top:20px;--padding-bottom:20px;--padding-left:20px;--padding-right:20px;}.elementor-264 .elementor-element.elementor-element-35ba958 .elementor-heading-title{font-size:40px;}}@media(max-width:767px){.elementor-264 .elementor-element.elementor-element-4f8f003{font-size:12px;}}</style>		<div data-elementor-type="section" data-elementor-id="264" class="elementor elementor-264">
+				<div class="elementor-element elementor-element-ae05fec e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="ae05fec" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-55a9cf9 e-con-full e-flex e-con e-child" data-id="55a9cf9" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				</div>
+		<div class="elementor-element elementor-element-9682548 e-con-full e-flex e-con e-child" data-id="9682548" data-element_type="container">
+				<div class="elementor-element elementor-element-63d512e elementor-widget elementor-widget-heading" data-id="63d512e" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Excelentes resultados</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-35ba958 elementor-widget elementor-widget-heading" data-id="35ba958" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">+30 AÑOS DE EXPERIENCIA</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-4f8f003 elementor-widget elementor-widget-text-editor" data-id="4f8f003" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Llevamos más de tres décadas suministrando energía a los sectores más exigentes del país.</p><p>Nuestra experiencia no solo se mide en años, sino en miles de entregas exitosas, alianzas duraderas y clientes que confían en nuestra capacidad operativa.</p><p>Cada ruta recorrida y cada operación ejecutada nos ha preparado para anticiparnos a los retos de tu industria y responder con soluciones eficientes.</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-040137f elementor-widget elementor-widget-button" data-id="040137f" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://api.whatsapp.com/send/?phone=573138487357&#038;text=Hola%2C+estoy+interesado+en+m%C3%A1s+informaci%C3%B3n+sobre+Dispetrocom&#038;type=phone_number&#038;app_absent=0" target="_blank" rel="nofollow">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">CONFÍA</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		
+													</div>
+												<div class="premium-carousel-template item-wrapper">
+							<style>.elementor-1156 .elementor-element.elementor-element-7b04d7c{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--padding-top:0%;--padding-bottom:02%;--padding-left:0%;--padding-right:0%;}.elementor-1156 .elementor-element.elementor-element-f4a8fe8{--display:flex;--min-height:300px;--justify-content:flex-end;--align-items:center;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--gap:0px 0px;--row-gap:0px;--column-gap:0px;--border-radius:20px 20px 20px 20px;--padding-top:100px;--padding-bottom:100px;--padding-left:90px;--padding-right:90px;}.elementor-1156 .elementor-element.elementor-element-f4a8fe8:not(.elementor-motion-effects-element-type-background), .elementor-1156 .elementor-element.elementor-element-f4a8fe8 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("https://dispetrocom.com/wp-content/uploads/2025/08/imagencomentario6.jpeg");background-position:center center;background-repeat:no-repeat;background-size:cover;}.elementor-1156 .elementor-element.elementor-element-2a88634{--display:flex;--justify-content:center;--gap:1px 1px;--row-gap:1px;--column-gap:1px;--padding-top:50px;--padding-bottom:50px;--padding-left:075px;--padding-right:75px;}.elementor-widget-heading .elementor-heading-title{font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( --e-global-typography-primary-font-weight );color:var( --e-global-color-primary );}.elementor-1156 .elementor-element.elementor-element-0ffb03a{text-align:left;}.elementor-1156 .elementor-element.elementor-element-0ffb03a .elementor-heading-title{font-family:"Mulish", Sans-serif;font-size:16px;font-weight:700;color:var( --e-global-color-313d989 );}.elementor-1156 .elementor-element.elementor-element-0ee6fa5{text-align:left;}.elementor-1156 .elementor-element.elementor-element-0ee6fa5 .elementor-heading-title{font-family:"CookConthic", Sans-serif;font-size:80px;font-weight:500;letter-spacing:0px;color:var( --e-global-color-fddc2b2 );}.elementor-widget-text-editor{font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight );color:var( --e-global-color-text );}.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:var( --e-global-color-primary );}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap, .elementor-widget-text-editor.elementor-drop-cap-view-default .elementor-drop-cap{color:var( --e-global-color-primary );border-color:var( --e-global-color-primary );}.elementor-1156 .elementor-element.elementor-element-9fac413 > .elementor-widget-container{padding:20px 0px 10px 0px;}.elementor-1156 .elementor-element.elementor-element-9fac413{text-align:justify;font-family:"Mulish", Sans-serif;font-weight:400;color:#424242;}.elementor-widget-button .elementor-button{background-color:var( --e-global-color-accent );font-family:var( --e-global-typography-accent-font-family ), Sans-serif;font-weight:var( --e-global-typography-accent-font-weight );}.elementor-1156 .elementor-element.elementor-element-4db5f1b .elementor-button{background-color:var( --e-global-color-fddc2b2 );font-family:"Mulish", Sans-serif;font-weight:500;text-decoration:none;border-radius:20px 20px 20px 20px;}@media(min-width:768px){.elementor-1156 .elementor-element.elementor-element-7b04d7c{--content-width:1350px;}}@media(max-width:1600px){.elementor-1156 .elementor-element.elementor-element-0ee6fa5 .elementor-heading-title{font-size:55px;}.elementor-1156 .elementor-element.elementor-element-9fac413{font-size:14px;}}@media(max-width:1200px){.elementor-1156 .elementor-element.elementor-element-2a88634{--padding-top:50px;--padding-bottom:50px;--padding-left:50px;--padding-right:50px;}.elementor-1156 .elementor-element.elementor-element-0ee6fa5 .elementor-heading-title{font-size:50px;}}@media(max-width:1024px){.elementor-1156 .elementor-element.elementor-element-2a88634{--padding-top:30px;--padding-bottom:30px;--padding-left:30px;--padding-right:30px;}.elementor-1156 .elementor-element.elementor-element-0ee6fa5 .elementor-heading-title{font-size:40px;}}@media(max-width:880px){.elementor-1156 .elementor-element.elementor-element-2a88634{--padding-top:20px;--padding-bottom:20px;--padding-left:20px;--padding-right:20px;}.elementor-1156 .elementor-element.elementor-element-0ee6fa5 .elementor-heading-title{font-size:40px;}}@media(max-width:767px){.elementor-1156 .elementor-element.elementor-element-9fac413{font-size:12px;}}</style>		<div data-elementor-type="section" data-elementor-id="1156" class="elementor elementor-1156">
+				<div class="elementor-element elementor-element-7b04d7c e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="7b04d7c" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-f4a8fe8 e-con-full e-flex e-con e-child" data-id="f4a8fe8" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				</div>
+		<div class="elementor-element elementor-element-2a88634 e-con-full e-flex e-con e-child" data-id="2a88634" data-element_type="container">
+				<div class="elementor-element elementor-element-0ffb03a elementor-widget elementor-widget-heading" data-id="0ffb03a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Cobertura nacional</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-0ee6fa5 elementor-widget elementor-widget-heading" data-id="0ee6fa5" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">DONDE NOS NECESITES AHÍ ESTAMOS</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-9fac413 elementor-widget elementor-widget-text-editor" data-id="9fac413" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>En Dispetrocom operamos en gran parte del territorio nacional, ofreciendo soluciones logísticas y energéticas confiables para diferentes sectores de la industria.</p><p>Nuestra infraestructura y equipo especializado nos permiten atender zonas estratégicas con altos estándares de seguridad y cumplimiento. Sabemos que cada cliente tiene desafíos únicos, por eso trabajamos constantemente en ampliar nuestra cobertura, llegar a más regiones y ser el respaldo que tu operación necesita, estés donde estés.</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-4db5f1b elementor-widget elementor-widget-button" data-id="4db5f1b" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://api.whatsapp.com/send/?phone=573138487357&#038;text=Hola%2C+estoy+interesado+en+m%C3%A1s+informaci%C3%B3n+sobre+Dispetrocom&#038;type=phone_number&#038;app_absent=0" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">SOLICITA</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		
+													</div>
+												<div class="premium-carousel-template item-wrapper">
+							<style>.elementor-3026 .elementor-element.elementor-element-7b04d7c{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--padding-top:0%;--padding-bottom:02%;--padding-left:0%;--padding-right:0%;}.elementor-3026 .elementor-element.elementor-element-f4a8fe8{--display:flex;--min-height:300px;--justify-content:flex-end;--align-items:center;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--gap:0px 0px;--row-gap:0px;--column-gap:0px;--border-radius:20px 20px 20px 20px;--padding-top:100px;--padding-bottom:100px;--padding-left:90px;--padding-right:90px;}.elementor-3026 .elementor-element.elementor-element-f4a8fe8:not(.elementor-motion-effects-element-type-background), .elementor-3026 .elementor-element.elementor-element-f4a8fe8 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("https://dispetrocom.com/wp-content/uploads/2025/08/DSC07781-1.webp");background-position:center center;background-repeat:no-repeat;background-size:cover;}.elementor-3026 .elementor-element.elementor-element-2a88634{--display:flex;--justify-content:center;--gap:1px 1px;--row-gap:1px;--column-gap:1px;--padding-top:50px;--padding-bottom:50px;--padding-left:075px;--padding-right:75px;}.elementor-widget-heading .elementor-heading-title{font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( --e-global-typography-primary-font-weight );color:var( --e-global-color-primary );}.elementor-3026 .elementor-element.elementor-element-0ffb03a{text-align:left;}.elementor-3026 .elementor-element.elementor-element-0ffb03a .elementor-heading-title{font-family:"Mulish", Sans-serif;font-size:16px;font-weight:700;color:var( --e-global-color-313d989 );}.elementor-3026 .elementor-element.elementor-element-0ee6fa5{text-align:left;}.elementor-3026 .elementor-element.elementor-element-0ee6fa5 .elementor-heading-title{font-family:"CookConthic", Sans-serif;font-size:80px;font-weight:500;letter-spacing:0px;color:var( --e-global-color-fddc2b2 );}.elementor-widget-text-editor{font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight );color:var( --e-global-color-text );}.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:var( --e-global-color-primary );}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap, .elementor-widget-text-editor.elementor-drop-cap-view-default .elementor-drop-cap{color:var( --e-global-color-primary );border-color:var( --e-global-color-primary );}.elementor-3026 .elementor-element.elementor-element-9fac413 > .elementor-widget-container{padding:20px 0px 10px 0px;}.elementor-3026 .elementor-element.elementor-element-9fac413{text-align:justify;font-family:"Mulish", Sans-serif;font-weight:400;color:#424242;}.elementor-widget-button .elementor-button{background-color:var( --e-global-color-accent );font-family:var( --e-global-typography-accent-font-family ), Sans-serif;font-weight:var( --e-global-typography-accent-font-weight );}.elementor-3026 .elementor-element.elementor-element-44395eb .elementor-button{background-color:var( --e-global-color-fddc2b2 );font-family:"Mulish", Sans-serif;font-weight:500;text-decoration:none;border-radius:20px 20px 20px 20px;}@media(min-width:768px){.elementor-3026 .elementor-element.elementor-element-7b04d7c{--content-width:1350px;}}@media(max-width:1600px){.elementor-3026 .elementor-element.elementor-element-0ee6fa5 .elementor-heading-title{font-size:55px;}.elementor-3026 .elementor-element.elementor-element-9fac413{font-size:14px;}}@media(max-width:1200px){.elementor-3026 .elementor-element.elementor-element-2a88634{--padding-top:50px;--padding-bottom:50px;--padding-left:50px;--padding-right:50px;}.elementor-3026 .elementor-element.elementor-element-0ee6fa5 .elementor-heading-title{font-size:50px;}}@media(max-width:1024px){.elementor-3026 .elementor-element.elementor-element-2a88634{--padding-top:30px;--padding-bottom:30px;--padding-left:30px;--padding-right:30px;}.elementor-3026 .elementor-element.elementor-element-0ee6fa5 .elementor-heading-title{font-size:40px;}}@media(max-width:880px){.elementor-3026 .elementor-element.elementor-element-2a88634{--padding-top:20px;--padding-bottom:20px;--padding-left:20px;--padding-right:20px;}.elementor-3026 .elementor-element.elementor-element-0ee6fa5 .elementor-heading-title{font-size:40px;}}@media(max-width:767px){.elementor-3026 .elementor-element.elementor-element-9fac413{font-size:12px;}}</style>		<div data-elementor-type="section" data-elementor-id="3026" class="elementor elementor-3026">
+				<div class="elementor-element elementor-element-7b04d7c e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="7b04d7c" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-f4a8fe8 e-con-full e-flex e-con e-child" data-id="f4a8fe8" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				</div>
+		<div class="elementor-element elementor-element-2a88634 e-con-full e-flex e-con e-child" data-id="2a88634" data-element_type="container">
+				<div class="elementor-element elementor-element-0ffb03a elementor-widget elementor-widget-heading" data-id="0ffb03a" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Compromiso con la seguridad</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-0ee6fa5 elementor-widget elementor-widget-heading" data-id="0ee6fa5" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">SEGURIDAD EN CADA OPERACIÓN</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-9fac413 elementor-widget elementor-widget-text-editor" data-id="9fac413" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>En Dispetrocom aplicamos estrictos protocolos antes, durante y después de cada entrega, asegurando que cada operación cumpla con la normatividad vigente y las mejores prácticas de la industria. Nuestra prioridad es proteger a las personas, el medio ambiente y los activos de nuestros clientes, garantizando operaciones seguras y controladas en todo momento.</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-44395eb elementor-widget elementor-widget-button" data-id="44395eb" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://api.whatsapp.com/send/?phone=573138487357&#038;text=Hola%2C+estoy+interesado+en+m%C3%A1s+informaci%C3%B3n+sobre+Dispetrocom&#038;type=phone_number&#038;app_absent=0" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">CONFÍA</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		
+													</div>
+												<div class="premium-carousel-template item-wrapper">
+							<style>.elementor-3032 .elementor-element.elementor-element-ae05fec{--display:flex;--flex-direction:row;--container-widget-width:initial;--container-widget-height:100%;--container-widget-flex-grow:1;--container-widget-align-self:stretch;--flex-wrap-mobile:wrap;--padding-top:0%;--padding-bottom:02%;--padding-left:0%;--padding-right:0%;}.elementor-3032 .elementor-element.elementor-element-55a9cf9{--display:flex;--min-height:300px;--justify-content:flex-end;--align-items:center;--container-widget-width:calc( ( 1 - var( --container-widget-flex-grow ) ) * 100% );--gap:0px 0px;--row-gap:0px;--column-gap:0px;--border-radius:20px 20px 20px 20px;--padding-top:100px;--padding-bottom:100px;--padding-left:90px;--padding-right:90px;}.elementor-3032 .elementor-element.elementor-element-55a9cf9:not(.elementor-motion-effects-element-type-background), .elementor-3032 .elementor-element.elementor-element-55a9cf9 > .elementor-motion-effects-container > .elementor-motion-effects-layer{background-image:url("https://dispetrocom.com/wp-content/uploads/2025/08/IMG_7288-opt.webp");background-position:center center;background-repeat:no-repeat;background-size:cover;}.elementor-3032 .elementor-element.elementor-element-9682548{--display:flex;--justify-content:center;--gap:1px 1px;--row-gap:1px;--column-gap:1px;--padding-top:50px;--padding-bottom:50px;--padding-left:075px;--padding-right:75px;}.elementor-widget-heading .elementor-heading-title{font-family:var( --e-global-typography-primary-font-family ), Sans-serif;font-weight:var( --e-global-typography-primary-font-weight );color:var( --e-global-color-primary );}.elementor-3032 .elementor-element.elementor-element-63d512e{text-align:left;}.elementor-3032 .elementor-element.elementor-element-63d512e .elementor-heading-title{font-family:"Mulish", Sans-serif;font-size:16px;font-weight:700;color:var( --e-global-color-313d989 );}.elementor-3032 .elementor-element.elementor-element-35ba958{text-align:left;}.elementor-3032 .elementor-element.elementor-element-35ba958 .elementor-heading-title{font-family:"CookConthic", Sans-serif;font-size:80px;font-weight:500;letter-spacing:0px;color:var( --e-global-color-fddc2b2 );}.elementor-widget-text-editor{font-family:var( --e-global-typography-text-font-family ), Sans-serif;font-weight:var( --e-global-typography-text-font-weight );color:var( --e-global-color-text );}.elementor-widget-text-editor.elementor-drop-cap-view-stacked .elementor-drop-cap{background-color:var( --e-global-color-primary );}.elementor-widget-text-editor.elementor-drop-cap-view-framed .elementor-drop-cap, .elementor-widget-text-editor.elementor-drop-cap-view-default .elementor-drop-cap{color:var( --e-global-color-primary );border-color:var( --e-global-color-primary );}.elementor-3032 .elementor-element.elementor-element-4f8f003 > .elementor-widget-container{padding:20px 0px 10px 0px;}.elementor-3032 .elementor-element.elementor-element-4f8f003{text-align:justify;font-family:"Mulish", Sans-serif;font-weight:400;color:#424242;}.elementor-widget-button .elementor-button{background-color:var( --e-global-color-accent );font-family:var( --e-global-typography-accent-font-family ), Sans-serif;font-weight:var( --e-global-typography-accent-font-weight );}.elementor-3032 .elementor-element.elementor-element-95e30d7 .elementor-button{background-color:var( --e-global-color-fddc2b2 );font-family:"Mulish", Sans-serif;font-weight:500;text-decoration:none;border-radius:20px 20px 20px 20px;}@media(min-width:768px){.elementor-3032 .elementor-element.elementor-element-ae05fec{--content-width:1350px;}}@media(max-width:1600px){.elementor-3032 .elementor-element.elementor-element-35ba958 .elementor-heading-title{font-size:55px;}.elementor-3032 .elementor-element.elementor-element-4f8f003{font-size:14px;}}@media(max-width:1200px){.elementor-3032 .elementor-element.elementor-element-9682548{--padding-top:50px;--padding-bottom:50px;--padding-left:50px;--padding-right:50px;}.elementor-3032 .elementor-element.elementor-element-35ba958 .elementor-heading-title{font-size:50px;}}@media(max-width:1024px){.elementor-3032 .elementor-element.elementor-element-9682548{--padding-top:30px;--padding-bottom:30px;--padding-left:30px;--padding-right:30px;}.elementor-3032 .elementor-element.elementor-element-35ba958 .elementor-heading-title{font-size:40px;}}@media(max-width:880px){.elementor-3032 .elementor-element.elementor-element-9682548{--padding-top:20px;--padding-bottom:20px;--padding-left:20px;--padding-right:20px;}.elementor-3032 .elementor-element.elementor-element-35ba958 .elementor-heading-title{font-size:40px;}}@media(max-width:767px){.elementor-3032 .elementor-element.elementor-element-4f8f003{font-size:12px;}}</style>		<div data-elementor-type="section" data-elementor-id="3032" class="elementor elementor-3032">
+				<div class="elementor-element elementor-element-ae05fec e-flex e-con-boxed elementor-invisible e-con e-parent" data-id="ae05fec" data-element_type="container" data-settings="{&quot;animation&quot;:&quot;fadeIn&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-55a9cf9 e-con-full e-flex e-con e-child" data-id="55a9cf9" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				</div>
+		<div class="elementor-element elementor-element-9682548 e-con-full e-flex e-con e-child" data-id="9682548" data-element_type="container">
+				<div class="elementor-element elementor-element-63d512e elementor-widget elementor-widget-heading" data-id="63d512e" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Soluciones a tu medida</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-35ba958 elementor-widget elementor-widget-heading" data-id="35ba958" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">ENERGÍA QUE SE ADAPTA A TU NEGOCIO</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-4f8f003 elementor-widget elementor-widget-text-editor" data-id="4f8f003" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>Cada cliente es único y sus necesidades energéticas también lo son. En Dispetrocom diseñamos soluciones logísticas y de suministro que se ajustan a la operación de cada sector, ofreciendo flexibilidad, rapidez y respaldo técnico. Nos adaptamos a tus tiempos y exigencias para que tu operación nunca se detenga.</p>								</div>
+				</div>
+				<div class="elementor-element elementor-element-95e30d7 elementor-widget elementor-widget-button" data-id="95e30d7" data-element_type="widget" data-widget_type="button.default">
+				<div class="elementor-widget-container">
+									<div class="elementor-button-wrapper">
+					<a class="elementor-button elementor-button-link elementor-size-sm" href="https://api.whatsapp.com/send/?phone=573138487357&#038;text=Hola%2C+estoy+interesado+en+m%C3%A1s+informaci%C3%B3n+sobre+Dispetrocom&#038;type=phone_number&#038;app_absent=0" target="_blank">
+						<span class="elementor-button-content-wrapper">
+									<span class="elementor-button-text">SOLICITA</span>
+					</span>
+					</a>
+				</div>
+								</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		
+													</div>
+									</div>
+								</div>
+						</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-520d148 e-con-full e-flex e-con e-parent" data-id="520d148" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-d4d52d5 e-con-full e-flex e-con e-child" data-id="d4d52d5" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-6779000 elementor-invisible elementor-widget elementor-widget-heading" data-id="6779000" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInLeft&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">EN DISPETROCOM</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-bf076ea elementor-invisible elementor-widget elementor-widget-heading" data-id="bf076ea" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInLeft&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">CONTAMOS CON <br>
+UN EQUIPO<br>
+EXCEPCIONAL</h2>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-260a60a e-con-full e-flex e-con e-child" data-id="260a60a" data-element_type="container">
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-b09846c e-flex e-con-boxed e-con e-parent" data-id="b09846c" data-element_type="container">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-5285701 e-con-full e-flex e-con e-child" data-id="5285701" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-4dfc609 elementor-widget elementor-widget-igmap" data-id="4dfc609" data-element_type="widget" data-widget_type="igmap.default">
+				<div class="elementor-widget-container">
+					<div class="igmap-elementor-widget"><div class="map_wrapper" id="map_wrapper_3232">
+<div class="map_box" style="max-width:2000px">
+<div class="map_aspect_ratio" style="padding-top:85%" data-padding-top="85%" data-padding-top-mobile="0%">
+<div class="map_container">
+<div class="map_render map_loading" id="map_3232"></div>
+</div>
+</div>
+</div>
+</div></div>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-c45613a e-con-full e-flex e-con e-child" data-id="c45613a" data-element_type="container">
+		<div class="elementor-element elementor-element-eda547b e-con-full e-flex e-con e-child" data-id="eda547b" data-element_type="container">
+				<div class="elementor-element elementor-element-706a321 elementor-widget elementor-widget-heading" data-id="706a321" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">PRESENCIA</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-b460d62 elementor-widget elementor-widget-heading" data-id="b460d62" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">EN COLOMBIA</h2>				</div>
+				</div>
+				</div>
+				<div class="elementor-element elementor-element-07365d8 elementor-widget elementor-widget-text-editor" data-id="07365d8" data-element_type="widget" data-widget_type="text-editor.default">
+				<div class="elementor-widget-container">
+									<p>En Dispetrocom operamos con una red logística sólida que nos permite atender gran parte del territorio nacional, especialmente en zonas estratégicas con alta demanda industrial.</p><p>Nuestra presencia se ha consolidado en regiones clave gracias a una infraestructura robusta, un equipo humano altamente capacitado y procesos diseñados para garantizar entregas seguras, puntuales y conforme a la normatividad vigente.</p>								</div>
+				</div>
+		<div class="elementor-element elementor-element-f64433c e-con-full e-flex e-con e-child" data-id="f64433c" data-element_type="container">
+				<div class="elementor-element elementor-element-7115e6b elementor-view-stacked elementor-shape-rounded elementor-widget elementor-widget-icon" data-id="7115e6b" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+			<svg aria-hidden="true" class="e-font-icon-svg e-fas-long-arrow-alt-right" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path></svg>			</div>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-00fb34f elementor-widget elementor-widget-heading" data-id="00fb34f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Cobertura estratégica en múltiples regiones</p>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-4dec8c6 e-con-full e-flex e-con e-child" data-id="4dec8c6" data-element_type="container">
+				<div class="elementor-element elementor-element-7b3d28b elementor-view-stacked elementor-shape-rounded elementor-widget elementor-widget-icon" data-id="7b3d28b" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+			<svg aria-hidden="true" class="e-font-icon-svg e-fas-long-arrow-alt-right" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path></svg>			</div>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-121dae4 elementor-widget elementor-widget-heading" data-id="121dae4" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Expansión constante de nuestras rutas</p>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-76a7da4 e-con-full e-flex e-con e-child" data-id="76a7da4" data-element_type="container">
+				<div class="elementor-element elementor-element-2aec05a elementor-view-stacked elementor-shape-rounded elementor-widget elementor-widget-icon" data-id="2aec05a" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+			<svg aria-hidden="true" class="e-font-icon-svg e-fas-long-arrow-alt-right" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path></svg>			</div>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-1abb088 elementor-widget elementor-widget-heading" data-id="1abb088" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Aumento en los puntos de abastecimiento operativos</p>				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-8381c9d e-con-full e-flex e-con e-child" data-id="8381c9d" data-element_type="container">
+				<div class="elementor-element elementor-element-21ea88d elementor-view-stacked elementor-shape-rounded elementor-widget elementor-widget-icon" data-id="21ea88d" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+			<svg aria-hidden="true" class="e-font-icon-svg e-fas-long-arrow-alt-right" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M313.941 216H12c-6.627 0-12 5.373-12 12v56c0 6.627 5.373 12 12 12h301.941v46.059c0 21.382 25.851 32.09 40.971 16.971l86.059-86.059c9.373-9.373 9.373-24.569 0-33.941l-86.059-86.059c-15.119-15.119-40.971-4.411-40.971 16.971V216z"></path></svg>			</div>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-e5a3268 elementor-widget elementor-widget-heading" data-id="e5a3268" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Soporte técnico y operativo en campo</p>				</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-97f2121 e-con-full disp-overflow e-flex e-con e-parent" data-id="97f2121" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+		<div class="elementor-element elementor-element-14e97e6 e-con-full e-flex e-con e-child" data-id="14e97e6" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+				<div class="elementor-element elementor-element-07c0b89 elementor-invisible elementor-widget elementor-widget-heading" data-id="07c0b89" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInLeft&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">EN DISPETROCOM</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-8e3cae0 elementor-widget elementor-widget-heading" data-id="8e3cae0" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">ESTADÍSTICAS QUE NOS RESPALDAN</h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-f83f4cf e-grid e-con-full e-con e-child" data-id="f83f4cf" data-element_type="container">
+		<div class="elementor-element elementor-element-044244d e-con-full e-flex e-con e-child" data-id="044244d" data-element_type="container">
+		<div class="elementor-element elementor-element-290eeb7 e-con-full e-flex e-con e-child" data-id="290eeb7" data-element_type="container">
+				<div class="elementor-element elementor-element-8130c9e elementor-view-default elementor-widget elementor-widget-icon" data-id="8130c9e" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+			<svg aria-hidden="true" class="e-font-icon-svg e-fas-gas-pump" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M336 448H16c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h320c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zm157.2-340.7l-81-81c-6.2-6.2-16.4-6.2-22.6 0l-11.3 11.3c-6.2 6.2-6.2 16.4 0 22.6L416 97.9V160c0 28.1 20.9 51.3 48 55.2V376c0 13.2-10.8 24-24 24s-24-10.8-24-24v-32c0-48.6-39.4-88-88-88h-8V64c0-35.3-28.7-64-64-64H96C60.7 0 32 28.7 32 64v352h288V304h8c22.1 0 40 17.9 40 40v27.8c0 37.7 27 72 64.5 75.9 43 4.3 79.5-29.5 79.5-71.7V152.6c0-17-6.8-33.3-18.8-45.3zM256 192H96V64h160v128z"></path></svg>			</div>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-41aed8c elementor-widget__width-initial elementor-widget-laptop__width-initial elementor-widget elementor-widget-counter" data-id="41aed8c" data-element_type="widget" data-widget_type="counter.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-counter">
+						<div class="elementor-counter-number-wrapper">
+				<span class="elementor-counter-number-prefix">+</span>
+				<span class="elementor-counter-number" data-duration="2000" data-to-value="12" data-from-value="0" data-delimiter=",">0</span>
+				<span class="elementor-counter-number-suffix">M</span>
+			</div>
+		</div>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-6e51efc e-con-full e-flex e-con e-child" data-id="6e51efc" data-element_type="container">
+				<div class="elementor-element elementor-element-f15c6c6 elementor-widget elementor-widget-heading" data-id="f15c6c6" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">de galones<br> <small style="font-weight:400">entregados al año</small></h2>				</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-de82870 e-con-full e-flex e-con e-child" data-id="de82870" data-element_type="container">
+		<div class="elementor-element elementor-element-f8c366b e-con-full e-flex e-con e-child" data-id="f8c366b" data-element_type="container">
+				<div class="elementor-element elementor-element-dc3219f elementor-view-default elementor-widget elementor-widget-icon" data-id="dc3219f" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+			<svg aria-hidden="true" class="e-font-icon-svg e-fas-truck" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M624 352h-16V243.9c0-12.7-5.1-24.9-14.1-33.9L494 110.1c-9-9-21.2-14.1-33.9-14.1H416V48c0-26.5-21.5-48-48-48H48C21.5 0 0 21.5 0 48v320c0 26.5 21.5 48 48 48h16c0 53 43 96 96 96s96-43 96-96h128c0 53 43 96 96 96s96-43 96-96h48c8.8 0 16-7.2 16-16v-32c0-8.8-7.2-16-16-16zM160 464c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm320 0c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-208H416V144h44.1l99.9 99.9V256z"></path></svg>			</div>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-3ff62a3 elementor-widget__width-initial elementor-widget-laptop__width-initial elementor-widget elementor-widget-counter" data-id="3ff62a3" data-element_type="widget" data-widget_type="counter.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-counter">
+						<div class="elementor-counter-number-wrapper">
+				<span class="elementor-counter-number-prefix">+</span>
+				<span class="elementor-counter-number" data-duration="2000" data-to-value="1.5" data-from-value="0" data-delimiter=",">0</span>
+				<span class="elementor-counter-number-suffix">M</span>
+			</div>
+		</div>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-86c760c e-con-full e-flex e-con e-child" data-id="86c760c" data-element_type="container">
+				<div class="elementor-element elementor-element-d975cec elementor-widget elementor-widget-heading" data-id="d975cec" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">de kilómetros<br> <small style="font-weight:400">recorridos</small></h2>				</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-6b6be76 e-con-full e-flex e-con e-child" data-id="6b6be76" data-element_type="container">
+		<div class="elementor-element elementor-element-4e56667 e-con-full e-flex e-con e-child" data-id="4e56667" data-element_type="container">
+				<div class="elementor-element elementor-element-c767f3c elementor-view-default elementor-widget elementor-widget-icon" data-id="c767f3c" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+			<svg aria-hidden="true" class="e-font-icon-svg e-far-chart-bar" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M396.8 352h22.4c6.4 0 12.8-6.4 12.8-12.8V108.8c0-6.4-6.4-12.8-12.8-12.8h-22.4c-6.4 0-12.8 6.4-12.8 12.8v230.4c0 6.4 6.4 12.8 12.8 12.8zm-192 0h22.4c6.4 0 12.8-6.4 12.8-12.8V140.8c0-6.4-6.4-12.8-12.8-12.8h-22.4c-6.4 0-12.8 6.4-12.8 12.8v198.4c0 6.4 6.4 12.8 12.8 12.8zm96 0h22.4c6.4 0 12.8-6.4 12.8-12.8V204.8c0-6.4-6.4-12.8-12.8-12.8h-22.4c-6.4 0-12.8 6.4-12.8 12.8v134.4c0 6.4 6.4 12.8 12.8 12.8zM496 400H48V80c0-8.84-7.16-16-16-16H16C7.16 64 0 71.16 0 80v336c0 17.67 14.33 32 32 32h464c8.84 0 16-7.16 16-16v-16c0-8.84-7.16-16-16-16zm-387.2-48h22.4c6.4 0 12.8-6.4 12.8-12.8v-70.4c0-6.4-6.4-12.8-12.8-12.8h-22.4c-6.4 0-12.8 6.4-12.8 12.8v70.4c0 6.4 6.4 12.8 12.8 12.8z"></path></svg>			</div>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-b03f6c7 elementor-widget__width-initial elementor-widget-laptop__width-initial elementor-widget elementor-widget-counter" data-id="b03f6c7" data-element_type="widget" data-widget_type="counter.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-counter">
+						<div class="elementor-counter-number-wrapper">
+				<span class="elementor-counter-number-prefix">+</span>
+				<span class="elementor-counter-number" data-duration="2000" data-to-value="97" data-from-value="0" data-delimiter=",">0</span>
+				<span class="elementor-counter-number-suffix">%</span>
+			</div>
+		</div>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-ebab993 e-con-full e-flex e-con e-child" data-id="ebab993" data-element_type="container">
+				<div class="elementor-element elementor-element-ca76452 elementor-widget elementor-widget-heading" data-id="ca76452" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Operaciones logísticas <br> <small style="font-weight:400"> ejecutadas con éxito</small></h2>				</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-aeb1bf0 e-con-full e-flex e-con e-child" data-id="aeb1bf0" data-element_type="container">
+		<div class="elementor-element elementor-element-24b6fc6 e-con-full e-flex e-con e-child" data-id="24b6fc6" data-element_type="container">
+				<div class="elementor-element elementor-element-2997374 elementor-view-default elementor-widget elementor-widget-icon" data-id="2997374" data-element_type="widget" data-widget_type="icon.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-icon-wrapper">
+			<div class="elementor-icon">
+			<svg aria-hidden="true" class="e-font-icon-svg e-fas-user-cog" viewBox="0 0 640 512" xmlns="http://www.w3.org/2000/svg"><path d="M610.5 373.3c2.6-14.1 2.6-28.5 0-42.6l25.8-14.9c3-1.7 4.3-5.2 3.3-8.5-6.7-21.6-18.2-41.2-33.2-57.4-2.3-2.5-6-3.1-9-1.4l-25.8 14.9c-10.9-9.3-23.4-16.5-36.9-21.3v-29.8c0-3.4-2.4-6.4-5.7-7.1-22.3-5-45-4.8-66.2 0-3.3.7-5.7 3.7-5.7 7.1v29.8c-13.5 4.8-26 12-36.9 21.3l-25.8-14.9c-2.9-1.7-6.7-1.1-9 1.4-15 16.2-26.5 35.8-33.2 57.4-1 3.3.4 6.8 3.3 8.5l25.8 14.9c-2.6 14.1-2.6 28.5 0 42.6l-25.8 14.9c-3 1.7-4.3 5.2-3.3 8.5 6.7 21.6 18.2 41.1 33.2 57.4 2.3 2.5 6 3.1 9 1.4l25.8-14.9c10.9 9.3 23.4 16.5 36.9 21.3v29.8c0 3.4 2.4 6.4 5.7 7.1 22.3 5 45 4.8 66.2 0 3.3-.7 5.7-3.7 5.7-7.1v-29.8c13.5-4.8 26-12 36.9-21.3l25.8 14.9c2.9 1.7 6.7 1.1 9-1.4 15-16.2 26.5-35.8 33.2-57.4 1-3.3-.4-6.8-3.3-8.5l-25.8-14.9zM496 400.5c-26.8 0-48.5-21.8-48.5-48.5s21.8-48.5 48.5-48.5 48.5 21.8 48.5 48.5-21.7 48.5-48.5 48.5zM224 256c70.7 0 128-57.3 128-128S294.7 0 224 0 96 57.3 96 128s57.3 128 128 128zm201.2 226.5c-2.3-1.2-4.6-2.6-6.8-3.9l-7.9 4.6c-6 3.4-12.8 5.3-19.6 5.3-10.9 0-21.4-4.6-28.9-12.6-18.3-19.8-32.3-43.9-40.2-69.6-5.5-17.7 1.9-36.4 17.9-45.7l7.9-4.6c-.1-2.6-.1-5.2 0-7.8l-7.9-4.6c-16-9.2-23.4-28-17.9-45.7.9-2.9 2.2-5.8 3.2-8.7-3.8-.3-7.5-1.2-11.4-1.2h-16.7c-22.2 10.2-46.9 16-72.9 16s-50.6-5.8-72.9-16h-16.7C60.2 288 0 348.2 0 422.4V464c0 26.5 21.5 48 48 48h352c10.1 0 19.5-3.2 27.2-8.5-1.2-3.8-2-7.7-2-11.8v-9.2z"></path></svg>			</div>
+		</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-ed3d89c elementor-widget__width-initial elementor-widget-laptop__width-initial elementor-widget elementor-widget-counter" data-id="ed3d89c" data-element_type="widget" data-widget_type="counter.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-counter">
+						<div class="elementor-counter-number-wrapper">
+				<span class="elementor-counter-number-prefix">+</span>
+				<span class="elementor-counter-number" data-duration="2000" data-to-value="800" data-from-value="0" data-delimiter=",">0</span>
+				<span class="elementor-counter-number-suffix"></span>
+			</div>
+		</div>
+						</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-a48322c e-con-full e-flex e-con e-child" data-id="a48322c" data-element_type="container">
+				<div class="elementor-element elementor-element-76762c7 elementor-widget elementor-widget-heading" data-id="76762c7" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Clientes industriales <br> <small style="font-weight:400">atendidos</small></h2>				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-b0b7875 e-con-full elementor-hidden-mobile_extra elementor-hidden-mobile e-flex e-con e-child" data-id="b0b7875" data-element_type="container">
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-a9419a1 e-flex e-con-boxed e-con e-parent" data-id="a9419a1" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-c99fad3 e-con-full e-flex e-con e-child" data-id="c99fad3" data-element_type="container">
+				<div class="elementor-element elementor-element-f21b33a elementor-widget elementor-widget-image" data-id="f21b33a" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img loading="lazy" decoding="async" width="576" height="732" src="https://dispetrocom.com/wp-content/uploads/2025/08/persona-sola.webp" class="attachment-large size-large wp-image-2425" alt="" srcset="https://dispetrocom.com/wp-content/uploads/2025/08/persona-sola.webp 576w, https://dispetrocom.com/wp-content/uploads/2025/08/persona-sola-236x300.webp 236w" sizes="(max-width: 576px) 100vw, 576px" />															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-af249af e-con-full e-flex e-con e-child" data-id="af249af" data-element_type="container">
+				<div class="elementor-element elementor-element-3191c85 elementor-invisible elementor-widget elementor-widget-heading" data-id="3191c85" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInLeft&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">CONFIRMAN</h2>				</div>
+				</div>
+				<div class="elementor-element elementor-element-5a71d78 elementor-invisible elementor-widget elementor-widget-heading" data-id="5a71d78" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;slideInLeft&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">NUESTRA EXCELENCIA</h2>				</div>
+				</div>
+		<div class="elementor-element elementor-element-d490184 e-grid e-con-full e-con e-child" data-id="d490184" data-element_type="container">
+		<div data-premium-element-link="{&quot;type&quot;:&quot;url&quot;,&quot;link&quot;:{&quot;url&quot;:&quot;https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/08\/CERTIFICADO-ISO-45001-.pdf&quot;,&quot;is_external&quot;:&quot;on&quot;,&quot;nofollow&quot;:&quot;&quot;,&quot;custom_attributes&quot;:&quot;&quot;},&quot;href&quot;:&quot;https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/08\/CERTIFICADO-ISO-45001-.pdf&quot;}" style="cursor: pointer" class="elementor-element elementor-element-9fa546e e-con-full premium-wrapper-link-yes e-transform e-flex e-con e-child" data-id="9fa546e" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.08,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_tablet_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
+				<div class="elementor-element elementor-element-e588460 elementor-widget elementor-widget-image" data-id="e588460" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img loading="lazy" decoding="async" width="184" height="177" src="https://dispetrocom.com/wp-content/uploads/2025/07/iso-45001-n.png" class="attachment-large size-large wp-image-2317" alt="" />															</div>
+				</div>
+				<div class="elementor-element elementor-element-c6d4af8 elementor-widget elementor-widget-heading" data-id="c6d4af8" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">ISO 45001</h2>				</div>
+				</div>
+				</div>
+		<div data-premium-element-link="{&quot;type&quot;:&quot;url&quot;,&quot;link&quot;:{&quot;url&quot;:&quot;https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/08\/CERTIFICADO-ISO-9001.pdf&quot;,&quot;is_external&quot;:&quot;on&quot;,&quot;nofollow&quot;:&quot;&quot;,&quot;custom_attributes&quot;:&quot;&quot;},&quot;href&quot;:&quot;https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/08\/CERTIFICADO-ISO-9001.pdf&quot;}" style="cursor: pointer" class="elementor-element elementor-element-235fba9 e-con-full premium-wrapper-link-yes e-transform e-flex e-con e-child" data-id="235fba9" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.08,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_tablet_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
+				<div class="elementor-element elementor-element-4cfc154 elementor-widget elementor-widget-image" data-id="4cfc154" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img loading="lazy" decoding="async" width="184" height="177" src="https://dispetrocom.com/wp-content/uploads/2025/07/iso-9001-n.png" class="attachment-large size-large wp-image-2316" alt="" />															</div>
+				</div>
+				<div class="elementor-element elementor-element-b39736f elementor-widget elementor-widget-heading" data-id="b39736f" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">ISO 9001</h2>				</div>
+				</div>
+				</div>
+		<div data-premium-element-link="{&quot;type&quot;:&quot;url&quot;,&quot;link&quot;:{&quot;url&quot;:&quot;https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/08\/licenciadeoperaciondeminas.pdf&quot;,&quot;is_external&quot;:&quot;on&quot;,&quot;nofollow&quot;:&quot;&quot;,&quot;custom_attributes&quot;:&quot;&quot;},&quot;href&quot;:&quot;https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/08\/licenciadeoperaciondeminas.pdf&quot;}" style="cursor: pointer" class="elementor-element elementor-element-fc57f06 e-con-full premium-wrapper-link-yes e-transform e-flex e-con e-child" data-id="fc57f06" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.08,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_tablet_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
+				<div class="elementor-element elementor-element-31719bc elementor-widget elementor-widget-image" data-id="31719bc" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img loading="lazy" decoding="async" width="389" height="389" src="https://dispetrocom.com/wp-content/uploads/2025/08/BanderaColombia.png" class="attachment-large size-large wp-image-3259" alt="" srcset="https://dispetrocom.com/wp-content/uploads/2025/08/BanderaColombia.png 389w, https://dispetrocom.com/wp-content/uploads/2025/08/BanderaColombia-300x300.png 300w, https://dispetrocom.com/wp-content/uploads/2025/08/BanderaColombia-150x150.png 150w" sizes="(max-width: 389px) 100vw, 389px" />															</div>
+				</div>
+				<div class="elementor-element elementor-element-599346f elementor-widget elementor-widget-heading" data-id="599346f" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Licencia de operación 
+
+﻿de Ministerio de Minas y Energía</h2>				</div>
+				</div>
+				</div>
+		<div data-premium-element-link="{&quot;type&quot;:&quot;url&quot;,&quot;link&quot;:{&quot;url&quot;:&quot;https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/08\/certificadoCompensacion.pdf&quot;,&quot;is_external&quot;:&quot;on&quot;,&quot;nofollow&quot;:&quot;&quot;,&quot;custom_attributes&quot;:&quot;&quot;},&quot;href&quot;:&quot;https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/08\/certificadoCompensacion.pdf&quot;}" style="cursor: pointer" class="elementor-element elementor-element-92c0b17 e-con-full premium-wrapper-link-yes e-transform e-flex e-con e-child" data-id="92c0b17" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;,&quot;_transform_scale_effect_hover&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:1.08,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_laptop&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_tablet_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile_extra&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]},&quot;_transform_scale_effect_hover_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:&quot;&quot;,&quot;sizes&quot;:[]}}">
+				<div class="elementor-element elementor-element-74af97d elementor-widget elementor-widget-image" data-id="74af97d" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img loading="lazy" decoding="async" width="800" height="800" src="https://dispetrocom.com/wp-content/uploads/2025/08/SVDV-Semilla-1024x1024.png" class="attachment-large size-large wp-image-3224" alt="" srcset="https://dispetrocom.com/wp-content/uploads/2025/08/SVDV-Semilla-1024x1024.png 1024w, https://dispetrocom.com/wp-content/uploads/2025/08/SVDV-Semilla-300x300.png 300w, https://dispetrocom.com/wp-content/uploads/2025/08/SVDV-Semilla-150x150.png 150w, https://dispetrocom.com/wp-content/uploads/2025/08/SVDV-Semilla-768x768.png 768w, https://dispetrocom.com/wp-content/uploads/2025/08/SVDV-Semilla-1536x1536.png 1536w, https://dispetrocom.com/wp-content/uploads/2025/08/SVDV-Semilla-2048x2048.png 2048w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+				</div>
+				<div class="elementor-element elementor-element-b247723 elementor-widget elementor-widget-heading" data-id="b247723" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<h2 class="elementor-heading-title elementor-size-default">Certificación CO2CERO</h2>				</div>
+				</div>
+				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		<div class="ekit-template-content-markup ekit-template-content-footer ekit-template-content-theme-support">
+		<div data-elementor-type="wp-post" data-elementor-id="227" class="elementor elementor-227">
+				<div class="elementor-element elementor-element-78597f6 e-flex e-con-boxed e-con e-parent" data-id="78597f6" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+		<div class="elementor-element elementor-element-78c0676 e-con-full e-flex e-con e-child" data-id="78c0676" data-element_type="container">
+				<div class="elementor-element elementor-element-eb7d6d7 elementor-widget elementor-widget-image" data-id="eb7d6d7" data-element_type="widget" data-widget_type="image.default">
+				<div class="elementor-widget-container">
+															<img width="800" height="175" src="https://dispetrocom.com/wp-content/uploads/2025/06/logo-blanco-dispetro.webp" class="attachment-large size-large wp-image-230" alt="" srcset="https://dispetrocom.com/wp-content/uploads/2025/06/logo-blanco-dispetro.webp 889w, https://dispetrocom.com/wp-content/uploads/2025/06/logo-blanco-dispetro-300x66.webp 300w, https://dispetrocom.com/wp-content/uploads/2025/06/logo-blanco-dispetro-768x168.webp 768w" sizes="(max-width: 800px) 100vw, 800px" />															</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-4ed3e38 e-con-full e-flex e-con e-child" data-id="4ed3e38" data-element_type="container">
+		<div class="elementor-element elementor-element-f0ef1b4 e-con-full e-grid e-con e-child" data-id="f0ef1b4" data-element_type="container">
+				<div class="elementor-element elementor-element-fb09c3f enlace-footer elementor-widget elementor-widget-heading" data-id="fb09c3f" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><a href="https://dispetrocom.com/wp-content/uploads/2025/08/Terminos_y_Condiciones_DISPETROCOM.pdf" target="_blank">Términos y condiciones</a></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-9d3f8f2 enlace-footer elementor-widget elementor-widget-heading" data-id="9d3f8f2" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><a href="https://dispetrocom.com/wp-content/uploads/2025/08/DI26-Politica-de-proteccion-de-datos-personales-Rev.-1.pdf" target="_blank">Política de privacidad</a></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-35e9d2a enlace-footer elementor-widget elementor-widget-heading" data-id="35e9d2a" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><a href="https://dispetrocom.com/wp-content/uploads/2025/08/POLITICA-INTEGRADA-DEL-SISTEMA-DE-GESTION_less.pdf" target="_blank">Política integrada de gestión</a></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-9c28174 enlace-footer elementor-widget elementor-widget-heading" data-id="9c28174" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><a href="https://dispetrocom.com/wp-content/uploads/2025/08/DI25-Politica-de-propiedad-intelecutal-de-Dispetrocom-Rev.-0.pdf" target="_blank">Política de propiedad intelectual</a></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-9226c1b enlace-footer elementor-widget elementor-widget-heading" data-id="9226c1b" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><a href="/contacto">Contacto</a></p>				</div>
+				</div>
+				<div class="elementor-element elementor-element-177865d enlace-footer elementor-widget elementor-widget-heading" data-id="177865d" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default"><a href="/pqrs">PQRS</a></p>				</div>
+				</div>
+				</div>
+				</div>
+		<div class="elementor-element elementor-element-2298e99 e-con-full e-flex e-con e-child" data-id="2298e99" data-element_type="container">
+				<div class="elementor-element elementor-element-47436a4 elementor-shape-square elementor-grid-0 e-grid-align-center elementor-widget elementor-widget-social-icons" data-id="47436a4" data-element_type="widget" data-widget_type="social-icons.default">
+				<div class="elementor-widget-container">
+							<div class="elementor-social-icons-wrapper elementor-grid" role="list">
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-linkedin elementor-repeater-item-6572722" href="https://www.linkedin.com/company/dispetrocomltda/" target="_blank">
+						<span class="elementor-screen-only">Linkedin</span>
+						<svg class="e-font-icon-svg e-fab-linkedin" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-922c3f6" href="https://web.facebook.com/Dispetrocom?_rdc=1&#038;_rdr#" target="_blank">
+						<span class="elementor-screen-only">Facebook</span>
+						<svg class="e-font-icon-svg e-fab-facebook" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg"><path d="M504 256C504 119 393 8 256 8S8 119 8 256c0 123.78 90.69 226.38 209.25 245V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.28c-30.8 0-40.41 19.12-40.41 38.73V256h68.78l-11 71.69h-57.78V501C413.31 482.38 504 379.78 504 256z"></path></svg>					</a>
+				</span>
+							<span class="elementor-grid-item" role="listitem">
+					<a class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-a2db62a" href="https://www.instagram.com/dispetrocom/" target="_blank">
+						<span class="elementor-screen-only">Instagram</span>
+						<svg class="e-font-icon-svg e-fab-instagram" viewBox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"></path></svg>					</a>
+				</span>
+					</div>
+						</div>
+				</div>
+				<div class="elementor-element elementor-element-eb55c65 elementor-widget elementor-widget-heading" data-id="eb55c65" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">+57 313 848 7357</p>				</div>
+				</div>
+				</div>
+					</div>
+				</div>
+		<div class="elementor-element elementor-element-e3f5611 e-flex e-con-boxed e-con e-parent" data-id="e3f5611" data-element_type="container" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+					<div class="e-con-inner">
+				<div class="elementor-element elementor-element-72b36bc elementor-widget elementor-widget-heading" data-id="72b36bc" data-element_type="widget" data-widget_type="heading.default">
+				<div class="elementor-widget-container">
+					<p class="elementor-heading-title elementor-size-default">Copyright © 2025 <b>Dispetrocom </b>, implementado por <a>Emago</a></p>				</div>
+				</div>
+					</div>
+				</div>
+				</div>
+		</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/hello-elementor/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/app/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:'b08ddc1e75027f3bcdb6eece90a9c3ad'})})</script>
+<div class="joinchat joinchat--right joinchat--btn" data-settings='{"telephone":"573138487357","mobile_only":false,"button_delay":3,"whatsapp_web":false,"qr":false,"message_views":2,"message_delay":-10,"message_badge":false,"message_send":"Hola, estoy interesado en más información sobre Dispetrocom","message_hash":""}' hidden aria-hidden="false">
+	<div class="joinchat__button" role="button" tabindex="0" aria-label="WhatsApp contact">
+							</div>
+			</div>
+			<script>
+				const lazyloadRunObserver = () => {
+					const lazyloadBackgrounds = document.querySelectorAll( `.e-con.e-parent:not(.e-lazyloaded)` );
+					const lazyloadBackgroundObserver = new IntersectionObserver( ( entries ) => {
+						entries.forEach( ( entry ) => {
+							if ( entry.isIntersecting ) {
+								let lazyloadBackground = entry.target;
+								if( lazyloadBackground ) {
+									lazyloadBackground.classList.add( 'e-lazyloaded' );
+								}
+								lazyloadBackgroundObserver.unobserve( entry.target );
+							}
+						});
+					}, { rootMargin: '200px 0px 200px 0px' } );
+					lazyloadBackgrounds.forEach( ( lazyloadBackground ) => {
+						lazyloadBackgroundObserver.observe( lazyloadBackground );
+					} );
+				};
+				const events = [
+					'DOMContentLoaded',
+					'elementor/lazyload/observe',
+				];
+				events.forEach( ( event ) => {
+					document.addEventListener( event, lazyloadRunObserver );
+				} );
+			</script>
+			
+			<link href="//dispetrocom.com/wp-content/plugins/revslider/public/css/fonts/revicons/css/revicons.css" rel="stylesheet" property="stylesheet" media="all" type="text/css" />
+			<link href="//fonts.googleapis.com/css2?family=Mulish:wght@500;900&display=swap" rel="stylesheet" property="stylesheet" media="all" type="text/css" >
+
+<script>
+_tpt.R.fonts.customFonts['RevIcon'] = {"url":"\/\/dispetrocom.com\/wp-content\/plugins\/revslider\/public\/css\/fonts\/revicons\/css\/revicons.css","icon":true,"family":"revicons"};
+_tpt.R.fonts.domFonts = {"Mulish":{"normal":[500,900],"italic":[]}};
+</script>
+<script id="pa-frontend-js-extra">
+var PremiumSettings = {"ajaxurl":"https://dispetrocom.com/wp-admin/admin-ajax.php","nonce":"60894d792e"};
+//# sourceURL=pa-frontend-js-extra
+</script>
+<script src="https://dispetrocom.com/wp-content/uploads/premium-addons-elementor/pa-frontend-921b64552.min.js?ver=1771261562" id="pa-frontend-js"></script>
+<script src="https://dispetrocom.com/wp-includes/js/dist/hooks.min.js?ver=dd5603f07f9220ed27f1" id="wp-hooks-js"></script>
+<script src="https://dispetrocom.com/wp-includes/js/dist/i18n.min.js?ver=c26c3dc7bed366793375" id="wp-i18n-js"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script src="https://dispetrocom.com/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.1" id="swv-js"></script>
+<script id="contact-form-7-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2024-08-29 02:27:53+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n != 1;","lang":"es_CO"},"This contact form is placed in the wrong place.":["Este formulario de contacto est\u00e1 situado en el lugar incorrecto."],"Error:":["Error:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+</script>
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/dispetrocom.com\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    }
+};
+//# sourceURL=contact-form-7-js-before
+</script>
+<script src="https://dispetrocom.com/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.1" id="contact-form-7-js"></script>
+<script src="https://dispetrocom.com/wp-content/themes/hello-elementor/assets/js/hello-frontend.js?ver=3.4.4" id="hello-theme-frontend-js"></script>
+<script src="https://cdn.amcharts.com/lib/version/4.10.29/core.js?ver=4.10.29" id="amcharts-core-js"></script>
+<script src="https://cdn.amcharts.com/lib/version/4.10.29/maps.js?ver=4.10.29" id="amcharts-maps-js"></script>
+<script src="https://cdn.amcharts.com/lib/version/4.10.29/themes/animated.js?ver=4.10.29" id="amcharts-animated-js"></script>
+<script src="https://cdn.amcharts.com/lib/4/geodata/colombiaLow.js?ver=4.10.29" id="amcharts-colombiaLow-js"></script>
+<script id="mapgeo-js-before">
+var iMapsData = {"options":{"animations":true,"lazyLoad":true,"async":false,"hold":false,"locale":false,"lang":false},"data":[{"map":"colombiaLow","mapURL":"https:\/\/cdn.amcharts.com\/lib\/4\/geodata\/colombiaLow.js","usaWarning":"","projection":"Miller","albersUsaWarning":"","description":"","visual":{"backgroundColor":"#ffffff","borderColor":"#00463a","borderWidth":"1","paddingTop":"0","paddingTopMobile":"0","width":"100%","maxWidth":"2000","fontFamily":"inherit"},"goPro_visual":"","regions_info":"","regions":[{"name":"Antioquia","id":"CO-ANT","tooltipContent":"Antioquia","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Valle del Cauca","id":"CO-VAC","tooltipContent":"Valle del Cauca","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Santander","id":"CO-SAN","tooltipContent":"Santander","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Bol\u00edvar","id":"CO-BOL","tooltipContent":"Bol\u00edvar","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Magdalena","id":"CO-MAG","tooltipContent":"Magdalena","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Atl\u00e1ntico","id":"CO-ATL","tooltipContent":"Atl\u00e1ntico","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Huila","id":"CO-HUI","tooltipContent":"Huila","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Meta","id":"CO-MET","tooltipContent":"Meta","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Tolima","id":"CO-TOL","tooltipContent":"Tolima","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Casanare","id":"CO-CAS","tooltipContent":"Casanare","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Cundinamarca","id":"CO-CUN","tooltipContent":"Cundinamarca","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Cauca","id":"CO-CAU","tooltipContent":"Cauca","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Distrito Capital de Bogot\u00e1","id":"CO-DC","tooltipContent":"Distrito Capital de Bogot\u00e1","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Choc\u00f3","id":"CO-CHO","tooltipContent":"Choc\u00f3","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Cesar","id":"CO-CES","tooltipContent":"Cesar","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Sucre","id":"CO-SUC","tooltipContent":"Sucre","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Risaralda","id":"CO-RIS","tooltipContent":"Risaralda","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Quindio","id":"CO-QUI","tooltipContent":"Quindio","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Putumayo","id":"CO-PUT","tooltipContent":"Putumayo","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Norde de Santander","id":"CO-NSA","tooltipContent":"Norde de Santander","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Nari\u00f1o","id":"CO-NAR","tooltipContent":"Nari\u00f1o","content":"","useDefaults":"1","source":"manual_entry"},{"name":"La Guajira","id":"CO-LAG","tooltipContent":"La Guajira","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Caldas","id":"CO-CAL","tooltipContent":"Caldas","content":"","useDefaults":"1","source":"manual_entry"},{"name":"Boyac\u00e1","id":"CO-BOY","tooltipContent":"Boyac\u00e1","content":"","useDefaults":"1","source":"manual_entry"}],"regionDefaults":{"fill":"#fec304","hover":"#fd8603","inactiveColor":"#e0e0e0","action":"none","customAction":""},"onlyIncludeActive":"","include":"","exclude":"AQ","roundMarkers_info":"","roundMarkers":[],"markerDefaults":{"radius":"10","fill":"#99d8c9","hover":"#2ca25f","action":"none"},"premium_info":"","id":3232,"container":"map_3232","title":"Colombia 5","urls":{"colombiaLow":"https:\/\/cdn.amcharts.com\/lib\/4\/geodata\/colombiaLow.js"},"performance":{"animations":true,"lazyLoad":true},"zoomMaster":false}],"async":[],"version":"1.6.26"};
+
+    
+//# sourceURL=mapgeo-js-before
+</script>
+<script src="https://dispetrocom.com/wp-content/plugins/interactive-geo-maps/assets/public/map-service/app.min.js?ver=1.6.26" id="mapgeo-js"></script>
+<script src="https://dispetrocom.com/wp-content/plugins/elementskit-lite/libs/framework/assets/js/frontend-script.js?ver=3.7.4" id="elementskit-framework-js-frontend-js"></script>
+<script id="elementskit-framework-js-frontend-js-after">
+		var elementskit = {
+			resturl: 'https://dispetrocom.com/wp-json/elementskit/v1/',
+		}
+
+		
+//# sourceURL=elementskit-framework-js-frontend-js-after
+</script>
+<script src="https://dispetrocom.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/widget-scripts.js?ver=3.7.4" id="ekit-widget-scripts-js"></script>
+<script src="https://dispetrocom.com/wp-content/plugins/creame-whatsapp-me/public/js/joinchat.min.js?ver=6.0.8" id="joinchat-js" defer data-wp-strategy="defer"></script>
+<script src="https://dispetrocom.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.31.2" id="elementor-webpack-runtime-js"></script>
+<script src="https://dispetrocom.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.31.2" id="elementor-frontend-modules-js"></script>
+<script src="https://dispetrocom.com/wp-includes/js/jquery/ui/core.min.js?ver=1.13.3" id="jquery-ui-core-js"></script>
+<script id="elementor-frontend-js-before">
+var elementorFrontendConfig = {"environmentMode":{"edit":false,"wpPreview":false,"isScriptDebug":false},"i18n":{"shareOnFacebook":"Compartir en Facebook","shareOnTwitter":"Compartir en Twitter","pinIt":"Pinear","download":"Descargar","downloadImage":"Descargar imagen","fullscreen":"Pantalla completa","zoom":"Zoom","share":"Compartir","playVideo":"Reproducir v\u00eddeo","previous":"Anterior","next":"Siguiente","close":"Cerrar","a11yCarouselPrevSlideMessage":"Previous slide","a11yCarouselNextSlideMessage":"Next slide","a11yCarouselFirstSlideMessage":"This is the first slide","a11yCarouselLastSlideMessage":"This is the last slide","a11yCarouselPaginationBulletMessage":"Go to slide"},"is_rtl":false,"breakpoints":{"xs":0,"sm":480,"md":768,"lg":1025,"xl":1440,"xxl":1600},"responsive":{"breakpoints":{"mobile":{"label":"Mobile Portrait","value":767,"default_value":767,"direction":"max","is_enabled":true},"mobile_extra":{"label":"Mobile Landscape","value":880,"default_value":880,"direction":"max","is_enabled":true},"tablet":{"label":"Tablet Portrait","value":1024,"default_value":1024,"direction":"max","is_enabled":true},"tablet_extra":{"label":"Tablet Landscape","value":1200,"default_value":1200,"direction":"max","is_enabled":true},"laptop":{"label":"Port\u00e1til","value":1600,"default_value":1366,"direction":"max","is_enabled":true},"widescreen":{"label":"Pantalla grande","value":2400,"default_value":2400,"direction":"min","is_enabled":false}},"hasCustomBreakpoints":true},"version":"3.31.2","is_static":false,"experimentalFeatures":{"e_font_icon_svg":true,"additional_custom_breakpoints":true,"container":true,"hello-theme-header-footer":true,"nested-elements":true,"e_element_cache":true,"home_screen":true,"global_classes_should_enforce_capabilities":true,"e_variables":true,"cloud-library":true,"e_opt_in_v4_page":true},"urls":{"assets":"https:\/\/dispetrocom.com\/wp-content\/plugins\/elementor\/assets\/","ajaxurl":"https:\/\/dispetrocom.com\/wp-admin\/admin-ajax.php","uploadUrl":"https:\/\/dispetrocom.com\/wp-content\/uploads"},"nonces":{"floatingButtonsClickTracking":"c711f4e135"},"swiperClass":"swiper","settings":{"page":[],"editorPreferences":[]},"kit":{"active_breakpoints":["viewport_mobile","viewport_mobile_extra","viewport_tablet","viewport_tablet_extra","viewport_laptop"],"viewport_laptop":1600,"global_image_lightbox":"yes","lightbox_enable_counter":"yes","lightbox_enable_fullscreen":"yes","lightbox_enable_zoom":"yes","lightbox_enable_share":"yes","lightbox_title_src":"title","lightbox_description_src":"description","hello_header_logo_type":"title","hello_header_menu_layout":"horizontal","hello_footer_logo_type":"logo"},"post":{"id":1470,"title":"Home%20-%20Dispetrocom","excerpt":"","featuredImage":false}};
+//# sourceURL=elementor-frontend-js-before
+</script>
+<script src="https://dispetrocom.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.31.2" id="elementor-frontend-js"></script>
+<script src="https://dispetrocom.com/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-js/slick.min.js?ver=4.11.44" id="pa-slick-js"></script>
+<script src="https://dispetrocom.com/wp-content/plugins/elementor/assets/lib/jquery-numerator/jquery-numerator.min.js?ver=0.2.1" id="jquery-numerator-js"></script>
+<script src="https://dispetrocom.com/wp-content/plugins/google-site-kit/dist/assets/js/googlesitekit-events-provider-contact-form-7-40476021fb6e59177033.js" id="googlesitekit-events-provider-contact-form-7-js" defer></script>
+<script src="https://dispetrocom.com/wp-content/plugins/premium-addons-for-elementor/assets/frontend/min-js/premium-wrapper-link.min.js?ver=4.11.44" id="pa-wrapper-link-js"></script>
+<script src="https://dispetrocom.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/animate-circle.min.js?ver=3.7.4" id="animate-circle-js"></script>
+<script id="elementskit-elementor-js-extra">
+var ekit_config = {"ajaxurl":"https://dispetrocom.com/wp-admin/admin-ajax.php","nonce":"2d9e7f08b2"};
+//# sourceURL=elementskit-elementor-js-extra
+</script>
+<script src="https://dispetrocom.com/wp-content/plugins/elementskit-lite/widgets/init/assets/js/elementor.js?ver=3.7.4" id="elementskit-elementor-js"></script>
+<script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://dispetrocom.com/wp-includes/js/wp-emoji-release.min.js?ver=6.9.1"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://dispetrocom.com/wp-includes/js/wp-emoji-loader.min.js
+</script>
+<script>
+	SR7.JSON['SR7_1_1'] = {"settings":{"migrated":"sr6","uSize":[false,true,true,true,true],"title":"Slider 1","alias":"slider-1","type":"standard","fonts":{"RevIcon":true,"Mulish":{"name":"Mulish","normal":{"500":true,"900":true},"subset":{"latin":true}}},"vPort":["-100px","-100px","-100px","-100px","-100px"],"size":{"fullHeight":true,"contentFH":true,"width":[1240,1240,1024,778,480],"height":[900,900,768,960,720],"cachedHeight":[900,900,768,960,720],"maxWidth":0},"carousel":{"type":"h","align":"center","maxV":3,"justify":false,"scale":false,"minS":50,"vScale":false,"oScale":false,"space":0,"rotation":false,"maxR":0,"varR":false,"opacity":true,"maxO":100,"varO":false,"spin":"off","spinA":0,"snap":true,"infinity":false,"skewX":0,"skewY":0,"ease":"power3.inOut","dur":800,"overshoot":false,"stretch":false,"showAllLayers":"false","jMWidth":false,"bR":0,"pNV":"50px","pT":0,"pB":0},"shdw":0,"bg":{"color":{"orig":"transparent","type":"solid","string":"transparent"}},"nav":{"m":{"cd":1000},"p":{"w":50,"h":100},"arrows":{"set":true,"def":{"height":{"title":"Height","type":"custom","data":"50"},"font-size":{"title":"Font-Size","type":"custom","data":"40"},"background":{"title":"BG-Color","type":"color","data":"rgba(255,255,255,0)"},"width":{"title":"Width","type":"custom","data":"50"}},"cst":{"width":"50","width-def":false,"height":"40","height-def":true,"font-size":"30","font-size-def":true,"background":"rgba(255,255,255,0)","background-def":false},"key":"uranus","t":"1013","m":"hslide","css":".uranus.sr7-arrows {\n  width:##width##px;\n  height:##height##px;\n  background:##background##;\n }\n .uranus.sr7-arrows:before {\n width:##width##px;\n height:##height##px;\n line-height:##height##px;\n font-size:##font-size##px;\n transition:all 0.3s;\n-webkit-transition:all 0.3s;\n }\n \n  .uranus.sr7-arrows.sr7-touchhover:before {\n    opacity:0.75;\n  }","html":"","ps":"","on":true,"s":1000,"dIn":["#a",1000,"#a","#a","#a"],"dOut":["#a",200,"#a","#a",1200],"show":[true,true,true,true,true],"l":{"a":"slider","anim":"fade","x":["#a","10px","#a","#a","#a"],"y":["#a",0,"#a","#a","#a"],"v":["#a","center","#a","#a","#a"],"h":["#a","left","#a","#a","#a"]},"r":{"a":"slider","anim":"fade","x":["#a","10px","#a","#a","#a"],"y":["#a",0,"#a","#a","#a"],"v":["#a","center","#a","#a","#a"],"h":["#a","right","#a","#a","#a"]}}},"thumb":"https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/09\/5.webp","aU":[],"imgs":[{"lib_id":3316,"lib":"medialibrary","src":"https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/09\/5.webp"},{"lib_id":3317,"lib":"medialibrary","src":"https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/09\/1.webp"},{"lib_id":3302,"lib":"medialibrary","src":"https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/09\/IMG_5880_opt.webp"},{"lib_id":2816,"lib":"medialibrary","src":"https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/08\/Multimedia.jpeg"}],"hasYT":false,"version":"6.7.34","general":{"lazyLoad":"smart","slideshow":{"globalViewPort":"true","globalViewDist":"-200px"}}},"slides":{"1":{"id":1,"slide":{"addOns":[],"id":1,"version":"6.7.34","actions":[{"a":"link","evt":"click","http":"keep","target":"_blank","flw":"follow","ltype":"a","link":"https:\/\/api.whatsapp.com\/send\/?phone=573138487357&text=Hola%2C+estoy+interesado+en+m%C3%A1s+informaci%C3%B3n+sobre+Dispetrocom&type=phone_number&app_absent=0","src":[4]}],"title":"","parentId":null,"language":"default","order":1,"thumb":{"src":"https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/09\/5-50x100.webp","srcId":"","admin":"","adminId":"","dimension":"slider","default":{"image":{"src":"https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/09\/5.webp","repeat":"","size":"cover","pos":{"x":"50%","y":"50%"}}}},"acc":{"label":"unset","hidden":"true","live":"auto","role":"presentation","roledep":"slide"},"description":"","attr":{"class":"","data":"","id":"","a":"","aO":"ml","t":"","tO":"","deepLink":"","attr":""},"publish":{"from":"","to":"","state":"published","sch":true},"slideshow":{"stop":false,"len":"default","hal":0,"hom":false,"hfn":false},"loop":{"u":false,"r":-1,"s":0,"e":99999}},"layers":{"0":{"rTo":"slide","fluid":{"tx":true,"tr":true,"sp":true},"id":0,"alias":"Shape-0","runtime":{"locked":false,"hidden":false},"size":{"w":["100%","100%","#a","#a","#a"],"h":["100%","100%","#a","#a","#a"],"minW":["none","none","none","none","none"],"minH":["none","none","none","none","none"],"cMode":"fullheight","sProp":true},"pos":{"x":["#a",0,0,0,0],"y":["#a",0,0,0,0],"pos":"absolute","float":["none","none","none","none","none"],"clear":["none","none","none","none","none"]},"zIndex":6,"order":6,"display":["block","block","block","block","block"],"vA":"top","bg":{"color":{"type":"solid","orig":"rgba(0, 0, 0, 0.32)","string":"rgba(0, 0, 0, 0.32)"}},"attr":{"aO":"ml","tO":"ml"},"acc":{"role":""},"tl":{"in":{"content":{"pers":"600px","orig":{"x":"50%","y":"50%","z":"0"},"all":[{"t":0,"d":0,"f":0,"e":"power3.inOut","pE":"d","x":["0px","0px","0px","0px","0px"],"y":["0px","0px","0px","0px","0px"],"o":0,"xRe":0,"yRe":0,"off":0},{"t":0,"d":300,"f":300,"e":"power3.inOut","pE":"d","x":["0px","0px","0px","0px","0px"],"y":["0px","0px","0px","0px","0px"],"o":1,"xRe":0,"yRe":0,"off":0}]}},"out":{"content":{"pers":"600px","orig":{"x":"50%","y":"50%","z":"0"},"all":[{"t":0,"d":300,"f":300,"e":"power3.inOut","pE":"n","x":["inherit","inherit","inherit","inherit","inherit"],"y":["inherit","inherit","inherit","inherit","inherit"],"o":0,"xRe":0,"yRe":0,"off":0}]}}},"p":{"t":[0,0,"#a","#a","#a"],"b":[0,0,"#a","#a","#a"],"l":[0,0,"#a","#a","#a"],"r":[0,0,"#a","#a","#a"]},"m":{"t":[0,0,"#a","#a","#a"],"b":[0,0,"#a","#a","#a"],"l":[0,0,"#a","#a","#a"],"r":[0,0,"#a","#a","#a"]},"type":"shape"},"1":{"fluid":{"tx":true,"tr":true,"sp":true},"id":1,"alias":"Text-1","content":{"text":"SUMINISTRO ESTRAT\u00c9GICO\nDE ENERG\u00cdA"},"runtime":{"locked":false,"hidden":false},"size":{"w":["717","717","#a","#a","375px"],"h":["#a","auto","auto","auto","auto"],"minW":["none","none","none","none","none"],"minH":["none","none","none","none","none"]},"pos":{"x":["#a",0,0,0,0],"y":["293px","293px","#a","#a","195px"],"h":["center","center","center","center","center"],"pos":"absolute","float":["none","none","none","none","none"],"clear":["none","none","none","none","none"]},"zIndex":7,"order":7,"display":["block","block","block","block","block"],"vA":"top","bg":{"color":{"orig":"transparent","type":"solid","string":"transparent"}},"attr":{"aO":"ml","tO":"ml"},"acc":{"role":""},"tl":{"in":{"content":{"pers":"600px","orig":{"x":"50%","y":"50%","z":"0"},"all":[{"t":0,"d":0,"f":0,"e":"power3.inOut","pE":"d","x":["0px","0px","0px","0px","0px"],"y":["0px","0px","0px","0px","0px"],"o":0,"xRe":0,"yRe":0,"off":0},{"t":0,"d":300,"f":300,"e":"power3.inOut","pE":"d","x":["0px","0px","0px","0px","0px"],"y":["0px","0px","0px","0px","0px"],"o":1,"xRe":0,"yRe":0,"off":0}]}},"out":{"content":{"pers":"600px","orig":{"x":"50%","y":"50%","z":"0"},"all":[{"t":0,"d":300,"f":300,"e":"power3.inOut","pE":"n","x":["inherit","inherit","inherit","inherit","inherit"],"y":["inherit","inherit","inherit","inherit","inherit"],"o":0,"xRe":0,"yRe":0,"off":0}]}}},"p":{"t":[0,0,"#a","#a","#a"],"b":[0,0,"#a","#a","#a"],"l":[0,0,"#a","#a","#a"],"r":[0,0,"#a","#a","#a"]},"m":{"t":[0,0,"#a","#a","#a"],"b":[0,0,"#a","#a","#a"],"l":[0,0,"#a","#a","#a"],"r":[0,0,"#a","#a","#a"]},"tA":["center","center","center","center","center"],"color":["#ffffff","#ffffff","#ffffff","#ffffff","#ffffff"],"font":{"family":"Mulish","size":["60px","60px","#a","40px","50px"],"weight":["900","900","900","900","900"],"ls":["1","1",0,0,0]},"lh":["75px","75px","#a","#a","45px"],"type":"text","toggle":{"text":""}},"4":{"listen":["click"],"fluid":{"tx":true,"tr":true,"sp":true},"id":4,"alias":"Button-4","subtype":"button","content":{"text":"HABLEMOS"},"runtime":{"locked":false,"hidden":false},"size":{"w":["221px","221px","#a","156px","201px"],"h":["#a","auto","auto","auto","auto"],"minW":["none","none","none","none","none"],"minH":["0px","0px","none","none","none"]},"pos":{"x":["#a",0,0,0,0],"y":["597px","597px","#a","410px","427px"],"h":["center","center","center","center","center"],"pos":"absolute","float":["none","none","none","none","none"],"clear":["none","none","none","none","none"]},"zIndex":9,"order":9,"display":["block","block","block","block","block"],"vA":"top","bg":{"color":{"type":"solid","orig":"#00463a","string":"rgba(0, 70, 58, 1)"}},"attr":{"aO":"ml","tO":"ml","iClass":"sr7-btn"},"acc":{"role":"button"},"tl":{"in":{"content":{"pers":"600px","orig":{"x":"50%","y":"50%","z":"0"},"all":[{"t":0,"d":0,"f":0,"e":"power3.inOut","pE":"d","x":[0,0,0,"0px","0px"],"y":[0,0,0,"0px","0px"],"o":0,"xRe":0,"yRe":0,"off":0},{"t":0,"d":300,"f":300,"e":"power3.inOut","pE":"d","x":[0,0,0,"0px","0px"],"y":[0,0,0,"0px","0px"],"o":1,"xRe":0,"yRe":0,"off":0}]}},"out":{"content":{"pers":"600px","orig":{"x":"50%","y":"50%","z":"0"},"all":[{"t":0,"d":300,"f":300,"e":"power3.inOut","pE":"n","x":["inherit","inherit","inherit","inherit","inherit"],"y":["inherit","inherit","inherit","inherit","inherit"],"o":0,"xRe":0,"yRe":0,"off":0}]}}},"p":{"t":[0,0,"#a",0,0],"b":[0,0,"#a",0,0],"l":[40,40,"#a",28,36],"r":[40,40,"#a",28,36]},"m":{"t":[0,0,"#a","#a","#a"],"b":[0,0,"#a","#a","#a"],"l":[0,0,"#a","#a","#a"],"r":[0,0,"#a","#a","#a"]},"hov":{"u":true,"m":false,"deco":"none","zIndex":"auto","color":{"c":"rgba(0,0,0,1)","bg":{"type":"solid","orig":"#ffffff","string":"rgba(255, 255, 255, 1)"},"gAnim":"fading"},"border":{"c":"transparent","s":"none","w":{"t":[0,0,0,0,0],"r":[0,0,0,0,0],"b":[0,0,0,0,0],"l":[0,0,0,0,0]}},"radius":{"t":"30px","r":"30px","b":"30px","l":"30px"},"frame":{"o":1,"oX":"50%","oY":"50%","oZ":"50%","x":"inherit","y":"inherit","z":"inherit","rZ":"inherit","rX":"inherit","rY":"inherit","sX":"inherit","sY":"inherit","skX":0,"skY":0,"d":200,"e":"power1.inOut"},"filter":{"g":0,"r":100,"b":0},"svg":{"c":"#ffffff","stroke":{"c":"transparent","d":0,"o":0,"w":0}}},"tA":["center","center","center","center","center"],"radius":{"t":"30px","r":"30px","b":"30px","l":"30px"},"color":["#c1ee57","#c1ee57","#c1ee57","#c1ee57","#c1ee57"],"font":{"family":"Mulish","size":["18px","18px","#a","16px","20px"],"weight":["500","500","500","500","500"],"ls":["2px","2px","#a","0px","0px"]},"lh":["50","50","#a","35","44"],"tag":"a","target":"_blank","href":"https:\/\/api.whatsapp.com\/send\/?phone=573138487357&text=Hola%2C+estoy+interesado+en+m%C3%A1s+informaci%C3%B3n+sobre+Dispetrocom&type=phone_number&app_absent=0","rel":"noopener","type":"text","toggle":{"text":""}},"5":{"rTo":"slide","id":5,"alias":"Slide BG Layer","subtype":"slidebg","size":{"cMode":"cover"},"pos":{"h":["center","center","center","center","center"],"v":["center","center","center","center","center"],"pos":"absolute"},"zIndex":0,"order":0,"display":["block","block","block","block","block"],"bg":{"image":{"ratio":1.5,"src":"https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/09\/5.webp","lib":"medialibrary","lib_id":3316,"lib_size":"","fromStream":false,"streamType":"gallery","pos":{"x":"50%","y":"50%"},"repeat":"","size":"cover","sizeVal":"100%","seo":false}},"tl":{"in":{"bg":{"ex":true,"all":[[],{"d":1000,"sd":666.6666666666667,"e":"power2.inOut","dir":"default","t":0,"rnd":false,"temp":{"t":"*opacity* Fade In","p":"fade","m":"basic","g":"fade"},"addOns":[],"in":{"o":0},"out":{"a":false},"v":"7.0","a":"BG Animation"}]},"pan":{"pers":600,"orig":{"x":"50%","y":"50%","z":"0"},"all":[{"t":300,"d":0,"f":0,"e":"slow","x":0,"y":0,"sX":"120%","rZ":0,"off":0},{"t":300,"d":3000,"f":3000,"e":"slow","x":0,"y":0,"sX":"100%","rZ":0,"off":0}]}}},"type":"shape"}}},"4":{"id":4,"slide":{"addOns":[],"id":4,"version":"6.7.34","actions":[{"a":"link","evt":"click","http":"keep","target":"_blank","flw":"follow","ltype":"a","link":"https:\/\/api.whatsapp.com\/send\/?phone=573138487357&text=Hola%2C+estoy+interesado+en+m%C3%A1s+informaci%C3%B3n+sobre+Dispetrocom&type=phone_number&app_absent=0","src":[3]}],"title":"","parentId":null,"language":"default","order":2,"thumb":{"src":"https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/09\/1-50x100.webp","srcId":"","admin":"","adminId":"","dimension":"slider","default":{"image":{"src":"https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/09\/1.webp","repeat":"","size":"cover","pos":{"x":"50%","y":"50%"}}}},"acc":{"label":"unset","hidden":"true","live":"auto","role":"presentation","roledep":"slide"},"description":"","attr":{"class":"","data":"","id":"","a":"","aO":"ml","t":"","tO":"","deepLink":"","attr":""},"publish":{"from":"","to":"","state":"published","sch":true},"slideshow":{"stop":false,"len":"default","hal":0,"hom":false,"hfn":false},"loop":{"u":false,"r":-1,"s":0,"e":99999}},"layers":[]},"5":{"id":5,"slide":{"addOns":[],"id":5,"version":"6.7.34","actions":[{"a":"link","evt":"click","http":"keep","target":"_blank","flw":"follow","ltype":"a","link":"https:\/\/api.whatsapp.com\/send\/?phone=573138487357&text=Hola%2C+estoy+interesado+en+m%C3%A1s+informaci%C3%B3n+sobre+Dispetrocom&type=phone_number&app_absent=0","src":[4]}],"title":"","parentId":null,"language":"default","order":3,"thumb":{"src":"https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/09\/IMG_5880_opt-50x100.webp","srcId":"","admin":"","adminId":"","dimension":"slider","default":{"image":{"src":"https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/09\/IMG_5880_opt.webp","repeat":"","size":"cover","pos":{"x":"50%","y":"50%"}}}},"acc":{"label":"unset","hidden":"true","live":"auto","role":"presentation","roledep":"slide"},"description":"","attr":{"class":"","data":"","id":"","a":"","aO":"ml","t":"","tO":"","deepLink":"","attr":""},"publish":{"from":"","to":"","state":"published","sch":true},"slideshow":{"stop":false,"len":"default","hal":0,"hom":false,"hfn":false},"loop":{"u":false,"r":-1,"s":0,"e":99999}},"layers":[]},"6":{"id":6,"slide":{"addOns":[],"id":6,"version":"6.7.34","actions":[{"a":"link","evt":"click","http":"keep","target":"_blank","flw":"follow","ltype":"a","link":"https:\/\/api.whatsapp.com\/send\/?phone=573138487357&text=Hola%2C+estoy+interesado+en+m%C3%A1s+informaci%C3%B3n+sobre+Dispetrocom&type=phone_number&app_absent=0","src":[4]}],"title":"","parentId":null,"language":"default","order":4,"thumb":{"src":"https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/08\/Multimedia-50x100.jpeg","srcId":"","admin":"","adminId":"","dimension":"slider","default":{"image":{"src":"https:\/\/dispetrocom.com\/wp-content\/uploads\/2025\/08\/Multimedia.jpeg","repeat":"","size":"cover","pos":{"x":"50%","y":"50%"}}}},"acc":{"label":"unset","hidden":"true","live":"auto","role":"presentation","roledep":"slide"},"description":"","attr":{"class":"","data":"","id":"","a":"","aO":"ml","t":"","tO":"","deepLink":"","attr":""},"publish":{"from":"","to":"","state":"published","sch":true},"slideshow":{"stop":false,"len":"default","hal":0,"hom":false,"hfn":false},"loop":{"u":false,"r":-1,"s":0,"e":99999}},"layers":[]},"2":{"id":"2","slide":{"addOns":[],"id":2,"version":"6.7.34","title":"Global Layers","parentId":null,"language":"default","oflow":false,"global":true,"respVP":true,"pos":"front","fullHeight":true},"layers":[]}},"id":"1","addOns":[]};
+	if (SR7.F.init) SR7.F.init(); // DOUBLE CALL NOT A PROBLEM, MANAGED IN INIT
+	document.addEventListener('DOMContentLoaded', function() {if (SR7.F.init) SR7.F.init(); else SR7.shouldBeInited = true;});
+	window.addEventListener('load', function() {if (SR7.F.init) SR7.F.init(); else SR7.shouldBeInited = true; });
+	SR7.E.v6v7ids ??= {}
+	SR7.E.v6v7ids = JSON.parse('{\"n\":{\"1\":1,\"2\":3,\"3\":4,\"4\":5,\"5\":6},\"s\":{\"1\":2}}');
+</script>
+
+<script src='//dispetrocom.com/wp-content/uploads/custom-css-js/98.js?v=3316'></script>
+
+</body>
+</html>

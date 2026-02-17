@@ -1,0 +1,82 @@
+/* ============================================
+   THEME: Energy Yellow
+   SECTOR: Eléctrico
+   MOOD: Energético, advertencia profesional
+   ============================================ */
+
+[data-theme="energy-yellow"] {
+    /* Mode */
+    --bg-base: #ffffff;
+    --bg-primary: #ffffff;
+    --bg-secondary: #fefce8;
+    --bg-tertiary: #fef9c3;
+    --bg-elevated: #ffffff;
+    --bg-overlay: rgba(0, 0, 0, 0.5);
+    --bg-inverse: #422006;
+
+    /* Text */
+    --text-primary: #1c1917;
+    --text-secondary: #44403c;
+    --text-tertiary: #78716c;
+    --text-inverse: #ffffff;
+    --text-on-accent: #1c1917;
+
+    /* Accent: Electric Yellow */
+    --accent: #eab308;
+    --accent-soft: rgba(234, 179, 8, 0.15);
+    --accent-hover: #ca8a04;
+    --accent-active: #a16207;
+    --accent-glow: rgba(234, 179, 8, 0.35);
+
+    --accent-secondary: #f59e0b;
+    --accent-secondary-soft: rgba(245, 158, 11, 0.15);
+
+    /* Borders */
+    --border-soft: #fef9c3;
+    --border-default: #fef08a;
+    --border-strong: #fde047;
+
+    /* Cards */
+    --card-bg: #ffffff;
+    --card-bg-hover: #fefce8;
+    --card-border: #fef08a;
+    --card-shadow: 0 2px 10px rgba(234, 179, 8, 0.1);
+    --card-shadow-hover: 0 15px 40px rgba(234, 179, 8, 0.15);
+
+    /* Buttons */
+    --btn-primary-bg: linear-gradient(135deg, #eab308, #f59e0b);
+    --btn-primary-text: #1c1917;
+    --btn-primary-shadow: 0 4px 14px rgba(234, 179, 8, 0.35);
+
+    /* States */
+    --success: #16a34a;
+    --success-soft: rgba(22, 163, 74, 0.1);
+    --warning: #eab308;
+    --warning-soft: rgba(234, 179, 8, 0.15);
+    --error: #dc2626;
+    --error-soft: rgba(220, 38, 38, 0.1);
+
+    /* Effects */
+    --glow-color: rgba(234, 179, 8, 0.3);
+    --gradient-primary: linear-gradient(135deg, #eab308, #f59e0b);
+    --gradient-secondary: linear-gradient(135deg, #fefce8, #fef9c3);
+
+    /* Navbar */
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --navbar-bg-scrolled: #ffffff;
+    --navbar-border: #fde047;
+
+    /* Hero */
+    --hero-bg: linear-gradient(135deg, #1c1917 0%, #292524 100%);
+    --hero-text: #ffffff;
+    --hero-text-secondary: #fde047;
+
+    /* Footer */
+    --footer-bg: #1c1917;
+    --footer-border: rgba(234, 179, 8, 0.2);
+
+    /* Input */
+    --input-bg: #ffffff;
+    --input-border: #fef08a;
+    --input-border-focus: #eab308;
+}

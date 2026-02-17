@@ -1,0 +1,434 @@
+/* ============================================
+   Industria: Eléctrico / Certificaciones
+   Paleta: Amarillo/Dorado + Negro - Energía, profesional
+   Inspirado en: ODIR Certificaciones
+   ============================================ */
+
+[data-industry="electrico"] {
+    /* Primary Colors - Amarillo ODIR */
+    --color-primary: #ffcb36;
+    --color-primary-light: #ffd966;
+    --color-primary-dark: #e6b800;
+    --color-primary-rgb: 255, 203, 54;
+
+    /* Secondary Colors - Negro/Gris oscuro */
+    --color-secondary: #1a1a1a;
+    --color-secondary-light: #2d2d2d;
+    --color-secondary-dark: #0d0d0d;
+    --color-secondary-rgb: 26, 26, 26;
+
+    /* Accent - Dorado brillante */
+    --color-accent: #ffc107;
+    --color-accent-light: #ffca28;
+    --color-accent-dark: #ff8f00;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #ffcb36, #ffd966);
+    --gradient-primary-hover: linear-gradient(135deg, #e6b800, #ffcb36);
+    --gradient-hero: linear-gradient(135deg, rgba(13, 13, 13, 0.95), rgba(26, 26, 26, 0.90));
+    --gradient-electric: linear-gradient(135deg, #ffcb36 0%, #ffc107 50%, #ff8f00 100%);
+
+    /* Shadows */
+    --shadow-primary: 0 10px 30px -5px rgba(255, 203, 54, 0.3);
+    --shadow-primary-lg: 0 20px 40px -10px rgba(255, 203, 54, 0.4);
+    --shadow-electric: 0 0 30px rgba(255, 203, 54, 0.3);
+
+    /* Title Decoration */
+    --title-underline: linear-gradient(90deg, #ffcb36, #ffc107);
+
+    /* Background colors - Dark theme */
+    --color-bg-dark: #0d0d0d;
+    --color-bg-card: #1a1a1a;
+    --color-bg-section: #111111;
+    --color-text-light: #ffffff;
+    --color-text-muted: #9ca3af;
+}
+
+/* Dark theme base */
+[data-industry="electrico"] body {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+}
+
+/* Button styles */
+[data-industry="electrico"] .btn-primary {
+    background: var(--color-primary);
+    color: #000000;
+    font-weight: 700;
+    border: none;
+}
+
+[data-industry="electrico"] .btn-primary:hover {
+    background: var(--color-primary-light);
+    box-shadow: var(--shadow-primary);
+}
+
+/* Secondary button - outline */
+[data-industry="electrico"] .btn-secondary {
+    background: transparent;
+    color: var(--color-primary);
+    border: 2px solid var(--color-primary);
+    font-weight: 600;
+}
+
+[data-industry="electrico"] .btn-secondary:hover {
+    background: var(--color-primary);
+    color: #000000;
+}
+
+/* Service card icon */
+[data-industry="electrico"] .service-icon {
+    background: var(--color-primary);
+    color: #000000;
+    box-shadow: var(--shadow-primary);
+}
+
+/* Badge colors */
+[data-industry="electrico"] .badge-primary {
+    background-color: var(--color-primary);
+    color: #000000;
+    font-weight: 700;
+}
+
+/* Demo banner */
+[data-industry="electrico"] .demo-banner {
+    background: var(--color-primary);
+    color: #000000;
+}
+
+[data-industry="electrico"] .demo-banner a {
+    color: #000000;
+}
+
+/* Top bar - dark with yellow accent */
+[data-industry="electrico"] .top-bar {
+    background: var(--color-primary);
+    color: #000000;
+}
+
+[data-industry="electrico"] .top-bar__item {
+    color: #000000;
+}
+
+[data-industry="electrico"] .top-bar__item:hover {
+    opacity: 0.8;
+}
+
+[data-industry="electrico"] .top-bar__social-link {
+    color: #000000;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+[data-industry="electrico"] .top-bar__social-link:hover {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+/* Navbar - white/light with dark text */
+[data-industry="electrico"] .navbar-animated {
+    background: #ffffff !important;
+    border-bottom: 4px solid var(--color-primary);
+}
+
+[data-industry="electrico"] .navbar-animated.scrolled {
+    background: #ffffff !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+[data-industry="electrico"] .navbar-animated a {
+    color: #374151;
+}
+
+[data-industry="electrico"] .navbar-animated a:hover {
+    color: var(--color-primary);
+}
+
+/* Cards on dark background */
+[data-industry="electrico"] .tech-card,
+[data-industry="electrico"] .service-card {
+    background: var(--color-bg-card);
+    border: 1px solid rgba(255, 203, 54, 0.2);
+    color: var(--color-text-light);
+}
+
+[data-industry="electrico"] .tech-card:hover,
+[data-industry="electrico"] .service-card:hover {
+    border-color: var(--color-primary);
+    box-shadow: var(--shadow-electric);
+}
+
+/* Text colors for dark sections */
+[data-industry="electrico"] .section-dark {
+    background: var(--color-bg-section);
+}
+
+[data-industry="electrico"] .section-dark h2,
+[data-industry="electrico"] .section-dark h3,
+[data-industry="electrico"] .section-dark h4 {
+    color: var(--color-text-light);
+}
+
+[data-industry="electrico"] .section-dark p {
+    color: var(--color-text-muted);
+}
+
+/* Highlighted text */
+[data-industry="electrico"] .text-primary {
+    color: var(--color-primary) !important;
+}
+
+/* CTA section - yellow background */
+[data-industry="electrico"] .cta-section {
+    background: var(--color-bg-section);
+    border-top: 4px solid var(--color-primary);
+    border-bottom: 4px solid var(--color-primary);
+}
+
+/* CTA banner like ODIR */
+[data-industry="electrico"] .cta-banner {
+    background: linear-gradient(90deg, #2d2d2d, #1a1a1a);
+    border-left: 4px solid var(--color-primary);
+    border-radius: 0 12px 12px 0;
+}
+
+/* Certification badges */
+[data-industry="electrico"] .cert-badge {
+    background: var(--color-bg-card);
+    border: 2px solid var(--color-primary);
+    border-radius: 12px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+[data-industry="electrico"] .cert-badge:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-primary);
+}
+
+/* ONAC style badge */
+[data-industry="electrico"] .onac-badge {
+    background: var(--color-primary);
+    color: #000000;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Service type badges - RETIE, RETILAP, RITEL */
+[data-industry="electrico"] .service-type {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 700;
+}
+
+[data-industry="electrico"] .service-type--retie {
+    background: var(--color-primary);
+    color: #000000;
+}
+
+[data-industry="electrico"] .service-type--retilap {
+    background: #fef3c7;
+    color: #92400e;
+    border: 1px solid #f59e0b;
+}
+
+[data-industry="electrico"] .service-type--ritel {
+    background: #ecfdf5;
+    color: #065f46;
+    border: 1px solid #10b981;
+}
+
+/* Process steps with yellow accent */
+[data-industry="electrico"] .process-step {
+    position: relative;
+    padding-left: 4rem;
+}
+
+[data-industry="electrico"] .process-step::before {
+    content: attr(data-step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--color-primary);
+    color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+[data-industry="electrico"] .process-step::after {
+    content: '';
+    position: absolute;
+    left: 1.4rem;
+    top: 3.5rem;
+    width: 2px;
+    height: calc(100% - 1rem);
+    background: var(--color-primary);
+    opacity: 0.3;
+}
+
+[data-industry="electrico"] .process-step:last-child::after {
+    display: none;
+}
+
+/* Process steps light mode (for white backgrounds) */
+[data-industry="electrico"] .process-step-light {
+    position: relative;
+    padding-left: 4rem;
+}
+
+[data-industry="electrico"] .process-step-light::before {
+    content: attr(data-step);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 3rem;
+    height: 3rem;
+    background: var(--color-primary);
+    color: #000000;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.25rem;
+    box-shadow: 0 4px 10px rgba(255, 203, 54, 0.3);
+}
+
+[data-industry="electrico"] .process-step-light::after {
+    content: '';
+    position: absolute;
+    left: 1.4rem;
+    top: 3.5rem;
+    width: 2px;
+    height: calc(100% - 1rem);
+    background: var(--color-primary);
+    opacity: 0.5;
+}
+
+[data-industry="electrico"] .process-step-light:last-child::after {
+    display: none;
+}
+
+/* Stats with electric effect */
+[data-industry="electrico"] .stat-card {
+    background: var(--color-bg-card);
+    border-left: 4px solid var(--color-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+[data-industry="electrico"] .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(255, 203, 54, 0.05), transparent);
+    pointer-events: none;
+}
+
+/* Quote form on dark background */
+[data-industry="electrico"] .quote-form {
+    background: var(--color-bg-card);
+    border-radius: 16px;
+    padding: 2rem;
+    border: 1px solid rgba(255, 203, 54, 0.2);
+}
+
+[data-industry="electrico"] .quote-form input,
+[data-industry="electrico"] .quote-form select,
+[data-industry="electrico"] .quote-form textarea {
+    background: var(--color-bg-section);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--color-text-light);
+}
+
+[data-industry="electrico"] .quote-form input:focus,
+[data-industry="electrico"] .quote-form select:focus,
+[data-industry="electrico"] .quote-form textarea:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(255, 203, 54, 0.2);
+}
+
+[data-industry="electrico"] .quote-form label {
+    color: var(--color-text-muted);
+}
+
+/* Footer - dark with yellow accents */
+[data-industry="electrico"] footer {
+    background: #0a0a0a;
+    border-top: 1px solid rgba(255, 203, 54, 0.2);
+}
+
+[data-industry="electrico"] .footer-link:hover {
+    color: var(--color-primary);
+}
+
+/* WhatsApp button - matches ODIR style */
+[data-industry="electrico"] .whatsapp-float {
+    background: #25d366;
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+}
+
+/* Electric glow animation */
+[data-industry="electrico"] .electric-glow {
+    animation: electricGlow 2s ease-in-out infinite;
+}
+
+@keyframes electricGlow {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(255, 203, 54, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(255, 203, 54, 0.6);
+    }
+}
+
+/* Diamond/Rhombus shape like ODIR hero */
+[data-industry="electrico"] .diamond-shape {
+    transform: rotate(45deg);
+    background: var(--color-primary);
+}
+
+[data-industry="electrico"] .diamond-shape > * {
+    transform: rotate(-45deg);
+}
+
+/* Safety/Warning banner */
+[data-industry="electrico"] .safety-banner {
+    background: rgba(255, 203, 54, 0.1);
+    border-left: 4px solid var(--color-primary);
+    padding: 1rem 1.5rem;
+    border-radius: 0 8px 8px 0;
+}
+
+[data-industry="electrico"] .safety-banner svg {
+    color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    [data-industry="electrico"] .process-step {
+        padding-left: 3rem;
+    }
+
+    [data-industry="electrico"] .process-step::before {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1rem;
+    }
+}

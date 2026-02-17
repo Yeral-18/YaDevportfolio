@@ -1,0 +1,49 @@
+/* ============================================
+   YADEV THEME LOADER
+   Importa todos los temas disponibles
+   ============================================ */
+
+/* Base Tokens - SIEMPRE CARGAR PRIMERO */
+@import url('./_tokens.css');
+
+/* ===== TECNOLOGÍA ===== */
+@import url('./tecnologia/dark-tech.css');
+@import url('./tecnologia/light-saas.css');
+@import url('./tecnologia/cyberpunk-neon.css');
+@import url('./tecnologia/minimal-white.css');
+
+/* ===== SALUD ===== */
+@import url('./salud/clinical-light.css');
+@import url('./salud/medical-blue.css');
+@import url('./salud/soft-pastel.css');
+@import url('./salud/premium-hospital.css');
+
+/* ===== CONSTRUCCIÓN ===== */
+@import url('./construccion/industrial-dark.css');
+@import url('./construccion/concrete-light.css');
+@import url('./construccion/brutal-yellow.css');
+@import url('./construccion/blueprint-blue.css');
+
+/* ===== TRANSPORTE ===== */
+@import url('./transporte/midnight-fleet.css');
+@import url('./transporte/motion-red.css');
+@import url('./transporte/urban-gray.css');
+@import url('./transporte/neon-mobility.css');
+
+/* ===== ELÉCTRICO ===== */
+@import url('./electrico/energy-yellow.css');
+@import url('./electrico/neon-voltage.css');
+@import url('./electrico/clean-tech.css');
+@import url('./electrico/industrial-dark.css');
+
+/* ===== FORESTAL ===== */
+@import url('./forestal/editorial-nature.css');
+@import url('./forestal/forest-dark.css');
+@import url('./forestal/earth-minimal.css');
+@import url('./forestal/eco-vibrant.css');
+
+/* ===== E-COMMERCE ===== */
+@import url('./ecommerce/conversion-purple.css');
+@import url('./ecommerce/minimal-luxury.css');
+@import url('./ecommerce/neon-shop.css');
+@import url('./ecommerce/warm-commerce.css');

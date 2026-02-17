@@ -1,0 +1,1463 @@
+
+<!DOCTYPE html>
+<html lang="es">
+   <head>
+              	<!-- Global Site Tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-9XJNQTMYL1"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments)};
+	  gtag('js', new Date());
+
+	  gtag('config', 'G-9XJNQTMYL1');
+	</script>
+
+<!-- mobile responsive meta -->
+<base href="https://www.odircertificaciones.com/">
+
+<!-- START METATAGS -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<!-- END METATAGS -->
+
+<meta name="MobileOptimized" content="320" />
+<meta name="theme-color" content="#ffcb36" />
+<meta name="msapplication-navbutton-color" content="#ffcb36" />
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="apple-mobile-web-app-status-bar-style" content="#ffcb36" />
+<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml" />
+
+
+<title>ODIR Certificaciones - Certificaciones RETIE Y RETILAP COLOMBIA</title>
+<meta name="author" content="Damos Soluciones" />
+<meta name="twitter:title" content="ODIR Certificaciones - Certificaciones RETIE Y RETILAP COLOMBIA">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Servicio de certificación e inspecciones eléctricas RETIE y RETILAP conformidad del Reglamento Técnico de Instalaciones Eléctricas RETIE, NTC 2050.">
+<meta name="keywords" content="Certificado retie, instalaciones eléctricas, retie, certificado de instalación eléctrica, certificacion de retie, certificaciones retie, certificación retie, certificados instalaciones electricas, retie certificaciones, certificado de retie, certificado retie, empresas certificadoras retie, certificado retie precio, certificado retilap, organismo colombiano de certificación retie, retie certificado, retilap y retie, inspeccion retie, organismos de inspeccion retie, certificadores retie, inspecciones de paneles solares, certificado de paneles solares, alumbrado publico">
+<meta name="twitter:image" content="https://www.odircertificaciones.com/images/facebook.jpg?w=1200">
+<meta property="og:image" content="https://www.odircertificaciones.com/images/facebook.jpg?w=1200">
+<meta property="og:title" content="ODIR Certificaciones - Certificaciones RETIE Y RETILAP COLOMBIA">
+<meta property="og:type" content="website">
+<meta property="og:description" content="Servicio de certificación e inspecciones eléctricas RETIE y RETILAP conformidad del Reglamento Técnico de Instalaciones Eléctricas RETIE, NTC 2050.">
+<meta property="og:site_name" content="ODIR Certificaciones S.A.S. - Inspecciones RETIE Y RETILAP">
+<meta property="og:url" content="https://www.odircertificaciones.com/?https://landing.odircertificaciones.com/cotizacion-odir-bogota&gad_source=1&gad_campaignid=22859732803&gbraid=0AAAAABLBxSlMkybtcJvvvFwVoTCkfKfHL&gclid=CjwKCAiAncvMBhBEEiwA9GU_fqCaiUI8oKRVauGDUX6pE4jIo0fJP-GoUZStKScos6XVpBVaZxLtEhoClaAQAvD_BwE">
+<link rel="canonical" href="https://www.odircertificaciones.com" />
+<meta name="robots" content="index, follow">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5VW26N9');</script>
+<!-- End Google Tag Manager -->
+       <!--====================  LIBRERIAS CSS ====================-->
+       <!-- Bootstrap CSS -->
+<link href="assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<!-- Font Awesome CSS-->
+<link href="assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+<!-- Linear icons CSS-->
+<link href="assets/linearicons/css/icon-font.min.css" rel="stylesheet">
+<!-- Slick Nav CSS -->
+<link rel="stylesheet" href="assets/css/slicknav.min.css">
+<!-- Owl Carousel -->
+<link href="assets/owl-carousel/css/owl.carousel.css" rel="stylesheet">
+<link href="assets/owl-carousel/css/owl.theme.css" rel="stylesheet">
+<!-- Owl Carousel -->
+<link href="assets/pgw-slider/css/pgw-css.css" rel="stylesheet">
+<!-- Animate CSS -->
+<link href="assets/animate/animate.css" rel="stylesheet">
+<!-- Favicon -->
+<link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico">
+<!-- Popup -->
+<link rel="stylesheet" href="assets/css/popup.css">
+<!-- Custom CSS -->
+<link href="css/style.css" rel="stylesheet">
+<!-- fancybox -->
+<link rel="stylesheet" href="src/libraries/lightbox/fancybox.min.css" />
+
+<link href="css/custom.css" rel="stylesheet">       <!--====================  END OF LIBRERIAS CSS ====================-->
+
+          </head>
+
+   <body>
+
+      
+      <!-- Header Start -->
+      <!-- Pre Loader -->
+<div id="dvLoading"></div>
+
+<header class="wow fadeInDown" data-offset-top="197" data-spy="affix">
+   <div class="top-wrapper hidden-xs">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-7 col-md-6 col-sm-12">
+               <!--<div class="guest"> Bienvenidos</div>-->
+            </div>
+            <div class="col-lg-5 col-md-6 hidden-sm">
+               <div class="top-header-add">
+                                          <div class="book">
+                           <i class="fa fa-phone" aria-hidden="true"></i>
+                           <a href="tel:+57 3176688203">+57 3176688203</a>
+                        </div>
+                                 </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="header-inner">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-3 col-md-4">
+				<div class="logo">
+					<a href="inicio">
+						<img src="images/1749741334_logo-head-odircertificaciones.jpg" alt="Odir Certificaciones" data-popupalt-original-title="null" title="Odir Certificaciones"  width="120" height="60">
+					</a>
+											<img src="images/1749741370_logo2-head-odircertificaciones.jpg" alt="Odir Certificaciones" data-popupalt-original-title="null" title="Odir Certificaciones" style="margin-left: 5px;" width="120" height="60">
+									</div>
+				<div class="mobile-menu"></div>
+			</div>
+
+			<div class="col-lg-9 col-md-8">
+				<nav class="navbar navbar-default desktop">
+					<div class="navbar-collapse">
+						<!-- Main Menu -->
+						<ul id="nav" class="nav menu navbar-nav">
+							
+								<li class=" active">
+
+																			<a href="inicio" class="active">
+											Inicio										</a>
+									
+								</li>
+
+							
+								<li class=" ">
+
+																			<a href="javascript:void(0)"  class="">La Compañía <i class="fa fa-circle"></i>										</a>
+
+										<!-- <div class="dropdown-menu pattern2" aria-labelledby="services-dropdown"> -->
+
+										<ul class="dropdown ">
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="la-compania/nuestro-equipo" class="">Nuestro equipo</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="la-compania/quienes-somos" class="">Quienes somos</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="la-compania/mision-y-vision" class="">Misión y visión</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="la-compania/reglamento-interno-de-trabajo" class="">Reglamento Interno de Trabajo</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="la-compania/politica-de-confidencialidad" class="">Política de confidencialidad</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="la-compania/politica-de-independencia-imparcialidad-e-integridad" class="">Política de Independencia, Imparcialidad e Integridad</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="la-compania/politica-integral-del-organismo-evaluador-de-la-conformidad" class="">Política integral del organismo evaluador de la conformidad</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="la-compania/politica-de-tratamiento-de-datos" class="">Política de tratamiento de datos</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="la-compania/calidad-y-seguridad-y-salud-en-el-trabajo" class="">Calidad y seguridad y salud en el trabajo </a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="la-compania/politica-de-desconexion-laboral" class="">Política de desconexión laboral</a>
+
+													</li>
+
+												
+
+
+											
+										</ul>
+
+										<!-- </div> -->
+
+									
+								</li>
+
+							
+								<li class=" ">
+
+																			<a href="javascript:void(0)"  class="">Servicios <i class="fa fa-circle"></i>										</a>
+
+										<!-- <div class="dropdown-menu pattern2" aria-labelledby="services-dropdown"> -->
+
+										<ul class="dropdown style-ul">
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="servicios/certificacion-retie-o-inspeccion-retie" class="">Certificación RETIE o  Inspección RETIE</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="servicios/inspeccion-de-instalaciones-uso-final-basico-y-especial" class="">Inspección de Instalaciones Uso Final Básico y Especial </a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="servicios/inspeccion-de-instalaciones-distribucion" class="">Inspección de Instalaciones (Distribución)</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="servicios/inspeccion-de-instalaciones-electricas-transformacion" class=""> Inspección de Instalaciones Eléctricas (Transformación)</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="servicios/instalaciones-electricas-de-uso-final-especiales-sistemas-integrados-y-sistemas-solares-fotovoltaicos" class="">Instalaciones eléctricas de USO FINAL  ESPECIALES Sistemas integrados y sistemas solares fotovoltaicos.</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="servicios/inspeccion-de-instalaciones-de-iluminacion-y-alumbrado-publico-retilap" class="">Inspección de Instalaciones de iluminación y alumbrado publico RETILAP</a>
+
+													</li>
+
+												
+
+
+											
+										</ul>
+
+										<!-- </div> -->
+
+									
+								</li>
+
+							
+								<li class=" ">
+
+																			<a href="publicaciones"  class="">Publicaciones <i class="fa fa-circle"></i>										</a>
+
+										<!-- <div class="dropdown-menu pattern2" aria-labelledby="services-dropdown"> -->
+
+										<ul class="dropdown ">
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="publicaciones/reglamento-tecnico-de-instalaciones-electricas" class="">Reglamento técnico de instalaciones eléctricas </a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="publicaciones/tips" class="">Tips </a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="publicaciones/blog" class="">Blog</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="publicaciones/destacados" class="">Destacados</a>
+
+													</li>
+
+												
+
+
+											
+										</ul>
+
+										<!-- </div> -->
+
+									
+								</li>
+
+							
+								<li class=" ">
+
+																			<a href="javascript:void(0)"  class="">Quejas y Apelaciones <i class="fa fa-circle"></i>										</a>
+
+										<!-- <div class="dropdown-menu pattern2" aria-labelledby="services-dropdown"> -->
+
+										<ul class="dropdown ">
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="quejas-y-apelaciones/proceso" class="">Proceso</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="quejas-y-apelaciones/formulario" class="">Formulario</a>
+
+													</li>
+
+												
+
+
+											
+										</ul>
+
+										<!-- </div> -->
+
+									
+								</li>
+
+							
+								<li class=" ">
+
+																			<a href="javascript:void(0)"  class="">Contacto <i class="fa fa-circle"></i>										</a>
+
+										<!-- <div class="dropdown-menu pattern2" aria-labelledby="services-dropdown"> -->
+
+										<ul class="dropdown ">
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="contacto/encuesta-satisfaccion-del-cliente" class="">ENCUESTA SATISFACCIÓN DEL CLIENTE </a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="dictamenes" class="">Dictámenes</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a  href="contacto" class="">Solicitud de Cotización</a>
+
+													</li>
+
+												
+
+
+																								<!-- HIJO SIN nietos -->
+
+													<li>
+
+														<a target="_blank" href="https://checkout.wompi.co/l/56atYD" class="">PAGA TU CERTIFICACION AQUI!</a>
+
+													</li>
+
+												
+
+
+											
+										</ul>
+
+										<!-- </div> -->
+
+									
+								</li>
+
+													</ul>
+						<!-- End Main Menu -->
+					</div>
+				</nav>
+			</div>
+		</div>
+	</div>
+</div></header>      <!-- Header End -->
+      <!-- Banner Wrapper Start -->
+      <div class="banner-wrapper">
+   <div id="first-slider" class="">
+      <div id="carousel-example-generic" class="carousel slide carousel-fade">
+         <!-- Wrapper for slides -->
+         <div class="carousel-inner" role="listbox">
+
+            
+                  <div class="item active ">
+                                                   <img src="cabezotes/banner_odircertificaciones_es1758065157.jpg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-left">
+                                       <h1 data-animation="animated bounceInLeft" class=""><span></span></h1>
+                                       <p data-animation="animated bounceInLeft" class="">En cualquier tipo de tensión</p>
+                                       <a class="btn btn-hero" data-animation="animated bounceInLeft" href="">¡Certifícala ahora!</a>                                    </div>
+                                    
+                                 </div>
+                              </div>
+                                       </div>
+
+            
+                  <div class="item  ">
+                                                   <img src="cabezotes/banner_odircertificaciones_es1758065305.jpg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-left">
+                                       <h1 data-animation="animated bounceInLeft" class=""><span></span></h1>
+                                       <p data-animation="animated bounceInLeft" class="">EN CUALQUIER TIPO DE TENSIÓN</p>
+                                       <a class="btn btn-hero" data-animation="animated bounceInLeft" href="">¡Certifícala ahora!</a>                                    </div>
+                                    
+                                 </div>
+                              </div>
+                                       </div>
+
+            
+                  <div class="item  ">
+                                                   <img src="cabezotes/banner_odircertificaciones_es1753840251.jpg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-right">
+                                       <h1 data-animation="animated bounceInLeft" class=""><span></span></h1>
+                                       <p data-animation="animated bounceInLeft" class=""></p>
+                                       <a class="btn btn-hero" data-animation="animated bounceInLeft" href="https://checkout.wompi.co/l/56atYD">¡Paga Ahora! </a>                                    </div>
+                                    
+                                 </div>
+                              </div>
+                                       </div>
+
+            
+                  <div class="item  filtro">
+                                                   <img src="cabezotes/banner_odircertificaciones_es1744058546.jpg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-right">
+                                       <h1 data-animation="animated bounceInLeft" class="">CERTIFICACIÓN RETIE <span>RETILAP</span></h1>
+                                       <p data-animation="animated bounceInLeft" class="">Inspecciones eléctricas</p>
+                                       <a class="btn btn-hero" data-animation="animated bounceInLeft" href="https://api.whatsapp.com/send?phone=573176688203&text=Hola%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20certificaci%C3%B3n%20RETIE%20Y%20RETILAP%20...">Asesórate </a>                                    </div>
+                                    
+                                 </div>
+                              </div>
+                                       </div>
+
+            
+                  <div class="item  filtro">
+                     <a href="¡Adquiere!">                              <img src="cabezotes/banner_odircertificaciones_es1724880658.jpg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-left">
+                                       <h1 data-animation="animated bounceInLeft" class="">Inspección fotovoltaica<span></span></h1>
+                                       <p data-animation="animated bounceInLeft" class=""></p>
+                                                                           </div>
+                                    
+                                 </div>
+                              </div>
+                     </a>                  </div>
+
+            
+                  <div class="item  filtro">
+                                                   <img src="cabezotes/banner_odircertificaciones_es1744046113.jpg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-right">
+                                       <h1 data-animation="animated bounceInLeft" class="">¡Más cerca de ti! <span>Cobertura en todo el territorio Colombiano Solicita tus servicios de inspección en el Caribe colombiano</span></h1>
+                                       <p data-animation="animated bounceInLeft" class="">Solicita tus servicios de inspección ¡Ahora! 
+</p>
+                                       <a class="btn btn-hero" data-animation="animated bounceInLeft" href="https://api.whatsapp.com/send?phone=573176688203&text=Hola%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20certificaci%C3%B3n%20RETIE%20Y%20RETILAP%20...">Adquiere</a>                                    </div>
+                                    
+                                 </div>
+                              </div>
+                                       </div>
+
+            
+                  <div class="item  filtro">
+                                                   <img src="cabezotes/banner_odircertificaciones_es1744046796.jpg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-left">
+                                       <h1 data-animation="animated bounceInLeft" class="">Revisión, Verificación e Inspección Eléctrica<span>Cobertura en todo el territorio Colombiano</span></h1>
+                                       <p data-animation="animated bounceInLeft" class="">Su empresa y sus instalaciones en las mejores manos</p>
+                                       <a class="btn btn-hero" data-animation="animated bounceInLeft" href="https://www.odircertificaciones.com/contacto">Contáctenos</a>                                    </div>
+                                                                              <div class="col-md-4 col-sm-5 text-right hidden-xs">
+                                             <img data-animation="animated zoomInLeft" src="cabezotes/slide_odircertificaciones_es1574947106.png" alt="Revisión, Verificación e Inspección Eléctrica">
+                                          </div>
+                                    
+                                 </div>
+                              </div>
+                                       </div>
+
+            
+                  <div class="item  filtro">
+                                                   <img src="cabezotes/banner_odircertificaciones_es1724880489.jpg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-center">
+                                       <h1 data-animation="animated bounceInLeft" class=""><span></span></h1>
+                                       <p data-animation="animated bounceInLeft" class=""></p>
+                                       <a class="btn btn-hero" data-animation="animated bounceInLeft" href="https://api.whatsapp.com/send?phone=573176688203&text=Hola%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20certificaci%C3%B3n%20RETIE%20Y%20RETILAP%20...">Adquiere</a>                                    </div>
+                                    
+                                 </div>
+                              </div>
+                                       </div>
+
+            
+                  <div class="item  filtro">
+                                                   <img src="cabezotes/banner_odircertificaciones_es1725981723.jpg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-left">
+                                       <h1 data-animation="animated bounceInLeft" class="">Certifique sus proyectos en los siguientes alcances<span>Sistemas integrados y sistemas solares fotovoltaicos.</span></h1>
+                                       <p data-animation="animated bounceInLeft" class="">RETIE  Inspección en instalaciones eléctricas para uso final especial.</p>
+                                       <a class="btn btn-hero" data-animation="animated bounceInLeft" href="https://api.whatsapp.com/send?phone=573176688203&text=Hola%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20certificaci%C3%B3n%20RETIE%20Y%20RETILAP%20...">Adquiere</a>                                    </div>
+                                                                              <div class="col-md-4 col-sm-5 text-right hidden-xs">
+                                             <img data-animation="animated zoomInLeft" src="cabezotes/slide_odircertificaciones_es1652818754.png" alt="Certifique sus proyectos en los siguientes alcances">
+                                          </div>
+                                    
+                                 </div>
+                              </div>
+                                       </div>
+
+            
+                  <div class="item  filtro">
+                                                   <img src="cabezotes/banner_odircertificaciones_es1725981247.jpg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-center">
+                                       <h1 data-animation="animated bounceInLeft" class=""><span></span></h1>
+                                       <p data-animation="animated bounceInLeft" class=""></p>
+                                       <a class="btn btn-hero" data-animation="animated bounceInLeft" href="https://api.whatsapp.com/send?phone=573176688203&text=Hola%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20certificaci%C3%B3n%20RETIE%20Y%20RETILAP%20...">Adquiere</a>                                    </div>
+                                    
+                                 </div>
+                              </div>
+                                       </div>
+
+            
+                  <div class="item  filtro">
+                                                   <img src="cabezotes/banner_odircertificaciones_es1624115913.jpeg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-left">
+                                       <h1 data-animation="animated bounceInLeft" class="">Certifique sus proyectos con  en los siguientes alcances
+<span>Áreas clasificadas como peligrosas</span></h1>
+                                       <p data-animation="animated bounceInLeft" class="">RETIE Gestión de Inspección en instalaciones eléctricas
+para uso final de energía en lugares clasificados como peligrosos. 
+</p>
+                                       <a class="btn btn-hero" data-animation="animated bounceInLeft" href="https://www.odircertificaciones.com/contacto">Contáctenos</a>                                    </div>
+                                                                              <div class="col-md-4 col-sm-5 text-right hidden-xs">
+                                             <img data-animation="animated zoomInLeft" src="cabezotes/slide_odircertificaciones_es1652818363.png" alt="Certifique sus proyectos con  en los siguientes alcances
+">
+                                          </div>
+                                    
+                                 </div>
+                              </div>
+                                       </div>
+
+            
+                  <div class="item  filtro">
+                                                   <img src="cabezotes/banner_odircertificaciones_es1724878020.jpg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-right">
+                                       <h1 data-animation="animated bounceInLeft" class="">¡Expertos Especializados a tu servicio!<span></span></h1>
+                                       <p data-animation="animated bounceInLeft" class="">En Odir, nuestro equipo está  altamente capacitado y comprometido, está para brindarte la ayuda que necesitas en cada uno de tus procesos</p>
+                                       <a class="btn btn-hero" data-animation="animated bounceInLeft" href="https://api.whatsapp.com/send?phone=573176688203&text=Hola%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20certificaci%C3%B3n%20RETIE%20Y%20RETILAP%20...">Adquiere</a>                                    </div>
+                                    
+                                 </div>
+                              </div>
+                                       </div>
+
+            
+                  <div class="item  filtro">
+                                                   <img src="cabezotes/banner_odircertificaciones_es1652802954.jpg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-left">
+                                       <h1 data-animation="animated bounceInLeft" class="">Inspección RETILAP <span>Verificación de los requisitos y medidas que deben cumplir los sistemas de iluminación y alumbrado público</span></h1>
+                                       <p data-animation="animated bounceInLeft" class="">Sistemas de Iluminación Interior, Exterior y Alumbrado Publico
+</p>
+                                       <a class="btn btn-hero" data-animation="animated bounceInLeft" href="https://wa.link/s8qxk0">Contáctenos</a>                                    </div>
+                                                                              <div class="col-md-4 col-sm-5 text-right hidden-xs">
+                                             <img data-animation="animated zoomInLeft" src="cabezotes/slide_odircertificaciones_es1652818447.png" alt="Inspección RETILAP ">
+                                          </div>
+                                    
+                                 </div>
+                              </div>
+                                       </div>
+
+            
+                  <div class="item  filtro">
+                                                   <img src="cabezotes/banner_odircertificaciones_es1724879094.jpg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-right">
+                                       <h1 data-animation="animated bounceInLeft" class="">Expertos en 
+<span>Inspección de Instalaciones</span></h1>
+                                       <p data-animation="animated bounceInLeft" class="">Para Uso Final y Distribución de Energía Eléctrica</p>
+                                       <a class="btn btn-hero" data-animation="animated bounceInLeft" href="https://api.whatsapp.com/send?phone=573176688203&text=Hola%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20certificaci%C3%B3n%20RETIE%20Y%20RETILAP%20...">Adquiere</a>                                    </div>
+                                                                              <div class="col-md-4 col-sm-5 text-right hidden-xs">
+                                             <img data-animation="animated zoomInLeft" src="cabezotes/slide_odircertificaciones_es1579994074.JPG" alt="Expertos en 
+">
+                                          </div>
+                                    
+                                 </div>
+                              </div>
+                                       </div>
+
+            
+                  <div class="item  ">
+                                                   <img src="cabezotes/banner_odircertificaciones_es1725981541.jpg" alt="" class="slide-image animated" data-animation="animated" style="max-width: 100%;">
+
+                              <div class="row">
+                                 <div class="container">
+                                    <div class="col-md-12 col-sm-12 text-right">
+                                       <h1 data-animation="animated bounceInLeft" class=""><span></span></h1>
+                                       <p data-animation="animated bounceInLeft" class=""></p>
+                                       <a class="btn btn-hero" data-animation="animated bounceInLeft" href="https://api.whatsapp.com/send?phone=573176688203&text=Hola%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20certificaci%C3%B3n%20RETIE%20Y%20RETILAP%20...">Adquiere</a>                                    </div>
+                                    
+                                 </div>
+                              </div>
+                                       </div>
+
+            
+         </div>
+         <!-- End Wrapper for slides-->
+         <a class="left carousel-control"
+            href="#carousel-example-generic" role="button" data-slide="prev"> <i class="fa fa-angle-left"></i>
+            <span class="sr-only">Anterior</span>
+         </a>
+         <a class="right carousel-control"
+            href="#carousel-example-generic" role="button" data-slide="next"> <i class="fa fa-angle-right"></i>
+            <span class="sr-only">Siguiente</span>
+         </a>
+      </div>
+   </div>
+</div>      <!-- Banner Wrapper End -->
+      <!-- cta Wrapper Start -->
+      <div class="cta-wrapper">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-3">
+            <div class="cta-inner cta-text"> Conozca nuestra empresa, para más información </div>
+         </div>
+         <div class="col-sm-5">
+            <div class="cta-inner cta">
+               <img src="images/1707855694_llamado1-odircertificaciones.png" alt="">
+               <h3>Emisión y entrega rápida de dictámenes<br> <span></span></h3>
+            </div>
+         </div>
+         <div class="col-sm-4">
+            <div class="cta-inner cta-btn">
+               <a href="dictamenes">
+                  Consulta de dictámenes                  <i class="fa fa-search" aria-hidden="true"></i>
+               </a>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>      <!-- cta Wrapper End -->
+      <!-- Our Services Start -->
+      <section class="our-services-wrapper">
+   <div class="container">
+      <div class="title">
+         <h2>Nuestros servicios</h2>
+         <span class="title-border-color"><i class="fa fa-bolt" aria-hidden="true"></i></span>
+      </div>
+      <div class="row">
+                           <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="single-service">
+                        <div class="single-services">
+                           <div class="services-inner">
+                              <div class="our-services-icon">
+                                 <span><i class="fa fa-asl-interpreting"></i></span>
+                              </div>
+                              <div class="our-services-text">
+                                 <h3>Certificación RETIE o  Inspección RETIE</h3>
+                                 <p>Nuestra finalidad es brindar el mejor de los servicios con el tema de las certificaciones RETIE ...</p>
+                                 <a href="servicios/certificacion-retie-o-inspeccion-retie">Saber más</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="single-service">
+                        <div class="single-services">
+                           <div class="services-inner">
+                              <div class="our-services-icon">
+                                 <span><i class="fa fa-flash"></i></span>
+                              </div>
+                              <div class="our-services-text">
+                                 <h3>Inspección de Instalaciones Uso Final Básico y Especial </h3>
+                                 <p>Uso final de Energía Eléctrica
+
+Instalaciones eléctricas de USO FINAL BÁSICAS Y ...</p>
+                                 <a href="servicios/inspeccion-de-instalaciones-uso-final-basico-y-especial">Saber más</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="single-service">
+                        <div class="single-services">
+                           <div class="services-inner">
+                              <div class="our-services-icon">
+                                 <span><i class="fa fa-smile-o"></i></span>
+                              </div>
+                              <div class="our-services-text">
+                                 <h3>Inspección de Instalaciones (Distribución)</h3>
+                                 <p>Proceso de Distribución de Energía Eléctrica
+
+Redes de Distribución de Uso General y ...</p>
+                                 <a href="servicios/inspeccion-de-instalaciones-distribucion">Saber más</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="single-service">
+                        <div class="single-services">
+                           <div class="services-inner">
+                              <div class="our-services-icon">
+                                 <span><i class="fa fa-refresh"></i></span>
+                              </div>
+                              <div class="our-services-text">
+                                 <h3> Inspección de Instalaciones Eléctricas (Transformación)</h3>
+                                 <p>Proceso de Transformación subestaciones&nbsp;de Energía Eléctrica en Media ...</p>
+                                 <a href="servicios/inspeccion-de-instalaciones-electricas-transformacion">Saber más</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="single-service">
+                        <div class="single-services">
+                           <div class="services-inner">
+                              <div class="our-services-icon">
+                                 <span><i class="fa fa-cogs"></i></span>
+                              </div>
+                              <div class="our-services-text">
+                                 <h3>Instalaciones eléctricas de USO FINAL  ESPECIALES Sistemas integrados y sistemas solares fotovoltaicos.</h3>
+                                 <p>Sistemas de PANELES SOLARES (incluyendo fuentes de generación de energía interconectadas)
+</p>
+                                 <a href="servicios/instalaciones-electricas-de-uso-final-especiales-sistemas-integrados-y-sistemas-solares-fotovoltaicos">Saber más</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                           <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="single-service">
+                        <div class="single-services">
+                           <div class="services-inner">
+                              <div class="our-services-icon">
+                                 <span><i class="fa fa-sun-o"></i></span>
+                              </div>
+                              <div class="our-services-text">
+                                 <h3>Inspección de Instalaciones de iluminación y alumbrado publico RETILAP</h3>
+                                 <p>RETILAP verificación de los requisitos y medidas que deben cumplir los sistemas de ...</p>
+                                 <a href="servicios/inspeccion-de-instalaciones-de-iluminacion-y-alumbrado-publico-retilap">Saber más</a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+   </div>
+</section>      <!-- Our Services End -->
+      <!-- About Wrapper Start -->
+      <section class="about-wrapper">
+   <div class="container">
+      <div class="title">
+         <h2>Sobre nosotros</h2>
+         <span class="title-border-color"><i class="fa fa-bolt" aria-hidden="true"></i></span>
+      </div>
+      <div class="mb-30">
+         <div class="display-table">
+            <!-- display-table-cell -->
+            <div class="display-table-cell width-50">
+               <div class="service-image">
+                  <div class="border_style top left"><span></span></div>
+                  <div class="border_style bottom right"><span></span></div>
+                  <img src="images/bg/1744055535_editorial-odircertificaciones.jpg" alt="Sobre nosotros" title="Sobre nosotros">
+               </div>
+            </div>
+            <!-- display-table-cell -->
+            <div class="display-table-cell width-50">
+               <div class="about-text-area">
+                  <h3>ODIR Certificaciones SAS </h3>
+                  <p><br data-cke-eol="1"></p>
+
+<p style="text-align: justify;">ODIR CERTIFICACIONES SAS contamos con acreditación ONAC, vigente a la fecha 17 de julio de 2027, con código de acreditación 18-OIN-065, &nbsp;bajo la norma ISO/IEC 17020:2012 " este certificado y su alcance puede ser consultado en la pagina &nbsp; &nbsp; https://onac.org.co/directorio-de-acreditados/buscador-por-organismo.</p>
+                  <a href="la-compania/quienes-somos">Saber más</a>
+               </div>
+               <!-- about-area -->
+            </div>
+         </div>
+         <!-- display-table -->
+      </div>
+   </div>
+</section>      <!-- About Wrapper End -->
+      <!-- Join Wrapper Start -->
+      <div class="join-wrapper" style="background: rgba(0, 0, 0, 0) url(images/1726177293_llamado2-odircertificaciones.jpg) no-repeat left top; background-size: cover;">
+	<div class="container">
+	    <h3>Inspecciones eléctricas <span>Con normas RETIE, RETILAP y NTC 2050</span></h3>
+	    <a href="contacto">Contáctenos</a>
+	</div>
+</div>      <!-- Join Wrapper End -->
+      <!-- Testimonials Wrapper Start -->
+      <section class="testimonials-wrapper">
+   <div class="container">
+      <div class="title">
+         <h2>Quienes confían en nosotros</h2>
+         <span class="title-border-color"><i class="fa fa-bolt" aria-hidden="true"></i></span>
+      </div>
+      <div class="row">
+         <div class="col-md-8 col-sm-12 col-md-offset-2 col-sm-offset-0 col-xs-offset-0">
+            <div id="testimonials" class="owl-carousel">
+
+                                    <div class="item">
+                        <div class="testimonials-main">
+                           <div class="testimonials-inner">
+                              <p></p>
+                           </div>
+                           <div class="testimonials-text">
+                              <p class="client-name">Tiendas D1 </p>
+                              <p>Inspección RETIE</p>
+                           </div>
+                           <div class="testimonial-img"> <img src="testimonios/tiendas_d1__1712847523.jpg" alt=""> </div>
+                        </div>
+                     </div>
+                                    <div class="item">
+                        <div class="testimonials-main">
+                           <div class="testimonials-inner">
+                              <p>Clientes que confian en nosotros
+</p>
+                           </div>
+                           <div class="testimonials-text">
+                              <p class="client-name">Tiendas OXXO</p>
+                              <p></p>
+                           </div>
+                           <div class="testimonial-img"> <img src="testimonios/tiendas_oxxo_1712847664.jpg" alt=""> </div>
+                        </div>
+                     </div>
+                                    <div class="item">
+                        <div class="testimonials-main">
+                           <div class="testimonials-inner">
+                              <p></p>
+                           </div>
+                           <div class="testimonials-text">
+                              <p class="client-name">DOLLAR CITY</p>
+                              <p></p>
+                           </div>
+                           <div class="testimonial-img"> <img src="testimonios/dollar_city_1712848261.jpg" alt=""> </div>
+                        </div>
+                     </div>
+                                    <div class="item">
+                        <div class="testimonials-main">
+                           <div class="testimonials-inner">
+                              <p></p>
+                           </div>
+                           <div class="testimonials-text">
+                              <p class="client-name">STORK</p>
+                              <p></p>
+                           </div>
+                           <div class="testimonial-img"> <img src="testimonios/stork_1712848276.jpg" alt=""> </div>
+                        </div>
+                     </div>
+                                    <div class="item">
+                        <div class="testimonials-main">
+                           <div class="testimonials-inner">
+                              <p></p>
+                           </div>
+                           <div class="testimonials-text">
+                              <p class="client-name">DISCON</p>
+                              <p></p>
+                           </div>
+                           <div class="testimonial-img"> <img src="testimonios/discon_1712847313.png" alt=""> </div>
+                        </div>
+                     </div>
+                                    <div class="item">
+                        <div class="testimonials-main">
+                           <div class="testimonials-inner">
+                              <p></p>
+                           </div>
+                           <div class="testimonials-text">
+                              <p class="client-name">VENTUS</p>
+                              <p></p>
+                           </div>
+                           <div class="testimonial-img"> <img src="testimonios/ventus_1712848335.jpg" alt=""> </div>
+                        </div>
+                     </div>
+                                    <div class="item">
+                        <div class="testimonials-main">
+                           <div class="testimonials-inner">
+                              <p></p>
+                           </div>
+                           <div class="testimonials-text">
+                              <p class="client-name">HIGUERA ESCALANTE</p>
+                              <p></p>
+                           </div>
+                           <div class="testimonial-img"> <img src="testimonios/higuera_escalante_1712848322.jpg" alt=""> </div>
+                        </div>
+                     </div>
+                                    <div class="item">
+                        <div class="testimonials-main">
+                           <div class="testimonials-inner">
+                              <p></p>
+                           </div>
+                           <div class="testimonials-text">
+                              <p class="client-name">CIDEL INGENIERÍA S.A.S</p>
+                              <p></p>
+                           </div>
+                           <div class="testimonial-img"> <img src="testimonios/cidel_ingenieria_sas_1712848295.jpg" alt=""> </div>
+                        </div>
+                     </div>
+                                    <div class="item">
+                        <div class="testimonials-main">
+                           <div class="testimonials-inner">
+                              <p></p>
+                           </div>
+                           <div class="testimonials-text">
+                              <p class="client-name">INIGELECGRUP</p>
+                              <p></p>
+                           </div>
+                           <div class="testimonial-img"> <img src="testimonios/inigelecgrup_1712848243.jpg" alt=""> </div>
+                        </div>
+                     </div>
+                                    <div class="item">
+                        <div class="testimonials-main">
+                           <div class="testimonials-inner">
+                              <p></p>
+                           </div>
+                           <div class="testimonials-text">
+                              <p class="client-name">FONAPRO</p>
+                              <p></p>
+                           </div>
+                           <div class="testimonial-img"> <img src="testimonios/fonapro_1712847758.jpg" alt=""> </div>
+                        </div>
+                     </div>
+                                    <div class="item">
+                        <div class="testimonials-main">
+                           <div class="testimonials-inner">
+                              <p></p>
+                           </div>
+                           <div class="testimonials-text">
+                              <p class="client-name">PC MEJÍA</p>
+                              <p></p>
+                           </div>
+                           <div class="testimonial-img"> <img src="testimonios/pc_mejia_1712848350.jpg" alt=""> </div>
+                        </div>
+                     </div>
+                                    <div class="item">
+                        <div class="testimonials-main">
+                           <div class="testimonials-inner">
+                              <p></p>
+                           </div>
+                           <div class="testimonials-text">
+                              <p class="client-name">SUNCOLOMBIA</p>
+                              <p></p>
+                           </div>
+                           <div class="testimonial-img"> <img src="testimonios/suncolombia_1712848363.jpg" alt=""> </div>
+                        </div>
+                     </div>
+               
+            </div>
+         </div>
+      </div>
+   </div>
+</section>      <!-- Testimonials Wrapper End -->
+      <!-- Counters Wrapper Start -->
+      <div class="counters" style="background-image: url(images/1726176538_parallax-odircertificaciones.jpg); background-attachment: fixed;">
+   <div class="container">
+      <div class="row">
+
+         <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="counter">
+               <div class="counter-icon-box">
+                  <i class="fa fa-home"></i>
+               </div>
+               <div class="counter-right">
+                  <div class="number animateNumber" data-num="9"> <span>9</span></div>
+                  <h3>SUCURSALES:  Bucaramanga,  Bogotá,  Medellín,  Barranquilla,  Barrancabermeja, Cali, Pereira, Pasto, Monteria</h3>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="counter">
+               <div class="counter-icon-box">
+                  <i class="fa fa-feed"></i>
+               </div>
+               <div class="counter-right">
+                  <div class="number animateNumber" data-num="32"> <span>32</span></div>
+                  <h3>COBERTURA EN DEPARTAMENTOS</h3>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="counter">
+               <div class="counter-icon-box">
+                  <i class="fa fa-trophy"></i>
+               </div>
+               <div class="counter-right">
+                  <div class="number animateNumber" data-num="7"> <span>7</span></div>
+                  <h3>AÑOS DE EXPERIENCIA</h3>
+               </div>
+            </div>
+         </div>
+
+         <div class="col-lg-3 col-md-6 col-sm-6">
+            <div class="counter">
+               <div class="counter-icon-box">
+                  <i class="fa fa-users"></i>
+               </div>
+               <div class="counter-right">
+                  <div class="number animateNumber" data-num="+3500"> <span>+3500</span></div>
+                  <h3>PROYECTOS REALIZADOS</h3>
+               </div>
+            </div>
+         </div>
+
+      </div>
+   </div>
+</div>      <!-- Counters Wrapper End -->
+      <!-- News Wrapper Start -->
+      <section class="news-wrapper">
+   <div class="container">
+      <div class="title">
+         <h2>Publicaciones de Interes</h2>
+         <span class="title-border-color"><i class="fa fa-bolt" aria-hidden="true"></i></span>
+      </div>
+      <div class="row">
+
+                           <div class="col-md-4 col-sm-6">
+                     <div class="news-section-single">
+                        <div class="news-img-main">
+                           <div class="news-img">
+                              <a href="publicaciones/blog/como-certificar-tu-instalacion-electrica-y-operar-con-seguridad-retie-2024-en-plantas-agricolas">
+                                 <img src="fotosnoticias/mic_thu__como_certificar_tu_instalacion_electrica_y_operar_con_seguridad_retie_2024_en_plantas_agricolas_1771002039.jpg" alt=" ¿cómo certificar tu instalación eléctrica y operar con seguridad? RETIE 2024 en plantas agrícolas" data-popupalt-original-title="null" title=" ¿cómo certificar tu instalación eléctrica y operar con seguridad? RETIE 2024 en plantas agrícolas">
+                              </a>
+                              <div class="news-list">
+                                 <ul>
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i>Febrero 13, 2026</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="news-head">
+                           <a href="publicaciones/blog/como-certificar-tu-instalacion-electrica-y-operar-con-seguridad-retie-2024-en-plantas-agricolas">
+                              <h3> ¿cómo certificar tu instalación eléctrica y operar con seguridad? RETIE 2024 en plantas agrícolas</h3>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+
+                           <div class="col-md-4 col-sm-6">
+                     <div class="news-section-single">
+                        <div class="news-img-main">
+                           <div class="news-img">
+                              <a href="publicaciones/blog/checklist-retie-2024-para-gasolineras-los-puntos-criticos-electricos-que-mas-se-pasan-por-alto">
+                                 <img src="fotosnoticias/mic_thu_checklist_retie_2024_para_gasolineras_los_puntos_criticos_electricos_que_mas_se_pasan_por_alto_1770825991.jpg" alt="Checklist RETIE 2024 para gasolineras: los puntos críticos eléctricos que más se pasan por alto" data-popupalt-original-title="null" title="Checklist RETIE 2024 para gasolineras: los puntos críticos eléctricos que más se pasan por alto">
+                              </a>
+                              <div class="news-list">
+                                 <ul>
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i>Febrero 11, 2026</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="news-head">
+                           <a href="publicaciones/blog/checklist-retie-2024-para-gasolineras-los-puntos-criticos-electricos-que-mas-se-pasan-por-alto">
+                              <h3>Checklist RETIE 2024 para gasolineras: los puntos críticos eléctricos que más se pasan por alto</h3>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+
+                           <div class="col-md-4 col-sm-6">
+                     <div class="news-section-single">
+                        <div class="news-img-main">
+                           <div class="news-img">
+                              <a href="publicaciones/blog/explosion-en-la-subestacion-san-silvestre-dejo-sin-energia-a-gran-parte-de-barrancabermeja">
+                                 <img src="fotosnoticias/mic_thu_explosion_en_la_subestacion_san_silvestre_dejo_sin_energia_a_gran_parte_de_barrancabermeja__1770059225.jpg" alt="Explosión en la Subestación San Silvestre dejó sin energía a gran parte de Barrancabermeja " data-popupalt-original-title="null" title="Explosión en la Subestación San Silvestre dejó sin energía a gran parte de Barrancabermeja ">
+                              </a>
+                              <div class="news-list">
+                                 <ul>
+                                    <li><i class="fa fa-clock-o" aria-hidden="true"></i>Febrero 02, 2026</li>
+                                 </ul>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="news-head">
+                           <a href="publicaciones/blog/explosion-en-la-subestacion-san-silvestre-dejo-sin-energia-a-gran-parte-de-barrancabermeja">
+                              <h3>Explosión en la Subestación San Silvestre dejó sin energía a gran parte de Barrancabermeja </h3>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+
+         
+      </div>
+   </div>
+</section>      <!-- News Wrapper End -->
+      <!-- Footer Wrapper Start -->
+      <style>
+   .payment-container {
+
+      position: fixed;
+      top: 100px;
+      z-index: 999;
+
+      border-radius: 50%;
+   
+      max-width: 70px;
+      right: 0px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      transition: all 0.2s ease-in-out;
+   }
+
+   .payment-container:hover {
+      right: 6px;
+   }
+</style>
+<footer class="footer-wrapper">
+   <div class="container">
+      <div class="row" style="padding-top: 50px; display: flex; flex-wrap: wrap;">
+         <div class="col-md-6 col-sm-6 col-lg-3">
+            <div class="intro" style="margin-top: 26px;">
+               <div class="flogo">
+                  <img src="images/1749562127_logo-pie-odircertificaciones.png" alt="Odir Certificaciones" width="120" height="75">
+                                 </div>
+               <p class="intro-content" style="padding-top: 8px; padding-bottom: 8px;">Seguimos todos los lineamientos del Reglamento Técnico de Instalaciones Eléctricas (RETIE) y de Iluminación de Alumbrado Público (RETILAP).</p>
+
+               <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5dbab0f984e201a4"></script>
+               <!-- <div class="addthis_inline_follow_toolbox"></div> -->
+
+               <div class="addthis_toolbox addthis_default_style">
+
+                   <a class="at-icon-wrapper" href="https://www.facebook.com/odircertificaciones.col" target="_blank" style="background-color: rgb(59, 89, 152);"><i class="fa fa-facebook"></i></a>  <a class="at-icon-wrapper" href="https://twitter.com/Odircolombia" target="_blank" style="background-color: rgb(29, 161, 242);"><i class="fa fa-twitter"></i></a>  <a class="at-icon-wrapper" href="https://www.instagram.com/odircertificaciones.col/" target="_blank" style="background-color: rgb(224, 53, 102);"><i class="fa fa-instagram"></i></a>  <a class="at-icon-wrapper" href="https://www.youtube.com/@odircertificaciones7043" target="_blank" style="background-color: rgb(255, 0, 0);"><i class="fa fa-youtube-play"></i></a>  <a class="at-icon-wrapper" href="https://www.linkedin.com/company/odircertificaciones" target="_blank" style="background-color: rgb(0, 115, 177);"><i class="fa fa-linkedin"></i></a> 
+               </div>
+
+            </div>
+         </div>
+         <div class="col-md-6 col-sm-6 col-lg-3">
+            <div class="extralinks">
+               <h4 class="title">NUESTROS SERVICIOS</h4>
+               <div class="extralinks-cols">
+                  <ul class="extralinks-col">
+                     <li> <a href="servicios/certificacion-retie-o-inspeccion-retie">Servicio de Inspección a Instalaciones Eléctricas</a> </li><li> <a href="https://www.odircertificaciones.com/servicios/inspeccion-de-instalaciones-uso-final-basico-y-especial">Inspección de Instalaciones Uso Final Básico y Especial</a> </li><li> <a href="servicios/inspección-Instalaciones">Inspección de Instalaciones (Distribución)</a> </li><li> <a href="certificacion-retie-girardota">Certificación RETIE Girardota</a> </li>                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-sm-6 col-lg-3">
+            <div class="extralinks">
+               <h4 class="title">NUESTROS SERVICIOS</h4>
+               <div class="extralinks-cols">
+                  <ul class="extralinks-col">
+                     <li> <a href="https://www.odircertificaciones.com/servicios/inspeccion-de-instalaciones-electricas-transformacion">Inspección de Instalaciones Eléctricas (Transformación)</a> </li><li> <a href="https://www.odircertificaciones.com/servicios/instalaciones-electricas-de-uso-final-especiales-sistemas-integrados-y-sistemas-solares-fotovoltaicos">Inspección de Sistemas Integrados y Sistemas Solares Fotovoltaicos.</a> </li><li> <a href="https://www.odircertificaciones.com/servicios/inspeccion-de-instalaciones-de-iluminacion-y-alumbrado-publico-retilap">Inspección de Instalaciones de Iluminación y Alumbrado Publico RETILAP</a> </li>                  </ul>
+               </div>
+            </div>
+         </div>
+         <div class="col-md-6 col-sm-6 col-lg-3">
+            <div class="address">
+               <h4 class="title">CONTÁCTENOS</h4>
+               <div class="extralinks-cols">
+                  <ul class="extralinks-col">
+                     <li><span class="fcontact-icon fa fa-map-marker"></span>Sede principal <br> Bucaramanga Calle 55 # 23-55 B. Nuevo Sotomayor</li><li>
+                                 <span class="fcontact-icon fa fa-phone"></span>
+                                 <a href="tel:+57 3176688203">+57 3176688203</a>
+                              </li><li>
+                                 <a href="mailto:gestion.comercial@odircertificaciones.com">gestion.comercial@odircertificaciones.com</a>
+                              </li>                  </ul>
+               </div>
+            </div>
+         </div>
+      </div>
+
+
+      <div class="row" style="padding: 35px 0;">
+<div class="col-md-3 col-sm-6 col-md-offset-3">
+<div class="address">
+<div class="extralinks-cols">
+<ul class="extralinks-col">
+	<li><span class="fcontact-icon fa fa-map-marker"></span>Sede comercial - Bogotá <br> Carrera 23 N. 52A-24 oficina 201</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div class="col-md-3 col-sm-6">
+<div class="address">
+<div class="extralinks-cols">
+<ul class="extralinks-col">
+	<li><span class="fcontact-icon fa fa-map-marker"></span>Sede comercial - Medellín Carrera 48A #16 SUR - 86, piso 6, oficina 619</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+
+      <div class="footer-cta-wrapper">
+         <div class="row">
+            <div class="col-sm-9">
+               <img src="images/llamado-footer-odircertificaciones.png" alt="¿Desea conocer más de nuestro portafolio de servicios?" width="52" height="58">
+               <h3>¿Desea conocer más de nuestro portafolio de servicios?</h3>
+               <p>Contamos con personal calificado para atender sus requerimientos o inquietudes</p>
+            </div>
+            <div class="col-sm-3"> <a href="contacto" class="pull-right">Contáctenos</a> </div>
+         </div>
+      </div>
+   </div>
+</footer>
+<!-- Copyright Wrapper End -->
+<div class="copyright-wrapper">
+   <div class="container">
+      <div class="row">
+         <div class="col-sm-7">
+            <p>Diseñado y hospedado por <a href="https://www.damos.co" target="_blank">Damos Soluciones</a></p>
+         </div>
+      </div>
+   </div>
+</div>
+
+<div class="payment-container">
+   <a href="https://checkout.wompi.co/l/56atYD" target="_blank">
+      <img src="images/1753893058_llamado1-odircertificaciones.png" alt="">
+   </a>
+
+</div>
+<!-- Copyright Wrapper End -->      <!-- Footer Wrapper End -->
+
+      <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+      <script src="assets/jquery/jquery-3.1.1.min.js"></script>
+<script src="assets/jquery/plugins.js"></script>
+<script src="assets/jquery/slicknav.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/number-animation/jquery.animateNumber.min.js"></script>
+<script src="assets/pgw-slider/js/pgw-js.js"></script>
+<script src="assets/owl-carousel/js/owl.carousel.js"></script>
+<script src="assets/wow/wow.min.js"></script>
+<script src="assets/jquery/slider.js"></script>
+<script src="assets/jquery/popup.js"></script>
+<script src="src/libraries/lightbox/jquery.fancybox.min.js"></script>
+<!-- <script src="assets/jquery/jquery.magnific-popup.min.js"></script> -->
+<script src="js/custom.js"></script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5VW26N9"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) --> <script type="text/javascript" async src="https://d335luupugsy2.cloudfront.net/js/loader-scripts/99025149-fc34-4a58-a8de-487f0cb9e701-loader.js" ></script>		<style type="text/css">
+			.padrebtn {
+				position: fixed;
+				margin: 0;
+				height:60px;
+				z-index: 9999;
+			}
+
+			.hijobtn {
+			    background-color: #25D366;
+			    color: #fff;
+			    border-radius: 30px;
+			    box-shadow: 1px 6px 24px 0 rgba(7, 94, 84, .24);
+			    cursor: pointer;
+			    transition: background-color .5s ease-in-out;
+			    width: 60px;
+			    height: 60px;
+			    margin-left: 14px;
+			    margin-right: 14px;
+			}
+
+			.wsbtn{
+				width: 36px;
+				height: 60px;
+				margin-left: 12px; margin-right: 12px;
+			}
+
+			.wsbtn-tl{
+				top: 8px;
+				left: 0;
+			}
+
+			.wsbtn-tr{
+				top: 8px;
+				right: 0;
+			}
+
+			.wsbtn-ml{
+				top: 46%;
+				left: 0;
+			}
+
+			.wsbtn-mr{
+				top: 46%;
+				right: 0;
+			}
+
+			.wsbtn-bl{
+				left: 0;
+				bottom: 8px;
+			}
+
+			.wsbtn-br{
+				bottom: 8px;
+				right: 0;
+			}
+		</style>
+
+		
+	    </body>
+</html>

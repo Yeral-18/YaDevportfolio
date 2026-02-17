@@ -1,0 +1,117 @@
+/* ============================================
+   Industria: Tecnología / Software / SaaS
+   Paleta: Índigo / Violeta - Innovador, futuro
+   ============================================ */
+
+[data-industry="tecnologia"] {
+    /* Primary Colors */
+    --color-primary: #4f46e5;
+    --color-primary-light: #6366f1;
+    --color-primary-dark: #4338ca;
+    --color-primary-rgb: 79, 70, 229;
+
+    /* Secondary Colors */
+    --color-secondary: #7c3aed;
+    --color-secondary-light: #8b5cf6;
+    --color-secondary-dark: #6d28d9;
+    --color-secondary-rgb: 124, 58, 237;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #4f46e5, #7c3aed);
+    --gradient-primary-hover: linear-gradient(135deg, #4338ca, #6d28d9);
+    --gradient-hero: linear-gradient(135deg, rgba(3, 7, 18, 0.95), rgba(30, 27, 75, 0.85));
+
+    /* Shadows */
+    --shadow-primary: 0 10px 30px -5px rgba(79, 70, 229, 0.3);
+    --shadow-primary-lg: 0 20px 40px -10px rgba(79, 70, 229, 0.4);
+
+    /* Title Decoration */
+    --title-underline: linear-gradient(90deg, #4f46e5, #7c3aed);
+
+    /* Tech specific - dark mode colors */
+    --color-bg-dark: #030712;
+    --color-bg-card-dark: #111827;
+    --color-text-dark: #f9fafb;
+    --color-text-muted-dark: #9ca3af;
+}
+
+/* Industry-specific button styles */
+[data-industry="tecnologia"] .btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+[data-industry="tecnologia"] .btn-primary:hover {
+    background: var(--gradient-primary-hover);
+    box-shadow: var(--shadow-primary);
+}
+
+/* Service card icon background */
+[data-industry="tecnologia"] .service-icon {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-primary);
+}
+
+/* Badge/tag colors */
+[data-industry="tecnologia"] .badge-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* Demo banner */
+[data-industry="tecnologia"] .demo-banner {
+    background: var(--gradient-primary);
+}
+
+/* Navbar brand accent */
+[data-industry="tecnologia"] .brand-accent {
+    color: var(--color-primary);
+}
+
+/* Footer link hover */
+[data-industry="tecnologia"] .footer-link:hover {
+    color: var(--color-primary);
+}
+
+/* CTA section background */
+[data-industry="tecnologia"] .cta-section {
+    background: var(--gradient-primary);
+}
+
+/* Dark mode specific (tecnologia uses dark theme) */
+[data-industry="tecnologia"] body,
+[data-industry="tecnologia"].dark-mode {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-dark);
+}
+
+[data-industry="tecnologia"] .navbar-animated.scrolled {
+    background: rgba(3, 7, 18, 0.95);
+}
+
+/* Tech grid pattern background */
+[data-industry="tecnologia"] .grid-pattern {
+    background-image:
+        linear-gradient(rgba(79, 70, 229, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(79, 70, 229, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* Glow effect for tech cards */
+[data-industry="tecnologia"] .tech-card:hover {
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.3),
+        0 0 30px rgba(79, 70, 229, 0.2);
+}
+
+/* Pricing toggle */
+[data-industry="tecnologia"] .pricing-toggle.active {
+    background: var(--gradient-primary);
+}
+
+/* Feature badge */
+[data-industry="tecnologia"] .feature-badge {
+    background: rgba(79, 70, 229, 0.1);
+    color: var(--color-primary-light);
+    border: 1px solid rgba(79, 70, 229, 0.2);
+}

@@ -1,0 +1,91 @@
+/* ============================================
+   THEME: Minimal White
+   SECTOR: Tecnología
+   MOOD: Limpio, minimalista, premium
+   ============================================ */
+
+[data-theme="minimal-white"] {
+    /* Mode */
+    --bg-base: #ffffff;
+    --bg-primary: #ffffff;
+    --bg-secondary: #fafafa;
+    --bg-tertiary: #f5f5f5;
+    --bg-elevated: #ffffff;
+    --bg-overlay: rgba(0, 0, 0, 0.4);
+    --bg-inverse: #000000;
+
+    /* Text */
+    --text-primary: #000000;
+    --text-secondary: #525252;
+    --text-tertiary: #a3a3a3;
+    --text-inverse: #ffffff;
+    --text-on-accent: #ffffff;
+
+    /* Accent: Pure Black */
+    --accent: #000000;
+    --accent-soft: rgba(0, 0, 0, 0.05);
+    --accent-hover: #262626;
+    --accent-active: #404040;
+    --accent-glow: rgba(0, 0, 0, 0.1);
+
+    --accent-secondary: #525252;
+    --accent-secondary-soft: rgba(82, 82, 82, 0.1);
+
+    /* Borders */
+    --border-soft: #f5f5f5;
+    --border-default: #e5e5e5;
+    --border-strong: #d4d4d4;
+
+    /* Cards */
+    --card-bg: #ffffff;
+    --card-bg-hover: #fafafa;
+    --card-border: #e5e5e5;
+    --card-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    --card-shadow-hover: 0 8px 30px rgba(0, 0, 0, 0.08);
+
+    /* Buttons */
+    --btn-primary-bg: #000000;
+    --btn-primary-shadow: none;
+    --btn-secondary-border: #000000;
+
+    /* States */
+    --success: #16a34a;
+    --success-soft: rgba(22, 163, 74, 0.1);
+    --warning: #ca8a04;
+    --warning-soft: rgba(202, 138, 4, 0.1);
+    --error: #dc2626;
+    --error-soft: rgba(220, 38, 38, 0.1);
+
+    /* Effects */
+    --glow-color: transparent;
+    --gradient-primary: linear-gradient(135deg, #000000, #404040);
+    --gradient-secondary: linear-gradient(135deg, #fafafa, #f5f5f5);
+
+    /* Navbar */
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --navbar-bg-scrolled: #ffffff;
+    --navbar-border: #e5e5e5;
+
+    /* Hero */
+    --hero-bg: #000000;
+    --hero-text: #ffffff;
+    --hero-text-secondary: rgba(255, 255, 255, 0.7);
+
+    /* Footer */
+    --footer-bg: #000000;
+    --footer-border: rgba(255, 255, 255, 0.1);
+
+    /* Input */
+    --input-bg: #ffffff;
+    --input-border: #e5e5e5;
+    --input-border-focus: #000000;
+}
+
+/* Minimal specific overrides */
+[data-theme="minimal-white"] .btn-shine::before {
+    display: none;
+}
+
+[data-theme="minimal-white"] .hover-lift:hover {
+    transform: translateY(-2px);
+}

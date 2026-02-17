@@ -1,0 +1,81 @@
+/* ============================================
+   THEME: Urban Gray
+   SECTOR: Transporte
+   MOOD: Metropolitano, moderno, neutro
+   ============================================ */
+
+[data-theme="urban-gray"] {
+    /* Mode */
+    --bg-base: #f3f4f6;
+    --bg-primary: #f3f4f6;
+    --bg-secondary: #e5e7eb;
+    --bg-tertiary: #d1d5db;
+    --bg-elevated: #ffffff;
+    --bg-overlay: rgba(0, 0, 0, 0.5);
+    --bg-inverse: #111827;
+
+    /* Text */
+    --text-primary: #111827;
+    --text-secondary: #374151;
+    --text-tertiary: #6b7280;
+    --text-inverse: #ffffff;
+    --text-on-accent: #ffffff;
+
+    /* Accent: Urban Slate */
+    --accent: #374151;
+    --accent-soft: rgba(55, 65, 81, 0.1);
+    --accent-hover: #1f2937;
+    --accent-active: #111827;
+    --accent-glow: rgba(55, 65, 81, 0.2);
+
+    --accent-secondary: #6366f1;
+    --accent-secondary-soft: rgba(99, 102, 241, 0.1);
+
+    /* Borders */
+    --border-soft: #e5e7eb;
+    --border-default: #d1d5db;
+    --border-strong: #9ca3af;
+
+    /* Cards */
+    --card-bg: #ffffff;
+    --card-bg-hover: #f9fafb;
+    --card-border: #e5e7eb;
+    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+    /* Buttons */
+    --btn-primary-bg: #111827;
+    --btn-primary-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+
+    /* States */
+    --success: #059669;
+    --success-soft: rgba(5, 150, 105, 0.1);
+    --warning: #d97706;
+    --warning-soft: rgba(217, 119, 6, 0.1);
+    --error: #dc2626;
+    --error-soft: rgba(220, 38, 38, 0.1);
+
+    /* Effects */
+    --glow-color: rgba(0, 0, 0, 0.1);
+    --gradient-primary: linear-gradient(135deg, #374151, #111827);
+    --gradient-secondary: linear-gradient(135deg, #e5e7eb, #d1d5db);
+
+    /* Navbar */
+    --navbar-bg: rgba(243, 244, 246, 0.95);
+    --navbar-bg-scrolled: #ffffff;
+    --navbar-border: #e5e7eb;
+
+    /* Hero */
+    --hero-bg: #111827;
+    --hero-text: #ffffff;
+    --hero-text-secondary: #9ca3af;
+
+    /* Footer */
+    --footer-bg: #111827;
+    --footer-border: rgba(255, 255, 255, 0.1);
+
+    /* Input */
+    --input-bg: #ffffff;
+    --input-border: #d1d5db;
+    --input-border-focus: #374151;
+}

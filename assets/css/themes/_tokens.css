@@ -1,0 +1,201 @@
+/* ============================================
+   YADEV DESIGN SYSTEM - TOKEN FOUNDATION
+   Sistema de variables para separar arquitectura de color
+   ============================================ */
+
+/* ===== SEMANTIC TOKENS =====
+   Estos tokens son los que usa la arquitectura.
+   Los themes solo redefinen estos valores.
+   ===== */
+
+:root {
+    /* ===== BACKGROUND LAYERS ===== */
+    --bg-base: #ffffff;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --bg-tertiary: #f1f5f9;
+    --bg-elevated: #ffffff;
+    --bg-overlay: rgba(0, 0, 0, 0.5);
+    --bg-inverse: #0f172a;
+
+    /* ===== TEXT HIERARCHY ===== */
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --text-tertiary: #94a3b8;
+    --text-inverse: #ffffff;
+    --text-on-accent: #ffffff;
+
+    /* ===== ACCENT SYSTEM ===== */
+    --accent: #3b82f6;
+    --accent-soft: rgba(59, 130, 246, 0.1);
+    --accent-hover: #2563eb;
+    --accent-active: #1d4ed8;
+    --accent-glow: rgba(59, 130, 246, 0.4);
+
+    /* Secondary accent for contrast */
+    --accent-secondary: #06b6d4;
+    --accent-secondary-soft: rgba(6, 182, 212, 0.1);
+
+    /* ===== BORDER SYSTEM ===== */
+    --border-soft: rgba(0, 0, 0, 0.06);
+    --border-default: rgba(0, 0, 0, 0.1);
+    --border-strong: rgba(0, 0, 0, 0.2);
+    --border-accent: var(--accent);
+
+    /* ===== CARD SYSTEM ===== */
+    --card-bg: #ffffff;
+    --card-bg-hover: #f8fafc;
+    --card-border: var(--border-soft);
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+    /* ===== BUTTON SYSTEM ===== */
+    --btn-primary-bg: var(--accent);
+    --btn-primary-text: var(--text-on-accent);
+    --btn-primary-hover: var(--accent-hover);
+    --btn-primary-shadow: 0 4px 14px var(--accent-glow);
+
+    --btn-secondary-bg: transparent;
+    --btn-secondary-text: var(--text-primary);
+    --btn-secondary-border: var(--border-default);
+    --btn-secondary-hover-bg: var(--bg-secondary);
+
+    --btn-ghost-text: var(--text-secondary);
+    --btn-ghost-hover-bg: var(--bg-secondary);
+
+    /* ===== STATE COLORS ===== */
+    --success: #10b981;
+    --success-soft: rgba(16, 185, 129, 0.1);
+    --warning: #f59e0b;
+    --warning-soft: rgba(245, 158, 11, 0.1);
+    --error: #ef4444;
+    --error-soft: rgba(239, 68, 68, 0.1);
+    --info: #3b82f6;
+    --info-soft: rgba(59, 130, 246, 0.1);
+
+    /* ===== EFFECTS ===== */
+    --glow-color: var(--accent-glow);
+    --glow-intensity: 0.4;
+    --gradient-primary: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+    --gradient-secondary: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+    --gradient-overlay: linear-gradient(to bottom, transparent, var(--bg-base));
+    --gradient-accent: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+    --gradient-text: linear-gradient(135deg, var(--accent), var(--accent-secondary));
+
+    /* Tertiary accent for triple-color schemes */
+    --accent-tertiary: var(--accent-secondary);
+
+    /* Advanced shadows */
+    --card-shadow-glow: 0 50px 100px rgba(0, 0, 0, 0.5), 0 0 60px var(--accent-soft);
+    --glow-box-shadow: 0 0 20px var(--accent-soft), inset 0 0 20px rgba(255,255,255,0.02);
+
+    /* ===== NAVBAR ===== */
+    --navbar-bg: var(--bg-primary);
+    --navbar-bg-scrolled: var(--bg-elevated);
+    --navbar-border: var(--border-soft);
+    --navbar-text: var(--text-primary);
+    --navbar-text-hover: var(--accent);
+
+    /* ===== HERO ===== */
+    --hero-bg: var(--bg-inverse);
+    --hero-text: var(--text-inverse);
+    --hero-text-secondary: rgba(255, 255, 255, 0.7);
+    --hero-overlay: linear-gradient(135deg, rgba(0,0,0,0.8), rgba(0,0,0,0.6));
+
+    /* ===== SECTION ===== */
+    --section-bg-alt: var(--bg-secondary);
+    --section-title: var(--text-primary);
+    --section-subtitle: var(--text-secondary);
+    --section-label: var(--accent);
+
+    /* ===== FOOTER ===== */
+    --footer-bg: var(--bg-inverse);
+    --footer-text: rgba(255, 255, 255, 0.7);
+    --footer-heading: var(--text-inverse);
+    --footer-link-hover: var(--accent);
+    --footer-border: rgba(255, 255, 255, 0.1);
+
+    /* ===== INPUTS ===== */
+    --input-bg: var(--bg-primary);
+    --input-border: var(--border-default);
+    --input-border-focus: var(--accent);
+    --input-text: var(--text-primary);
+    --input-placeholder: var(--text-tertiary);
+
+    /* ===== SPECIAL ELEMENTS ===== */
+    --badge-bg: var(--accent-soft);
+    --badge-text: var(--accent);
+    --tag-bg: var(--bg-tertiary);
+    --tag-text: var(--text-secondary);
+    --divider: var(--border-soft);
+
+    /* ===== ANIMATION TOKENS ===== */
+    --transition-fast: 150ms ease;
+    --transition-base: 200ms ease;
+    --transition-slow: 300ms ease;
+    --transition-bounce: 500ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
+    /* ===== Z-INDEX SYSTEM ===== */
+    --z-dropdown: 100;
+    --z-sticky: 200;
+    --z-fixed: 300;
+    --z-modal-backdrop: 400;
+    --z-modal: 500;
+    --z-popover: 600;
+    --z-tooltip: 700;
+}
+
+/* ===== DARK MODE BASE =====
+   Invierte automáticamente para temas oscuros
+   ===== */
+[data-mode="dark"] {
+    --bg-base: #0f172a;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --bg-tertiary: #334155;
+    --bg-elevated: #1e293b;
+    --bg-overlay: rgba(0, 0, 0, 0.7);
+    --bg-inverse: #ffffff;
+
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-tertiary: #64748b;
+    --text-inverse: #0f172a;
+
+    --border-soft: rgba(255, 255, 255, 0.06);
+    --border-default: rgba(255, 255, 255, 0.1);
+    --border-strong: rgba(255, 255, 255, 0.2);
+
+    --card-bg: #1e293b;
+    --card-bg-hover: #334155;
+    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+    --card-shadow-hover: 0 20px 25px -5px rgba(0, 0, 0, 0.4);
+
+    --navbar-bg: rgba(15, 23, 42, 0.9);
+    --navbar-bg-scrolled: rgba(15, 23, 42, 0.95);
+
+    --input-bg: #1e293b;
+
+    --footer-bg: #020617;
+}
+
+/* ===== UTILITY: FORCED LIGHT/DARK =====
+   Para secciones que siempre son claras u oscuras
+   ===== */
+.force-light {
+    --bg-base: #ffffff;
+    --bg-primary: #ffffff;
+    --bg-secondary: #f8fafc;
+    --text-primary: #0f172a;
+    --text-secondary: #475569;
+    --card-bg: #ffffff;
+}
+
+.force-dark {
+    --bg-base: #0f172a;
+    --bg-primary: #0f172a;
+    --bg-secondary: #1e293b;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --card-bg: #1e293b;
+}

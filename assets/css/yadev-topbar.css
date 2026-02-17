@@ -1,0 +1,263 @@
+/* ============================================
+   YaDev UI - Top Bar Component
+   Contact info bar above navbar
+   ============================================ */
+
+/* Top Bar Container */
+.top-bar {
+    background: var(--color-primary-dark, #1f2937);
+    color: white;
+    padding: 0.5rem 0;
+    font-size: 0.85rem;
+    position: relative;
+    z-index: 1001;
+}
+
+.top-bar__container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+/* Left Section - Contact Info */
+.top-bar__contact {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.top-bar__item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.top-bar__item:hover {
+    color: var(--color-primary-light, #f59e0b);
+}
+
+.top-bar__item i,
+.top-bar__item svg {
+    width: 16px;
+    height: 16px;
+    opacity: 0.8;
+}
+
+/* Right Section - Social & Language */
+.top-bar__right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Social Icons */
+.top-bar__social {
+    display: flex;
+    gap: 0.75rem;
+}
+
+.top-bar__social-link {
+    color: rgba(255, 255, 255, 0.8);
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.top-bar__social-link:hover {
+    color: white;
+    background: var(--color-primary, #f59e0b);
+    transform: translateY(-2px);
+}
+
+.top-bar__social-link svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* Language Selector */
+.top-bar__lang {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.25rem 0.75rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.top-bar__lang span {
+    opacity: 0.6;
+}
+
+.top-bar__lang a {
+    color: white;
+    text-decoration: none;
+    padding: 0.125rem 0.25rem;
+    border-radius: 2px;
+    transition: background 0.2s;
+}
+
+.top-bar__lang a:hover,
+.top-bar__lang a.active {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Separator */
+.top-bar__separator {
+    width: 1px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Industry Variations */
+
+/* Construcción - Amber/Orange */
+[data-industry="construccion"] .top-bar {
+    background: linear-gradient(90deg, #92400e, #78350f);
+}
+
+[data-industry="construccion"] .top-bar__item:hover,
+[data-industry="construccion"] .top-bar__social-link:hover {
+    color: #fbbf24;
+    background: rgba(251, 191, 36, 0.2);
+}
+
+/* Transporte - Blue */
+[data-industry="transporte"] .top-bar {
+    background: linear-gradient(90deg, #075985, #0c4a6e);
+}
+
+[data-industry="transporte"] .top-bar__item:hover {
+    color: #38bdf8;
+}
+
+[data-industry="transporte"] .top-bar__social-link:hover {
+    background: #0284c7;
+}
+
+/* Forestal - Green */
+[data-industry="forestal"] .top-bar {
+    background: linear-gradient(90deg, #065f46, #064e3b);
+}
+
+[data-industry="forestal"] .top-bar__item:hover {
+    color: #6ee7b7;
+}
+
+[data-industry="forestal"] .top-bar__social-link:hover {
+    background: #10b981;
+}
+
+/* E-commerce - Violet */
+[data-industry="ecommerce"] .top-bar {
+    background: linear-gradient(90deg, #5b21b6, #4c1d95);
+}
+
+[data-industry="ecommerce"] .top-bar__item:hover {
+    color: #c4b5fd;
+}
+
+[data-industry="ecommerce"] .top-bar__social-link:hover {
+    background: #7c3aed;
+}
+
+/* Salud - Cyan */
+[data-industry="salud"] .top-bar {
+    background: linear-gradient(90deg, #0e7490, #155e75);
+}
+
+[data-industry="salud"] .top-bar__item:hover {
+    color: #67e8f9;
+}
+
+[data-industry="salud"] .top-bar__social-link:hover {
+    background: #0891b2;
+}
+
+/* Tecnología - Dark Indigo */
+[data-industry="tecnologia"] .top-bar {
+    background: linear-gradient(90deg, #1e1b4b, #0f0f23);
+    border-bottom: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+[data-industry="tecnologia"] .top-bar__item:hover {
+    color: #a5b4fc;
+}
+
+[data-industry="tecnologia"] .top-bar__social-link:hover {
+    background: #4f46e5;
+}
+
+/* Eléctrico - Yellow/Green */
+[data-industry="electrico"] .top-bar {
+    background: linear-gradient(90deg, #365314, #1a2e05);
+}
+
+[data-industry="electrico"] .top-bar__item:hover {
+    color: #bef264;
+}
+
+[data-industry="electrico"] .top-bar__social-link:hover {
+    background: #84cc16;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .top-bar {
+        padding: 0.375rem 0;
+        font-size: 0.75rem;
+    }
+
+    .top-bar__container {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .top-bar__contact {
+        gap: 1rem;
+    }
+
+    .top-bar__right {
+        display: none;
+    }
+
+    .top-bar__item span {
+        display: none;
+    }
+
+    .top-bar__item i,
+    .top-bar__item svg {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .top-bar__contact {
+        gap: 0.75rem;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .top-bar__item,
+    .top-bar__social-link,
+    .top-bar__lang a {
+        transition: none;
+    }
+}

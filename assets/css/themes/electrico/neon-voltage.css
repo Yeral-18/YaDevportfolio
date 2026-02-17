@@ -1,0 +1,101 @@
+/* ============================================
+   THEME: Neon Voltage
+   SECTOR: Eléctrico
+   MOOD: Alta tensión, futurista, vibrante
+   ============================================ */
+
+[data-theme="neon-voltage"] {
+    /* Mode */
+    --bg-base: #0a0a0a;
+    --bg-primary: #0a0a0a;
+    --bg-secondary: #141414;
+    --bg-tertiary: #1a1a1a;
+    --bg-elevated: #1a1a1a;
+    --bg-overlay: rgba(0, 0, 0, 0.9);
+    --bg-inverse: #ffee00;
+
+    /* Text */
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-tertiary: #707070;
+    --text-inverse: #0a0a0a;
+    --text-on-accent: #0a0a0a;
+
+    /* Accent: Electric Neon Yellow */
+    --accent: #ffee00;
+    --accent-soft: rgba(255, 238, 0, 0.1);
+    --accent-hover: #ffe600;
+    --accent-active: #e6d000;
+    --accent-glow: rgba(255, 238, 0, 0.6);
+
+    --accent-secondary: #00ffff;
+    --accent-secondary-soft: rgba(0, 255, 255, 0.1);
+
+    /* Borders */
+    --border-soft: rgba(255, 238, 0, 0.1);
+    --border-default: rgba(255, 238, 0, 0.2);
+    --border-strong: rgba(255, 238, 0, 0.5);
+
+    /* Cards */
+    --card-bg: rgba(26, 26, 26, 0.8);
+    --card-bg-hover: rgba(26, 26, 26, 1);
+    --card-border: rgba(255, 238, 0, 0.3);
+    --card-shadow: 0 0 20px rgba(255, 238, 0, 0.1);
+    --card-shadow-hover: 0 0 40px rgba(255, 238, 0, 0.3);
+
+    /* Buttons */
+    --btn-primary-bg: #ffee00;
+    --btn-primary-text: #0a0a0a;
+    --btn-primary-shadow: 0 0 30px rgba(255, 238, 0, 0.5);
+
+    /* States */
+    --success: #00ff88;
+    --success-soft: rgba(0, 255, 136, 0.15);
+    --warning: #ffee00;
+    --warning-soft: rgba(255, 238, 0, 0.15);
+    --error: #ff4444;
+    --error-soft: rgba(255, 68, 68, 0.15);
+
+    /* Effects */
+    --glow-color: rgba(255, 238, 0, 0.7);
+    --gradient-primary: linear-gradient(135deg, #ffee00, #00ffff);
+    --gradient-secondary: linear-gradient(135deg, #141414, #1a1a1a);
+
+    /* Navbar */
+    --navbar-bg: rgba(10, 10, 10, 0.9);
+    --navbar-bg-scrolled: rgba(10, 10, 10, 0.98);
+    --navbar-border: rgba(255, 238, 0, 0.3);
+
+    /* Hero */
+    --hero-bg: linear-gradient(135deg, #0a0a0a 0%, #1a1a0a 50%, #0a0a0a 100%);
+    --hero-text: #ffffff;
+    --hero-text-secondary: #ffee00;
+
+    /* Footer */
+    --footer-bg: #050505;
+    --footer-border: rgba(255, 238, 0, 0.2);
+
+    /* Input */
+    --input-bg: rgba(26, 26, 26, 0.9);
+    --input-border: rgba(255, 238, 0, 0.3);
+    --input-border-focus: #ffee00;
+}
+
+/* Electric spark effect */
+[data-theme="neon-voltage"] .spark-text {
+    text-shadow:
+        0 0 10px var(--accent),
+        0 0 20px var(--accent),
+        0 0 40px var(--accent),
+        0 0 80px var(--accent);
+    animation: voltage-flicker 2s infinite;
+}
+
+@keyframes voltage-flicker {
+    0%, 100% { opacity: 1; }
+    92% { opacity: 1; }
+    93% { opacity: 0.8; }
+    94% { opacity: 1; }
+    96% { opacity: 0.9; }
+    97% { opacity: 1; }
+}

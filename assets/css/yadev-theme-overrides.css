@@ -1,0 +1,259 @@
+/* ============================================
+   YADEV THEME OVERRIDES
+   Mapea clases Tailwind a variables del tema
+   Para que los temas funcionen con HTML existente
+   ============================================ */
+
+/* ===== BACKGROUND OVERRIDES ===== */
+/* Grays */
+.bg-gray-950,
+.bg-slate-950 {
+    background-color: var(--bg-base) !important;
+}
+
+.bg-gray-900,
+.bg-slate-900 {
+    background-color: var(--bg-secondary) !important;
+}
+
+.bg-gray-800,
+.bg-slate-800 {
+    background-color: var(--bg-tertiary) !important;
+}
+
+.bg-gray-700,
+.bg-slate-700 {
+    background-color: var(--bg-elevated) !important;
+}
+
+/* Background with opacity */
+.bg-gray-950\/80,
+.bg-slate-950\/80,
+[class*="bg-gray-950/"],
+[class*="bg-slate-950/"] {
+    background-color: var(--navbar-bg) !important;
+}
+
+/* ===== TEXT OVERRIDES ===== */
+/* Grays */
+.text-gray-400,
+.text-slate-400 {
+    color: var(--text-secondary) !important;
+}
+
+.text-gray-500,
+.text-slate-500 {
+    color: var(--text-secondary) !important;
+}
+
+.text-gray-600,
+.text-slate-600 {
+    color: var(--text-tertiary) !important;
+}
+
+.text-gray-300,
+.text-slate-300 {
+    color: var(--text-primary) !important;
+}
+
+.text-white {
+    color: var(--text-on-accent) !important;
+}
+
+/* Accent colors */
+.text-indigo-400,
+.text-violet-400,
+.text-purple-400 {
+    color: var(--accent) !important;
+}
+
+.text-indigo-300,
+.text-violet-300,
+.text-purple-300 {
+    color: var(--accent) !important;
+}
+
+.text-cyan-400,
+.text-teal-400 {
+    color: var(--accent-secondary) !important;
+}
+
+/* ===== BORDER OVERRIDES ===== */
+.border-gray-800,
+.border-slate-800 {
+    border-color: var(--border-default) !important;
+}
+
+.border-gray-700,
+.border-slate-700 {
+    border-color: var(--border-strong) !important;
+}
+
+.border-indigo-500,
+.border-violet-500 {
+    border-color: var(--accent) !important;
+}
+
+.border-indigo-500\/30,
+[class*="border-indigo-500/"] {
+    border-color: var(--border-accent) !important;
+}
+
+/* ===== GRADIENT OVERRIDES ===== */
+.from-indigo-500,
+.from-indigo-600 {
+    --tw-gradient-from: var(--accent) !important;
+}
+
+.to-violet-500,
+.to-violet-600 {
+    --tw-gradient-to: var(--accent-secondary) !important;
+}
+
+.from-violet-500,
+.from-violet-600 {
+    --tw-gradient-from: var(--accent-secondary) !important;
+}
+
+.to-indigo-500,
+.to-indigo-600 {
+    --tw-gradient-to: var(--accent) !important;
+}
+
+.bg-gradient-to-r,
+.bg-gradient-to-br {
+    background-image: var(--gradient-primary) !important;
+}
+
+/* ===== HOVER OVERRIDES ===== */
+.hover\:text-indigo-400:hover,
+.hover\:text-violet-400:hover {
+    color: var(--accent) !important;
+}
+
+.hover\:bg-slate-800:hover,
+.hover\:bg-gray-800:hover {
+    background-color: var(--bg-tertiary) !important;
+}
+
+.hover\:bg-slate-700:hover,
+.hover\:bg-gray-700:hover {
+    background-color: var(--bg-elevated) !important;
+}
+
+/* ===== SHADOW OVERRIDES ===== */
+.shadow-indigo-500\/30,
+[class*="shadow-indigo"] {
+    --tw-shadow-color: var(--accent-soft) !important;
+}
+
+.hover\:shadow-indigo-500\/30:hover {
+    box-shadow: var(--btn-primary-shadow) !important;
+}
+
+/* ===== RING OVERRIDES ===== */
+.ring-indigo-500,
+.focus\:ring-indigo-500:focus {
+    --tw-ring-color: var(--accent) !important;
+}
+
+/* ===== SPECIAL COMPONENT OVERRIDES ===== */
+
+/* Navbar */
+.navbar-animated,
+.navbar-dark {
+    background-color: var(--navbar-bg) !important;
+    border-color: var(--navbar-border) !important;
+}
+
+.navbar-animated.scrolled {
+    background-color: var(--navbar-bg-scrolled) !important;
+}
+
+/* Cards */
+.glass-card {
+    background: var(--card-bg) !important;
+    border-color: var(--card-border) !important;
+}
+
+.glass-card:hover {
+    background: var(--card-bg-hover) !important;
+    border-color: var(--border-accent) !important;
+}
+
+/* Buttons with gradient */
+.btn-shine {
+    background: var(--gradient-primary) !important;
+}
+
+/* ===== FORM ELEMENTS ===== */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea,
+select {
+    background-color: var(--input-bg) !important;
+    border-color: var(--input-border) !important;
+    color: var(--input-text) !important;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--input-border-focus) !important;
+}
+
+/* ===== FOOTER ===== */
+footer,
+.footer {
+    background-color: var(--footer-bg) !important;
+    color: var(--footer-text) !important;
+}
+
+footer a:hover,
+.footer a:hover {
+    color: var(--footer-link-hover) !important;
+}
+
+/* ===== BADGES & TAGS ===== */
+.feature-badge {
+    background: var(--accent-soft) !important;
+    color: var(--accent) !important;
+    border-color: var(--border-accent) !important;
+}
+
+/* ===== AMBIENT GLOWS ===== */
+.ambient-glow-1 {
+    background: var(--accent) !important;
+}
+
+.ambient-glow-2 {
+    background: var(--accent-secondary) !important;
+}
+
+.ambient-glow-3 {
+    background: var(--accent-tertiary, var(--accent-secondary)) !important;
+}
+
+/* ===== PRICING CARDS ===== */
+.pricing-card {
+    background: var(--card-bg) !important;
+    border-color: var(--card-border) !important;
+}
+
+.pricing-card.popular {
+    background: var(--gradient-primary) !important;
+    border-color: var(--border-accent) !important;
+}
+
+/* ===== DROPDOWN MENUS ===== */
+[class*="dropdown"],
+.absolute[class*="bg-slate-900"] {
+    background-color: var(--bg-elevated) !important;
+    border-color: var(--border-default) !important;
+}
+
+/* ===== DEMO BANNER ===== */
+.demo-banner {
+    background: var(--gradient-primary) !important;
+}

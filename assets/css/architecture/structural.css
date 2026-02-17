@@ -1,0 +1,335 @@
+/* ============================================
+   YADEV ARCHITECTURE - STRUCTURAL
+   Estilo: Técnico, arquitectónico, precisión
+   Inspiración: Blueprint, Stripe, Linear
+   ============================================ */
+
+[data-architecture="structural"] {
+    --font-display: 'Inter', system-ui, sans-serif;
+    --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+    --grid-size: 8px;
+    --border-radius: 4px;
+}
+
+/* ===== BASE OVERRIDES ===== */
+[data-architecture="structural"] body {
+    font-family: var(--font-display);
+    font-size: 0.9375rem;
+    line-height: 1.6;
+}
+
+[data-architecture="structural"] h1,
+[data-architecture="structural"] h2,
+[data-architecture="structural"] h3 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+/* ===== HERO - Technical Grid ===== */
+[data-architecture="structural"] .hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+[data-architecture="structural"] .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(var(--border-soft) 1px, transparent 1px),
+        linear-gradient(90deg, var(--border-soft) 1px, transparent 1px);
+    background-size: var(--grid-size) var(--grid-size);
+    opacity: 0.5;
+}
+
+[data-architecture="structural"] .hero__title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+}
+
+[data-architecture="structural"] .hero__subtitle {
+    font-size: 1rem;
+    max-width: 50ch;
+    font-family: var(--font-mono);
+    opacity: 0.7;
+}
+
+/* ===== SECTIONS - Strict Grid ===== */
+[data-architecture="structural"] .section {
+    padding: 96px 0;
+    position: relative;
+}
+
+[data-architecture="structural"] .section::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, var(--border-default), transparent);
+}
+
+[data-architecture="structural"] .section__header {
+    text-align: left;
+    margin-bottom: 64px;
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+}
+
+[data-architecture="structural"] .section__label {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    padding: 4px 12px;
+    background: var(--accent-soft);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-accent);
+}
+
+[data-architecture="structural"] .section__title {
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+}
+
+[data-architecture="structural"] .section__subtitle {
+    font-size: 0.9375rem;
+    max-width: 50ch;
+}
+
+/* ===== GRID - Strict Columns ===== */
+[data-architecture="structural"] .grid {
+    gap: 1px;
+    background: var(--border-default);
+    border: 1px solid var(--border-default);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+[data-architecture="structural"] .grid > * {
+    background: var(--card-bg);
+}
+
+[data-architecture="structural"] .grid--2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+[data-architecture="structural"] .grid--3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+[data-architecture="structural"] .grid--4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* ===== CARDS - Technical ===== */
+[data-architecture="structural"] .card {
+    border-radius: 0;
+    border: none;
+    padding: 24px;
+    position: relative;
+}
+
+[data-architecture="structural"] .card::after {
+    content: attr(data-index);
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-family: var(--font-mono);
+    font-size: 0.625rem;
+    color: var(--text-tertiary);
+    opacity: 0.5;
+}
+
+[data-architecture="structural"] .card:hover {
+    transform: none;
+    box-shadow: none;
+    background: var(--card-bg-hover);
+}
+
+[data-architecture="structural"] .card__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius);
+    margin-bottom: 16px;
+}
+
+[data-architecture="structural"] .card__title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+[data-architecture="structural"] .card__text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+/* ===== BUTTONS - Technical ===== */
+[data-architecture="structural"] .btn {
+    border-radius: var(--border-radius);
+    padding: 10px 20px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    font-family: var(--font-mono);
+}
+
+[data-architecture="structural"] .btn--primary {
+    box-shadow: none;
+}
+
+[data-architecture="structural"] .btn--secondary {
+    border-width: 1px;
+}
+
+[data-architecture="structural"] .btn::before {
+    content: '>';
+    margin-right: 8px;
+    opacity: 0.5;
+}
+
+/* ===== NAVBAR - Minimal Technical ===== */
+[data-architecture="structural"] .navbar {
+    height: 56px;
+    border-bottom-width: 1px;
+}
+
+[data-architecture="structural"] .navbar__container {
+    height: 56px;
+}
+
+[data-architecture="structural"] .navbar__link {
+    font-size: 0.8125rem;
+    font-weight: 500;
+    border-radius: var(--border-radius);
+    padding: 6px 12px;
+}
+
+/* ===== STATS - Data Display ===== */
+[data-architecture="structural"] .stat {
+    padding: 24px;
+    border-left: 1px solid var(--border-default);
+}
+
+[data-architecture="structural"] .stat:first-child {
+    border-left: none;
+}
+
+[data-architecture="structural"] .stat__value {
+    font-family: var(--font-mono);
+    font-size: 2.5rem;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+}
+
+[data-architecture="structural"] .stat__label {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-top: 4px;
+}
+
+/* ===== FOOTER - Technical ===== */
+[data-architecture="structural"] .footer {
+    padding: 48px 0 24px;
+    border-top: 1px solid var(--border-default);
+}
+
+[data-architecture="structural"] .footer__title {
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+[data-architecture="structural"] .footer__link {
+    font-size: 0.8125rem;
+}
+
+/* ===== INPUTS - Technical ===== */
+[data-architecture="structural"] .input {
+    border-radius: var(--border-radius);
+    font-family: var(--font-mono);
+    font-size: 0.875rem;
+    padding: 10px 14px;
+}
+
+/* ===== BADGES - Code Style ===== */
+[data-architecture="structural"] .badge {
+    border-radius: var(--border-radius);
+    font-family: var(--font-mono);
+    font-size: 0.6875rem;
+    padding: 4px 8px;
+    border: 1px solid var(--border-accent);
+}
+
+/* ===== SPECIAL: Code Blocks ===== */
+[data-architecture="structural"] code,
+[data-architecture="structural"] .code {
+    font-family: var(--font-mono);
+    font-size: 0.8125rem;
+    background: var(--bg-tertiary);
+    padding: 2px 6px;
+    border-radius: var(--border-radius);
+}
+
+/* ===== SPECIAL: Line Numbers ===== */
+[data-architecture="structural"] .numbered-list {
+    counter-reset: list-counter;
+}
+
+[data-architecture="structural"] .numbered-list > * {
+    counter-increment: list-counter;
+    position: relative;
+    padding-left: 48px;
+}
+
+[data-architecture="structural"] .numbered-list > *::before {
+    content: counter(list-counter, decimal-leading-zero);
+    position: absolute;
+    left: 0;
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+}
+
+/* ===== ANIMATIONS - Subtle ===== */
+[data-architecture="structural"] .reveal {
+    transform: translateY(16px);
+    transition-duration: 0.4s;
+}
+
+[data-architecture="structural"] .hover-lift:hover {
+    transform: translateY(-2px);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+    [data-architecture="structural"] .grid--4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    [data-architecture="structural"] .grid--4,
+    [data-architecture="structural"] .grid--3,
+    [data-architecture="structural"] .grid--2 {
+        grid-template-columns: 1fr;
+    }
+
+    [data-architecture="structural"] .stat {
+        border-left: none;
+        border-top: 1px solid var(--border-default);
+        padding: 16px 0;
+    }
+
+    [data-architecture="structural"] .stat:first-child {
+        border-top: none;
+    }
+}

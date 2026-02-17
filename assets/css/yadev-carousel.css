@@ -1,0 +1,377 @@
+/* ============================================
+   YaDev UI - Premium Carousels (Swiper.js)
+   Estilos personalizados para carruseles
+   ============================================ */
+
+/* Container base */
+.yadev-carousel {
+    position: relative;
+    padding: 0 50px;
+}
+
+.yadev-carousel .swiper {
+    padding-bottom: 50px;
+}
+
+/* Navigation Arrows */
+.yadev-carousel .swiper-button-next,
+.yadev-carousel .swiper-button-prev {
+    width: 50px;
+    height: 50px;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.yadev-carousel .swiper-button-next:after,
+.yadev-carousel .swiper-button-prev:after {
+    font-size: 18px;
+    font-weight: bold;
+    color: var(--color-primary, #6366f1);
+}
+
+.yadev-carousel .swiper-button-next:hover,
+.yadev-carousel .swiper-button-prev:hover {
+    background: var(--color-primary, #6366f1);
+    transform: scale(1.1);
+}
+
+.yadev-carousel .swiper-button-next:hover:after,
+.yadev-carousel .swiper-button-prev:hover:after {
+    color: white;
+}
+
+/* Pagination Bullets */
+.yadev-carousel .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: #d1d5db;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.yadev-carousel .swiper-pagination-bullet-active {
+    background: var(--color-primary, #6366f1);
+    width: 30px;
+    border-radius: 6px;
+}
+
+/* ============================================
+   Testimonials Carousel
+   ============================================ */
+.testimonial-card {
+    background: white;
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    border: 1px solid #f3f4f6;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+}
+
+.testimonial-card__quote {
+    font-size: 3rem;
+    color: var(--color-primary, #6366f1);
+    line-height: 1;
+    margin-bottom: 1rem;
+    opacity: 0.3;
+}
+
+.testimonial-card__text {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #4b5563;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+}
+
+.testimonial-card__author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.testimonial-card__avatar {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--color-primary, #6366f1);
+}
+
+.testimonial-card__info h4 {
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.25rem;
+}
+
+.testimonial-card__info p {
+    font-size: 0.875rem;
+    color: #6b7280;
+}
+
+.testimonial-card__rating {
+    display: flex;
+    gap: 0.25rem;
+    margin-top: 0.5rem;
+}
+
+.testimonial-card__rating svg {
+    width: 16px;
+    height: 16px;
+    color: #fbbf24;
+}
+
+/* ============================================
+   Clients/Logos Carousel
+   ============================================ */
+.clients-carousel {
+    padding: 2rem 0;
+}
+
+.client-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 2rem;
+    background: white;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+    height: 100px;
+}
+
+.client-logo:hover {
+    border-color: var(--color-primary, #6366f1);
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.15);
+}
+
+.client-logo img {
+    max-height: 50px;
+    max-width: 120px;
+    object-fit: contain;
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+.client-logo:hover img {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* ============================================
+   Projects/Gallery Carousel
+   ============================================ */
+.project-slide {
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+    aspect-ratio: 16/10;
+}
+
+.project-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-slide:hover img {
+    transform: scale(1.1);
+}
+
+.project-slide__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), transparent 50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 2rem;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-slide:hover .project-slide__overlay {
+    opacity: 1;
+}
+
+.project-slide__title {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.project-slide__category {
+    color: var(--color-primary, #6366f1);
+    font-size: 0.875rem;
+    font-weight: 500;
+}
+
+/* ============================================
+   Hero Carousel (Full Width)
+   ============================================ */
+.hero-carousel {
+    position: relative;
+}
+
+.hero-carousel .swiper-slide {
+    height: 100vh;
+    min-height: 600px;
+}
+
+.hero-carousel .swiper-pagination {
+    bottom: 30px !important;
+}
+
+.hero-carousel .swiper-pagination-bullet {
+    width: 40px;
+    height: 4px;
+    border-radius: 2px;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.hero-carousel .swiper-pagination-bullet-active {
+    background: white;
+    width: 60px;
+}
+
+/* ============================================
+   Team Carousel
+   ============================================ */
+.team-card {
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.team-card__image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    overflow: hidden;
+    border: 4px solid var(--color-primary, #6366f1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.team-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-card__image img {
+    transform: scale(1.1);
+}
+
+.team-card__name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.25rem;
+}
+
+.team-card__position {
+    font-size: 0.875rem;
+    color: var(--color-primary, #6366f1);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.team-card__social {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.team-card__social a {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+    transition: all 0.3s ease;
+}
+
+.team-card__social a:hover {
+    background: var(--color-primary, #6366f1);
+    color: white;
+}
+
+/* ============================================
+   Dark Theme Variants
+   ============================================ */
+[data-industry="tecnologia"] .testimonial-card,
+[data-industry="electrico"] .hero-carousel .testimonial-card {
+    background: #1f2937;
+    border-color: #374151;
+}
+
+[data-industry="tecnologia"] .testimonial-card__text {
+    color: #9ca3af;
+}
+
+[data-industry="tecnologia"] .testimonial-card__info h4 {
+    color: #f9fafb;
+}
+
+/* ============================================
+   Responsive
+   ============================================ */
+@media (max-width: 768px) {
+    .yadev-carousel {
+        padding: 0 20px;
+    }
+
+    .yadev-carousel .swiper-button-next,
+    .yadev-carousel .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+    }
+
+    .yadev-carousel .swiper-button-next:after,
+    .yadev-carousel .swiper-button-prev:after {
+        font-size: 14px;
+    }
+
+    .testimonial-card {
+        padding: 1.5rem;
+    }
+
+    .team-card__image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.swiper-slide-active .testimonial-card,
+.swiper-slide-active .project-slide__overlay,
+.swiper-slide-active .team-card {
+    animation: fadeInUp 0.5s ease forwards;
+}

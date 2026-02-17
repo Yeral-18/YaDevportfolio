@@ -1,0 +1,17 @@
+[03-Feb-2021 23:01:11 America/New_York] PHP Warning:  mysqli::mysqli(): MySQL server has gone away in /home/transtec/public_html/config.php on line 52
+[03-Feb-2021 23:01:11 America/New_York] PHP Warning:  mysqli::mysqli(): Error while reading greeting packet. PID=15083 in /home/transtec/public_html/config.php on line 52
+[03-Feb-2021 23:01:11 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/2006): MySQL server has gone away in /home/transtec/public_html/config.php on line 52
+[03-Feb-2021 23:01:11 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/transtec/public_html/config.php on line 52
+[08-Feb-2021 22:56:28 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/transtec/public_html/config.php on line 52
+[08-Feb-2021 22:56:28 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/transtec/public_html/config.php on line 52
+[08-Feb-2021 22:56:29 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/transtec/public_html/config.php on line 52
+[08-Feb-2021 22:56:30 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/transtec/public_html/config.php on line 52
+[08-Feb-2021 22:56:31 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/transtec/public_html/config.php on line 52
+[17-Feb-2021 21:31:36 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/transtec/public_html/config.php on line 52
+[17-Feb-2021 21:31:37 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/transtec/public_html/config.php on line 52
+[02-Mar-2021 15:13:19 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/transtec/public_html/config.php on line 52
+[02-Mar-2021 15:13:19 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/transtec/public_html/config.php on line 52
+[02-Mar-2021 15:13:20 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/transtec/public_html/config.php on line 52
+[02-Mar-2021 15:13:21 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/transtec/public_html/config.php on line 52
+[02-Mar-2021 15:13:22 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/2002): No such file or directory in /home/transtec/public_html/config.php on line 52
+[31-Mar-2021 00:40:46 America/New_York] PHP Warning:  mysqli::mysqli(): (HY000/1040): Too many connections in /home/transtec/public_html/config.php on line 52

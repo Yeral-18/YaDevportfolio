@@ -1,0 +1,1756 @@
+
+<!doctype html><!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="es-co" > <![endif]--><!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="es-co" >        <![endif]--><!--[if IE 8]>    <html class="no-js lt-ie9" lang="es-co" >               <![endif]--><!--[if gt IE 8]><!--><html class="no-js" lang="es-co"><!--<![endif]--><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="author" content="oplcarga.com">
+    <meta name="description" content="Consulta nuestros servicios de transporte en toda Colombia, qué sectores
+atendemos y por qué somos pioneros en logística verde">
+    <meta name="generator" content="HubSpot">
+    <title>OPL: pioneros en transporte sostenible en Colombia</title>
+    <link rel="shortcut icon" href="https://www.oplcarga.com/hubfs/favicon.png">
+    
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <meta property="og:description" content="Consulta nuestros servicios de transporte en toda Colombia, qué sectores
+atendemos y por qué somos pioneros en logística verde">
+    <meta property="og:title" content="OPL: pioneros en transporte sostenible en Colombia">
+    <meta name="twitter:description" content="Consulta nuestros servicios de transporte en toda Colombia, qué sectores
+atendemos y por qué somos pioneros en logística verde">
+    <meta name="twitter:title" content="OPL: pioneros en transporte sostenible en Colombia">
+
+    
+
+    
+  <script id="hs-search-input__valid-content-types" type="application/json">
+    [
+      
+        "SITE_PAGE",
+      
+        "LANDING_PAGE",
+      
+        "BLOG_POST",
+      
+        "LISTING_PAGE",
+      
+        "KNOWLEDGE_ARTICLE",
+      
+        "HS_CASE_STUDY"
+      
+    ]
+  </script>
+
+    <style>
+a.cta_button{-moz-box-sizing:content-box !important;-webkit-box-sizing:content-box !important;box-sizing:content-box !important;vertical-align:middle}.hs-breadcrumb-menu{list-style-type:none;margin:0px 0px 0px 0px;padding:0px 0px 0px 0px}.hs-breadcrumb-menu-item{float:left;padding:10px 0px 10px 10px}.hs-breadcrumb-menu-divider:before{content:'›';padding-left:10px}.hs-featured-image-link{border:0}.hs-featured-image{float:right;margin:0 0 20px 20px;max-width:50%}@media (max-width: 568px){.hs-featured-image{float:none;margin:0;width:100%;max-width:100%}}.hs-screen-reader-text{clip:rect(1px, 1px, 1px, 1px);height:1px;overflow:hidden;position:absolute !important;width:1px}
+</style>
+
+<link rel="stylesheet" href="https://7052064.fs1.hubspotusercontent-na1.net/hubfs/7052064/hub_generated/module_assets/1/-2712622/1770412387398/module_search_input.min.css">
+<link rel="stylesheet" href="https://www.oplcarga.com/hubfs/hub_generated/module_assets/1/60089890175/1740804749115/module_Responsive_Video.min.css">
+<!-- Editor Styles -->
+<style id="hs_editor_style" type="text/css">
+#hs_cos_wrapper_module_1606230708560446  { display: block !important; padding-top: 0px !important }
+</style>
+    
+
+    
+    <link rel="canonical" href="https://www.oplcarga.com">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MMQWG77');</script>
+<!-- End Google Tag Manager -->
+<meta name="google-site-verification" content="ysxe_3XB7oSL4FeNWauP-SO-xU2naZtb2HJSXYczCUw">
+<meta property="og:url" content="https://www.oplcarga.com">
+<meta name="twitter:card" content="summary">
+<meta http-equiv="content-language" content="es-co">
+<link rel="stylesheet" href="//7052064.fs1.hubspotusercontent-na1.net/hubfs/7052064/hub_generated/template_assets/DEFAULT_ASSET/1770412220877/template_layout.min.css">
+
+
+<link rel="stylesheet" href="https://www.oplcarga.com/hubfs/hub_generated/template_assets/1/37200732848/1740610117267/template_slick-theme.min.css">
+<link rel="stylesheet" href="https://www.oplcarga.com/hubfs/hub_generated/template_assets/1/37155507164/1740610116796/template_styles.min.css">
+
+
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    
+
+</head>
+<body class="   hs-content-id-37414465304 hs-site-page page " style="">
+    <div class="header-container-wrapper">
+    <div class="header-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_group " style="" data-widget-type="global_group" data-x="0" data-w="12">
+<div class="" data-global-widget-path="generated_global_groups/37218055300.html"><div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell nav__center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span2 widget-span widget-type-custom_widget header-logo" style="" data-widget-type="custom_widget" data-x="0" data-w="2">
+<div id="hs_cos_wrapper_module_1604701952999118" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_1604701952999118_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><a href="https://www.oplcarga.com/?hsLang=es-co" target="_parent" id="hs-link-module_1604701952999118_" style="border-width:0px;border:0px;"><img src="https://www.oplcarga.com/hubfs/LOGO-OPL.svg" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="LOGO-OPL" title="LOGO-OPL"></a></span></div>
+
+</div><!--end widget-span -->
+<div class="span10 widget-span widget-type-cell col-movil" style="" data-widget-type="cell" data-x="2" data-w="10">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div id="menues" class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span10 widget-span widget-type-custom_widget custom-menu-second" style="" data-widget-type="custom_widget" data-x="0" data-w="10">
+<div id="hs_cos_wrapper_module_1604883467276283" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+<span id="hs_cos_wrapper_module_1604883467276283_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_module_1604883467276283_" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="165217156396" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://www.oplcarga.com/#certificados__form" role="menuitem">Solicitar certificados</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://www.oplcarga.com/trabaje" role="menuitem">Trabaje con nosotros</a></li>
+ </ul>
+</div></span></div>
+
+</div><!--end widget-span -->
+<div class="span2 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="10" data-w="2">
+<div id="hs_cos_wrapper_module_1604883492793293" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="boton">
+  
+  
+  
+  
+  
+  <a href="https://www.oplcarga.com/nuestros-servicios?hsLang=es-co">
+    Servicios
+  </a>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span11 widget-span widget-type-custom_widget custom-menu-primary" style="" data-widget-type="custom_widget" data-x="0" data-w="11">
+<div id="hs_cos_wrapper_module_160470183670685" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+<span id="hs_cos_wrapper_module_160470183670685_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_module_160470183670685_" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="37835444972" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://www.oplcarga.com/secciones/nuestra-empresa" role="menuitem">Quienes Somos</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://www.oplcarga.com/oficinas" role="menuitem">Red de oficinas</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://apmlogistics.us/" role="menuitem">OPL USA</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://blog.oplcarga.com" role="menuitem">Blog</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://www.oplcarga.com/contacto" role="menuitem">Contacto</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://www.kawak.com.co/oplcarga/pqrs/pqrs_index.php" role="menuitem">PQRS</a></li>
+ </ul>
+</div></span></div>
+
+</div><!--end widget-span -->
+<div class="span1 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="11" data-w="1">
+
+<div class="row-fluid-wrapper row-depth-2 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1604943649483743" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_1604943649483743_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><a href="#" class="searchBtn"><img src="https://www.oplcarga.com/hubfs/imagenes/magnify.png"></a></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-2 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget search" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1604932656582616" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+
+
+
+  
+
+
+
+
+
+
+
+
+<div class="hs-search-field">
+
+    <div class="hs-search-field__bar">
+      <form data-hs-do-not-collect="true" action="/hs-search-results">
+        
+        <input type="text" class="hs-search-field__input" name="term" autocomplete="off" aria-label="Search" placeholder="">
+
+        
+          
+            <input type="hidden" name="type" value="SITE_PAGE">
+          
+        
+          
+        
+          
+            <input type="hidden" name="type" value="BLOG_POST">
+          
+        
+          
+        
+          
+        
+          
+        
+
+        
+          <button aria-label="Search"><span id="hs_cos_wrapper_module_1604932656582616_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" aria-hidden="true"><g id="search1_layer"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" /></g></svg></span></button>
+        
+      </form>
+    </div>
+    <ul class="hs-search-field__suggestions"></ul>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell movil" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span6 widget-span widget-type-cell search-movil" style="" data-widget-type="cell" data-x="0" data-w="6">
+
+<div class="row-fluid-wrapper row-depth-2 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1604950819857288" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_1604950819857288_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><a href="#" class="searchBtn"><img src="https://www.oplcarga.com/hubfs/imagenes/magnify.png"></a></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-2 row-number-2 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget search" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1604950827841306" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+
+
+
+  
+
+
+
+
+
+
+
+
+<div class="hs-search-field">
+
+    <div class="hs-search-field__bar">
+      <form data-hs-do-not-collect="true" action="/hs-search-results">
+        
+        <input type="text" class="hs-search-field__input" name="term" autocomplete="off" aria-label="Search" placeholder="">
+
+        
+          
+            <input type="hidden" name="type" value="SITE_PAGE">
+          
+        
+          
+        
+          
+            <input type="hidden" name="type" value="BLOG_POST">
+          
+        
+          
+        
+          
+        
+          
+        
+
+        
+          <button aria-label="Search"><span id="hs_cos_wrapper_module_1604950827841306_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_icon" style="" data-hs-cos-general-type="widget" data-hs-cos-type="icon"><svg version="1.0" xmlns="http://www.w3.org/2000/svg" viewbox="0 0 512 512" aria-hidden="true"><g id="search2_layer"><path d="M505 442.7L405.3 343c-4.5-4.5-10.6-7-17-7H372c27.6-35.3 44-79.7 44-128C416 93.1 322.9 0 208 0S0 93.1 0 208s93.1 208 208 208c48.3 0 92.7-16.4 128-44v16.3c0 6.4 2.5 12.5 7 17l99.7 99.7c9.4 9.4 24.6 9.4 33.9 0l28.3-28.3c9.4-9.4 9.4-24.6.1-34zM208 336c-70.7 0-128-57.2-128-128 0-70.7 57.2-128 128-128 70.7 0 128 57.2 128 128 0 70.7-57.2 128-128 128z" /></g></svg></span></button>
+        
+      </form>
+    </div>
+    <ul class="hs-search-field__suggestions"></ul>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span3 widget-span widget-type-custom_widget boton-movil" style="" data-widget-type="custom_widget" data-x="6" data-w="3">
+<div id="hs_cos_wrapper_module_1604950783153242" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="boton">
+  
+  
+  
+  
+  
+  <a href="https://www.oplcarga.com/nuestros-servicios?hsLang=es-co">
+    Servicios
+  </a>
+</div></div>
+
+</div><!--end widget-span -->
+<div class="span3 widget-span widget-type-custom_widget custom-menu-primary fix-menu" style="" data-widget-type="custom_widget" data-x="9" data-w="3">
+<div id="hs_cos_wrapper_module_1604950844058332" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+<span id="hs_cos_wrapper_module_1604950844058332_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_menu" style="" data-hs-cos-general-type="widget" data-hs-cos-type="menu"><div id="hs_menu_wrapper_module_1604950844058332_" class="hs-menu-wrapper active-branch flyouts hs-menu-flow-horizontal" role="navigation" data-sitemap-name="default" data-menu-id="37835444972" aria-label="Navigation Menu">
+ <ul role="menu">
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://www.oplcarga.com/secciones/nuestra-empresa" role="menuitem">Quienes Somos</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://www.oplcarga.com/oficinas" role="menuitem">Red de oficinas</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://apmlogistics.us/" role="menuitem">OPL USA</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://blog.oplcarga.com" role="menuitem">Blog</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://www.oplcarga.com/contacto" role="menuitem">Contacto</a></li>
+  <li class="hs-menu-item hs-menu-depth-1" role="none"><a href="https://www.kawak.com.co/oplcarga/pqrs/pqrs_index.php" role="menuitem">PQRS</a></li>
+ </ul>
+</div></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+</div>
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end header -->
+</div><!--end header wrapper -->
+
+<div class="body-container-wrapper">
+    <div class="body-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="section__banner">
+  
+<div class="span12 widget-span widget-type-cell page__center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span5 widget-span widget-type-cell banner__text" style="" data-widget-type="cell" data-x="0" data-w="5">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="padding: 2rem 0;" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1606230708560446" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_1606230708560446_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h1>20 años moviendo lo que importa</h1>
+<p>Desde hace dos décadas somos una empresa de transporte de carga que impulsa el crecimiento de nuestros clientes con soluciones logísticas confiables, innovadoras y a la medida.</p>
+<p>Hoy contamos con una sólida cobertura en el territorio nacional, respaldando a reconocidos generadores de carga de múltiples sectores de la industria, gracias a un equipo experto y comprometido.</p>
+<p>Nuestra historia se construye sobre la confianza, los resultados y la evolución constante. Seguimos desarrollando nuevos modelos de negocio con un solo objetivo: la satisfacción del cliente y un servicio que marque la diferencia.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="boton">
+  
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1606232840460246" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  
+    
+  
+
+
+
+<a class="hs-button" href="https://www.oplcarga.com/nuestros-servicios?hsLang=es-co" id="hs-button_module_1606232840460246" rel="">
+  Descubre qué te ofrecemos
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+         
+</div>
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span7 widget-span widget-type-cell big-img" style="" data-widget-type="cell" data-x="5" data-w="7">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-5 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget banner__imag" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_160459834325735" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_160459834325735_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.oplcarga.com/hs-fs/hubfs/web%20(2).png?width=1802&amp;height=1802&amp;name=web%20(2).png" class="hs-image-widget " width="1802" height="1802" style="max-width: 100%; height: auto;" alt="web (2)" title="web (2)" srcset="https://www.oplcarga.com/hs-fs/hubfs/web%20(2).png?width=901&amp;height=901&amp;name=web%20(2).png 901w, https://www.oplcarga.com/hs-fs/hubfs/web%20(2).png?width=1802&amp;height=1802&amp;name=web%20(2).png 1802w, https://www.oplcarga.com/hs-fs/hubfs/web%20(2).png?width=2703&amp;height=2703&amp;name=web%20(2).png 2703w, https://www.oplcarga.com/hs-fs/hubfs/web%20(2).png?width=3604&amp;height=3604&amp;name=web%20(2).png 3604w, https://www.oplcarga.com/hs-fs/hubfs/web%20(2).png?width=4505&amp;height=4505&amp;name=web%20(2).png 4505w, https://www.oplcarga.com/hs-fs/hubfs/web%20(2).png?width=5406&amp;height=5406&amp;name=web%20(2).png 5406w" sizes="(max-width: 1802px) 100vw, 1802px"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+ 
+</div>
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-6 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page__center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-7 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1637327368642155" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="video-container">
+  <iframe class="video-src" src="https://www.youtube.com/embed/eUxfhGg50KU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-8 ">
+<div class="row-fluid ">
+<section class="section services">
+    
+        
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-9 ">
+<div class="row-fluid ">
+<div class="content">
+  
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-10 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1604603760763438" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><h2>Nuestros servicios de transporte en toda Colombia</h2>
+        <p>A través de una infraestructura especializada, tenemos una variada oferta de servicios para cumplir con los más altos estándares en el transporte de mercancías en Colombia.</p>
+        <div class="servicios">
+            
+            <div class="item">
+                <img class="imagen" src="https://www.oplcarga.com/hubfs/shutterstock_517914373%20copia.jpg" alt="shutterstock_517914373 copia">
+                <img class="icono" src="https://www.oplcarga.com/hubfs/transporte-terrestre.svg">
+              <h4>Transporte terrestre</h4>
+                <p>Movilizamos carga seca, líquida y refrigerada por gran parte del territorio nacional, siempre monitoreando los vehículos en ruta de forma que podamos cumplir nuestra promesa de valor en términos de tiempos de entrega.</p>
+               	
+                
+                
+                
+                
+                <a href="https://www.oplcarga.com/nuestros-servicios?hsLang=es-co">
+                Ver Mas <span>›</span>
+                </a>
+            </div>
+            
+            <div class="item">
+                <img class="imagen" src="https://www.oplcarga.com/hubfs/servicios-complementarios.png" alt="servicios-complementarios">
+                <img class="icono" src="https://www.oplcarga.com/hubfs/servicios-complementarios-de-logistica.png">
+              <h4>Servicios Complementarios de Logística</h4>
+                <p>Estamos en capacidad de ofrecer servicios conexos al transporte, tales como almacenamiento, ITR, transporte fluvial, OTM y operación portuaria.</p>
+               	
+                
+                
+                
+                
+                <a href="">
+                Ver Mas <span>›</span>
+                </a>
+            </div>
+            
+        </div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-11 ">
+<div class="row-fluid ">
+<div class="service__boton">
+  
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1606238365067653" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  
+    
+  
+
+
+
+<a class="hs-button" href="https://www.oplcarga.com/nuestros-servicios?hsLang=es-co" id="hs-button_module_1606238365067653" rel="">
+  Conoce todos nuestros servicios
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+         
+</div>
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+     
+</div>
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+
+    
+</section> 
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-12 ">
+<div class="row-fluid ">
+<div class="opl__ruta">
+  
+<div class="span12 widget-span widget-type-cell page__center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-13 ">
+<div class="row-fluid ">
+<div class="span5 widget-span widget-type-cell banner__text" style="" data-widget-type="cell" data-x="0" data-w="5">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-14 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1606235194496195" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_1606235194496195_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2>OPL, en la ruta de la excelencia en transporte de carga</h2>
+<p>Con más de 18 años ofreciendo servicios de transporte de carga y servicios complementarios logísticos, nos hemos convertido en una empresa con más de 400 clientes activos, con operación en los Puertos Marítimos más importantes en Colombia, así como en ciudades principales.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span7 widget-span widget-type-cell big-img2" style="" data-widget-type="cell" data-x="5" data-w="7">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-15 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget banner__imag" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1604612590878562" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_1604612590878562_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.oplcarga.com/hubfs/Gases_Caribe_OPL-4.jpg" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="Gases_Caribe_OPL-4" title="Gases_Caribe_OPL-4"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+ 
+</div>
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-16 ">
+<div class="row-fluid ">
+<div class="content_">
+  
+<div class="span12 widget-span widget-type-cell sector" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-17 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1604662037909703" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="content">
+        <h2>Sectores que atendemos </h2>
+        
+        <div class="sectores">
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/004-contenedor.svg">
+              <h4>Contenedores</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/Wheat%20Bag.svg">
+              <h4>Graneles</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/Path%2079.svg">
+              <h4>Siderúgicos</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/005-bebidas-sin-alcohol.svg">
+              <h4>Bebidas</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/006-madera.svg">
+              <h4>Madera</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/003-gasolina.svg">
+              <h4>Hidrocarburos y biocombustibles</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/013-cemento.svg">
+              <h4>Material de construcción</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/007-carbon.svg">
+              <h4>Carbón</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/001-fertilizante.svg">
+              <h4>Fertilizantes</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/008-quimica.svg">
+              <h4>Productos químicos</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/open-cardboard-box.png">
+              <h4>Papel y carton</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/Group%20107.svg">
+              <h4>Refrigerados</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/Out%20line.svg">
+              <h4>Flores</h4>
+                
+            </div>
+            
+        </div>
+  
+  <div class="opl-carousel2">
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/004-contenedor.svg">
+              <h4>Contenedores</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/Wheat%20Bag.svg">
+              <h4>Graneles</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/Path%2079.svg">
+              <h4>Siderúgicos</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/005-bebidas-sin-alcohol.svg">
+              <h4>Bebidas</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/006-madera.svg">
+              <h4>Madera</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/003-gasolina.svg">
+              <h4>Hidrocarburos y biocombustibles</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/013-cemento.svg">
+              <h4>Material de construcción</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/007-carbon.svg">
+              <h4>Carbón</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/001-fertilizante.svg">
+              <h4>Fertilizantes</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/008-quimica.svg">
+              <h4>Productos químicos</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/open-cardboard-box.png">
+              <h4>Papel y carton</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/Group%20107.svg">
+              <h4>Refrigerados</h4>
+                
+            </div>
+            
+            <div class="item">
+                
+                <img class="icono" src="https://www.oplcarga.com/hubfs/Out%20line.svg">
+              <h4>Flores</h4>
+                
+            </div>
+            
+        </div>
+
+    
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-18 ">
+<div class="row-fluid ">
+<div class="service__boton">
+  
+<div class="span12 widget-span widget-type-custom_widget " style="padding-top: 2rem;" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1606240988652915" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  
+    
+  
+
+
+
+<a class="hs-button" href="https://www.oplcarga.com/oficinas?hsLang=es-co" id="hs-button_module_1606240988652915" rel="">
+  Mira todas nuestras ubicaciones
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+     
+</div>
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+ 
+</div>
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-19 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page__center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-20 ">
+<div class="row-fluid ">
+<div class="span6 widget-span widget-type-cell big-img2 img-logistica" style="" data-widget-type="cell" data-x="0" data-w="6">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-21 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1604670387480790" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_1604670387480790_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.oplcarga.com/hubfs/lverde%20web.jpg" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="lverde web" title="lverde web"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span6 widget-span widget-type-cell logistica-info" style="" data-widget-type="cell" data-x="6" data-w="6">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-22 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16062443097211135" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16062443097211135_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2>Logística Verde</h2>
+<p>Nuestro enfoque de constante innovación nos hace revolucionarios en el ofrecimiento de nuevas alternativas de transporte sostenible. Al estar comprometidos con el desarrollo de Colombia, durante los últimos años hemos avanzado en el proyecto de <span style="font-weight: bold;">Logística Verde</span>, que consiste en el transporte de carga utilizando equipos amigables con el medio ambiente.</p>
+<p>Actualmente contamos con la totalidad de nuestro parque automotor propio funcionando con tecnología 100% GNV y eléctricos.</p>
+<strong>1.</strong>Disminucion comprobada de emisiones CO2 en + de 30%<br><strong>2.</strong>Ahorro $ por consumo de gas vs. Diesel<br><strong>3.</strong>Desempeño mecánico igual al de vehículos Diesel en geografía de montaña y plano.</span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-23 ">
+<div class="row-fluid ">
+<section class="section section2 clientes">
+    <div class="content">
+        
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16046798178291460" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><h2>Clientes que confían en nosotros</h2>
+        
+        <div class="opl-carousel">
+            
+               <div class="logo-container">          
+                <img class="logo" src="https://www.oplcarga.com/hubfs/General_Motors_logo.svg.png" alt="General_Motors_logo.svg">
+                </div>
+
+            
+               <div class="logo-container">          
+                <img class="logo" src="https://www.oplcarga.com/hubfs/logoprimax.png" alt="logoprimax">
+                </div>
+
+            
+               <div class="logo-container">          
+                <img class="logo" src="https://www.oplcarga.com/hubfs/alion.svg" alt="alion">
+                </div>
+
+            
+               <div class="logo-container">          
+                <img class="logo" src="https://www.oplcarga.com/hubfs/steckerl-aceros-inox-center-1.png" alt="steckerl-aceros-inox-center-1">
+                </div>
+
+            
+        </div></div>
+
+</div><!--end widget-span -->
+
+    </div>
+</section> 
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-24 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page__center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-25 ">
+<div class="row-fluid ">
+<div class="span7 widget-span widget-type-cell big-img2 img-logistica" style="" data-widget-type="cell" data-x="0" data-w="7">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-26 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16046840092231620" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_16046840092231620_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.oplcarga.com/hs-fs/hubfs/Image.png?width=1553&amp;height=974&amp;name=Image.png" class="hs-image-widget " width="1553" height="974" alt="Image" title="Image" srcset="https://www.oplcarga.com/hs-fs/hubfs/Image.png?width=777&amp;height=487&amp;name=Image.png 777w, https://www.oplcarga.com/hs-fs/hubfs/Image.png?width=1553&amp;height=974&amp;name=Image.png 1553w, https://www.oplcarga.com/hs-fs/hubfs/Image.png?width=2330&amp;height=1461&amp;name=Image.png 2330w, https://www.oplcarga.com/hs-fs/hubfs/Image.png?width=3106&amp;height=1948&amp;name=Image.png 3106w, https://www.oplcarga.com/hs-fs/hubfs/Image.png?width=3883&amp;height=2435&amp;name=Image.png 3883w, https://www.oplcarga.com/hs-fs/hubfs/Image.png?width=4659&amp;height=2922&amp;name=Image.png 4659w" sizes="(max-width: 1553px) 100vw, 1553px"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span5 widget-span widget-type-cell logistica-info monitor" style="" data-widget-type="cell" data-x="7" data-w="5">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-27 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16046856574481869" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_16046856574481869_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.oplcarga.com/hubfs/logo_fondo_oscuro_v1.png" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="logo_fondo_oscuro_v1" title="logo_fondo_oscuro_v1"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-28 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16062445194911332" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16062445194911332_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2>Tracking y Monitoreo Inteligente de Cargas</h2>
+<p>Con la finalidad de ofrecer un mejor servicio a nuestros clientes, en OPL combinamos la excelencia de los transportistas con herramientas tecnológicas que nos permitan conocer la ubicación de los vehículos y mercancías en tiempo real. Mediante esto, además, estamos en capacidad de ofrecer mejores asistencias y respaldo a nuestros conductores en todo el país.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-29 ">
+<div class="row-fluid ">
+<section class="section monitor-tres">
+    <div class="content">
+        
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-30 ">
+<div class="row-fluid ">
+<div class="span4 widget-span widget-type-custom_widget col1" style="" data-widget-type="custom_widget" data-x="0" data-w="4">
+<div id="hs_cos_wrapper_module_16046870324932054" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16046870324932054_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2>1</h2>
+<p>Independientemente de la marca del GPS del vehículo, en OPL ubicamos su carga en tiempo real, estando atentos a cualquier novedad.</p></span></div>
+
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-custom_widget col1" style="" data-widget-type="custom_widget" data-x="4" data-w="4">
+<div id="hs_cos_wrapper_module_16046872779302287" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16046872779302287_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2>2</h2>
+<p>A través de la plataforma estamos en capacidad de generar reportes con la periodicidad que nuestros clientes lo requieran.</p></span></div>
+
+</div><!--end widget-span -->
+<div class="span4 widget-span widget-type-custom_widget col1" style="" data-widget-type="custom_widget" data-x="8" data-w="4">
+<div id="hs_cos_wrapper_module_16046872833712294" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16046872833712294_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2>3</h2>
+<p>Con esta nueva herramienta basada en inteligencia artificial, tomamos decisiones inmediatas ante alertas generadas a partir de un comportamiento inusual de los vehículos en ruta.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-31 ">
+<div class="row-fluid ">
+<div class="service__boton">
+  
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16062449012881643" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  
+    
+  
+
+
+
+<a class="hs-button" href="https://www.oplcarga.com/nuestros-servicios?hsLang=es-co" id="hs-button_module_16062449012881643" rel="">
+  Conoce lo que te ofrecemos
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+     
+</div>
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+
+    </div>
+</section> 
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-32 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page__center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-33 ">
+<div class="row-fluid ">
+<div class="span6 widget-span widget-type-cell ruta" style="" data-widget-type="cell" data-x="0" data-w="6">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-34 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16062448048271570" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16062448048271570_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2>Únete a nuestro equipo</h2>
+<p>Sea que estés buscando unirte a nosotros como transportista o como empleado directo de la empresa, queremos ofrecerte una oportunidad para crecer con una de las compañías más grandes del mercado.</p>
+<ul>
+<li>Amplia red de agencias en territorio nacional para garantizar cobertura nacional en el transporte de carga.</li>
+<li>Más de 400 clientes de diferentes sectores de la economía en diferentes regiones del país.</li>
+<li>Más de 6.000 vehículos operativos para el transporte hacia diversas ciudades de Colombia.</li>
+</ul></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-35 ">
+<div class="row-fluid ">
+<div class="boton">
+  
+<div class="span12 widget-span widget-type-custom_widget " style="margin-top: 1rem;" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16062446503181399" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  
+    
+  
+
+
+
+<a class="hs-button" href="https://www.oplcarga.com/trabaje?hsLang=es-co" id="hs-button_module_16062446503181399" rel="">
+  Unirse como transportador
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+         
+</div>
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-36 ">
+<div class="row-fluid ">
+<div class="boton">
+  
+<div class="span12 widget-span widget-type-custom_widget " style="margin-top: 2rem;" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16062446877841476" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  
+    
+  
+
+
+
+<a class="hs-button" href="https://www.oplcarga.com/trabaje?hsLang=es-co" id="hs-button_module_16062446877841476" rel="">
+  Unirse como empleado
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+         
+</div>
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span6 widget-span widget-type-cell ruta-img" style="" data-widget-type="cell" data-x="6" data-w="6">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-37 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16046902502812649" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_16046902502812649_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.oplcarga.com/hs-fs/hubfs/20220824_132853%20-%20copia_.jpg?width=3196&amp;height=2084&amp;name=20220824_132853%20-%20copia_.jpg" class="hs-image-widget " width="3196" height="2084" style="max-width: 100%; height: auto;" alt="20220824_132853 - copia_" title="20220824_132853 - copia_" srcset="https://www.oplcarga.com/hs-fs/hubfs/20220824_132853%20-%20copia_.jpg?width=1598&amp;height=1042&amp;name=20220824_132853%20-%20copia_.jpg 1598w, https://www.oplcarga.com/hs-fs/hubfs/20220824_132853%20-%20copia_.jpg?width=3196&amp;height=2084&amp;name=20220824_132853%20-%20copia_.jpg 3196w, https://www.oplcarga.com/hs-fs/hubfs/20220824_132853%20-%20copia_.jpg?width=4794&amp;height=3126&amp;name=20220824_132853%20-%20copia_.jpg 4794w, https://www.oplcarga.com/hs-fs/hubfs/20220824_132853%20-%20copia_.jpg?width=6392&amp;height=4168&amp;name=20220824_132853%20-%20copia_.jpg 6392w, https://www.oplcarga.com/hs-fs/hubfs/20220824_132853%20-%20copia_.jpg?width=7990&amp;height=5210&amp;name=20220824_132853%20-%20copia_.jpg 7990w, https://www.oplcarga.com/hs-fs/hubfs/20220824_132853%20-%20copia_.jpg?width=9588&amp;height=6252&amp;name=20220824_132853%20-%20copia_.jpg 9588w" sizes="(max-width: 3196px) 100vw, 3196px"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-38 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell grupo-pse" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-39 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-cell page__center" style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-40 ">
+<div class="row-fluid ">
+<div class="span6 widget-span widget-type-cell pse-img" style="" data-widget-type="cell" data-x="0" data-w="6">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-41 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16046927232143036" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_16046927232143036_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.oplcarga.com/hubfs/pse.png" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="pse" title="pse"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+<div class="span6 widget-span widget-type-cell pse" style="" data-widget-type="cell" data-x="6" data-w="6">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-42 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16062451876101792" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16062451876101792_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2>Si eres cliente, haz tus pagos en nuestra taquilla virtual</h2>
+<p>Acelera los procesos y ahorra tiempo en la realización de tus pagos a través del servicio con PSE.</p>
+<ul>
+<li>Más rápido</li>
+<li>100% seguro</li>
+<li>Privacidad en el proceso de pago</li>
+<li>Facilidad para todas las transacciones</li>
+<li>Sin comisiones</li>
+</ul></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-43 ">
+<div class="row-fluid ">
+<div class="boton">
+  
+<div class="span12 widget-span widget-type-custom_widget " style="margin-top: 1rem;" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16062451774381778" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+  
+
+
+
+  
+    
+  
+
+
+
+<a class="hs-button" href="https://zonapagos.com/t_oplcargasas/pagos.asp" id="hs-button_module_16062451774381778" rel="">
+  Ir a la taquilla virtual
+</a>
+
+</div>
+
+</div><!--end widget-span -->
+             
+</div>
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-44 ">
+<div class="row-fluid ">
+<section class="section form">
+    <div class="content">
+        
+<div id="certificados__form" class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-45 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1604695251140170" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_1604695251140170_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2>Solicita aquí tus certificados<br>de transporte de carga</h2>
+<p>Llena el formulario y recibe en tu correo los certificados relacionados con cualquiera de nuestros servicios de movilización de mercancías en el país.</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-46 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_160469451466047" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-form" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+
+	
+
+
+
+	<span id="hs_cos_wrapper_module_160469451466047_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_form" style="" data-hs-cos-general-type="widget" data-hs-cos-type="form">
+<div id="hs_form_target_module_160469451466047"></div>
+
+
+
+
+
+
+
+
+</span>
+</div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+
+    </div>
+</section> 
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-47 ">
+<div class="row-fluid ">
+<section class="section noticias">
+    <div class="content">
+        
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-48 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1604695935083277" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_1604695935083277_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2>Noticias sobre nuestras actividades y eventos</h2>
+<p>Conoce más sobre nosotros</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-49 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1604878614552139" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"> 
+<div class="blog-container">
+ 
+
+  <div class="post">
+    <a href="https://blog.oplcarga.com/sobre-nosotros-y-el-porqu%C3%A9-somos-l%C3%ADderes?hsLang=es-co"><img src="https://www.oplcarga.com/hubfs/GNV4.jpg"></a>
+    <div class="post-content">
+      <h2><a href="https://blog.oplcarga.com/sobre-nosotros-y-el-porqu%C3%A9-somos-l%C3%ADderes?hsLang=es-co">Sobre nosotros y el porqué somos líderes<!-- Nombre del post--> </a></h2>
+    <div class="post-body"><!--post summary--> 
+      <p>
+      </p>
+    </div>
+    
+    <a class="read-more" href="https://blog.oplcarga.com/sobre-nosotros-y-el-porqu%C3%A9-somos-l%C3%ADderes?hsLang=es-co"><p>Ver mas <span>›</span></p></a>
+    </div>
+   </div>
+ 
+
+  <div class="post">
+    <a href="https://blog.oplcarga.com/ventajas-del-transporte-de-carga-por-carretera?hsLang=es-co"><img src="https://www.oplcarga.com/hubfs/mula_opl.jpg"></a>
+    <div class="post-content">
+      <h2><a href="https://blog.oplcarga.com/ventajas-del-transporte-de-carga-por-carretera?hsLang=es-co">Ventajas del transporte de carga por carretera<!-- Nombre del post--> </a></h2>
+    <div class="post-body"><!--post summary--> 
+      <p>
+      </p>
+    </div>
+    
+    <a class="read-more" href="https://blog.oplcarga.com/ventajas-del-transporte-de-carga-por-carretera?hsLang=es-co"><p>Ver mas <span>›</span></p></a>
+    </div>
+   </div>
+ 
+
+  <div class="post">
+    <a href="https://blog.oplcarga.com/convenci%C3%B3n-2022-opl-sin-fronteras-2?hsLang=es-co"><img src="https://www.oplcarga.com/hubfs/Equipo%20OPL.jpg"></a>
+    <div class="post-content">
+      <h2><a href="https://blog.oplcarga.com/convenci%C3%B3n-2022-opl-sin-fronteras-2?hsLang=es-co">Convención 2022: OPL Sin Fronteras<!-- Nombre del post--> </a></h2>
+    <div class="post-body"><!--post summary--> 
+      <p>
+      </p>
+    </div>
+    
+    <a class="read-more" href="https://blog.oplcarga.com/convenci%C3%B3n-2022-opl-sin-fronteras-2?hsLang=es-co"><p>Ver mas <span>›</span></p></a>
+    </div>
+   </div>
+
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-50 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1604698054416728" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><div class="boton">
+  
+  
+  
+  
+  
+  <a href="https://www.oplcarga.com/nuestros-servicios?hsLang=es-co">
+    Lee más aquí
+  </a>
+</div></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+
+    </div>
+</section> 
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-51 ">
+<div class="row-fluid ">
+<section class="section gray">
+    <div class="content">
+        
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-52 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1604698087656752" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_1604698087656752_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h2>Estándares que garantizan la calidad de nuestros servicios</h2>
+<p>Nuestros procesos se encuentran certificados por normas de calidad ISO, así como otras entidades certificadoras en temas de riesgo laboral, seguridad, medio ambiente y más.</p>
+<p>&nbsp;</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-53 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_1604698185680819" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+    
+
+
+
+
+
+
+  
+
+
+
+<span id="hs_cos_wrapper_module_1604698185680819_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_linked_image" style="" data-hs-cos-general-type="widget" data-hs-cos-type="linked_image"><img src="https://www.oplcarga.com/hubfs/bannerweb%20con%20IQNET.jpg" class="hs-image-widget " style="max-width: 100%; height: auto;" alt="bannerweb con IQNET" title="bannerweb con IQNET"></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+
+    </div>
+</section> 
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end body -->
+</div><!--end body wrapper -->
+
+<div class="footer-container-wrapper">
+    <div class="footer-container container-fluid">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-global_group " style="" data-widget-type="global_group" data-x="0" data-w="12">
+<div class="" data-global-widget-path="generated_global_groups/37372103559.html"><div class="row-fluid-wrapper row-depth-1 row-number-1 ">
+<div class="row-fluid ">
+<section class="section footer">
+    <div class="content">
+        
+<div class="span12 widget-span widget-type-cell " style="" data-widget-type="cell" data-x="0" data-w="12">
+
+<div class="row-fluid-wrapper row-depth-1 row-number-2 ">
+<div class="row-fluid ">
+<div class="span6 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="6">
+<div id="hs_cos_wrapper_module_1604698512765893" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_1604698512765893_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><h3>SEDE ADMINISTRATIVA</h3>
+<p>Km. 2.176 Anillo Vial Floridablanca - Girón</p>
+<p>Ecoparque Empresarial Natura, torre 2, oficina 803</p>
+<p>PBX. (57) (607) 6780300&nbsp;</p>
+<p>Floridablanca, Santander</p>
+<h2 style="font-size: 20px;">&nbsp;</h2>
+<h2 style="font-size: 20px;">SEDE COMERCIAL&nbsp;</h2>
+<p>Calle 74 # 56-36, local 202 - Edificio Inverfin</p>
+<p>Barranquilla, Atlántico</p>
+<p>&nbsp;</p>
+<h2 style="font-size: 20px;">SÍGUENOS</h2>
+<div class="redes">
+<p><a href="https://www.linkedin.com/company/oplcarga" rel="noopener"><img src="https://www.oplcarga.com/hubfs/linkedin-in-brands-1.svg" alt="linkedin-in-brands" width="32"></a> <a href="https://www.facebook.com/OPLCargaColombia" rel="noopener"><img src="https://www.oplcarga.com/hubfs/facebook-f-brands-1.svg" alt="facebook-f-brands" width="18" style="margin: 0px 0px 0px 10px;"></a></p>
+</div></span></div>
+
+</div><!--end widget-span -->
+<div class="span6 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="6" data-w="6">
+<div id="hs_cos_wrapper_module_1604698525358916" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_1604698525358916_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p style="font-weight: bold;">CONTACTO DE FACTURACIÓN ELECTRÓNICA</p>
+<p>&nbsp;</p>
+<p style="line-height: 1;"><span style="font-weight: bold;">OPL CARGA:</span> <span style="color: #ffffff; font-weight: normal;"><a href="mailto:900068426@factureinbox.co" style="color: #ffffff; text-decoration: none;">900068426@factureinbox.co</a></span></p>
+<p style="line-height: 1;"><span style="font-weight: bold;">GHC:&nbsp;</span><span>900009272@factureinbox.co&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;</span><br><span style="color: #ffffff;"></span></p>
+<p style="line-height: 1;">&nbsp;</p>
+<p style="line-height: 1;">&nbsp;</p>
+<p style="line-height: 1;">&nbsp;</p>
+<p style="line-height: 1; font-weight: bold;">CANAL ÉTICO Y DE DENUNCIAS</p>
+<p style="line-height: 1;"><span style="color: #ffffff;"><a data-start="860" data-end="903" rel="noopener" href="https://docs.google.com/forms/d/e/1FAIpQLSc0D2frzbyEZ_tpT5CQQaUDUE4niK2SQnqHMTQCpiT1iQzDLQ/viewform?usp=header" style="color: #ffffff; text-decoration: none;">Accede aquí al formulario&nbsp;</a></span></p>
+<p style="line-height: 1;">&nbsp;</p>
+<p style="line-height: 1;">&nbsp;</p>
+<p style="line-height: 1; font-weight: bold;">INFORMACIÓN LEGAL</p>
+<p style="line-height: 1; font-weight: bold;">&nbsp;</p>
+<p style="line-height: 1;"><span style="color: #ffffff;"><a href="https://www.oplcarga.com/secciones/politicas?hsLang=es-co" rel="noopener" style="color: #ffffff;">Aviso de Privacidad</a></span></p>
+<p style="line-height: 1;"><span><a href="https://www.kawak.com.co/oplcarga/pqrs/pqrs_index.php" rel="noopener"><img src="https://www.oplcarga.com/hs-fs/hubfs/PQRS-1.jpg?width=156&amp;height=48&amp;name=PQRS-1.jpg" width="156" height="48" loading="lazy" alt="PQRS-1" srcset="https://www.oplcarga.com/hs-fs/hubfs/PQRS-1.jpg?width=78&amp;height=24&amp;name=PQRS-1.jpg 78w, https://www.oplcarga.com/hs-fs/hubfs/PQRS-1.jpg?width=156&amp;height=48&amp;name=PQRS-1.jpg 156w, https://www.oplcarga.com/hs-fs/hubfs/PQRS-1.jpg?width=234&amp;height=72&amp;name=PQRS-1.jpg 234w, https://www.oplcarga.com/hs-fs/hubfs/PQRS-1.jpg?width=312&amp;height=96&amp;name=PQRS-1.jpg 312w, https://www.oplcarga.com/hs-fs/hubfs/PQRS-1.jpg?width=390&amp;height=120&amp;name=PQRS-1.jpg 390w, https://www.oplcarga.com/hs-fs/hubfs/PQRS-1.jpg?width=468&amp;height=144&amp;name=PQRS-1.jpg 468w" sizes="(max-width: 156px) 100vw, 156px"></a></span></p>
+<p style="line-height: 1;">&nbsp;</p>
+<p style="line-height: 1;">&nbsp;</p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-3 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget " style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16047002100941615" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module">
+
+<hr style="
+  width: 100%;
+  border: 0 none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(255, 255, 255, 1.0);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+"></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+<div class="row-fluid-wrapper row-depth-1 row-number-4 ">
+<div class="row-fluid ">
+<div class="span12 widget-span widget-type-custom_widget copy" style="" data-widget-type="custom_widget" data-x="0" data-w="12">
+<div id="hs_cos_wrapper_module_16047002499811651" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_module widget-type-rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="module"><span id="hs_cos_wrapper_module_16047002499811651_" class="hs_cos_wrapper hs_cos_wrapper_widget hs_cos_wrapper_type_rich_text" style="" data-hs-cos-general-type="widget" data-hs-cos-type="rich_text"><p><span>Todos los derechos reservados © 2022&nbsp; &nbsp;OPL CARGA SAS</span></p></span></div>
+
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+</div><!--end widget-span -->
+
+    </div>
+</section> 
+</div><!--end row-->
+</div><!--end row-wrapper -->
+</div>
+</div><!--end widget-span -->
+</div><!--end row-->
+</div><!--end row-wrapper -->
+
+    </div><!--end footer -->
+</div><!--end footer wrapper -->
+
+    <script src="/hs/hsstatic/jquery-libs/static-1.4/jquery/jquery-1.11.2.js"></script>
+<script>hsjQuery = window['jQuery'];</script>
+<!-- HubSpot performance collection script -->
+<script defer src="/hs/hsstatic/content-cwv-embed/static-1.1293/embed.js"></script>
+<script src="https://www.oplcarga.com/hubfs/hub_generated/template_assets/1/37218055342/1740610117794/template_mobile_nav.min.js"></script>
+<script>
+var hsVars = hsVars || {}; hsVars['language'] = 'es-co';
+</script>
+
+<script src="/hs/hsstatic/cos-i18n/static-1.53/bundles/project.js"></script>
+<script src="/hs/hsstatic/keyboard-accessible-menu-flyouts/static-1.17/bundles/project.js"></script>
+<script src="https://7052064.fs1.hubspotusercontent-na1.net/hubfs/7052064/hub_generated/module_assets/1/-2712622/1770412387398/module_search_input.min.js"></script>
+
+    <!--[if lte IE 8]>
+    <script charset="utf-8" src="https://js.hsforms.net/forms/v2-legacy.js"></script>
+    <![endif]-->
+
+<script data-hs-allowed="true" src="/_hcms/forms/v2.js"></script>
+
+    <script data-hs-allowed="true">
+        var options = {
+            portalId: '8092335',
+            formId: '2fd39a6a-c331-491d-b91e-1c42686b3138',
+            formInstanceId: '7350',
+            
+            pageId: '37414465304',
+            
+            region: 'na1',
+            
+            
+            
+            
+            pageName: "OPL: pioneros en transporte sostenible en Colombia",
+            
+            
+            
+            inlineMessage: "<div style=\"text-align: center;\">&nbsp;<\/div>\n<div style=\"text-align: center;\">&nbsp;<\/div>\n<div style=\"text-align: center;\">&nbsp;<\/div>\n<div style=\"text-align: center;\"><img src=\"https:\/\/8092335.fs1.hubspotusercontent-na1.net\/hubfs\/8092335\/landing%20de%20agradecimiento.jpg\" alt=\"landing de agradecimiento\" width=\"900\" height=\"600\" loading=\"lazy\" style=\"height: auto; max-width: 100%; width: 900px;\"><\/div>\n<p>&nbsp;<\/p>",
+            
+            
+            rawInlineMessage: "<div style=\"text-align: center;\">&nbsp;<\/div>\n<div style=\"text-align: center;\">&nbsp;<\/div>\n<div style=\"text-align: center;\">&nbsp;<\/div>\n<div style=\"text-align: center;\"><img src=\"https:\/\/8092335.fs1.hubspotusercontent-na1.net\/hubfs\/8092335\/landing%20de%20agradecimiento.jpg\" alt=\"landing de agradecimiento\" width=\"900\" height=\"600\" loading=\"lazy\" style=\"height: auto; max-width: 100%; width: 900px;\"><\/div>\n<p>&nbsp;<\/p>",
+            
+            
+            hsFormKey: "3cdd466e6878efa3d270cedde7ce0091",
+            
+            
+            css: '',
+            target: '#hs_form_target_module_160469451466047',
+            
+            
+            
+            
+            
+            
+            
+            contentType: "standard-page",
+            
+            
+            
+            formsBaseUrl: '/_hcms/forms/',
+            
+            
+            
+            formData: {
+                cssClass: 'hs-form stacked hs-custom-form'
+            }
+        };
+
+        options.getExtraMetaDataBeforeSubmit = function() {
+            var metadata = {};
+            
+
+            if (hbspt.targetedContentMetadata) {
+                var count = hbspt.targetedContentMetadata.length;
+                var targetedContentData = [];
+                for (var i = 0; i < count; i++) {
+                    var tc = hbspt.targetedContentMetadata[i];
+                     if ( tc.length !== 3) {
+                        continue;
+                     }
+                     targetedContentData.push({
+                        definitionId: tc[0],
+                        criterionId: tc[1],
+                        smartTypeId: tc[2]
+                     });
+                }
+                metadata["targetedContentMetadata"] = JSON.stringify(targetedContentData);
+            }
+
+            return metadata;
+        };
+
+        hbspt.forms.create(options);
+    </script>
+
+
+<!-- Start of HubSpot Analytics Code -->
+<script type="text/javascript">
+var _hsq = _hsq || [];
+_hsq.push(["setContentType", "standard-page"]);
+_hsq.push(["setCanonicalUrl", "https:\/\/www.oplcarga.com"]);
+_hsq.push(["setPageId", "37414465304"]);
+_hsq.push(["setContentMetadata", {
+    "contentPageId": 37414465304,
+    "legacyPageId": "37414465304",
+    "contentFolderId": null,
+    "contentGroupId": null,
+    "abTestId": null,
+    "languageVariantId": 37414465304,
+    "languageCode": "es-co",
+    
+    
+}]);
+</script>
+
+<script type="text/javascript" id="hs-script-loader" async defer src="/hs/scriptloader/8092335.js"></script>
+<!-- End of HubSpot Analytics Code -->
+
+
+<script type="text/javascript">
+var hsVars = {
+    render_id: "66d39b6f-0f69-4992-b19e-c10d0398c8f5",
+    ticks: 1770477990631,
+    page_id: 37414465304,
+    
+    content_group_id: 0,
+    portal_id: 8092335,
+    app_hs_base_url: "https://app.hubspot.com",
+    cp_hs_base_url: "https://cp.hubspot.com",
+    language: "es-co",
+    analytics_page_type: "standard-page",
+    scp_content_type: "",
+    
+    analytics_page_id: "37414465304",
+    category_id: 1,
+    folder_id: 0,
+    is_hubspot_user: false
+}
+</script>
+
+
+<script defer src="/hs/hsstatic/HubspotToolsMenu/static-1.432/js/index.js"></script>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MMQWG77" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<meta name="google-site-verification" content="ysxe_3XB7oSL4FeNWauP-SO-xU2naZtb2HJSXYczCUw">
+
+
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+ <script type="text/javascript">
+   $('.opl-carousel').slick({
+  slidesToShow: 3,
+  slidesToScroll: 1,
+  autoplay: true,
+     dots:true,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      }
+    }
+  ]
+});
+   
+    $('.opl-carousel2').slick({
+  slidesToShow: 2,
+  slidesToScroll: 1,
+  autoplay: true,
+
+  autoplaySpeed: 2000,
+      
+});
+  </script>
+
+
+    <!-- Generated by the HubSpot Template Builder - template version 1.03 -->
+
+</body></html>

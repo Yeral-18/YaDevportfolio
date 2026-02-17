@@ -1,0 +1,99 @@
+/* ============================================
+   THEME: Cyberpunk Neon
+   SECTOR: Tecnología
+   MOOD: Futurista, vibrante, gaming
+   ============================================ */
+
+[data-theme="cyberpunk-neon"] {
+    /* Mode */
+    --bg-base: #0d0d0d;
+    --bg-primary: #0d0d0d;
+    --bg-secondary: #1a1a1a;
+    --bg-tertiary: #262626;
+    --bg-elevated: #1f1f1f;
+    --bg-overlay: rgba(0, 0, 0, 0.9);
+    --bg-inverse: #ffffff;
+
+    /* Text */
+    --text-primary: #ffffff;
+    --text-secondary: #b0b0b0;
+    --text-tertiary: #707070;
+    --text-inverse: #0d0d0d;
+    --text-on-accent: #0d0d0d;
+
+    /* Accent: Neon Magenta + Cyan */
+    --accent: #ff00ff;
+    --accent-soft: rgba(255, 0, 255, 0.15);
+    --accent-hover: #ff33ff;
+    --accent-active: #cc00cc;
+    --accent-glow: rgba(255, 0, 255, 0.6);
+
+    --accent-secondary: #00ffff;
+    --accent-secondary-soft: rgba(0, 255, 255, 0.15);
+
+    /* Borders */
+    --border-soft: rgba(255, 0, 255, 0.1);
+    --border-default: rgba(255, 0, 255, 0.2);
+    --border-strong: rgba(255, 0, 255, 0.4);
+
+    /* Cards */
+    --card-bg: rgba(26, 26, 26, 0.8);
+    --card-bg-hover: rgba(38, 38, 38, 0.9);
+    --card-border: rgba(255, 0, 255, 0.3);
+    --card-shadow: 0 0 20px rgba(255, 0, 255, 0.2), 0 0 40px rgba(0, 255, 255, 0.1);
+    --card-shadow-hover: 0 0 40px rgba(255, 0, 255, 0.4), 0 0 60px rgba(0, 255, 255, 0.2);
+
+    /* Buttons */
+    --btn-primary-bg: linear-gradient(135deg, #ff00ff, #00ffff);
+    --btn-primary-text: #0d0d0d;
+    --btn-primary-shadow: 0 0 30px rgba(255, 0, 255, 0.5), 0 0 60px rgba(0, 255, 255, 0.3);
+
+    /* States */
+    --success: #00ff88;
+    --success-soft: rgba(0, 255, 136, 0.15);
+    --warning: #ffff00;
+    --warning-soft: rgba(255, 255, 0, 0.15);
+    --error: #ff3333;
+    --error-soft: rgba(255, 51, 51, 0.15);
+
+    /* Effects */
+    --glow-color: rgba(255, 0, 255, 0.8);
+    --gradient-primary: linear-gradient(135deg, #ff00ff, #ff00aa, #00ffff);
+    --gradient-secondary: linear-gradient(135deg, #1a1a1a, #262626);
+
+    /* Navbar */
+    --navbar-bg: rgba(13, 13, 13, 0.8);
+    --navbar-bg-scrolled: rgba(13, 13, 13, 0.95);
+    --navbar-border: rgba(255, 0, 255, 0.3);
+
+    /* Hero */
+    --hero-bg: linear-gradient(135deg, #0d0d0d 0%, #1a0a1a 50%, #0a1a1a 100%);
+    --hero-text: #ffffff;
+    --hero-text-secondary: rgba(255, 255, 255, 0.8);
+
+    /* Footer */
+    --footer-bg: #050505;
+    --footer-border: rgba(255, 0, 255, 0.2);
+
+    /* Input */
+    --input-bg: rgba(26, 26, 26, 0.9);
+    --input-border: rgba(255, 0, 255, 0.3);
+    --input-border-focus: #00ffff;
+
+    /* Special: Scanlines effect */
+    --scanline-opacity: 0.03;
+}
+
+/* Neon glow animations */
+[data-theme="cyberpunk-neon"] .accent-glow {
+    text-shadow:
+        0 0 10px var(--accent),
+        0 0 20px var(--accent),
+        0 0 40px var(--accent);
+}
+
+[data-theme="cyberpunk-neon"] .card-glow {
+    box-shadow:
+        0 0 20px rgba(255, 0, 255, 0.3),
+        inset 0 0 20px rgba(255, 0, 255, 0.05);
+}

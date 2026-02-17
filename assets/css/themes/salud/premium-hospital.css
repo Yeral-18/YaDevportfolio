@@ -1,0 +1,81 @@
+/* ============================================
+   THEME: Premium Hospital
+   SECTOR: Salud
+   MOOD: Lujo médico, exclusivo, privado
+   ============================================ */
+
+[data-theme="premium-hospital"] {
+    /* Mode */
+    --bg-base: #fafaf9;
+    --bg-primary: #fafaf9;
+    --bg-secondary: #f5f5f4;
+    --bg-tertiary: #e7e5e4;
+    --bg-elevated: #ffffff;
+    --bg-overlay: rgba(0, 0, 0, 0.5);
+    --bg-inverse: #1c1917;
+
+    /* Text */
+    --text-primary: #1c1917;
+    --text-secondary: #44403c;
+    --text-tertiary: #78716c;
+    --text-inverse: #ffffff;
+    --text-on-accent: #ffffff;
+
+    /* Accent: Gold */
+    --accent: #b45309;
+    --accent-soft: rgba(180, 83, 9, 0.1);
+    --accent-hover: #92400e;
+    --accent-active: #78350f;
+    --accent-glow: rgba(180, 83, 9, 0.2);
+
+    --accent-secondary: #d97706;
+    --accent-secondary-soft: rgba(217, 119, 6, 0.1);
+
+    /* Borders */
+    --border-soft: #e7e5e4;
+    --border-default: #d6d3d1;
+    --border-strong: #a8a29e;
+
+    /* Cards */
+    --card-bg: #ffffff;
+    --card-bg-hover: #fafaf9;
+    --card-border: #e7e5e4;
+    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+    --card-shadow-hover: 0 12px 40px rgba(0, 0, 0, 0.1);
+
+    /* Buttons */
+    --btn-primary-bg: linear-gradient(135deg, #b45309, #d97706);
+    --btn-primary-shadow: 0 4px 14px rgba(180, 83, 9, 0.25);
+
+    /* States */
+    --success: #15803d;
+    --success-soft: rgba(21, 128, 61, 0.1);
+    --warning: #ca8a04;
+    --warning-soft: rgba(202, 138, 4, 0.1);
+    --error: #b91c1c;
+    --error-soft: rgba(185, 28, 28, 0.1);
+
+    /* Effects */
+    --glow-color: rgba(180, 83, 9, 0.15);
+    --gradient-primary: linear-gradient(135deg, #b45309, #d97706);
+    --gradient-secondary: linear-gradient(135deg, #f5f5f4, #e7e5e4);
+
+    /* Navbar */
+    --navbar-bg: #ffffff;
+    --navbar-bg-scrolled: #ffffff;
+    --navbar-border: #e7e5e4;
+
+    /* Hero */
+    --hero-bg: linear-gradient(135deg, #1c1917 0%, #292524 100%);
+    --hero-text: #ffffff;
+    --hero-text-secondary: rgba(255, 255, 255, 0.8);
+
+    /* Footer */
+    --footer-bg: #1c1917;
+    --footer-border: rgba(255, 255, 255, 0.1);
+
+    /* Input */
+    --input-bg: #ffffff;
+    --input-border: #d6d3d1;
+    --input-border-focus: #b45309;
+}

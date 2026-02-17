@@ -1,0 +1,73 @@
+/* ============================================
+   Industria: E-commerce / Tiendas Online
+   Paleta: Violeta / Rosa - Moderno, atractivo
+   ============================================ */
+
+[data-industry="ecommerce"] {
+    /* Primary Colors */
+    --color-primary: #7c3aed;
+    --color-primary-light: #8b5cf6;
+    --color-primary-dark: #6d28d9;
+    --color-primary-rgb: 124, 58, 237;
+
+    /* Secondary Colors */
+    --color-secondary: #ec4899;
+    --color-secondary-light: #f472b6;
+    --color-secondary-dark: #db2777;
+    --color-secondary-rgb: 236, 72, 153;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #7c3aed, #ec4899);
+    --gradient-primary-hover: linear-gradient(135deg, #6d28d9, #db2777);
+    --gradient-hero: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(88, 28, 135, 0.7));
+
+    /* Shadows */
+    --shadow-primary: 0 10px 30px -5px rgba(124, 58, 237, 0.3);
+    --shadow-primary-lg: 0 20px 40px -10px rgba(124, 58, 237, 0.4);
+
+    /* Title Decoration */
+    --title-underline: linear-gradient(90deg, #7c3aed, #ec4899);
+}
+
+/* Industry-specific button styles */
+[data-industry="ecommerce"] .btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+[data-industry="ecommerce"] .btn-primary:hover {
+    background: var(--gradient-primary-hover);
+    box-shadow: var(--shadow-primary);
+}
+
+/* Service card icon background */
+[data-industry="ecommerce"] .service-icon {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-primary);
+}
+
+/* Badge/tag colors */
+[data-industry="ecommerce"] .badge-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* Demo banner */
+[data-industry="ecommerce"] .demo-banner {
+    background: var(--gradient-primary);
+}
+
+/* Navbar brand accent */
+[data-industry="ecommerce"] .brand-accent {
+    color: var(--color-primary);
+}
+
+/* Footer link hover */
+[data-industry="ecommerce"] .footer-link:hover {
+    color: var(--color-primary);
+}
+
+/* CTA section background */
+[data-industry="ecommerce"] .cta-section {
+    background: var(--gradient-primary);
+}

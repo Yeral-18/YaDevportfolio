@@ -1,0 +1,82 @@
+/* ============================================
+   THEME: Forest Dark
+   SECTOR: Forestal
+   MOOD: Profundo, misterioso, nocturno
+   ============================================ */
+
+[data-theme="forest-dark"] {
+    /* Mode */
+    --bg-base: #0a1510;
+    --bg-primary: #0a1510;
+    --bg-secondary: #0f1f18;
+    --bg-tertiary: #142a20;
+    --bg-elevated: #142a20;
+    --bg-overlay: rgba(0, 0, 0, 0.8);
+    --bg-inverse: #dcfce7;
+
+    /* Text */
+    --text-primary: #ecfdf5;
+    --text-secondary: #86efac;
+    --text-tertiary: #4ade80;
+    --text-inverse: #0a1510;
+    --text-on-accent: #0a1510;
+
+    /* Accent: Vibrant Green */
+    --accent: #22c55e;
+    --accent-soft: rgba(34, 197, 94, 0.15);
+    --accent-hover: #4ade80;
+    --accent-active: #16a34a;
+    --accent-glow: rgba(34, 197, 94, 0.4);
+
+    --accent-secondary: #a3e635;
+    --accent-secondary-soft: rgba(163, 230, 53, 0.15);
+
+    /* Borders */
+    --border-soft: rgba(34, 197, 94, 0.1);
+    --border-default: rgba(34, 197, 94, 0.2);
+    --border-strong: rgba(34, 197, 94, 0.4);
+
+    /* Cards */
+    --card-bg: rgba(20, 42, 32, 0.6);
+    --card-bg-hover: rgba(20, 42, 32, 0.9);
+    --card-border: rgba(34, 197, 94, 0.2);
+    --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    --card-shadow-hover: 0 16px 48px rgba(34, 197, 94, 0.15);
+
+    /* Buttons */
+    --btn-primary-bg: linear-gradient(135deg, #22c55e, #a3e635);
+    --btn-primary-text: #0a1510;
+    --btn-primary-shadow: 0 8px 24px rgba(34, 197, 94, 0.35);
+
+    /* States */
+    --success: #22c55e;
+    --success-soft: rgba(34, 197, 94, 0.2);
+    --warning: #fbbf24;
+    --warning-soft: rgba(251, 191, 36, 0.2);
+    --error: #f87171;
+    --error-soft: rgba(248, 113, 113, 0.2);
+
+    /* Effects */
+    --glow-color: rgba(34, 197, 94, 0.5);
+    --gradient-primary: linear-gradient(135deg, #22c55e, #a3e635);
+    --gradient-secondary: linear-gradient(135deg, #0f1f18, #142a20);
+
+    /* Navbar */
+    --navbar-bg: rgba(10, 21, 16, 0.9);
+    --navbar-bg-scrolled: rgba(10, 21, 16, 0.98);
+    --navbar-border: rgba(34, 197, 94, 0.2);
+
+    /* Hero */
+    --hero-bg: linear-gradient(135deg, #0a1510 0%, #142a20 100%);
+    --hero-text: #ffffff;
+    --hero-text-secondary: #4ade80;
+
+    /* Footer */
+    --footer-bg: #050a08;
+    --footer-border: rgba(34, 197, 94, 0.1);
+
+    /* Input */
+    --input-bg: rgba(20, 42, 32, 0.8);
+    --input-border: rgba(34, 197, 94, 0.3);
+    --input-border-focus: #22c55e;
+}

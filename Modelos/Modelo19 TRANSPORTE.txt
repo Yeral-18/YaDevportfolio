@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="author" content="Los Otros Agencia - Lizeth Ramírez">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GRUPO FRIMAC SOLUCIONES LOGÍSTICAS</title>
+
+<link rel="shortcut icon" href="/images/main/ico.png" />
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
+<link href="/css/font-awesome.min.css" rel="stylesheet">
+<link href="/css/owl.carousel.min.css" rel="stylesheet">
+<link href="/css/owl.theme.default.min.css" rel="stylesheet">
+<link href="/css/main.css" rel="stylesheet">
+<link href="/css/animate.css" rel="stylesheet">
+<link href="/css/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+<link href="/css/jquery.fancybox.css" rel="stylesheet">
+
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8C6C096XT2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8C6C096XT2');
+</script>
+
+
+<script src="/js/modernizr.custom.69413.js"></script>	
+</head>
+
+<body class="activateAppearAnimation" >
+<header class="header-main"> 
+   <div class="container-fluid header-info">
+   	   <div class="row">
+   	   		<div class="col-xs-12 header-info-div">				
+				<ul class="header-info-ul">
+					<li>
+						<div class="comunidad-btn">
+							<a class="comunidad-a" data-fancybox data-type="iframe" data-src="/popup/comunidad/" href="javascript:;">					
+								COMUNIDAD FRIMAC	
+							</a>
+						</div>	
+					</li>
+					<li>
+						<div class="espeng-btn">
+							<a class="espeng-a" href="" target="_blank">						
+								ESP / ENG
+							</a>
+						</div>	
+					</li>					
+				</ul>	
+   	   		</div>
+   	   </div>
+   </div>
+   <nav class="navbar navbar-static-top navbar-horizontal" role="navigation ">       
+       <div class="container-fluid fluid-nav">       
+            <div class="navbar-header">				
+				<a class="logo navbar-brand " href="/">
+					<img class="img-responsive" src="/images/main/logo-header.png" alt="GRUPO FRIMAC SOLUCIONES LOGISTICAS">
+				</a>           
+            </div>   
+		   <div class="navbar-header2">	
+				<a class=" " href="/">
+					<img class="img-responsive img-center img-logonav2" src="/images/main/logo-header.png" alt="GRUPO FRIMAC SOLUCIONES LOGISTICAS">
+				</a> 				
+				<div class="col-xs-12 content-nav">
+					<p class="menumovil">Menú</p>
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">					
+					   <span class="sr-only">Toggle navigation</span>
+					   <span class="icon-bar"></span>
+					   <span class="icon-bar"></span>
+					   <span class="icon-bar"></span>
+					</button>
+				</div>
+			</div> 
+			<div class="collapse navbar-collapse" id="navbar">
+				<ul class="nav navbar-nav nav-horizontal">
+				    <li class="nav-horizontal__li dropdown">
+					    <a class="nav-horizontal__li-a dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="javascript:;">
+							<p>EL GRUPO</p>
+						</a>
+			    		<ul class="dropdown-menu">
+							<li>
+								<a class="" href="/quienessomos/">
+									¿Quiénes somos?
+								</a>
+							</li>
+							<li>
+								<a class="" href="/historia/">
+									Historia
+								</a>
+							</li>
+				    		<li>
+								<a class="" href="/gobiernocorporativo/">
+									Gobierno corporativo
+								</a>
+							</li>
+							<li>
+								<a class="" href="/directorio/">
+									Directorio
+								</a>
+							</li>
+							<li>
+								<a class="" href="/lineaetica/">
+									Línea ética
+								</a>
+							</li>
+				    		<li>
+								<a class="" href="/valorescorporativos/">
+									Valores corporativos
+								</a>
+							</li>
+							<li>
+								<a class="" href="/documentos/">
+									Documentos
+								</a>
+							</li>	
+					    </ul>
+				    </li>
+				    <li class="nav-horizontal__li dropdown">
+					    <a class="nav-horizontal__li-a dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="javascript:;">
+							<p>LAS EMPRESAS</p>
+						</a>
+			    		<ul class="dropdown-menu">
+							<li>
+								<a class="" href="/frimac/">
+									FRIMAC S.A.
+								</a>
+							</li>
+							<li>
+								<a class="" href="/friofrimac/">
+									FRIO FRIMAC S.A.S.
+								</a>
+							</li>
+				    		<li>
+								<a class="" href="/frimaczonafranca/">
+									FRIMAC ZONA FRANCA S.A.S.
+								</a>
+							</li>				    								
+					    </ul>
+				    </li>                    
+				    <li class="nav-horizontal__li  ">
+						<a class="nav-horizontal__li-a " href="/logrosypremios/">
+							<p>LOGROS Y PREMIOS</p>
+						</a>  							                                                 
+					</li>              
+				    <li class="
+              nav-horizontal__li
+              
+              dropdown
+            ">
+					   <a class="nav-horizontal__li-a dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="javascript:;">
+						    <p>ACTUALIDAD</p>
+					   </a>
+					   <ul class="dropdown-menu">
+							<li>
+								<a class="" href="/noticias">
+									Noticias
+								</a>
+							</li>
+							<li>
+								<a class="" href="/eventos">
+									Eventos
+								</a>
+							</li>			    					    								
+					    </ul>
+				   </li>
+				   <li class="nav-horizontal__li dropdown">
+					   <a class="nav-horizontal__li-a dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="javascript:;">
+						  <p>CONTACTO</p>
+					   </a>
+					   <ul class="dropdown-menu">
+							<li>
+								<a class="" href="https://www.kawak.com.co/frimac/pqrs/pqrs_index.php" target="_blank">
+									PQR
+								</a>
+							</li>
+							<li>
+								<a class="" href="/contacto/">
+									Formulario
+								</a>
+							</li>			    					    								
+					    </ul>
+				   </li>                                   
+				</ul>
+			</div>
+        </div>
+    </nav>
+</header>  
+
+
+  <section class="banner-section" >
+    <div class="container-fluid banner-section-fluid">
+      <div class="row">
+        <div class="col-sm-1 slide-arrow-l">
+          <div class="owl-slide-arrows">
+            <a class="btn btn-primary prev push-top" >
+              <i class="icon icon-angle-left"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-xs-12">
+          <div class="owl-carousel owl-theme " id="owl-slide">
+            
+              <div class="item bannercaption">
+                <img class="img-responsive banner-imgdektop" src="https://gefrimac.oss.nodechef.com/9PSNfI55w0PTnXT4g0ubJ.jpeg" alt="">
+                <img class="img-responsive banner-imgmovil" src="https://gefrimac.oss.nodechef.com/NSEEKgVpFjty9rBbjL1d8.jpeg" alt="">
+                <div class="hover">
+                  <div class="info truncate">Recorra Colombia de nuestra mano</div>
+                  <div class="banner-btn">
+                    <a class="banner-a" href="" target="_blank">						
+                      VER MÁS
+                    </a>
+                  </div>	
+                </div>
+              </div>
+            
+              <div class="item bannercaption">
+                <img class="img-responsive banner-imgdektop" src="https://gefrimac.oss.nodechef.com/-aBElX3bx8GUDfn-0waXQ.jpeg" alt="">
+                <img class="img-responsive banner-imgmovil" src="https://gefrimac.oss.nodechef.com/qDkM9vO2nhAvBuF1Qc9iC.jpeg" alt="">
+                <div class="hover">
+                  <div class="info truncate"> </div>
+                  <div class="banner-btn">
+                    <a class="banner-a" href="https://www.grupofrimac.com.co/frimac/terceros/" target="_blank">						
+                      VER MÁS
+                    </a>
+                  </div>	
+                </div>
+              </div>
+            
+              <div class="item bannercaption">
+                <img class="img-responsive banner-imgdektop" src="https://gefrimac.oss.nodechef.com/r9AfuRxOF50lNKVhiPoPZ.png" alt="">
+                <img class="img-responsive banner-imgmovil" src="https://gefrimac.oss.nodechef.com/DnM_oF4Tds18ln90jpuJH.png" alt="">
+                <div class="hover">
+                  <div class="info truncate">Frimac: Donde cada carga encuentra su destino</div>
+                  <div class="banner-btn">
+                    <a class="banner-a" href="" target="_blank">						
+                      VER MÁS
+                    </a>
+                  </div>	
+                </div>
+              </div>
+                              
+          </div>
+        </div>
+        <div class="col-sm-1 slide-arrow-r">
+          <div class="owl-slide-arrows push-top">
+            <a class="btn btn-primary next" >
+              <i class="icon icon-angle-right"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section">
+    <div class="home-section-fig" ></div>
+    <div class="container-fluid home-section-fluid">
+      <div class="row">
+        <div class="col-sm-4 col-xs-12 home-section-div1">
+          <a href="frimac/">
+            <div class="col-xs-12 actionhomeimg">
+              <img src="images/main/frimac.png" alt="" class="img-responsive img-center" />
+              <h2 class="home-section-h2">
+                Soluciones logísticas de transporte terrestre, especialistas en carga refrigerada.
+              </h2>
+              <div class="back">
+                <div class="back_inner">
+                  <img src="images/main/frimac-02.png" alt="" class="img-responsive img-center"  />			
+                </div>
+              </div>						
+            </div>
+            <div class="col-xs-12">
+              <img src="images/main/logo-frimac.png" alt="" class="img-responsive img-center" />
+            </div>
+          </a>	
+        </div>
+        <div class="col-sm-4 col-xs-12 home-section-div2">
+          <a href="friofrimac/">
+            <div class="col-xs-12 actionhomeimg">
+              <img src="images/main/friofrimac.png" alt="" class="img-responsive img-center" />
+              <h2 class="home-section-h2">
+                Depósito público aduanero, plataforma logística para alimientos refrigerados y congelados.
+              </h2>
+              <div class="back">
+                <div class="back_inner">
+                  <img src="images/main/friofrimac-02.png" alt="" class="img-responsive img-center"  />			
+                </div>
+              </div>						
+            </div>
+            <div class="col-xs-12">
+              <img src="images/main/logo-friofrimac.png" alt="" class="img-responsive img-center" />
+            </div>
+          </a>	
+        </div>
+        <div class="col-sm-4 col-xs-12 home-section-div3">
+          <a href="frimaczonafranca/">
+            <div class="col-xs-12 actionhomeimg">
+              <img src="images/main/frimaczonafranca.png" alt="" class="img-responsive img-center" />
+              <h2 class="home-section-h2">
+                Servicios logísticos y servicios BPO.
+              </h2>
+              <div class="back">
+                <div class="back_inner">
+                  <img src="images/main/frimaczonafranca-0.png" alt="" class="img-responsive img-center"  />			
+                </div>
+              </div>						
+            </div>
+            <div class="col-xs-12">
+              <img src="images/main/logo-frimaczonafranca.png" alt="" class="img-responsive img-center" />
+            </div>
+          </a>
+        </div>			
+      </div>
+    </div>
+  </section>
+  <!--<img src="images/temp3.png" class="img-center img-responsive">-->
+
+  <section class="unase-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2 col-sm-12 col-xs-12 unase-section-div">
+          <img src="images/main/personaje.png" class="img-center img-responsive" alt="">
+          <h2 class="unase-section-h2">
+            ÚNASE AL<br> MEJOR EQUIPO
+          </h2>				
+          <div class="unase-btn">
+           <!-- Antiguo codigo -->
+            <!-- <a class="unase-a"  data-fancybox data-type="iframe" data-src="../popup/equipo/" href="javascript:;">				
+              SABER MÁS
+            </a> -->
+           <!-- Nuevo Codigo -->
+            <a class="unase-a "href="https://frimac.pandape.computrabajo.com/">						
+              APLIQUE AQUÍ
+            </a>
+          </div>	
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--<img src="images/temp4.png" class="img-center img-responsive">-->
+
+	
+<footer class="footer ">
+    <div class="container-fluid footer-fluid">
+       <div class="row footer-row1">
+       	   <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12 footer-col-logo">
+				<img src="/images/main/logo-footer.png" class="img-center img-responsive" alt="GRUPO FRIMAC SOLUCIONES LOGISTICAS">
+		   </div>  
+     	   <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 footer-col-certificaciones">
+     	   		<h2 class="footer-title footer-title-l">
+     	   			CERTIFICACIONES
+     	   		</h2>
+				<a href="/logrosypremios">
+					<img src="/images/main/certificaciones.png" class="img-center img-responsive" alt="CERTIFICACIONES">
+				</a>
+		   </div> 
+      	   <div class="col-lg-2 col-md-6 col-sm-12 col-xs-12  footer-col-info">			   
+	           <ul class="footer-info-ul">				   
+	               <li class="politica align-c">
+						<a href="/frimac/filesfrimac/PoliticadeTratamientodelaInformacionFrimacS.A.pdf" target="_blank">
+							Política de Tratamiento y<br> Protección de Datos
+						</a>
+				   </li>
+          	 	   <!--<li class="align-c">
+						<a href="/linktransparencia">
+							Ley de Transparencia 
+						</a>
+				   </li>-->
+	           </ul>
+	       </div> 
+	       <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12 footer-col-contacto">
+	       		<h2 class="footer-title footer-title-r">
+     	   			CONTÁCTENOS
+     	   		</h2>	
+     	   		<ul class="footer-info-ul">
+				   <li class="align-r">
+						Floridablanca – Santander
+				   </li>
+	               <li class="align-r">
+						  Km 3.981 Anillo Vial Interior 1 Manzana C Etapa 1 Lote C1
+				   </li>
+				   <li class="tel">
+						PBX 60(7) 6185501 
+						<!--<a href="https://web.whatsapp.com/send?phone=573158944296" target="_blank">+ 57 315 8944296 <img src="/images/main/btn-ws.png" alt="boton whatsapp"></a>-->
+					</li>
+					<li class="telmovil">
+						<a href="tel:6076185501" target="_blank" class="pbxinline">PBX 60(7) 6185501</a> 
+						<!--<a href="tel:+576481018" target="_blank" class="pbxinline">- 6 481018</a>-->
+						<!--<a href="https://api.whatsapp.com/send?phone=573158944296" target="_blank">+ 57 315 8944296 <img src="/images/main/btn-ws.png" alt="boton whatsapp"></a>-->
+					</li>
+	            </ul> 
+	            <ul class="list-inline redes-inline">
+					<li>
+						<a href="https://www.facebook.com/profile.php?id=61561661547362" target="_blank" class="btn-redes btn-styleredes facebook">
+							<i class="fab fa-facebook-f positioni"></i>
+						</a>
+					</li>
+					<!-- <li>
+						<a href="https://www.instagram.com/" target="_blank" class="btn-redes btn-styleredes instagram">
+							<i class="fab fa-instagram positioni"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://www.youtube.com/" target="_blank" class="btn-redes btn-styleredes youtube">
+							<i class="fab fa-youtube positioni"></i>
+						</a>
+					</li>
+					<li>
+						<a href="https://twitter.com/" target="_blank" class="btn-redes btn-styleredes twitter">
+							<i class="fab fa-twitter positioni"></i>
+						</a>
+					</li> -->
+					<li>
+						<a href="https://www.linkedin.com/company/frimac/posts/?feedView=all" target="_blank" class="btn-redes btn-styleredes linkedin">
+							<i class="fab fa-linkedin positioni"></i>
+						</a>
+					</li>
+				</ul>    	
+	       </div>
+       </div>
+       <div class="row footer-row2">
+			<div class="col-md-6 col-sm-12 col-xs-12 footer-col-info2">
+				<ul class="footer-info-ul">
+					<li class="align-l"> Todos los derechos reservados </li>
+				</ul>
+			</div>
+			<div class="col-md-6 col-sm-12 col-xs-12 footer-col-info2">
+				<ul class="footer-info-ul">
+					<li class="align-r ">Desarrollado por 
+						<a href="http://losotros.co/" target="_blank" class="loa">
+						 losotros.co
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>		         	  
+	</div>
+</footer>
+<div class="cotizar-btn">
+	<a class="cotizar-a" data-fancybox data-type="iframe" data-src="/popup/cotizar/" href="javascript:;">						
+		COTIZAR
+	</a>
+</div>	
+	
+<script src="/js/jquery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
+<script src="/js/jquery.appear.js"></script>
+<script src="/js/jquery.easing.min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+
+<script src="/js/jquery.fancybox.min.js"></script>
+<script src="/js/jquery.fancybox.js"></script>
+	
+<script src="/js/jquery.mCustomScrollbar.concat.min.js"></script>
+<script src="/js/main.js"></script>
+
+
+<script>
+	
+  (function($){
+    $(window).load(function(){
+      $(".overflow").mCustomScrollbar({
+        theme:"dark",
+		scrollbarPosition: "inside",
+        scrollButtons:{
+          enable:true
+        }
+      });
+    });
+  })(jQuery);   
+</script>
+
+</body>
+</html>

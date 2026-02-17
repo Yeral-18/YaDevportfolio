@@ -1,0 +1,12 @@
+/* ============================================
+   YADEV ARCHITECTURE LOADER
+   Importa todas las arquitecturas disponibles
+   ============================================ */
+
+/* Base Architecture - SIEMPRE CARGAR */
+@import url('./base.css');
+
+/* Variant Architectures */
+@import url('./editorial.css');
+@import url('./experimental.css');
+@import url('./structural.css');

@@ -1,0 +1,81 @@
+/* ============================================
+   THEME: Concrete Light
+   SECTOR: Construcción
+   MOOD: Limpio, arquitectónico, moderno
+   ============================================ */
+
+[data-theme="concrete-light"] {
+    /* Mode */
+    --bg-base: #f5f5f5;
+    --bg-primary: #f5f5f5;
+    --bg-secondary: #e5e5e5;
+    --bg-tertiary: #d4d4d4;
+    --bg-elevated: #ffffff;
+    --bg-overlay: rgba(0, 0, 0, 0.5);
+    --bg-inverse: #262626;
+
+    /* Text */
+    --text-primary: #171717;
+    --text-secondary: #404040;
+    --text-tertiary: #737373;
+    --text-inverse: #ffffff;
+    --text-on-accent: #ffffff;
+
+    /* Accent: Concrete Gray with Orange pop */
+    --accent: #525252;
+    --accent-soft: rgba(82, 82, 82, 0.1);
+    --accent-hover: #404040;
+    --accent-active: #262626;
+    --accent-glow: rgba(82, 82, 82, 0.2);
+
+    --accent-secondary: #f97316;
+    --accent-secondary-soft: rgba(249, 115, 22, 0.1);
+
+    /* Borders */
+    --border-soft: #e5e5e5;
+    --border-default: #d4d4d4;
+    --border-strong: #a3a3a3;
+
+    /* Cards */
+    --card-bg: #ffffff;
+    --card-bg-hover: #fafafa;
+    --card-border: #e5e5e5;
+    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    --card-shadow-hover: 0 10px 40px rgba(0, 0, 0, 0.1);
+
+    /* Buttons */
+    --btn-primary-bg: #262626;
+    --btn-primary-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+
+    /* States */
+    --success: #16a34a;
+    --success-soft: rgba(22, 163, 74, 0.1);
+    --warning: #f97316;
+    --warning-soft: rgba(249, 115, 22, 0.1);
+    --error: #dc2626;
+    --error-soft: rgba(220, 38, 38, 0.1);
+
+    /* Effects */
+    --glow-color: rgba(0, 0, 0, 0.1);
+    --gradient-primary: linear-gradient(135deg, #525252, #262626);
+    --gradient-secondary: linear-gradient(135deg, #e5e5e5, #d4d4d4);
+
+    /* Navbar */
+    --navbar-bg: rgba(245, 245, 245, 0.95);
+    --navbar-bg-scrolled: #ffffff;
+    --navbar-border: #e5e5e5;
+
+    /* Hero */
+    --hero-bg: #262626;
+    --hero-text: #ffffff;
+    --hero-text-secondary: rgba(255, 255, 255, 0.7);
+
+    /* Footer */
+    --footer-bg: #171717;
+    --footer-border: rgba(255, 255, 255, 0.1);
+
+    /* Input */
+    --input-bg: #ffffff;
+    --input-border: #d4d4d4;
+    --input-border-focus: #f97316;
+}

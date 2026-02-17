@@ -1,0 +1,73 @@
+/* ============================================
+   Industria: Construcción
+   Paleta: Ámbar / Naranja - Sólido, fuerte
+   ============================================ */
+
+[data-industry="construccion"] {
+    /* Primary Colors */
+    --color-primary: #f59e0b;
+    --color-primary-light: #fbbf24;
+    --color-primary-dark: #d97706;
+    --color-primary-rgb: 245, 158, 11;
+
+    /* Secondary Colors */
+    --color-secondary: #ea580c;
+    --color-secondary-light: #f97316;
+    --color-secondary-dark: #c2410c;
+    --color-secondary-rgb: 234, 88, 12;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #f59e0b, #ea580c);
+    --gradient-primary-hover: linear-gradient(135deg, #d97706, #c2410c);
+    --gradient-hero: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(120, 53, 15, 0.7));
+
+    /* Shadows */
+    --shadow-primary: 0 10px 30px -5px rgba(245, 158, 11, 0.3);
+    --shadow-primary-lg: 0 20px 40px -10px rgba(245, 158, 11, 0.4);
+
+    /* Title Decoration */
+    --title-underline: linear-gradient(90deg, #f59e0b, #d97706);
+}
+
+/* Industry-specific button styles */
+[data-industry="construccion"] .btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+[data-industry="construccion"] .btn-primary:hover {
+    background: var(--gradient-primary-hover);
+    box-shadow: var(--shadow-primary);
+}
+
+/* Service card icon background */
+[data-industry="construccion"] .service-icon {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-primary);
+}
+
+/* Badge/tag colors */
+[data-industry="construccion"] .badge-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* Demo banner */
+[data-industry="construccion"] .demo-banner {
+    background: var(--gradient-primary);
+}
+
+/* Navbar brand accent */
+[data-industry="construccion"] .brand-accent {
+    color: var(--color-primary);
+}
+
+/* Footer link hover */
+[data-industry="construccion"] .footer-link:hover {
+    color: var(--color-primary);
+}
+
+/* CTA section background */
+[data-industry="construccion"] .cta-section {
+    background: var(--gradient-primary);
+}

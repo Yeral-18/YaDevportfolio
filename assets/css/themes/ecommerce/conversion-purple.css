@@ -1,0 +1,91 @@
+/* ============================================
+   THEME: Conversion Purple
+   SECTOR: E-commerce
+   MOOD: Conversión, urgencia, premium
+   ============================================ */
+
+[data-theme="conversion-purple"] {
+    /* Mode */
+    --bg-base: #faf5ff;
+    --bg-primary: #faf5ff;
+    --bg-secondary: #f3e8ff;
+    --bg-tertiary: #e9d5ff;
+    --bg-elevated: #ffffff;
+    --bg-overlay: rgba(0, 0, 0, 0.5);
+    --bg-inverse: #3b0764;
+
+    /* Text */
+    --text-primary: #1e1b4b;
+    --text-secondary: #4c1d95;
+    --text-tertiary: #7c3aed;
+    --text-inverse: #ffffff;
+    --text-on-accent: #ffffff;
+
+    /* Accent: Conversion Purple */
+    --accent: #7c3aed;
+    --accent-soft: rgba(124, 58, 237, 0.1);
+    --accent-hover: #8b5cf6;
+    --accent-active: #6d28d9;
+    --accent-glow: rgba(124, 58, 237, 0.3);
+
+    --accent-secondary: #ec4899;
+    --accent-secondary-soft: rgba(236, 72, 153, 0.1);
+
+    /* Borders */
+    --border-soft: #e9d5ff;
+    --border-default: #d8b4fe;
+    --border-strong: #c084fc;
+
+    /* Cards */
+    --card-bg: #ffffff;
+    --card-bg-hover: #faf5ff;
+    --card-border: #e9d5ff;
+    --card-shadow: 0 2px 10px rgba(124, 58, 237, 0.1);
+    --card-shadow-hover: 0 15px 40px rgba(124, 58, 237, 0.15);
+
+    /* Buttons */
+    --btn-primary-bg: linear-gradient(135deg, #7c3aed, #ec4899);
+    --btn-primary-shadow: 0 4px 14px rgba(124, 58, 237, 0.35);
+
+    /* States */
+    --success: #10b981;
+    --success-soft: rgba(16, 185, 129, 0.1);
+    --warning: #f59e0b;
+    --warning-soft: rgba(245, 158, 11, 0.1);
+    --error: #ef4444;
+    --error-soft: rgba(239, 68, 68, 0.1);
+
+    /* Effects */
+    --glow-color: rgba(124, 58, 237, 0.3);
+    --gradient-primary: linear-gradient(135deg, #7c3aed, #ec4899);
+    --gradient-secondary: linear-gradient(135deg, #f3e8ff, #e9d5ff);
+
+    /* Navbar */
+    --navbar-bg: rgba(250, 245, 255, 0.95);
+    --navbar-bg-scrolled: #ffffff;
+    --navbar-border: #e9d5ff;
+
+    /* Hero */
+    --hero-bg: linear-gradient(135deg, #3b0764 0%, #6d28d9 100%);
+    --hero-text: #ffffff;
+    --hero-text-secondary: #e9d5ff;
+
+    /* Footer */
+    --footer-bg: #3b0764;
+    --footer-border: rgba(233, 213, 255, 0.2);
+
+    /* Input */
+    --input-bg: #ffffff;
+    --input-border: #d8b4fe;
+    --input-border-focus: #7c3aed;
+}
+
+/* Urgency badge pulse */
+[data-theme="conversion-purple"] .urgency-badge {
+    animation: urgency-pulse 2s infinite;
+}
+
+@keyframes urgency-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}

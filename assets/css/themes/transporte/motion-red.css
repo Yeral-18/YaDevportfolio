@@ -1,0 +1,81 @@
+/* ============================================
+   THEME: Motion Red
+   SECTOR: Transporte
+   MOOD: Veloz, urgente, energético
+   ============================================ */
+
+[data-theme="motion-red"] {
+    /* Mode */
+    --bg-base: #ffffff;
+    --bg-primary: #ffffff;
+    --bg-secondary: #fef2f2;
+    --bg-tertiary: #fee2e2;
+    --bg-elevated: #ffffff;
+    --bg-overlay: rgba(0, 0, 0, 0.5);
+    --bg-inverse: #450a0a;
+
+    /* Text */
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --text-tertiary: #9ca3af;
+    --text-inverse: #ffffff;
+    --text-on-accent: #ffffff;
+
+    /* Accent: Speed Red */
+    --accent: #dc2626;
+    --accent-soft: rgba(220, 38, 38, 0.1);
+    --accent-hover: #b91c1c;
+    --accent-active: #991b1b;
+    --accent-glow: rgba(220, 38, 38, 0.3);
+
+    --accent-secondary: #f97316;
+    --accent-secondary-soft: rgba(249, 115, 22, 0.1);
+
+    /* Borders */
+    --border-soft: #fee2e2;
+    --border-default: #fecaca;
+    --border-strong: #f87171;
+
+    /* Cards */
+    --card-bg: #ffffff;
+    --card-bg-hover: #fef2f2;
+    --card-border: #fecaca;
+    --card-shadow: 0 2px 10px rgba(220, 38, 38, 0.08);
+    --card-shadow-hover: 0 15px 40px rgba(220, 38, 38, 0.15);
+
+    /* Buttons */
+    --btn-primary-bg: linear-gradient(135deg, #dc2626, #f97316);
+    --btn-primary-shadow: 0 4px 14px rgba(220, 38, 38, 0.35);
+
+    /* States */
+    --success: #16a34a;
+    --success-soft: rgba(22, 163, 74, 0.1);
+    --warning: #f59e0b;
+    --warning-soft: rgba(245, 158, 11, 0.1);
+    --error: #dc2626;
+    --error-soft: rgba(220, 38, 38, 0.1);
+
+    /* Effects */
+    --glow-color: rgba(220, 38, 38, 0.25);
+    --gradient-primary: linear-gradient(135deg, #dc2626, #f97316);
+    --gradient-secondary: linear-gradient(135deg, #fef2f2, #fee2e2);
+
+    /* Navbar */
+    --navbar-bg: rgba(255, 255, 255, 0.95);
+    --navbar-bg-scrolled: #ffffff;
+    --navbar-border: #fecaca;
+
+    /* Hero */
+    --hero-bg: linear-gradient(135deg, #dc2626 0%, #f97316 100%);
+    --hero-text: #ffffff;
+    --hero-text-secondary: rgba(255, 255, 255, 0.9);
+
+    /* Footer */
+    --footer-bg: #450a0a;
+    --footer-border: rgba(255, 255, 255, 0.1);
+
+    /* Input */
+    --input-bg: #ffffff;
+    --input-border: #fecaca;
+    --input-border-focus: #dc2626;
+}

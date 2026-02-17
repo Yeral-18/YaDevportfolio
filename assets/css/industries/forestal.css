@@ -1,0 +1,73 @@
+/* ============================================
+   Industria: Forestal / Medio Ambiente
+   Paleta: Verde / Lima - Orgánico, sostenible
+   ============================================ */
+
+[data-industry="forestal"] {
+    /* Primary Colors */
+    --color-primary: #10b981;
+    --color-primary-light: #34d399;
+    --color-primary-dark: #059669;
+    --color-primary-rgb: 16, 185, 129;
+
+    /* Secondary Colors */
+    --color-secondary: #22c55e;
+    --color-secondary-light: #4ade80;
+    --color-secondary-dark: #16a34a;
+    --color-secondary-rgb: 34, 197, 94;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, #10b981, #22c55e);
+    --gradient-primary-hover: linear-gradient(135deg, #059669, #16a34a);
+    --gradient-hero: linear-gradient(135deg, rgba(17, 24, 39, 0.9), rgba(6, 78, 59, 0.7));
+
+    /* Shadows */
+    --shadow-primary: 0 10px 30px -5px rgba(16, 185, 129, 0.3);
+    --shadow-primary-lg: 0 20px 40px -10px rgba(16, 185, 129, 0.4);
+
+    /* Title Decoration */
+    --title-underline: linear-gradient(90deg, #10b981, #22c55e);
+}
+
+/* Industry-specific button styles */
+[data-industry="forestal"] .btn-primary {
+    background: var(--gradient-primary);
+    color: white;
+}
+
+[data-industry="forestal"] .btn-primary:hover {
+    background: var(--gradient-primary-hover);
+    box-shadow: var(--shadow-primary);
+}
+
+/* Service card icon background */
+[data-industry="forestal"] .service-icon {
+    background: var(--gradient-primary);
+    box-shadow: var(--shadow-primary);
+}
+
+/* Badge/tag colors */
+[data-industry="forestal"] .badge-primary {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+/* Demo banner */
+[data-industry="forestal"] .demo-banner {
+    background: var(--gradient-primary);
+}
+
+/* Navbar brand accent */
+[data-industry="forestal"] .brand-accent {
+    color: var(--color-primary);
+}
+
+/* Footer link hover */
+[data-industry="forestal"] .footer-link:hover {
+    color: var(--color-primary);
+}
+
+/* CTA section background */
+[data-industry="forestal"] .cta-section {
+    background: var(--gradient-primary);
+}

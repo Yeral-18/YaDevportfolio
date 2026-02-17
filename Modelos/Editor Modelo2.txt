@@ -1,0 +1,904 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <base href="https://www.ingenioelectrocivil.com/">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#3f51b5">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="apple-touch-icon" href="https://www.ingenioelectrocivil.com/themes/metronic/favicon.png">
+<link rel="icon" type="image/png" href="https://www.ingenioelectrocivil.com/themes/metronic/favicon.png">
+
+<!-- CSRF Token -->
+<meta name="csrf-token" content="M6b7V9iflq0BX4IZQpugc8nH0aQyvQj9oWO3WNV5">
+    <script>
+    WebFontConfig = {
+        google: {
+            'families': [
+                'Poppins:300,400,500,600,700',
+            ],
+        },
+    };
+
+    (function(d) {
+        var wf = d.createElement('script'), s = d.scripts[0];
+        wf.src = 'https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js';
+        wf.async = true;
+        s.parentNode.insertBefore(wf, s);
+    })(document);
+</script>
+
+    <title>Index core | Editor CMS | Ingenio Electrocivil</title>
+
+    <link href="https://www.ingenioelectrocivil.com/themes/metronic/7.2.1/plugins/global/plugins.bundle.css" rel="stylesheet" type="text/css"/>
+    <link href="https://www.ingenioelectrocivil.com/themes/metronic/7.2.1/css/style.bundle.css" rel="stylesheet" type="text/css"/>
+    <link href="https://www.ingenioelectrocivil.com/themes/metronic/7.2.1/css/themes/layout/aside/dark.css" rel="stylesheet" type="text/css"/>
+    <link href="https://www.ingenioelectrocivil.com/themes/metronic/7.2.1/css/themes/layout/brand/dark.css" rel="stylesheet" type="text/css"/>
+    <link href="https://www.ingenioelectrocivil.com/themes/metronic/7.2.1/css/themes/layout/header/menu/dark.css" rel="stylesheet" type="text/css"/>
+    <link href="https://www.ingenioelectrocivil.com/themes/metronic/7.2.1/css/themes/layout/header/base/light.css" rel="stylesheet" type="text/css"/>
+    <link href="https://www.ingenioelectrocivil.com/themes/damoseditor/css/core.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="https://www.ingenioelectrocivil.com/themes/metronic/7.2.1/plugins/custom/datatables/datatables.bundle.css">
+    <link rel="stylesheet" href="https://www.ingenioelectrocivil.com/themes/damoseditor/js/slim/css/slim.min.css">
+    <link href="https://www.ingenioelectrocivil.com/themes/damoseditor/css/custom.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+
+<body class="header-fixed header-mobile-fixed aside-enabled aside-fixed aside-minimize-hoverable page-loading
+    ">
+
+<div id="outdated"></div>
+
+
+	<div class="page-loader page-loader-logo">
+    <img style="width:180px;" alt="Logo" src="https://www.ingenioelectrocivil.com/themes/metronic/logo_editor.png">
+    <div class="spinner spinner-primary"></div>
+</div>
+
+
+<!-- begin:: Header Mobile -->
+<div id="kt_header_mobile" class="header-mobile align-items-center header-mobile-fixed">
+    <div class="">
+        <a href="https://www.ingenioelectrocivil.com/admin330">
+            <img src="https://www.ingenioelectrocivil.com/themes/metronic/logo_menu.png" alt="Editor Logo">
+        </a>
+    </div>
+    <div class="d-flex align-items-center">
+        <button class="btn p-0 burger-icon burger-icon-left" id="kt_aside_mobile_toggle">
+            <span></span>
+        </button>
+        <button class="btn btn-hover-text-primary p-0 ml-2" id="kt_header_mobile_topbar_toggle">
+            <span class="svg-icon svg-icon-xl">
+                <!--begin::Svg Icon | path:assets/media/svg/icons/General/User.svg-->
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <polygon points="0 0 24 0 24 24 0 24"/>
+                        <path d="M12,11 C9.790861,11 8,9.209139 8,7 C8,4.790861 9.790861,3 12,3 C14.209139,3 16,4.790861 16,7 C16,9.209139 14.209139,11 12,11 Z"
+                              fill="#000000" fill-rule="nonzero" opacity="0.3"/>
+                        <path
+                            d="M3.00065168,20.1992055 C3.38825852,15.4265159 7.26191235,13 11.9833413,13 C16.7712164,13 20.7048837,15.2931929 20.9979143,20.2 C21.0095879,20.3954741 20.9979143,21 20.2466999,21 C16.541124,21 11.0347247,21 3.72750223,21 C3.47671215,21 2.97953825,20.45918 3.00065168,20.1992055 Z"
+                            fill="#000000" fill-rule="nonzero"/>
+                    </g>
+                </svg>
+                <!--end::Svg Icon-->
+            </span>
+        </button>
+    </div>
+</div>
+<!-- end:: Header Mobile -->
+
+<div class="d-flex flex-column flex-root">
+    <div class="d-flex flex-row flex-column-fluid page">
+        <!-- begin:: Aside -->
+<div class="aside  aside--fixed  grid__item grid grid--desktop grid--hor-desktop" id="kt_aside">
+    <!-- begin:: Aside -->
+    <div class="brand flex-column-auto" id="kt_brand" kt-hidden-height="65">
+        <!--begin::Logo-->
+        <a href="https://www.ingenioelectrocivil.com/admin330" class="brand-logo">
+            <img alt="Logo" src="https://www.ingenioelectrocivil.com/themes/metronic/logo_menu.png"/>
+        </a>
+        <!--end::Logo-->
+        <!--begin::Toggle-->
+        <button class="brand-toggle btn btn-sm px-0 active" id="kt_aside_toggle">
+            <span class="svg-icon svg-icon svg-icon-xl">
+                <!--begin::Svg Icon | path:assets/media/svg/icons/Navigation/Angle-double-left.svg-->
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px"
+                     viewBox="0 0 24 24" version="1.1">
+                    <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <polygon points="0 0 24 0 24 24 0 24"/>
+                        <path
+                            d="M5.29288961,6.70710318 C4.90236532,6.31657888 4.90236532,5.68341391 5.29288961,5.29288961 C5.68341391,4.90236532 6.31657888,4.90236532 6.70710318,5.29288961 L12.7071032,11.2928896 C13.0856821,11.6714686 13.0989277,12.281055 12.7371505,12.675721 L7.23715054,18.675721 C6.86395813,19.08284 6.23139076,19.1103429 5.82427177,18.7371505 C5.41715278,18.3639581 5.38964985,17.7313908 5.76284226,17.3242718 L10.6158586,12.0300721 L5.29288961,6.70710318 Z"
+                            fill="#000000" fill-rule="nonzero"
+                            transform="translate(8.999997, 11.999999) scale(-1, 1) translate(-8.999997, -11.999999)"/>
+                        <path
+                            d="M10.7071009,15.7071068 C10.3165766,16.0976311 9.68341162,16.0976311 9.29288733,15.7071068 C8.90236304,15.3165825 8.90236304,14.6834175 9.29288733,14.2928932 L15.2928873,8.29289322 C15.6714663,7.91431428 16.2810527,7.90106866 16.6757187,8.26284586 L22.6757187,13.7628459 C23.0828377,14.1360383 23.1103407,14.7686056 22.7371482,15.1757246 C22.3639558,15.5828436 21.7313885,15.6103465 21.3242695,15.2371541 L16.0300699,10.3841378 L10.7071009,15.7071068 Z"
+                            fill="#000000" fill-rule="nonzero" opacity="0.3"
+                            transform="translate(15.999997, 11.999999) scale(-1, 1) rotate(-270.000000) translate(-15.999997, -11.999999)"/>
+                    </g>
+                </svg>
+                <!--end::Svg Icon-->
+            </span>
+        </button>
+        <!--end::Toolbar-->
+    </div>
+    <!-- end:: Aside -->
+
+    <!-- begin:: Aside Menu -->
+<div class="aside-menu-wrapper flex-column-fluid" id="kt_aside_menu_wrapper">
+    <div id="kt_aside_menu" class="aside-menu" data-menu-vertical="1" data-menu-scroll="1" data-menu-dropdown-timeout="500">
+        <ul class="menu-nav">
+            <!-- Menú manual show only for developers -->
+                                                                                                                                                                                    <!-- first level menu -->
+                                                                                                                                                                                                                                                                                                    <li class="menu-section title-group-menu" data-group="1">
+                        <h4 class="menu-text text-white-50">Administración</h4>
+                        <i class="menu-icon ki ki-bold-more-hor icon-md text-white-50"></i>
+                    </li>
+                                                                                                                                                                                    <li class="menu-item menu-group-1" aria-haspopup="true"
+                                id="menu-Seo">
+                                <a href="https://www.ingenioelectrocivil.com/admin330/seo" class="menu-link text-white">
+                                    <i class="menu-icon fab fa-google text-white"></i>
+                                    <span class="menu-text text-white">Posicionamiento</span>
+                                </a>
+                            </li>
+                                                                                                                                                                <li class="menu-item menu-group-1" aria-haspopup="true"
+                                id="menu-Statistic">
+                                <a href="https://www.ingenioelectrocivil.com/admin330/statistics" class="menu-link text-white">
+                                    <i class="menu-icon fa fa-chart-pie text-white"></i>
+                                    <span class="menu-text text-white">Estadísticas</span>
+                                </a>
+                            </li>
+                                                                                                                                                                <li class="menu-item menu-group-1" aria-haspopup="true"
+                                id="menu-EmailCpanel">
+                                <a href="https://www.ingenioelectrocivil.com/admin330/emails-cpanel" class="menu-link text-white">
+                                    <i class="menu-icon fa fa-envelope text-white"></i>
+                                    <span class="menu-text text-white">Correos webmail</span>
+                                </a>
+                            </li>
+                                                                                                                                                                            <li class="menu-section title-group-menu" data-group="2">
+                        <h4 class="menu-text text-white-50">Contenido</h4>
+                        <i class="menu-icon ki ki-bold-more-hor icon-md text-white-50"></i>
+                    </li>
+                                                                                                                    <li class="menu-item menu-group-2" aria-haspopup="true"
+                                id="menu-Slider">
+                                <a href="https://www.ingenioelectrocivil.com/admin330/sliders" class="menu-link text-white">
+                                    <i class="menu-icon fa fa-desktop text-white"></i>
+                                    <span class="menu-text text-white">Cabezotes</span>
+                                </a>
+                            </li>
+                                                                                                                                                                                                                                <li class="menu-item menu-item-submenu menu-group-2"
+                                aria-haspopup="false" data-menu-submenu-toggle="hover" id="menu-Page">
+
+                                <a href="javascript:;" class="menu-link menu-toggle">
+                                    <i class="menu-icon fa fa-file-alt text-white"></i>
+                                    <span class="menu-text text-white">Páginas</span>
+                                    <i class="menu-arrow"></i>
+                                </a>
+
+                                <div class="menu-submenu">
+                                    <span class="menu-arrow"></span>
+                                    <ul class="menu-subnav">
+
+                                                                                                                                                                                                                                                                                                    
+                                                                                                                                                                                                                            <li class="menu-item" aria-haspopup="true"
+                                                    id="submenu-sections">
+                                                    <a href="https://www.ingenioelectrocivil.com/admin330/page/sections" class="menu-link">
+                                                        <i class="menu-bullet menu-bullet-dot">
+                                                            <span></span>
+                                                        </i>
+                                                        <span class="menu-text">Secciones</span>
+                                                    </a>
+                                                </li>
+                                                                                                                                                                                                                                                                        <li class="menu-item" aria-haspopup="true"
+                                                    id="submenu-subsections">
+                                                    <a href="https://www.ingenioelectrocivil.com/admin330/page/subsections" class="menu-link">
+                                                        <i class="menu-bullet menu-bullet-dot">
+                                                            <span></span>
+                                                        </i>
+                                                        <span class="menu-text">Subsecciones</span>
+                                                    </a>
+                                                </li>
+                                                                                                                        </ul>
+                                </div>
+                            </li>
+                                                                                                                                                                <li class="menu-item menu-item-submenu menu-group-2"
+                                aria-haspopup="false" data-menu-submenu-toggle="hover" id="menu-Blog">
+
+                                <a href="javascript:;" class="menu-link menu-toggle">
+                                    <i class="menu-icon fa fa-newspaper text-white"></i>
+                                    <span class="menu-text text-white">Publicaciones</span>
+                                    <i class="menu-arrow"></i>
+                                </a>
+
+                                <div class="menu-submenu">
+                                    <span class="menu-arrow"></span>
+                                    <ul class="menu-subnav">
+
+                                                                                                                            
+                                                                                                                                                                                                                            <li class="menu-item" aria-haspopup="true"
+                                                    id="submenu-list-blog">
+                                                    <a href="https://www.ingenioelectrocivil.com/admin330/blogs" class="menu-link">
+                                                        <i class="menu-bullet menu-bullet-dot">
+                                                            <span></span>
+                                                        </i>
+                                                        <span class="menu-text">Listado</span>
+                                                    </a>
+                                                </li>
+                                                                                                                                                                                                                                                                        <li class="menu-item" aria-haspopup="true"
+                                                    id="submenu-category-blog">
+                                                    <a href="https://www.ingenioelectrocivil.com/admin330/blogs/categories" class="menu-link">
+                                                        <i class="menu-bullet menu-bullet-dot">
+                                                            <span></span>
+                                                        </i>
+                                                        <span class="menu-text">Categorías</span>
+                                                    </a>
+                                                </li>
+                                                                                                                                                                                                                                                                        <li class="menu-item" aria-haspopup="true"
+                                                    id="submenu-list-tags">
+                                                    <a href="https://www.ingenioelectrocivil.com/admin330/blogs/tags" class="menu-link">
+                                                        <i class="menu-bullet menu-bullet-dot">
+                                                            <span></span>
+                                                        </i>
+                                                        <span class="menu-text">Etiquetas</span>
+                                                    </a>
+                                                </li>
+                                                                                                                        </ul>
+                                </div>
+                            </li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                <li class="menu-item menu-item-submenu menu-group-2"
+                                aria-haspopup="false" data-menu-submenu-toggle="hover" id="menu-CustomForm">
+
+                                <a href="javascript:;" class="menu-link menu-toggle">
+                                    <i class="menu-icon fa fa-file-alt text-white"></i>
+                                    <span class="menu-text text-white">Formularios</span>
+                                    <i class="menu-arrow"></i>
+                                </a>
+
+                                <div class="menu-submenu">
+                                    <span class="menu-arrow"></span>
+                                    <ul class="menu-subnav">
+
+                                        
+                                                                                                                                                                                                                            <li class="menu-item" aria-haspopup="true"
+                                                    id="submenu-customform">
+                                                    <a href="https://www.ingenioelectrocivil.com/admin330/customform" class="menu-link">
+                                                        <i class="menu-bullet menu-bullet-dot">
+                                                            <span></span>
+                                                        </i>
+                                                        <span class="menu-text">Listado</span>
+                                                    </a>
+                                                </li>
+                                                                                                                                                                                                                                                                        <li class="menu-item" aria-haspopup="true"
+                                                    id="submenu-customform-politicas">
+                                                    <a href="https://www.ingenioelectrocivil.com/admin330/contact/enlace-politicas" class="menu-link">
+                                                        <i class="menu-bullet menu-bullet-dot">
+                                                            <span></span>
+                                                        </i>
+                                                        <span class="menu-text">Enlace a políticas</span>
+                                                    </a>
+                                                </li>
+                                                                                                                                                                                                                                                                        <li class="menu-item" aria-haspopup="true"
+                                                    id="submenu-customform-list-response">
+                                                    <a href="https://www.ingenioelectrocivil.com/admin330/customform-list-response" class="menu-link">
+                                                        <i class="menu-bullet menu-bullet-dot">
+                                                            <span></span>
+                                                        </i>
+                                                        <span class="menu-text">Mensajes recibidos</span>
+                                                    </a>
+                                                </li>
+                                                                                                                        </ul>
+                                </div>
+                            </li>
+                                                                                                                                                                <li class="menu-item menu-group-2" aria-haspopup="true"
+                                id="menu-Faq">
+                                <a href="https://www.ingenioelectrocivil.com/admin330/faqs" class="menu-link text-white">
+                                    <i class="menu-icon fa fa-question-circle text-white"></i>
+                                    <span class="menu-text text-white">Preguntas Frecuentes</span>
+                                </a>
+                            </li>
+                                                                                                                                                                                                                                                                                                                                                                <li class="menu-item menu-group-2" aria-haspopup="true"
+                                id="menu-SocialLink">
+                                <a href="https://www.ingenioelectrocivil.com/admin330/social-links" class="menu-link text-white">
+                                    <i class="menu-icon fas fa-share-alt text-white"></i>
+                                    <span class="menu-text text-white">Redes Sociales</span>
+                                </a>
+                            </li>
+                                                                                                                                                                <li class="menu-item menu-item-submenu menu-group-2"
+                                aria-haspopup="false" data-menu-submenu-toggle="hover" id="menu-InputText">
+
+                                <a href="javascript:;" class="menu-link menu-toggle">
+                                    <i class="menu-icon fa fa-file-signature text-white"></i>
+                                    <span class="menu-text text-white">Textos de inicio</span>
+                                    <i class="menu-arrow"></i>
+                                </a>
+
+                                <div class="menu-submenu">
+                                    <span class="menu-arrow"></span>
+                                    <ul class="menu-subnav">
+
+                                                                                                                                                                                        <li class="menu-item" aria-haspopup="true"
+                                                        id="submenu-header_button">
+                                                        <a href="https://www.ingenioelectrocivil.com/admin330/custom-fields-page-home?V=9"
+                                                            class="menu-link">
+                                                            <i class="menu-bullet menu-bullet-dot">
+                                                                <span></span>
+                                                            </i>
+                                                            <span
+                                                                class="menu-text">Botón de encabezado</span>
+                                                        </a>
+                                                    </li>
+                                                                                                                                                                                                                                                                                    <li class="menu-item" aria-haspopup="true"
+                                                        id="submenu-editorial">
+                                                        <a href="https://www.ingenioelectrocivil.com/admin330/custom-fields-page-home?V=1"
+                                                            class="menu-link">
+                                                            <i class="menu-bullet menu-bullet-dot">
+                                                                <span></span>
+                                                            </i>
+                                                            <span
+                                                                class="menu-text">Editorial</span>
+                                                        </a>
+                                                    </li>
+                                                                                                                                                                                                                                                                                    <li class="menu-item" aria-haspopup="true"
+                                                        id="submenu-access_quick">
+                                                        <a href="https://www.ingenioelectrocivil.com/admin330/custom-fields-page-home?V=7"
+                                                            class="menu-link">
+                                                            <i class="menu-bullet menu-bullet-dot">
+                                                                <span></span>
+                                                            </i>
+                                                            <span
+                                                                class="menu-text">Accesos rápidos</span>
+                                                        </a>
+                                                    </li>
+                                                                                                                                                                                                                                                                                    <li class="menu-item" aria-haspopup="true"
+                                                        id="submenu-footer_col_3">
+                                                        <a href="https://www.ingenioelectrocivil.com/admin330/custom-fields-page-home?V=8"
+                                                            class="menu-link">
+                                                            <i class="menu-bullet menu-bullet-dot">
+                                                                <span></span>
+                                                            </i>
+                                                            <span
+                                                                class="menu-text">Pie de página columna 3</span>
+                                                        </a>
+                                                    </li>
+                                                                                                                                    
+                                                                                                                                                                                                                                                        </ul>
+                                </div>
+                            </li>
+                                                                                                                                                                <li class="menu-item menu-group-2" aria-haspopup="true"
+                                id="menu-Whatsapp">
+                                <a href="https://www.ingenioelectrocivil.com/admin330/whatsapps" class="menu-link text-white">
+                                    <i class="menu-icon fab fa-whatsapp text-white"></i>
+                                    <span class="menu-text text-white">Whatsapp soporte</span>
+                                </a>
+                            </li>
+                                                                                                                                                                <li class="menu-item menu-group-2" aria-haspopup="true"
+                                id="menu-Popup">
+                                <a href="https://www.ingenioelectrocivil.com/admin330/popups" class="menu-link text-white">
+                                    <i class="menu-icon fa fa-window-restore text-white"></i>
+                                    <span class="menu-text text-white">Ventanas emergentes</span>
+                                </a>
+                            </li>
+                                                                                                                                                                                                                                <li class="menu-item menu-item-submenu menu-group-2"
+                                aria-haspopup="false" data-menu-submenu-toggle="hover" id="menu-Newsletter">
+
+                                <a href="javascript:;" class="menu-link menu-toggle">
+                                    <i class="menu-icon far fa-address-book text-white"></i>
+                                    <span class="menu-text text-white">Boletín</span>
+                                    <i class="menu-arrow"></i>
+                                </a>
+
+                                <div class="menu-submenu">
+                                    <span class="menu-arrow"></span>
+                                    <ul class="menu-subnav">
+
+                                                                                                                            
+                                                                                                                                                                                                                            <li class="menu-item" aria-haspopup="true"
+                                                    id="submenu-newsletter-list">
+                                                    <a href="https://www.ingenioelectrocivil.com/admin330/newsletter" class="menu-link">
+                                                        <i class="menu-bullet menu-bullet-dot">
+                                                            <span></span>
+                                                        </i>
+                                                        <span class="menu-text">Listado inscritos</span>
+                                                    </a>
+                                                </li>
+                                                                                                                        </ul>
+                                </div>
+                            </li>
+                                                                                                                                                                <li class="menu-item menu-item-submenu menu-group-2"
+                                aria-haspopup="false" data-menu-submenu-toggle="hover" id="menu-Contact">
+
+                                <a href="javascript:;" class="menu-link menu-toggle">
+                                    <i class="menu-icon fas fa-address-book text-white"></i>
+                                    <span class="menu-text text-white">Contacto</span>
+                                    <i class="menu-arrow"></i>
+                                </a>
+
+                                <div class="menu-submenu">
+                                    <span class="menu-arrow"></span>
+                                    <ul class="menu-subnav">
+
+                                                                                                                                                                                                                
+                                                                                                                                                                                                                            <li class="menu-item" aria-haspopup="true"
+                                                    id="submenu-contact-information">
+                                                    <a href="https://www.ingenioelectrocivil.com/admin330/contact/contacto-pie-pagina" class="menu-link">
+                                                        <i class="menu-bullet menu-bullet-dot">
+                                                            <span></span>
+                                                        </i>
+                                                        <span class="menu-text">Información principal</span>
+                                                    </a>
+                                                </li>
+                                                                                                                                                                                                                    </ul>
+                                </div>
+                            </li>
+                                                                                                                                                                                                                                <li class="menu-item menu-item-submenu menu-group-2"
+                                aria-haspopup="false" data-menu-submenu-toggle="hover" id="menu-Utilities">
+
+                                <a href="javascript:;" class="menu-link menu-toggle">
+                                    <i class="menu-icon fa fa-cog text-white"></i>
+                                    <span class="menu-text text-white">Utilidades</span>
+                                    <i class="menu-arrow"></i>
+                                </a>
+
+                                <div class="menu-submenu">
+                                    <span class="menu-arrow"></span>
+                                    <ul class="menu-subnav">
+
+                                        
+                                                                                                                                                                                                                            <li class="menu-item" aria-haspopup="true"
+                                                    id="submenu-utilities-mediateca">
+                                                    <a href="https://www.ingenioelectrocivil.com/admin330/utilities-mediateca" class="menu-link">
+                                                        <i class="menu-bullet menu-bullet-dot">
+                                                            <span></span>
+                                                        </i>
+                                                        <span class="menu-text">Mediateca</span>
+                                                    </a>
+                                                </li>
+                                                                                                                                                                                                                                                                        <li class="menu-item" aria-haspopup="true"
+                                                    id="submenu-utilities-code-injection">
+                                                    <a href="https://www.ingenioelectrocivil.com/admin330/code-injection" class="menu-link">
+                                                        <i class="menu-bullet menu-bullet-dot">
+                                                            <span></span>
+                                                        </i>
+                                                        <span class="menu-text">Insertar código</span>
+                                                    </a>
+                                                </li>
+                                                                                                                        </ul>
+                                </div>
+                            </li>
+                                                                                </ul>
+    </div>
+</div>
+<!-- end:: Aside Menu -->
+</div>
+
+        <div class="d-flex flex-column flex-row-fluid wrapper" id="kt_wrapper">
+
+        <!-- begin:: Header -->
+<div id="kt_header" class="header header-fixed">
+    <!-- begin:: Header Menu -->
+    <div class="" id="">
+    </div>
+    <!-- end:: Header Menu -->
+
+    <!-- begin:: Header Topbar -->
+    <div class="topbar">
+        <!--begin: Language bar -->
+        <div class="topbar-item">
+            <a href="https://www.ingenioelectrocivil.com" class="btn btn-hover-icon-primary" target="_blank" data-toggle="tooltip"
+                data-placement="bottom" data-original-title="Ver portal"
+                data-theme="dark">
+                <span class="nav__link-icon"><i style="font-size:2rem;" class="la la-eye"></i></span>
+            </a>
+        </div>
+        <!--end: Language bar -->
+        <div class="dropdown">
+            <div class="topbar-item" data-toggle="dropdown" data-offset="0px,0px">
+                <div class="btn btn-dropdown btn-hover-text-primary">
+                    <span>GERARDO</span>
+                    <i class="fa fa-angle-down ml-2"></i>
+                </div>
+            </div>
+            <div class="dropdown-menu p-0 m-0 dropdown-menu-anim-up dropdown-menu-sm dropdown-menu-right">
+                <ul class="navi navi-hover py-4">
+                    <!--begin::Item-->
+                    <li class="navi-item">
+                                                <a href="https://www.ingenioelectrocivil.com/admin330/my-account" class="navi-link text-hover-success">
+                            <i class="fa fa-user text-success mr-2 navi-icon"></i>
+                            <span class="">Mi cuenta</span>
+                        </a>
+                                            </li>
+                    <!--end::Item-->
+                </ul>
+                <!--end: Navigation -->
+            </div>
+        </div>
+        <div class="topbar-item">
+            <a class="btn btn-text-primary font-weight-bolder text-hover-danger" style="align-items: center;"
+                href="https://www.ingenioelectrocivil.com/admin330/logout"
+                onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                <span>Salir</span>
+                <i class="fa fa-power-off ml-1"></i>
+            </a>
+
+            <form id="logout-form" action="https://www.ingenioelectrocivil.com/admin330/logout" method="POST" style="display: none;">
+                <input type="hidden" name="_token" value="M6b7V9iflq0BX4IZQpugc8nH0aQyvQj9oWO3WNV5">            </form>
+        </div>
+        <!--end: User Bar -->
+    </div>
+    <!-- end:: Header Topbar -->
+</div>
+        <!-- end:: Header -->
+
+            <div class="content d-flex flex-column flex-column-fluid" id="kt_content">
+                <div class="container-fluid">
+                                        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+
+            <footer class="footer bg-white py-4 d-flex flex-lg-column" id="kt_footer">
+    <div class="container-fluid d-flex flex-column flex-md-row align-items-center justify-content-between">
+        <div>
+            2026 &copy; &nbsp;<strong>Editor</strong>&nbsp; Desarrollado por
+            <a href="https://www.damos.co" target="blank">&nbsp;<strong>Damos Soluciones</strong></a>
+        </div>
+    </div>
+</footer>
+        </div>
+    </div>
+</div>
+
+<div id="kt_scrolltop" class="scrolltop">
+    <span class="svg-icon">
+        <!--begin::Svg Icon | path:/metronic/theme/html/demo1/dist/assets/media/svg/icons/Navigation/Up-2.svg-->
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1">
+            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                <polygon points="0 0 24 0 24 24 0 24"></polygon>
+                <rect fill="#000000" opacity="0.3" x="11" y="10" width="2" height="10" rx="1"></rect>
+                <path
+                    d="M6.70710678,12.7071068 C6.31658249,13.0976311 5.68341751,13.0976311 5.29289322,12.7071068 C4.90236893,12.3165825 4.90236893,11.6834175 5.29289322,11.2928932 L11.2928932,5.29289322 C11.6714722,4.91431428 12.2810586,4.90106866 12.6757246,5.26284586 L18.6757246,10.7628459 C19.0828436,11.1360383 19.1103465,11.7686056 18.7371541,12.1757246 C18.3639617,12.5828436 17.7313944,12.6103465 17.3242754,12.2371541 L12.0300757,7.38413782 L6.70710678,12.7071068 Z"
+                    fill="#000000" fill-rule="nonzero"></path>
+            </g>
+        </svg>
+        <!--end::Svg Icon-->
+    </span>
+</div>
+<input type="hidden" id="app-language" value="es">
+<input type="hidden" value="" id="menu-active">
+<input type="hidden" value="" id="submenu-active">
+<script>
+    var KTAppOptions = {
+        'colors': {
+            'state': {
+                'brand': '#5d78ff',
+                'dark': '#282a3c',
+                'light': '#ffffff',
+                'primary': '#5867dd',
+                'success': '#34bfa3',
+                'info': '#36a3f7',
+                'warning': '#ffb822',
+                'danger': '#fd3995',
+            },
+            'base': {
+                'label': ['#c5cbe3', '#a1a8c3', '#3d4465', '#3e4466'],
+                'shape': ['#f0f3ff', '#d9dffa', '#afb4d4', '#646c9a'],
+            },
+        },
+    };
+    var KTAppSettings = {
+        'breakpoints': {'sm': 576, 'md': 768, 'lg': 992, 'xl': 1200, 'xxl': 1400},
+        'colors': {
+            'theme': {
+                'base': {
+                    'white': '#ffffff',
+                    'primary': '#3699FF',
+                    'secondary': '#E5EAEE',
+                    'success': '#1BC5BD',
+                    'info': '#36a3f7',
+                    'warning': '#FFA800',
+                    'danger': '#F64E60',
+                    'light': '#E4E6EF',
+                    'dark': '#181C32',
+                },
+                'light': {
+                    'white': '#ffffff',
+                    'primary': '#E1F0FF',
+                    'secondary': '#EBEDF3',
+                    'success': '#C9F7F5',
+                    'info': '#EEE5FF',
+                    'warning': '#FFF4DE',
+                    'danger': '#FFE2E5',
+                    'light': '#F3F6F9',
+                    'dark': '#D6D6E0',
+                },
+                'inverse': {
+                    'white': '#ffffff',
+                    'primary': '#ffffff',
+                    'secondary': '#3F4254',
+                    'success': '#ffffff',
+                    'info': '#ffffff',
+                    'warning': '#ffffff',
+                    'danger': '#ffffff',
+                    'light': '#464E5F',
+                    'dark': '#ffffff',
+                },
+            },
+            'gray': {
+                'gray-100': '#F3F6F9',
+                'gray-200': '#EBEDF3',
+                'gray-300': '#E4E6EF',
+                'gray-400': '#D1D3E0',
+                'gray-500': '#B5B5C3',
+                'gray-600': '#7E8299',
+                'gray-700': '#5E6278',
+                'gray-800': '#3F4254',
+                'gray-900': '#181C32',
+            },
+        },
+        'font-family': 'Poppins',
+    };
+</script>
+
+<script src="https://www.ingenioelectrocivil.com/themes/metronic/7.2.1/plugins/global/plugins.bundle.js"></script>
+<script src="https://www.ingenioelectrocivil.com/themes/metronic/7.2.1/js/scripts.bundle.js"></script>
+<script src="https://www.ingenioelectrocivil.com/themes/metronic/7.2.1/plugins/custom/datatables/datatables.bundle.js"></script>
+
+
+
+
+<script src="https://www.ingenioelectrocivil.com/themes/damoseditor/js/slim/js/slim.kickstart.min.js"></script>
+<script src="https://www.ingenioelectrocivil.com/themes/damoseditor/js/admin.js"></script>
+<script src="https://www.ingenioelectrocivil.com/themes/damoseditor/js/validator.js"></script>
+<script src="https://www.ingenioelectrocivil.com/themes/damoseditor/js/button.js"></script>
+
+    <script src="http://localhost:8888/super-admin/api/v1/ads"></script>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+    
+    
+    
+    
+    
+
+
+<input type="hidden" id="text-delete" value="¿Está seguro?, recuerde que la acción no se puede deshacer.">
+</body>
+
+</html>

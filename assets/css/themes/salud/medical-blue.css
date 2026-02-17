@@ -1,0 +1,81 @@
+/* ============================================
+   THEME: Medical Blue
+   SECTOR: Salud
+   MOOD: Institucional, serio, hospital premium
+   ============================================ */
+
+[data-theme="medical-blue"] {
+    /* Mode */
+    --bg-base: #f8fafc;
+    --bg-primary: #f8fafc;
+    --bg-secondary: #f1f5f9;
+    --bg-tertiary: #e2e8f0;
+    --bg-elevated: #ffffff;
+    --bg-overlay: rgba(15, 23, 42, 0.6);
+    --bg-inverse: #0f172a;
+
+    /* Text */
+    --text-primary: #1e293b;
+    --text-secondary: #475569;
+    --text-tertiary: #94a3b8;
+    --text-inverse: #ffffff;
+    --text-on-accent: #ffffff;
+
+    /* Accent: Deep Blue */
+    --accent: #1e40af;
+    --accent-soft: rgba(30, 64, 175, 0.1);
+    --accent-hover: #1e3a8a;
+    --accent-active: #172554;
+    --accent-glow: rgba(30, 64, 175, 0.25);
+
+    --accent-secondary: #0284c7;
+    --accent-secondary-soft: rgba(2, 132, 199, 0.1);
+
+    /* Borders */
+    --border-soft: #e2e8f0;
+    --border-default: #cbd5e1;
+    --border-strong: #94a3b8;
+
+    /* Cards */
+    --card-bg: #ffffff;
+    --card-bg-hover: #f8fafc;
+    --card-border: #e2e8f0;
+    --card-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --card-shadow-hover: 0 10px 30px rgba(30, 64, 175, 0.1);
+
+    /* Buttons */
+    --btn-primary-bg: #1e40af;
+    --btn-primary-shadow: 0 4px 14px rgba(30, 64, 175, 0.25);
+
+    /* States */
+    --success: #059669;
+    --success-soft: rgba(5, 150, 105, 0.1);
+    --warning: #d97706;
+    --warning-soft: rgba(217, 119, 6, 0.1);
+    --error: #dc2626;
+    --error-soft: rgba(220, 38, 38, 0.1);
+
+    /* Effects */
+    --glow-color: rgba(30, 64, 175, 0.15);
+    --gradient-primary: linear-gradient(135deg, #1e40af, #0284c7);
+    --gradient-secondary: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+
+    /* Navbar */
+    --navbar-bg: #ffffff;
+    --navbar-bg-scrolled: #ffffff;
+    --navbar-border: #e2e8f0;
+
+    /* Hero */
+    --hero-bg: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+    --hero-text: #ffffff;
+    --hero-text-secondary: rgba(255, 255, 255, 0.85);
+
+    /* Footer */
+    --footer-bg: #0f172a;
+    --footer-border: rgba(255, 255, 255, 0.1);
+
+    /* Input */
+    --input-bg: #ffffff;
+    --input-border: #cbd5e1;
+    --input-border-focus: #1e40af;
+}

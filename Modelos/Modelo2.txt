@@ -1,0 +1,1580 @@
+
+<!doctype html>
+<html lang="es">
+
+<head>
+    
+
+    <!-- Global Site Tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-16897352949"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {dataLayer.push(arguments);};
+        gtag('js', new Date());
+
+        gtag('config', 'AW-16897352949');
+    </script>
+
+    <base href="https://www.ingenioelectrocivil.com/">
+
+        <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
+<!-- Mobile Specific Metas -->
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="sitemap" type="application/xml" title="Sitemap" href="sitemap.xml"/>
+
+<title>Ingenio Electrocivil</title>
+<meta name="twitter:title" content="Ingenio Electrocivil">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="description" content="Obras de carácter eléctrico y civil, participación en todas las fases, estudios, diagnóstico, formulación, diseño, construcción y legalización.">
+<meta name="twitter:image" content="https://www.ingenioelectrocivil.com/images/seo/seo-metadata-site-958.jpg">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://www.ingenioelectrocivil.com/images/seo/seo-metadata-site-958.jpg">
+<meta property="og:title" content="Ingenio Electrocivil">
+<meta property="og:description" content="Obras de carácter eléctrico y civil, participación en todas las fases, estudios, diagnóstico, formulación, diseño, construcción y legalización.">
+<meta property="og:site_name" content="Ingenio Electrocivil">
+<meta property="og:url" content="https://www.ingenioelectrocivil.com">
+<link rel="canonical" href="https://www.ingenioelectrocivil.com"/>
+<meta name="robots" content="index,follow">
+
+
+
+    <!-- Favicons - Place favicon.ico in the root directory -->
+<link rel="shortcut icon" href="https://www.ingenioelectrocivil.com/assets/images/fevicon.png" type="image/x-icon">
+
+<link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+<link rel="dns-prefetch" href="https://www.youtube.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://www.youtube.com" crossorigin>
+<link
+    href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Quicksand:wght@400;700&family=Roboto:wght@400;500;700&display=swap"
+    rel="stylesheet">
+<!--==============================
+    All CSS File
+============================== -->
+<!-- <link rel="stylesheet" href="https://www.ingenioelectrocivil.com/assets/css/app.min.css"> -->
+<!-- Fontawesome Icon -->
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://www.ingenioelectrocivil.com/assets/css/bootstrap.min.css">
+<!-- Fontawesome -->
+<link rel="stylesheet" href="https://www.ingenioelectrocivil.com/assets/css/font-awesome.css">
+<!-- Flaticon -->
+<link rel="stylesheet" href="https://www.ingenioelectrocivil.com/assets/css/flaticon.css">
+<!-- Base Icons -->
+<link rel="stylesheet" href="https://www.ingenioelectrocivil.com/assets/css/pbminfotech-base-icons.css">
+<!-- Swiper -->
+<link rel="stylesheet" href="https://www.ingenioelectrocivil.com/assets/css/swiper.min.css">
+<!-- Magnific -->
+<link rel="stylesheet" href="https://www.ingenioelectrocivil.com/assets/css/magnific-popup.css">
+<!-- Shortcode CSS -->
+<link rel="stylesheet" href="https://www.ingenioelectrocivil.com/assets/css/shortcode.css">
+<!-- Base CSS -->
+<link rel="stylesheet" href="https://www.ingenioelectrocivil.com/assets/css/base.css">
+<!-- Style CSS -->
+<link rel="stylesheet" href="https://www.ingenioelectrocivil.com/assets/css/style.css">
+<!-- Responsive CSS -->
+<link rel="stylesheet" href="https://www.ingenioelectrocivil.com/assets/css/responsive.css">
+<!-- REVOLUTION STYLE SHEETS -->
+
+
+
+<!-- CSS PREDEFINIDOS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.css"
+    integrity="sha512-6fYy5vAASALx85uN0Ku1VUOuAUfoxhaxzsqCakC0LCAXfj/8s9Th1zvQo70E4i6aKE2qb1cUJvV4UV50+VnEdA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" onload="this.onload=null;this.rel='stylesheet'" />
+
+
+
+<!--====== Awesome css ======-->
+
+<!--====== Modal Popups ======-->
+
+<link rel="preload" as="style" href="https://www.ingenioelectrocivil.com/themes/damosfrontend/popup/css/modal.css"
+    onload="this.onload=null;this.rel='stylesheet'">
+<noscript>
+    <link rel="stylesheet" type="text/css" href="https://www.ingenioelectrocivil.com/themes/damosfrontend/popup/css/modal.css">
+</noscript>
+
+<!--====== End Awesome css ======-->
+
+<style>
+    @media (max-width: 1220px) {
+        .slidersection.section_header {
+            height: 100% !important;
+        }
+    }
+</style>
+
+        <!-- REVOLUTION SLIDER CSS -->
+    <link rel="stylesheet" type="text/css" href="https://www.ingenioelectrocivil.com/themes/damosfrontend/revolution/css/settings.css">
+    <!-- REVOLUTION NAVIGATION STYLE -->
+    <link rel="preload" href="https://www.ingenioelectrocivil.com/themes/damosfrontend/revolution/css/navigation.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="https://www.ingenioelectrocivil.com/themes/damosfrontend/revolution/css/navigation.css" />
+    </noscript>
+    <!-- REVOLUTION SLIDER CUSTOM CSS -->
+    <link rel="stylesheet" type="text/css" href="https://www.ingenioelectrocivil.com/themes/damosfrontend/revolution/css/custom.css">
+
+    
+    <link rel="stylesheet" href="https://www.ingenioelectrocivil.com/assets/css/custom.css">
+
+    
+</head>
+
+<body>
+    
+
+        
+    <div class="page-wrapper">
+
+        <header class="site-header header-style-3">
+    <div class="site-header-menu">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <div class="site-branding">
+                            <span class="site-title">
+                                <a href="https://www.ingenioelectrocivil.com">
+                                    <img class="logo-img" src="assets/images/homepage-3/logo.png"
+                                        alt="Logo Ingenio Electrocivil" width="153" height="60">
+                                </a>
+                            </span>
+                        </div>
+                        <div class="site-navigations">
+                            <nav class="main-menu navbar-expand-xl navbar-light">
+                                <div class="navbar-header">
+                                    <!-- Toggle Button -->
+                                    <button class="navbar-toggler" type="button">
+                                        <i class="pbmit-base-icon-menu-1"></i>
+                                    </button>
+                                </div>
+                                <div class="pbmit-mobile-menu-bg"></div>
+                                <div class="collapse navbar-collapse clearfix show" id="pbmit-menu">
+                                    <div class="pbmit-menu-wrap">
+                                        <span class="closepanel">
+                                            <i class="pbmit-base-icon-cancel"></i>
+                                        </span>
+                                        <ul class="navigation clearfix">
+                                            <li class="">
+            <a href="https://www.ingenioelectrocivil.com" class=" active">
+                Inicio
+            </a>
+        </li>
+        
+                    <li class="dropdown  ">
+            <a class="" tabindex=0>
+                Nosotros
+            </a>
+            <ul class="sub-menu">
+                                                                                <li>
+                            <a href="nosotros/quienes-somos" class="dropdown-item nav-item"
+                                target="_self">Quiénes somos</a>
+                        </li>
+                                                                                                    <li>
+                            <a href="nosotros/mision-y-vision-empresarial" class="dropdown-item nav-item"
+                                target="_self">Misión y Visión empresarial</a>
+                        </li>
+                                                                                                    <li>
+                            <a href="nosotros/politica-de-tratamiento-de-datos-personales" class="dropdown-item nav-item"
+                                target="_self">Política de tratamiento de datos personales</a>
+                        </li>
+                                                </ul>
+        </li>
+        
+                    <li class="dropdown  ">
+            <a class="" tabindex=0>
+                Servicios
+            </a>
+            <ul class="sub-menu">
+                                                                                <li>
+                            <a href="servicios/disenos-electricos-en-media-y-baja-tension/consultoria" class="dropdown-item nav-item"
+                                target="_self">Consultoría</a>
+                        </li>
+                                                                                                    <li>
+                            <a href="servicios/disenos-electricos-en-media-y-baja-tension/interventoria" class="dropdown-item nav-item"
+                                target="_self">Interventoría</a>
+                        </li>
+                                                                                                    <li class="dropdown">
+                            <a tabindex="0">
+                                Diseños eléctricos en media y baja tensión
+                            </a>
+                            <ul class="sub-menu">
+                                                                    <li>
+                                        <a href="servicios/disenos-electricos-en-media-y-baja-tension/centrales-de-monitoreo"
+                                            target="_self">Centrales de monitoreo</a>
+                                    </li>
+                                                            </ul>
+                        </li>
+                                                                                                    <li>
+                            <a href="servicios/disenos-electricos-en-media-y-baja-tension/diseno-y-construccion-en-iluminacion-de-interiores-y-exteriores" class="dropdown-item nav-item"
+                                target="_self">Diseño y construcción en iluminación de Interiores y Exteriores</a>
+                        </li>
+                                                                                                    <li>
+                            <a href="servicios/disenos-electricos-en-media-y-baja-tension/diseno-y-construccion-de-instalaciones-fotovoltaicas" class="dropdown-item nav-item"
+                                target="_self">Diseño y construcción de instalaciones fotovoltaicas</a>
+                        </li>
+                                                                                                    <li>
+                            <a href="servicios/diseno-de-redes-electricas/diseno-y-construccion-de-redes-reguladas" class="dropdown-item nav-item"
+                                target="_self">Diseño y construcción de redes reguladas</a>
+                        </li>
+                                                                                                    <li>
+                            <a href="servicios/ejecucion-de-obras-electricas/construccion-de-obras-electricas-comprendidas-por-los-procesos-de-distribucion-transformacion-y-uso-final" class="dropdown-item nav-item"
+                                target="_self">Construcción de Obras Eléctricas comprendidas por los procesos de distribución, transformación y uso final.</a>
+                        </li>
+                                                                                                    <li>
+                            <a href="servicios/disenos-electricos-en-media-y-baja-tension/montaje-instalacion-y-mantenimiento-de-generadores-electrogenos-o-plantas-electricas" class="dropdown-item nav-item"
+                                target="_self">Montaje, instalación y mantenimiento de generadores electrógenos o plantas eléctricas</a>
+                        </li>
+                                                                                                    <li>
+                            <a href="servicios/disenos-electricos-en-media-y-baja-tension/instalaciones-electricas-residenciales-y-domotica" class="dropdown-item nav-item"
+                                target="_self">Instalaciones Eléctricas residenciales y domótica</a>
+                        </li>
+                                                                                                    <li class="dropdown">
+                            <a tabindex="0">
+                                Diseño, programación y control de iluminación en postes inteligentes
+                            </a>
+                            <ul class="sub-menu">
+                                                                    <li>
+                                        <a href="servicios/diseno-programacion-y-control-de-iluminacion-en-postes-inteligentes/consultoria-diseno-y-construccion-de-cableado-estructurado-en-cobre-y-fibra-optica"
+                                            target="_self">Consultoria, diseño y construcción, de cableado estructurado en cobre y fibra óptica</a>
+                                    </li>
+                                                                    <li>
+                                        <a href="servicios/diseno-programacion-y-control-de-iluminacion-en-postes-inteligentes/iot"
+                                            target="_self">IOT</a>
+                                    </li>
+                                                            </ul>
+                        </li>
+                                                </ul>
+        </li>
+        
+                    <li class="dropdown  ">
+            <a class="" href=publicaciones>
+                Publicaciones
+            </a>
+            <ul class="sub-menu">
+                                                                                <li>
+                            <a href="publicaciones/electrico" class="dropdown-item nav-item"
+                                target="_self">Eléctrico</a>
+                        </li>
+                                                                                                    <li>
+                            <a href="publicaciones/noticias" class="dropdown-item nav-item"
+                                target="_self">Noticias</a>
+                        </li>
+                                                </ul>
+        </li>
+        
+            <li class="">
+            <a href="contactenos" class=" ">
+                Contáctenos
+            </a>
+        </li>
+                                            </ul>
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                        <div class="pbmit-right-side">
+                            <div class="pbmit-header-search-btn">
+                                <a href="#">
+                                    <i class="pbmit-base-icon-search-1"></i>
+                                </a>
+                            </div>
+                                                                                        <a href="https://www.ingenioelectrocivil.com/contactenos" target="_self"
+                                    class="pbmit-btn">
+                                    <span>Contáctenos</span>
+                                </a>
+                                                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+            <div class="page-content">
+        <section class="full-screen top-position1 p-0 slidersection  section_header"
+    style="height:740px;">
+    <div id="welcome_wrapper" class="rev_slider-wrapper fullwidthbanner-container" data-alias="home-04"
+        data-source="gallery" style="margin:0 auto;background:transparent;padding:0;margin-top:0;margin-bottom:0;">
+        <!-- START REVOLUTION SLIDER 5.4.7 fullwidth mode -->
+        <div id="welcome" class="rev_slider fullwidthabanner " style="display:none;" data-version="5.4.7">
+            <ul>
+                                                    
+                    <!-- SLIDE  -->
+                    <li class="swiper-slide" data-index="rs-9" data-transition="fade"
+                        data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"
+                        data-easein="default" data-easeout="default" data-masterspeed="default"
+                        data-thumb="https://www.ingenioelectrocivil.com/images/cabezotes/web-instalacion-de-proyectos-fotovoltaicos-587.webp" data-rotate="0" data-fstransition="fade"
+                        data-fsmasterspeed="300" data-fsslotamount="7" data-saveperformance="off"
+                        data-title="Instalación de Proyectos fotovoltaicos"
+                         data-param1="01"                         data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
+                        data-param8="" data-param9="" data-param10="" data-description=""
+                        data-delay="9000"  data-target=_blank>
+
+                        <!-- MAIN IMAGE -->
+                                                    <img src="https://www.ingenioelectrocivil.com/images/cabezotes-mobile/web-instalacion-de-proyectos-fotovoltaicos-377.webp" alt="Instalación de Proyectos fotovoltaicos"
+                                data-lazyload="https://www.ingenioelectrocivil.com/images/cabezotes-mobile/web-instalacion-de-proyectos-fotovoltaicos-377.webp" data-kenburnzoom="https://www.ingenioelectrocivil.com/images/cabezotes/web-instalacion-de-proyectos-fotovoltaicos-587.webp"
+                                data-bgposition="center center" data-bgfit="cover" data-bgparallax="4"
+                                class="rev-slidebg " data-kenburns="off" data-offsetstart="0 200"
+                                data-offsetend="0 -200" data-duration="10000" data-ease="Linear.easeNone"
+                                data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0"
+                                width="780"
+                                height="700"
+                                title="Instalación de Proyectos fotovoltaicos" data-no-retina>
+                        
+                        <img src="https://www.ingenioelectrocivil.com/images/cabezotes/web-instalacion-de-proyectos-fotovoltaicos-587.webp" alt="Instalación de Proyectos fotovoltaicos"
+                            data-lazyload="https://www.ingenioelectrocivil.com/images/cabezotes/web-instalacion-de-proyectos-fotovoltaicos-587.webp" data-kenburnzoom="https://www.ingenioelectrocivil.com/images/cabezotes/web-instalacion-de-proyectos-fotovoltaicos-587.webp"
+                            data-bgposition="center center" data-bgfit="cover" data-bgparallax="4" class="rev-slidebg "
+                            data-kenburns="off" data-offsetstart="0 200" data-offsetend="0 -200"
+                            data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110"
+                            data-rotatestart="0" data-rotateend="0"
+                            width="1920"
+                            height="740"
+                            title="Instalación de Proyectos fotovoltaicos" data-no-retina>
+
+                        
+                        <!-- DARKEN -->
+                        
+                                                    <!-- LAYER NR. 1 [ title ] -->
+                            <div class="hero-content tp-caption tp-resizeme site-text-primary pl-0 font-subtitle text-theme2 handline title-slider "
+                                id="slide-901-layer-2"
+                                data-x="['left','left','left','left']"
+                                data-hoffset="[50,30,30,30]" data-y="['top','top','top','top']"
+                                data-voffset="['200','50','50','0']" data-fontsize="['22','22','22','22']"
+                                data-lineheight="['70','70','50','38']" data-width="['800','750','600','400']"
+                                data-height="['none','none','none','none']"
+                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
+                                data-textAlign="['left','left','left','left']"
+                                data-paddingtop="[0,0,0,4]" data-paddingright="[55,55,0,0]"
+                                data-paddingbottom="[0,0,0,4]" data-paddingleft="[0,43,0,0]"
+                                style="z-index: 7;color:#ffffff; margin-bottom: 20px; white-space: normal;font-family: Barlow Condensed;font-weight: 400; padding: 0;">
+                                <span class="subtitle subtitle--extended">Instalación de Proyectos fotovoltaicos</span>
+                                
+                            </div>
+                        
+                        
+                        
+                                                    <!-- LAYER NR. 4 [ for see all service botton ] -->
+                            <div class="tp-caption tp-resizeme  " id="slide-901-layer-5"
+                                data-x="['left','left','left','left']"
+                                data-hoffset="[50,30,30,30]" data-y="['middle','middle','middle','middle']"
+                                data-voffset="['220','260','220','160']"
+                                data-lineheight="['none','none','none','none']"
+                                data-width="['1200','750','600','400']" data-height="['none','none','none','none']"
+                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
+                                data-textAlign="['left','left','left','left']"
+                                data-paddingtop="[0,0,0,0]" data-paddingright="[55,55,0,0]"
+                                data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,43,0,0]"
+                                style="z-index:13; display: block; gap:15px; justify-content: left;">
+
+                                                                    <a href="https://api.whatsapp.com/send?phone=+57%20318%200236849&amp;text=Quisiera%20mayor%20informaci%C3%B3n..." target="data-target=_blank"
+                                        class="btn_slider rev-button">
+                                        <span style="padding: 0px 20px 0px 0px;">
+                                            ¿Cuanto vale mi proyecto?
+                                        </span>
+                                    </a>
+                                                                                            </div>
+                        
+                    </li>
+                                    
+                    <!-- SLIDE  -->
+                    <li class="swiper-slide" data-index="rs-6" data-transition="fade"
+                        data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"
+                        data-easein="default" data-easeout="default" data-masterspeed="default"
+                        data-thumb="https://www.ingenioelectrocivil.com/images/cabezotes/web-pregunta-por-799-285.webp" data-rotate="0" data-fstransition="fade"
+                        data-fsmasterspeed="300" data-fsslotamount="7" data-saveperformance="off"
+                        data-title="Pregunta por"
+                         data-param1="02"                         data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
+                        data-param8="" data-param9="" data-param10="" data-description=""
+                        data-delay="9000"  >
+
+                        <!-- MAIN IMAGE -->
+                                                    <img src="https://www.ingenioelectrocivil.com/images/cabezotes-mobile/web-pregunta-por-723-399.webp" alt="Pregunta por"
+                                data-lazyload="https://www.ingenioelectrocivil.com/images/cabezotes-mobile/web-pregunta-por-723-399.webp" data-kenburnzoom="https://www.ingenioelectrocivil.com/images/cabezotes/web-pregunta-por-799-285.webp"
+                                data-bgposition="center center" data-bgfit="cover" data-bgparallax="4"
+                                class="rev-slidebg " data-kenburns="off" data-offsetstart="0 200"
+                                data-offsetend="0 -200" data-duration="10000" data-ease="Linear.easeNone"
+                                data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0"
+                                width="780"
+                                height="700"
+                                title="Pregunta por" data-no-retina>
+                        
+                        <img src="https://www.ingenioelectrocivil.com/images/cabezotes/web-pregunta-por-799-285.webp" alt="Pregunta por"
+                            data-lazyload="https://www.ingenioelectrocivil.com/images/cabezotes/web-pregunta-por-799-285.webp" data-kenburnzoom="https://www.ingenioelectrocivil.com/images/cabezotes/web-pregunta-por-799-285.webp"
+                            data-bgposition="center center" data-bgfit="cover" data-bgparallax="4" class="rev-slidebg "
+                            data-kenburns="off" data-offsetstart="0 200" data-offsetend="0 -200"
+                            data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110"
+                            data-rotatestart="0" data-rotateend="0"
+                            width="1920"
+                            height="740"
+                            title="Pregunta por" data-no-retina>
+
+                        
+                        <!-- DARKEN -->
+                                                    <div class="tp-caption tp-shape tp-shapewrapper" id="slide-19-layer-0"
+                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                                data-width="full" data-height="[5000]" data-whitespace="nowrap" data-type="shape"
+                                data-basealign="slide" data-responsive_offset="on" data-responsive="off"
+                                data-frames='[{"from":"opacity:0;","speed":0,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"ease":"nothing"}]'
+                                data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
+                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                data-paddingleft="[0,0,0,0]"
+                                style=" background:  linear-gradient(0deg, rgba(0, 0, 0, 0.8) 43%, rgba(0, 0, 0, 0.8) 15%, rgba(255, 255, 255, 0.12) 60%);">
+                            </div>
+                        
+                                                    <!-- LAYER NR. 1 [ title ] -->
+                            <div class="hero-content tp-caption tp-resizeme site-text-primary pl-0 font-subtitle text-theme2 handline title-slider "
+                                id="slide-901-layer-2"
+                                data-x="['left','left','left','left']"
+                                data-hoffset="[50,30,30,30]" data-y="['top','top','top','top']"
+                                data-voffset="['200','50','50','0']" data-fontsize="['22','22','22','22']"
+                                data-lineheight="['70','70','50','38']" data-width="['800','750','600','400']"
+                                data-height="['none','none','none','none']"
+                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
+                                data-textAlign="['left','left','left','left']"
+                                data-paddingtop="[0,0,0,4]" data-paddingright="[55,55,0,0]"
+                                data-paddingbottom="[0,0,0,4]" data-paddingleft="[0,43,0,0]"
+                                style="z-index: 7;color:#ffffff; margin-bottom: 20px; white-space: normal;font-family: Barlow Condensed;font-weight: 400; padding: 0;">
+                                <span class="subtitle subtitle--extended">Pregunta por</span>
+                                
+                            </div>
+                        
+                                                    <!-- LAYER NR. 1 [ title ] -->
+                            <div class="tp-caption tp-resizeme site-text-primary pl-0 font-subtitle text-theme2"
+                                id="slide-901-layer-2"
+                                data-x="['left','left','left','left']"
+                                data-hoffset="[50,30,30,30]" data-y="['top','top','top','top']"
+                                data-voffset="['280','130','140','70']" data-fontsize="['84','74','67','50']"
+                                data-lineheight="['80','70','70','50']" data-width="['1200','750','600','400']"
+                                data-height="['none','none','none','none']"
+                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
+                                data-textAlign="['left','left','left','left']"
+                                data-paddingtop="[0,0,0,0]" data-paddingright="[50,70,60,0]"
+                                data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,43,0,0]"
+                                style="z-index: 7; margin-bottom: 20px; white-space: normal; color:#ffffff ;border-width:0; font-weight:500; font-family: Yantramanav;">
+                                Diseño y construcción de instalaciones fotovoltaicas
+                            </div>
+                        
+                        
+                                                    <!-- LAYER NR. 4 [ for see all service botton ] -->
+                            <div class="tp-caption tp-resizeme  " id="slide-901-layer-5"
+                                data-x="['left','left','left','left']"
+                                data-hoffset="[50,30,30,30]" data-y="['middle','middle','middle','middle']"
+                                data-voffset="['220','260','220','160']"
+                                data-lineheight="['none','none','none','none']"
+                                data-width="['1200','750','600','400']" data-height="['none','none','none','none']"
+                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
+                                data-textAlign="['left','left','left','left']"
+                                data-paddingtop="[0,0,0,0]" data-paddingright="[55,55,0,0]"
+                                data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,43,0,0]"
+                                style="z-index:13; display: block; gap:15px; justify-content: left;">
+
+                                                                    <a href="https://api.whatsapp.com/send?phone=+57%20318%200236849&amp;text=Quisiera%20mayor%20informaci%C3%B3n..." target=""
+                                        class="btn_slider rev-button">
+                                        <span style="padding: 0px 20px 0px 0px;">
+                                            Saber más
+                                        </span>
+                                    </a>
+                                                                                            </div>
+                        
+                    </li>
+                                    
+                    <!-- SLIDE  -->
+                    <li class="swiper-slide" data-index="rs-5" data-transition="fade"
+                        data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"
+                        data-easein="default" data-easeout="default" data-masterspeed="default"
+                        data-thumb="https://www.ingenioelectrocivil.com/images/cabezotes/web-titulo-245-107.webp" data-rotate="0" data-fstransition="fade"
+                        data-fsmasterspeed="300" data-fsslotamount="7" data-saveperformance="off"
+                        data-title="Consultoria, diseño, ejecución de obras y legalización"
+                         data-param1="03"                         data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
+                        data-param8="" data-param9="" data-param10="" data-description=""
+                        data-delay="9000"  >
+
+                        <!-- MAIN IMAGE -->
+                                                    <img src="https://www.ingenioelectrocivil.com/images/cabezotes-mobile/web-titulo-662-351.webp" alt="Consultoria, diseño, ejecución de obras y legalización"
+                                data-lazyload="https://www.ingenioelectrocivil.com/images/cabezotes-mobile/web-titulo-662-351.webp" data-kenburnzoom="https://www.ingenioelectrocivil.com/images/cabezotes/web-titulo-245-107.webp"
+                                data-bgposition="center center" data-bgfit="cover" data-bgparallax="4"
+                                class="rev-slidebg " data-kenburns="on" data-offsetstart="0 200"
+                                data-offsetend="0 -200" data-duration="10000" data-ease="Linear.easeNone"
+                                data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0"
+                                width="780"
+                                height="700"
+                                title="Consultoria, diseño, ejecución de obras y legalización" data-no-retina>
+                        
+                        <img src="https://www.ingenioelectrocivil.com/images/cabezotes/web-titulo-245-107.webp" alt="Consultoria, diseño, ejecución de obras y legalización"
+                            data-lazyload="https://www.ingenioelectrocivil.com/images/cabezotes/web-titulo-245-107.webp" data-kenburnzoom="https://www.ingenioelectrocivil.com/images/cabezotes/web-titulo-245-107.webp"
+                            data-bgposition="center center" data-bgfit="cover" data-bgparallax="4" class="rev-slidebg "
+                            data-kenburns="on" data-offsetstart="0 200" data-offsetend="0 -200"
+                            data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110"
+                            data-rotatestart="0" data-rotateend="0"
+                            width="1920"
+                            height="740"
+                            title="Consultoria, diseño, ejecución de obras y legalización" data-no-retina>
+
+                        
+                        <!-- DARKEN -->
+                                                    <div class="tp-caption tp-shape tp-shapewrapper" id="slide-19-layer-0"
+                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                                data-width="full" data-height="[5000]" data-whitespace="nowrap" data-type="shape"
+                                data-basealign="slide" data-responsive_offset="on" data-responsive="off"
+                                data-frames='[{"from":"opacity:0;","speed":0,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"ease":"nothing"}]'
+                                data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
+                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                data-paddingleft="[0,0,0,0]"
+                                style=" background:  linear-gradient(0deg, rgba(0, 0, 0, 0.8) 43%, rgba(0, 0, 0, 0.8) 15%, rgba(255, 255, 255, 0.12) 60%);">
+                            </div>
+                        
+                                                    <!-- LAYER NR. 1 [ title ] -->
+                            <div class="hero-content tp-caption tp-resizeme site-text-primary pl-0 font-subtitle text-theme2 handline title-slider "
+                                id="slide-901-layer-2"
+                                data-x="['left','left','left','left']"
+                                data-hoffset="[50,30,30,30]" data-y="['top','top','top','top']"
+                                data-voffset="['200','50','50','0']" data-fontsize="['22','22','22','22']"
+                                data-lineheight="['70','70','50','38']" data-width="['800','750','600','400']"
+                                data-height="['none','none','none','none']"
+                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
+                                data-textAlign="['left','left','left','left']"
+                                data-paddingtop="[0,0,0,4]" data-paddingright="[55,55,0,0]"
+                                data-paddingbottom="[0,0,0,4]" data-paddingleft="[0,43,0,0]"
+                                style="z-index: 7;color:#ffffff; margin-bottom: 20px; white-space: normal;font-family: Barlow Condensed;font-weight: 400; padding: 0;">
+                                <span class="subtitle subtitle--extended">Consultoria, diseño, ejecución de obras y legalización</span>
+                                
+                            </div>
+                        
+                                                    <!-- LAYER NR. 1 [ title ] -->
+                            <div class="tp-caption tp-resizeme site-text-primary pl-0 font-subtitle text-theme2"
+                                id="slide-901-layer-2"
+                                data-x="['left','left','left','left']"
+                                data-hoffset="[50,30,30,30]" data-y="['top','top','top','top']"
+                                data-voffset="['280','130','140','70']" data-fontsize="['84','74','67','50']"
+                                data-lineheight="['80','70','70','50']" data-width="['1200','750','600','400']"
+                                data-height="['none','none','none','none']"
+                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
+                                data-textAlign="['left','left','left','left']"
+                                data-paddingtop="[0,0,0,0]" data-paddingright="[50,70,60,0]"
+                                data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,43,0,0]"
+                                style="z-index: 7; margin-bottom: 20px; white-space: normal; color:#ffffff ;border-width:0; font-weight:500; font-family: Yantramanav;">
+                                De sus proyectos energéticos
+                            </div>
+                        
+                        
+                                                    <!-- LAYER NR. 4 [ for see all service botton ] -->
+                            <div class="tp-caption tp-resizeme  " id="slide-901-layer-5"
+                                data-x="['left','left','left','left']"
+                                data-hoffset="[50,30,30,30]" data-y="['middle','middle','middle','middle']"
+                                data-voffset="['220','260','220','160']"
+                                data-lineheight="['none','none','none','none']"
+                                data-width="['1200','750','600','400']" data-height="['none','none','none','none']"
+                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
+                                data-textAlign="['left','left','left','left']"
+                                data-paddingtop="[0,0,0,0]" data-paddingright="[55,55,0,0]"
+                                data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,43,0,0]"
+                                style="z-index:13; display: block; gap:15px; justify-content: left;">
+
+                                                                    <a href="https://api.whatsapp.com/send?phone=+57%20318%200236849&amp;text=Quisiera%20mayor%20informaci%C3%B3n..." target=""
+                                        class="btn_slider rev-button">
+                                        <span style="padding: 0px 20px 0px 0px;">
+                                            Saber más
+                                        </span>
+                                    </a>
+                                                                                            </div>
+                        
+                    </li>
+                                    
+                    <!-- SLIDE  -->
+                    <li class="swiper-slide" data-index="rs-1" data-transition="fade"
+                        data-slotamount="default" data-hideafterloop="0" data-hideslideonmobile="off"
+                        data-easein="default" data-easeout="default" data-masterspeed="default"
+                        data-thumb="https://www.ingenioelectrocivil.com/images/cabezotes/web-etiam-nec-nibh-at-mi-maximus-cursus-nec-ut-nisi-567.webp" data-rotate="0" data-fstransition="fade"
+                        data-fsmasterspeed="300" data-fsslotamount="7" data-saveperformance="off"
+                        data-title="Somos líderes en la gestión energética"
+                         data-param1="04"                         data-param2="" data-param3="" data-param4="" data-param5="" data-param6="" data-param7=""
+                        data-param8="" data-param9="" data-param10="" data-description=""
+                        data-delay="9000"  >
+
+                        <!-- MAIN IMAGE -->
+                                                    <img src="https://www.ingenioelectrocivil.com/images/cabezotes-mobile/web-etiam-nec-nibh-at-mi-maximus-cursus-nec-ut-nisi-512.webp" alt="Somos líderes en la gestión energética"
+                                data-lazyload="https://www.ingenioelectrocivil.com/images/cabezotes-mobile/web-etiam-nec-nibh-at-mi-maximus-cursus-nec-ut-nisi-512.webp" data-kenburnzoom="https://www.ingenioelectrocivil.com/images/cabezotes/web-etiam-nec-nibh-at-mi-maximus-cursus-nec-ut-nisi-567.webp"
+                                data-bgposition="center center" data-bgfit="cover" data-bgparallax="4"
+                                class="rev-slidebg " data-kenburns="on" data-offsetstart="0 200"
+                                data-offsetend="0 -200" data-duration="10000" data-ease="Linear.easeNone"
+                                data-scalestart="100" data-scaleend="110" data-rotatestart="0" data-rotateend="0"
+                                width="780"
+                                height="700"
+                                title="Somos líderes en la gestión energética" data-no-retina>
+                        
+                        <img src="https://www.ingenioelectrocivil.com/images/cabezotes/web-etiam-nec-nibh-at-mi-maximus-cursus-nec-ut-nisi-567.webp" alt="Somos líderes en la gestión energética"
+                            data-lazyload="https://www.ingenioelectrocivil.com/images/cabezotes/web-etiam-nec-nibh-at-mi-maximus-cursus-nec-ut-nisi-567.webp" data-kenburnzoom="https://www.ingenioelectrocivil.com/images/cabezotes/web-etiam-nec-nibh-at-mi-maximus-cursus-nec-ut-nisi-567.webp"
+                            data-bgposition="center center" data-bgfit="cover" data-bgparallax="4" class="rev-slidebg "
+                            data-kenburns="on" data-offsetstart="0 200" data-offsetend="0 -200"
+                            data-duration="10000" data-ease="Linear.easeNone" data-scalestart="100" data-scaleend="110"
+                            data-rotatestart="0" data-rotateend="0"
+                            width="1920"
+                            height="740"
+                            title="Somos líderes en la gestión energética" data-no-retina>
+
+                        
+                        <!-- DARKEN -->
+                                                    <div class="tp-caption tp-shape tp-shapewrapper" id="slide-19-layer-0"
+                                data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']"
+                                data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']"
+                                data-width="full" data-height="[5000]" data-whitespace="nowrap" data-type="shape"
+                                data-basealign="slide" data-responsive_offset="on" data-responsive="off"
+                                data-frames='[{"from":"opacity:0;","speed":0,"to":"o:1;","delay":0,"ease":"Power3.easeInOut"},{"delay":"wait","speed":1000,"ease":"nothing"}]'
+                                data-textAlign="['left','left','left','left']" data-paddingtop="[0,0,0,0]"
+                                data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
+                                data-paddingleft="[0,0,0,0]"
+                                style=" background:  linear-gradient(0deg, rgba(0, 0, 0, 0.8) 43%, rgba(0, 0, 0, 0.8) 15%, rgba(255, 255, 255, 0.12) 60%);">
+                            </div>
+                        
+                                                    <!-- LAYER NR. 1 [ title ] -->
+                            <div class="hero-content tp-caption tp-resizeme site-text-primary pl-0 font-subtitle text-theme2 handline title-slider "
+                                id="slide-901-layer-2"
+                                data-x="['left','left','left','left']"
+                                data-hoffset="[50,30,30,30]" data-y="['top','top','top','top']"
+                                data-voffset="['200','50','50','0']" data-fontsize="['22','22','22','22']"
+                                data-lineheight="['70','70','50','38']" data-width="['800','750','600','400']"
+                                data-height="['none','none','none','none']"
+                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
+                                data-textAlign="['left','left','left','left']"
+                                data-paddingtop="[0,0,0,4]" data-paddingright="[55,55,0,0]"
+                                data-paddingbottom="[0,0,0,4]" data-paddingleft="[0,43,0,0]"
+                                style="z-index: 7;color:#ffffff; margin-bottom: 20px; white-space: normal;font-family: Barlow Condensed;font-weight: 400; padding: 0;">
+                                <span class="subtitle subtitle--extended">Somos líderes en la gestión energética</span>
+                                
+                            </div>
+                        
+                                                    <!-- LAYER NR. 1 [ title ] -->
+                            <div class="tp-caption tp-resizeme site-text-primary pl-0 font-subtitle text-theme2"
+                                id="slide-901-layer-2"
+                                data-x="['left','left','left','left']"
+                                data-hoffset="[50,30,30,30]" data-y="['top','top','top','top']"
+                                data-voffset="['280','130','140','70']" data-fontsize="['84','74','67','50']"
+                                data-lineheight="['80','70','70','50']" data-width="['1200','750','600','400']"
+                                data-height="['none','none','none','none']"
+                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":500,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
+                                data-textAlign="['left','left','left','left']"
+                                data-paddingtop="[0,0,0,0]" data-paddingright="[50,70,60,0]"
+                                data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,43,0,0]"
+                                style="z-index: 7; margin-bottom: 20px; white-space: normal; color:#ffffff ;border-width:0; font-weight:500; font-family: Yantramanav;">
+                                Y contamos con la capacidad de realizar estructuras que impliquen nuevos retos
+                            </div>
+                        
+                        
+                                                    <!-- LAYER NR. 4 [ for see all service botton ] -->
+                            <div class="tp-caption tp-resizeme  " id="slide-901-layer-5"
+                                data-x="['left','left','left','left']"
+                                data-hoffset="[50,30,30,30]" data-y="['middle','middle','middle','middle']"
+                                data-voffset="['220','260','220','160']"
+                                data-lineheight="['none','none','none','none']"
+                                data-width="['1200','750','600','400']" data-height="['none','none','none','none']"
+                                data-whitespace="['normal','normal','normal','normal']" data-type="text"
+                                data-responsive_offset="on"
+                                data-frames='[{"from":"y:100px(R);opacity:0;","speed":2000,"to":"o:1;","delay":2000,"ease":"Power4.easeOut"},{"delay":"wait","speed":1000,"to":"y:-50px;opacity:0;","ease":"Power2.easeInOut"}]'
+                                data-textAlign="['left','left','left','left']"
+                                data-paddingtop="[0,0,0,0]" data-paddingright="[55,55,0,0]"
+                                data-paddingbottom="[0,0,0,0]" data-paddingleft="[0,43,0,0]"
+                                style="z-index:13; display: block; gap:15px; justify-content: left;">
+
+                                                                    <a href="https://api.whatsapp.com/send?phone=+57%20318%200236849&amp;text=Quisiera%20mayor%20informaci%C3%B3n..." target=""
+                                        class="btn_slider rev-button">
+                                        <span style="padding: 0px 20px 0px 0px;">
+                                            Contáctenos
+                                        </span>
+                                    </a>
+                                                                                            </div>
+                        
+                    </li>
+                                
+            </ul>
+            <div class="tp-bannertimer tp-bottom" style="visibility: hidden !important;"></div>
+        </div>
+    </div><!-- END REVOLUTION SLIDER -->
+</section>
+        <section class="about-bg-three">
+    <div class="container">
+        <div class="row g-0">
+            <div class="col-lg-12 col-xl-6">
+                <div class="about-left">
+                    <div class="pbmit-heading-subheading text-light">
+                        <h1 class="pbmit-subtitle">PROPUESTA DE VALOR</h1>
+                        <h2 class="pbmit-title">Nuestro propósito es que juntos construyamos</h2>
+                    </div>
+                    <div class="pbmit-heading-desc">TODO LO QUE TE PROPONGAS A CREAR...<img alt="enlightened" height="23" src="https://www.ingenioelectrocivil.com/themes/damoseditor/js/ckeditor/4/plugins/smiley/images/lightbulb.png" title="enlightened" width="23" /></div>
+
+<div class="row">
+<div class="col-md-6">
+<div class="pbmit-ihbox pbmit-ihbox-style-11">
+<div class="pbmit-ihbox-box d-flex align-items-center">
+<div class="pbmit-ihbox-contents">
+<ul>
+	<li>
+	<h2 class="pbmit-element-title">Alto nivel de soporte</h2>
+	</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="pbmit-ihbox pbmit-ihbox-style-11">
+<div class="pbmit-ihbox-box d-flex align-items-center">
+<div class="pbmit-ihbox-contents">
+<ul>
+	<li>
+	<h2 class="pbmit-element-title">Cobertura</h2>
+	</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="pbmit-ihbox pbmit-ihbox-style-11">
+<div class="pbmit-ihbox-box d-flex align-items-center">
+<div class="pbmit-ihbox-contents">
+<ul>
+	<li>
+	<h2 class="pbmit-element-title">Servicio de calidad</h2>
+	</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="pbmit-ihbox pbmit-ihbox-style-11">
+<div class="pbmit-ihbox-box d-flex align-items-center">
+<div class="pbmit-ihbox-contents">
+<ul>
+	<li>
+	<h2 class="pbmit-element-title">Cumplimiento</h2>
+	</li>
+</ul>
+
+<p style="margin: 0cm 0cm 8pt; text-align: justify;">&nbsp;</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+                                                                <a href="https://www.ingenioelectrocivil.com/nosotros/quienes-somos" target="_self"
+                            class="pbmit-btn pbmit-btn-shape-round mt-4">
+                            <span>SABER MÁS</span>
+                        </a>
+                                    </div>
+            </div>
+            <div class="col-lg-12 col-xl-6">
+                <div class="about-us-img-one">
+                    <img style="max-width: 500px;" src="images/home/web-ingenio-electrocivil-1728684163-djtkn-595.webp"
+                        alt="Ingenio Electrocivil" width="470"
+                        height="560" loading="lazy"
+                        title="Ingenio Electrocivil" class="img-fluid w-100">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="service-section-three">
+    <div class="container g-0">
+        <div class="row">
+            <div class="col-lg-12 col-xl-5">
+                <div class="img_container">
+                    <div class="img_background"
+                        style="background-image: url('images/home/web-ingenio-electrocivil-1728684756-tum4x-602.webp')">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-xl-6">
+                <div class="service-content">
+                    <div class="pbmit-heading-subheading text-global">
+                        <h2 class="pbmit-subtitle">SERVICIO DESTACADO</h2>
+                        <h2 class="pbmit-title">Construye tus proyectos con la mejor tecnología y un equipo especializado</h2>
+                    </div>
+                    <h2 class="pbmit-heading-desc">¡Estamos para brindarte eficiencia energética!</h2>
+
+<div class="row">
+<ul class="icon-list-items col-md-6">
+	<li class="list-group-item fa fa-check-circle">Consultoria</li>
+	<li class="list-group-item fa fa-check-circle">Interventoría</li>
+	<li class="list-group-item fa fa-check-circle">Diseños eléctricos en media y baja tensión</li>
+</ul>
+
+<ul class="icon-list-items col-md-6">
+	<li class="list-group-item fa fa-check-circle">Diseño y construcción de instalaciones fotovoltaicas</li>
+	<li class="list-group-item fa fa-check-circle">Diseño y construcción en iluminación de Interiores y Exteriores</li>
+	<li class="list-group-item fa fa-check-circle">Diseño de redes eléctricas</li>
+</ul>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="service-bg-one">
+    <div class="container">
+        <div class="pbmit-heading-subheading text-light text-center">
+            <h2 class="pbmit-subtitle">PORTAFOLIO DE SERVICIOS</h2>
+            <h2 class="pbmit-title">Soluciones hechas a su medida</h2>
+        </div>
+        <div class="swiper-slider" data-autoplay="false" data-dots="true" data-arrows="false" data-columns="3"
+            data-margin="30" data-effect="slide">
+            <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                        <!-- Slide1 -->
+                        <article class="pbmit-service-style-1">
+                            <div class="pbminfotech-post-item">
+                                <div class="pbmit-service-img-wrapper">
+                                    <div class="pbmit-featured-wrapper">
+                                        <a href="servicios/disenos-electricos-en-media-y-baja-tension/consultoria">
+                                            <img src="https://www.ingenioelectrocivil.com/images/subsections/web-servicio-destacado-1-729.webp" class="img-fluid"
+                                                alt="Image Consultoría" loading="lazy"
+                                                width="850"
+                                                height="480">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pbminfotech-box-content content_service">
+                                    <div class="pbminfotech-box-content-inner">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="pbmit-service-title">
+                                                <a
+                                                    href="servicios/disenos-electricos-en-media-y-baja-tension/consultoria">Consultoría</a>
+                                            </h3>
+                                        </div>
+                                        <div class="pbmit-service-content">
+                                            <p>Poseemos amplio conocimiento en ingeniería eléctrica para brindarle una adecuada consultoría que ...</p>
+                                        </div>
+                                        <div class="pbmit-service-btn">
+                                            <a class="btn-arrow" href="servicios/disenos-electricos-en-media-y-baja-tension/consultoria"><span>Saber
+                                                    más</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                                    <div class="swiper-slide">
+                        <!-- Slide1 -->
+                        <article class="pbmit-service-style-1">
+                            <div class="pbminfotech-post-item">
+                                <div class="pbmit-service-img-wrapper">
+                                    <div class="pbmit-featured-wrapper">
+                                        <a href="servicios/disenos-electricos-en-media-y-baja-tension/interventoria">
+                                            <img src="https://www.ingenioelectrocivil.com/images/subsections/web-servicio-destacado-2-341.webp" class="img-fluid"
+                                                alt="Image Interventoría" loading="lazy"
+                                                width="850"
+                                                height="480">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pbminfotech-box-content content_service">
+                                    <div class="pbminfotech-box-content-inner">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="pbmit-service-title">
+                                                <a
+                                                    href="servicios/disenos-electricos-en-media-y-baja-tension/interventoria">Interventoría</a>
+                                            </h3>
+                                        </div>
+                                        <div class="pbmit-service-content">
+                                            <p>Brindamos seguimiento técnico, revisión, supervisión sobre diseños, instalaciones, proyectos, ...</p>
+                                        </div>
+                                        <div class="pbmit-service-btn">
+                                            <a class="btn-arrow" href="servicios/disenos-electricos-en-media-y-baja-tension/interventoria"><span>Saber
+                                                    más</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                                    <div class="swiper-slide">
+                        <!-- Slide1 -->
+                        <article class="pbmit-service-style-1">
+                            <div class="pbminfotech-post-item">
+                                <div class="pbmit-service-img-wrapper">
+                                    <div class="pbmit-featured-wrapper">
+                                        <a href="servicios/disenos-electricos-en-media-y-baja-tension/disenos-electricos-en-media-y-baja-tension">
+                                            <img src="https://www.ingenioelectrocivil.com/images/subsections/web-servicio-destacado-3-875.webp" class="img-fluid"
+                                                alt="Image Diseños eléctricos en media y baja tensión" loading="lazy"
+                                                width="850"
+                                                height="480">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="pbminfotech-box-content content_service">
+                                    <div class="pbminfotech-box-content-inner">
+                                        <div class="d-flex justify-content-between align-items-center">
+                                            <h3 class="pbmit-service-title">
+                                                <a
+                                                    href="servicios/disenos-electricos-en-media-y-baja-tension/disenos-electricos-en-media-y-baja-tension">Diseños eléctricos en media y baja tensión</a>
+                                            </h3>
+                                        </div>
+                                        <div class="pbmit-service-content">
+                                            <p>Ingenio Electrocivil como prestadora de servicios de ingeniería eléctrica cuenta con profesionales ...</p>
+                                        </div>
+                                        <div class="pbmit-service-btn">
+                                            <a class="btn-arrow" href="servicios/disenos-electricos-en-media-y-baja-tension/disenos-electricos-en-media-y-baja-tension"><span>Saber
+                                                    más</span></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                            </div>
+            <div class="pbmit-ihbox pbmit-ihbox-style-3">
+                <div class="pbmit-ihbox-box">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="appoinment-bg-one appoinment-bg-three">
+    <div class="container g-0 pbmit-col-stretched-yes pbmit-col-right">
+        <div class="row g-0">
+            <div class="col-md-6">
+                <div class="appoinment-single">
+                    <div class="appoinment-content">
+                        <div class="pbmit-heading-subheading text-light">
+                            <h2 class="pbmit-subtitle">¿Tiende dudas sobre el servicio?</h2>
+                            <h2 class="pbmit-title">Preguntas Frecuentes </h2>
+                        </div>
+                        <div class="accordion" id="accordionExample">
+                                                            <div class="accordion-item active">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne0"
+                                            aria-expanded="false" aria-controls="collapseOne0">
+                                            1. ¿Puedo adquirir un sistema de paneles solares sin tener acceso a red eléctrica?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne0"
+                                        class="accordion-collapse collapse show"
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span lang="ES-MX" style="font-family:&quot;Arial&quot;,sans-serif">Si, por medio de las baterías que almacenan energía permitirá sumin<span style="color:null;">istrar energía du</span>rante todo el día y la noche. <span style="color:null;">Es necesario realizar un estudio previo para determinar la viabilidad del sistema solar en tu ubicación, considerando factores como la radiación solar disponible, la inclinación y orientación de los paneles solares, y la carga energética que deseas alimentar.</span></span></span></span></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="accordion-item ">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne1"
+                                            aria-expanded="false" aria-controls="collapseOne1">
+                                            2. ¿Cuánto tiempo tomará recuperar mi inversión en paneles solares?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne1"
+                                        class="accordion-collapse collapse "
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p><span style="color:null;"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span lang="ES-MX" style="font-family:&quot;Arial&quot;,sans-serif">El tiempo de recuperación de la inversión en paneles solares suele oscilar entre 5 y 10 años, aunque en algunos casos puede ser más corto o largo dependiendo de una serie de factores tales como (costo inicial, consumo energético, tamaño de la instalación, etc.)</span></span></span></span></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="accordion-item ">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne2"
+                                            aria-expanded="false" aria-controls="collapseOne2">
+                                            3. ¿Necesito permisos para instalar paneles solares en mi hogar?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne2"
+                                        class="accordion-collapse collapse "
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span lang="ES-MX" style="font-family:&quot;Arial&quot;,sans-serif">Los requisitos y permisos necesarios para la instalación de paneles solares en un hogar pueden variar según el país, el departamento o la ciudad. En general, la instalación de paneles solares en una propiedad residencial implica obtener algunos permisos y cumplir con ciertos requisitos. Escríbenos y te ayudamos de manera precisa a obtener información sobre los permisos y requisitos específicos de tu área. </span></span></span></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                            <div class="accordion-item ">
+                                    <h2 class="accordion-header" id="headingOne">
+                                        <button class="accordion-button collapsed" type="button"
+                                            data-bs-toggle="collapse" data-bs-target="#collapseOne3"
+                                            aria-expanded="false" aria-controls="collapseOne3">
+                                            4. ¿cuánto reduciría mi factura de luz si instalo un sistema de paneles?
+                                        </button>
+                                    </h2>
+                                    <div id="collapseOne3"
+                                        class="accordion-collapse collapse "
+                                        aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                        <div class="accordion-body">
+                                            <p><span style="color:null;"><span style="font-size:11pt"><span style="line-height:107%"><span style="font-family:Calibri,sans-serif"><span lang="ES-MX" style="font-family:&quot;Arial&quot;,sans-serif">La cantidad de reducción en tu factura de luz dependerá de varios factores, incluyendo el tamaño del sistema solar, la cantidad de energía que generas, tu consumo energético y las tarifas eléctricas vigentes. Es importante mencionar que la instalación de un sistema de paneles solares no siempre significa una reducción del 100% en la factura de luz. Es posible que sigas recibiendo una pequeña cantidad de electricidad de la red eléctrica en momentos en que la generación solar no es suficiente, como en días nublados o durante la noche.</span></span></span></span></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                                    </div>
+                                                                            <a href="https://forms.office.com/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAN__hSjo_VUQ0pQTVA2M1laMk9WNDZOMUQxUDBUNjJOWS4u" target="_blank"
+                                class="pbmit-btn pbmit-btn-shape-round pbmit-btn-inline">
+                                <span>Contáctanos aquí!</span>
+                            </a>
+                                            </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="appoinment-form">
+                    <div class="pbmit-heading-subheading text-white">
+                        <h2 class="pbmit-subtitle">¿Qué tipo de servicio necesitas?</h2>
+                        <h2 class="pbmit-title">Solicite una llamada de inmediato</h2>
+                    </div>
+                    <div class="pbmit-heading-desc">Recibe asistencia personalizada de nuestro equipo especializado.</div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <section class="section-xxl">
+    <div class="container">
+        <div class="pbmit-heading-subheading text-center">
+            <h2 class="pbmit-subtitle">NUESTRO BLOG</h2>
+            <h2 class="pbmit-title">Publicaciones recientes</h2>
+        </div>
+        <div class="row pbmit-blog-style">
+                            <article class="pbmit-blog-style-3 col-xl-4 col-md-6">
+                    <div class="post-item">
+                        <div class="pbmit-featured-container">
+                            <div class="pbmit-featured-wrapper">
+                                <a href="publicaciones/electrico/que-es-el-estudio-de-conexion-simplificada-y-por-que-es-clave-en-proyectos-solares">
+                                    <img src="images/blogs/web-que-es-el-estudio-de-conexion-simplificada-y-por-que-es-clave-en-proyectos-solares-381.webp"
+                                        alt="¿Qué es el Estudio de Conexión Simplificada y por qué es clave en proyectos solares?"
+                                        width="909"
+                                        height="480"
+                                        class="image" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="pbmit-meta-date-wrapper">
+                                <span class="pbmit-post-date">06</span>
+                                <span class="pbmit-post-month-year">Octubre</span>
+                            </div>
+                        </div>
+                        <div class="pbminfotech-box-content content_blog_home">
+                            <div class="pbmit-meta-container">
+                                <div class="pbmit-meta-author-wrapper pbmit-meta-line">
+                                    <a href="publicaciones/electrico" title="Posted admin"
+                                        rel="author"> Eléctrico</a>
+                                </div>
+                            </div>
+                            <h3 class="pbmit-post-title">
+                                <a href="publicaciones/electrico/que-es-el-estudio-de-conexion-simplificada-y-por-que-es-clave-en-proyectos-solares">¿Qué es el Estudio de Conexión Simplificada y por qué es clave en proyectos solares?</a>
+                            </h3>
+                        </div>
+                    </div>
+                </article>
+                            <article class="pbmit-blog-style-3 col-xl-4 col-md-6">
+                    <div class="post-item">
+                        <div class="pbmit-featured-container">
+                            <div class="pbmit-featured-wrapper">
+                                <a href="publicaciones/noticias/ingenio-informa-septiembre-26-de-2025">
+                                    <img src="images/no_image_fixed_blog.jpg"
+                                        alt="INGENIO INFORMA - Septiembre 26 de 2025"
+                                        width="909"
+                                        height="480"
+                                        class="image" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="pbmit-meta-date-wrapper">
+                                <span class="pbmit-post-date">03</span>
+                                <span class="pbmit-post-month-year">Octubre</span>
+                            </div>
+                        </div>
+                        <div class="pbminfotech-box-content content_blog_home">
+                            <div class="pbmit-meta-container">
+                                <div class="pbmit-meta-author-wrapper pbmit-meta-line">
+                                    <a href="publicaciones/noticias" title="Posted admin"
+                                        rel="author"> Noticias</a>
+                                </div>
+                            </div>
+                            <h3 class="pbmit-post-title">
+                                <a href="publicaciones/noticias/ingenio-informa-septiembre-26-de-2025">INGENIO INFORMA - Septiembre 26 de 2025</a>
+                            </h3>
+                        </div>
+                    </div>
+                </article>
+                            <article class="pbmit-blog-style-3 col-xl-4 col-md-6">
+                    <div class="post-item">
+                        <div class="pbmit-featured-container">
+                            <div class="pbmit-featured-wrapper">
+                                <a href="publicaciones/electrico/la-importancia-de-los-planos-electricos-detallados-y-su-relacion-con-la-obra-civil">
+                                    <img src="images/blogs/web-la-importancia-de-los-planos-electricos-detallados-y-su-relacion-con-la-obra-civil-497.webp"
+                                        alt="La importancia de los planos eléctricos detallados y su relación con la obra civil."
+                                        width="909"
+                                        height="480"
+                                        class="image" loading="lazy">
+                                </a>
+                            </div>
+                            <div class="pbmit-meta-date-wrapper">
+                                <span class="pbmit-post-date">01</span>
+                                <span class="pbmit-post-month-year">Octubre</span>
+                            </div>
+                        </div>
+                        <div class="pbminfotech-box-content content_blog_home">
+                            <div class="pbmit-meta-container">
+                                <div class="pbmit-meta-author-wrapper pbmit-meta-line">
+                                    <a href="publicaciones/electrico" title="Posted admin"
+                                        rel="author"> Eléctrico</a>
+                                </div>
+                            </div>
+                            <h3 class="pbmit-post-title">
+                                <a href="publicaciones/electrico/la-importancia-de-los-planos-electricos-detallados-y-su-relacion-con-la-obra-civil">La importancia de los planos eléctricos detallados y su relación con la obra civil.</a>
+                            </h3>
+                        </div>
+                    </div>
+                </article>
+                    </div>
+        <div class="text-center mt-5">
+            <a href="https://www.ingenioelectrocivil.com/publicaciones" class="pbmit-btn pbmit-btn-shape-round pbmit-btn-outline">
+                <span>Ver todas las publicaciones</span>
+            </a>
+        </div>
+    </div>
+</section>
+    </div>
+
+        <div class="pbmit-footer-overlay">
+    <div class="pbmit-footer-overlay-inner">
+        <div class="container">
+            <div class="row">
+                <div class="pbmit-footer-overlay-left col-xl-3 col-md-12"> </div>
+                <div class="pbmit-footer-overlay-right col-xl-9 col-md-12">
+                    <div class="pbmit-footer-contact-info">
+                        <div class="pbmit-footer-contact-info-inner d-flex align-items-center">
+                            <i class="pbmit-industrey-icon pbmit-base-icon-time-call"></i>
+                            <div class="pbmit-footer-contact-info-wrap">
+                                                                    <span
+                                        class="pbmit-label pbmit-label-2">Servicio al cliente</span>
+                                                                                                                                            <a href="tel:304 2343778 - 3180236849">304 2343778 - 3180236849</a>
+                                                                    
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pbmit-footer-contact-info">
+                        <div class="pbmit-footer-contact-info-inner d-flex align-items-center">
+                            <i class="pbmit-industrey-icon pbmit-base-icon-email"></i>
+                            <div class="pbmit-footer-contact-info-wrap">
+                                                                    <span class="pbmit-label pbmit-label-2">E-mail
+                                    </span>
+                                                                                                                                            <a href="mailto:alejandroarchila@ingenioelectrocivil.com">alejandroarchila@ingenioelectrocivil.com</a>
+                                                                                                </div>
+                        </div>
+                    </div>
+                    <div class="pbmit-footer-contact-info">
+                        <div class="pbmit-footer-contact-info-inner d-flex align-items-center">
+                            <i class="pbmit-industrey-icon  pbmit-base-icon-send"></i>
+                            <div class="pbmit-footer-contact-info-wrap">
+                                                                    <span class="pbmit-label pbmit-label-2">Sede Bucaramanga</span>
+                                    Calle 55 # 23 - 57 <br> Barrio Nuevo Sotomayor <br> Bucaramanga, Colombia <br><a href="https://forms.office.com/r/QHZ4kbMfg4" style=" background-color: white;" >CONTACTENOS AQUI!</a>
+                                                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer site-footer">
+    <div class="pbmit-footer-widget-area">
+        <div class="container">
+            <div class="row">
+                <div class="pbmit-footer-widget-col-1 col-md-6 col-lg-3">
+                    <aside class="widget widget-last">
+                        <div class="textwidget">
+                            <form id="newsletter" action="https://www.ingenioelectrocivil.com/process-email-subscribe" method="POST">
+    
+    <div class="form-fields">
+        <div class="pbmit-footer-newsletter">
+            <i aria-hidden="true" class="pbmit-industrey-icon pbmit-base-icon-mailbox"></i>
+            <h4>Suscríbase a nuestro boletín</h4>
+            <div class="pbmit-footer-newsletter-form">
+                <input type="hidden" name="_token" value="M6b7V9iflq0BX4IZQpugc8nH0aQyvQj9oWO3WNV5">                <label>Email </label>
+                <input type="email" class="form-control" name="email" placeholder="Email " required="">
+                <button type="submit" value="Sign up"><span>Suscribirme</span></button>
+                <input type="hidden" name="form_language" value="es">
+                <input type="hidden" name="form_url" value="https://www.ingenioelectrocivil.com">
+                <input type="hidden" name="g-recaptcha-response" id="token-recaptcha-contact-new" value="">
+               
+            </div>
+        </div>
+    </div>
+</form>
+
+
+                        </div>
+                    </aside>
+                </div>
+                <div class="pbmit-footer-widget-col-5 col-md-12 col-lg-3">
+                    <div class="widget">
+                        <h2 class="widget-title">ACCESO RÁPIDO</h2>
+                        <ul class="pbmit-rpw-list">
+                                                                                                                                <li>
+                                        <a href="https://www.ingenioelectrocivil.com/servicios"
+                                            target="_self">
+                                            Servicios
+                                        </a>
+                                    </li>
+                                                                                                                                                                <li>
+                                        <a href="https://www.ingenioelectrocivil.com/servicios/disenos-electricos-en-media-y-baja-tension/consultoria"
+                                            target="_self">
+                                            Consultoría
+                                        </a>
+                                    </li>
+                                                                                                                                                                <li>
+                                        <a href="https://www.ingenioelectrocivil.com/servicios/disenos-electricos-en-media-y-baja-tension/interventoria"
+                                            target="_self">
+                                            Interventoría
+                                        </a>
+                                    </li>
+                                                                                                                                                                <li>
+                                        <a href="https://www.ingenioelectrocivil.com/contactenos"
+                                            target="_self">
+                                            Contáctenos
+                                        </a>
+                                    </li>
+                                                                                    </ul>
+                    </div>
+                </div>
+                <div class="pbmit-footer-widget-col-4 col-md-6 col-lg-3">
+                    <div class="widget">
+                        <h2 class="widget-title">DÓNDE ESTAMOS</h2>
+                        <div class="textwidget">
+                            <p>Calle 55 # 23 - 57 <br> Barrio Nuevo Sotomayor <br> Bucaramanga, Colombia <br><a href="https://forms.office.com/r/QHZ4kbMfg4" style=" background-color: white;" >CONTACTENOS AQUI!</a></p>
+
+                            <a class="footer-phone"
+                                href="tel:304 2343778 - 3180236849">304 2343778 - 3180236849</a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pbmit-footer-bottom">
+        <div class="container">
+            <div class="pbmit-footer-text-inner">
+                <div class="row d-flex align-items-center">
+                    <div class="pbmit-footer-copyright-box pbmit-footer-copyright-box-1  col-md-6 col-lg-5">
+                        <div class="menu-quick-links-container">
+                            Diseñado y hospedado por <a href="http://www.damos.co" target="_blank">Damos Soluciones</a>
+                        </div>
+                    </div>
+                    <div class="pbmit-footer-copyright-box pbmit-footer-copyright-box-2 col-md-6 col-lg-3">
+                        <img class="img-fluid" src="assets/images/footer-logo.png" alt="shape Ingenio Electrocivil" width="83" height="82">
+                    </div>
+                    <div class="pbmit-footer-copyright-box pbmit-footer-copyright-text col-md-12 col-lg-4">
+                        <ul class="pbmit-social-links">
+                                                            <li class="pbmit-social-li pbmit-social-facebook">
+                                    <a href="http://facebook.com/profile.php?id=61556536404180" target="_blank"
+                                     aria-label="Botón de red social">
+                                        <span><i class="pbmit-base-icon-facebook-squared"></i></span>
+                                    </a>
+                                </li>
+                                                            <li class="pbmit-social-li pbmit-social-facebook">
+                                    <a href="https://www.instagram.com/ingenio_electrocivil/" target="_blank"
+                                     aria-label="Botón de red social">
+                                        <span><i class="pbmit-base-icon-instagram"></i></span>
+                                    </a>
+                                </li>
+                                                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    <div class="pbmit-search-overlay">
+    <div class="pbmit-icon-close"></div>
+    <div class="pbmit-search-outer">
+        <form action="https://www.ingenioelectrocivil.com/search" class="pbmit-site-searchform">
+            <input type="search" class="form-control field searchform-s" name="q" placeholder="Buscar …">
+            <button type="submit">
+                <i class="pbmit-base-icon-search"></i>
+            </button>
+        </form>
+    </div>
+</div>
+    
+    <link rel="stylesheet" href="https://www.ingenioelectrocivil.com/themes/damoseditor/css/whatsapp-chat-support.css">
+    <link rel="stylesheet" href="https://www.ingenioelectrocivil.com/themes/damoseditor/css/whatsapp-chat-support-custom.css">
+
+    
+    <div class="whatsapp_chat_support wcs_fixed_right" id="example">
+
+                    <div class="wcs_button_label">
+                <span>Contáctenos</span>
+            </div>
+        
+        <!-- whatsapp btn -->
+        <div class="align-items-center d-flex justify-content-center wcs_button wcs_button_circle">
+            <span class="fa fa-whatsapp" style="font-size:35px;"></span>
+        </div>
+
+        <div class="wcs_popup">
+
+            <!-- modal title header -->
+            <div class="wcs_popup_header">
+                <strong>Te asesoramos en línea</strong>
+                <br>
+                <div class="wcs_popup_header_description">Elija un departamento</div>
+            </div>
+
+            <!-- modal body content -->
+            <div class="wcs_popup_person_container">
+
+                                    <div class="wcs_popup_person" data-number="+57 318 0236849"
+                        data-availability='{                             "monday": "01:00-01:59",
+                         "tuesday": "08:00-12:00",
+                         "wednesday": "00:00-12:00",
+                         "thursday": "00:00-12:00",
+                         "friday": "07:35-03:34",
+                         "saturday": "00:00-12:00",
+                         "sunday": "12:00-00:00" }'
+                        onclick="window.asesorclic = this" data-damostext="Quisiera mayor información..."
+                        data-jornada=" Mañana ">
+                        <div class="wcs_popup_person_img">
+                            <img src="https://www.ingenioelectrocivil.com/images/whatsapp/web-atencion-al-cliente-522.webp" alt="Asesor whatsapp Atención al cliente"
+                                data-altoxancho="100x100" width="100" height="100"
+                                title="Asesor whatsapp Atención al cliente" loading="lazy">
+                        </div>
+                        <div class="wcs_popup_person_content">
+                            <div class="wcs_popup_person_name">Atención al cliente</div>
+                            <div class="wcs_popup_person_description">Contacto</div>
+                            <div class="wcs_popup_person_status">En línea</div>
+                        </div>
+                    </div>
+                
+            </div>
+
+            <!-- modal close button -->
+            <div class="wcs_popup_close">
+                <span class="fa fa-close"></span>
+            </div>
+
+        </div>
+
+    </div>
+
+    
+    <script src="https://www.ingenioelectrocivil.com/assets/js/jquery.min.js"></script>
+<!-- Popper JS -->
+<script src="https://www.ingenioelectrocivil.com/assets/js/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://www.ingenioelectrocivil.com/assets/js/bootstrap.min.js"></script>
+<!-- jquery Waypoints JS -->
+<script src="https://www.ingenioelectrocivil.com/assets/js/jquery.waypoints.min.js"></script>
+<!-- jquery Appear JS -->
+<script src="https://www.ingenioelectrocivil.com/assets/js/jquery.appear.js"></script>
+<!-- Numinate JS -->
+<script src="https://www.ingenioelectrocivil.com/assets/js/numinate.min.js"></script>
+<!-- Swiper JS -->
+<script src="https://www.ingenioelectrocivil.com/assets/js/swiper.min.js"></script>
+<!-- Magnific JS -->
+<script src="https://www.ingenioelectrocivil.com/assets/js/jquery.magnific-popup.min.js"></script>
+<!-- Circle Progress JS -->
+<script src="https://www.ingenioelectrocivil.com/assets/js/circle-progress.js"></script>
+<!-- Scripts JS -->
+<script src="https://www.ingenioelectrocivil.com/assets/js/scripts.js"></script>
+
+
+<!-- PREDEFINIDOS js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.0/jquery.fancybox.min.js"
+    integrity="sha512-zUaaipvMJygGPcgCxUrJkLKriLXnIjcttJ2FS5Z/mZqP4Ml1ZQPLIafi5SlRkebuhDVH5iSMdGyY8FyK6ROXTQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<!--====== ModalPopup js ======-->
+<script type="text/javascript" src="https://www.ingenioelectrocivil.com/themes/damosfrontend/popup/js/modal-popup.js"></script>
+<script type="text/javascript" src="https://www.ingenioelectrocivil.com/themes/damoseditor/js/validator.js"></script>
+<script type="text/javascript" src="https://www.ingenioelectrocivil.com/themes/damosfrontend/customsforms/js/customsforms.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=&callback=Function.prototype"></script>
+
+        <!-- REVOLUTION JS FILES -->
+    <script src="https://www.ingenioelectrocivil.com/themes/damosfrontend/revolution/js/jquery.themepunch.tools.min.js"></script>
+    <script src="https://www.ingenioelectrocivil.com/themes/damosfrontend/revolution/js/jquery.themepunch.revolution.min.js"></script>
+    <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+    <script src="https://www.ingenioelectrocivil.com/themes/damosfrontend/revolution/js/extensions/revolution-plugin.js"></script>
+    <!-- REVOLUTION SLIDER SCRIPT FILES -->
+    <script src="https://www.ingenioelectrocivil.com/themes/damosfrontend/revolution/js/revolution-active.js"></script>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                
+        <!-- recaptchav3_google js -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6Ldf9FImAAAAAG1lCpcheG-eYtKrNM7go17IMeZt"></script>
+
+    <!-- axios front js -->
+    <script src="https://www.ingenioelectrocivil.com/themes/damosfrontend/src/libraries_js/axios/axios.v0.21.1.min.js"></script>
+    
+
+    <!-- Theme Custom -->
+    <script src="https://www.ingenioelectrocivil.com/themes/damosfrontend/src/libraries_js/custom-desarrollo/custom-desarrollo.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            /* ---------------------------------------------------- */
+            /*  Newsletter                                          */
+            /* ---------------------------------------------------- */
+
+            var subscribe = $('[id^="newsletter"]');
+            var inputNewsletter = $('#email-newsletter');
+            subscribe.append('<div class="message-container-subscribe"></div>');
+            var message = $('.message-container-subscribe'),
+                text;
+
+            subscribe.on('submit', function(e) {
+                var self = $(this);
+
+                if (self.find('input[type="text"]').val() == '') {
+                    text = "¡Por favor introduzca su nombre!";
+                    message.html('<div class="alert-warning">' + text + '</div>')
+                        .slideDown()
+                        .delay(4000)
+                        .slideUp(function() {
+                            $(this).html("");
+                        });
+
+                } else if (self.find('input[type="email"]').val() == '') {
+                    text = "¡Por favor dé una dirección de correo electrónico!";
+                    message.html('<div class="alert-warning">' + text + '</div>')
+                        .slideDown()
+                        .delay(4000)
+                        .slideUp(function() {
+                            $(this).html("");
+                        });
+
+                } else {
+                    self.find('span.error').hide();
+                    showPreloader();
+                    window.axios.post('https://www.ingenioelectrocivil.com/process-email-subscribe', self.serialize())
+                        .then(function(response) {
+                            console.log(response);
+                            hidePreloader();
+                            var msgDiv = '...';
+                            let data = response.data;
+                            inputNewsletter.val('');
+                            if (data.status == 1) {
+                                // text = "Hemos enviado un correo electrónico de verificación a su bandeja de entrada para confirmar la suscripción";
+                                text = data.html;
+                                message.html('<div class="alert alert-success">' + text + '</div>')
+                                    .slideDown()
+                                    .delay(40000)
+                                    .slideUp(function() {
+                                        $(this).html("");
+                                    })
+                                    .prevAll('input[type="email"]').val("");
+                            }
+
+                            if (data.status == 0) {
+                                // text = "¡Dirección de correo electrónico inválida o usted ya se encuentra suscrito para recibir nuestros boletines!";
+                                text = data.html;
+                                message.html('<div class="alert alert-danger">' + text + '</div>')
+                                    .slideDown()
+                                    .delay(40000)
+                                    .slideUp(function() {
+                                        $(this).html("");
+                                    });
+                            }
+                        }).catch(function(error) {
+                            console.log(error.response.data);
+                        });
+                }
+                e.preventDefault();
+            });
+        });
+    </script>
+    <script>
+        grecaptcha.ready(function() {
+            reload();
+
+            function reload() {
+                grecaptcha.execute('6Ldf9FImAAAAAG1lCpcheG-eYtKrNM7go17IMeZt', {
+                    action: 'action_newsletter'
+                }).then(function(token) {
+                    document.getElementById('token-recaptcha-contact-new').value = token;
+                    // console.log('Formulario newsletter asegurado gcaptchav3.');
+                    // console.log(token);
+                });
+            }
+            setInterval(reload, 120000);
+        });
+    </script>
+        <script src="https://www.ingenioelectrocivil.com/themes/damoseditor/js/moment.min.js"></script>
+        <script src="https://www.ingenioelectrocivil.com/themes/damoseditor/js/moment-timezone-with-data.min.js"></script>
+        <script src="https://www.ingenioelectrocivil.com/themes/damoseditor/js/whatsapp-chat-support.js"></script>
+
+        <input type="hidden" id="hiddenphpnow" value="2026-02-16 10:08:08">
+        <script type="text/javascript">
+            $(document).ready(function() {
+                $('.whatsapp_chat_support').whatsappChatSupport({
+
+                    // Options
+                    popupFx: '1', // The popup effect from 0 till 14
+                    now: $('#hiddenphpnow')
+                        .val(), // When empty it will use the date and time from the user browser if not you can assign it with PHP maybe (which will be the date of the server) format: YYYY-MM-DD HH:mm:ss (2019-12-30 18:30:00)
+                    timezone: 'America/Bogota', // When using the date and time from the user browser you can transform it to your current timezone (in case your user is in a different timezone)
+                    notAvailableMsg: 'Desconectado', // message when its not an available day or once the available hours have passed
+                    almostAvailableMsg: 'Pronto estaré disponible', // if today is an available day and before the time starts
+                    defaultMsg: '', // default support msg - do not change this beacuse new function was implemented. look at beforeGoingSetText más abajo - jjHiguera
+
+                    // Events
+                    onPopupOpen: function() {},
+                    onPopupClose: function() {},
+                    beforeGoingSetText: function(text) {
+
+                        if (text.length === 0) {
+                            if (window.asesorclic !== undefined) {
+                                var el = window.asesorclic;
+                                text = $(el).data('damostext');
+                            }
+                        }
+
+                        return text;
+                    },
+
+                    whenGoingToWhatsApp: function(number, text) {},
+
+                });
+            });
+        </script>
+    
+    
+</body>
+
+</html>

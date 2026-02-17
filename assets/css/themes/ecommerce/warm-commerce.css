@@ -1,0 +1,81 @@
+/* ============================================
+   THEME: Warm Commerce
+   SECTOR: E-commerce
+   MOOD: Cálido, acogedor, artesanal
+   ============================================ */
+
+[data-theme="warm-commerce"] {
+    /* Mode */
+    --bg-base: #fffbeb;
+    --bg-primary: #fffbeb;
+    --bg-secondary: #fef3c7;
+    --bg-tertiary: #fde68a;
+    --bg-elevated: #ffffff;
+    --bg-overlay: rgba(0, 0, 0, 0.4);
+    --bg-inverse: #451a03;
+
+    /* Text */
+    --text-primary: #451a03;
+    --text-secondary: #78350f;
+    --text-tertiary: #a16207;
+    --text-inverse: #ffffff;
+    --text-on-accent: #ffffff;
+
+    /* Accent: Warm Orange */
+    --accent: #ea580c;
+    --accent-soft: rgba(234, 88, 12, 0.1);
+    --accent-hover: #f97316;
+    --accent-active: #c2410c;
+    --accent-glow: rgba(234, 88, 12, 0.25);
+
+    --accent-secondary: #dc2626;
+    --accent-secondary-soft: rgba(220, 38, 38, 0.1);
+
+    /* Borders */
+    --border-soft: #fde68a;
+    --border-default: #fcd34d;
+    --border-strong: #fbbf24;
+
+    /* Cards */
+    --card-bg: #ffffff;
+    --card-bg-hover: #fffbeb;
+    --card-border: #fde68a;
+    --card-shadow: 0 2px 10px rgba(234, 88, 12, 0.08);
+    --card-shadow-hover: 0 15px 40px rgba(234, 88, 12, 0.12);
+
+    /* Buttons */
+    --btn-primary-bg: linear-gradient(135deg, #ea580c, #dc2626);
+    --btn-primary-shadow: 0 4px 14px rgba(234, 88, 12, 0.3);
+
+    /* States */
+    --success: #16a34a;
+    --success-soft: rgba(22, 163, 74, 0.1);
+    --warning: #f59e0b;
+    --warning-soft: rgba(245, 158, 11, 0.15);
+    --error: #dc2626;
+    --error-soft: rgba(220, 38, 38, 0.1);
+
+    /* Effects */
+    --glow-color: rgba(234, 88, 12, 0.2);
+    --gradient-primary: linear-gradient(135deg, #ea580c, #dc2626);
+    --gradient-secondary: linear-gradient(135deg, #fef3c7, #fde68a);
+
+    /* Navbar */
+    --navbar-bg: rgba(255, 251, 235, 0.95);
+    --navbar-bg-scrolled: #ffffff;
+    --navbar-border: #fde68a;
+
+    /* Hero */
+    --hero-bg: linear-gradient(135deg, #451a03 0%, #78350f 100%);
+    --hero-text: #ffffff;
+    --hero-text-secondary: #fde68a;
+
+    /* Footer */
+    --footer-bg: #451a03;
+    --footer-border: rgba(253, 230, 138, 0.2);
+
+    /* Input */
+    --input-bg: #ffffff;
+    --input-border: #fcd34d;
+    --input-border-focus: #ea580c;
+}

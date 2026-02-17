@@ -1,0 +1,87 @@
+/* ============================================
+   THEME: Brutal Yellow Black
+   SECTOR: Construcción
+   MOOD: Brutalista, industrial, advertencia
+   ============================================ */
+
+[data-theme="brutal-yellow"] {
+    /* Mode */
+    --bg-base: #000000;
+    --bg-primary: #000000;
+    --bg-secondary: #0a0a0a;
+    --bg-tertiary: #171717;
+    --bg-elevated: #171717;
+    --bg-overlay: rgba(0, 0, 0, 0.9);
+    --bg-inverse: #fbbf24;
+
+    /* Text */
+    --text-primary: #ffffff;
+    --text-secondary: #a3a3a3;
+    --text-tertiary: #737373;
+    --text-inverse: #000000;
+    --text-on-accent: #000000;
+
+    /* Accent: Warning Yellow */
+    --accent: #fbbf24;
+    --accent-soft: rgba(251, 191, 36, 0.15);
+    --accent-hover: #f59e0b;
+    --accent-active: #d97706;
+    --accent-glow: rgba(251, 191, 36, 0.5);
+
+    --accent-secondary: #ffffff;
+    --accent-secondary-soft: rgba(255, 255, 255, 0.1);
+
+    /* Borders - Sharp, no rounded */
+    --border-soft: rgba(251, 191, 36, 0.1);
+    --border-default: rgba(251, 191, 36, 0.3);
+    --border-strong: #fbbf24;
+
+    /* Cards */
+    --card-bg: #0a0a0a;
+    --card-bg-hover: #171717;
+    --card-border: #fbbf24;
+    --card-shadow: none;
+    --card-shadow-hover: 0 0 0 2px #fbbf24;
+
+    /* Buttons */
+    --btn-primary-bg: #fbbf24;
+    --btn-primary-text: #000000;
+    --btn-primary-shadow: none;
+
+    /* States */
+    --success: #4ade80;
+    --success-soft: rgba(74, 222, 128, 0.15);
+    --warning: #fbbf24;
+    --warning-soft: rgba(251, 191, 36, 0.15);
+    --error: #f87171;
+    --error-soft: rgba(248, 113, 113, 0.15);
+
+    /* Effects */
+    --glow-color: rgba(251, 191, 36, 0.6);
+    --gradient-primary: linear-gradient(135deg, #fbbf24, #f59e0b);
+    --gradient-secondary: none;
+
+    /* Navbar */
+    --navbar-bg: #000000;
+    --navbar-bg-scrolled: #000000;
+    --navbar-border: #fbbf24;
+
+    /* Hero */
+    --hero-bg: #000000;
+    --hero-text: #ffffff;
+    --hero-text-secondary: #fbbf24;
+
+    /* Footer */
+    --footer-bg: #000000;
+    --footer-border: #fbbf24;
+
+    /* Input */
+    --input-bg: #0a0a0a;
+    --input-border: #fbbf24;
+    --input-border-focus: #ffffff;
+}
+
+/* Brutal specific: No rounded corners */
+[data-theme="brutal-yellow"] * {
+    border-radius: 0 !important;
+}

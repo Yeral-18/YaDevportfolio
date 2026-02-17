@@ -1,0 +1,232 @@
+/* ============================================
+   YaDev UI - Premium Preloader
+   Animación de carga elegante
+   ============================================ */
+
+/* Preloader Container */
+.yadev-preloader {
+    position: fixed;
+    inset: 0;
+    background: white;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.yadev-preloader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Logo Animation */
+.preloader__logo {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 2rem;
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+.preloader__logo svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* Spinner Styles */
+.preloader__spinner {
+    position: relative;
+    width: 60px;
+    height: 60px;
+}
+
+/* Style 1: Circle Spinner */
+.preloader__spinner--circle {
+    border: 4px solid #f3f4f6;
+    border-top-color: var(--color-primary, #6366f1);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* Style 2: Dots Spinner */
+.preloader__spinner--dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.preloader__spinner--dots span {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--color-primary, #6366f1);
+    animation: bounce 1.4s ease-in-out infinite both;
+}
+
+.preloader__spinner--dots span:nth-child(1) { animation-delay: -0.32s; }
+.preloader__spinner--dots span:nth-child(2) { animation-delay: -0.16s; }
+.preloader__spinner--dots span:nth-child(3) { animation-delay: 0s; }
+
+/* Style 3: Bars Spinner */
+.preloader__spinner--bars {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 4px;
+    height: 40px;
+}
+
+.preloader__spinner--bars span {
+    width: 6px;
+    background: var(--color-primary, #6366f1);
+    border-radius: 3px;
+    animation: bars 1s ease-in-out infinite;
+}
+
+.preloader__spinner--bars span:nth-child(1) { animation-delay: -0.4s; }
+.preloader__spinner--bars span:nth-child(2) { animation-delay: -0.3s; }
+.preloader__spinner--bars span:nth-child(3) { animation-delay: -0.2s; }
+.preloader__spinner--bars span:nth-child(4) { animation-delay: -0.1s; }
+.preloader__spinner--bars span:nth-child(5) { animation-delay: 0s; }
+
+/* Style 4: Electric/Lightning (for Eléctrico) */
+.preloader__spinner--electric {
+    position: relative;
+}
+
+.preloader__spinner--electric svg {
+    width: 50px;
+    height: 50px;
+    color: var(--color-primary, #ffcb36);
+    animation: electricPulse 1s ease-in-out infinite;
+}
+
+/* Style 5: Progress Bar */
+.preloader__progress {
+    width: 200px;
+    height: 4px;
+    background: #e5e7eb;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 1.5rem;
+}
+
+.preloader__progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--color-primary, #6366f1), var(--color-primary-light, #818cf8));
+    border-radius: 2px;
+    animation: progress 2s ease-in-out infinite;
+}
+
+/* Loading Text */
+.preloader__text {
+    margin-top: 1.5rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+}
+
+/* ============================================
+   Dark Theme
+   ============================================ */
+[data-industry="tecnologia"] .yadev-preloader {
+    background: #0f172a;
+}
+
+[data-industry="tecnologia"] .preloader__text {
+    color: #9ca3af;
+}
+
+[data-industry="electrico"] .yadev-preloader {
+    background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+}
+
+[data-industry="electrico"] .preloader__text {
+    color: #9ca3af;
+}
+
+/* ============================================
+   Animations
+   ============================================ */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.1); opacity: 0.8; }
+}
+
+@keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+}
+
+@keyframes bars {
+    0%, 100% { height: 10px; }
+    50% { height: 40px; }
+}
+
+@keyframes electricPulse {
+    0%, 100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 5px var(--color-primary, #ffcb36));
+    }
+    50% {
+        transform: scale(1.1);
+        filter: drop-shadow(0 0 20px var(--color-primary, #ffcb36));
+    }
+}
+
+@keyframes progress {
+    0% { width: 0%; }
+    50% { width: 70%; }
+    100% { width: 100%; }
+}
+
+/* ============================================
+   Page Transition
+   ============================================ */
+.page-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 99998;
+    pointer-events: none;
+}
+
+.page-transition__layer {
+    position: absolute;
+    inset: 0;
+    background: var(--color-primary, #6366f1);
+    transform: translateY(100%);
+    transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.page-transition.active .page-transition__layer {
+    transform: translateY(0);
+}
+
+.page-transition.active .page-transition__layer:nth-child(2) {
+    transition-delay: 0.1s;
+    background: var(--color-primary-dark, #4f46e5);
+}
+
+/* ============================================
+   Reduced Motion
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+    .yadev-preloader,
+    .preloader__logo,
+    .preloader__spinner,
+    .preloader__spinner span,
+    .preloader__progress-bar {
+        animation: none;
+    }
+
+    .preloader__spinner--circle {
+        border-top-color: var(--color-primary, #6366f1);
+    }
+}
