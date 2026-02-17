@@ -1,0 +1,738 @@
+/* ============================================
+   Template: Eléctrico Dark Mode
+   Diseño nocturno premium con efectos de energía,
+   bordes brillantes, gradientes de voltaje
+   ============================================ */
+
+/* ===== VARIABLES DARK ELECTRIC ===== */
+.template-electrico-dark {
+    --elec-bg: #0d0d0d;
+    --elec-surface: #1a1a1a;
+    --elec-card: #242424;
+    --elec-border: #333333;
+    --elec-text: #f9fafb;
+    --elec-muted: #9ca3af;
+    --elec-yellow: #ffcb36;
+    --elec-orange: #f59e0b;
+    --elec-glow: 0 0 30px rgba(255, 203, 54, 0.4);
+    --elec-gradient: linear-gradient(135deg, #ffcb36, #f59e0b);
+}
+
+/* ===== FONDO OSCURO CON PARTÍCULAS ===== */
+.template-electrico-dark,
+.template-electrico-dark body {
+    background-color: var(--elec-bg) !important;
+    background-image:
+        radial-gradient(circle at 20% 50%, rgba(255, 203, 54, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(245, 158, 11, 0.02) 0%, transparent 40%);
+    color: var(--elec-text) !important;
+}
+
+/* ===== NAVBAR GLASS CON BORDE GLOW ===== */
+.template-electrico-dark .navbar-animated {
+    background: rgba(13, 13, 13, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid var(--elec-border) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
+    position: relative;
+}
+
+.template-electrico-dark .navbar-animated::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--elec-yellow), transparent);
+    opacity: 0.5;
+}
+
+.template-electrico-dark .navbar-animated a {
+    color: var(--elec-text) !important;
+}
+
+.template-electrico-dark .navbar-animated a:hover {
+    color: var(--elec-yellow) !important;
+    text-shadow: 0 0 10px rgba(255, 203, 54, 0.5);
+}
+
+.template-electrico-dark .navbar-animated .btn-primary {
+    background: var(--elec-gradient) !important;
+    color: #000 !important;
+    box-shadow: var(--elec-glow) !important;
+    border: none !important;
+}
+
+.template-electrico-dark .navbar-animated span.text-gray-900,
+.template-electrico-dark .navbar-animated span.text-xl {
+    color: var(--elec-text) !important;
+}
+
+/* ===== NAVBAR SCROLLED ===== */
+.template-electrico-dark .navbar-animated.scrolled {
+    background: rgba(13, 13, 13, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+/* ===== DROPDOWN MENUS ===== */
+.template-electrico-dark .group .absolute,
+.template-electrico-dark .dropdown-menu,
+.template-electrico-dark [class*="dropdown"],
+.template-electrico-dark nav .absolute {
+    background: var(--elec-surface) !important;
+    border: 1px solid var(--elec-border) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+.template-electrico-dark .group .absolute a,
+.template-electrico-dark .dropdown-menu a,
+.template-electrico-dark nav .absolute a {
+    color: var(--elec-text) !important;
+}
+
+.template-electrico-dark .group .absolute a:hover,
+.template-electrico-dark .dropdown-menu a:hover,
+.template-electrico-dark nav .absolute a:hover {
+    background: var(--elec-card) !important;
+    color: var(--elec-yellow) !important;
+}
+
+/* ===== HERO CON RAYOS DE ENERGÍA ===== */
+.template-electrico-dark #inicio {
+    background:
+        radial-gradient(ellipse at 30% 0%, rgba(255, 203, 54, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 100%, rgba(245, 158, 11, 0.1) 0%, transparent 50%),
+        linear-gradient(135deg, var(--elec-bg) 0%, #1a1a1a 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-electrico-dark #inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1px;
+    height: 60%;
+    background: linear-gradient(180deg, var(--elec-yellow), transparent);
+    opacity: 0.3;
+}
+
+.template-electrico-dark #inicio::after {
+    content: '⚡';
+    position: absolute;
+    top: 20%;
+    right: 10%;
+    font-size: 150px;
+    color: var(--elec-yellow);
+    opacity: 0.05;
+}
+
+.template-electrico-dark #inicio h1 {
+    color: var(--elec-text) !important;
+}
+
+.template-electrico-dark #inicio h1 span {
+    background: var(--elec-gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 0 20px rgba(255, 203, 54, 0.5));
+}
+
+.template-electrico-dark #inicio p {
+    color: var(--elec-muted) !important;
+}
+
+/* ===== STATS CON BORDE GLOW ===== */
+.template-electrico-dark #inicio .grid.grid-cols-2 > div,
+.template-electrico-dark .stat-card,
+.template-electrico-dark [class*="bg-white/10"],
+.template-electrico-dark [class*="backdrop-blur"] {
+    background: rgba(255, 203, 54, 0.05) !important;
+    border: 1px solid rgba(255, 203, 54, 0.2) !important;
+    border-radius: 16px !important;
+    backdrop-filter: blur(10px) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-electrico-dark #inicio .grid.grid-cols-2 > div::before,
+.template-electrico-dark .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: var(--elec-gradient);
+    opacity: 0.8;
+}
+
+.template-electrico-dark #inicio .grid.grid-cols-2 .text-4xl,
+.template-electrico-dark .stat-card .text-4xl,
+.template-electrico-dark .stat-card .text-3xl {
+    color: var(--elec-yellow) !important;
+    text-shadow: 0 0 20px rgba(255, 203, 54, 0.5) !important;
+}
+
+/* ===== BOTONES CON EFECTO ELÉCTRICO ===== */
+.template-electrico-dark .btn-shine,
+.template-electrico-dark .btn-primary {
+    background: var(--elec-gradient) !important;
+    color: #000 !important;
+    border: none !important;
+    border-radius: 12px !important;
+    padding: 1rem 2rem !important;
+    font-weight: 600 !important;
+    box-shadow: var(--elec-glow) !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease !important;
+}
+
+.template-electrico-dark .btn-shine::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+    animation: electric-shine 3s infinite;
+}
+
+@keyframes electric-shine {
+    100% { left: 100%; }
+}
+
+.template-electrico-dark .btn-shine:hover,
+.template-electrico-dark .btn-primary:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 0 50px rgba(255, 203, 54, 0.6) !important;
+}
+
+/* ===== SECCIONES OSCURAS ===== */
+.template-electrico-dark section {
+    background: var(--elec-bg) !important;
+    position: relative;
+}
+
+.template-electrico-dark section:nth-child(even) {
+    background: var(--elec-surface) !important;
+}
+
+.template-electrico-dark .bg-white {
+    background: var(--elec-surface) !important;
+}
+
+.template-electrico-dark .bg-gray-50 {
+    background: var(--elec-bg) !important;
+}
+
+.template-electrico-dark .bg-gray-100 {
+    background: var(--elec-surface) !important;
+}
+
+/* ===== TÍTULOS CON LÍNEA GLOW ===== */
+.template-electrico-dark section h2 {
+    color: var(--elec-text) !important;
+    position: relative;
+}
+
+.template-electrico-dark section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: var(--elec-gradient);
+    box-shadow: 0 0 15px rgba(255, 203, 54, 0.5);
+}
+
+/* ===== TEXTOS ===== */
+.template-electrico-dark .text-gray-900,
+.template-electrico-dark .text-gray-800,
+.template-electrico-dark .text-gray-700 {
+    color: var(--elec-text) !important;
+}
+
+.template-electrico-dark .text-gray-600,
+.template-electrico-dark .text-gray-500 {
+    color: var(--elec-muted) !important;
+}
+
+.template-electrico-dark h1,
+.template-electrico-dark h2,
+.template-electrico-dark h3,
+.template-electrico-dark h4 {
+    color: var(--elec-text) !important;
+}
+
+.template-electrico-dark p {
+    color: var(--elec-muted) !important;
+}
+
+/* ===== CARDS CON BORDE GLOW ===== */
+.template-electrico-dark .bg-white.rounded-2xl,
+.template-electrico-dark .rounded-2xl {
+    background: var(--elec-card) !important;
+    border: 1px solid var(--elec-border) !important;
+    border-radius: 20px !important;
+    transition: all 0.5s ease !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-electrico-dark .bg-white.rounded-2xl::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 20px;
+    padding: 2px;
+    background: var(--elec-gradient);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.template-electrico-dark .bg-white.rounded-2xl:hover::before {
+    opacity: 1;
+}
+
+.template-electrico-dark .bg-white.rounded-2xl:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(255, 203, 54, 0.15) !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.template-electrico-dark .team-card {
+    background: var(--elec-card) !important;
+    border: 1px solid var(--elec-border) !important;
+    border-radius: 20px !important;
+}
+
+.template-electrico-dark .team-card:hover {
+    border-color: rgba(255, 203, 54, 0.3) !important;
+}
+
+.template-electrico-dark .team-card__image {
+    border: 3px solid var(--elec-yellow) !important;
+    box-shadow: 0 0 20px rgba(255, 203, 54, 0.3) !important;
+}
+
+.template-electrico-dark .team-card__name {
+    color: var(--elec-text) !important;
+}
+
+.template-electrico-dark .team-card__position {
+    color: var(--elec-yellow) !important;
+}
+
+/* ===== TESTIMONIALS ===== */
+.template-electrico-dark #testimonios .grid > div,
+.template-electrico-dark .testimonial-card {
+    background: var(--elec-card) !important;
+    border: 1px solid var(--elec-border) !important;
+    border-radius: 20px !important;
+}
+
+.template-electrico-dark #testimonios .text-5xl {
+    color: var(--elec-yellow) !important;
+    opacity: 0.3 !important;
+}
+
+.template-electrico-dark .testimonial-card p,
+.template-electrico-dark #testimonios p {
+    color: var(--elec-muted) !important;
+}
+
+/* ===== CLIENT LOGOS ===== */
+.template-electrico-dark .client-logo {
+    background: var(--elec-surface) !important;
+    border: 1px solid var(--elec-border) !important;
+    border-radius: 12px !important;
+}
+
+.template-electrico-dark .client-logo:hover {
+    border-color: rgba(255, 203, 54, 0.3) !important;
+    box-shadow: 0 0 20px rgba(255, 203, 54, 0.1) !important;
+}
+
+.template-electrico-dark .client-logo span {
+    color: var(--elec-muted) !important;
+}
+
+/* ===== FORMS ===== */
+.template-electrico-dark form {
+    background: var(--elec-card) !important;
+    border: 1px solid var(--elec-border) !important;
+    border-radius: 20px !important;
+}
+
+.template-electrico-dark form::before {
+    display: none !important;
+}
+
+.template-electrico-dark input,
+.template-electrico-dark select,
+.template-electrico-dark textarea {
+    background: var(--elec-bg) !important;
+    border: 1px solid var(--elec-border) !important;
+    border-radius: 12px !important;
+    color: var(--elec-text) !important;
+}
+
+.template-electrico-dark input::placeholder,
+.template-electrico-dark textarea::placeholder {
+    color: #6b7280 !important;
+}
+
+.template-electrico-dark input:focus,
+.template-electrico-dark select:focus,
+.template-electrico-dark textarea:focus {
+    border-color: var(--elec-yellow) !important;
+    box-shadow: 0 0 20px rgba(255, 203, 54, 0.2) !important;
+}
+
+.template-electrico-dark label {
+    color: var(--elec-muted) !important;
+}
+
+/* ===== PROCESS STEPS ===== */
+.template-electrico-dark .process-step-light {
+    background: var(--elec-card) !important;
+    border: 1px solid var(--elec-border) !important;
+    border-radius: 16px !important;
+}
+
+.template-electrico-dark .process-step-light .text-4xl {
+    color: var(--elec-yellow) !important;
+}
+
+/* ===== NOSOTROS / MISION ===== */
+.template-electrico-dark #nosotros .grid > div {
+    background: var(--elec-card) !important;
+    border: 1px solid var(--elec-border) !important;
+    border-radius: 24px !important;
+}
+
+.template-electrico-dark #nosotros .grid > div:hover {
+    border-color: rgba(255, 203, 54, 0.3) !important;
+}
+
+.template-electrico-dark #nosotros .w-20 {
+    background: var(--elec-gradient) !important;
+    box-shadow: var(--elec-glow) !important;
+}
+
+.template-electrico-dark #nosotros h3 {
+    color: var(--elec-text) !important;
+}
+
+/* ===== BADGES ===== */
+.template-electrico-dark .bg-yellow-50 {
+    background: rgba(255, 203, 54, 0.1) !important;
+}
+
+.template-electrico-dark .bg-yellow-100 {
+    background: rgba(255, 203, 54, 0.15) !important;
+}
+
+/* ===== CTA SECTION ===== */
+.template-electrico-dark #contacto,
+.template-electrico-dark .cta-section {
+    background:
+        radial-gradient(ellipse at 50% 0%, rgba(255, 203, 54, 0.15) 0%, transparent 60%),
+        linear-gradient(135deg, var(--elec-surface) 0%, #2d2d2d 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-electrico-dark #contacto::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 203, 54, 0.05) 0%, transparent 40%);
+    animation: electric-pulse 10s ease-in-out infinite;
+}
+
+@keyframes electric-pulse {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(30px, 30px); }
+}
+
+.template-electrico-dark #contacto h2 {
+    color: var(--elec-text) !important;
+}
+
+/* ===== FOOTER ===== */
+.template-electrico-dark footer {
+    background: #0a0a0a !important;
+    border-top: 1px solid var(--elec-border) !important;
+    position: relative;
+}
+
+.template-electrico-dark footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--elec-yellow), transparent);
+    opacity: 0.5;
+}
+
+.template-electrico-dark footer h4 {
+    color: var(--elec-yellow) !important;
+}
+
+.template-electrico-dark footer p,
+.template-electrico-dark footer a {
+    color: var(--elec-muted) !important;
+}
+
+.template-electrico-dark footer a:hover {
+    color: var(--elec-yellow) !important;
+    text-shadow: 0 0 10px rgba(255, 203, 54, 0.5);
+}
+
+/* ===== WHATSAPP BUTTON ===== */
+.template-electrico-dark .whatsapp-float {
+    background: var(--elec-gradient) !important;
+    box-shadow: var(--elec-glow) !important;
+    animation: pulse-electric 2s ease-in-out infinite;
+}
+
+@keyframes pulse-electric {
+    0%, 100% { box-shadow: 0 0 20px rgba(255, 203, 54, 0.4); }
+    50% { box-shadow: 0 0 40px rgba(255, 203, 54, 0.6); }
+}
+
+/* ===== SERVICE TYPE BADGES ===== */
+.template-electrico-dark .service-type {
+    background: var(--elec-gradient) !important;
+    border: none !important;
+    box-shadow: var(--elec-glow) !important;
+}
+
+/* ===== ICONS ===== */
+.template-electrico-dark .text-yellow-600,
+.template-electrico-dark .text-yellow-500 {
+    color: var(--elec-yellow) !important;
+}
+
+.template-electrico-dark .bg-yellow-500,
+.template-electrico-dark .bg-yellow-400 {
+    background: var(--elec-gradient) !important;
+}
+
+/* ===== DIVIDERS ===== */
+.template-electrico-dark .border-gray-100,
+.template-electrico-dark .border-gray-200 {
+    border-color: var(--elec-border) !important;
+}
+
+/* ===== TOP BAR ===== */
+.template-electrico-dark .top-bar {
+    background: #0a0a0a !important;
+    border-bottom: 1px solid var(--elec-border) !important;
+}
+
+.template-electrico-dark .top-bar a,
+.template-electrico-dark .top-bar span {
+    color: var(--elec-muted) !important;
+}
+
+.template-electrico-dark .top-bar a:hover {
+    color: var(--elec-yellow) !important;
+}
+
+/* ===== DEMO BANNER ===== */
+.template-electrico-dark .demo-banner {
+    background: var(--elec-gradient) !important;
+    color: #000 !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-electrico-dark .scroll-progress {
+    background: var(--elec-gradient) !important;
+    box-shadow: 0 0 10px var(--elec-yellow) !important;
+}
+
+/* ===== SCROLLBAR ===== */
+.template-electrico-dark ::-webkit-scrollbar {
+    width: 8px;
+}
+
+.template-electrico-dark ::-webkit-scrollbar-track {
+    background: var(--elec-bg);
+}
+
+.template-electrico-dark ::-webkit-scrollbar-thumb {
+    background: var(--elec-border);
+    border-radius: 4px;
+}
+
+.template-electrico-dark ::-webkit-scrollbar-thumb:hover {
+    background: var(--elec-yellow);
+}
+
+/* ===== ANIMACIONES ===== */
+.template-electrico-dark .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.template-electrico-dark .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== DECORACIONES ===== */
+.template-electrico-dark .geometric-decoration {
+    background: var(--elec-gradient) !important;
+    opacity: 0.1 !important;
+    filter: blur(60px) !important;
+}
+
+/* ===== EFECTOS ELÉCTRICOS AVANZADOS ===== */
+
+/* Efecto de pulso eléctrico en botones */
+.template-electrico-dark .btn-primary::after,
+.template-electrico-dark .btn-shine::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    background: var(--elec-gradient);
+    border-radius: inherit;
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0;
+    transition: all 0.4s ease;
+    z-index: -1;
+}
+
+.template-electrico-dark .btn-primary:hover::after,
+.template-electrico-dark .btn-shine:hover::after {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.3;
+    filter: blur(15px);
+}
+
+/* Efecto shine en cards al hover */
+.template-electrico-dark .bg-white.rounded-2xl::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 203, 54, 0.1), transparent);
+    transition: left 0.6s ease;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.template-electrico-dark .bg-white.rounded-2xl:hover::before {
+    left: 100%;
+}
+
+/* Borde animado en service icons */
+@keyframes electric-border {
+    0%, 100% { box-shadow: 0 0 5px var(--elec-yellow), inset 0 0 5px transparent; }
+    50% { box-shadow: 0 0 20px var(--elec-yellow), inset 0 0 10px rgba(255, 203, 54, 0.1); }
+}
+
+.template-electrico-dark .service-type:hover {
+    animation: electric-border 1.5s ease infinite;
+}
+
+/* Efecto de energía en stats */
+.template-electrico-dark .stat-card .text-4xl,
+.template-electrico-dark .stat-card .text-3xl {
+    position: relative;
+}
+
+.template-electrico-dark .stat-card:hover .text-4xl,
+.template-electrico-dark .stat-card:hover .text-3xl {
+    text-shadow: 0 0 20px var(--elec-yellow), 0 0 40px rgba(255, 203, 54, 0.3);
+}
+
+/* Línea de energía en títulos */
+.template-electrico-dark section h2::after {
+    background: var(--elec-gradient) !important;
+    box-shadow: 0 0 10px var(--elec-yellow);
+}
+
+/* Efecto hover mejorado para team cards */
+.template-electrico-dark .team-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.template-electrico-dark .team-card:hover {
+    transform: translateY(-10px) !important;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 0 30px rgba(255, 203, 54, 0.1) !important;
+}
+
+/* Indicador de certificación con glow */
+.template-electrico-dark .service-type--retie,
+.template-electrico-dark .service-type--retilap,
+.template-electrico-dark .service-type--ritel {
+    position: relative;
+    overflow: visible;
+}
+
+.template-electrico-dark .service-type--retie::before,
+.template-electrico-dark .service-type--retilap::before,
+.template-electrico-dark .service-type--ritel::before {
+    content: '✓';
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 18px;
+    height: 18px;
+    background: #22c55e;
+    border-radius: 50%;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.5);
+}
+
+/* Hover effect para formularios */
+.template-electrico-dark input:hover,
+.template-electrico-dark textarea:hover,
+.template-electrico-dark select:hover {
+    border-color: rgba(255, 203, 54, 0.3) !important;
+}
+
+/* WhatsApp button con pulse */
+@keyframes whatsapp-pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+    50% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+}
+
+.template-electrico-dark .whatsapp-float {
+    animation: whatsapp-pulse 2s infinite;
+}

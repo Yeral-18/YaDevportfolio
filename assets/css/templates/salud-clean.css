@@ -1,0 +1,345 @@
+/* ============================================
+   Template: Salud Clean (Ultra Minimalista)
+   Diseño limpio médico, espacios amplios,
+   tipografía clara, fondo blanco puro
+   ============================================ */
+
+/* ===== VARIABLES CLEAN ===== */
+.template-salud-clean {
+    --clean-white: #ffffff;
+    --clean-bg: #f8fafb;
+    --clean-border: #e2e8f0;
+    --clean-text: #1e293b;
+    --clean-muted: #64748b;
+    --clean-cyan: #0891b2;
+    --clean-teal: #0d9488;
+}
+
+/* ===== FONDO ULTRA LIMPIO ===== */
+.template-salud-clean,
+.template-salud-clean body {
+    background: var(--clean-white) !important;
+    font-family: 'Inter', -apple-system, sans-serif !important;
+}
+
+/* ===== NAVBAR FLOTANTE ===== */
+.template-salud-clean .navbar-animated {
+    background: var(--clean-white) !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    margin: 1rem auto !important;
+    max-width: calc(100% - 4rem) !important;
+    border-radius: 100px !important;
+    padding: 0.5rem 1rem !important;
+}
+
+.template-salud-clean .navbar-animated.scrolled {
+    background: var(--clean-white) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08) !important;
+}
+
+.template-salud-clean .navbar-animated a {
+    color: var(--clean-text) !important;
+    font-weight: 500 !important;
+    font-size: 0.875rem !important;
+}
+
+.template-salud-clean .navbar-animated .btn-shine {
+    background: var(--clean-cyan) !important;
+    border-radius: 100px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.875rem !important;
+}
+
+/* ===== HERO CENTRADO SIMPLE ===== */
+.template-salud-clean #inicio {
+    background: var(--clean-bg) !important;
+    min-height: 90vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.template-salud-clean #inicio .parallax {
+    opacity: 0.1 !important;
+}
+
+.template-salud-clean #inicio .max-w-7xl {
+    max-width: 800px !important;
+}
+
+.template-salud-clean #inicio h1 {
+    color: var(--clean-text) !important;
+    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    font-weight: 600 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.template-salud-clean #inicio h1 span {
+    color: var(--clean-cyan) !important;
+    background: none !important;
+    -webkit-text-fill-color: var(--clean-cyan) !important;
+}
+
+.template-salud-clean #inicio p {
+    color: var(--clean-muted) !important;
+    font-size: 1.125rem !important;
+    max-width: 500px !important;
+    margin: 0 auto !important;
+}
+
+.template-salud-clean #inicio .grid {
+    display: none !important;
+}
+
+.template-salud-clean .geometric-decoration {
+    display: none !important;
+}
+
+/* ===== BOTONES PILL ===== */
+.template-salud-clean .btn-shine,
+.template-salud-clean .btn-primary {
+    background: var(--clean-cyan) !important;
+    border-radius: 100px !important;
+    padding: 1rem 2rem !important;
+    font-weight: 500 !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(8, 145, 178, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-salud-clean .btn-shine:hover,
+.template-salud-clean .btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(8, 145, 178, 0.4) !important;
+}
+
+.template-salud-clean .btn-shine::before {
+    display: none !important;
+}
+
+/* ===== SECCIONES ALTERNADAS ===== */
+.template-salud-clean section {
+    padding: 6rem 0 !important;
+}
+
+.template-salud-clean section:nth-child(odd) {
+    background: var(--clean-white) !important;
+}
+
+.template-salud-clean section:nth-child(even) {
+    background: var(--clean-bg) !important;
+}
+
+/* ===== TITULOS CENTRADOS ===== */
+.template-salud-clean section h2 {
+    color: var(--clean-text) !important;
+    font-size: 2rem !important;
+    font-weight: 600 !important;
+    text-align: center !important;
+    margin-bottom: 3rem !important;
+}
+
+.template-salud-clean section h2::after {
+    display: none !important;
+}
+
+.template-salud-clean .title-decorated::after {
+    display: none !important;
+}
+
+.template-salud-clean .text-cyan-600 {
+    color: var(--clean-cyan) !important;
+}
+
+/* ===== ESPECIALIDADES CARDS ===== */
+.template-salud-clean .specialty-card {
+    background: var(--clean-white) !important;
+    border: 1px solid var(--clean-border) !important;
+    border-radius: 16px !important;
+    border-left: 4px solid var(--clean-cyan) !important;
+    padding: 1.5rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-salud-clean .specialty-card:hover {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08) !important;
+    transform: translateY(-4px) !important;
+}
+
+.template-salud-clean .specialty-card .w-14 {
+    width: 48px !important;
+    height: 48px !important;
+    background: linear-gradient(135deg, var(--clean-cyan), var(--clean-teal)) !important;
+    border-radius: 12px !important;
+}
+
+/* ===== MEDICOS CARDS ===== */
+.template-salud-clean .doctor-card {
+    background: var(--clean-white) !important;
+    border: 1px solid var(--clean-border) !important;
+    border-radius: 16px !important;
+    overflow: hidden;
+    transition: all 0.3s ease !important;
+}
+
+.template-salud-clean .doctor-card:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1) !important;
+    transform: translateY(-8px) !important;
+}
+
+.template-salud-clean .doctor-card .h-56 {
+    background: var(--clean-bg) !important;
+}
+
+.template-salud-clean .doctor-card h3 {
+    color: var(--clean-text) !important;
+}
+
+.template-salud-clean .doctor-card .text-cyan-600 {
+    color: var(--clean-cyan) !important;
+}
+
+/* ===== SERVICIOS LISTA ===== */
+.template-salud-clean #servicios .grid {
+    gap: 4rem !important;
+}
+
+.template-salud-clean #servicios ul li {
+    padding: 0.75rem 0 !important;
+    border-bottom: 1px solid var(--clean-border) !important;
+}
+
+.template-salud-clean #servicios .w-10 {
+    background: rgba(8, 145, 178, 0.1) !important;
+    color: var(--clean-cyan) !important;
+}
+
+/* ===== NOSOTROS CARDS ===== */
+.template-salud-clean #nosotros {
+    background: var(--clean-bg) !important;
+}
+
+.template-salud-clean #nosotros .grid > div {
+    background: var(--clean-white) !important;
+    border: 1px solid var(--clean-border) !important;
+    border-radius: 20px !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-salud-clean #nosotros .grid > div:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.template-salud-clean #nosotros .w-20 {
+    background: linear-gradient(135deg, var(--clean-cyan), var(--clean-teal)) !important;
+    border-radius: 16px !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.template-salud-clean #testimonios .grid > div {
+    background: var(--clean-white) !important;
+    border: 1px solid var(--clean-border) !important;
+    border-radius: 20px !important;
+    padding: 2rem !important;
+}
+
+.template-salud-clean #testimonios .text-5xl {
+    color: var(--clean-cyan) !important;
+    opacity: 0.2 !important;
+}
+
+.template-salud-clean #testimonios .border-cyan-500 {
+    border-color: var(--clean-cyan) !important;
+}
+
+/* ===== EQUIPO CAROUSEL ===== */
+.template-salud-clean .team-card {
+    background: var(--clean-white) !important;
+    border: 1px solid var(--clean-border) !important;
+    border-radius: 16px !important;
+}
+
+.template-salud-clean .team-card__image {
+    border-radius: 12px !important;
+    border: 2px solid var(--clean-cyan) !important;
+}
+
+/* ===== CLIENTES ===== */
+.template-salud-clean .client-logo {
+    background: var(--clean-white) !important;
+    border: 1px solid var(--clean-border) !important;
+    border-radius: 12px !important;
+}
+
+/* ===== CTA GRADIENT SUAVE ===== */
+.template-salud-clean #contacto,
+.template-salud-clean .cta-section {
+    background: linear-gradient(135deg, var(--clean-cyan), var(--clean-teal)) !important;
+    border-radius: 32px !important;
+    margin: 0 2rem 2rem !important;
+}
+
+.template-salud-clean #contacto .btn-shine {
+    background: var(--clean-white) !important;
+    color: var(--clean-cyan) !important;
+}
+
+/* ===== FOOTER LIMPIO ===== */
+.template-salud-clean footer {
+    background: var(--clean-text) !important;
+    border-radius: 32px 32px 0 0 !important;
+}
+
+.template-salud-clean footer h4 {
+    color: var(--clean-white) !important;
+    font-weight: 500 !important;
+}
+
+.template-salud-clean footer a {
+    color: var(--clean-muted) !important;
+}
+
+.template-salud-clean footer a:hover {
+    color: var(--clean-cyan) !important;
+}
+
+/* ===== WHATSAPP CIRCULAR ===== */
+.template-salud-clean .whatsapp-float {
+    background: var(--clean-cyan) !important;
+    border-radius: 50% !important;
+    width: 56px !important;
+    height: 56px !important;
+    box-shadow: 0 4px 20px rgba(8, 145, 178, 0.4) !important;
+}
+
+/* ===== TOP BAR ===== */
+.template-salud-clean .top-bar {
+    background: var(--clean-bg) !important;
+    border-bottom: 1px solid var(--clean-border) !important;
+}
+
+.template-salud-clean .top-bar a {
+    color: var(--clean-muted) !important;
+}
+
+/* ===== DEMO BANNER ===== */
+.template-salud-clean .demo-banner {
+    background: var(--clean-cyan) !important;
+    border-radius: 0 0 16px 16px !important;
+}
+
+/* ===== ANIMACIONES SUAVES ===== */
+.template-salud-clean .reveal {
+    transition: all 0.6s ease !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-salud-clean .scroll-progress {
+    background: var(--clean-cyan) !important;
+    height: 3px !important;
+}

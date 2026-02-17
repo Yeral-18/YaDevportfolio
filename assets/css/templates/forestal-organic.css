@@ -1,0 +1,596 @@
+/* ============================================
+   Template: Forestal Organic
+   Diseño orgánico natural con texturas de papel,
+   formas orgánicas, tonos tierra, estilo artesanal
+   ============================================ */
+
+/* ===== VARIABLES ORGANIC ===== */
+.template-forestal-organic {
+    --org-green: #065f46;
+    --org-green-light: #10b981;
+    --org-brown: #92400e;
+    --org-cream: #faf7f2;
+    --org-paper: #f5f0e8;
+    --org-wood: #78350f;
+    --org-text: #374151;
+    --org-border: #d6cfc4;
+}
+
+/* ===== FONDO TEXTURA PAPEL ===== */
+.template-forestal-organic,
+.template-forestal-organic body {
+    background-color: var(--org-cream) !important;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+    font-family: 'Georgia', serif !important;
+}
+
+/* ===== NAVBAR ARTESANAL ===== */
+.template-forestal-organic .navbar-animated {
+    background: var(--org-cream) !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    padding: 1rem 0 !important;
+    position: relative;
+}
+
+.template-forestal-organic .navbar-animated::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+    right: 5%;
+    height: 3px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 3'%3E%3Cpath d='M0,1.5 Q25,0 50,1.5 T100,1.5' stroke='%23065f46' stroke-width='2' fill='none' stroke-dasharray='5,3'/%3E%3C/svg%3E") repeat-x;
+}
+
+.template-forestal-organic .navbar-animated a {
+    color: var(--org-text) !important;
+    font-weight: 500 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.template-forestal-organic .navbar-animated a:hover {
+    color: var(--org-green) !important;
+}
+
+.template-forestal-organic .navbar-animated .btn-shine {
+    background: var(--org-green) !important;
+    border-radius: 50px !important;
+    border: 2px dashed var(--org-green-light) !important;
+}
+
+/* ===== HERO NATURAL CON ONDAS ===== */
+.template-forestal-organic #inicio {
+    background: linear-gradient(180deg, var(--org-cream) 0%, #e8f5e9 50%, var(--org-green) 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-forestal-organic #inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 80'%3E%3Ccircle cx='40' cy='40' r='30' fill='none' stroke='%23065f46' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E");
+    background-size: 80px 80px;
+    opacity: 0.5;
+}
+
+.template-forestal-organic #inicio::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    right: 0;
+    height: 120px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 120'%3E%3Cpath fill='%23faf7f2' d='M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z'/%3E%3C/svg%3E") no-repeat;
+    background-size: cover;
+    z-index: 10;
+}
+
+.template-forestal-organic #inicio .parallax {
+    opacity: 0.3 !important;
+}
+
+.template-forestal-organic #inicio h1 {
+    color: #fff !important;
+    font-weight: 400 !important;
+    font-style: italic !important;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3) !important;
+}
+
+.template-forestal-organic #inicio h1 span {
+    color: #a7f3d0 !important;
+    background: none !important;
+    -webkit-text-fill-color: #a7f3d0 !important;
+    font-weight: 600 !important;
+    font-style: normal !important;
+}
+
+.template-forestal-organic #inicio p {
+    color: rgba(255,255,255,0.9) !important;
+}
+
+/* ===== STATS COMO HOJAS ===== */
+.template-forestal-organic #inicio .grid.grid-cols-2 > div {
+    background: rgba(255,255,255,0.9) !important;
+    border-radius: 60% 40% 60% 40% / 40% 60% 40% 60% !important;
+    border: 2px solid var(--org-green-light) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 1.5rem !important;
+}
+
+.template-forestal-organic #inicio .grid.grid-cols-2 .text-4xl {
+    color: var(--org-green) !important;
+    font-weight: 700 !important;
+}
+
+/* ===== BOTONES ORGÁNICOS ===== */
+.template-forestal-organic .btn-shine,
+.template-forestal-organic .btn-primary {
+    background: var(--org-green) !important;
+    border-radius: 50px !important;
+    padding: 1rem 2.5rem !important;
+    border: 2px dashed var(--org-green-light) !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease !important;
+}
+
+.template-forestal-organic .btn-shine:hover,
+.template-forestal-organic .btn-primary:hover {
+    background: var(--org-brown) !important;
+    border-color: var(--org-wood) !important;
+    transform: scale(1.05) !important;
+}
+
+.template-forestal-organic .btn-shine::before {
+    display: none !important;
+}
+
+/* ===== SECCIONES ALTERNADAS ===== */
+.template-forestal-organic section {
+    padding: 6rem 0 !important;
+    position: relative;
+}
+
+.template-forestal-organic section:nth-child(odd) {
+    background: var(--org-cream) !important;
+}
+
+.template-forestal-organic section:nth-child(even) {
+    background: var(--org-paper) !important;
+}
+
+/* ===== TÍTULOS MANUSCRITOS ===== */
+.template-forestal-organic section h2 {
+    color: var(--org-text) !important;
+    font-weight: 400 !important;
+    font-style: italic !important;
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+    position: relative;
+    padding-bottom: 1.5rem !important;
+}
+
+.template-forestal-organic section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 8px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 8'%3E%3Cpath d='M0,4 Q25,0 50,4 T100,4' stroke='%23065f46' stroke-width='3' fill='none'/%3E%3Cpath d='M20,6 Q40,2 60,6' stroke='%2392400e' stroke-width='2' fill='none' opacity='0.5'/%3E%3C/svg%3E") no-repeat center;
+}
+
+.template-forestal-organic .text-emerald-600 {
+    color: var(--org-green) !important;
+}
+
+/* ===== CARDS COMO PAPEL CRAFT ===== */
+.template-forestal-organic .service-card,
+.template-forestal-organic .bg-white.rounded-2xl {
+    background: #fff !important;
+    border: 2px solid var(--org-border) !important;
+    border-radius: 24px 4px 24px 4px !important;
+    box-shadow:
+        4px 4px 0 var(--org-border),
+        8px 8px 0 rgba(6, 95, 70, 0.1) !important;
+    position: relative;
+    transition: all 0.4s ease !important;
+}
+
+.template-forestal-organic .service-card::before,
+.template-forestal-organic .bg-white.rounded-2xl::before {
+    content: '';
+    position: absolute;
+    top: -8px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background: var(--org-green);
+    border-radius: 50%;
+    border: 3px solid var(--org-cream);
+    z-index: 1;
+}
+
+.template-forestal-organic .service-card:hover,
+.template-forestal-organic .bg-white.rounded-2xl:hover {
+    transform: translate(-4px, -4px) rotate(-1deg) !important;
+    box-shadow:
+        8px 8px 0 var(--org-border),
+        12px 12px 0 rgba(6, 95, 70, 0.15) !important;
+}
+
+/* ===== PROCESO COMO SENDERO ===== */
+.template-forestal-organic .process-step-light {
+    background: #fff !important;
+    border: 2px dashed var(--org-green) !important;
+    border-radius: 50% !important;
+    aspect-ratio: 1 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.template-forestal-organic .process-step-light .text-4xl {
+    color: var(--org-brown) !important;
+    font-weight: 700 !important;
+}
+
+/* ===== STATS CARDS ===== */
+.template-forestal-organic .stat-card {
+    background: linear-gradient(135deg, #ecfdf5, #d1fae5) !important;
+    border: none !important;
+    border-radius: 60% 40% 60% 40% / 40% 60% 40% 60% !important;
+    padding: 2rem !important;
+    position: relative;
+}
+
+.template-forestal-organic .stat-card::after {
+    content: '🌿';
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    font-size: 24px;
+}
+
+.template-forestal-organic .stat-card .text-4xl,
+.template-forestal-organic .stat-card .text-3xl {
+    color: var(--org-green) !important;
+    font-weight: 700 !important;
+}
+
+/* ===== NOSOTROS / MISION ===== */
+.template-forestal-organic #nosotros {
+    background: var(--org-paper) !important;
+}
+
+.template-forestal-organic #nosotros .grid > div {
+    background: #fff !important;
+    border: 2px solid var(--org-border) !important;
+    border-radius: 4px 24px 4px 24px !important;
+    box-shadow: 5px 5px 0 rgba(6, 95, 70, 0.2) !important;
+}
+
+.template-forestal-organic #nosotros .grid > div:hover {
+    background: #ecfdf5 !important;
+}
+
+.template-forestal-organic #nosotros .w-20 {
+    background: linear-gradient(135deg, var(--org-green), var(--org-green-light)) !important;
+    border-radius: 50% !important;
+    border: 3px dashed #fff !important;
+}
+
+/* ===== TEAM CARDS ORGÁNICAS ===== */
+.template-forestal-organic .team-card {
+    background: #fff !important;
+    border: 2px solid var(--org-border) !important;
+    border-radius: 100px 100px 24px 24px !important;
+    overflow: hidden;
+    transition: all 0.4s ease !important;
+}
+
+.template-forestal-organic .team-card:hover {
+    transform: translateY(-8px) rotate(1deg) !important;
+    box-shadow: 0 20px 40px rgba(6, 95, 70, 0.2) !important;
+}
+
+.template-forestal-organic .team-card__image {
+    border-radius: 50% !important;
+    border: 4px solid var(--org-green) !important;
+    box-shadow: 0 0 0 4px #fff, 0 0 0 6px var(--org-green-light) !important;
+}
+
+.template-forestal-organic .team-card__name {
+    color: var(--org-text) !important;
+    font-style: italic !important;
+}
+
+.template-forestal-organic .team-card__position {
+    color: var(--org-green) !important;
+    font-weight: 600 !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.template-forestal-organic #testimonios .grid > div {
+    background: #fff !important;
+    border: 2px solid var(--org-border) !important;
+    border-radius: 4px 24px 4px 24px !important;
+    position: relative;
+    padding: 2rem !important;
+}
+
+.template-forestal-organic #testimonios .grid > div::before {
+    content: '🌱';
+    position: absolute;
+    top: -15px;
+    left: 20px;
+    font-size: 30px;
+}
+
+.template-forestal-organic #testimonios .text-5xl {
+    color: var(--org-green) !important;
+    opacity: 0.3 !important;
+}
+
+.template-forestal-organic #testimonios .border-emerald-500 {
+    border-color: var(--org-green) !important;
+}
+
+/* ===== CLIENTES KRAFT ===== */
+.template-forestal-organic .client-logo {
+    background: #fff !important;
+    border: 2px dashed var(--org-border) !important;
+    border-radius: 12px !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-forestal-organic .client-logo:hover {
+    border-color: var(--org-green) !important;
+    background: #ecfdf5 !important;
+    transform: rotate(-2deg) scale(1.05) !important;
+}
+
+/* ===== CTA NATURAL ===== */
+.template-forestal-organic #contacto,
+.template-forestal-organic .cta-section {
+    background: linear-gradient(135deg, var(--org-green) 0%, #047857 100%) !important;
+    border-radius: 40px !important;
+    margin: 0 2rem 2rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-forestal-organic #contacto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Cpath d='M30,5 Q40,15 30,25 Q20,15 30,5' fill='none' stroke='white' stroke-width='0.5' opacity='0.1'/%3E%3C/svg%3E");
+    background-size: 60px 60px;
+}
+
+.template-forestal-organic #contacto .btn-shine {
+    background: #fff !important;
+    color: var(--org-green) !important;
+    border: 2px dashed var(--org-green-light) !important;
+}
+
+/* ===== FOOTER TIERRA ===== */
+.template-forestal-organic footer {
+    background: #292524 !important;
+    border-radius: 40px 40px 0 0 !important;
+    position: relative;
+}
+
+.template-forestal-organic footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 8px;
+    background: linear-gradient(90deg, var(--org-green), var(--org-brown), var(--org-green));
+}
+
+.template-forestal-organic footer h4 {
+    color: var(--org-green-light) !important;
+    font-style: italic !important;
+}
+
+.template-forestal-organic footer a {
+    color: #a8a29e !important;
+}
+
+.template-forestal-organic footer a:hover {
+    color: var(--org-green-light) !important;
+}
+
+/* ===== WHATSAPP HOJA ===== */
+.template-forestal-organic .whatsapp-float {
+    background: var(--org-green) !important;
+    border-radius: 50% 50% 50% 10% !important;
+    border: 3px dashed var(--org-green-light) !important;
+}
+
+/* ===== TOP BAR ===== */
+.template-forestal-organic .top-bar {
+    background: var(--org-green) !important;
+}
+
+.template-forestal-organic .top-bar a {
+    color: #d1fae5 !important;
+}
+
+/* ===== DEMO BANNER ===== */
+.template-forestal-organic .demo-banner {
+    background: linear-gradient(135deg, var(--org-green), var(--org-brown)) !important;
+}
+
+/* ===== DECORACIONES ===== */
+.template-forestal-organic .geometric-decoration {
+    background: var(--org-green) !important;
+    opacity: 0.1 !important;
+    border-radius: 60% 40% 60% 40% !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-forestal-organic .scroll-progress {
+    background: linear-gradient(90deg, var(--org-green), var(--org-brown)) !important;
+    height: 4px !important;
+}
+
+/* ===== NAVBAR SCROLLED ===== */
+.template-forestal-organic .navbar-animated.scrolled {
+    background: rgba(254, 252, 247, 0.98) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* ===== DROPDOWN MENUS ===== */
+.template-forestal-organic .group .absolute,
+.template-forestal-organic .dropdown-menu,
+.template-forestal-organic [class*="dropdown"],
+.template-forestal-organic nav .absolute {
+    background: var(--org-cream) !important;
+    border: 2px dashed var(--org-green-light) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+.template-forestal-organic .group .absolute a,
+.template-forestal-organic .dropdown-menu a,
+.template-forestal-organic nav .absolute a {
+    color: var(--org-brown) !important;
+    font-family: 'Merriweather', serif !important;
+}
+
+.template-forestal-organic .group .absolute a:hover,
+.template-forestal-organic .dropdown-menu a:hover,
+.template-forestal-organic nav .absolute a:hover {
+    background: rgba(22, 163, 74, 0.1) !important;
+    color: var(--org-green) !important;
+}
+
+/* ===== ANIMACIONES SUAVES ===== */
+.template-forestal-organic .reveal {
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ===== EFECTOS ORGÁNICOS AVANZADOS ===== */
+
+/* Efecto de crecimiento en hover de cards */
+.template-forestal-organic .bg-white.rounded-2xl {
+    transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.template-forestal-organic .bg-white.rounded-2xl:hover {
+    transform: translateY(-8px) rotate(-1deg) !important;
+}
+
+/* Efecto hoja flotante en service icons */
+@keyframes leaf-float {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    25% { transform: translateY(-5px) rotate(2deg); }
+    75% { transform: translateY(-3px) rotate(-2deg); }
+}
+
+.template-forestal-organic .service-type:hover {
+    animation: leaf-float 2s ease-in-out infinite;
+}
+
+/* Borde orgánico animado */
+.template-forestal-organic .bg-white.rounded-2xl {
+    position: relative;
+    overflow: hidden;
+}
+
+.template-forestal-organic .bg-white.rounded-2xl::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--org-green), var(--org-green-light), var(--org-brown));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.template-forestal-organic .bg-white.rounded-2xl:hover::before {
+    transform: scaleX(1);
+}
+
+/* Stats con efecto de raíz */
+.template-forestal-organic .stat-card {
+    position: relative;
+}
+
+.template-forestal-organic .stat-card::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 0;
+    background: linear-gradient(180deg, var(--org-green), transparent);
+    transition: height 0.4s ease;
+}
+
+.template-forestal-organic .stat-card:hover::after {
+    height: 20px;
+}
+
+/* Efecto de sombra natural */
+.template-forestal-organic .team-card:hover {
+    box-shadow:
+        0 20px 40px rgba(22, 101, 52, 0.15),
+        0 10px 20px rgba(146, 64, 14, 0.1) !important;
+}
+
+/* Textura de papel en testimonios */
+.template-forestal-organic #testimonios .grid > div {
+    background-image:
+        url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%2316a34a' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+
+/* Botón con efecto de brote */
+.template-forestal-organic .btn-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.template-forestal-organic .btn-shine::after {
+    content: '🌱';
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%) scale(0);
+    transition: transform 0.3s ease;
+    font-size: 14px;
+}
+
+.template-forestal-organic .btn-shine:hover::after {
+    transform: translateY(-50%) scale(1);
+}
+
+.template-forestal-organic .btn-shine:hover {
+    padding-right: 45px !important;
+}
+
+/* WhatsApp con efecto natural */
+.template-forestal-organic .whatsapp-float {
+    background: linear-gradient(135deg, #22c55e, #16a34a) !important;
+    box-shadow: 0 8px 25px rgba(34, 197, 94, 0.4) !important;
+}
+
+/* Importar fuente serif */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap');

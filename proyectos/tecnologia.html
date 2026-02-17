@@ -1,0 +1,1375 @@
+<!DOCTYPE html>
+<html lang="es" data-industry="tecnologia" data-yadev-cookies data-privacy-url="#privacidad" data-terms-url="#terminos">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="NexaTech Solutions - Soluciones de software empresarial, APIs y plataformas SaaS para tu negocio.">
+    <meta property="og:title" content="NexaTech Solutions - Software Empresarial">
+    <meta property="og:description" content="Soluciones de software empresarial y plataformas SaaS">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#030712">
+    <title>NexaTech Solutions - Software Empresarial | Demo YaDev</title>
+    <link rel="icon" type="image/png" href="../assets/img/icon.png">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "NexaTech Solutions",
+        "applicationCategory": "BusinessApplication",
+        "description": "Soluciones de software empresarial y plataformas SaaS"
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Premium Typography: Satoshi + JetBrains Mono -->
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <!-- YaDev UI System -->
+    <link rel="stylesheet" href="../assets/css/yadev-tokens.css">
+    <link rel="stylesheet" href="../assets/css/yadev-animations.css">
+    <link rel="stylesheet" href="../assets/css/yadev-topbar.css">
+    <link rel="stylesheet" href="../assets/css/yadev-cookies.css">
+    <link rel="stylesheet" href="../assets/css/industries/tecnologia.css">
+    <!-- Swiper.js CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <!-- YaDev Additional CSS -->
+    <link rel="stylesheet" href="../assets/css/yadev-carousel.css">
+    <link rel="stylesheet" href="../assets/css/yadev-preloader.css">
+    <link rel="stylesheet" href="../assets/css/yadev-language.css">
+    <link rel="stylesheet" href="../assets/css/yadev-template-switcher.css">
+    <link rel="stylesheet" href="../assets/css/yadev-animations-advanced.css">
+    <style>
+        /* ============================================
+           NEXATECH - Premium SaaS Design System
+           Inspired by: Linear, Raycast, Vercel
+           ============================================ */
+
+        :root {
+            --tech-primary: #6366f1;
+            --tech-secondary: #8b5cf6;
+            --tech-accent: #22d3ee;
+            --tech-glow: rgba(99, 102, 241, 0.5);
+            --tech-surface: rgba(17, 24, 39, 0.6);
+            --tech-border: rgba(99, 102, 241, 0.15);
+        }
+
+        /* Typography System */
+        body {
+            font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
+            background-color: #030712;
+            color: #f9fafb;
+            overflow-x: hidden;
+        }
+
+        .font-mono {
+            font-family: 'JetBrains Mono', monospace;
+        }
+
+        /* Ambient Background Effects */
+        .ambient-glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .ambient-glow-1 {
+            background: var(--tech-primary);
+            top: -200px;
+            right: -200px;
+            animation: float-slow 20s ease-in-out infinite;
+        }
+
+        .ambient-glow-2 {
+            background: var(--tech-secondary);
+            bottom: -200px;
+            left: -200px;
+            animation: float-slow 25s ease-in-out infinite reverse;
+        }
+
+        .ambient-glow-3 {
+            background: var(--tech-accent);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            height: 400px;
+            opacity: 0.08;
+            animation: pulse-glow 10s ease-in-out infinite;
+        }
+
+        @keyframes float-slow {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(30px, 30px) scale(1.1); }
+        }
+
+        @keyframes pulse-glow {
+            0%, 100% { opacity: 0.05; transform: translate(-50%, -50%) scale(1); }
+            50% { opacity: 0.12; transform: translate(-50%, -50%) scale(1.2); }
+        }
+
+        /* Grid Pattern - More Subtle */
+        .grid-pattern {
+            background-image:
+                linear-gradient(rgba(99, 102, 241, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(99, 102, 241, 0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(17, 24, 39, 0.4);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(99, 102, 241, 0.1);
+            transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .glass-card:hover {
+            background: rgba(17, 24, 39, 0.6);
+            border-color: rgba(99, 102, 241, 0.3);
+            transform: translateY(-8px);
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.4),
+                0 0 40px rgba(99, 102, 241, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        /* Bento Grid System */
+        .bento-grid {
+            display: grid;
+            gap: 1.5rem;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+        }
+
+        .bento-item {
+            padding: 2rem;
+            border-radius: 1.5rem;
+        }
+
+        .bento-item.large {
+            grid-column: span 2;
+        }
+
+        .bento-item.tall {
+            grid-row: span 2;
+        }
+
+        .bento-item.featured {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.1) 100%);
+            border-color: rgba(99, 102, 241, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+            .bento-item.large, .bento-item.tall {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+        }
+
+        /* 3D Tilt Effect */
+        .tilt-card {
+            transform-style: preserve-3d;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .tilt-card:hover {
+            transform: perspective(1000px) rotateX(2deg) rotateY(-2deg) scale(1.02);
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #22d3ee 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Glow Effects */
+        .glow-text {
+            text-shadow: 0 0 40px var(--tech-glow);
+        }
+
+        .glow-border {
+            box-shadow:
+                0 0 20px rgba(99, 102, 241, 0.2),
+                inset 0 0 20px rgba(99, 102, 241, 0.05);
+        }
+
+        /* Feature Badge */
+        .feature-badge {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.15), rgba(139, 92, 246, 0.1));
+            color: #a5b4fc;
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Premium Buttons */
+        .btn-glow {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-glow::before {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6, #22d3ee);
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            filter: blur(15px);
+        }
+
+        .btn-glow:hover::before {
+            opacity: 0.6;
+        }
+
+        /* Pricing Cards */
+        .pricing-card {
+            background: var(--tech-surface);
+            border: 1px solid var(--tech-border);
+            backdrop-filter: blur(20px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .pricing-card.popular {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1) 0%, rgba(139, 92, 246, 0.05) 100%);
+            border-color: rgba(99, 102, 241, 0.4);
+            box-shadow:
+                0 0 60px rgba(99, 102, 241, 0.15),
+                0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        /* App Mockup Styling */
+        .app-mockup {
+            background: linear-gradient(145deg, #1a1a2e 0%, #0f0f1a 100%);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            box-shadow:
+                0 50px 100px rgba(0, 0, 0, 0.5),
+                0 0 60px rgba(99, 102, 241, 0.1),
+                inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        }
+
+        /* Floating Animation */
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        /* Orbit Animation for Feature Badges */
+        .orbit {
+            animation: orbit 20s linear infinite;
+        }
+
+        @keyframes orbit {
+            from { transform: rotate(0deg) translateX(150px) rotate(0deg); }
+            to { transform: rotate(360deg) translateX(150px) rotate(-360deg); }
+        }
+
+        /* Terminal Styling - Enhanced */
+        .terminal {
+            background: linear-gradient(180deg, #1a1a2e 0%, #0d0d14 100%);
+            border: 1px solid rgba(99, 102, 241, 0.15);
+            box-shadow:
+                0 25px 50px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.03);
+        }
+
+        .terminal-header {
+            background: rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Tech Glow Animation */
+        .tech-glow {
+            animation: tech-glow 3s ease-in-out infinite;
+        }
+
+        @keyframes tech-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(99, 102, 241, 0.4); }
+            50% { box-shadow: 0 0 40px rgba(99, 102, 241, 0.6); }
+        }
+
+        /* Typing Cursor */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s infinite;
+            color: var(--tech-accent);
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+
+        /* Stats Counter Styling */
+        .stat-value {
+            font-feature-settings: 'tnum' 1;
+            letter-spacing: -0.02em;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0) translateX(-50%); opacity: 0.6; }
+            50% { transform: translateY(10px) translateX(-50%); opacity: 1; }
+        }
+
+        /* Noise Texture Overlay */
+        .noise-overlay {
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+            opacity: 0.02;
+            pointer-events: none;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="bg-gray-950">
+    <!-- Ambient Background Glows -->
+    <div class="ambient-glow ambient-glow-1"></div>
+    <div class="ambient-glow ambient-glow-2"></div>
+    <div class="ambient-glow ambient-glow-3"></div>
+    <!-- Noise Texture -->
+    <div class="noise-overlay"></div>
+
+    <!-- Banner de Demo -->
+    <div class="demo-banner bg-gradient-to-r from-indigo-600 to-violet-600 text-white text-center py-2 text-sm font-medium">
+        <a href="../index.html" class="inline-flex items-center hover:underline">
+            <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Volver al portafolio
+        </a>
+        <span class="mx-3">|</span>
+        Modelo de demostración creado por <a href="../index.html" class="underline font-bold">YA Dev</a>
+    </div>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="top-bar__container">
+            <div class="top-bar__contact">
+                <a href="mailto:hello@nexatech.io" class="top-bar__item">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                    <span>hello@nexatech.io</span>
+                </a>
+                <div class="top-bar__item">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    <span>Soporte 24/7</span>
+                </div>
+            </div>
+            <div class="top-bar__right">
+                <div class="top-bar__social">
+                    <a href="#" class="top-bar__social-link" aria-label="GitHub">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    </a>
+                    <a href="#" class="top-bar__social-link" aria-label="Twitter">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <a href="#" class="top-bar__social-link" aria-label="Discord">
+                        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286z"/></svg>
+                    </a>
+                </div>
+                <div class="top-bar__separator"></div>
+                <a href="#" class="top-bar__item text-indigo-300 font-semibold">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Documentación
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar-animated navbar-dark bg-gray-950/80 backdrop-blur-md border-b border-gray-800 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center space-x-2">
+                    <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-lg flex items-center justify-center shadow-lg tech-glow">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold text-white">Nexa<span class="text-indigo-400">Tech</span></span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-400 hover:text-indigo-400 transition-all duration-300">Producto</a>
+                    <a href="#features" class="text-gray-400 hover:text-indigo-400 transition-all duration-300">Características</a>
+                    <a href="#precios" class="text-gray-400 hover:text-indigo-400 transition-all duration-300">Precios</a>
+                    <!-- Dropdown La Compania -->
+                    <div class="relative group">
+                        <button class="text-gray-400 hover:text-indigo-400 transition-all duration-300 flex items-center gap-1">
+                            La Compania
+                            <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute top-full left-0 mt-2 w-56 bg-slate-900 border border-slate-700 rounded-xl shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                            <div class="py-2">
+                                <a href="#nosotros" class="block px-4 py-3 text-gray-400 hover:text-indigo-400 hover:bg-slate-800 transition-all duration-300">
+                                    <span class="flex items-center gap-3">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                                        </svg>
+                                        Mision y Vision
+                                    </span>
+                                </a>
+                                <a href="#equipo" class="block px-4 py-3 text-gray-400 hover:text-indigo-400 hover:bg-slate-800 transition-all duration-300">
+                                    <span class="flex items-center gap-3">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                                        </svg>
+                                        Nuestro Equipo
+                                    </span>
+                                </a>
+                                <a href="#testimonios" class="block px-4 py-3 text-gray-400 hover:text-indigo-400 hover:bg-slate-800 transition-all duration-300">
+                                    <span class="flex items-center gap-3">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                                        </svg>
+                                        Testimonios
+                                    </span>
+                                </a>
+                                <a href="#clientes" class="block px-4 py-3 text-gray-400 hover:text-indigo-400 hover:bg-slate-800 transition-all duration-300">
+                                    <span class="flex items-center gap-3">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                                        </svg>
+                                        Clientes
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contacto" class="text-gray-400 hover:text-indigo-400 transition-all duration-300">Docs</a>
+                    <!-- Language Switcher -->
+                    <div class="flex items-center gap-1 text-sm">
+                        <a href="#" data-lang="es" class="active px-2 py-1 rounded hover:bg-slate-700 text-gray-300 transition-colors">ES</a>
+                        <span class="text-slate-600">|</span>
+                        <a href="#" data-lang="en" class="px-2 py-1 rounded hover:bg-slate-700 text-gray-300 transition-colors">EN</a>
+                    </div>
+                    <a href="#precios" class="btn-shine bg-gradient-to-r from-indigo-500 to-violet-600 text-white px-6 py-2 rounded-lg font-medium hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300">Comenzar Gratis</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden">
+                    <button id="mobile-menu-btn" class="text-gray-400 hover:text-indigo-400 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-t border-slate-800">
+            <div class="px-4 py-4 space-y-2">
+                <a href="#inicio" class="block py-3 px-4 text-gray-400 hover:text-indigo-400 hover:bg-slate-800 rounded-lg transition-all duration-300">Producto</a>
+                <a href="#features" class="block py-3 px-4 text-gray-400 hover:text-indigo-400 hover:bg-slate-800 rounded-lg transition-all duration-300">Características</a>
+                <a href="#precios" class="block py-3 px-4 text-gray-400 hover:text-indigo-400 hover:bg-slate-800 rounded-lg transition-all duration-300">Precios</a>
+                <!-- Mobile Dropdown La Compania -->
+                <div class="mobile-dropdown">
+                    <button id="mobile-company-btn" class="w-full flex items-center justify-between py-3 px-4 text-gray-400 hover:text-indigo-400 hover:bg-slate-800 rounded-lg transition-all duration-300">
+                        <span>La Compania</span>
+                        <svg id="mobile-company-icon" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                        </svg>
+                    </button>
+                    <div id="mobile-company-submenu" class="hidden pl-4 mt-2 space-y-1 border-l-2 border-indigo-500/30 ml-4">
+                        <a href="#nosotros" class="block py-2 px-4 text-gray-400 hover:text-indigo-400 hover:bg-slate-800 rounded-lg transition-all duration-300 flex items-center gap-3">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                            Mision y Vision
+                        </a>
+                        <a href="#equipo" class="block py-2 px-4 text-gray-400 hover:text-indigo-400 hover:bg-slate-800 rounded-lg transition-all duration-300 flex items-center gap-3">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/>
+                            </svg>
+                            Nuestro Equipo
+                        </a>
+                        <a href="#testimonios" class="block py-2 px-4 text-gray-400 hover:text-indigo-400 hover:bg-slate-800 rounded-lg transition-all duration-300 flex items-center gap-3">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+                            </svg>
+                            Testimonios
+                        </a>
+                        <a href="#clientes" class="block py-2 px-4 text-gray-400 hover:text-indigo-400 hover:bg-slate-800 rounded-lg transition-all duration-300 flex items-center gap-3">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/>
+                            </svg>
+                            Clientes
+                        </a>
+                    </div>
+                </div>
+                <a href="#contacto" class="block py-3 px-4 text-gray-400 hover:text-indigo-400 hover:bg-slate-800 rounded-lg transition-all duration-300">Docs</a>
+                <a href="#precios" class="block py-3 px-4 mt-4 text-center btn-shine bg-gradient-to-r from-indigo-500 to-violet-600 text-white rounded-lg font-medium hover:shadow-lg hover:shadow-indigo-500/30 transition-all duration-300">Comenzar Gratis</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero - Premium SaaS Style -->
+    <section id="inicio" class="relative min-h-screen flex items-center overflow-hidden pt-20">
+        <div class="absolute inset-0 grid-pattern"></div>
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-gray-950/30 to-gray-950"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 py-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left: Content -->
+                <div class="text-left">
+                    <div class="reveal inline-flex items-center space-x-3 feature-badge rounded-full px-5 py-2.5 mb-8">
+                        <span class="relative flex h-2 w-2">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-indigo-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-indigo-500"></span>
+                        </span>
+                        <span class="text-sm font-medium tracking-wide">Versión 2.0 — Ahora con IA</span>
+                    </div>
+
+                    <h1 class="reveal delay-1 text-5xl sm:text-6xl lg:text-7xl font-black mb-8 leading-[1.05] tracking-tight">
+                        Desarrolla<br>
+                        <span class="gradient-text">más rápido.</span><br>
+                        Escala sin límites.
+                    </h1>
+
+                    <p class="reveal delay-2 text-xl text-gray-400 mb-10 max-w-lg leading-relaxed">
+                        La plataforma de desarrollo que combina deploy instantáneo, bases de datos serverless y asistente IA — todo en un solo lugar.
+                    </p>
+
+                    <div class="reveal delay-3 flex flex-col sm:flex-row items-start gap-4">
+                        <a href="#" class="btn-glow bg-gradient-to-r from-indigo-500 via-violet-500 to-indigo-500 bg-[length:200%_100%] text-white px-8 py-4 rounded-xl font-bold transition-all duration-500 hover:bg-[position:100%_0] flex items-center group">
+                            Comenzar Gratis
+                            <svg class="w-5 h-5 ml-2 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                        <a href="#" class="glass-card px-8 py-4 rounded-xl font-semibold transition-all duration-300 flex items-center text-gray-300 hover:text-white">
+                            <svg class="w-5 h-5 mr-2 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                            </svg>
+                            Ver Demo
+                        </a>
+                    </div>
+
+                    <!-- Trust Indicators -->
+                    <div class="reveal delay-4 mt-12 flex items-center gap-6 text-sm text-gray-500">
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Sin tarjeta de crédito</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                            </svg>
+                            <span>Setup en 2 minutos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: App Mockup -->
+                <div class="reveal delay-2 relative">
+                    <div class="float-animation">
+                        <!-- Main App Window -->
+                        <div class="app-mockup rounded-2xl overflow-hidden tilt-card">
+                            <div class="terminal-header px-4 py-3 flex items-center space-x-2">
+                                <div class="w-3 h-3 bg-red-500/80 rounded-full"></div>
+                                <div class="w-3 h-3 bg-yellow-500/80 rounded-full"></div>
+                                <div class="w-3 h-3 bg-green-500/80 rounded-full"></div>
+                                <span class="text-gray-500 text-xs ml-4 font-mono">nexatech@terminal</span>
+                            </div>
+                            <div class="p-6 font-mono text-sm">
+                                <p class="text-gray-500">$ npx nexatech init my-app</p>
+                                <p class="text-emerald-400 mt-3 flex items-center gap-2">
+                                    <span class="text-emerald-500">✓</span> Creating project structure...
+                                </p>
+                                <p class="text-emerald-400 flex items-center gap-2">
+                                    <span class="text-emerald-500">✓</span> Installing dependencies...
+                                </p>
+                                <p class="text-emerald-400 flex items-center gap-2">
+                                    <span class="text-emerald-500">✓</span> Configuring AI assistant...
+                                </p>
+                                <p class="text-cyan-400 mt-3 flex items-center gap-2">
+                                    <span>🚀</span> Ready! Run 'npm run dev' to start<span class="typing-cursor"></span>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Floating Feature Badges -->
+                        <div class="absolute -top-4 -right-4 glass-card px-4 py-2 rounded-xl text-xs font-medium text-indigo-300 flex items-center gap-2 glow-border">
+                            <span class="w-2 h-2 bg-green-500 rounded-full"></span>
+                            Deploy en 8s
+                        </div>
+                        <div class="absolute -bottom-4 -left-4 glass-card px-4 py-2 rounded-xl text-xs font-medium text-violet-300 flex items-center gap-2 glow-border">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
+                            </svg>
+                            Edge Functions
+                        </div>
+                        <div class="absolute top-1/2 -right-8 transform -translate-y-1/2 glass-card px-4 py-2 rounded-xl text-xs font-medium text-cyan-300 flex items-center gap-2 glow-border">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                            </svg>
+                            AI Copilot
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator absolute bottom-8 left-1/2">
+            <div class="flex flex-col items-center gap-2 text-gray-600">
+                <span class="text-xs tracking-widest uppercase">Scroll</span>
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats - Compact Bar -->
+    <section id="stats" class="py-16 relative border-y border-gray-800/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="reveal delay-1 text-center">
+                    <p class="text-4xl sm:text-5xl font-bold text-white mb-2"><span class="counter" data-target="10">0</span>K+</p>
+                    <p class="text-gray-500">Desarrolladores</p>
+                </div>
+                <div class="reveal delay-2 text-center">
+                    <p class="text-4xl sm:text-5xl font-bold text-white mb-2"><span class="counter" data-target="99">0</span>.9%</p>
+                    <p class="text-gray-500">Uptime</p>
+                </div>
+                <div class="reveal delay-3 text-center">
+                    <p class="text-4xl sm:text-5xl font-bold text-white mb-2"><span class="counter" data-target="50">0</span>M+</p>
+                    <p class="text-gray-500">Requests/día</p>
+                </div>
+                <div class="reveal delay-4 text-center">
+                    <p class="text-4xl sm:text-5xl font-bold text-white mb-2"><span class="counter" data-target="150">0</span>+</p>
+                    <p class="text-gray-500">Integraciones</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECCIÓN MEMORABLE #1: Integrations Marquee
+         Scroll infinito de logos - Distintivo de SaaS premium
+         ============================================ -->
+    <section class="py-20 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-12">
+            <p class="reveal text-center text-gray-500 text-sm uppercase tracking-widest">
+                Se integra con las herramientas que ya usas
+            </p>
+        </div>
+
+        <!-- Marquee Container -->
+        <div class="relative">
+            <!-- Fade edges -->
+            <div class="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-gray-950 to-transparent z-10"></div>
+            <div class="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-gray-950 to-transparent z-10"></div>
+
+            <!-- Marquee Track -->
+            <div class="flex gap-12 animate-marquee">
+                <!-- Logo Set 1 -->
+                <div class="flex gap-12 items-center shrink-0">
+                    <div class="glass-card px-8 py-4 rounded-xl flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L1.75 6v12L12 24l10.25-6V6L12 0zm-1.775 18l-4.9-2.85V8.95L12 5.55l6.625 3.4v6.2L12 18.55l-1.775-.55z"/></svg>
+                        <span class="text-white font-semibold">Vercel</span>
+                    </div>
+                    <div class="glass-card px-8 py-4 rounded-xl flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <span class="text-white font-semibold">GitHub</span>
+                    </div>
+                    <div class="glass-card px-8 py-4 rounded-xl flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M22.2 14.68c-.14-.56-.5-1.02-.98-1.28l-3.78-2.03c.2-.35.32-.75.32-1.18V5.67c0-1.28-1.04-2.33-2.33-2.33H8.57c-1.28 0-2.33 1.04-2.33 2.33v4.52c0 .43.12.83.32 1.18l-3.78 2.03c-.48.26-.84.72-.98 1.28-.14.56-.06 1.14.22 1.62l2.72 4.57c.38.64 1.06 1.03 1.8 1.03h10.92c.74 0 1.42-.39 1.8-1.03l2.72-4.57c.28-.48.36-1.06.22-1.62z"/></svg>
+                        <span class="text-white font-semibold">AWS</span>
+                    </div>
+                    <div class="glass-card px-8 py-4 rounded-xl flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12.316 3.051a.999.999 0 00-.632 0l-8 2.667a1 1 0 00-.684.949v6.666a1 1 0 00.684.949l8 2.667a.999.999 0 00.632 0l8-2.667a1 1 0 00.684-.949V6.667a1 1 0 00-.684-.949l-8-2.667z"/></svg>
+                        <span class="text-white font-semibold">Stripe</span>
+                    </div>
+                    <div class="glass-card px-8 py-4 rounded-xl flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 4.5c0-.828.672-1.5 1.5-1.5h12c.828 0 1.5.672 1.5 1.5v15c0 .828-.672 1.5-1.5 1.5H6c-.828 0-1.5-.672-1.5-1.5v-15zm3 3v2h9v-2h-9zm0 4v2h9v-2h-9zm0 4v2h5v-2h-5z"/></svg>
+                        <span class="text-white font-semibold">Notion</span>
+                    </div>
+                    <div class="glass-card px-8 py-4 rounded-xl flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M5.042 15.165a2.528 2.528 0 01-2.52 2.523A2.528 2.528 0 010 15.165a2.527 2.527 0 012.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 012.521-2.52 2.527 2.527 0 012.521 2.52v6.313A2.528 2.528 0 018.834 24a2.528 2.528 0 01-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 01-2.521-2.52A2.528 2.528 0 018.834 0a2.528 2.528 0 012.521 2.522v2.52H8.834z"/></svg>
+                        <span class="text-white font-semibold">Slack</span>
+                    </div>
+                </div>
+                <!-- Logo Set 2 (Duplicate for seamless loop) -->
+                <div class="flex gap-12 items-center shrink-0">
+                    <div class="glass-card px-8 py-4 rounded-xl flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0L1.75 6v12L12 24l10.25-6V6L12 0zm-1.775 18l-4.9-2.85V8.95L12 5.55l6.625 3.4v6.2L12 18.55l-1.775-.55z"/></svg>
+                        <span class="text-white font-semibold">Vercel</span>
+                    </div>
+                    <div class="glass-card px-8 py-4 rounded-xl flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                        <span class="text-white font-semibold">GitHub</span>
+                    </div>
+                    <div class="glass-card px-8 py-4 rounded-xl flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M22.2 14.68c-.14-.56-.5-1.02-.98-1.28l-3.78-2.03c.2-.35.32-.75.32-1.18V5.67c0-1.28-1.04-2.33-2.33-2.33H8.57c-1.28 0-2.33 1.04-2.33 2.33v4.52c0 .43.12.83.32 1.18l-3.78 2.03c-.48.26-.84.72-.98 1.28-.14.56-.06 1.14.22 1.62l2.72 4.57c.38.64 1.06 1.03 1.8 1.03h10.92c.74 0 1.42-.39 1.8-1.03l2.72-4.57c.28-.48.36-1.06.22-1.62z"/></svg>
+                        <span class="text-white font-semibold">AWS</span>
+                    </div>
+                    <div class="glass-card px-8 py-4 rounded-xl flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M12.316 3.051a.999.999 0 00-.632 0l-8 2.667a1 1 0 00-.684.949v6.666a1 1 0 00.684.949l8 2.667a.999.999 0 00.632 0l8-2.667a1 1 0 00.684-.949V6.667a1 1 0 00-.684-.949l-8-2.667z"/></svg>
+                        <span class="text-white font-semibold">Stripe</span>
+                    </div>
+                    <div class="glass-card px-8 py-4 rounded-xl flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M4.5 4.5c0-.828.672-1.5 1.5-1.5h12c.828 0 1.5.672 1.5 1.5v15c0 .828-.672 1.5-1.5 1.5H6c-.828 0-1.5-.672-1.5-1.5v-15zm3 3v2h9v-2h-9zm0 4v2h9v-2h-9zm0 4v2h5v-2h-5z"/></svg>
+                        <span class="text-white font-semibold">Notion</span>
+                    </div>
+                    <div class="glass-card px-8 py-4 rounded-xl flex items-center gap-3 opacity-60 hover:opacity-100 transition-opacity">
+                        <svg class="w-8 h-8 text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M5.042 15.165a2.528 2.528 0 01-2.52 2.523A2.528 2.528 0 010 15.165a2.527 2.527 0 012.522-2.52h2.52v2.52zM6.313 15.165a2.527 2.527 0 012.521-2.52 2.527 2.527 0 012.521 2.52v6.313A2.528 2.528 0 018.834 24a2.528 2.528 0 01-2.521-2.522v-6.313zM8.834 5.042a2.528 2.528 0 01-2.521-2.52A2.528 2.528 0 018.834 0a2.528 2.528 0 012.521 2.522v2.52H8.834z"/></svg>
+                        <span class="text-white font-semibold">Slack</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            @keyframes marquee {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+            }
+            .animate-marquee {
+                animation: marquee 30s linear infinite;
+            }
+            .animate-marquee:hover {
+                animation-play-state: paused;
+            }
+        </style>
+    </section>
+
+    <!-- Features - Bento Grid Layout -->
+    <section id="features" class="py-32 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-20">
+                <p class="reveal text-indigo-400 font-medium mb-4 tracking-wider uppercase text-sm">Características</p>
+                <h2 class="reveal delay-1 text-4xl sm:text-5xl font-black text-white tracking-tight">
+                    Todo en un solo lugar
+                </h2>
+                <p class="reveal delay-2 text-gray-400 mt-6 max-w-2xl mx-auto text-lg">
+                    Herramientas diseñadas para que te enfoques en lo que importa: construir productos increíbles.
+                </p>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="bento-grid">
+                <!-- Large Featured Card -->
+                <div class="reveal delay-1 glass-card bento-item large featured rounded-3xl">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-14 h-14 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-2xl flex items-center justify-center">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xs font-mono text-indigo-400 bg-indigo-500/10 px-3 py-1 rounded-full">v2.0</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Deploy Instantáneo</h3>
+                    <p class="text-gray-400 leading-relaxed mb-6">Despliega tu aplicación con un solo comando. Configuración automática de infraestructura, SSL, y CDN global en 150+ regiones.</p>
+                    <!-- Mini Code Preview -->
+                    <div class="bg-black/30 rounded-xl p-4 font-mono text-sm">
+                        <span class="text-gray-500">$</span> <span class="text-white">npx nexatech deploy</span>
+                        <p class="text-emerald-400 mt-2">✓ Deployed to production in 8s</p>
+                    </div>
+                </div>
+
+                <!-- Tall Card -->
+                <div class="reveal delay-2 glass-card bento-item tall rounded-3xl flex flex-col">
+                    <div class="w-14 h-14 bg-gradient-to-br from-violet-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">IA Integrada</h3>
+                    <p class="text-gray-400 leading-relaxed mb-auto">Asistente de código que aprende de tu estilo. Autocompletado inteligente, refactoring automático y detección de bugs.</p>
+                    <!-- AI Indicator -->
+                    <div class="mt-8 flex items-center gap-3">
+                        <div class="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+                        <span class="text-sm text-gray-500">AI Assistant activo</span>
+                    </div>
+                </div>
+
+                <!-- Regular Card -->
+                <div class="reveal delay-3 glass-card bento-item rounded-3xl">
+                    <div class="w-12 h-12 bg-gradient-to-br from-cyan-500 to-blue-600 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Base de Datos Serverless</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">PostgreSQL, MongoDB, Redis. Escala automáticamente de 0 a millones.</p>
+                </div>
+
+                <!-- Regular Card -->
+                <div class="reveal delay-4 glass-card bento-item rounded-3xl">
+                    <div class="w-12 h-12 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Seguridad Zero-Trust</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">SSL automático, WAF, DDoS protection y escaneo continuo de vulnerabilidades.</p>
+                </div>
+
+                <!-- Large Card -->
+                <div class="reveal delay-5 glass-card bento-item large rounded-3xl">
+                    <div class="flex items-start gap-6">
+                        <div class="w-14 h-14 bg-gradient-to-br from-orange-500 to-pink-600 rounded-2xl flex items-center justify-center flex-shrink-0">
+                            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 21a4 4 0 01-4-4V5a2 2 0 012-2h4a2 2 0 012 2v12a4 4 0 01-4 4zm0 0h12a2 2 0 002-2v-4a2 2 0 00-2-2h-2.343M11 7.343l1.657-1.657a2 2 0 012.828 0l2.829 2.829a2 2 0 010 2.828l-8.486 8.485M7 17h.01"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">API Builder Visual</h3>
+                            <p class="text-gray-400 leading-relaxed">Diseña APIs REST y GraphQL visualmente. Documentación auto-generada con OpenAPI. Testing integrado.</p>
+                        </div>
+                    </div>
+                    <!-- API Preview -->
+                    <div class="mt-6 grid grid-cols-3 gap-3">
+                        <div class="bg-emerald-500/10 text-emerald-400 text-xs font-mono px-3 py-2 rounded-lg text-center">GET</div>
+                        <div class="bg-blue-500/10 text-blue-400 text-xs font-mono px-3 py-2 rounded-lg text-center">POST</div>
+                        <div class="bg-orange-500/10 text-orange-400 text-xs font-mono px-3 py-2 rounded-lg text-center">PUT</div>
+                    </div>
+                </div>
+
+                <!-- Regular Card -->
+                <div class="reveal delay-6 glass-card bento-item rounded-3xl">
+                    <div class="w-12 h-12 bg-gradient-to-br from-rose-500 to-red-600 rounded-xl flex items-center justify-center mb-5">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2">Analytics en Tiempo Real</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Métricas de rendimiento, logs centralizados y alertas inteligentes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SECCIÓN MEMORABLE #2: How It Works
+         Timeline horizontal con animación - Narrativa de producto
+         ============================================ -->
+    <section class="py-32 relative overflow-hidden">
+        <!-- Background accent -->
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent via-indigo-950/20 to-transparent"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-20">
+                <p class="reveal text-indigo-400 font-medium mb-4 tracking-wider uppercase text-sm">Cómo funciona</p>
+                <h2 class="reveal delay-1 text-4xl sm:text-5xl font-black text-white tracking-tight">
+                    De idea a producción<br>
+                    <span class="gradient-text">en minutos</span>
+                </h2>
+            </div>
+
+            <!-- Horizontal Timeline -->
+            <div class="relative">
+                <!-- Connection Line -->
+                <div class="hidden lg:block absolute top-24 left-0 right-0 h-0.5 bg-gradient-to-r from-transparent via-indigo-500/50 to-transparent"></div>
+
+                <div class="grid lg:grid-cols-4 gap-8 lg:gap-4">
+                    <!-- Step 1 -->
+                    <div class="reveal delay-1 relative">
+                        <div class="lg:text-center">
+                            <!-- Number Badge -->
+                            <div class="w-12 h-12 lg:w-16 lg:h-16 lg:mx-auto mb-6 rounded-2xl bg-gradient-to-br from-indigo-500 to-violet-600 flex items-center justify-center text-white font-bold text-xl lg:text-2xl relative z-10">
+                                1
+                            </div>
+                            <!-- Content -->
+                            <h3 class="text-xl font-bold text-white mb-3">Conecta tu repo</h3>
+                            <p class="text-gray-400 leading-relaxed">Importa desde GitHub, GitLab o Bitbucket con un click. Sin configuración manual.</p>
+                            <!-- Code snippet -->
+                            <div class="mt-4 bg-gray-900/50 rounded-lg p-3 font-mono text-xs text-gray-500">
+                                <span class="text-emerald-400">✓</span> Connected to main
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="reveal delay-2 relative">
+                        <div class="lg:text-center">
+                            <div class="w-12 h-12 lg:w-16 lg:h-16 lg:mx-auto mb-6 rounded-2xl bg-gradient-to-br from-violet-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl lg:text-2xl relative z-10">
+                                2
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Configura con IA</h3>
+                            <p class="text-gray-400 leading-relaxed">Nuestro asistente detecta tu stack y configura todo automáticamente.</p>
+                            <div class="mt-4 bg-gray-900/50 rounded-lg p-3 font-mono text-xs text-gray-500">
+                                <span class="text-cyan-400">⚡</span> Next.js detected
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="reveal delay-3 relative">
+                        <div class="lg:text-center">
+                            <div class="w-12 h-12 lg:w-16 lg:h-16 lg:mx-auto mb-6 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white font-bold text-xl lg:text-2xl relative z-10">
+                                3
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Deploy automático</h3>
+                            <p class="text-gray-400 leading-relaxed">Cada push despliega a preview. Merge a main = producción.</p>
+                            <div class="mt-4 bg-gray-900/50 rounded-lg p-3 font-mono text-xs text-gray-500">
+                                <span class="text-indigo-400">🚀</span> Deployed in 8s
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="reveal delay-4 relative">
+                        <div class="lg:text-center">
+                            <div class="w-12 h-12 lg:w-16 lg:h-16 lg:mx-auto mb-6 rounded-2xl bg-gradient-to-br from-pink-500 to-rose-600 flex items-center justify-center text-white font-bold text-xl lg:text-2xl relative z-10">
+                                4
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-3">Escala sin límites</h3>
+                            <p class="text-gray-400 leading-relaxed">Edge network global. Escala de 0 a millones de usuarios automáticamente.</p>
+                            <div class="mt-4 bg-gray-900/50 rounded-lg p-3 font-mono text-xs text-gray-500">
+                                <span class="text-green-400">●</span> 150+ edge locations
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA after timeline -->
+            <div class="reveal delay-5 text-center mt-16">
+                <a href="#" class="inline-flex items-center gap-2 text-indigo-400 hover:text-indigo-300 font-medium transition-colors group">
+                    Ver documentación completa
+                    <svg class="w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="precios" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="reveal text-indigo-400 font-medium mb-2 tracking-wider uppercase">Precios</p>
+                <h2 class="reveal delay-1 text-3xl sm:text-4xl font-bold text-white">Simple y transparente</h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 mt-16 max-w-5xl mx-auto">
+                <!-- Free -->
+                <div class="reveal delay-1 pricing-card rounded-2xl p-8">
+                    <h3 class="text-lg font-bold text-white mb-2">Hobby</h3>
+                    <p class="text-gray-500 text-sm mb-6">Para proyectos personales</p>
+                    <p class="text-4xl font-bold text-white mb-6">$0<span class="text-lg text-gray-500 font-normal">/mes</span></p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 text-indigo-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            3 proyectos
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 text-indigo-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            1GB almacenamiento
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 text-indigo-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            SSL incluido
+                        </li>
+                    </ul>
+                    <a href="#" class="block w-full text-center border border-gray-700 text-gray-300 py-3 rounded-xl font-semibold hover:bg-gray-800 transition-all">Comenzar Gratis</a>
+                </div>
+
+                <!-- Pro -->
+                <div class="reveal delay-2 pricing-card popular rounded-2xl p-8 relative">
+                    <span class="absolute -top-3 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-500 to-violet-600 text-white text-xs font-bold px-4 py-1 rounded-full">POPULAR</span>
+                    <h3 class="text-lg font-bold text-white mb-2">Pro</h3>
+                    <p class="text-gray-500 text-sm mb-6">Para equipos en crecimiento</p>
+                    <p class="text-4xl font-bold text-white mb-6">$29<span class="text-lg text-gray-500 font-normal">/mes</span></p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-indigo-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Proyectos ilimitados
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-indigo-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            100GB almacenamiento
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-indigo-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            IA Assistant
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <svg class="w-5 h-5 text-indigo-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Soporte prioritario
+                        </li>
+                    </ul>
+                    <a href="#" class="block w-full text-center bg-gradient-to-r from-indigo-500 to-violet-600 text-white py-3 rounded-xl font-semibold hover:shadow-lg hover:shadow-indigo-500/30 transition-all">Comenzar Ahora</a>
+                </div>
+
+                <!-- Empresarial -->
+                <div class="reveal delay-3 pricing-card rounded-2xl p-8">
+                    <h3 class="text-lg font-bold text-white mb-2">Empresarial</h3>
+                    <p class="text-gray-500 text-sm mb-6">Para grandes organizaciones</p>
+                    <p class="text-4xl font-bold text-white mb-6">Custom</p>
+                    <ul class="space-y-3 mb-8">
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 text-indigo-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Todo en Pro +
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 text-indigo-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            On-premise disponible
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 text-indigo-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            SLA garantizado
+                        </li>
+                        <li class="flex items-center text-gray-400">
+                            <svg class="w-5 h-5 text-indigo-400 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Soporte dedicado 24/7
+                        </li>
+                    </ul>
+                    <a href="#" class="block w-full text-center border border-gray-700 text-gray-300 py-3 rounded-xl font-semibold hover:bg-gray-800 transition-all">Contactar Ventas</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission, Vision, Values Section -->
+    <section id="nosotros" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="text-indigo-400 font-semibold text-sm uppercase tracking-wider">Sobre Nosotros</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
+                    Nuestra <span class="text-indigo-400">Filosofía</span>
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="reveal delay-1 bg-slate-800 rounded-2xl p-8 border border-slate-700 text-center hover-lift">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-indigo-500 to-violet-500 rounded-2xl flex items-center justify-center">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Misión</h3>
+                    <p class="text-gray-400">Transformar ideas en soluciones digitales innovadoras que impulsen el crecimiento de nuestros clientes.</p>
+                </div>
+                <div class="reveal delay-2 bg-slate-800 rounded-2xl p-8 border border-slate-700 text-center hover-lift">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-violet-500 to-purple-500 rounded-2xl flex items-center justify-center">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Visión</h3>
+                    <p class="text-gray-400">Ser el referente tecnológico en Latinoamérica, liderando la transformación digital con soluciones de vanguardia.</p>
+                </div>
+                <div class="reveal delay-3 bg-slate-800 rounded-2xl p-8 border border-slate-700 text-center hover-lift">
+                    <div class="w-20 h-20 mx-auto mb-6 bg-gradient-to-br from-cyan-500 to-blue-500 rounded-2xl flex items-center justify-center">
+                        <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-4">Valores</h3>
+                    <p class="text-gray-400">Innovación, excelencia técnica, colaboración, transparencia y compromiso con resultados medibles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonios" class="py-20 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="text-indigo-400 font-semibold text-sm uppercase tracking-wider">Testimonios</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
+                    Lo que dicen nuestros <span class="text-indigo-400">Clientes</span>
+                </h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="reveal delay-1 bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
+                    <div class="text-5xl text-indigo-500 opacity-30 mb-4">"</div>
+                    <p class="text-gray-300 mb-6 italic">El equipo de desarrollo superó nuestras expectativas. La aplicación funciona perfectamente y nuestros usuarios están encantados.</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=100&q=80" alt="Cliente" class="w-12 h-12 rounded-full object-cover border-2 border-indigo-500">
+                        <div>
+                            <h4 class="font-bold text-white">David Chen</h4>
+                            <p class="text-sm text-gray-500">CTO - StartupX</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal delay-2 bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
+                    <div class="text-5xl text-indigo-500 opacity-30 mb-4">"</div>
+                    <p class="text-gray-300 mb-6 italic">Su solución de inteligencia artificial transformó completamente nuestra operación. ROI increíble en solo 3 meses.</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=100&q=80" alt="Cliente" class="w-12 h-12 rounded-full object-cover border-2 border-indigo-500">
+                        <div>
+                            <h4 class="font-bold text-white">Laura Martínez</h4>
+                            <p class="text-sm text-gray-500">CEO - DataDriven Co</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="reveal delay-3 bg-slate-800/50 rounded-2xl p-8 border border-slate-700">
+                    <div class="text-5xl text-indigo-500 opacity-30 mb-4">"</div>
+                    <p class="text-gray-300 mb-6 italic">Profesionales de primer nivel. Entregaron a tiempo, dentro del presupuesto y con calidad excepcional.</p>
+                    <div class="flex items-center gap-4">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=100&q=80" alt="Cliente" class="w-12 h-12 rounded-full object-cover border-2 border-indigo-500">
+                        <div>
+                            <h4 class="font-bold text-white">Miguel Ángel Ruiz</h4>
+                            <p class="text-sm text-gray-500">Director IT - Empresarial Corp</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="equipo" class="py-20 bg-slate-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <span class="text-indigo-400 font-semibold text-sm uppercase tracking-wider">Nuestro Equipo</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-4">
+                    Expertos en <span class="text-indigo-400">Tecnología</span>
+                </h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">
+                    Un equipo de profesionales apasionados por la innovación y el desarrollo de software.
+                </p>
+            </div>
+            <div class="yadev-carousel">
+                <div class="swiper team-carousel">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="team-card bg-slate-800 border-slate-700">
+                                <div class="team-card__image">
+                                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="CEO">
+                                </div>
+                                <h4 class="team-card__name text-white">David Chen</h4>
+                                <p class="team-card__position text-indigo-400">CEO & Founder</p>
+                                <div class="team-card__social">
+                                    <a href="#" class="text-gray-400 hover:text-indigo-400"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45,20.45H16.89V14.88c0-1.33,0-3-1.85-3s-2.14,1.45-2.14,2.94v5.66H9.33V9h3.41v1.56h.05a3.74,3.74,0,0,1,3.37-1.85c3.6,0,4.27,2.37,4.27,5.46v6.32ZM5.34,7.43A2.07,2.07,0,1,1,7.41,5.36,2.07,2.07,0,0,1,5.34,7.43Zm1.78,13H3.56V9H7.12ZM22.22,0H1.77A1.75,1.75,0,0,0,0,1.73V22.27A1.75,1.75,0,0,0,1.77,24H22.22A1.76,1.76,0,0,0,24,22.27V1.73A1.76,1.76,0,0,0,22.22,0Z"/></svg></a>
+                                    <a href="#" class="text-gray-400 hover:text-indigo-400"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-card bg-slate-800 border-slate-700">
+                                <div class="team-card__image">
+                                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="CTO">
+                                </div>
+                                <h4 class="team-card__name text-white">Sarah Miller</h4>
+                                <p class="team-card__position text-indigo-400">CTO</p>
+                                <div class="team-card__social">
+                                    <a href="#" class="text-gray-400 hover:text-indigo-400"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45,20.45H16.89V14.88c0-1.33,0-3-1.85-3s-2.14,1.45-2.14,2.94v5.66H9.33V9h3.41v1.56h.05a3.74,3.74,0,0,1,3.37-1.85c3.6,0,4.27,2.37,4.27,5.46v6.32ZM5.34,7.43A2.07,2.07,0,1,1,7.41,5.36,2.07,2.07,0,0,1,5.34,7.43Zm1.78,13H3.56V9H7.12ZM22.22,0H1.77A1.75,1.75,0,0,0,0,1.73V22.27A1.75,1.75,0,0,0,1.77,24H22.22A1.76,1.76,0,0,0,24,22.27V1.73A1.76,1.76,0,0,0,22.22,0Z"/></svg></a>
+                                    <a href="#" class="text-gray-400 hover:text-indigo-400"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-card bg-slate-800 border-slate-700">
+                                <div class="team-card__image">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=crop&w=300&q=80" alt="Lead Developer">
+                                </div>
+                                <h4 class="team-card__name text-white">James Wilson</h4>
+                                <p class="team-card__position text-indigo-400">Lead Developer</p>
+                                <div class="team-card__social">
+                                    <a href="#" class="text-gray-400 hover:text-indigo-400"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45,20.45H16.89V14.88c0-1.33,0-3-1.85-3s-2.14,1.45-2.14,2.94v5.66H9.33V9h3.41v1.56h.05a3.74,3.74,0,0,1,3.37-1.85c3.6,0,4.27,2.37,4.27,5.46v6.32ZM5.34,7.43A2.07,2.07,0,1,1,7.41,5.36,2.07,2.07,0,0,1,5.34,7.43Zm1.78,13H3.56V9H7.12ZM22.22,0H1.77A1.75,1.75,0,0,0,0,1.73V22.27A1.75,1.75,0,0,0,1.77,24H22.22A1.76,1.76,0,0,0,24,22.27V1.73A1.76,1.76,0,0,0,22.22,0Z"/></svg></a>
+                                    <a href="#" class="text-gray-400 hover:text-indigo-400"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="team-card bg-slate-800 border-slate-700">
+                                <div class="team-card__image">
+                                    <img src="https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&w=300&q=80" alt="UX Designer">
+                                </div>
+                                <h4 class="team-card__name text-white">Emily Zhang</h4>
+                                <p class="team-card__position text-indigo-400">UX Designer</p>
+                                <div class="team-card__social">
+                                    <a href="#" class="text-gray-400 hover:text-indigo-400"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.45,20.45H16.89V14.88c0-1.33,0-3-1.85-3s-2.14,1.45-2.14,2.94v5.66H9.33V9h3.41v1.56h.05a3.74,3.74,0,0,1,3.37-1.85c3.6,0,4.27,2.37,4.27,5.46v6.32ZM5.34,7.43A2.07,2.07,0,1,1,7.41,5.36,2.07,2.07,0,0,1,5.34,7.43Zm1.78,13H3.56V9H7.12ZM22.22,0H1.77A1.75,1.75,0,0,0,0,1.73V22.27A1.75,1.75,0,0,0,1.77,24H22.22A1.76,1.76,0,0,0,24,22.27V1.73A1.76,1.76,0,0,0,22.22,0Z"/></svg></a>
+                                    <a href="#" class="text-gray-400 hover:text-indigo-400"><svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section id="clientes" class="py-16 bg-slate-950">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 reveal">
+                <span class="text-indigo-400 font-semibold text-sm uppercase tracking-wider">Confian en Nosotros</span>
+                <h2 class="text-2xl font-bold text-white mt-2">
+                    Nuestros <span class="text-indigo-400">Clientes</span>
+                </h2>
+            </div>
+            <div class="swiper clients-carousel">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><div class="client-logo bg-slate-800 border-slate-700"><span class="text-2xl font-bold text-gray-400">Stripe</span></div></div>
+                    <div class="swiper-slide"><div class="client-logo bg-slate-800 border-slate-700"><span class="text-2xl font-bold text-gray-400">Vercel</span></div></div>
+                    <div class="swiper-slide"><div class="client-logo bg-slate-800 border-slate-700"><span class="text-2xl font-bold text-gray-400">Notion</span></div></div>
+                    <div class="swiper-slide"><div class="client-logo bg-slate-800 border-slate-700"><span class="text-2xl font-bold text-gray-400">Linear</span></div></div>
+                    <div class="swiper-slide"><div class="client-logo bg-slate-800 border-slate-700"><span class="text-2xl font-bold text-gray-400">Figma</span></div></div>
+                    <div class="swiper-slide"><div class="client-logo bg-slate-800 border-slate-700"><span class="text-2xl font-bold text-gray-400">Slack</span></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="contacto" class="py-24 relative overflow-hidden">
+        <div class="absolute inset-0 bg-gradient-to-r from-indigo-900/50 to-violet-900/50"></div>
+        <div class="absolute inset-0 grid-pattern"></div>
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <h2 class="reveal text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-6">¿Listo para construir algo increíble?</h2>
+            <p class="reveal delay-1 text-xl text-gray-400 mb-10">Únete a miles de desarrolladores que ya confían en NexaTech.</p>
+            <div class="reveal delay-2 flex flex-col sm:flex-row items-center justify-center gap-4">
+                <a href="#" class="btn-shine bg-gradient-to-r from-indigo-500 to-violet-600 text-white px-10 py-4 rounded-xl font-bold hover:shadow-xl hover:shadow-indigo-500/30 transition-all duration-300 hover:-translate-y-1">
+                    Comenzar Gratis
+                </a>
+                <a href="#" class="border border-gray-600 text-gray-300 px-10 py-4 rounded-xl font-semibold hover:bg-gray-800 transition-all duration-300">
+                    Ver Documentación
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-950 border-t border-gray-800 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12">
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 to-violet-600 rounded-lg flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold">NexaTech</span>
+                    </div>
+                    <p class="text-gray-500 leading-relaxed">Plataforma de desarrollo todo-en-uno para crear, desplegar y escalar aplicaciones modernas.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-300">Producto</h4>
+                    <ul class="space-y-2 text-gray-500">
+                        <li><a href="#" class="footer-link hover:text-indigo-400 transition-colors">Características</a></li>
+                        <li><a href="#" class="footer-link hover:text-indigo-400 transition-colors">Precios</a></li>
+                        <li><a href="#" class="footer-link hover:text-indigo-400 transition-colors">Docs</a></li>
+                        <li><a href="#" class="footer-link hover:text-indigo-400 transition-colors">Changelog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4 text-gray-300">Empresa</h4>
+                    <ul class="space-y-2 text-gray-500">
+                        <li><a href="#" class="hover:text-indigo-400 transition-colors">Sobre nosotros</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition-colors">Blog</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition-colors">Carreras</a></li>
+                        <li><a href="#" class="hover:text-indigo-400 transition-colors">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between">
+                <p class="text-gray-600 text-sm">© 2024 NexaTech. Todos los derechos reservados.</p>
+                <p class="text-gray-600 text-sm mt-4 md:mt-0">Demo creado por <a href="../index.html" class="text-indigo-400 hover:underline">YA Dev</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/573001234567" target="_blank" class="whatsapp-float">
+        <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <!-- Swiper.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- YaDev Core JS -->
+    <script src="../assets/js/yadev-core.js"></script>
+    <script src="../assets/js/yadev-animations.js"></script>
+    <script src="../assets/js/yadev-cookies.js"></script>
+    <script src="../assets/js/yadev-preloader.js"></script>
+    <script src="../assets/js/yadev-carousel.js"></script>
+    <script src="../assets/js/yadev-language.js"></script>
+    <script src="../assets/js/yadev-template-switcher.js"></script>
+
+    <!-- Mobile Menu Script -->
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // Mobile company submenu toggle
+        const mobileCompanyBtn = document.getElementById('mobile-company-btn');
+        const mobileCompanySubmenu = document.getElementById('mobile-company-submenu');
+        const mobileCompanyIcon = document.getElementById('mobile-company-icon');
+
+        if (mobileCompanyBtn && mobileCompanySubmenu && mobileCompanyIcon) {
+            mobileCompanyBtn.addEventListener('click', function() {
+                mobileCompanySubmenu.classList.toggle('hidden');
+                mobileCompanyIcon.classList.toggle('rotate-180');
+            });
+        }
+
+        // Close mobile menu when clicking on a link
+        const mobileMenuLinks = mobileMenu ? mobileMenu.querySelectorAll('a') : [];
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>

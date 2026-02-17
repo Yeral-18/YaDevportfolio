@@ -1,0 +1,617 @@
+/* ============================================
+   Template: Construcción Blueprint
+   Diseño estilo planos arquitectónicos con
+   grid técnico, fuente monospace, líneas precisas
+   ============================================ */
+
+/* ===== VARIABLES BLUEPRINT ===== */
+.template-construccion-blueprint {
+    --bp-bg: #1e3a5f;
+    --bp-dark: #0f172a;
+    --bp-light: #3b5a7c;
+    --bp-white: #ffffff;
+    --bp-grid: rgba(255, 255, 255, 0.05);
+    --bp-line: rgba(255, 255, 255, 0.3);
+    --bp-yellow: #fbbf24;
+    --bp-text: #94a3b8;
+}
+
+/* ===== FONDO BLUEPRINT CON GRID ===== */
+.template-construccion-blueprint,
+.template-construccion-blueprint body {
+    background-color: var(--bp-bg) !important;
+    background-image:
+        linear-gradient(var(--bp-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--bp-grid) 1px, transparent 1px),
+        linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    color: var(--bp-white) !important;
+    font-family: 'JetBrains Mono', 'Courier New', monospace !important;
+}
+
+/* ===== NAVBAR TÉCNICA ===== */
+.template-construccion-blueprint .navbar-animated {
+    background: rgba(15, 23, 42, 0.95) !important;
+    border-bottom: 2px solid var(--bp-line) !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    height: 70px !important;
+}
+
+.template-construccion-blueprint .navbar-animated::before {
+    content: 'MENU // NAV';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 10px;
+    color: var(--bp-yellow);
+    letter-spacing: 2px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.template-construccion-blueprint .navbar-animated a {
+    color: var(--bp-white) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+}
+
+.template-construccion-blueprint .navbar-animated a:hover {
+    color: var(--bp-yellow) !important;
+}
+
+.template-construccion-blueprint .navbar-animated .btn-primary {
+    background: transparent !important;
+    border: 2px solid var(--bp-yellow) !important;
+    color: var(--bp-yellow) !important;
+    border-radius: 0 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* ===== HERO TÉCNICO ===== */
+.template-construccion-blueprint #inicio {
+    background: linear-gradient(135deg, var(--bp-dark) 0%, var(--bp-bg) 100%) !important;
+    min-height: 100vh !important;
+    position: relative;
+    padding-top: 100px !important;
+}
+
+.template-construccion-blueprint #inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background-image:
+        linear-gradient(var(--bp-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--bp-grid) 1px, transparent 1px);
+    background-size: 20px 20px;
+    clip-path: polygon(20% 0, 100% 0, 100% 100%, 0% 100%);
+    opacity: 0.5;
+}
+
+.template-construccion-blueprint #inicio::after {
+    content: 'PROYECTO // HERO_SECTION';
+    position: absolute;
+    top: 100px;
+    left: 40px;
+    font-size: 10px;
+    color: var(--bp-yellow);
+    letter-spacing: 3px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.template-construccion-blueprint #inicio h1 {
+    color: var(--bp-white) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    text-shadow: 2px 2px 0 var(--bp-dark);
+}
+
+.template-construccion-blueprint #inicio h1 span {
+    color: var(--bp-yellow) !important;
+    background: none !important;
+    -webkit-text-fill-color: var(--bp-yellow) !important;
+}
+
+.template-construccion-blueprint #inicio p {
+    color: var(--bp-text) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* ===== STATS COMO MEDIDAS ===== */
+.template-construccion-blueprint #inicio .grid.grid-cols-2 > div {
+    background: transparent !important;
+    border: 1px dashed var(--bp-line) !important;
+    border-radius: 0 !important;
+    position: relative;
+    padding: 1.5rem !important;
+}
+
+.template-construccion-blueprint #inicio .grid.grid-cols-2 > div::before {
+    content: '+';
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    color: var(--bp-yellow);
+    font-size: 16px;
+}
+
+.template-construccion-blueprint #inicio .grid.grid-cols-2 > div::after {
+    content: '+';
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    color: var(--bp-yellow);
+    font-size: 16px;
+}
+
+.template-construccion-blueprint #inicio .grid.grid-cols-2 .text-4xl {
+    color: var(--bp-yellow) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-weight: 700 !important;
+}
+
+/* ===== BOTONES TÉCNICOS ===== */
+.template-construccion-blueprint .btn-shine,
+.template-construccion-blueprint .btn-primary {
+    background: transparent !important;
+    border: 2px solid var(--bp-yellow) !important;
+    color: var(--bp-yellow) !important;
+    border-radius: 0 !important;
+    padding: 1rem 2rem !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    transition: all 0.3s ease !important;
+    position: relative;
+}
+
+.template-construccion-blueprint .btn-shine:hover,
+.template-construccion-blueprint .btn-primary:hover {
+    background: var(--bp-yellow) !important;
+    color: var(--bp-dark) !important;
+}
+
+.template-construccion-blueprint .btn-shine::before {
+    display: none !important;
+}
+
+/* ===== SECCIONES CON ANOTACIONES ===== */
+.template-construccion-blueprint section {
+    background: var(--bp-bg) !important;
+    padding: 100px 0 !important;
+    position: relative;
+    border-top: 1px dashed var(--bp-line) !important;
+}
+
+.template-construccion-blueprint section::before {
+    content: 'SECTION_' attr(id);
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 10px;
+    color: var(--bp-yellow);
+    letter-spacing: 3px;
+    font-family: 'JetBrains Mono', monospace;
+    text-transform: uppercase;
+}
+
+.template-construccion-blueprint section:nth-child(even) {
+    background: var(--bp-dark) !important;
+}
+
+/* ===== TÍTULOS TÉCNICOS ===== */
+.template-construccion-blueprint section h2 {
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    color: var(--bp-white) !important;
+    position: relative;
+    padding-left: 20px !important;
+}
+
+.template-construccion-blueprint section h2::before {
+    content: '//';
+    color: var(--bp-yellow);
+    margin-right: 10px;
+}
+
+.template-construccion-blueprint section h2::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 2px;
+    background: var(--bp-yellow);
+    margin-top: 15px;
+}
+
+/* ===== CARDS BLUEPRINT ===== */
+.template-construccion-blueprint .bg-white.rounded-2xl {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 2px solid var(--bp-bg) !important;
+    border-radius: 0 !important;
+    box-shadow: 4px 4px 0 rgba(30, 64, 175, 0.3) !important;
+    position: relative;
+    transition: all 0.3s ease !important;
+}
+
+.template-construccion-blueprint .bg-white.rounded-2xl::before {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px;
+    height: 30px;
+    border: 1px dashed var(--bp-bg);
+    opacity: 0.5;
+}
+
+.template-construccion-blueprint .bg-white.rounded-2xl:hover {
+    transform: translate(-4px, -4px) !important;
+    box-shadow: 8px 8px 0 rgba(30, 64, 175, 0.4) !important;
+}
+
+.template-construccion-blueprint .bg-white h3 {
+    font-family: 'JetBrains Mono', monospace !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    color: var(--bp-dark) !important;
+}
+
+/* ===== STATS CARDS ===== */
+.template-construccion-blueprint .stat-card {
+    background: var(--bp-dark) !important;
+    color: var(--bp-white) !important;
+    border: 1px dashed var(--bp-line) !important;
+    border-radius: 0 !important;
+    position: relative;
+}
+
+.template-construccion-blueprint .stat-card::before {
+    content: '◇';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: var(--bp-yellow);
+    font-size: 20px;
+}
+
+.template-construccion-blueprint .stat-card .text-4xl,
+.template-construccion-blueprint .stat-card .text-3xl {
+    color: var(--bp-yellow) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* ===== PROCESO COMO PLANO ===== */
+.template-construccion-blueprint .process-step-light {
+    background: transparent !important;
+    border: 1px dashed var(--bp-line) !important;
+    border-radius: 0 !important;
+    position: relative;
+}
+
+.template-construccion-blueprint .process-step-light::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -60px;
+    width: 50px;
+    height: 1px;
+    background: var(--bp-yellow);
+}
+
+.template-construccion-blueprint .process-step-light::after {
+    content: '→';
+    position: absolute;
+    top: 50%;
+    right: -70px;
+    transform: translateY(-50%);
+    color: var(--bp-yellow);
+    font-size: 20px;
+}
+
+.template-construccion-blueprint .process-step-light:last-child::before,
+.template-construccion-blueprint .process-step-light:last-child::after {
+    display: none;
+}
+
+.template-construccion-blueprint .process-step-light .text-4xl {
+    color: var(--bp-yellow) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* ===== NOSOTROS / MISION ===== */
+.template-construccion-blueprint #nosotros .grid > div {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 2px solid var(--bp-bg) !important;
+    border-radius: 0 !important;
+    color: var(--bp-dark) !important;
+}
+
+.template-construccion-blueprint #nosotros .w-20 {
+    background: var(--bp-bg) !important;
+    border-radius: 0 !important;
+    border: 2px solid var(--bp-yellow) !important;
+}
+
+.template-construccion-blueprint #nosotros h3 {
+    color: var(--bp-dark) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    text-transform: uppercase !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.template-construccion-blueprint .team-card {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 2px solid var(--bp-bg) !important;
+    border-radius: 0 !important;
+}
+
+.template-construccion-blueprint .team-card__image {
+    border-radius: 0 !important;
+    border: 2px solid var(--bp-yellow) !important;
+}
+
+.template-construccion-blueprint .team-card__name {
+    color: var(--bp-dark) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    text-transform: uppercase !important;
+}
+
+.template-construccion-blueprint .team-card__position {
+    color: var(--bp-bg) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 10px !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.template-construccion-blueprint #testimonios .grid > div {
+    background: var(--bp-dark) !important;
+    border: 1px dashed var(--bp-line) !important;
+    border-radius: 0 !important;
+    color: var(--bp-white) !important;
+}
+
+.template-construccion-blueprint #testimonios .text-5xl {
+    color: var(--bp-yellow) !important;
+    opacity: 0.3 !important;
+}
+
+.template-construccion-blueprint #testimonios p {
+    color: var(--bp-text) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+.template-construccion-blueprint #testimonios h4 {
+    color: var(--bp-white) !important;
+}
+
+/* ===== CLIENTES ===== */
+.template-construccion-blueprint .client-logo {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px dashed var(--bp-line) !important;
+    border-radius: 0 !important;
+    filter: grayscale(100%) brightness(1.5);
+    transition: all 0.3s ease !important;
+}
+
+.template-construccion-blueprint .client-logo:hover {
+    filter: grayscale(0%);
+    border-color: var(--bp-yellow) !important;
+}
+
+/* ===== FORMULARIO ===== */
+.template-construccion-blueprint form {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border: 2px solid var(--bp-bg) !important;
+    border-radius: 0 !important;
+}
+
+.template-construccion-blueprint form::before {
+    content: 'CONTACT_FORM';
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    color: var(--bp-yellow);
+    letter-spacing: 2px;
+}
+
+.template-construccion-blueprint input,
+.template-construccion-blueprint textarea,
+.template-construccion-blueprint select {
+    border: 2px solid var(--bp-bg) !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+.template-construccion-blueprint input:focus,
+.template-construccion-blueprint textarea:focus,
+.template-construccion-blueprint select:focus {
+    border-color: var(--bp-yellow) !important;
+    box-shadow: none !important;
+}
+
+.template-construccion-blueprint label {
+    font-family: 'JetBrains Mono', monospace !important;
+    text-transform: uppercase !important;
+    font-size: 10px !important;
+    letter-spacing: 1px !important;
+}
+
+/* ===== CTA BLUEPRINT ===== */
+.template-construccion-blueprint #contacto,
+.template-construccion-blueprint .cta-section {
+    background: var(--bp-dark) !important;
+    border: 2px dashed var(--bp-line) !important;
+    position: relative;
+}
+
+.template-construccion-blueprint #contacto::before {
+    content: 'CTA_SECTION';
+    position: absolute;
+    top: -15px;
+    left: 40px;
+    font-size: 10px;
+    color: var(--bp-yellow);
+    letter-spacing: 3px;
+    font-family: 'JetBrains Mono', monospace;
+    background: var(--bp-dark);
+    padding: 0 10px;
+}
+
+.template-construccion-blueprint #contacto h2 {
+    color: var(--bp-white) !important;
+}
+
+.template-construccion-blueprint #contacto .btn-shine {
+    background: var(--bp-yellow) !important;
+    color: var(--bp-dark) !important;
+    border-color: var(--bp-yellow) !important;
+}
+
+/* ===== FOOTER TÉCNICO ===== */
+.template-construccion-blueprint footer {
+    background: var(--bp-dark) !important;
+    border-top: 2px solid var(--bp-line) !important;
+    color: var(--bp-text) !important;
+}
+
+.template-construccion-blueprint footer h4 {
+    color: var(--bp-yellow) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    text-transform: uppercase !important;
+    font-size: 10px !important;
+    letter-spacing: 2px !important;
+}
+
+.template-construccion-blueprint footer a {
+    color: var(--bp-text) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+.template-construccion-blueprint footer a:hover {
+    color: var(--bp-yellow) !important;
+}
+
+/* ===== ICONOS DE SERVICIO ===== */
+.template-construccion-blueprint .service-type {
+    background: transparent !important;
+    border: 2px solid var(--bp-yellow) !important;
+    border-radius: 0 !important;
+}
+
+/* ===== WHATSAPP ===== */
+.template-construccion-blueprint .whatsapp-float {
+    border-radius: 0 !important;
+    border: 2px solid rgba(37, 211, 102, 0.5) !important;
+}
+
+/* ===== TOP BAR ===== */
+.template-construccion-blueprint .top-bar {
+    background: var(--bp-dark) !important;
+    border-bottom: 1px dashed var(--bp-line) !important;
+}
+
+.template-construccion-blueprint .top-bar a {
+    color: var(--bp-text) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* ===== DEMO BANNER ===== */
+.template-construccion-blueprint .demo-banner {
+    background: var(--bp-yellow) !important;
+    color: var(--bp-dark) !important;
+}
+
+/* ===== DECORACIONES ===== */
+.template-construccion-blueprint .geometric-decoration {
+    border: 1px dashed var(--bp-line) !important;
+    background: transparent !important;
+    opacity: 0.5 !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-construccion-blueprint .scroll-progress {
+    background: var(--bp-yellow) !important;
+    height: 2px !important;
+}
+
+/* ===== ANIMACIONES ===== */
+.template-construccion-blueprint .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.template-construccion-blueprint .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== TEXT FIX FOR DARK SECTIONS ===== */
+.template-construccion-blueprint .bg-gray-50 {
+    background: var(--bp-dark) !important;
+}
+
+.template-construccion-blueprint .bg-gray-50 .text-gray-900,
+.template-construccion-blueprint .bg-gray-50 .text-gray-800,
+.template-construccion-blueprint .bg-gray-50 .text-gray-700 {
+    color: var(--bp-white) !important;
+}
+
+.template-construccion-blueprint .bg-gray-50 .text-gray-600 {
+    color: var(--bp-text) !important;
+}
+
+.template-construccion-blueprint .text-amber-600 {
+    color: var(--bp-yellow) !important;
+}
+
+/* ===== NAVBAR SCROLLED ===== */
+.template-construccion-blueprint .navbar-animated.scrolled {
+    background: rgba(10, 25, 47, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* ===== DROPDOWN MENUS ===== */
+.template-construccion-blueprint .group .absolute,
+.template-construccion-blueprint .dropdown-menu,
+.template-construccion-blueprint [class*="dropdown"],
+.template-construccion-blueprint nav .absolute {
+    background: var(--bp-dark) !important;
+    border: 1px dashed var(--bp-border) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+.template-construccion-blueprint .group .absolute a,
+.template-construccion-blueprint .dropdown-menu a,
+.template-construccion-blueprint nav .absolute a {
+    color: var(--bp-text) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+.template-construccion-blueprint .group .absolute a:hover,
+.template-construccion-blueprint .dropdown-menu a:hover,
+.template-construccion-blueprint nav .absolute a:hover {
+    background: rgba(255, 193, 7, 0.1) !important;
+    color: var(--bp-yellow) !important;
+}
+
+/* ===== IMPORT MONO FONT ===== */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');

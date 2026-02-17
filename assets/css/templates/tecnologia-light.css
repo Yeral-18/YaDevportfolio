@@ -1,0 +1,462 @@
+/* ============================================
+   Template: Tecnología Light
+   Diseño limpio minimalista tipo Apple/Stripe
+   Espacios amplios, tarjetas flotantes, gradientes sutiles
+   ============================================ */
+
+/* ===== VARIABLES LIGHT ===== */
+.template-tecnologia-light {
+    --light-bg: #ffffff;
+    --light-surface: #f8fafc;
+    --light-text: #0f172a;
+    --light-muted: #64748b;
+    --light-border: #e2e8f0;
+    --light-indigo: #6366f1;
+    --light-violet: #8b5cf6;
+    --light-gradient: linear-gradient(135deg, #6366f1, #8b5cf6);
+}
+
+/* ===== FONDO LIMPIO ===== */
+.template-tecnologia-light,
+.template-tecnologia-light body {
+    background: var(--light-bg) !important;
+    color: var(--light-text) !important;
+    font-family: 'Inter', -apple-system, sans-serif !important;
+}
+
+/* ===== NAVBAR FLOATING PILL ===== */
+.template-tecnologia-light .navbar-animated {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    margin: 1rem auto !important;
+    max-width: calc(100% - 2rem) !important;
+    border-radius: 100px !important;
+    padding: 0.5rem 1.5rem !important;
+}
+
+.template-tecnologia-light .navbar-animated.scrolled {
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.08) !important;
+    border: 1px solid var(--light-border);
+}
+
+.template-tecnologia-light .navbar-animated a {
+    color: var(--light-text) !important;
+    font-weight: 500 !important;
+    font-size: 0.9rem !important;
+}
+
+.template-tecnologia-light .navbar-animated a:hover {
+    color: var(--light-indigo) !important;
+}
+
+.template-tecnologia-light .navbar-animated .btn-primary {
+    background: var(--light-gradient) !important;
+    border-radius: 100px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-size: 0.875rem !important;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3) !important;
+}
+
+/* ===== HERO CENTRADO SIMPLE ===== */
+.template-tecnologia-light #inicio {
+    background: linear-gradient(180deg, var(--light-surface) 0%, var(--light-bg) 100%) !important;
+    min-height: 90vh !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-tecnologia-light #inicio::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background:
+        radial-gradient(circle at 30% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 70% 70%, rgba(139, 92, 246, 0.05) 0%, transparent 50%);
+}
+
+.template-tecnologia-light #inicio .parallax {
+    opacity: 0.1 !important;
+}
+
+.template-tecnologia-light #inicio h1 {
+    color: var(--light-text) !important;
+    font-size: clamp(2.5rem, 6vw, 4.5rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.03em !important;
+    position: relative;
+    z-index: 2;
+}
+
+.template-tecnologia-light #inicio h1 span {
+    background: var(--light-gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.template-tecnologia-light #inicio p {
+    color: var(--light-muted) !important;
+    font-size: 1.25rem !important;
+    max-width: 600px !important;
+    margin: 1.5rem auto !important;
+}
+
+/* ===== STATS OCULTOS EN HERO ===== */
+.template-tecnologia-light #inicio .grid.grid-cols-2 {
+    display: none !important;
+}
+
+/* ===== BOTONES PILL GRADIENT ===== */
+.template-tecnologia-light .btn-shine,
+.template-tecnologia-light .btn-primary {
+    background: var(--light-gradient) !important;
+    border-radius: 100px !important;
+    padding: 1rem 2rem !important;
+    font-weight: 600 !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-tecnologia-light .btn-shine:hover,
+.template-tecnologia-light .btn-primary:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4) !important;
+}
+
+.template-tecnologia-light .btn-shine::before {
+    display: none !important;
+}
+
+/* ===== SECCIONES LIMPIAS ===== */
+.template-tecnologia-light section {
+    padding: 6rem 0 !important;
+}
+
+.template-tecnologia-light section:nth-child(odd) {
+    background: var(--light-bg) !important;
+}
+
+.template-tecnologia-light section:nth-child(even) {
+    background: var(--light-surface) !important;
+}
+
+/* ===== TÍTULOS MODERNOS ===== */
+.template-tecnologia-light section h2 {
+    color: var(--light-text) !important;
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.02em !important;
+    text-align: center !important;
+    margin-bottom: 3rem !important;
+}
+
+.template-tecnologia-light section h2::after {
+    display: none !important;
+}
+
+.template-tecnologia-light .text-indigo-600,
+.template-tecnologia-light .text-violet-600 {
+    color: var(--light-indigo) !important;
+}
+
+/* ===== CARDS FLOTANTES ===== */
+.template-tecnologia-light .bg-white.rounded-2xl,
+.template-tecnologia-light .bg-slate-800,
+.template-tecnologia-light .bg-slate-900 {
+    background: var(--light-bg) !important;
+    border: 1px solid var(--light-border) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    color: var(--light-text) !important;
+}
+
+.template-tecnologia-light .bg-white.rounded-2xl:hover,
+.template-tecnologia-light .bg-slate-800:hover,
+.template-tecnologia-light .bg-slate-900:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1) !important;
+    border-color: rgba(99, 102, 241, 0.2) !important;
+}
+
+.template-tecnologia-light .bg-slate-800 *,
+.template-tecnologia-light .bg-slate-900 * {
+    color: var(--light-text) !important;
+}
+
+/* ===== STATS CARDS ===== */
+.template-tecnologia-light .stat-card {
+    background: var(--light-surface) !important;
+    border: 1px solid var(--light-border) !important;
+    border-radius: 20px !important;
+}
+
+.template-tecnologia-light .stat-card .text-4xl,
+.template-tecnologia-light .stat-card .text-3xl {
+    background: var(--light-gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: 800 !important;
+}
+
+/* ===== PROCESO CON LÍNEA ===== */
+.template-tecnologia-light .process-step-light {
+    background: var(--light-bg) !important;
+    border: 1px solid var(--light-border) !important;
+    border-radius: 20px !important;
+    position: relative;
+}
+
+.template-tecnologia-light .process-step-light::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -50%;
+    width: calc(100% - 40px);
+    height: 2px;
+    background: linear-gradient(90deg, var(--light-indigo), transparent);
+    z-index: -1;
+}
+
+.template-tecnologia-light .process-step-light:last-child::after {
+    display: none;
+}
+
+/* ===== NOSOTROS / MISION ===== */
+.template-tecnologia-light #nosotros {
+    background: var(--light-surface) !important;
+}
+
+.template-tecnologia-light #nosotros .grid > div {
+    background: var(--light-bg) !important;
+    border: 1px solid var(--light-border) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.template-tecnologia-light #nosotros .grid > div:hover {
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1) !important;
+}
+
+.template-tecnologia-light #nosotros .w-20 {
+    background: var(--light-gradient) !important;
+    border-radius: 20px !important;
+}
+
+.template-tecnologia-light #nosotros h3 {
+    color: var(--light-text) !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.template-tecnologia-light .team-card {
+    background: var(--light-bg) !important;
+    border: 1px solid var(--light-border) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+}
+
+.template-tecnologia-light .team-card:hover {
+    box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1) !important;
+}
+
+.template-tecnologia-light .team-card__image {
+    border: 3px solid var(--light-indigo) !important;
+    border-radius: 50% !important;
+}
+
+.template-tecnologia-light .team-card__name {
+    color: var(--light-text) !important;
+}
+
+.template-tecnologia-light .team-card__position {
+    color: var(--light-indigo) !important;
+    font-weight: 500 !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.template-tecnologia-light #testimonios .grid > div {
+    background: var(--light-bg) !important;
+    border: 1px solid var(--light-border) !important;
+    border-radius: 24px !important;
+    padding: 2rem !important;
+}
+
+.template-tecnologia-light #testimonios .text-5xl {
+    background: var(--light-gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    opacity: 0.3 !important;
+}
+
+.template-tecnologia-light #testimonios p {
+    color: var(--light-muted) !important;
+}
+
+.template-tecnologia-light #testimonios h4 {
+    color: var(--light-text) !important;
+}
+
+.template-tecnologia-light #testimonios .border-indigo-500 {
+    border-color: var(--light-indigo) !important;
+}
+
+/* ===== CLIENTES ===== */
+.template-tecnologia-light .client-logo {
+    background: var(--light-surface) !important;
+    border: 1px solid var(--light-border) !important;
+    border-radius: 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-tecnologia-light .client-logo:hover {
+    box-shadow: 0 10px 30px rgba(99, 102, 241, 0.1) !important;
+    border-color: rgba(99, 102, 241, 0.3) !important;
+}
+
+/* ===== CTA GRADIENT ===== */
+.template-tecnologia-light #contacto,
+.template-tecnologia-light .cta-section {
+    background: var(--light-gradient) !important;
+    border-radius: 32px !important;
+    margin: 0 2rem 2rem !important;
+}
+
+.template-tecnologia-light #contacto h2,
+.template-tecnologia-light .cta-section h2 {
+    color: #fff !important;
+}
+
+.template-tecnologia-light #contacto p {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.template-tecnologia-light #contacto .btn-shine {
+    background: #fff !important;
+    color: var(--light-indigo) !important;
+}
+
+/* ===== FORMULARIO ===== */
+.template-tecnologia-light form {
+    background: var(--light-bg) !important;
+    border: 1px solid var(--light-border) !important;
+    border-radius: 24px !important;
+}
+
+.template-tecnologia-light form::before {
+    display: none !important;
+}
+
+.template-tecnologia-light input,
+.template-tecnologia-light textarea,
+.template-tecnologia-light select {
+    background: var(--light-surface) !important;
+    border: 1px solid var(--light-border) !important;
+    border-radius: 12px !important;
+    color: var(--light-text) !important;
+}
+
+.template-tecnologia-light input:focus,
+.template-tecnologia-light textarea:focus,
+.template-tecnologia-light select:focus {
+    border-color: var(--light-indigo) !important;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1) !important;
+}
+
+.template-tecnologia-light label {
+    color: var(--light-text) !important;
+}
+
+/* ===== FOOTER LIMPIO ===== */
+.template-tecnologia-light footer {
+    background: var(--light-text) !important;
+    border-radius: 32px 32px 0 0 !important;
+}
+
+.template-tecnologia-light footer h4 {
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+
+.template-tecnologia-light footer a {
+    color: var(--light-muted) !important;
+}
+
+.template-tecnologia-light footer a:hover {
+    color: var(--light-indigo) !important;
+}
+
+/* ===== WHATSAPP PILL ===== */
+.template-tecnologia-light .whatsapp-float {
+    background: var(--light-gradient) !important;
+    border-radius: 100px !important;
+    width: 56px !important;
+    height: 56px !important;
+    box-shadow: 0 4px 20px rgba(99, 102, 241, 0.4) !important;
+}
+
+/* ===== TOP BAR ===== */
+.template-tecnologia-light .top-bar {
+    background: var(--light-surface) !important;
+    border-bottom: 1px solid var(--light-border) !important;
+}
+
+.template-tecnologia-light .top-bar a {
+    color: var(--light-muted) !important;
+}
+
+/* ===== DEMO BANNER ===== */
+.template-tecnologia-light .demo-banner {
+    background: var(--light-gradient) !important;
+    border-radius: 0 0 16px 16px !important;
+}
+
+/* ===== DECORACIONES ===== */
+.template-tecnologia-light .geometric-decoration {
+    display: none !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-tecnologia-light .scroll-progress {
+    background: var(--light-gradient) !important;
+    height: 3px !important;
+}
+
+/* ===== ANIMACIONES ===== */
+.template-tecnologia-light .reveal {
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* ===== SERVICE ICONS ===== */
+.template-tecnologia-light .service-type {
+    background: var(--light-gradient) !important;
+    border-radius: 16px !important;
+}
+
+/* ===== TEXT COLORS FIX ===== */
+.template-tecnologia-light .text-white {
+    color: var(--light-text) !important;
+}
+
+.template-tecnologia-light .text-gray-400,
+.template-tecnologia-light .text-gray-500,
+.template-tecnologia-light .text-gray-600 {
+    color: var(--light-muted) !important;
+}
+
+.template-tecnologia-light .bg-slate-950 {
+    background: var(--light-surface) !important;
+}
+
+.template-tecnologia-light .text-indigo-400 {
+    color: var(--light-indigo) !important;
+}

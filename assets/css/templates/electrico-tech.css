@@ -1,0 +1,526 @@
+/* ============================================
+   Template: Eléctrico Tech/Futurista
+   Diseño tecnológico con grid de puntos,
+   efectos neón y layout asimétrico
+   ============================================ */
+
+/* ===== VARIABLES TECH ===== */
+.template-electrico-tech {
+    --neon-glow: 0 0 20px rgba(255, 203, 54, 0.5);
+    --grid-color: rgba(255, 203, 54, 0.1);
+}
+
+/* ===== FONDO CON GRID DE PUNTOS ===== */
+.template-electrico-tech,
+.template-electrico-tech body {
+    background-color: #0a0a0f !important;
+    background-image:
+        radial-gradient(circle at 1px 1px, var(--grid-color) 1px, transparent 0);
+    background-size: 40px 40px;
+}
+
+/* ===== NAVBAR TRANSPARENTE TECH ===== */
+.template-electrico-tech .navbar-animated {
+    background: rgba(10, 10, 15, 0.8) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(255, 203, 54, 0.2) !important;
+    box-shadow: none !important;
+}
+
+.template-electrico-tech .navbar-animated a {
+    color: #e5e7eb !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 12px !important;
+    letter-spacing: 1px !important;
+}
+
+.template-electrico-tech .navbar-animated a:hover {
+    color: #ffcb36 !important;
+    text-shadow: var(--neon-glow) !important;
+}
+
+.template-electrico-tech .navbar-animated .btn-primary {
+    background: transparent !important;
+    border: 1px solid #ffcb36 !important;
+    color: #ffcb36 !important;
+    box-shadow: var(--neon-glow) !important;
+}
+
+/* ===== HERO TECH CON SCANLINES ===== */
+.template-electrico-tech #inicio {
+    background: linear-gradient(180deg, #0a0a0f 0%, #12121a 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-electrico-tech #inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(255, 203, 54, 0.03) 2px,
+        rgba(255, 203, 54, 0.03) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+}
+
+.template-electrico-tech #inicio::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(255, 203, 54, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.template-electrico-tech #inicio h1 {
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    position: relative;
+    z-index: 2;
+}
+
+.template-electrico-tech #inicio h1 span {
+    color: #ffcb36 !important;
+    text-shadow: var(--neon-glow) !important;
+}
+
+/* ===== TEXTOS TECH ===== */
+.template-electrico-tech h1,
+.template-electrico-tech h2,
+.template-electrico-tech h3,
+.template-electrico-tech h4 {
+    color: #ffffff !important;
+}
+
+.template-electrico-tech p,
+.template-electrico-tech span {
+    color: #9ca3af !important;
+}
+
+.template-electrico-tech .text-gray-600,
+.template-electrico-tech .text-gray-700 {
+    color: #9ca3af !important;
+}
+
+/* ===== SECCIONES OSCURAS ===== */
+.template-electrico-tech section {
+    background: #0a0a0f !important;
+    position: relative;
+}
+
+.template-electrico-tech section:nth-child(even) {
+    background: #0f0f15 !important;
+}
+
+/* ===== TÍTULOS CON LÍNEA TECH ===== */
+.template-electrico-tech section h2 {
+    position: relative;
+    display: inline-block;
+    padding-left: 30px;
+    font-family: 'Inter', sans-serif !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.05em !important;
+}
+
+.template-electrico-tech section h2::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 2px;
+    background: #ffcb36;
+    box-shadow: var(--neon-glow);
+}
+
+.template-electrico-tech section h2::after {
+    display: none !important;
+}
+
+/* ===== CARDS TECH CON BORDE GLITCH ===== */
+.template-electrico-tech .bg-white.rounded-2xl {
+    background: rgba(20, 20, 30, 0.8) !important;
+    border: 1px solid rgba(255, 203, 54, 0.3) !important;
+    border-radius: 4px !important;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.template-electrico-tech .bg-white.rounded-2xl::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #ffcb36, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.template-electrico-tech .bg-white.rounded-2xl:hover {
+    border-color: #ffcb36 !important;
+    box-shadow:
+        0 0 30px rgba(255, 203, 54, 0.2),
+        inset 0 0 30px rgba(255, 203, 54, 0.05) !important;
+    transform: translateY(-5px) !important;
+}
+
+.template-electrico-tech .bg-white.rounded-2xl:hover::before {
+    opacity: 1;
+    animation: scan 2s linear infinite;
+}
+
+@keyframes scan {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* ===== STATS CON DISPLAY DIGITAL ===== */
+.template-electrico-tech .stat-card {
+    background: rgba(255, 203, 54, 0.05) !important;
+    border: 1px solid rgba(255, 203, 54, 0.2) !important;
+    border-radius: 4px !important;
+}
+
+.template-electrico-tech .stat-card .text-4xl,
+.template-electrico-tech .stat-card .text-3xl {
+    font-family: 'JetBrains Mono', 'Courier New', monospace !important;
+    color: #ffcb36 !important;
+    text-shadow: var(--neon-glow) !important;
+}
+
+/* ===== BOTONES TECH ===== */
+.template-electrico-tech .btn-primary {
+    background: transparent !important;
+    border: 1px solid #ffcb36 !important;
+    color: #ffcb36 !important;
+    border-radius: 2px !important;
+    position: relative;
+    overflow: hidden;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 12px !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    padding: 16px 32px !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-electrico-tech .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #ffcb36;
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.template-electrico-tech .btn-primary:hover {
+    color: #000 !important;
+    box-shadow: var(--neon-glow) !important;
+}
+
+.template-electrico-tech .btn-primary:hover::before {
+    width: 100%;
+}
+
+/* ===== TEAM CARDS HOLOGRÁFICAS ===== */
+.template-electrico-tech .team-card {
+    background: linear-gradient(135deg, rgba(20, 20, 30, 0.9), rgba(30, 30, 45, 0.9)) !important;
+    border: 1px solid rgba(255, 203, 54, 0.2) !important;
+    border-radius: 4px !important;
+    position: relative;
+}
+
+.template-electrico-tech .team-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(
+        45deg,
+        transparent 30%,
+        rgba(255, 203, 54, 0.1) 50%,
+        transparent 70%
+    );
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.template-electrico-tech .team-card:hover::after {
+    opacity: 1;
+    animation: hologram 1s ease;
+}
+
+@keyframes hologram {
+    0% { transform: rotate(45deg) translateY(-100%); }
+    100% { transform: rotate(45deg) translateY(100%); }
+}
+
+.template-electrico-tech .team-card__image {
+    border: 2px solid #ffcb36 !important;
+    box-shadow: var(--neon-glow) !important;
+}
+
+.template-electrico-tech .team-card__name {
+    color: #ffffff !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.template-electrico-tech .team-card__position {
+    color: #ffcb36 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+}
+
+/* ===== TESTIMONIALS TERMINAL ===== */
+.template-electrico-tech .testimonial-card {
+    background: #0a0a0f !important;
+    border: 1px solid rgba(255, 203, 54, 0.3) !important;
+    border-radius: 4px !important;
+    position: relative;
+    padding-top: 50px !important;
+}
+
+.template-electrico-tech .testimonial-card::before {
+    content: '> _';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #ffcb36;
+    font-size: 14px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.template-electrico-tech .testimonial-card p {
+    font-family: 'JetBrains Mono', monospace !important;
+    color: #d1d5db !important;
+    font-size: 14px !important;
+    line-height: 1.8 !important;
+}
+
+/* ===== CLIENT LOGOS GRID ===== */
+.template-electrico-tech .client-logo {
+    background: rgba(255, 203, 54, 0.05) !important;
+    border: 1px solid rgba(255, 203, 54, 0.1) !important;
+    border-radius: 4px !important;
+    transition: all 0.3s ease !important;
+    filter: grayscale(100%) brightness(0.5) !important;
+}
+
+.template-electrico-tech .client-logo:hover {
+    filter: grayscale(0%) brightness(1) !important;
+    border-color: #ffcb36 !important;
+    box-shadow: var(--neon-glow) !important;
+}
+
+/* ===== FORMULARIO TECH ===== */
+.template-electrico-tech form {
+    background: rgba(20, 20, 30, 0.5) !important;
+    border: 1px solid rgba(255, 203, 54, 0.2) !important;
+    border-radius: 4px !important;
+}
+
+.template-electrico-tech form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: rgba(255, 203, 54, 0.1);
+    border-bottom: 1px solid rgba(255, 203, 54, 0.2);
+}
+
+.template-electrico-tech input,
+.template-electrico-tech textarea,
+.template-electrico-tech select {
+    background: rgba(10, 10, 15, 0.8) !important;
+    border: 1px solid rgba(255, 203, 54, 0.2) !important;
+    border-radius: 2px !important;
+    color: #e5e7eb !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+.template-electrico-tech input:focus,
+.template-electrico-tech textarea:focus,
+.template-electrico-tech select:focus {
+    border-color: #ffcb36 !important;
+    box-shadow: 0 0 10px rgba(255, 203, 54, 0.3) !important;
+    outline: none !important;
+}
+
+.template-electrico-tech label {
+    color: #9ca3af !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+}
+
+/* ===== PROCESO TECH ===== */
+.template-electrico-tech .process-step-light {
+    background: rgba(20, 20, 30, 0.5) !important;
+    border: 1px solid rgba(255, 203, 54, 0.2) !important;
+    border-radius: 4px !important;
+    position: relative;
+}
+
+.template-electrico-tech .process-step-light .text-4xl {
+    font-family: 'JetBrains Mono', monospace !important;
+    color: #ffcb36 !important;
+}
+
+.template-electrico-tech .process-step-light::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    width: 1px;
+    height: 20px;
+    background: linear-gradient(180deg, #ffcb36, transparent) !important;
+}
+
+/* ===== CTA TECH ===== */
+.template-electrico-tech .cta-section {
+    background: linear-gradient(135deg, #0a0a0f, #1a1a25) !important;
+    border-top: 1px solid rgba(255, 203, 54, 0.2);
+    border-bottom: 1px solid rgba(255, 203, 54, 0.2);
+}
+
+/* ===== FOOTER TECH ===== */
+.template-electrico-tech footer {
+    background: #050508 !important;
+    border-top: 1px solid rgba(255, 203, 54, 0.2) !important;
+}
+
+.template-electrico-tech footer h4 {
+    color: #ffcb36 !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+}
+
+.template-electrico-tech footer a {
+    color: #6b7280 !important;
+    font-family: 'Inter', sans-serif !important;
+}
+
+.template-electrico-tech footer a:hover {
+    color: #ffcb36 !important;
+    text-shadow: var(--neon-glow) !important;
+}
+
+/* ===== WHATSAPP TECH ===== */
+.template-electrico-tech .whatsapp-float {
+    border-radius: 4px !important;
+    border: 1px solid rgba(37, 211, 102, 0.5) !important;
+    box-shadow: 0 0 20px rgba(37, 211, 102, 0.3) !important;
+}
+
+/* ===== ANIMACIONES TECH ===== */
+.template-electrico-tech .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.template-electrico-tech .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efecto glitch para títulos */
+.template-electrico-tech h2:hover {
+    animation: glitch 0.3s ease;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); }
+    20% { transform: translate(-2px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(2px, 2px); }
+    80% { transform: translate(2px, -2px); }
+    100% { transform: translate(0); }
+}
+
+/* ===== ICONOS NEÓN ===== */
+.template-electrico-tech .service-type {
+    background: rgba(255, 203, 54, 0.1) !important;
+    border: 1px solid #ffcb36 !important;
+    box-shadow: var(--neon-glow) !important;
+    border-radius: 4px !important;
+}
+
+.template-electrico-tech .service-type svg {
+    color: #ffcb36 !important;
+    filter: drop-shadow(0 0 5px rgba(255, 203, 54, 0.5));
+}
+
+/* ===== NAVBAR SCROLLED ===== */
+.template-electrico-tech .navbar-animated.scrolled {
+    background: rgba(10, 10, 15, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* ===== DROPDOWN MENUS ===== */
+.template-electrico-tech .group .absolute,
+.template-electrico-tech .dropdown-menu,
+.template-electrico-tech [class*="dropdown"],
+.template-electrico-tech nav .absolute {
+    background: rgba(15, 15, 20, 0.98) !important;
+    border: 1px solid rgba(255, 203, 54, 0.3) !important;
+    border-radius: 4px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.template-electrico-tech .group .absolute a,
+.template-electrico-tech .dropdown-menu a,
+.template-electrico-tech nav .absolute a {
+    color: #e5e7eb !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 12px !important;
+}
+
+.template-electrico-tech .group .absolute a:hover,
+.template-electrico-tech .dropdown-menu a:hover,
+.template-electrico-tech nav .absolute a:hover {
+    background: rgba(255, 203, 54, 0.1) !important;
+    color: #ffcb36 !important;
+    text-shadow: var(--neon-glow) !important;
+}
+
+/* ===== IMPORTAR FUENTE MONOSPACE ===== */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');

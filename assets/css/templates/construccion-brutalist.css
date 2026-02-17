@@ -1,0 +1,678 @@
+/* ============================================
+   Template: Construcción Brutalist
+   Diseño brutalista con bordes gruesos,
+   tipografía GIGANTE, colores raw
+   ============================================ */
+
+/* ===== VARIABLES BRUTALIST ===== */
+.template-construccion-brutalist {
+    --brut-black: #000000;
+    --brut-white: #ffffff;
+    --brut-yellow: #fbbf24;
+    --brut-orange: #f97316;
+    --brut-gray: #e5e5e5;
+    --brut-dark-gray: #404040;
+}
+
+/* ===== FONDO BLANCO PURO ===== */
+.template-construccion-brutalist,
+.template-construccion-brutalist body {
+    background: var(--brut-white) !important;
+    color: var(--brut-black) !important;
+    font-family: 'Arial Black', 'Helvetica Neue', sans-serif !important;
+}
+
+/* ===== NAVBAR BRUTALIST ===== */
+.template-construccion-brutalist .navbar-animated {
+    background: var(--brut-black) !important;
+    border: none !important;
+    border-bottom: 8px solid var(--brut-yellow) !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    height: auto !important;
+}
+
+.template-construccion-brutalist .navbar-animated.scrolled {
+    background: var(--brut-black) !important;
+}
+
+.template-construccion-brutalist .navbar-animated a {
+    color: var(--brut-white) !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 2px !important;
+    padding: 1.5rem 1rem !important;
+    border-right: 2px solid var(--brut-dark-gray) !important;
+}
+
+.template-construccion-brutalist .navbar-animated a:hover {
+    background: var(--brut-yellow) !important;
+    color: var(--brut-black) !important;
+}
+
+.template-construccion-brutalist .navbar-animated .btn-primary {
+    background: var(--brut-yellow) !important;
+    color: var(--brut-black) !important;
+    border-radius: 0 !important;
+    font-weight: 900 !important;
+    border: 4px solid var(--brut-black) !important;
+    margin: 0.5rem !important;
+}
+
+/* ===== DROPDOWN BRUTALIST ===== */
+.template-construccion-brutalist .group .absolute,
+.template-construccion-brutalist .dropdown-menu,
+.template-construccion-brutalist nav .absolute {
+    background: var(--brut-white) !important;
+    border: 4px solid var(--brut-black) !important;
+    border-radius: 0 !important;
+    box-shadow: 8px 8px 0 var(--brut-black) !important;
+}
+
+.template-construccion-brutalist .group .absolute a,
+.template-construccion-brutalist nav .absolute a {
+    color: var(--brut-black) !important;
+    border-right: none !important;
+    border-bottom: 2px solid var(--brut-gray) !important;
+}
+
+.template-construccion-brutalist .group .absolute a:hover,
+.template-construccion-brutalist nav .absolute a:hover {
+    background: var(--brut-yellow) !important;
+}
+
+/* ===== HERO GIGANTE ===== */
+.template-construccion-brutalist #inicio {
+    background: var(--brut-white) !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    border-bottom: 8px solid var(--brut-black) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-construccion-brutalist #inicio::before {
+    content: 'CONSTRUIMOS';
+    position: absolute;
+    bottom: -5%;
+    left: -2%;
+    font-size: clamp(8rem, 20vw, 20rem);
+    font-weight: 900;
+    color: var(--brut-gray);
+    letter-spacing: -0.05em;
+    line-height: 0.8;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.template-construccion-brutalist #inicio h1 {
+    color: var(--brut-black) !important;
+    font-size: clamp(3rem, 10vw, 8rem) !important;
+    font-weight: 900 !important;
+    line-height: 0.9 !important;
+    letter-spacing: -0.05em !important;
+    text-transform: uppercase !important;
+    position: relative;
+    z-index: 1;
+}
+
+.template-construccion-brutalist #inicio h1 span {
+    color: var(--brut-white) !important;
+    background: var(--brut-black) !important;
+    padding: 0 0.25em !important;
+    display: inline-block;
+}
+
+.template-construccion-brutalist #inicio p {
+    color: var(--brut-dark-gray) !important;
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    max-width: 600px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Ocultar parallax y decoraciones */
+.template-construccion-brutalist #inicio .parallax,
+.template-construccion-brutalist .geometric-decoration {
+    display: none !important;
+}
+
+/* ===== STATS BRUTALIST ===== */
+.template-construccion-brutalist .stat-card {
+    background: var(--brut-yellow) !important;
+    border: 4px solid var(--brut-black) !important;
+    border-radius: 0 !important;
+    box-shadow: 6px 6px 0 var(--brut-black) !important;
+    padding: 2rem !important;
+}
+
+.template-construccion-brutalist .stat-card .text-4xl,
+.template-construccion-brutalist .stat-card .text-3xl {
+    color: var(--brut-black) !important;
+    font-size: 4rem !important;
+    font-weight: 900 !important;
+    line-height: 1 !important;
+}
+
+.template-construccion-brutalist .stat-card p {
+    color: var(--brut-black) !important;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.75rem !important;
+}
+
+/* ===== SECCIONES ===== */
+.template-construccion-brutalist section {
+    padding: 6rem 0 !important;
+    border-bottom: 8px solid var(--brut-black) !important;
+}
+
+.template-construccion-brutalist section:nth-child(even) {
+    background: var(--brut-gray) !important;
+}
+
+.template-construccion-brutalist section:nth-child(odd) {
+    background: var(--brut-white) !important;
+}
+
+/* ===== TÍTULOS GIGANTES ===== */
+.template-construccion-brutalist section h2 {
+    color: var(--brut-black) !important;
+    font-size: clamp(2.5rem, 6vw, 5rem) !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: -0.03em !important;
+    line-height: 0.95 !important;
+    margin-bottom: 3rem !important;
+}
+
+.template-construccion-brutalist section h2::after {
+    content: '—';
+    display: block;
+    color: var(--brut-yellow);
+    font-size: 3rem;
+}
+
+.template-construccion-brutalist section h2 span {
+    background: var(--brut-yellow) !important;
+    color: var(--brut-black) !important;
+    padding: 0 0.2em !important;
+}
+
+/* ===== CARDS BRUTALIST ===== */
+.template-construccion-brutalist .bg-white.rounded-2xl {
+    background: var(--brut-white) !important;
+    border: 4px solid var(--brut-black) !important;
+    border-radius: 0 !important;
+    box-shadow: 6px 6px 0 var(--brut-black) !important;
+    transition: all 0.2s ease !important;
+}
+
+.template-construccion-brutalist .bg-white.rounded-2xl:hover {
+    transform: translate(-3px, -3px) !important;
+    box-shadow: 12px 12px 0 var(--brut-black) !important;
+}
+
+.template-construccion-brutalist .bg-white.rounded-2xl h3 {
+    color: var(--brut-black) !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    font-size: 1.5rem !important;
+}
+
+/* ===== SERVICE ICONS ===== */
+.template-construccion-brutalist .service-type {
+    background: var(--brut-yellow) !important;
+    border: 3px solid var(--brut-black) !important;
+    border-radius: 0 !important;
+    width: 70px !important;
+    height: 70px !important;
+}
+
+.template-construccion-brutalist .service-type svg {
+    color: var(--brut-black) !important;
+}
+
+/* ===== BOTONES ===== */
+.template-construccion-brutalist .btn-primary,
+.template-construccion-brutalist .btn-shine {
+    background: var(--brut-yellow) !important;
+    color: var(--brut-black) !important;
+    border: 4px solid var(--brut-black) !important;
+    border-radius: 0 !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    padding: 1.25rem 2.5rem !important;
+    box-shadow: 4px 4px 0 var(--brut-black) !important;
+    transition: all 0.1s ease !important;
+}
+
+.template-construccion-brutalist .btn-primary:hover,
+.template-construccion-brutalist .btn-shine:hover {
+    transform: translate(-2px, -2px) !important;
+    box-shadow: 8px 8px 0 var(--brut-black) !important;
+}
+
+.template-construccion-brutalist .btn-shine::before {
+    display: none !important;
+}
+
+/* ===== SECONDARY BUTTON ===== */
+.template-construccion-brutalist .btn-secondary {
+    background: var(--brut-white) !important;
+    color: var(--brut-black) !important;
+    border: 4px solid var(--brut-black) !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.template-construccion-brutalist .team-card {
+    background: var(--brut-white) !important;
+    border: 4px solid var(--brut-black) !important;
+    border-radius: 0 !important;
+    box-shadow: 6px 6px 0 var(--brut-black) !important;
+}
+
+.template-construccion-brutalist .team-card__image {
+    border-radius: 0 !important;
+    border: 4px solid var(--brut-black) !important;
+}
+
+.template-construccion-brutalist .team-card__name {
+    color: var(--brut-black) !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+}
+
+.template-construccion-brutalist .team-card__position {
+    color: var(--brut-black) !important;
+    background: var(--brut-yellow) !important;
+    padding: 0.25rem 0.5rem !important;
+    font-weight: 700 !important;
+    font-size: 0.75rem !important;
+    display: inline-block;
+}
+
+/* ===== TESTIMONIOS ===== */
+.template-construccion-brutalist #testimonios .grid > div,
+.template-construccion-brutalist .testimonial-card {
+    background: var(--brut-white) !important;
+    border: 4px solid var(--brut-black) !important;
+    border-radius: 0 !important;
+    box-shadow: 6px 6px 0 var(--brut-black) !important;
+}
+
+.template-construccion-brutalist #testimonios .text-5xl {
+    color: var(--brut-yellow) !important;
+    font-size: 6rem !important;
+    line-height: 0.5;
+}
+
+.template-construccion-brutalist #testimonios p {
+    color: var(--brut-black) !important;
+    font-weight: 700 !important;
+}
+
+.template-construccion-brutalist #testimonios h4 {
+    color: var(--brut-black) !important;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+}
+
+/* ===== PROCESO ===== */
+.template-construccion-brutalist .process-step-light {
+    background: var(--brut-white) !important;
+    border: 4px solid var(--brut-black) !important;
+    border-radius: 0 !important;
+}
+
+.template-construccion-brutalist .process-step-light .text-4xl {
+    background: var(--brut-black) !important;
+    color: var(--brut-yellow) !important;
+    padding: 0.5rem 1rem !important;
+    font-weight: 900 !important;
+}
+
+/* ===== FORMULARIO ===== */
+.template-construccion-brutalist form {
+    background: var(--brut-white) !important;
+    border: 4px solid var(--brut-black) !important;
+    box-shadow: 8px 8px 0 var(--brut-black) !important;
+}
+
+.template-construccion-brutalist form::before {
+    display: none !important;
+}
+
+.template-construccion-brutalist input,
+.template-construccion-brutalist textarea,
+.template-construccion-brutalist select {
+    background: var(--brut-white) !important;
+    border: 3px solid var(--brut-black) !important;
+    border-radius: 0 !important;
+    color: var(--brut-black) !important;
+    font-weight: 700 !important;
+}
+
+.template-construccion-brutalist input:focus,
+.template-construccion-brutalist textarea:focus,
+.template-construccion-brutalist select:focus {
+    border-color: var(--brut-yellow) !important;
+    outline: none !important;
+    box-shadow: 4px 4px 0 var(--brut-yellow) !important;
+}
+
+.template-construccion-brutalist label {
+    color: var(--brut-black) !important;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+}
+
+/* ===== CTA ===== */
+.template-construccion-brutalist .cta-section,
+.template-construccion-brutalist #contacto {
+    background: var(--brut-black) !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.template-construccion-brutalist .cta-section h2,
+.template-construccion-brutalist #contacto h2 {
+    color: var(--brut-white) !important;
+}
+
+.template-construccion-brutalist .cta-section h2::after {
+    color: var(--brut-yellow);
+}
+
+.template-construccion-brutalist .cta-section p,
+.template-construccion-brutalist #contacto p {
+    color: var(--brut-gray) !important;
+}
+
+/* ===== FOOTER ===== */
+.template-construccion-brutalist footer {
+    background: var(--brut-black) !important;
+    border-top: 8px solid var(--brut-yellow) !important;
+    border-radius: 0 !important;
+}
+
+.template-construccion-brutalist footer h4 {
+    color: var(--brut-yellow) !important;
+    font-weight: 900 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.template-construccion-brutalist footer a {
+    color: var(--brut-white) !important;
+    font-weight: 700 !important;
+}
+
+.template-construccion-brutalist footer a:hover {
+    color: var(--brut-yellow) !important;
+}
+
+/* ===== WHATSAPP ===== */
+.template-construccion-brutalist .whatsapp-float {
+    border-radius: 0 !important;
+    border: 4px solid var(--brut-black) !important;
+    box-shadow: 4px 4px 0 var(--brut-black) !important;
+}
+
+/* ===== CLIENT LOGOS ===== */
+.template-construccion-brutalist .client-logo {
+    background: var(--brut-white) !important;
+    border: 3px solid var(--brut-black) !important;
+    border-radius: 0 !important;
+}
+
+.template-construccion-brutalist .client-logo:hover {
+    background: var(--brut-yellow) !important;
+}
+
+/* ===== TOP BAR ===== */
+.template-construccion-brutalist .top-bar {
+    background: var(--brut-yellow) !important;
+    border-bottom: 4px solid var(--brut-black) !important;
+}
+
+.template-construccion-brutalist .top-bar a {
+    color: var(--brut-black) !important;
+    font-weight: 900 !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-construccion-brutalist .scroll-progress {
+    background: var(--brut-yellow) !important;
+    height: 8px !important;
+}
+
+/* ===== DEMO BANNER ===== */
+.template-construccion-brutalist .demo-banner {
+    background: var(--brut-black) !important;
+    border-bottom: 4px solid var(--brut-yellow) !important;
+}
+
+/* ===== ANIMACIONES MÍNIMAS ===== */
+.template-construccion-brutalist .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.4s ease !important;
+}
+
+.template-construccion-brutalist .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== SCROLLBAR ===== */
+.template-construccion-brutalist ::-webkit-scrollbar {
+    width: 12px;
+    background: var(--brut-white);
+}
+
+.template-construccion-brutalist ::-webkit-scrollbar-thumb {
+    background: var(--brut-black);
+}
+
+/* ===== EFECTOS BRUTALIST AVANZADOS ===== */
+
+/* Glitch effect para títulos */
+@keyframes glitch {
+    0%, 100% {
+        text-shadow:
+            -2px 0 var(--brut-yellow),
+            2px 0 var(--brut-orange);
+    }
+    25% {
+        text-shadow:
+            2px 0 var(--brut-yellow),
+            -2px 0 var(--brut-orange);
+    }
+    50% {
+        text-shadow:
+            -1px 0 var(--brut-orange),
+            1px 0 var(--brut-yellow);
+    }
+    75% {
+        text-shadow:
+            1px 0 var(--brut-orange),
+            -1px 0 var(--brut-yellow);
+    }
+}
+
+.template-construccion-brutalist #inicio h1:hover {
+    animation: glitch 0.3s ease infinite;
+}
+
+/* Shake effect para botones */
+@keyframes brutal-shake {
+    0%, 100% { transform: translate(-2px, -2px); }
+    25% { transform: translate(2px, -2px); }
+    50% { transform: translate(-2px, 2px); }
+    75% { transform: translate(2px, 2px); }
+}
+
+.template-construccion-brutalist .btn-primary:active,
+.template-construccion-brutalist .btn-shine:active {
+    animation: brutal-shake 0.1s ease;
+}
+
+/* Efecto de sello/stamp para iconos */
+@keyframes stamp {
+    0% { transform: scale(1.5) rotate(-5deg); opacity: 0; }
+    50% { transform: scale(0.95) rotate(2deg); }
+    100% { transform: scale(1) rotate(0deg); opacity: 1; }
+}
+
+.template-construccion-brutalist .service-type.visible {
+    animation: stamp 0.4s cubic-bezier(0.36, 0.07, 0.19, 0.97);
+}
+
+/* Números con efecto de máquina de escribir */
+@keyframes type-number {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.template-construccion-brutalist .stat-card .text-4xl::after {
+    content: '_';
+    animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+/* Hover con offset aumentado */
+.template-construccion-brutalist .bg-white.rounded-2xl {
+    transition: all 0.15s ease !important;
+}
+
+.template-construccion-brutalist .bg-white.rounded-2xl:active {
+    transform: translate(0, 0) !important;
+    box-shadow: 0 0 0 var(--brut-black) !important;
+}
+
+/* Border animation para cards */
+@keyframes border-march {
+    0% { background-position: 0 0, 100% 100%, 0 100%, 100% 0; }
+    100% { background-position: 20px 0, calc(100% - 20px) 100%, 0 calc(100% - 20px), 100% 20px; }
+}
+
+.template-construccion-brutalist .bg-white.rounded-2xl:hover {
+    background-image:
+        linear-gradient(90deg, var(--brut-black) 50%, transparent 50%),
+        linear-gradient(90deg, var(--brut-black) 50%, transparent 50%),
+        linear-gradient(0deg, var(--brut-black) 50%, transparent 50%),
+        linear-gradient(0deg, var(--brut-black) 50%, transparent 50%);
+    background-size: 10px 4px, 10px 4px, 4px 10px, 4px 10px;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+    animation: border-march 0.5s linear infinite;
+}
+
+/* Efecto de construcción - líneas diagonales */
+.template-construccion-brutalist section::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 10px,
+        var(--brut-yellow) 10px,
+        var(--brut-yellow) 20px
+    );
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+/* Input focus brutal */
+.template-construccion-brutalist input:focus,
+.template-construccion-brutalist textarea:focus {
+    transform: translate(-3px, -3px);
+}
+
+/* Selection brutal */
+.template-construccion-brutalist ::selection {
+    background: var(--brut-yellow);
+    color: var(--brut-black);
+}
+
+/* Marquee de advertencia */
+@keyframes warning-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.template-construccion-brutalist .warning-tape {
+    background: repeating-linear-gradient(
+        -45deg,
+        var(--brut-yellow),
+        var(--brut-yellow) 20px,
+        var(--brut-black) 20px,
+        var(--brut-black) 40px
+    );
+    padding: 0.5rem;
+    overflow: hidden;
+}
+
+/* Cursor construcción */
+.template-construccion-brutalist {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Cpath fill='%23fbbf24' stroke='%23000' stroke-width='2' d='M12 2L2 22h20L12 2z'/%3E%3C/svg%3E") 16 16, auto;
+}
+
+.template-construccion-brutalist a,
+.template-construccion-brutalist button {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 24 24'%3E%3Crect x='4' y='4' width='16' height='16' fill='%23fbbf24' stroke='%23000' stroke-width='2'/%3E%3C/svg%3E") 16 16, pointer;
+}
+
+/* WhatsApp brutal pulse */
+@keyframes brutal-pulse {
+    0%, 100% {
+        box-shadow: 4px 4px 0 var(--brut-black);
+    }
+    50% {
+        box-shadow: 8px 8px 0 var(--brut-black), 4px 4px 0 var(--brut-yellow);
+    }
+}
+
+.template-construccion-brutalist .whatsapp-float {
+    animation: brutal-pulse 2s ease infinite;
+}
+
+/* Loading brutal */
+@keyframes brutal-load {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+.template-construccion-brutalist .loading-bar {
+    height: 8px;
+    background: var(--brut-yellow);
+    animation: brutal-load 2s ease-out forwards;
+}
+
+/* Stagger delays */
+.template-construccion-brutalist .reveal.delay-1 { transition-delay: 0.05s; }
+.template-construccion-brutalist .reveal.delay-2 { transition-delay: 0.1s; }
+.template-construccion-brutalist .reveal.delay-3 { transition-delay: 0.15s; }
+.template-construccion-brutalist .reveal.delay-4 { transition-delay: 0.2s; }
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .template-construccion-brutalist * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
+}

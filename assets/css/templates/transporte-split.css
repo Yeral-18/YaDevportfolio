@@ -1,0 +1,293 @@
+/* ============================================
+   Template: Transporte Split-Layout
+   ESTILO: Minimalista extremo, BLANCO, tipografía serif
+   ============================================ */
+
+/* Variables */
+body.template-transporte-split {
+    --split-black: #000000;
+    --split-gray: #737373;
+    --split-line: #e5e5e5;
+}
+
+/* ===== FONDO BLANCO PURO ===== */
+body.template-transporte-split {
+    background: #ffffff !important;
+    font-family: 'Georgia', 'Times New Roman', serif !important;
+}
+
+/* ===== NAVBAR INVISIBLE ===== */
+body.template-transporte-split .navbar-animated {
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+body.template-transporte-split .navbar-animated.scrolled {
+    background: #ffffff !important;
+    border-bottom: 1px solid var(--split-line) !important;
+}
+
+body.template-transporte-split .navbar-animated a {
+    color: var(--split-black) !important;
+    font-weight: 400 !important;
+    font-family: 'Georgia', serif !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 1px !important;
+}
+
+body.template-transporte-split .navbar-animated .btn-primary {
+    background: transparent !important;
+    color: var(--split-black) !important;
+    border: 1px solid var(--split-black) !important;
+    border-radius: 0 !important;
+}
+
+/* ===== HERO DIVIDIDO 50/50 ===== */
+body.template-transporte-split #inicio {
+    background: #ffffff !important;
+    min-height: 100vh !important;
+    display: flex !important;
+    align-items: center !important;
+    border-bottom: 1px solid var(--split-line) !important;
+}
+
+body.template-transporte-split #inicio .parallax {
+    opacity: 0 !important;
+}
+
+body.template-transporte-split #inicio * {
+    color: var(--split-black) !important;
+}
+
+body.template-transporte-split #inicio h1 {
+    font-family: 'Georgia', serif !important;
+    font-size: 4.5rem !important;
+    font-weight: 400 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -2px !important;
+}
+
+body.template-transporte-split #inicio h1 span {
+    font-style: italic !important;
+    color: var(--split-gray) !important;
+}
+
+body.template-transporte-split #inicio p {
+    color: var(--split-gray) !important;
+    font-size: 1.125rem !important;
+    max-width: 400px !important;
+}
+
+body.template-transporte-split #inicio .btn-shine {
+    background: var(--split-black) !important;
+    color: #ffffff !important;
+    border-radius: 0 !important;
+    padding: 18px 48px !important;
+    font-family: 'Georgia', serif !important;
+    letter-spacing: 2px !important;
+}
+
+body.template-transporte-split #inicio .geometric-decoration,
+body.template-transporte-split #inicio .map-dots {
+    display: none !important;
+}
+
+/* ===== LÍNEA DECORATIVA VERTICAL ===== */
+body.template-transporte-split #inicio::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 20%;
+    bottom: 20%;
+    width: 1px;
+    background: var(--split-line);
+}
+
+/* ===== SECCIONES ULTRA LIMPIAS ===== */
+body.template-transporte-split section:not(#inicio):not(#contacto) {
+    padding: 120px 0 !important;
+    background: #ffffff !important;
+    border-bottom: 1px solid var(--split-line) !important;
+}
+
+/* ===== TÍTULOS EDITORIALES ===== */
+body.template-transporte-split section h2 {
+    font-family: 'Georgia', serif !important;
+    font-size: 3rem !important;
+    font-weight: 400 !important;
+    color: var(--split-black) !important;
+    letter-spacing: -1px !important;
+    text-align: center !important;
+    margin-bottom: 80px !important;
+}
+
+body.template-transporte-split section h2 span {
+    font-style: italic !important;
+    color: var(--split-gray) !important;
+}
+
+body.template-transporte-split section h2::after {
+    content: '—' !important;
+    display: block !important;
+    color: var(--split-gray) !important;
+    margin-top: 20px !important;
+    font-size: 2rem !important;
+}
+
+/* ===== CARDS SIN BORDES, SOLO LÍNEAS ===== */
+body.template-transporte-split .bg-white.rounded-2xl,
+body.template-transporte-split .bg-white.rounded-xl {
+    background: transparent !important;
+    border-radius: 0 !important;
+    border: none !important;
+    border-top: 1px solid var(--split-line) !important;
+    box-shadow: none !important;
+    padding: 40px 0 !important;
+}
+
+body.template-transporte-split .bg-white.rounded-2xl:hover,
+body.template-transporte-split .bg-white.rounded-xl:hover {
+    background: #fafafa !important;
+}
+
+body.template-transporte-split .bg-white.rounded-2xl h3,
+body.template-transporte-split .bg-white.rounded-xl h3 {
+    font-family: 'Georgia', serif !important;
+    font-weight: 400 !important;
+    font-size: 1.5rem !important;
+}
+
+body.template-transporte-split .bg-white.rounded-2xl p,
+body.template-transporte-split .bg-white.rounded-xl p {
+    color: var(--split-gray) !important;
+}
+
+/* ===== STATS GRANDES SERIF ===== */
+body.template-transporte-split #stats {
+    background: var(--split-black) !important;
+    padding: 100px 0 !important;
+}
+
+body.template-transporte-split #stats * {
+    color: #ffffff !important;
+}
+
+body.template-transporte-split #stats .text-3xl,
+body.template-transporte-split #stats .text-4xl {
+    font-family: 'Georgia', serif !important;
+    font-size: 5rem !important;
+    font-weight: 400 !important;
+    color: #ffffff !important;
+}
+
+/* ===== ICONOS OCULTOS, SOLO NÚMEROS ===== */
+body.template-transporte-split .w-12,
+body.template-transporte-split .w-14,
+body.template-transporte-split .w-16 {
+    background: transparent !important;
+    border: 1px solid var(--split-line) !important;
+    border-radius: 0 !important;
+}
+
+/* ===== BOTONES MINIMALISTAS ===== */
+body.template-transporte-split .btn-primary,
+body.template-transporte-split .btn-shine {
+    background: var(--split-black) !important;
+    color: #ffffff !important;
+    border-radius: 0 !important;
+    font-family: 'Georgia', serif !important;
+    font-weight: 400 !important;
+    letter-spacing: 2px !important;
+    padding: 16px 40px !important;
+}
+
+body.template-transporte-split .btn-primary:hover,
+body.template-transporte-split .btn-shine:hover {
+    background: var(--split-gray) !important;
+}
+
+/* ===== TEAM CARDS EDITORIALES ===== */
+body.template-transporte-split .team-card {
+    background: transparent !important;
+    border: none !important;
+    text-align: left !important;
+}
+
+body.template-transporte-split .team-card__image {
+    border: none !important;
+    border-radius: 0 !important;
+    filter: grayscale(100%) !important;
+}
+
+body.template-transporte-split .team-card:hover .team-card__image {
+    filter: grayscale(0%) !important;
+}
+
+body.template-transporte-split .team-card__name {
+    font-family: 'Georgia', serif !important;
+    font-size: 1.25rem !important;
+    font-weight: 400 !important;
+}
+
+body.template-transporte-split .team-card__position {
+    color: var(--split-gray) !important;
+    font-style: italic !important;
+}
+
+/* ===== CONTACTO INVERTIDO ===== */
+body.template-transporte-split #contacto {
+    background: var(--split-black) !important;
+    padding: 120px 0 !important;
+}
+
+body.template-transporte-split #contacto .parallax {
+    opacity: 0 !important;
+}
+
+body.template-transporte-split #contacto * {
+    color: #ffffff !important;
+}
+
+body.template-transporte-split #contacto h2 {
+    color: #ffffff !important;
+    font-family: 'Georgia', serif !important;
+}
+
+body.template-transporte-split #contacto h2::after {
+    color: var(--split-gray) !important;
+}
+
+body.template-transporte-split #contacto .btn-shine {
+    background: #ffffff !important;
+    color: var(--split-black) !important;
+}
+
+/* ===== FOOTER MINIMALISTA ===== */
+body.template-transporte-split footer {
+    background: #ffffff !important;
+    border-top: 1px solid var(--split-line) !important;
+    border-radius: 0 !important;
+}
+
+body.template-transporte-split footer * {
+    color: var(--split-gray) !important;
+    font-family: 'Georgia', serif !important;
+}
+
+body.template-transporte-split footer h4 {
+    color: var(--split-black) !important;
+    font-weight: 400 !important;
+    font-style: italic !important;
+}
+
+/* ===== WHATSAPP DISCRETO ===== */
+body.template-transporte-split .whatsapp-float {
+    border-radius: 0 !important;
+    background: var(--split-black) !important;
+}
+
+/* ===== ANIMACIONES SUTILES ===== */
+body.template-transporte-split .reveal {
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}

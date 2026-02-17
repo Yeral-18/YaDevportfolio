@@ -1,0 +1,500 @@
+/* ============================================
+   Template: Tecnología Neon/Cyberpunk
+   Diseño futurista con efectos neón,
+   grid de líneas, glitch effects
+   ============================================ */
+
+/* ===== VARIABLES NEON ===== */
+.template-tecnologia-neon {
+    --neon-green: #00ff88;
+    --neon-pink: #ff00ff;
+    --neon-cyan: #00ffff;
+    --neon-dark: #0a0a0a;
+}
+
+/* ===== FONDO CON GRID ===== */
+.template-tecnologia-neon,
+.template-tecnologia-neon body {
+    background-color: var(--neon-dark) !important;
+    background-image:
+        linear-gradient(rgba(0, 255, 136, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 136, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+}
+
+/* ===== NAVBAR NEÓN ===== */
+.template-tecnologia-neon .navbar-animated {
+    background: rgba(10, 10, 10, 0.9) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: 2px solid var(--neon-green) !important;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.3) !important;
+}
+
+.template-tecnologia-neon .navbar-animated a {
+    color: var(--neon-green) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 12px !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+    transition: all 0.3s ease !important;
+}
+
+.template-tecnologia-neon .navbar-animated a:hover {
+    color: var(--neon-pink) !important;
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+}
+
+.template-tecnologia-neon .navbar-animated .btn-primary {
+    background: transparent !important;
+    border: 2px solid var(--neon-green) !important;
+    color: var(--neon-green) !important;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.4), inset 0 0 20px rgba(0, 255, 136, 0.1) !important;
+}
+
+/* ===== HERO CYBERPUNK ===== */
+.template-tecnologia-neon #inicio {
+    background:
+        radial-gradient(ellipse at 20% 50%, rgba(0, 255, 136, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 30%, rgba(255, 0, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+        var(--neon-dark) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-tecnologia-neon #inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 255, 136, 0.02) 2px,
+        rgba(0, 255, 136, 0.02) 4px
+    );
+    pointer-events: none;
+    z-index: 1;
+    animation: scanlines 8s linear infinite;
+}
+
+@keyframes scanlines {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100px); }
+}
+
+.template-tecnologia-neon #inicio h1 {
+    color: #ffffff !important;
+    font-weight: 900 !important;
+    text-shadow:
+        0 0 10px var(--neon-green),
+        0 0 20px var(--neon-green),
+        0 0 40px var(--neon-green);
+    position: relative;
+    z-index: 2;
+}
+
+.template-tecnologia-neon #inicio h1 span {
+    color: var(--neon-pink) !important;
+    text-shadow:
+        0 0 10px var(--neon-pink),
+        0 0 20px var(--neon-pink);
+}
+
+/* ===== TEXTOS ===== */
+.template-tecnologia-neon h1,
+.template-tecnologia-neon h2,
+.template-tecnologia-neon h3,
+.template-tecnologia-neon h4 {
+    color: #ffffff !important;
+}
+
+.template-tecnologia-neon p,
+.template-tecnologia-neon span {
+    color: #9ca3af !important;
+}
+
+/* ===== SECCIONES ===== */
+.template-tecnologia-neon section {
+    background: var(--neon-dark) !important;
+    padding: 100px 0 !important;
+    position: relative;
+}
+
+.template-tecnologia-neon section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+}
+
+/* ===== TÍTULOS NEÓN ===== */
+.template-tecnologia-neon section h2 {
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+    color: #ffffff !important;
+    text-shadow: 0 0 20px var(--neon-green);
+    position: relative;
+    display: inline-block;
+}
+
+.template-tecnologia-neon section h2::before {
+    content: '//';
+    color: var(--neon-green);
+    margin-right: 10px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.template-tecnologia-neon section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--neon-green), var(--neon-pink), var(--neon-cyan));
+    box-shadow: 0 0 10px var(--neon-green);
+}
+
+/* ===== CARDS NEÓN ===== */
+.template-tecnologia-neon .bg-white.rounded-2xl,
+.template-tecnologia-neon .bg-slate-800,
+.template-tecnologia-neon .bg-slate-900 {
+    background: rgba(15, 15, 20, 0.9) !important;
+    border: 1px solid rgba(0, 255, 136, 0.3) !important;
+    border-radius: 4px !important;
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s ease !important;
+}
+
+.template-tecnologia-neon .bg-white.rounded-2xl::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--neon-green), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.template-tecnologia-neon .bg-white.rounded-2xl:hover {
+    border-color: var(--neon-green) !important;
+    box-shadow:
+        0 0 30px rgba(0, 255, 136, 0.3),
+        inset 0 0 30px rgba(0, 255, 136, 0.05) !important;
+    transform: translateY(-5px) !important;
+}
+
+.template-tecnologia-neon .bg-white.rounded-2xl:hover::before {
+    opacity: 1;
+    animation: neonScan 1.5s ease infinite;
+}
+
+@keyframes neonScan {
+    0% { left: -100%; }
+    100% { left: 100%; }
+}
+
+/* ===== STATS NEÓN ===== */
+.template-tecnologia-neon .stat-card {
+    background: rgba(15, 15, 20, 0.9) !important;
+    border: 1px solid var(--neon-pink) !important;
+    border-radius: 4px !important;
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.2) !important;
+}
+
+.template-tecnologia-neon .stat-card .text-4xl,
+.template-tecnologia-neon .stat-card .text-3xl {
+    color: var(--neon-green) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    text-shadow: 0 0 20px var(--neon-green);
+}
+
+/* ===== BOTONES NEÓN ===== */
+.template-tecnologia-neon .btn-primary {
+    background: transparent !important;
+    border: 2px solid var(--neon-green) !important;
+    color: var(--neon-green) !important;
+    border-radius: 4px !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 12px !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    padding: 16px 32px !important;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3) !important;
+    position: relative !important;
+    overflow: hidden !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-tecnologia-neon .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--neon-green);
+    transition: left 0.3s ease;
+    z-index: -1;
+}
+
+.template-tecnologia-neon .btn-primary:hover {
+    color: #000 !important;
+    box-shadow: 0 0 40px rgba(0, 255, 136, 0.6) !important;
+}
+
+.template-tecnologia-neon .btn-primary:hover::before {
+    left: 0;
+}
+
+/* ===== TEAM CARDS ===== */
+.template-tecnologia-neon .team-card {
+    background: rgba(15, 15, 20, 0.9) !important;
+    border: 1px solid var(--neon-cyan) !important;
+    border-radius: 4px !important;
+}
+
+.template-tecnologia-neon .team-card__image {
+    border: 2px solid var(--neon-green) !important;
+    border-radius: 4px !important;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.4);
+}
+
+.template-tecnologia-neon .team-card__name {
+    color: #ffffff !important;
+}
+
+.template-tecnologia-neon .team-card__position {
+    color: var(--neon-cyan) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 2px !important;
+}
+
+/* ===== TESTIMONIALS ===== */
+.template-tecnologia-neon .testimonial-card {
+    background: rgba(15, 15, 20, 0.9) !important;
+    border: 1px solid var(--neon-pink) !important;
+    border-radius: 4px !important;
+    position: relative;
+}
+
+.template-tecnologia-neon .testimonial-card::before {
+    content: '>';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    color: var(--neon-green);
+    font-size: 24px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+.template-tecnologia-neon .testimonial-card p {
+    color: #d1d5db !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+/* ===== CLIENTES ===== */
+.template-tecnologia-neon .client-logo {
+    background: rgba(15, 15, 20, 0.9) !important;
+    border: 1px solid rgba(0, 255, 136, 0.2) !important;
+    border-radius: 4px !important;
+    filter: grayscale(100%) brightness(0.5);
+    transition: all 0.3s ease !important;
+}
+
+.template-tecnologia-neon .client-logo:hover {
+    filter: grayscale(0%) brightness(1);
+    border-color: var(--neon-green) !important;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3) !important;
+}
+
+/* ===== PROCESO ===== */
+.template-tecnologia-neon .process-step-light {
+    background: rgba(15, 15, 20, 0.9) !important;
+    border: 1px solid rgba(0, 255, 255, 0.3) !important;
+    border-radius: 4px !important;
+}
+
+.template-tecnologia-neon .process-step-light .text-4xl {
+    color: var(--neon-cyan) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    text-shadow: 0 0 15px var(--neon-cyan);
+}
+
+/* ===== FORMULARIO ===== */
+.template-tecnologia-neon form {
+    background: rgba(15, 15, 20, 0.9) !important;
+    border: 1px solid rgba(0, 255, 136, 0.3) !important;
+    border-radius: 4px !important;
+}
+
+.template-tecnologia-neon form::before {
+    content: '// CONTACT_FORM';
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: var(--neon-green);
+    letter-spacing: 2px;
+}
+
+.template-tecnologia-neon input,
+.template-tecnologia-neon textarea,
+.template-tecnologia-neon select {
+    background: rgba(0, 0, 0, 0.5) !important;
+    border: 1px solid rgba(0, 255, 136, 0.3) !important;
+    border-radius: 4px !important;
+    color: #ffffff !important;
+    font-family: 'JetBrains Mono', monospace !important;
+}
+
+.template-tecnologia-neon input:focus,
+.template-tecnologia-neon textarea:focus,
+.template-tecnologia-neon select:focus {
+    border-color: var(--neon-green) !important;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3) !important;
+}
+
+.template-tecnologia-neon label {
+    color: var(--neon-cyan) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+}
+
+/* ===== CTA ===== */
+.template-tecnologia-neon .cta-section {
+    background:
+        radial-gradient(ellipse at 50% 50%, rgba(255, 0, 255, 0.1) 0%, transparent 70%),
+        var(--neon-dark) !important;
+    border-top: 1px solid var(--neon-pink);
+    border-bottom: 1px solid var(--neon-pink);
+}
+
+/* ===== FOOTER ===== */
+.template-tecnologia-neon footer {
+    background: #050505 !important;
+    border-top: 2px solid var(--neon-green) !important;
+}
+
+.template-tecnologia-neon footer h4 {
+    color: var(--neon-green) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 11px !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+}
+
+.template-tecnologia-neon footer a {
+    color: #6b7280 !important;
+}
+
+.template-tecnologia-neon footer a:hover {
+    color: var(--neon-green) !important;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+/* ===== ICONOS ===== */
+.template-tecnologia-neon .service-type {
+    background: transparent !important;
+    border: 2px solid var(--neon-green) !important;
+    border-radius: 4px !important;
+    box-shadow: 0 0 20px rgba(0, 255, 136, 0.3) !important;
+}
+
+.template-tecnologia-neon .service-type svg {
+    color: var(--neon-green) !important;
+    filter: drop-shadow(0 0 5px var(--neon-green));
+}
+
+/* ===== ANIMACIONES ===== */
+.template-tecnologia-neon .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.template-tecnologia-neon .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Glitch effect on hover */
+.template-tecnologia-neon h2:hover {
+    animation: glitch 0.3s ease;
+}
+
+@keyframes glitch {
+    0% { transform: translate(0); text-shadow: 0 0 20px var(--neon-green); }
+    20% { transform: translate(-2px, 2px); text-shadow: -2px 0 var(--neon-pink), 2px 0 var(--neon-cyan); }
+    40% { transform: translate(-2px, -2px); text-shadow: 2px 0 var(--neon-pink), -2px 0 var(--neon-cyan); }
+    60% { transform: translate(2px, 2px); text-shadow: -2px 0 var(--neon-pink), 2px 0 var(--neon-cyan); }
+    80% { transform: translate(2px, -2px); text-shadow: 2px 0 var(--neon-pink), -2px 0 var(--neon-cyan); }
+    100% { transform: translate(0); text-shadow: 0 0 20px var(--neon-green); }
+}
+
+/* ===== WHATSAPP ===== */
+.template-tecnologia-neon .whatsapp-float {
+    border-radius: 4px !important;
+    border: 1px solid rgba(37, 211, 102, 0.5) !important;
+    box-shadow: 0 0 30px rgba(37, 211, 102, 0.4) !important;
+}
+
+/* ===== NAVBAR SCROLLED ===== */
+.template-tecnologia-neon .navbar-animated.scrolled {
+    background: rgba(10, 10, 10, 0.98) !important;
+    box-shadow: 0 0 40px rgba(0, 255, 136, 0.4) !important;
+}
+
+/* ===== DROPDOWN MENUS ===== */
+.template-tecnologia-neon .group .absolute,
+.template-tecnologia-neon .dropdown-menu,
+.template-tecnologia-neon [class*="dropdown"],
+.template-tecnologia-neon nav .absolute {
+    background: rgba(15, 15, 15, 0.98) !important;
+    border: 1px solid var(--neon-green) !important;
+    border-radius: 4px !important;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.3) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.template-tecnologia-neon .group .absolute a,
+.template-tecnologia-neon .dropdown-menu a,
+.template-tecnologia-neon nav .absolute a {
+    color: var(--neon-green) !important;
+    font-family: 'JetBrains Mono', monospace !important;
+    font-size: 12px !important;
+    text-shadow: 0 0 10px rgba(0, 255, 136, 0.5);
+}
+
+.template-tecnologia-neon .group .absolute a:hover,
+.template-tecnologia-neon .dropdown-menu a:hover,
+.template-tecnologia-neon nav .absolute a:hover {
+    background: rgba(0, 255, 136, 0.1) !important;
+    color: var(--neon-pink) !important;
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+}
+
+/* ===== IMPORTAR FUENTE ===== */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');

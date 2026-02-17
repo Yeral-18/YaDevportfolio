@@ -1,0 +1,465 @@
+/* ============================================
+   Template: E-commerce Dark Premium
+   Tienda premium oscura con acentos neón,
+   glassmorphism, hover effects dramáticos
+   ============================================ */
+
+/* ===== VARIABLES DARK PREMIUM ===== */
+.template-ecommerce-dark {
+    --dark-bg: #0a0a0a;
+    --dark-surface: #141414;
+    --dark-border: #262626;
+    --dark-text: #ffffff;
+    --dark-muted: #737373;
+    --neon-violet: #a855f7;
+    --neon-pink: #ec4899;
+    --neon-glow: 0 0 30px rgba(168, 85, 247, 0.5);
+}
+
+/* ===== FONDO OSCURO COMPLETO ===== */
+.template-ecommerce-dark,
+.template-ecommerce-dark body {
+    background: var(--dark-bg) !important;
+    color: var(--dark-text) !important;
+}
+
+/* ===== NAVBAR GLASSMORPHISM ===== */
+.template-ecommerce-dark .navbar-animated {
+    background: rgba(10, 10, 10, 0.8) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid var(--dark-border) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+.template-ecommerce-dark .navbar-animated a {
+    color: var(--dark-text) !important;
+}
+
+.template-ecommerce-dark .navbar-animated a:hover {
+    color: var(--neon-violet) !important;
+}
+
+.template-ecommerce-dark .navbar-animated .btn-primary {
+    background: linear-gradient(135deg, var(--neon-violet), var(--neon-pink)) !important;
+    border: none !important;
+    box-shadow: var(--neon-glow) !important;
+}
+
+.template-ecommerce-dark .gradient-text {
+    background: linear-gradient(135deg, var(--neon-violet), var(--neon-pink)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* ===== PROMO BANNER NEON ===== */
+.template-ecommerce-dark .bg-gray-900 {
+    background: var(--dark-surface) !important;
+    border-bottom: 1px solid var(--dark-border) !important;
+}
+
+.template-ecommerce-dark .text-pink-400 {
+    color: var(--neon-pink) !important;
+    text-shadow: 0 0 10px var(--neon-pink) !important;
+}
+
+/* ===== HERO OSCURO CON GRADIENTE ===== */
+.template-ecommerce-dark #inicio {
+    background: radial-gradient(ellipse at top, #1a1025 0%, var(--dark-bg) 70%) !important;
+    position: relative;
+}
+
+.template-ecommerce-dark #inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 30%, rgba(168, 85, 247, 0.15) 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, rgba(236, 72, 153, 0.1) 0%, transparent 40%);
+    z-index: 1;
+}
+
+.template-ecommerce-dark #inicio .parallax {
+    opacity: 0.3 !important;
+}
+
+.template-ecommerce-dark #inicio h1 {
+    position: relative;
+    z-index: 2;
+}
+
+.template-ecommerce-dark #inicio h1 span {
+    background: linear-gradient(135deg, var(--neon-violet), var(--neon-pink)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* ===== DECORACIONES NEON ===== */
+.template-ecommerce-dark .geometric-decoration {
+    background: linear-gradient(135deg, var(--neon-violet), var(--neon-pink)) !important;
+    opacity: 0.1 !important;
+    filter: blur(60px) !important;
+}
+
+/* ===== SECCIONES OSCURAS ===== */
+.template-ecommerce-dark section {
+    background: var(--dark-bg) !important;
+}
+
+.template-ecommerce-dark section:nth-child(even) {
+    background: var(--dark-surface) !important;
+}
+
+.template-ecommerce-dark .bg-white,
+.template-ecommerce-dark .bg-gray-50 {
+    background: var(--dark-surface) !important;
+}
+
+/* ===== TITULOS ===== */
+.template-ecommerce-dark section h2 {
+    color: var(--dark-text) !important;
+}
+
+.template-ecommerce-dark .text-gray-800 {
+    color: var(--dark-text) !important;
+}
+
+.template-ecommerce-dark .text-gray-600 {
+    color: var(--dark-muted) !important;
+}
+
+.template-ecommerce-dark .text-purple-600,
+.template-ecommerce-dark .text-violet-600 {
+    color: var(--neon-violet) !important;
+}
+
+/* ===== CARDS PRODUCTOS GLASS ===== */
+.template-ecommerce-dark .product-card {
+    background: rgba(20, 20, 20, 0.8) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid var(--dark-border) !important;
+    border-radius: 20px !important;
+    overflow: hidden;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.template-ecommerce-dark .product-card:hover {
+    border-color: var(--neon-violet) !important;
+    box-shadow: 0 0 40px rgba(168, 85, 247, 0.2) !important;
+    transform: translateY(-10px) !important;
+}
+
+.template-ecommerce-dark .product-card:hover .product-image {
+    transform: scale(1.1) !important;
+}
+
+.template-ecommerce-dark .product-card h3 {
+    color: var(--dark-text) !important;
+}
+
+.template-ecommerce-dark .product-card .text-purple-600 {
+    color: var(--neon-pink) !important;
+}
+
+.template-ecommerce-dark .product-card .quick-view {
+    background: linear-gradient(135deg, var(--neon-violet), var(--neon-pink)) !important;
+    color: white !important;
+}
+
+.template-ecommerce-dark .product-card .wishlist-btn {
+    background: var(--dark-surface) !important;
+    border: 1px solid var(--dark-border) !important;
+}
+
+.template-ecommerce-dark .product-card .wishlist-btn svg {
+    color: var(--dark-text) !important;
+}
+
+/* ===== BADGES NEON ===== */
+.template-ecommerce-dark .bg-gradient-to-r.from-pink-500,
+.template-ecommerce-dark .bg-gradient-to-r.from-emerald-500 {
+    background: linear-gradient(135deg, var(--neon-violet), var(--neon-pink)) !important;
+    box-shadow: 0 0 15px rgba(168, 85, 247, 0.5) !important;
+}
+
+/* ===== CATEGORIAS GRID ===== */
+.template-ecommerce-dark .category-card .rounded-3xl {
+    border-radius: 24px !important;
+    overflow: hidden;
+}
+
+.template-ecommerce-dark .category-card:hover img {
+    filter: brightness(1.2) !important;
+}
+
+.template-ecommerce-dark .category-card p {
+    color: var(--dark-text) !important;
+}
+
+/* ===== BENEFICIOS CARDS ===== */
+.template-ecommerce-dark .benefit-card {
+    background: var(--dark-surface) !important;
+    border: 1px solid var(--dark-border) !important;
+    border-radius: 20px !important;
+}
+
+.template-ecommerce-dark .benefit-card:hover {
+    border-color: var(--neon-violet) !important;
+    background: rgba(168, 85, 247, 0.1) !important;
+}
+
+.template-ecommerce-dark .benefit-icon {
+    background: linear-gradient(135deg, var(--neon-violet), var(--neon-pink)) !important;
+    box-shadow: var(--neon-glow) !important;
+}
+
+.template-ecommerce-dark .benefit-card h3 {
+    color: var(--dark-text) !important;
+}
+
+/* ===== NOSOTROS / MISION ===== */
+.template-ecommerce-dark #nosotros {
+    background: var(--dark-surface) !important;
+}
+
+.template-ecommerce-dark #nosotros .grid > div {
+    background: var(--dark-bg) !important;
+    border: 1px solid var(--dark-border) !important;
+    border-radius: 24px !important;
+}
+
+.template-ecommerce-dark #nosotros .grid > div:hover {
+    border-color: var(--neon-violet) !important;
+    box-shadow: var(--neon-glow) !important;
+}
+
+.template-ecommerce-dark #nosotros .w-20 {
+    background: linear-gradient(135deg, var(--neon-violet), var(--neon-pink)) !important;
+}
+
+.template-ecommerce-dark #nosotros h3 {
+    color: var(--dark-text) !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.template-ecommerce-dark #testimonios .grid > div {
+    background: var(--dark-surface) !important;
+    border: 1px solid var(--dark-border) !important;
+    border-radius: 24px !important;
+}
+
+.template-ecommerce-dark #testimonios .text-5xl {
+    color: var(--neon-violet) !important;
+    opacity: 0.3 !important;
+}
+
+.template-ecommerce-dark #testimonios p {
+    color: var(--dark-muted) !important;
+}
+
+.template-ecommerce-dark #testimonios h4 {
+    color: var(--dark-text) !important;
+}
+
+.template-ecommerce-dark #testimonios .border-violet-500 {
+    border-color: var(--neon-violet) !important;
+}
+
+/* ===== EQUIPO ===== */
+.template-ecommerce-dark .team-card {
+    background: var(--dark-surface) !important;
+    border: 1px solid var(--dark-border) !important;
+    border-radius: 24px !important;
+}
+
+.template-ecommerce-dark .team-card:hover {
+    border-color: var(--neon-violet) !important;
+}
+
+.template-ecommerce-dark .team-card__image {
+    border: 3px solid var(--neon-violet) !important;
+}
+
+.template-ecommerce-dark .team-card__name {
+    color: var(--dark-text) !important;
+}
+
+.template-ecommerce-dark .team-card__position {
+    color: var(--neon-pink) !important;
+}
+
+.template-ecommerce-dark .team-card__social a {
+    color: var(--dark-muted) !important;
+}
+
+.template-ecommerce-dark .team-card__social a:hover {
+    color: var(--neon-violet) !important;
+}
+
+/* ===== CLIENTES ===== */
+.template-ecommerce-dark .client-logo {
+    background: var(--dark-surface) !important;
+    border: 1px solid var(--dark-border) !important;
+    border-radius: 12px !important;
+}
+
+.template-ecommerce-dark .client-logo:hover {
+    border-color: var(--neon-violet) !important;
+}
+
+.template-ecommerce-dark .client-logo span {
+    color: var(--dark-muted) !important;
+}
+
+/* ===== CTA NEON ===== */
+.template-ecommerce-dark #contacto {
+    background: linear-gradient(135deg, #1a0a2e 0%, #0a0a1a 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-ecommerce-dark #contacto::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.1) 0%, transparent 50%);
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.template-ecommerce-dark #contacto .btn-shine {
+    background: linear-gradient(135deg, var(--neon-violet), var(--neon-pink)) !important;
+    border: none !important;
+    box-shadow: var(--neon-glow) !important;
+}
+
+.template-ecommerce-dark #contacto input {
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid var(--dark-border) !important;
+    color: var(--dark-text) !important;
+    border-radius: 50px !important;
+}
+
+.template-ecommerce-dark #contacto input:focus {
+    border-color: var(--neon-violet) !important;
+    box-shadow: 0 0 20px rgba(168, 85, 247, 0.3) !important;
+}
+
+/* ===== FOOTER OSCURO ===== */
+.template-ecommerce-dark footer {
+    background: var(--dark-bg) !important;
+    border-top: 1px solid var(--dark-border) !important;
+}
+
+.template-ecommerce-dark footer h4 {
+    color: var(--dark-text) !important;
+}
+
+.template-ecommerce-dark footer a {
+    color: var(--dark-muted) !important;
+}
+
+.template-ecommerce-dark footer a:hover {
+    color: var(--neon-violet) !important;
+}
+
+.template-ecommerce-dark footer .border-gray-800 {
+    border-color: var(--dark-border) !important;
+}
+
+/* ===== WHATSAPP NEON ===== */
+.template-ecommerce-dark .whatsapp-float {
+    background: linear-gradient(135deg, var(--neon-violet), var(--neon-pink)) !important;
+    box-shadow: var(--neon-glow) !important;
+}
+
+/* ===== SCROLLBAR ===== */
+.template-ecommerce-dark ::-webkit-scrollbar {
+    width: 8px;
+}
+
+.template-ecommerce-dark ::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+
+.template-ecommerce-dark ::-webkit-scrollbar-thumb {
+    background: var(--dark-border);
+    border-radius: 4px;
+}
+
+.template-ecommerce-dark ::-webkit-scrollbar-thumb:hover {
+    background: var(--neon-violet);
+}
+
+/* ===== ANIMACIONES EXTRA ===== */
+.template-ecommerce-dark .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.template-ecommerce-dark .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== TOP BAR ===== */
+.template-ecommerce-dark .top-bar {
+    background: var(--dark-surface) !important;
+    border-bottom: 1px solid var(--dark-border) !important;
+}
+
+.template-ecommerce-dark .top-bar a {
+    color: var(--dark-muted) !important;
+}
+
+.template-ecommerce-dark .top-bar a:hover {
+    color: var(--neon-violet) !important;
+}
+
+/* ===== DEMO BANNER ===== */
+.template-ecommerce-dark .demo-banner,
+.template-ecommerce-dark .bg-gradient-to-r.from-purple-600 {
+    background: linear-gradient(135deg, var(--neon-violet), var(--neon-pink)) !important;
+}
+
+/* ===== NAVBAR SCROLLED ===== */
+.template-ecommerce-dark .navbar-animated.scrolled {
+    background: rgba(10, 10, 10, 0.98) !important;
+    backdrop-filter: blur(20px) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5) !important;
+}
+
+/* ===== DROPDOWN MENUS ===== */
+.template-ecommerce-dark .group .absolute,
+.template-ecommerce-dark .dropdown-menu,
+.template-ecommerce-dark [class*="dropdown"],
+.template-ecommerce-dark nav .absolute {
+    background: var(--dark-surface) !important;
+    border: 1px solid var(--dark-border) !important;
+    border-radius: 12px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.template-ecommerce-dark .group .absolute a,
+.template-ecommerce-dark .dropdown-menu a,
+.template-ecommerce-dark nav .absolute a {
+    color: var(--dark-text) !important;
+}
+
+.template-ecommerce-dark .group .absolute a:hover,
+.template-ecommerce-dark .dropdown-menu a:hover,
+.template-ecommerce-dark nav .absolute a:hover {
+    background: rgba(168, 85, 247, 0.1) !important;
+    color: var(--neon-violet) !important;
+}

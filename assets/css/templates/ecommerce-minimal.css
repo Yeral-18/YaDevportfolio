@@ -1,0 +1,722 @@
+/* ============================================
+   Template: E-commerce Minimal
+   Diseño minimalista editorial con tipografía
+   grande, espacios generosos, grid asimétrico
+   ============================================ */
+
+/* ===== VARIABLES MINIMAL ===== */
+.template-ecommerce-minimal {
+    --min-black: #0a0a0a;
+    --min-white: #ffffff;
+    --min-gray: #737373;
+    --min-light: #fafafa;
+    --min-border: #e5e5e5;
+}
+
+/* ===== FUENTE EDITORIAL ===== */
+.template-ecommerce-minimal,
+.template-ecommerce-minimal body {
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    background: var(--min-white) !important;
+}
+
+/* ===== NAVBAR ULTRA MINIMAL ===== */
+.template-ecommerce-minimal .navbar-animated {
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    padding: 2rem 0 !important;
+}
+
+.template-ecommerce-minimal .navbar-animated.scrolled {
+    background: rgba(255,255,255,0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid var(--min-border) !important;
+    padding: 1rem 0 !important;
+}
+
+.template-ecommerce-minimal .navbar-animated a {
+    color: var(--min-black) !important;
+    font-weight: 400 !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+}
+
+.template-ecommerce-minimal .navbar-animated .btn-primary {
+    background: transparent !important;
+    border: 1px solid var(--min-black) !important;
+    color: var(--min-black) !important;
+    border-radius: 0 !important;
+}
+
+.template-ecommerce-minimal .navbar-animated .btn-primary:hover {
+    background: var(--min-black) !important;
+    color: var(--min-white) !important;
+}
+
+/* ===== HERO EDITORIAL SPLIT ===== */
+.template-ecommerce-minimal #inicio {
+    background: var(--min-white) !important;
+    min-height: 100vh !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    padding: 0 !important;
+    position: relative;
+}
+
+.template-ecommerce-minimal #inicio > div {
+    background: transparent !important;
+}
+
+.template-ecommerce-minimal #inicio .parallax {
+    position: relative !important;
+    grid-column: 2;
+    grid-row: 1;
+}
+
+.template-ecommerce-minimal #inicio .parallax::after {
+    display: none !important;
+}
+
+.template-ecommerce-minimal #inicio .max-w-7xl {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    align-items: center;
+    padding: 4rem !important;
+}
+
+.template-ecommerce-minimal #inicio h1 {
+    color: var(--min-black) !important;
+    font-size: clamp(3rem, 8vw, 6rem) !important;
+    font-weight: 200 !important;
+    line-height: 1 !important;
+    letter-spacing: -0.03em !important;
+}
+
+.template-ecommerce-minimal #inicio h1 span {
+    font-style: italic !important;
+    font-weight: 200 !important;
+    color: var(--min-gray) !important;
+}
+
+.template-ecommerce-minimal #inicio p {
+    color: var(--min-gray) !important;
+    font-size: 1rem !important;
+    line-height: 1.8 !important;
+    max-width: 400px !important;
+}
+
+/* ===== BOTONES MINIMAL ===== */
+.template-ecommerce-minimal .btn-shine,
+.template-ecommerce-minimal .btn-primary {
+    background: var(--min-black) !important;
+    color: var(--min-white) !important;
+    border-radius: 0 !important;
+    padding: 1rem 2.5rem !important;
+    font-weight: 400 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.15em !important;
+    font-size: 0.75rem !important;
+    border: 1px solid var(--min-black) !important;
+    transition: all 0.4s ease !important;
+}
+
+.template-ecommerce-minimal .btn-shine:hover,
+.template-ecommerce-minimal .btn-primary:hover {
+    background: transparent !important;
+    color: var(--min-black) !important;
+}
+
+.template-ecommerce-minimal .btn-shine::before {
+    display: none !important;
+}
+
+/* ===== SECCIONES CON MUCHO ESPACIO ===== */
+.template-ecommerce-minimal section {
+    padding: 8rem 0 !important;
+}
+
+.template-ecommerce-minimal section:nth-child(even) {
+    background: var(--min-light) !important;
+}
+
+/* ===== TITULOS EDITORIAL ===== */
+.template-ecommerce-minimal section h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem) !important;
+    font-weight: 200 !important;
+    letter-spacing: -0.02em !important;
+    color: var(--min-black) !important;
+    margin-bottom: 4rem !important;
+}
+
+.template-ecommerce-minimal section h2::after {
+    display: none !important;
+}
+
+.template-ecommerce-minimal .title-decorated::after {
+    display: none !important;
+}
+
+/* ===== SUBTITULOS ===== */
+.template-ecommerce-minimal .text-violet-600,
+.template-ecommerce-minimal .text-purple-600 {
+    color: var(--min-gray) !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.2em !important;
+    text-transform: uppercase !important;
+    font-size: 0.7rem !important;
+}
+
+/* ===== CARDS PRODUCTOS MINIMAL ===== */
+.template-ecommerce-minimal .product-card {
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+}
+
+.template-ecommerce-minimal .product-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.template-ecommerce-minimal .product-card .aspect-square {
+    border-radius: 0 !important;
+    overflow: hidden;
+}
+
+.template-ecommerce-minimal .product-card .product-image {
+    transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.template-ecommerce-minimal .product-card:hover .product-image {
+    transform: scale(1.05) !important;
+}
+
+.template-ecommerce-minimal .product-card p,
+.template-ecommerce-minimal .product-card span {
+    font-weight: 400 !important;
+}
+
+.template-ecommerce-minimal .product-card .text-purple-600 {
+    color: var(--min-gray) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    font-size: 0.65rem !important;
+}
+
+/* ===== GRID ASIMETRICO CATEGORIAS ===== */
+.template-ecommerce-minimal #categorias .grid {
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr) !important;
+    grid-template-rows: repeat(2, 300px) !important;
+    gap: 1rem !important;
+}
+
+.template-ecommerce-minimal #categorias .grid > *:nth-child(1) {
+    grid-column: span 5 !important;
+    grid-row: span 2 !important;
+}
+
+.template-ecommerce-minimal #categorias .grid > *:nth-child(2) {
+    grid-column: span 4 !important;
+}
+
+.template-ecommerce-minimal #categorias .grid > *:nth-child(3) {
+    grid-column: span 3 !important;
+}
+
+.template-ecommerce-minimal #categorias .grid > *:nth-child(4) {
+    grid-column: span 7 !important;
+}
+
+.template-ecommerce-minimal #categorias .category-card {
+    height: 100% !important;
+}
+
+.template-ecommerce-minimal #categorias .category-card .aspect-square {
+    aspect-ratio: auto !important;
+    height: 100% !important;
+}
+
+/* ===== BENEFICIOS EN LINEA ===== */
+.template-ecommerce-minimal #beneficios {
+    border-top: 1px solid var(--min-border) !important;
+    border-bottom: 1px solid var(--min-border) !important;
+    padding: 3rem 0 !important;
+}
+
+.template-ecommerce-minimal #beneficios .grid {
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.template-ecommerce-minimal .benefit-card {
+    background: transparent !important;
+    padding: 0 !important;
+    text-align: left !important;
+}
+
+.template-ecommerce-minimal .benefit-icon {
+    width: 40px !important;
+    height: 40px !important;
+    background: transparent !important;
+    border: 1px solid var(--min-black) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.template-ecommerce-minimal .benefit-icon svg {
+    color: var(--min-black) !important;
+    width: 20px !important;
+    height: 20px !important;
+}
+
+/* ===== MISION/VISION/VALORES ===== */
+.template-ecommerce-minimal #nosotros {
+    background: var(--min-white) !important;
+}
+
+.template-ecommerce-minimal #nosotros .grid > div {
+    background: transparent !important;
+    border: 1px solid var(--min-border) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.template-ecommerce-minimal #nosotros .grid > div:hover {
+    border-color: var(--min-black) !important;
+}
+
+.template-ecommerce-minimal #nosotros .w-20 {
+    background: transparent !important;
+    border: 1px solid var(--min-black) !important;
+    border-radius: 0 !important;
+}
+
+.template-ecommerce-minimal #nosotros .w-20 svg {
+    color: var(--min-black) !important;
+}
+
+/* ===== TESTIMONIOS LINEA ===== */
+.template-ecommerce-minimal #testimonios .grid > div {
+    background: transparent !important;
+    border: none !important;
+    border-left: 1px solid var(--min-black) !important;
+    border-radius: 0 !important;
+    padding-left: 2rem !important;
+}
+
+.template-ecommerce-minimal #testimonios .text-5xl {
+    display: none !important;
+}
+
+.template-ecommerce-minimal #testimonios p {
+    font-size: 1.25rem !important;
+    font-weight: 300 !important;
+    font-style: normal !important;
+    line-height: 1.8 !important;
+}
+
+/* ===== EQUIPO MINIMAL ===== */
+.template-ecommerce-minimal .team-card {
+    background: transparent !important;
+    border: none !important;
+    text-align: left !important;
+}
+
+.template-ecommerce-minimal .team-card__image {
+    border-radius: 0 !important;
+    border: none !important;
+    aspect-ratio: 3/4 !important;
+}
+
+.template-ecommerce-minimal .team-card__name {
+    font-weight: 400 !important;
+    font-size: 1.1rem !important;
+}
+
+.template-ecommerce-minimal .team-card__position {
+    color: var(--min-gray) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    font-size: 0.7rem !important;
+}
+
+/* ===== CLIENTES ===== */
+.template-ecommerce-minimal .client-logo {
+    background: transparent !important;
+    border: none !important;
+    opacity: 0.4 !important;
+    transition: opacity 0.4s ease !important;
+}
+
+.template-ecommerce-minimal .client-logo:hover {
+    opacity: 1 !important;
+    box-shadow: none !important;
+}
+
+/* ===== CTA MINIMAL ===== */
+.template-ecommerce-minimal #contacto {
+    background: var(--min-black) !important;
+}
+
+.template-ecommerce-minimal #contacto h2 {
+    color: var(--min-white) !important;
+    font-weight: 200 !important;
+}
+
+.template-ecommerce-minimal #contacto p {
+    color: var(--min-gray) !important;
+}
+
+.template-ecommerce-minimal #contacto .btn-shine {
+    background: var(--min-white) !important;
+    color: var(--min-black) !important;
+    border-color: var(--min-white) !important;
+}
+
+.template-ecommerce-minimal #contacto .btn-shine:hover {
+    background: transparent !important;
+    color: var(--min-white) !important;
+}
+
+.template-ecommerce-minimal #contacto input {
+    border-radius: 0 !important;
+    border: 1px solid rgba(255,255,255,0.2) !important;
+    background: transparent !important;
+    color: var(--min-white) !important;
+}
+
+/* ===== FOOTER MINIMAL ===== */
+.template-ecommerce-minimal footer {
+    background: var(--min-light) !important;
+    color: var(--min-black) !important;
+    border-top: 1px solid var(--min-border) !important;
+}
+
+.template-ecommerce-minimal footer h4 {
+    color: var(--min-black) !important;
+    font-weight: 400 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    font-size: 0.75rem !important;
+}
+
+.template-ecommerce-minimal footer a {
+    color: var(--min-gray) !important;
+}
+
+.template-ecommerce-minimal footer a:hover {
+    color: var(--min-black) !important;
+}
+
+.template-ecommerce-minimal footer .border-gray-800 {
+    border-color: var(--min-border) !important;
+}
+
+/* ===== WHATSAPP MINIMAL ===== */
+.template-ecommerce-minimal .whatsapp-float {
+    border-radius: 0 !important;
+    background: var(--min-black) !important;
+}
+
+/* ===== QUITAR DECORACIONES ===== */
+.template-ecommerce-minimal .geometric-decoration {
+    display: none !important;
+}
+
+.template-ecommerce-minimal .scroll-indicator {
+    display: none !important;
+}
+
+/* ===== GRADIENT TEXT ===== */
+.template-ecommerce-minimal .gradient-text {
+    background: none !important;
+    -webkit-text-fill-color: var(--min-black) !important;
+    color: var(--min-black) !important;
+}
+
+/* ===== PROMO BANNER ===== */
+.template-ecommerce-minimal .promo-slide {
+    display: none !important;
+}
+
+/* ===== ANIMACIONES MODERNAS E-COMMERCE ===== */
+
+/* Cursor personalizado minimalista */
+.template-ecommerce-minimal {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='3' fill='%230a0a0a'/%3E%3C/svg%3E") 12 12, auto;
+}
+
+/* Reveal animation suave */
+@keyframes minimal-reveal {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.template-ecommerce-minimal .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.template-ecommerce-minimal .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Efecto de imagen con reveal mask */
+@keyframes image-reveal {
+    from {
+        clip-path: inset(100% 0 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.template-ecommerce-minimal .product-card .aspect-square {
+    position: relative;
+    overflow: hidden;
+}
+
+.template-ecommerce-minimal .product-card .aspect-square::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: var(--min-light);
+    z-index: 1;
+    transform: scaleY(1);
+    transform-origin: top;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.template-ecommerce-minimal .product-card:hover .aspect-square::before {
+    transform: scaleY(0);
+    transform-origin: bottom;
+}
+
+/* Quick view overlay */
+.template-ecommerce-minimal .product-card::after {
+    content: 'VER MÁS';
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    color: var(--min-black);
+    opacity: 0;
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.template-ecommerce-minimal .product-card:hover::after {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover line under text */
+.template-ecommerce-minimal .product-card h3,
+.template-ecommerce-minimal .category-card h3 {
+    position: relative;
+    display: inline-block;
+}
+
+.template-ecommerce-minimal .product-card h3::after,
+.template-ecommerce-minimal .category-card h3::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--min-black);
+    transition: width 0.4s ease;
+}
+
+.template-ecommerce-minimal .product-card:hover h3::after,
+.template-ecommerce-minimal .category-card:hover h3::after {
+    width: 100%;
+}
+
+/* Botón con efecto slide */
+.template-ecommerce-minimal .btn-shine,
+.template-ecommerce-minimal .btn-primary {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.template-ecommerce-minimal .btn-shine::after,
+.template-ecommerce-minimal .btn-primary::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: var(--min-white);
+    z-index: -1;
+    transition: left 0.4s ease;
+}
+
+.template-ecommerce-minimal .btn-shine:hover::after,
+.template-ecommerce-minimal .btn-primary:hover::after {
+    left: 0;
+}
+
+/* Efecto marquee para promociones */
+@keyframes marquee-scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.template-ecommerce-minimal .promo-marquee {
+    overflow: hidden;
+    background: var(--min-black);
+    padding: 0.75rem 0;
+}
+
+.template-ecommerce-minimal .promo-marquee-content {
+    display: flex;
+    animation: marquee-scroll 20s linear infinite;
+    white-space: nowrap;
+}
+
+.template-ecommerce-minimal .promo-marquee span {
+    color: var(--min-white);
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 0 3rem;
+}
+
+/* Número de items en carrito con bounce */
+@keyframes cart-bounce {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.template-ecommerce-minimal .cart-count {
+    animation: cart-bounce 0.3s ease;
+}
+
+/* Loading skeleton para productos */
+@keyframes skeleton-loading {
+    0% { background-position: -200px 0; }
+    100% { background-position: calc(200px + 100%) 0; }
+}
+
+.template-ecommerce-minimal .skeleton {
+    background: linear-gradient(90deg, var(--min-light) 0%, var(--min-white) 50%, var(--min-light) 100%);
+    background-size: 200px 100%;
+    animation: skeleton-loading 1.2s ease-in-out infinite;
+}
+
+/* Smooth scroll indicator */
+.template-ecommerce-minimal .scroll-hint {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.template-ecommerce-minimal .scroll-hint::before {
+    content: '';
+    display: block;
+    width: 1px;
+    height: 60px;
+    background: linear-gradient(to bottom, var(--min-black), transparent);
+    animation: scroll-line 2s ease-in-out infinite;
+}
+
+@keyframes scroll-line {
+    0%, 100% { opacity: 0.3; transform: scaleY(0.5); }
+    50% { opacity: 1; transform: scaleY(1); }
+}
+
+/* Focus states mejorados */
+.template-ecommerce-minimal input:focus,
+.template-ecommerce-minimal textarea:focus {
+    box-shadow: 0 0 0 2px var(--min-black) !important;
+}
+
+/* Selection style */
+.template-ecommerce-minimal ::selection {
+    background: var(--min-black);
+    color: var(--min-white);
+}
+
+/* Smooth image zoom */
+.template-ecommerce-minimal .category-card img {
+    transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.template-ecommerce-minimal .category-card:hover img {
+    transform: scale(1.08) !important;
+}
+
+/* Card stagger animation */
+.template-ecommerce-minimal .reveal.delay-1 { transition-delay: 0.1s; }
+.template-ecommerce-minimal .reveal.delay-2 { transition-delay: 0.2s; }
+.template-ecommerce-minimal .reveal.delay-3 { transition-delay: 0.3s; }
+.template-ecommerce-minimal .reveal.delay-4 { transition-delay: 0.4s; }
+.template-ecommerce-minimal .reveal.delay-5 { transition-delay: 0.5s; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .template-ecommerce-minimal #inicio {
+        grid-template-columns: 1fr !important;
+    }
+
+    .template-ecommerce-minimal #inicio .parallax {
+        grid-column: 1 !important;
+        grid-row: 1 !important;
+        min-height: 50vh !important;
+    }
+
+    .template-ecommerce-minimal #inicio .max-w-7xl {
+        grid-row: 2 !important;
+        padding: 2rem !important;
+    }
+
+    .template-ecommerce-minimal #categorias .grid {
+        grid-template-columns: 1fr 1fr !important;
+        grid-template-rows: auto !important;
+    }
+
+    .template-ecommerce-minimal #categorias .grid > * {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+    }
+
+    /* Disable complex effects on mobile */
+    .template-ecommerce-minimal .product-card::after {
+        display: none;
+    }
+
+    .template-ecommerce-minimal .product-card .aspect-square::before {
+        display: none;
+    }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .template-ecommerce-minimal .reveal,
+    .template-ecommerce-minimal .product-card,
+    .template-ecommerce-minimal .category-card img,
+    .template-ecommerce-minimal .promo-marquee-content {
+        animation: none !important;
+        transition: none !important;
+    }
+}

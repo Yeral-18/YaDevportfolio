@@ -1,0 +1,328 @@
+/* ============================================
+   YaDev UI - Template Switcher
+   Sistema para cambiar plantillas por sector
+   ============================================ */
+
+/* Switcher Container */
+.template-switcher {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 99999;
+}
+
+/* Toggle Button */
+.template-switcher__toggle {
+    position: relative;
+    left: 0;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    border: none;
+    border-radius: 0 12px 12px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    box-shadow: 4px 4px 20px rgba(99, 102, 241, 0.4);
+    transition: all 0.3s ease;
+}
+
+/* Industry-specific colors for toggle */
+[data-industry="electrico"] .template-switcher__toggle {
+    background: linear-gradient(135deg, #ffcb36, #f59e0b);
+    box-shadow: 4px 4px 20px rgba(255, 203, 54, 0.4);
+}
+
+[data-industry="transporte"] .template-switcher__toggle {
+    background: linear-gradient(135deg, #0284c7, #06b6d4);
+    box-shadow: 4px 4px 20px rgba(2, 132, 199, 0.4);
+}
+
+[data-industry="construccion"] .template-switcher__toggle {
+    background: linear-gradient(135deg, #f59e0b, #ea580c);
+    box-shadow: 4px 4px 20px rgba(245, 158, 11, 0.4);
+}
+
+[data-industry="tecnologia"] .template-switcher__toggle {
+    background: linear-gradient(135deg, #4f46e5, #7c3aed);
+    box-shadow: 4px 4px 20px rgba(79, 70, 229, 0.4);
+}
+
+[data-industry="ecommerce"] .template-switcher__toggle {
+    background: linear-gradient(135deg, #7c3aed, #ec4899);
+    box-shadow: 4px 4px 20px rgba(124, 58, 237, 0.4);
+}
+
+[data-industry="forestal"] .template-switcher__toggle {
+    background: linear-gradient(135deg, #10b981, #22c55e);
+    box-shadow: 4px 4px 20px rgba(16, 185, 129, 0.4);
+}
+
+[data-industry="salud"] .template-switcher__toggle {
+    background: linear-gradient(135deg, #0891b2, #2dd4bf);
+    box-shadow: 4px 4px 20px rgba(8, 145, 178, 0.4);
+}
+
+.template-switcher__toggle:hover {
+    width: 55px;
+    background: var(--color-primary-dark, #4f46e5);
+}
+
+.template-switcher__toggle svg {
+    width: 24px;
+    height: 24px;
+    transition: transform 0.3s ease;
+}
+
+.template-switcher.open .template-switcher__toggle svg {
+    transform: rotate(180deg);
+}
+
+/* Panel */
+.template-switcher__panel {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%) translateX(-110%);
+    width: 280px;
+    background: white;
+    border-radius: 0 16px 16px 0;
+    box-shadow: 4px 0 30px rgba(0, 0, 0, 0.15);
+    padding: 1.5rem;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    max-height: 80vh;
+    overflow-y: auto;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.template-switcher.open .template-switcher__panel {
+    transform: translateY(-50%) translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Panel Header */
+.template-switcher__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.template-switcher__title {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #111827;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.template-switcher__title svg {
+    width: 20px;
+    height: 20px;
+    color: var(--color-primary, #6366f1);
+}
+
+/* Industry Label */
+.template-switcher__industry {
+    font-size: 0.75rem;
+    color: #6b7280;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1rem;
+}
+
+/* Template Options */
+.template-option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-bottom: 0.75rem;
+}
+
+.template-option:hover {
+    border-color: var(--color-primary, #6366f1);
+    background: #f9fafb;
+}
+
+.template-option.active {
+    border-color: var(--color-primary, #6366f1);
+    background: rgba(99, 102, 241, 0.05);
+}
+
+.template-option__preview {
+    width: 60px;
+    height: 45px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #f3f4f6;
+}
+
+.template-option__preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Color preview for themes without images */
+.template-option__colors {
+    width: 60px;
+    height: 45px;
+    border-radius: 8px;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: flex;
+}
+
+.template-option__colors span {
+    flex: 1;
+    height: 100%;
+}
+
+.template-option__info {
+    flex: 1;
+}
+
+.template-option__name {
+    font-weight: 600;
+    color: #111827;
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+}
+
+.template-option__desc {
+    font-size: 0.75rem;
+    color: #6b7280;
+}
+
+.template-option__check {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid #d1d5db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: all 0.2s ease;
+}
+
+.template-option.active .template-option__check {
+    background: var(--color-primary, #6366f1);
+    border-color: var(--color-primary, #6366f1);
+}
+
+.template-option__check svg {
+    width: 14px;
+    height: 14px;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.template-option.active .template-option__check svg {
+    opacity: 1;
+}
+
+/* Footer Links */
+.template-switcher__footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid #e5e7eb;
+    text-align: center;
+}
+
+.template-switcher__footer a {
+    font-size: 0.8rem;
+    color: var(--color-primary, #6366f1);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.template-switcher__footer a:hover {
+    text-decoration: underline;
+}
+
+/* Dark Theme */
+[data-industry="tecnologia"] .template-switcher__panel {
+    background: #1f2937;
+}
+
+[data-industry="tecnologia"] .template-switcher__title,
+[data-industry="tecnologia"] .template-option__name {
+    color: #f9fafb;
+}
+
+[data-industry="tecnologia"] .template-option {
+    border-color: #374151;
+}
+
+[data-industry="tecnologia"] .template-option:hover {
+    background: #374151;
+}
+
+[data-industry="tecnologia"] .template-switcher__header,
+[data-industry="tecnologia"] .template-switcher__footer {
+    border-color: #374151;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .template-switcher {
+        top: auto;
+        bottom: 100px;
+        transform: none;
+    }
+
+    .template-switcher__toggle {
+        width: 45px;
+        height: 45px;
+    }
+
+    .template-switcher__panel {
+        width: 260px;
+        bottom: 0;
+        top: auto;
+        transform: translateX(-100%);
+        border-radius: 0 16px 0 0;
+    }
+
+    .template-switcher.open .template-switcher__panel {
+        transform: translateX(0);
+    }
+}
+
+/* Transition Overlay (when changing templates) */
+.template-transition {
+    position: fixed;
+    inset: 0;
+    background: var(--color-primary, #6366f1);
+    z-index: 99997;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+.template-transition.active {
+    transform: scaleX(1);
+}
+
+.template-transition.exit {
+    transform-origin: right;
+    transform: scaleX(0);
+}

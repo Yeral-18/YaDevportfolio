@@ -1,0 +1,378 @@
+/* ============================================
+   Template: Construcción Industrial
+   Diseño robusto con layout asimétrico,
+   bordes gruesos, tipografía bold
+   ============================================ */
+
+/* ===== VARIABLES INDUSTRIALES ===== */
+.template-construccion-industrial {
+    --ind-orange: #d97706;
+    --ind-dark: #292524;
+    --ind-light: #fafaf9;
+    --ind-accent: #78350f;
+}
+
+/* ===== FONDO CON TEXTURA ===== */
+.template-construccion-industrial,
+.template-construccion-industrial body {
+    background-color: #f5f5f4 !important;
+    background-image:
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 35px,
+            rgba(217, 119, 6, 0.03) 35px,
+            rgba(217, 119, 6, 0.03) 70px
+        );
+}
+
+/* ===== NAVBAR INDUSTRIAL PESADO ===== */
+.template-construccion-industrial .navbar-animated {
+    background: var(--ind-dark) !important;
+    border-bottom: 6px solid var(--ind-orange) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3) !important;
+    height: 80px !important;
+}
+
+.template-construccion-industrial .navbar-animated a {
+    color: var(--ind-light) !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    font-size: 13px !important;
+}
+
+.template-construccion-industrial .navbar-animated a:hover {
+    color: var(--ind-orange) !important;
+}
+
+.template-construccion-industrial .navbar-animated .btn-primary {
+    background: var(--ind-orange) !important;
+    border-radius: 0 !important;
+    font-weight: 900 !important;
+}
+
+/* ===== HERO CON DIAGONAL ===== */
+.template-construccion-industrial #inicio {
+    background: linear-gradient(135deg, var(--ind-dark) 0%, #44403c 100%) !important;
+    clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+    padding-bottom: 150px !important;
+    position: relative;
+}
+
+.template-construccion-industrial #inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 20px,
+        rgba(217, 119, 6, 0.05) 20px,
+        rgba(217, 119, 6, 0.05) 40px
+    );
+    z-index: 1;
+}
+
+.template-construccion-industrial #inicio h1 {
+    color: #ffffff !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    position: relative;
+    z-index: 2;
+}
+
+.template-construccion-industrial #inicio h1 span {
+    color: var(--ind-orange) !important;
+}
+
+/* ===== SECCIONES CON BORDES GRUESOS ===== */
+.template-construccion-industrial section {
+    padding: 100px 0 !important;
+    position: relative;
+}
+
+.template-construccion-industrial section:nth-child(odd) {
+    background: var(--ind-light) !important;
+}
+
+.template-construccion-industrial section:nth-child(even) {
+    background: #e7e5e4 !important;
+}
+
+/* ===== TÍTULOS CON LÍNEA GRUESA ===== */
+.template-construccion-industrial section h2 {
+    font-size: 3rem !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    color: var(--ind-dark) !important;
+    position: relative;
+    padding-bottom: 20px !important;
+    margin-bottom: 60px !important;
+}
+
+.template-construccion-industrial section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 6px;
+    background: var(--ind-orange);
+}
+
+/* ===== CARDS INDUSTRIALES ===== */
+.template-construccion-industrial .bg-white.rounded-2xl {
+    background: var(--ind-light) !important;
+    border: none !important;
+    border-left: 6px solid var(--ind-orange) !important;
+    border-radius: 0 !important;
+    box-shadow: 8px 8px 0 var(--ind-dark) !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-construccion-industrial .bg-white.rounded-2xl:hover {
+    transform: translate(-4px, -4px) !important;
+    box-shadow: 12px 12px 0 var(--ind-dark) !important;
+}
+
+/* ===== STATS EN BLOQUES ===== */
+.template-construccion-industrial .stat-card {
+    background: var(--ind-dark) !important;
+    color: var(--ind-light) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-construccion-industrial .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 6px;
+    background: var(--ind-orange);
+}
+
+.template-construccion-industrial .stat-card .text-4xl,
+.template-construccion-industrial .stat-card .text-3xl {
+    color: var(--ind-orange) !important;
+    font-weight: 900 !important;
+}
+
+/* ===== BOTONES INDUSTRIALES ===== */
+.template-construccion-industrial .btn-primary {
+    background: var(--ind-orange) !important;
+    color: #000 !important;
+    border-radius: 0 !important;
+    padding: 18px 40px !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    border: 4px solid #000 !important;
+    box-shadow: 4px 4px 0 #000 !important;
+    transition: all 0.2s ease !important;
+}
+
+.template-construccion-industrial .btn-primary:hover {
+    transform: translate(-2px, -2px) !important;
+    box-shadow: 6px 6px 0 #000 !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.template-construccion-industrial .team-card {
+    background: var(--ind-dark) !important;
+    color: var(--ind-light) !important;
+    border-radius: 0 !important;
+    border-bottom: 6px solid var(--ind-orange) !important;
+}
+
+.template-construccion-industrial .team-card__image {
+    border-radius: 0 !important;
+    border: 4px solid var(--ind-orange) !important;
+}
+
+.template-construccion-industrial .team-card__name {
+    color: var(--ind-light) !important;
+    text-transform: uppercase !important;
+    font-weight: 800 !important;
+}
+
+.template-construccion-industrial .team-card__position {
+    color: var(--ind-orange) !important;
+    font-weight: 700 !important;
+    letter-spacing: 2px !important;
+    font-size: 11px !important;
+}
+
+/* ===== TESTIMONIALS ===== */
+.template-construccion-industrial .testimonial-card {
+    background: var(--ind-dark) !important;
+    color: var(--ind-light) !important;
+    border-radius: 0 !important;
+    border-left: 8px solid var(--ind-orange) !important;
+    box-shadow: 10px 10px 0 rgba(217, 119, 6, 0.3) !important;
+}
+
+.template-construccion-industrial .testimonial-card::before {
+    content: '"';
+    font-size: 120px;
+    color: var(--ind-orange);
+    opacity: 0.2;
+    position: absolute;
+    top: 0;
+    left: 20px;
+    line-height: 1;
+}
+
+.template-construccion-industrial .testimonial-card p {
+    color: var(--ind-light) !important;
+}
+
+/* ===== CLIENTES ===== */
+.template-construccion-industrial .client-logo {
+    background: var(--ind-light) !important;
+    border: 3px solid var(--ind-dark) !important;
+    border-radius: 0 !important;
+    filter: grayscale(100%);
+    transition: all 0.3s ease !important;
+}
+
+.template-construccion-industrial .client-logo:hover {
+    filter: grayscale(0%);
+    border-color: var(--ind-orange) !important;
+    box-shadow: 5px 5px 0 var(--ind-dark) !important;
+}
+
+/* ===== PROCESO ===== */
+.template-construccion-industrial .process-step-light {
+    background: var(--ind-light) !important;
+    border: 3px solid var(--ind-dark) !important;
+    border-radius: 0 !important;
+}
+
+.template-construccion-industrial .process-step-light .text-4xl {
+    color: var(--ind-orange) !important;
+    font-weight: 900 !important;
+}
+
+/* ===== FORMULARIO ===== */
+.template-construccion-industrial form {
+    background: var(--ind-light) !important;
+    border: 4px solid var(--ind-dark) !important;
+    border-radius: 0 !important;
+    box-shadow: 10px 10px 0 var(--ind-dark) !important;
+}
+
+.template-construccion-industrial form::before {
+    display: none !important;
+}
+
+.template-construccion-industrial input,
+.template-construccion-industrial textarea,
+.template-construccion-industrial select {
+    border: 3px solid var(--ind-dark) !important;
+    border-radius: 0 !important;
+    background: #fff !important;
+}
+
+.template-construccion-industrial input:focus,
+.template-construccion-industrial textarea:focus,
+.template-construccion-industrial select:focus {
+    border-color: var(--ind-orange) !important;
+    box-shadow: none !important;
+}
+
+/* ===== CTA ===== */
+.template-construccion-industrial .cta-section {
+    background: var(--ind-dark) !important;
+    border-top: 8px solid var(--ind-orange) !important;
+    border-bottom: 8px solid var(--ind-orange) !important;
+}
+
+/* ===== FOOTER ===== */
+.template-construccion-industrial footer {
+    background: #1c1917 !important;
+    border-top: 8px solid var(--ind-orange) !important;
+}
+
+.template-construccion-industrial footer h4 {
+    color: var(--ind-orange) !important;
+    text-transform: uppercase !important;
+    font-weight: 800 !important;
+    letter-spacing: 2px !important;
+}
+
+.template-construccion-industrial footer a {
+    color: #a8a29e !important;
+}
+
+.template-construccion-industrial footer a:hover {
+    color: var(--ind-orange) !important;
+}
+
+/* ===== ICONOS ===== */
+.template-construccion-industrial .service-type {
+    background: var(--ind-orange) !important;
+    border: 4px solid #000 !important;
+    border-radius: 0 !important;
+    box-shadow: 4px 4px 0 #000 !important;
+}
+
+/* ===== ANIMACIONES ===== */
+.template-construccion-industrial .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.template-construccion-industrial .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== WHATSAPP ===== */
+.template-construccion-industrial .whatsapp-float {
+    border-radius: 0 !important;
+    border: 3px solid #000 !important;
+    box-shadow: 4px 4px 0 #000 !important;
+}
+
+/* ===== NAVBAR SCROLLED ===== */
+.template-construccion-industrial .navbar-animated.scrolled {
+    background: var(--ind-dark) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4), 0 6px 0 var(--ind-orange) !important;
+}
+
+/* ===== DROPDOWN MENUS ===== */
+.template-construccion-industrial .group .absolute,
+.template-construccion-industrial .dropdown-menu,
+.template-construccion-industrial [class*="dropdown"],
+.template-construccion-industrial nav .absolute {
+    background: var(--ind-dark) !important;
+    border: 3px solid var(--ind-orange) !important;
+    box-shadow: 4px 4px 0 #000 !important;
+}
+
+.template-construccion-industrial .group .absolute a,
+.template-construccion-industrial .dropdown-menu a,
+.template-construccion-industrial nav .absolute a {
+    color: var(--ind-light) !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+}
+
+.template-construccion-industrial .group .absolute a:hover,
+.template-construccion-industrial .dropdown-menu a:hover,
+.template-construccion-industrial nav .absolute a:hover {
+    background: var(--ind-orange) !important;
+    color: #000 !important;
+}

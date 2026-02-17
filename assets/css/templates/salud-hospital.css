@@ -1,0 +1,433 @@
+/* ============================================
+   Template: Salud Hospital (Institucional)
+   Diseño institucional médico con cruz roja,
+   azul profundo, bordes definidos
+   ============================================ */
+
+/* ===== VARIABLES HOSPITAL ===== */
+.template-salud-hospital {
+    --hosp-blue: #0369a1;
+    --hosp-blue-dark: #0c4a6e;
+    --hosp-red: #dc2626;
+    --hosp-white: #ffffff;
+    --hosp-gray: #f0f9ff;
+    --hosp-text: #1e3a5f;
+    --hosp-border: #bae6fd;
+}
+
+/* ===== FONDO INSTITUCIONAL ===== */
+.template-salud-hospital,
+.template-salud-hospital body {
+    background: var(--hosp-gray) !important;
+}
+
+/* ===== NAVBAR INSTITUCIONAL ===== */
+.template-salud-hospital .navbar-animated {
+    background: var(--hosp-white) !important;
+    border-bottom: 3px solid var(--hosp-blue) !important;
+    box-shadow: 0 4px 20px rgba(3, 105, 161, 0.15) !important;
+}
+
+.template-salud-hospital .navbar-animated a {
+    color: var(--hosp-text) !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    font-size: 0.8rem !important;
+}
+
+.template-salud-hospital .navbar-animated a:hover {
+    color: var(--hosp-blue) !important;
+}
+
+.template-salud-hospital .navbar-animated .btn-shine {
+    background: var(--hosp-red) !important;
+    border-radius: 4px !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    letter-spacing: 1px !important;
+}
+
+/* Logo con cruz */
+.template-salud-hospital .navbar-animated .w-10 {
+    background: var(--hosp-red) !important;
+    position: relative;
+}
+
+/* ===== HERO INSTITUCIONAL ===== */
+.template-salud-hospital #inicio {
+    background: linear-gradient(135deg, var(--hosp-blue-dark) 0%, var(--hosp-blue) 100%) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-salud-hospital #inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: var(--hosp-red);
+    clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
+    opacity: 0.1;
+}
+
+.template-salud-hospital #inicio .parallax {
+    opacity: 0.15 !important;
+}
+
+.template-salud-hospital #inicio h1 {
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    font-weight: 800 !important;
+}
+
+.template-salud-hospital #inicio h1 span {
+    color: var(--hosp-red) !important;
+    background: none !important;
+    -webkit-text-fill-color: var(--hosp-red) !important;
+    text-shadow: 0 0 30px rgba(220, 38, 38, 0.5) !important;
+}
+
+.template-salud-hospital #inicio .inline-flex {
+    background: var(--hosp-red) !important;
+    border: none !important;
+    border-radius: 4px !important;
+}
+
+.template-salud-hospital #inicio .pulse-health {
+    background: var(--hosp-red) !important;
+}
+
+/* ===== STATS EN BARRA HORIZONTAL ===== */
+.template-salud-hospital #inicio .grid.grid-cols-2 {
+    display: flex !important;
+    background: var(--hosp-white) !important;
+    position: absolute !important;
+    bottom: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    padding: 1.5rem 2rem !important;
+    border-radius: 0 !important;
+    gap: 0 !important;
+}
+
+.template-salud-hospital #inicio .grid.grid-cols-2 > div {
+    flex: 1 !important;
+    background: transparent !important;
+    border: none !important;
+    border-right: 1px solid var(--hosp-border) !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    backdrop-filter: none !important;
+}
+
+.template-salud-hospital #inicio .grid.grid-cols-2 > div:last-child {
+    border-right: none !important;
+}
+
+.template-salud-hospital #inicio .grid.grid-cols-2 .text-4xl {
+    color: var(--hosp-blue) !important;
+    font-weight: 800 !important;
+}
+
+.template-salud-hospital #inicio .grid.grid-cols-2 p:last-child {
+    color: var(--hosp-text) !important;
+}
+
+/* ===== BOTONES INSTITUCIONALES ===== */
+.template-salud-hospital .btn-shine,
+.template-salud-hospital .btn-primary {
+    background: var(--hosp-red) !important;
+    border-radius: 4px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    font-weight: 700 !important;
+    padding: 1rem 2rem !important;
+    border: none !important;
+}
+
+.template-salud-hospital .btn-shine:hover,
+.template-salud-hospital .btn-primary:hover {
+    background: #b91c1c !important;
+}
+
+.template-salud-hospital .btn-shine::before {
+    display: none !important;
+}
+
+/* ===== SECCIONES ===== */
+.template-salud-hospital section {
+    padding: 5rem 0 !important;
+    position: relative;
+}
+
+.template-salud-hospital section:nth-child(odd) {
+    background: var(--hosp-white) !important;
+}
+
+.template-salud-hospital section:nth-child(even) {
+    background: var(--hosp-gray) !important;
+}
+
+/* ===== TITULOS CON LINEA ===== */
+.template-salud-hospital section h2 {
+    color: var(--hosp-text) !important;
+    font-weight: 800 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    position: relative;
+    padding-bottom: 1rem !important;
+}
+
+.template-salud-hospital section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--hosp-red);
+}
+
+.template-salud-hospital .text-cyan-600 {
+    color: var(--hosp-blue) !important;
+}
+
+/* ===== ESPECIALIDADES CARDS ===== */
+.template-salud-hospital .specialty-card {
+    background: var(--hosp-white) !important;
+    border: 2px solid var(--hosp-border) !important;
+    border-left: 5px solid var(--hosp-blue) !important;
+    border-radius: 0 !important;
+    box-shadow: 4px 4px 0 var(--hosp-border) !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-salud-hospital .specialty-card:hover {
+    border-left-color: var(--hosp-red) !important;
+    transform: translate(-2px, -2px) !important;
+    box-shadow: 6px 6px 0 var(--hosp-border) !important;
+}
+
+.template-salud-hospital .specialty-card .w-14 {
+    background: var(--hosp-blue) !important;
+    border-radius: 0 !important;
+}
+
+.template-salud-hospital .specialty-card h3 {
+    color: var(--hosp-text) !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+    font-size: 0.9rem !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* ===== MEDICOS CARDS ===== */
+.template-salud-hospital .doctor-card {
+    background: var(--hosp-white) !important;
+    border: 2px solid var(--hosp-border) !important;
+    border-radius: 0 !important;
+    box-shadow: 5px 5px 0 var(--hosp-blue) !important;
+}
+
+.template-salud-hospital .doctor-card:hover {
+    box-shadow: 8px 8px 0 var(--hosp-red) !important;
+}
+
+.template-salud-hospital .doctor-card .h-56 {
+    border-bottom: 3px solid var(--hosp-blue) !important;
+}
+
+.template-salud-hospital .doctor-card h3 {
+    color: var(--hosp-text) !important;
+    text-transform: uppercase !important;
+    font-weight: 700 !important;
+}
+
+.template-salud-hospital .doctor-card .text-cyan-600 {
+    color: var(--hosp-red) !important;
+    font-weight: 600 !important;
+}
+
+/* ===== SERVICIOS ===== */
+.template-salud-hospital #servicios .rounded-3xl {
+    border-radius: 0 !important;
+    box-shadow: 8px 8px 0 var(--hosp-blue) !important;
+}
+
+.template-salud-hospital #servicios .w-10 {
+    background: var(--hosp-blue) !important;
+    border-radius: 0 !important;
+}
+
+.template-salud-hospital #servicios .-bottom-6 {
+    background: var(--hosp-white) !important;
+    border: 2px solid var(--hosp-blue) !important;
+    border-radius: 0 !important;
+}
+
+/* ===== NOSOTROS ===== */
+.template-salud-hospital #nosotros .grid > div {
+    background: var(--hosp-white) !important;
+    border: 2px solid var(--hosp-border) !important;
+    border-radius: 0 !important;
+    box-shadow: 5px 5px 0 var(--hosp-blue) !important;
+}
+
+.template-salud-hospital #nosotros .grid > div:hover {
+    box-shadow: 8px 8px 0 var(--hosp-red) !important;
+}
+
+.template-salud-hospital #nosotros .w-20 {
+    background: var(--hosp-blue) !important;
+    border-radius: 0 !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.template-salud-hospital #testimonios .grid > div {
+    background: var(--hosp-white) !important;
+    border: 2px solid var(--hosp-border) !important;
+    border-radius: 0 !important;
+    border-top: 5px solid var(--hosp-blue) !important;
+}
+
+.template-salud-hospital #testimonios .text-5xl {
+    color: var(--hosp-red) !important;
+}
+
+.template-salud-hospital #testimonios .border-cyan-500 {
+    border-color: var(--hosp-blue) !important;
+}
+
+/* ===== EQUIPO ===== */
+.template-salud-hospital .team-card {
+    background: var(--hosp-white) !important;
+    border: 2px solid var(--hosp-border) !important;
+    border-radius: 0 !important;
+}
+
+.template-salud-hospital .team-card__image {
+    border-radius: 0 !important;
+    border: 3px solid var(--hosp-blue) !important;
+}
+
+.template-salud-hospital .team-card__name {
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+}
+
+.template-salud-hospital .team-card__position {
+    color: var(--hosp-red) !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+}
+
+/* ===== CLIENTES ===== */
+.template-salud-hospital .client-logo {
+    background: var(--hosp-white) !important;
+    border: 2px solid var(--hosp-border) !important;
+    border-radius: 0 !important;
+}
+
+/* ===== CTA INSTITUCIONAL ===== */
+.template-salud-hospital #contacto,
+.template-salud-hospital .cta-section {
+    background: linear-gradient(135deg, var(--hosp-blue-dark), var(--hosp-blue)) !important;
+    position: relative;
+}
+
+.template-salud-hospital #contacto::before {
+    content: '+';
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 300px;
+    color: var(--hosp-red);
+    opacity: 0.1;
+    font-weight: bold;
+}
+
+.template-salud-hospital #contacto .btn-shine {
+    background: var(--hosp-red) !important;
+}
+
+/* ===== FOOTER INSTITUCIONAL ===== */
+.template-salud-hospital footer {
+    background: var(--hosp-blue-dark) !important;
+    border-top: 5px solid var(--hosp-red) !important;
+}
+
+.template-salud-hospital footer h4 {
+    color: var(--hosp-white) !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+.template-salud-hospital footer a:hover {
+    color: var(--hosp-red) !important;
+}
+
+/* ===== WHATSAPP ===== */
+.template-salud-hospital .whatsapp-float {
+    border-radius: 0 !important;
+    background: var(--hosp-red) !important;
+}
+
+/* ===== TOP BAR ===== */
+.template-salud-hospital .top-bar {
+    background: var(--hosp-blue-dark) !important;
+}
+
+.template-salud-hospital .top-bar a {
+    color: var(--hosp-white) !important;
+}
+
+.template-salud-hospital .top-bar .text-cyan-300 {
+    color: var(--hosp-red) !important;
+}
+
+/* ===== DEMO BANNER ===== */
+.template-salud-hospital .demo-banner {
+    background: var(--hosp-red) !important;
+}
+
+/* ===== GEOMETRIC DECORATIONS ===== */
+.template-salud-hospital .geometric-decoration {
+    background: var(--hosp-red) !important;
+    opacity: 0.1 !important;
+}
+
+/* ===== NAVBAR SCROLLED ===== */
+.template-salud-hospital .navbar-animated.scrolled {
+    background: var(--hosp-white) !important;
+    box-shadow: 0 4px 30px rgba(3, 105, 161, 0.2) !important;
+}
+
+/* ===== DROPDOWN MENUS ===== */
+.template-salud-hospital .group .absolute,
+.template-salud-hospital .dropdown-menu,
+.template-salud-hospital [class*="dropdown"],
+.template-salud-hospital nav .absolute {
+    background: var(--hosp-white) !important;
+    border: 2px solid var(--hosp-border) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 30px rgba(3, 105, 161, 0.15) !important;
+}
+
+.template-salud-hospital .group .absolute a,
+.template-salud-hospital .dropdown-menu a,
+.template-salud-hospital nav .absolute a {
+    color: var(--hosp-text) !important;
+    font-weight: 600 !important;
+}
+
+.template-salud-hospital .group .absolute a:hover,
+.template-salud-hospital .dropdown-menu a:hover,
+.template-salud-hospital nav .absolute a:hover {
+    background: rgba(3, 105, 161, 0.1) !important;
+    color: var(--hosp-blue) !important;
+}

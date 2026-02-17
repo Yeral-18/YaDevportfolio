@@ -1,0 +1,739 @@
+/* ============================================
+   Template: Eléctrico Dashboard
+   Diseño tipo panel de control con métricas,
+   cards de estadísticas, layout de administración
+   ============================================ */
+
+/* ===== VARIABLES DASHBOARD ===== */
+.template-electrico-dashboard {
+    --dash-bg: #0f172a;
+    --dash-surface: #1e293b;
+    --dash-card: #334155;
+    --dash-border: #475569;
+    --dash-yellow: #fbbf24;
+    --dash-yellow-dark: #d97706;
+    --dash-text: #f1f5f9;
+    --dash-muted: #94a3b8;
+    --dash-success: #22c55e;
+    --dash-danger: #ef4444;
+}
+
+/* ===== FONDO OSCURO DASHBOARD ===== */
+.template-electrico-dashboard,
+.template-electrico-dashboard body {
+    background: var(--dash-bg) !important;
+    color: var(--dash-text) !important;
+    font-family: 'Inter', system-ui, sans-serif !important;
+}
+
+/* ===== NAVBAR TIPO SIDEBAR HEADER ===== */
+.template-electrico-dashboard .navbar-animated {
+    background: var(--dash-surface) !important;
+    border-bottom: 1px solid var(--dash-border) !important;
+    box-shadow: none !important;
+    padding: 0.75rem 2rem !important;
+}
+
+.template-electrico-dashboard .navbar-animated.scrolled {
+    background: rgba(30, 41, 59, 0.98) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+.template-electrico-dashboard .navbar-animated a {
+    color: var(--dash-muted) !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+}
+
+.template-electrico-dashboard .navbar-animated a:hover {
+    color: var(--dash-yellow) !important;
+}
+
+.template-electrico-dashboard .navbar-animated .btn-primary {
+    background: var(--dash-yellow) !important;
+    color: #000 !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    padding: 0.5rem 1.25rem !important;
+}
+
+/* ===== DROPDOWN DASHBOARD ===== */
+.template-electrico-dashboard .group .absolute,
+.template-electrico-dashboard .dropdown-menu,
+.template-electrico-dashboard nav .absolute {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 8px !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5) !important;
+}
+
+.template-electrico-dashboard .group .absolute a,
+.template-electrico-dashboard .dropdown-menu a,
+.template-electrico-dashboard nav .absolute a {
+    color: var(--dash-muted) !important;
+}
+
+.template-electrico-dashboard .group .absolute a:hover,
+.template-electrico-dashboard .dropdown-menu a:hover,
+.template-electrico-dashboard nav .absolute a:hover {
+    background: var(--dash-card) !important;
+    color: var(--dash-yellow) !important;
+}
+
+/* ===== HERO TIPO DASHBOARD HEADER ===== */
+.template-electrico-dashboard #inicio {
+    background: linear-gradient(135deg, var(--dash-bg) 0%, var(--dash-surface) 100%) !important;
+    min-height: 80vh !important;
+    padding: 6rem 0 4rem !important;
+}
+
+.template-electrico-dashboard #inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background:
+        radial-gradient(circle at 80% 20%, rgba(251, 191, 36, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 60% 80%, rgba(251, 191, 36, 0.05) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.template-electrico-dashboard #inicio h1 {
+    color: var(--dash-text) !important;
+    font-size: clamp(2rem, 4vw, 3.5rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+}
+
+.template-electrico-dashboard #inicio h1 span {
+    color: var(--dash-yellow) !important;
+}
+
+.template-electrico-dashboard #inicio p {
+    color: var(--dash-muted) !important;
+}
+
+/* ===== STATS GRID TIPO DASHBOARD ===== */
+.template-electrico-dashboard .stat-card,
+.template-electrico-dashboard #inicio .grid > div {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 12px !important;
+    padding: 1.5rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-electrico-dashboard .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--dash-yellow);
+    border-radius: 4px 0 0 4px;
+}
+
+.template-electrico-dashboard .stat-card .text-4xl,
+.template-electrico-dashboard .stat-card .text-3xl {
+    color: var(--dash-text) !important;
+    font-weight: 800 !important;
+    font-size: 2.5rem !important;
+}
+
+.template-electrico-dashboard .stat-card p {
+    color: var(--dash-muted) !important;
+    font-size: 0.875rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===== METRIC INDICATOR ===== */
+.template-electrico-dashboard .stat-card::after {
+    content: '↗';
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    color: var(--dash-success);
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+/* ===== SECCIONES CON FONDO ALTERNADO ===== */
+.template-electrico-dashboard section {
+    background: var(--dash-bg) !important;
+    padding: 4rem 0 !important;
+}
+
+.template-electrico-dashboard section:nth-child(even) {
+    background: var(--dash-surface) !important;
+}
+
+/* ===== TÍTULOS CON BADGE ===== */
+.template-electrico-dashboard section h2 {
+    color: var(--dash-text) !important;
+    font-size: 1.75rem !important;
+    font-weight: 700 !important;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.template-electrico-dashboard section h2::before {
+    content: '⚡';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: rgba(251, 191, 36, 0.1);
+    border-radius: 8px;
+    font-size: 1.25rem;
+}
+
+.template-electrico-dashboard section h2::after {
+    display: none !important;
+}
+
+/* ===== CARDS TIPO WIDGET ===== */
+.template-electrico-dashboard .bg-white.rounded-2xl,
+.template-electrico-dashboard .bg-slate-800 {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 12px !important;
+    padding: 1.5rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-electrico-dashboard .bg-white.rounded-2xl:hover,
+.template-electrico-dashboard .bg-slate-800:hover {
+    border-color: var(--dash-yellow) !important;
+    transform: translateY(-4px) !important;
+    box-shadow: 0 10px 30px rgba(251, 191, 36, 0.1) !important;
+}
+
+/* ===== WIDGET HEADER ===== */
+.template-electrico-dashboard .bg-white.rounded-2xl h3,
+.template-electrico-dashboard .bg-slate-800 h3 {
+    color: var(--dash-text) !important;
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--dash-border);
+    margin-bottom: 1rem;
+}
+
+/* ===== SERVICE ICONS COMO BADGES ===== */
+.template-electrico-dashboard .service-type {
+    background: rgba(251, 191, 36, 0.1) !important;
+    border: 1px solid var(--dash-yellow) !important;
+    border-radius: 8px !important;
+    padding: 0.75rem !important;
+}
+
+.template-electrico-dashboard .service-type svg {
+    color: var(--dash-yellow) !important;
+}
+
+/* ===== TABLA/LISTA ESTILO ===== */
+.template-electrico-dashboard ul li,
+.template-electrico-dashboard .list-item {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--dash-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.template-electrico-dashboard ul li:last-child {
+    border-bottom: none;
+}
+
+/* ===== BOTONES DASHBOARD ===== */
+.template-electrico-dashboard .btn-primary,
+.template-electrico-dashboard .btn-shine {
+    background: var(--dash-yellow) !important;
+    color: #000 !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    padding: 0.75rem 1.5rem !important;
+    border: none !important;
+    transition: all 0.2s ease !important;
+}
+
+.template-electrico-dashboard .btn-primary:hover,
+.template-electrico-dashboard .btn-shine:hover {
+    background: var(--dash-yellow-dark) !important;
+    transform: translateY(-2px) !important;
+}
+
+.template-electrico-dashboard .btn-shine::before {
+    display: none !important;
+}
+
+/* ===== SECONDARY BUTTON ===== */
+.template-electrico-dashboard .btn-secondary {
+    background: transparent !important;
+    color: var(--dash-text) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 8px !important;
+}
+
+.template-electrico-dashboard .btn-secondary:hover {
+    border-color: var(--dash-yellow) !important;
+    color: var(--dash-yellow) !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.template-electrico-dashboard .team-card {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 12px !important;
+    text-align: left !important;
+    padding: 1.5rem !important;
+}
+
+.template-electrico-dashboard .team-card__image {
+    width: 48px !important;
+    height: 48px !important;
+    border-radius: 8px !important;
+    border: none !important;
+}
+
+.template-electrico-dashboard .team-card__name {
+    color: var(--dash-text) !important;
+    font-size: 1rem !important;
+}
+
+.template-electrico-dashboard .team-card__position {
+    color: var(--dash-yellow) !important;
+    font-size: 0.75rem !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ===== TESTIMONIOS COMO NOTIFICACIONES ===== */
+.template-electrico-dashboard .testimonial-card,
+.template-electrico-dashboard #testimonios .grid > div {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-left: 4px solid var(--dash-yellow) !important;
+    border-radius: 0 12px 12px 0 !important;
+    padding: 1.5rem !important;
+}
+
+.template-electrico-dashboard .testimonial-card p,
+.template-electrico-dashboard #testimonios p {
+    color: var(--dash-muted) !important;
+}
+
+/* ===== FORMULARIO DASHBOARD ===== */
+.template-electrico-dashboard form {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 12px !important;
+    padding: 2rem !important;
+}
+
+.template-electrico-dashboard form::before {
+    display: none !important;
+}
+
+.template-electrico-dashboard input,
+.template-electrico-dashboard textarea,
+.template-electrico-dashboard select {
+    background: var(--dash-bg) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 8px !important;
+    color: var(--dash-text) !important;
+    padding: 0.75rem 1rem !important;
+}
+
+.template-electrico-dashboard input:focus,
+.template-electrico-dashboard textarea:focus,
+.template-electrico-dashboard select:focus {
+    border-color: var(--dash-yellow) !important;
+    outline: none !important;
+    box-shadow: 0 0 0 3px rgba(251, 191, 36, 0.1) !important;
+}
+
+.template-electrico-dashboard label {
+    color: var(--dash-muted) !important;
+    font-size: 0.875rem !important;
+    font-weight: 500 !important;
+}
+
+/* ===== PROCESO COMO TIMELINE ===== */
+.template-electrico-dashboard .process-step-light {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 12px !important;
+    position: relative;
+    padding-left: 3rem !important;
+}
+
+.template-electrico-dashboard .process-step-light::before {
+    content: '';
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    background: var(--dash-yellow);
+    border-radius: 50%;
+}
+
+.template-electrico-dashboard .process-step-light .text-4xl {
+    display: none !important;
+}
+
+/* ===== CTA SECTION ===== */
+.template-electrico-dashboard .cta-section,
+.template-electrico-dashboard #contacto {
+    background: linear-gradient(135deg, var(--dash-surface) 0%, var(--dash-card) 100%) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 16px !important;
+    margin: 2rem !important;
+}
+
+/* ===== FOOTER DASHBOARD ===== */
+.template-electrico-dashboard footer {
+    background: var(--dash-surface) !important;
+    border-top: 1px solid var(--dash-border) !important;
+}
+
+.template-electrico-dashboard footer h4 {
+    color: var(--dash-text) !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.template-electrico-dashboard footer a {
+    color: var(--dash-muted) !important;
+    font-size: 0.875rem !important;
+}
+
+.template-electrico-dashboard footer a:hover {
+    color: var(--dash-yellow) !important;
+}
+
+/* ===== WHATSAPP BADGE ===== */
+.template-electrico-dashboard .whatsapp-float {
+    border-radius: 12px !important;
+    box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3) !important;
+}
+
+/* ===== TOP BAR ===== */
+.template-electrico-dashboard .top-bar {
+    background: var(--dash-card) !important;
+    border-bottom: 1px solid var(--dash-border) !important;
+    padding: 0.5rem 0 !important;
+}
+
+.template-electrico-dashboard .top-bar a {
+    color: var(--dash-muted) !important;
+    font-size: 0.75rem !important;
+}
+
+/* ===== CLIENTES LOGOS ===== */
+.template-electrico-dashboard .client-logo {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 8px !important;
+    filter: grayscale(100%) brightness(0.7) !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-electrico-dashboard .client-logo:hover {
+    filter: grayscale(0%) brightness(1) !important;
+    border-color: var(--dash-yellow) !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-electrico-dashboard .scroll-progress {
+    background: var(--dash-yellow) !important;
+    height: 3px !important;
+}
+
+/* ===== ANIMACIONES ===== */
+.template-electrico-dashboard .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease !important;
+}
+
+.template-electrico-dashboard .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== TEXT COLORS ===== */
+.template-electrico-dashboard .text-white {
+    color: var(--dash-text) !important;
+}
+
+.template-electrico-dashboard .text-gray-400,
+.template-electrico-dashboard .text-gray-500,
+.template-electrico-dashboard .text-gray-600 {
+    color: var(--dash-muted) !important;
+}
+
+/* ===== EFECTOS DASHBOARD AVANZADOS ===== */
+
+/* Indicador de estado "live" */
+@keyframes live-pulse {
+    0%, 100% {
+        opacity: 1;
+        box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5);
+    }
+    50% {
+        opacity: 0.7;
+        box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
+    }
+}
+
+.template-electrico-dashboard .live-indicator::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: var(--dash-success);
+    border-radius: 50%;
+    margin-right: 8px;
+    animation: live-pulse 2s ease-in-out infinite;
+}
+
+/* Efecto de carga de datos en stats */
+@keyframes data-load {
+    0% { transform: scaleX(0); }
+    100% { transform: scaleX(1); }
+}
+
+.template-electrico-dashboard .stat-card::after {
+    background: var(--dash-success);
+    font-size: 0.75rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Mini gráfico de línea en cards */
+@keyframes mini-chart {
+    0%, 100% {
+        clip-path: polygon(0 80%, 15% 60%, 30% 70%, 45% 40%, 60% 55%, 75% 30%, 90% 45%, 100% 20%, 100% 100%, 0 100%);
+    }
+    50% {
+        clip-path: polygon(0 70%, 15% 50%, 30% 60%, 45% 30%, 60% 45%, 75% 20%, 90% 35%, 100% 10%, 100% 100%, 0 100%);
+    }
+}
+
+.template-electrico-dashboard .stat-card .mini-chart {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    height: 40px;
+    background: linear-gradient(180deg, var(--dash-yellow) 0%, transparent 100%);
+    opacity: 0.2;
+    animation: mini-chart 3s ease-in-out infinite;
+}
+
+/* Hover con efecto de glow */
+.template-electrico-dashboard .stat-card:hover {
+    box-shadow: 0 0 30px rgba(251, 191, 36, 0.15) !important;
+}
+
+/* Efecto de número contando */
+@keyframes count-up {
+    from { opacity: 0.5; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.template-electrico-dashboard .stat-card .text-4xl {
+    animation: count-up 0.5s ease;
+}
+
+/* Barra de progreso animada */
+@keyframes progress-fill {
+    from { width: 0; }
+    to { width: var(--progress, 75%); }
+}
+
+.template-electrico-dashboard .progress-bar {
+    height: 4px;
+    background: var(--dash-card);
+    border-radius: 2px;
+    overflow: hidden;
+    margin-top: 0.5rem;
+}
+
+.template-electrico-dashboard .progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--dash-yellow), var(--dash-yellow-dark));
+    animation: progress-fill 1.5s ease-out forwards;
+}
+
+/* Notificación badge pulsante */
+@keyframes badge-pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.1); }
+}
+
+.template-electrico-dashboard .notification-badge {
+    background: var(--dash-danger);
+    color: white;
+    font-size: 0.65rem;
+    padding: 2px 6px;
+    border-radius: 10px;
+    animation: badge-pulse 2s ease-in-out infinite;
+}
+
+/* Cards con efecto de scanline sutil */
+.template-electrico-dashboard .bg-white.rounded-2xl::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--dash-yellow), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.template-electrico-dashboard .bg-white.rounded-2xl:hover::before {
+    opacity: 1;
+}
+
+/* Loading skeleton dashboard */
+@keyframes dash-skeleton {
+    0% { background-position: -200px 0; }
+    100% { background-position: 200px 0; }
+}
+
+.template-electrico-dashboard .skeleton {
+    background: linear-gradient(90deg, var(--dash-card) 0%, var(--dash-border) 50%, var(--dash-card) 100%);
+    background-size: 200px 100%;
+    animation: dash-skeleton 1.5s ease-in-out infinite;
+    border-radius: 4px;
+}
+
+/* Efecto de refresh en widgets */
+@keyframes refresh-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+.template-electrico-dashboard .refresh-icon {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.template-electrico-dashboard .refresh-icon:hover {
+    animation: refresh-spin 1s linear;
+}
+
+/* Cursor dashboard */
+.template-electrico-dashboard {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E%3Cpath fill='%23fbbf24' d='M12 2L4 14h5l-1 8 9-12h-5l1-8z'/%3E%3C/svg%3E") 10 10, auto;
+}
+
+/* WhatsApp con efecto dashboard */
+@keyframes dash-whatsapp {
+    0%, 100% {
+        box-shadow: 0 4px 20px rgba(37, 211, 102, 0.3);
+    }
+    50% {
+        box-shadow: 0 4px 30px rgba(37, 211, 102, 0.5), 0 0 40px rgba(37, 211, 102, 0.2);
+    }
+}
+
+.template-electrico-dashboard .whatsapp-float {
+    animation: dash-whatsapp 3s ease-in-out infinite;
+}
+
+/* Selection dashboard */
+.template-electrico-dashboard ::selection {
+    background: var(--dash-yellow);
+    color: var(--dash-bg);
+}
+
+/* Grid de puntos decorativo */
+.template-electrico-dashboard #inicio::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 5%;
+    width: 200px;
+    height: 200px;
+    background-image: radial-gradient(var(--dash-border) 1px, transparent 1px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    pointer-events: none;
+}
+
+/* Tooltip estilo dashboard */
+.template-electrico-dashboard [data-tooltip] {
+    position: relative;
+}
+
+.template-electrico-dashboard [data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-5px);
+    background: var(--dash-card);
+    color: var(--dash-text);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.template-electrico-dashboard [data-tooltip]:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* Stagger delays */
+.template-electrico-dashboard .reveal.delay-1 { transition-delay: 0.05s; }
+.template-electrico-dashboard .reveal.delay-2 { transition-delay: 0.1s; }
+.template-electrico-dashboard .reveal.delay-3 { transition-delay: 0.15s; }
+.template-electrico-dashboard .reveal.delay-4 { transition-delay: 0.2s; }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .template-electrico-dashboard .cta-section,
+    .template-electrico-dashboard #contacto {
+        margin: 1rem !important;
+        border-radius: 12px !important;
+    }
+
+    .template-electrico-dashboard #inicio::after {
+        display: none;
+    }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .template-electrico-dashboard .live-indicator::before,
+    .template-electrico-dashboard .stat-card .mini-chart,
+    .template-electrico-dashboard .notification-badge,
+    .template-electrico-dashboard .whatsapp-float,
+    .template-electrico-dashboard .progress-bar-fill {
+        animation: none !important;
+    }
+
+    .template-electrico-dashboard .reveal {
+        transition-duration: 0.2s !important;
+    }
+}

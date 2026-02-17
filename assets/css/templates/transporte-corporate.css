@@ -1,0 +1,268 @@
+/* ============================================
+   Template: Transporte Corporate
+   ESTILO: Corporativo oscuro, azul profesional
+   ============================================ */
+
+/* Variables */
+body.template-transporte-corporate {
+    --corp-blue: #3b82f6;
+    --corp-cyan: #06b6d4;
+    --corp-dark: #0f172a;
+    --corp-darker: #020617;
+}
+
+/* ===== FONDO OSCURO GENERAL ===== */
+body.template-transporte-corporate {
+    background: var(--corp-dark) !important;
+}
+
+/* ===== NAVBAR OSCURO CON LÍNEA AZUL ===== */
+body.template-transporte-corporate .navbar-animated {
+    background: rgba(2, 6, 23, 0.95) !important;
+    border-bottom: 3px solid var(--corp-blue) !important;
+    backdrop-filter: blur(10px) !important;
+}
+
+body.template-transporte-corporate .navbar-animated a {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 1px !important;
+}
+
+body.template-transporte-corporate .navbar-animated .btn-primary {
+    background: var(--corp-blue) !important;
+    color: #ffffff !important;
+    border-radius: 4px !important;
+    font-weight: 700 !important;
+}
+
+/* ===== HERO OSCURO ===== */
+body.template-transporte-corporate #inicio {
+    background: linear-gradient(135deg, var(--corp-darker) 0%, var(--corp-dark) 100%) !important;
+    border-bottom: 4px solid var(--corp-blue) !important;
+}
+
+body.template-transporte-corporate #inicio .parallax {
+    opacity: 0 !important;
+}
+
+body.template-transporte-corporate #inicio * {
+    color: #ffffff !important;
+}
+
+body.template-transporte-corporate #inicio h1 {
+    font-size: 3.5rem !important;
+    font-weight: 800 !important;
+}
+
+body.template-transporte-corporate #inicio h1 span {
+    color: var(--corp-cyan) !important;
+}
+
+body.template-transporte-corporate #inicio .btn-shine {
+    background: var(--corp-blue) !important;
+    color: #ffffff !important;
+    border-radius: 4px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    font-weight: 700 !important;
+}
+
+body.template-transporte-corporate #inicio .geometric-decoration,
+body.template-transporte-corporate #inicio .map-dots {
+    display: none !important;
+}
+
+/* ===== TODAS LAS SECCIONES OSCURAS ===== */
+body.template-transporte-corporate section:not(#inicio):not(#contacto) {
+    background: var(--corp-dark) !important;
+    padding: 80px 0 !important;
+}
+
+body.template-transporte-corporate section:not(#inicio):not(#contacto) h2,
+body.template-transporte-corporate section:not(#inicio):not(#contacto) h3 {
+    color: #ffffff !important;
+}
+
+body.template-transporte-corporate section:not(#inicio):not(#contacto) p,
+body.template-transporte-corporate section:not(#inicio):not(#contacto) span {
+    color: #cbd5e1 !important;
+}
+
+/* ===== TÍTULOS CON LÍNEA AZUL ===== */
+body.template-transporte-corporate section h2 {
+    font-size: 2.5rem !important;
+    font-weight: 800 !important;
+    border-left: 4px solid var(--corp-blue) !important;
+    padding-left: 20px !important;
+    margin-bottom: 50px !important;
+}
+
+body.template-transporte-corporate section h2 span {
+    color: var(--corp-cyan) !important;
+}
+
+/* ===== CARDS OSCURAS CON BORDE AZUL ===== */
+body.template-transporte-corporate .bg-white.rounded-2xl,
+body.template-transporte-corporate .bg-white.rounded-xl {
+    background: #1e293b !important;
+    border-radius: 8px !important;
+    border: none !important;
+    border-top: 3px solid var(--corp-blue) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3) !important;
+}
+
+body.template-transporte-corporate .bg-white.rounded-2xl:hover,
+body.template-transporte-corporate .bg-white.rounded-xl:hover {
+    transform: translateY(-8px) !important;
+    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.2) !important;
+}
+
+body.template-transporte-corporate .bg-white.rounded-2xl h3,
+body.template-transporte-corporate .bg-white.rounded-xl h3 {
+    color: #ffffff !important;
+}
+
+body.template-transporte-corporate .bg-white.rounded-2xl p,
+body.template-transporte-corporate .bg-white.rounded-xl p {
+    color: #94a3b8 !important;
+}
+
+/* ===== STATS ===== */
+body.template-transporte-corporate #stats .text-3xl,
+body.template-transporte-corporate #stats .text-4xl {
+    color: #ffffff !important;
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+}
+
+/* ===== ICONOS ===== */
+body.template-transporte-corporate .w-12,
+body.template-transporte-corporate .w-14,
+body.template-transporte-corporate .w-16 {
+    background: var(--corp-blue) !important;
+}
+
+body.template-transporte-corporate .w-12 svg,
+body.template-transporte-corporate .w-14 svg,
+body.template-transporte-corporate .w-16 svg {
+    color: #ffffff !important;
+}
+
+/* ===== BOTONES ===== */
+body.template-transporte-corporate .btn-primary,
+body.template-transporte-corporate .btn-shine {
+    background: var(--corp-blue) !important;
+    color: #ffffff !important;
+    border-radius: 4px !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+    font-weight: 700 !important;
+}
+
+body.template-transporte-corporate .btn-primary:hover,
+body.template-transporte-corporate .btn-shine:hover {
+    background: #2563eb !important;
+    transform: translateY(-2px) !important;
+}
+
+/* ===== TESTIMONIOS - SOBREESCRIBIR TAILWIND ===== */
+body.template-transporte-corporate .bg-gray-50.rounded-2xl {
+    background: #ffffff !important;
+}
+
+body.template-transporte-corporate .bg-gray-50 .text-gray-600,
+body.template-transporte-corporate .bg-gray-50 p.text-gray-600,
+body.template-transporte-corporate .bg-gray-50 .italic {
+    color: #1f2937 !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: #1f2937 !important;
+}
+
+body.template-transporte-corporate .bg-gray-50 .text-gray-500,
+body.template-transporte-corporate .bg-gray-50 p.text-gray-500,
+body.template-transporte-corporate .bg-gray-50 .text-sm {
+    color: #4b5563 !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: #4b5563 !important;
+}
+
+body.template-transporte-corporate .bg-gray-50 .text-gray-900,
+body.template-transporte-corporate .bg-gray-50 h4.font-bold,
+body.template-transporte-corporate .bg-gray-50 .font-bold {
+    color: #000000 !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: #000000 !important;
+}
+
+body.template-transporte-corporate .bg-gray-50 .text-5xl,
+body.template-transporte-corporate .bg-gray-50 .text-sky-500 {
+    color: var(--corp-blue) !important;
+    opacity: 1 !important;
+}
+
+/* ===== TEAM CARDS ===== */
+body.template-transporte-corporate .team-card {
+    background: #1e293b !important;
+    border-radius: 8px !important;
+    border-top: 3px solid var(--corp-cyan) !important;
+}
+
+body.template-transporte-corporate .team-card__name {
+    color: #ffffff !important;
+}
+
+body.template-transporte-corporate .team-card__position {
+    color: var(--corp-cyan) !important;
+}
+
+body.template-transporte-corporate .team-card__image {
+    border: 3px solid var(--corp-blue) !important;
+}
+
+/* ===== CONTACTO ===== */
+body.template-transporte-corporate #contacto {
+    background: linear-gradient(135deg, var(--corp-blue) 0%, #1e40af 100%) !important;
+}
+
+body.template-transporte-corporate #contacto .parallax {
+    opacity: 0 !important;
+}
+
+body.template-transporte-corporate #contacto * {
+    color: #ffffff !important;
+}
+
+body.template-transporte-corporate #contacto h2 {
+    border-left-color: #ffffff !important;
+}
+
+body.template-transporte-corporate #contacto .btn-shine {
+    background: #ffffff !important;
+    color: var(--corp-blue) !important;
+}
+
+/* ===== FOOTER ===== */
+body.template-transporte-corporate footer {
+    background: var(--corp-darker) !important;
+    border-radius: 0 !important;
+}
+
+body.template-transporte-corporate footer * {
+    color: #94a3b8 !important;
+}
+
+body.template-transporte-corporate footer h4 {
+    color: #ffffff !important;
+}
+
+body.template-transporte-corporate footer a:hover {
+    color: var(--corp-cyan) !important;
+}
+
+/* ===== WHATSAPP ===== */
+body.template-transporte-corporate .whatsapp-float {
+    border-radius: 8px !important;
+}

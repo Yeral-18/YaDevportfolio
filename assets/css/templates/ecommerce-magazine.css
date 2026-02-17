@@ -1,0 +1,821 @@
+/* ============================================
+   Template: E-commerce Magazine
+   Diseño editorial tipo revista,
+   grid asimétrico, tipografía grande
+   ============================================ */
+
+/* ===== VARIABLES MAGAZINE ===== */
+.template-ecommerce-magazine {
+    --mag-black: #1a1a1a;
+    --mag-white: #ffffff;
+    --mag-cream: #f5f5f0;
+    --mag-accent: #e11d48;
+    --mag-muted: #6b7280;
+    --mag-border: #e5e5e5;
+}
+
+/* ===== TIPOGRAFÍA EDITORIAL ===== */
+.template-ecommerce-magazine,
+.template-ecommerce-magazine body {
+    background: var(--mag-white) !important;
+    color: var(--mag-black) !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+}
+
+/* ===== NAVBAR MINIMAL ===== */
+.template-ecommerce-magazine .navbar-animated {
+    background: var(--mag-white) !important;
+    border-bottom: 1px solid var(--mag-border) !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+.template-ecommerce-magazine .navbar-animated.scrolled {
+    background: var(--mag-white) !important;
+    box-shadow: 0 1px 0 var(--mag-border) !important;
+}
+
+.template-ecommerce-magazine .navbar-animated a {
+    color: var(--mag-black) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.75rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    padding: 1.5rem 1rem !important;
+}
+
+.template-ecommerce-magazine .navbar-animated a:hover {
+    color: var(--mag-accent) !important;
+}
+
+.template-ecommerce-magazine .navbar-animated .btn-primary {
+    background: var(--mag-black) !important;
+    color: var(--mag-white) !important;
+    border-radius: 0 !important;
+    font-size: 0.7rem !important;
+    letter-spacing: 3px !important;
+    padding: 0.75rem 1.5rem !important;
+}
+
+/* ===== DROPDOWN ===== */
+.template-ecommerce-magazine .group .absolute,
+.template-ecommerce-magazine .dropdown-menu,
+.template-ecommerce-magazine nav .absolute {
+    background: var(--mag-white) !important;
+    border: 1px solid var(--mag-border) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08) !important;
+}
+
+.template-ecommerce-magazine .group .absolute a,
+.template-ecommerce-magazine nav .absolute a {
+    color: var(--mag-black) !important;
+    padding: 1rem !important;
+    border-bottom: 1px solid var(--mag-border) !important;
+}
+
+.template-ecommerce-magazine .group .absolute a:hover,
+.template-ecommerce-magazine nav .absolute a:hover {
+    background: var(--mag-cream) !important;
+    color: var(--mag-accent) !important;
+}
+
+/* ===== HERO EDITORIAL ===== */
+.template-ecommerce-magazine #inicio {
+    min-height: 90vh !important;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    background: var(--mag-white) !important;
+    padding: 0 !important;
+}
+
+.template-ecommerce-magazine #inicio h1 {
+    color: var(--mag-black) !important;
+    font-size: clamp(3rem, 7vw, 6rem) !important;
+    font-weight: 400 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.02em !important;
+}
+
+.template-ecommerce-magazine #inicio h1 span {
+    font-style: italic !important;
+    color: var(--mag-accent) !important;
+}
+
+.template-ecommerce-magazine #inicio p {
+    color: var(--mag-muted) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1rem !important;
+    line-height: 1.8 !important;
+    max-width: 400px;
+}
+
+/* ===== STATS INLINE ===== */
+.template-ecommerce-magazine .stat-card {
+    background: transparent !important;
+    border: none !important;
+    display: flex !important;
+    align-items: baseline !important;
+    gap: 0.5rem !important;
+    padding: 0 !important;
+}
+
+.template-ecommerce-magazine .stat-card .text-4xl,
+.template-ecommerce-magazine .stat-card .text-3xl {
+    color: var(--mag-black) !important;
+    font-size: 3rem !important;
+    font-weight: 300 !important;
+}
+
+.template-ecommerce-magazine .stat-card p {
+    color: var(--mag-muted) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.875rem !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* ===== SECCIONES ===== */
+.template-ecommerce-magazine section {
+    padding: 8rem 0 !important;
+    border-bottom: 1px solid var(--mag-border) !important;
+}
+
+.template-ecommerce-magazine section:nth-child(even) {
+    background: var(--mag-cream) !important;
+}
+
+/* ===== TÍTULOS EDITORIALES ===== */
+.template-ecommerce-magazine section h2 {
+    color: var(--mag-black) !important;
+    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    font-weight: 400 !important;
+    text-align: left !important;
+    margin-bottom: 3rem !important;
+    line-height: 1.1 !important;
+}
+
+.template-ecommerce-magazine section h2::after {
+    display: none !important;
+}
+
+.template-ecommerce-magazine section h2 span {
+    font-style: italic !important;
+    color: var(--mag-accent) !important;
+}
+
+/* ===== CATEGORY LABEL ===== */
+.template-ecommerce-magazine .category-label {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.7rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 3px !important;
+    color: var(--mag-accent) !important;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+/* ===== PRODUCT GRID MAGAZINE ===== */
+.template-ecommerce-magazine .products-grid {
+    display: grid !important;
+    grid-template-columns: repeat(12, 1fr) !important;
+    gap: 2rem !important;
+}
+
+.template-ecommerce-magazine .product-card:nth-child(1) {
+    grid-column: span 6;
+    grid-row: span 2;
+}
+
+.template-ecommerce-magazine .product-card:nth-child(2),
+.template-ecommerce-magazine .product-card:nth-child(3) {
+    grid-column: span 6;
+}
+
+.template-ecommerce-magazine .product-card:nth-child(4) {
+    grid-column: span 4;
+}
+
+.template-ecommerce-magazine .product-card:nth-child(5) {
+    grid-column: span 8;
+}
+
+/* ===== CARDS MAGAZINE ===== */
+.template-ecommerce-magazine .bg-white.rounded-2xl {
+    background: var(--mag-white) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    transition: all 0.4s ease !important;
+}
+
+.template-ecommerce-magazine .bg-white.rounded-2xl:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.template-ecommerce-magazine .bg-white.rounded-2xl img {
+    aspect-ratio: 3/4;
+    object-fit: cover;
+    filter: grayscale(20%);
+    transition: all 0.6s ease !important;
+}
+
+.template-ecommerce-magazine .bg-white.rounded-2xl:hover img {
+    filter: grayscale(0%);
+}
+
+.template-ecommerce-magazine .bg-white.rounded-2xl h3 {
+    color: var(--mag-black) !important;
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    margin-top: 1.5rem;
+}
+
+.template-ecommerce-magazine .bg-white.rounded-2xl p {
+    font-family: 'Inter', sans-serif !important;
+    color: var(--mag-muted) !important;
+    font-size: 0.875rem !important;
+}
+
+/* ===== PRICE TAG ===== */
+.template-ecommerce-magazine .price {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1rem !important;
+    font-weight: 500 !important;
+    color: var(--mag-black) !important;
+}
+
+.template-ecommerce-magazine .price-old {
+    text-decoration: line-through;
+    color: var(--mag-muted) !important;
+    font-size: 0.875rem !important;
+}
+
+/* ===== BOTONES ===== */
+.template-ecommerce-magazine .btn-primary,
+.template-ecommerce-magazine .btn-shine {
+    background: var(--mag-black) !important;
+    color: var(--mag-white) !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.7rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 3px !important;
+    padding: 1.25rem 2.5rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-ecommerce-magazine .btn-primary:hover,
+.template-ecommerce-magazine .btn-shine:hover {
+    background: var(--mag-accent) !important;
+}
+
+.template-ecommerce-magazine .btn-shine::before {
+    display: none !important;
+}
+
+/* ===== OUTLINE BUTTON ===== */
+.template-ecommerce-magazine .btn-outline {
+    background: transparent !important;
+    color: var(--mag-black) !important;
+    border: 1px solid var(--mag-black) !important;
+    border-radius: 0 !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.7rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 3px !important;
+}
+
+.template-ecommerce-magazine .btn-outline:hover {
+    background: var(--mag-black) !important;
+    color: var(--mag-white) !important;
+}
+
+/* ===== TEAM/EDITORIAL CARDS ===== */
+.template-ecommerce-magazine .team-card {
+    background: transparent !important;
+    text-align: left !important;
+}
+
+.template-ecommerce-magazine .team-card__image {
+    border-radius: 0 !important;
+    border: none !important;
+    aspect-ratio: 3/4;
+    width: 100% !important;
+    height: auto !important;
+    filter: grayscale(100%);
+    transition: all 0.4s ease;
+}
+
+.template-ecommerce-magazine .team-card:hover .team-card__image {
+    filter: grayscale(0%);
+}
+
+.template-ecommerce-magazine .team-card__name {
+    color: var(--mag-black) !important;
+    font-size: 1.5rem !important;
+    font-weight: 400 !important;
+    margin-top: 1.5rem;
+}
+
+.template-ecommerce-magazine .team-card__position {
+    color: var(--mag-accent) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.7rem !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ===== TESTIMONIOS QUOTE ===== */
+.template-ecommerce-magazine #testimonios .grid > div,
+.template-ecommerce-magazine .testimonial-card {
+    background: transparent !important;
+    border: none !important;
+    border-left: 1px solid var(--mag-border) !important;
+    padding: 0 0 0 3rem !important;
+}
+
+.template-ecommerce-magazine #testimonios .text-5xl {
+    display: none !important;
+}
+
+.template-ecommerce-magazine #testimonios p {
+    color: var(--mag-black) !important;
+    font-size: 1.75rem !important;
+    font-weight: 400 !important;
+    line-height: 1.5 !important;
+    font-style: italic;
+}
+
+.template-ecommerce-magazine #testimonios h4 {
+    color: var(--mag-black) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.8rem !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-top: 2rem;
+}
+
+/* ===== FORMULARIO ===== */
+.template-ecommerce-magazine form {
+    background: var(--mag-cream) !important;
+    border: none !important;
+    padding: 4rem !important;
+}
+
+.template-ecommerce-magazine form::before {
+    display: none !important;
+}
+
+.template-ecommerce-magazine input,
+.template-ecommerce-magazine textarea,
+.template-ecommerce-magazine select {
+    background: var(--mag-white) !important;
+    border: 1px solid var(--mag-border) !important;
+    border-radius: 0 !important;
+    color: var(--mag-black) !important;
+    font-family: 'Inter', sans-serif !important;
+    padding: 1rem !important;
+}
+
+.template-ecommerce-magazine input:focus,
+.template-ecommerce-magazine textarea:focus,
+.template-ecommerce-magazine select:focus {
+    border-color: var(--mag-black) !important;
+    outline: none !important;
+}
+
+.template-ecommerce-magazine label {
+    color: var(--mag-black) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.7rem !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* ===== NEWSLETTER BANNER ===== */
+.template-ecommerce-magazine .newsletter-banner {
+    background: var(--mag-black) !important;
+    padding: 4rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.template-ecommerce-magazine .newsletter-banner h3 {
+    color: var(--mag-white) !important;
+    font-size: 2rem !important;
+    font-weight: 400 !important;
+}
+
+.template-ecommerce-magazine .newsletter-banner input {
+    background: transparent !important;
+    border: 1px solid rgba(255,255,255,0.3) !important;
+    color: var(--mag-white) !important;
+}
+
+/* ===== CTA ===== */
+.template-ecommerce-magazine .cta-section,
+.template-ecommerce-magazine #contacto {
+    background: var(--mag-black) !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.template-ecommerce-magazine .cta-section h2,
+.template-ecommerce-magazine #contacto h2 {
+    color: var(--mag-white) !important;
+}
+
+.template-ecommerce-magazine .cta-section p,
+.template-ecommerce-magazine #contacto p {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.template-ecommerce-magazine .cta-section .btn-shine {
+    background: var(--mag-white) !important;
+    color: var(--mag-black) !important;
+}
+
+/* ===== FOOTER EDITORIAL ===== */
+.template-ecommerce-magazine footer {
+    background: var(--mag-white) !important;
+    border-top: 1px solid var(--mag-border) !important;
+    border-radius: 0 !important;
+}
+
+.template-ecommerce-magazine footer h4 {
+    color: var(--mag-black) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.7rem !important;
+    font-weight: 500 !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.template-ecommerce-magazine footer a {
+    color: var(--mag-muted) !important;
+    font-family: 'Inter', sans-serif !important;
+    font-size: 0.875rem !important;
+}
+
+.template-ecommerce-magazine footer a:hover {
+    color: var(--mag-accent) !important;
+}
+
+/* ===== WHATSAPP ===== */
+.template-ecommerce-magazine .whatsapp-float {
+    border-radius: 0 !important;
+}
+
+/* ===== CLIENT LOGOS ===== */
+.template-ecommerce-magazine .client-logo {
+    background: transparent !important;
+    border: none !important;
+    filter: grayscale(100%) !important;
+    opacity: 0.4 !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-ecommerce-magazine .client-logo:hover {
+    filter: grayscale(0%) !important;
+    opacity: 1 !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-ecommerce-magazine .scroll-progress {
+    background: var(--mag-accent) !important;
+    height: 2px !important;
+}
+
+/* ===== TOP BAR ===== */
+.template-ecommerce-magazine .top-bar {
+    background: var(--mag-black) !important;
+}
+
+.template-ecommerce-magazine .top-bar a {
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-size: 0.7rem !important;
+    letter-spacing: 1px;
+}
+
+/* ===== SERVICE ICONS ===== */
+.template-ecommerce-magazine .service-type {
+    background: var(--mag-cream) !important;
+    border: 1px solid var(--mag-border) !important;
+    border-radius: 0 !important;
+}
+
+.template-ecommerce-magazine .service-type svg {
+    color: var(--mag-black) !important;
+}
+
+/* ===== ANIMACIONES ===== */
+.template-ecommerce-magazine .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.template-ecommerce-magazine .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .template-ecommerce-magazine #inicio {
+        grid-template-columns: 1fr !important;
+    }
+
+    .template-ecommerce-magazine .products-grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .template-ecommerce-magazine .product-card {
+        grid-column: span 1 !important;
+    }
+}
+
+/* ===== IMPORT FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Inter:wght@400;500;600&display=swap');
+
+/* ===== EFECTOS MAGAZINE AVANZADOS ===== */
+
+/* Cursor editorial */
+.template-ecommerce-magazine {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24'%3E%3Ccircle cx='12' cy='12' r='2' fill='%231a1a1a'/%3E%3C/svg%3E") 10 10, auto;
+}
+
+/* Efecto de página de revista - esquinas */
+.template-ecommerce-magazine section::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    width: 30px;
+    height: 30px;
+    border-left: 1px solid var(--mag-border);
+    border-top: 1px solid var(--mag-border);
+    opacity: 0.5;
+}
+
+.template-ecommerce-magazine section::after {
+    content: '';
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 30px;
+    height: 30px;
+    border-right: 1px solid var(--mag-border);
+    border-bottom: 1px solid var(--mag-border);
+    opacity: 0.5;
+}
+
+/* Número de página estilo editorial */
+.template-ecommerce-magazine section {
+    counter-increment: page;
+    position: relative;
+}
+
+/* Efecto reveal de imagen editorial */
+@keyframes editorial-reveal {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.template-ecommerce-magazine .product-card img.visible,
+.template-ecommerce-magazine .category-card img.visible {
+    animation: editorial-reveal 1.2s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+/* Hover con efecto de zoom suave estilo editorial */
+.template-ecommerce-magazine .product-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.template-ecommerce-magazine .product-card::before {
+    content: 'COLECCIÓN';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.6rem;
+    letter-spacing: 3px;
+    color: var(--mag-white);
+    background: var(--mag-black);
+    padding: 0.5rem 1rem;
+    z-index: 10;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.4s ease;
+}
+
+.template-ecommerce-magazine .product-card:hover::before {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Line animation bajo títulos */
+.template-ecommerce-magazine section h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.template-ecommerce-magazine section h2::before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--mag-accent);
+    transition: width 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.template-ecommerce-magazine section h2.visible::before {
+    width: 100px;
+}
+
+/* Efecto de texto con máscara */
+@keyframes text-reveal {
+    from {
+        clip-path: inset(0 100% 0 0);
+    }
+    to {
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.template-ecommerce-magazine #inicio h1.visible {
+    animation: text-reveal 1s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+}
+
+/* Hover en team cards con efecto magazine */
+.template-ecommerce-magazine .team-card {
+    position: relative;
+}
+
+.template-ecommerce-magazine .team-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--mag-black) 0%, transparent 50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.template-ecommerce-magazine .team-card:hover::before {
+    opacity: 0.6;
+}
+
+/* Testimonios con comillas estilizadas */
+.template-ecommerce-magazine #testimonios .grid > div::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 3rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 6rem;
+    color: var(--mag-border);
+    line-height: 1;
+}
+
+/* Botón con efecto de línea */
+.template-ecommerce-magazine .btn-primary,
+.template-ecommerce-magazine .btn-shine {
+    position: relative;
+    overflow: hidden;
+}
+
+.template-ecommerce-magazine .btn-primary::after,
+.template-ecommerce-magazine .btn-shine::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--mag-accent);
+    transform: translateX(-100%);
+    transition: transform 0.4s ease;
+}
+
+.template-ecommerce-magazine .btn-primary:hover::after,
+.template-ecommerce-magazine .btn-shine:hover::after {
+    transform: translateX(0);
+}
+
+/* Scroll progress con estilo editorial */
+.template-ecommerce-magazine .scroll-progress {
+    height: 1px !important;
+}
+
+/* Marquee de promoción */
+@keyframes editorial-marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.template-ecommerce-magazine .promo-marquee {
+    border-top: 1px solid var(--mag-border);
+    border-bottom: 1px solid var(--mag-border);
+    padding: 1rem 0;
+    overflow: hidden;
+}
+
+.template-ecommerce-magazine .promo-marquee-content {
+    display: flex;
+    gap: 4rem;
+    animation: editorial-marquee 30s linear infinite;
+}
+
+.template-ecommerce-magazine .promo-marquee span {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.25rem;
+    font-style: italic;
+    color: var(--mag-muted);
+    white-space: nowrap;
+}
+
+/* Links con underline animado */
+.template-ecommerce-magazine a:not(.btn-primary):not(.btn-shine) {
+    position: relative;
+}
+
+.template-ecommerce-magazine footer a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background: var(--mag-accent);
+    transition: width 0.3s ease;
+}
+
+.template-ecommerce-magazine footer a:hover::after {
+    width: 100%;
+}
+
+/* WhatsApp minimalista */
+.template-ecommerce-magazine .whatsapp-float {
+    transition: transform 0.3s ease !important;
+}
+
+.template-ecommerce-magazine .whatsapp-float:hover {
+    transform: scale(1.05) !important;
+}
+
+/* Selection estilo magazine */
+.template-ecommerce-magazine ::selection {
+    background: var(--mag-accent);
+    color: var(--mag-white);
+}
+
+/* Image loading placeholder */
+.template-ecommerce-magazine .image-placeholder {
+    background: linear-gradient(
+        90deg,
+        var(--mag-cream) 0%,
+        var(--mag-white) 50%,
+        var(--mag-cream) 100%
+    );
+    background-size: 200% 100%;
+    animation: placeholder-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes placeholder-shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+/* Stagger delays */
+.template-ecommerce-magazine .reveal.delay-1 { transition-delay: 0.1s; }
+.template-ecommerce-magazine .reveal.delay-2 { transition-delay: 0.2s; }
+.template-ecommerce-magazine .reveal.delay-3 { transition-delay: 0.3s; }
+.template-ecommerce-magazine .reveal.delay-4 { transition-delay: 0.4s; }
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .template-ecommerce-magazine .product-card img,
+    .template-ecommerce-magazine #inicio h1,
+    .template-ecommerce-magazine .promo-marquee-content {
+        animation: none !important;
+    }
+
+    .template-ecommerce-magazine .reveal {
+        transition-duration: 0.3s !important;
+    }
+}

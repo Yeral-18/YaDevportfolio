@@ -1,0 +1,258 @@
+/* ============================================
+   Template: Transporte Modern (Glassmorphism)
+   ESTILO: Cristal, burbujas, muy redondeado, CLARO
+   ============================================ */
+
+/* Variables */
+body.template-transporte-modern {
+    --modern-cyan: #06b6d4;
+    --modern-sky: #0ea5e9;
+    --modern-purple: #a855f7;
+    --modern-pink: #ec4899;
+}
+
+/* ===== FONDO CON GRADIENTE Y BURBUJAS ===== */
+body.template-transporte-modern {
+    background: linear-gradient(135deg, #ecfeff 0%, #fdf4ff 50%, #fce7f3 100%) !important;
+    position: relative !important;
+}
+
+body.template-transporte-modern::before {
+    content: '';
+    position: fixed;
+    top: 20%;
+    left: 10%;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+body.template-transporte-modern::after {
+    content: '';
+    position: fixed;
+    bottom: 20%;
+    right: 10%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(168, 85, 247, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* ===== NAVBAR FLOTANTE CRISTAL ===== */
+body.template-transporte-modern .navbar-animated {
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(30px) !important;
+    -webkit-backdrop-filter: blur(30px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.5) !important;
+    border-radius: 100px !important;
+    margin: 16px auto !important;
+    max-width: 90% !important;
+    box-shadow: 0 8px 32px rgba(6, 182, 212, 0.1) !important;
+}
+
+body.template-transporte-modern .navbar-animated a {
+    color: #0f172a !important;
+    font-weight: 500 !important;
+}
+
+body.template-transporte-modern .navbar-animated .btn-primary {
+    background: linear-gradient(135deg, var(--modern-cyan), var(--modern-purple)) !important;
+    border-radius: 100px !important;
+    box-shadow: 0 8px 20px rgba(6, 182, 212, 0.3) !important;
+}
+
+/* ===== HERO CON GRADIENTE MULTICOLOR ===== */
+body.template-transporte-modern #inicio {
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #312e81 100%) !important;
+    border-radius: 0 0 60px 60px !important;
+    overflow: hidden !important;
+}
+
+body.template-transporte-modern #inicio .parallax {
+    opacity: 0 !important;
+}
+
+body.template-transporte-modern #inicio * {
+    color: #ffffff !important;
+}
+
+body.template-transporte-modern #inicio h1 {
+    font-size: 3.5rem !important;
+    font-weight: 700 !important;
+}
+
+body.template-transporte-modern #inicio h1 span {
+    background: linear-gradient(135deg, var(--modern-cyan), var(--modern-pink)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+body.template-transporte-modern #inicio .btn-shine {
+    background: linear-gradient(135deg, var(--modern-cyan), var(--modern-purple)) !important;
+    border-radius: 100px !important;
+    padding: 16px 32px !important;
+    box-shadow: 0 15px 40px rgba(6, 182, 212, 0.4) !important;
+}
+
+body.template-transporte-modern #inicio .geometric-decoration,
+body.template-transporte-modern #inicio .map-dots {
+    display: none !important;
+}
+
+/* ===== SECCIONES CON FONDOS SUAVES ===== */
+body.template-transporte-modern section:not(#inicio):not(#contacto) {
+    padding: 100px 0 !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+body.template-transporte-modern section:nth-child(odd):not(#inicio):not(#contacto) {
+    background: transparent !important;
+}
+
+body.template-transporte-modern section:nth-child(even):not(#inicio):not(#contacto) {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/* ===== TÍTULOS CON GRADIENTE ===== */
+body.template-transporte-modern section h2 {
+    background: linear-gradient(135deg, #0f172a, var(--modern-purple)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-weight: 800 !important;
+    font-size: 2.5rem !important;
+}
+
+body.template-transporte-modern section h2 span {
+    background: linear-gradient(135deg, var(--modern-cyan), var(--modern-pink)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+/* ===== CARDS CRISTAL FLOTANTES ===== */
+body.template-transporte-modern .bg-white.rounded-2xl,
+body.template-transporte-modern .bg-white.rounded-xl {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    border-radius: 32px !important;
+    box-shadow:
+        0 20px 50px rgba(6, 182, 212, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+body.template-transporte-modern .bg-white.rounded-2xl:hover,
+body.template-transporte-modern .bg-white.rounded-xl:hover {
+    transform: translateY(-16px) scale(1.02) !important;
+    box-shadow:
+        0 40px 80px rgba(6, 182, 212, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8) !important;
+}
+
+/* ===== STATS CON GRADIENTE ===== */
+body.template-transporte-modern #stats .text-3xl,
+body.template-transporte-modern #stats .text-4xl {
+    background: linear-gradient(135deg, var(--modern-cyan), var(--modern-purple)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-weight: 900 !important;
+    font-size: 3rem !important;
+}
+
+/* ===== ICONOS CON GRADIENTE ===== */
+body.template-transporte-modern .w-12,
+body.template-transporte-modern .w-14,
+body.template-transporte-modern .w-16 {
+    background: linear-gradient(135deg, var(--modern-cyan), var(--modern-purple)) !important;
+    border-radius: 20px !important;
+}
+
+/* ===== BOTONES PILL CON GRADIENTE ===== */
+body.template-transporte-modern .btn-primary,
+body.template-transporte-modern .btn-shine {
+    background: linear-gradient(135deg, var(--modern-cyan), var(--modern-purple)) !important;
+    border-radius: 100px !important;
+    box-shadow: 0 15px 35px rgba(6, 182, 212, 0.3) !important;
+    font-weight: 600 !important;
+}
+
+body.template-transporte-modern .btn-primary:hover,
+body.template-transporte-modern .btn-shine:hover {
+    transform: translateY(-5px) scale(1.05) !important;
+    box-shadow: 0 25px 50px rgba(168, 85, 247, 0.4) !important;
+}
+
+/* ===== TEAM CARDS CRISTAL ===== */
+body.template-transporte-modern .team-card {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.8) !important;
+    border-radius: 32px !important;
+}
+
+body.template-transporte-modern .team-card__image {
+    border: 4px solid transparent !important;
+    background: linear-gradient(white, white), linear-gradient(135deg, var(--modern-cyan), var(--modern-purple)) !important;
+    background-clip: padding-box, border-box !important;
+    background-origin: padding-box, border-box !important;
+    border-radius: 50% !important;
+}
+
+/* ===== CONTACTO GRADIENTE ===== */
+body.template-transporte-modern #contacto {
+    background: linear-gradient(135deg, #1e1b4b 0%, #312e81 50%, #4c1d95 100%) !important;
+    border-radius: 60px 60px 0 0 !important;
+}
+
+body.template-transporte-modern #contacto .parallax {
+    opacity: 0 !important;
+}
+
+body.template-transporte-modern #contacto * {
+    color: #ffffff !important;
+}
+
+body.template-transporte-modern #contacto h2 {
+    background: linear-gradient(135deg, #ffffff, var(--modern-cyan)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+body.template-transporte-modern #contacto .btn-shine {
+    background: rgba(255, 255, 255, 0.2) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    color: #ffffff !important;
+}
+
+/* ===== FOOTER REDONDEADO ===== */
+body.template-transporte-modern footer {
+    background: #0f172a !important;
+    border-radius: 0 !important;
+}
+
+body.template-transporte-modern footer * {
+    color: #94a3b8 !important;
+}
+
+/* ===== WHATSAPP FLOTANTE ===== */
+body.template-transporte-modern .whatsapp-float {
+    border-radius: 50% !important;
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.5) !important;
+}
+
+/* ===== DECORACIONES ===== */
+body.template-transporte-modern .geometric-decoration {
+    display: none !important;
+}

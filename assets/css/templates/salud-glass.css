@@ -1,0 +1,774 @@
+/* ============================================
+   Template: Salud Glassmorphism
+   Diseño con efectos de cristal difuminado,
+   transparencias, fondos degradados
+   ============================================ */
+
+/* ===== VARIABLES GLASS ===== */
+.template-salud-glass {
+    --glass-cyan: #06b6d4;
+    --glass-teal: #14b8a6;
+    --glass-blue: #0891b2;
+    --glass-dark: #0f172a;
+    --glass-light: #f0fdfa;
+    --glass-white: rgba(255, 255, 255, 0.9);
+    --glass-border: rgba(255, 255, 255, 0.2);
+    --glass-shadow: rgba(6, 182, 212, 0.15);
+}
+
+/* ===== FONDO CON GRADIENTE ===== */
+.template-salud-glass,
+.template-salud-glass body {
+    background: linear-gradient(135deg, #ecfeff 0%, #f0fdfa 50%, #e0f2fe 100%) !important;
+    color: var(--glass-dark) !important;
+    font-family: 'Inter', system-ui, sans-serif !important;
+    min-height: 100vh;
+}
+
+/* Orbes decorativos de fondo */
+.template-salud-glass::before {
+    content: '';
+    position: fixed;
+    top: -20%;
+    left: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.2) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.template-salud-glass::after {
+    content: '';
+    position: fixed;
+    bottom: -20%;
+    right: -10%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(20, 184, 166, 0.15) 0%, transparent 70%);
+    border-radius: 50%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* ===== NAVBAR GLASSMORPHISM ===== */
+.template-salud-glass .navbar-animated {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 20px !important;
+    margin: 1rem 2rem !important;
+    box-shadow: 0 8px 32px var(--glass-shadow) !important;
+}
+
+.template-salud-glass .navbar-animated.scrolled {
+    background: rgba(255, 255, 255, 0.85) !important;
+    box-shadow: 0 8px 40px var(--glass-shadow) !important;
+}
+
+.template-salud-glass .navbar-animated a {
+    color: var(--glass-dark) !important;
+    font-weight: 500 !important;
+    font-size: 0.875rem !important;
+}
+
+.template-salud-glass .navbar-animated a:hover {
+    color: var(--glass-cyan) !important;
+}
+
+.template-salud-glass .navbar-animated .btn-primary {
+    background: linear-gradient(135deg, var(--glass-cyan), var(--glass-teal)) !important;
+    color: #fff !important;
+    border-radius: 12px !important;
+    border: none !important;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3) !important;
+}
+
+/* ===== DROPDOWN GLASS ===== */
+.template-salud-glass .group .absolute,
+.template-salud-glass .dropdown-menu,
+.template-salud-glass nav .absolute {
+    background: rgba(255, 255, 255, 0.8) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 20px 50px var(--glass-shadow) !important;
+}
+
+.template-salud-glass .group .absolute a,
+.template-salud-glass nav .absolute a {
+    color: var(--glass-dark) !important;
+}
+
+.template-salud-glass .group .absolute a:hover,
+.template-salud-glass nav .absolute a:hover {
+    background: rgba(6, 182, 212, 0.1) !important;
+    color: var(--glass-cyan) !important;
+}
+
+/* ===== HERO GLASSMORPHISM ===== */
+.template-salud-glass #inicio {
+    min-height: 90vh !important;
+    display: flex !important;
+    align-items: center !important;
+    padding: 8rem 0 4rem !important;
+    position: relative;
+}
+
+.template-salud-glass #inicio h1 {
+    color: var(--glass-dark) !important;
+    font-size: clamp(2.5rem, 5vw, 4rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+}
+
+.template-salud-glass #inicio h1 span {
+    background: linear-gradient(135deg, var(--glass-cyan), var(--glass-teal)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.template-salud-glass #inicio p {
+    color: #64748b !important;
+    font-size: 1.125rem !important;
+    line-height: 1.7 !important;
+}
+
+/* ===== GLASS CARD HERO ===== */
+.template-salud-glass .hero-glass-card {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 24px !important;
+    padding: 2rem !important;
+    box-shadow: 0 20px 50px var(--glass-shadow) !important;
+}
+
+/* ===== STATS GLASS CARDS ===== */
+.template-salud-glass .stat-card {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(15px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 20px !important;
+    padding: 2rem !important;
+    box-shadow: 0 10px 30px var(--glass-shadow) !important;
+    transition: all 0.4s ease !important;
+}
+
+.template-salud-glass .stat-card:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 20px 50px rgba(6, 182, 212, 0.2) !important;
+}
+
+.template-salud-glass .stat-card .text-4xl,
+.template-salud-glass .stat-card .text-3xl {
+    background: linear-gradient(135deg, var(--glass-cyan), var(--glass-teal)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-size: 3rem !important;
+    font-weight: 800 !important;
+}
+
+.template-salud-glass .stat-card p {
+    color: #64748b !important;
+}
+
+/* ===== SECCIONES ===== */
+.template-salud-glass section {
+    padding: 6rem 0 !important;
+    position: relative;
+}
+
+/* ===== TÍTULOS ===== */
+.template-salud-glass section h2 {
+    color: var(--glass-dark) !important;
+    font-size: clamp(2rem, 4vw, 3rem) !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    margin-bottom: 1rem !important;
+}
+
+.template-salud-glass section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(90deg, var(--glass-cyan), var(--glass-teal));
+    margin: 1.5rem auto 3rem;
+    border-radius: 4px;
+}
+
+.template-salud-glass section h2 span {
+    background: linear-gradient(135deg, var(--glass-cyan), var(--glass-teal)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+/* ===== CARDS GLASS ===== */
+.template-salud-glass .bg-white.rounded-2xl {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(15px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 10px 30px var(--glass-shadow) !important;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    overflow: hidden;
+}
+
+.template-salud-glass .bg-white.rounded-2xl:hover {
+    transform: translateY(-8px) scale(1.02) !important;
+    box-shadow: 0 25px 60px rgba(6, 182, 212, 0.2) !important;
+    border-color: rgba(6, 182, 212, 0.3) !important;
+}
+
+.template-salud-glass .bg-white.rounded-2xl h3 {
+    color: var(--glass-dark) !important;
+    font-weight: 600 !important;
+}
+
+/* ===== SERVICE ICONS ===== */
+.template-salud-glass .service-type {
+    background: linear-gradient(135deg, var(--glass-cyan), var(--glass-teal)) !important;
+    border: none !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3) !important;
+}
+
+.template-salud-glass .service-type svg {
+    color: #fff !important;
+}
+
+/* ===== BOTONES GLASS ===== */
+.template-salud-glass .btn-primary,
+.template-salud-glass .btn-shine {
+    background: linear-gradient(135deg, var(--glass-cyan), var(--glass-teal)) !important;
+    color: #fff !important;
+    border: none !important;
+    border-radius: 14px !important;
+    padding: 1rem 2rem !important;
+    font-weight: 600 !important;
+    box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3) !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-salud-glass .btn-primary:hover,
+.template-salud-glass .btn-shine:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 12px 35px rgba(6, 182, 212, 0.4) !important;
+}
+
+.template-salud-glass .btn-shine::before {
+    display: none !important;
+}
+
+/* ===== GLASS OUTLINE BUTTON ===== */
+.template-salud-glass .btn-glass {
+    background: rgba(255, 255, 255, 0.5) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 14px !important;
+    color: var(--glass-dark) !important;
+    padding: 1rem 2rem !important;
+}
+
+.template-salud-glass .btn-glass:hover {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-color: var(--glass-cyan) !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.template-salud-glass .team-card {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(15px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 10px 30px var(--glass-shadow) !important;
+    text-align: center;
+    padding: 2rem !important;
+}
+
+.template-salud-glass .team-card:hover {
+    transform: translateY(-5px) !important;
+}
+
+.template-salud-glass .team-card__image {
+    border-radius: 50% !important;
+    border: 4px solid rgba(6, 182, 212, 0.2) !important;
+    box-shadow: 0 10px 30px var(--glass-shadow) !important;
+}
+
+.template-salud-glass .team-card__name {
+    color: var(--glass-dark) !important;
+    font-weight: 600 !important;
+}
+
+.template-salud-glass .team-card__position {
+    background: linear-gradient(135deg, var(--glass-cyan), var(--glass-teal)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    font-weight: 500 !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.template-salud-glass #testimonios .grid > div,
+.template-salud-glass .testimonial-card {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(15px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 24px !important;
+    padding: 2rem !important;
+    box-shadow: 0 10px 30px var(--glass-shadow) !important;
+}
+
+.template-salud-glass #testimonios .text-5xl {
+    background: linear-gradient(135deg, var(--glass-cyan), var(--glass-teal)) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    opacity: 0.3;
+}
+
+.template-salud-glass #testimonios p {
+    color: #64748b !important;
+}
+
+.template-salud-glass #testimonios h4 {
+    color: var(--glass-dark) !important;
+}
+
+/* ===== ESPECIALIDADES CARDS ===== */
+.template-salud-glass .specialty-card {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(15px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 20px !important;
+    padding: 1.5rem !important;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.3s ease !important;
+}
+
+.template-salud-glass .specialty-card:hover {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border-color: var(--glass-cyan) !important;
+    transform: translateX(5px) !important;
+}
+
+/* ===== FORMULARIO ===== */
+.template-salud-glass form {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 24px !important;
+    padding: 2.5rem !important;
+    box-shadow: 0 20px 50px var(--glass-shadow) !important;
+}
+
+.template-salud-glass form::before {
+    display: none !important;
+}
+
+.template-salud-glass input,
+.template-salud-glass textarea,
+.template-salud-glass select {
+    background: rgba(255, 255, 255, 0.8) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 12px !important;
+    color: var(--glass-dark) !important;
+    padding: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-salud-glass input:focus,
+.template-salud-glass textarea:focus,
+.template-salud-glass select:focus {
+    border-color: var(--glass-cyan) !important;
+    background: #fff !important;
+    outline: none !important;
+    box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.1) !important;
+}
+
+.template-salud-glass label {
+    color: var(--glass-dark) !important;
+    font-weight: 500 !important;
+}
+
+/* ===== CTA GRADIENT ===== */
+.template-salud-glass .cta-section,
+.template-salud-glass #contacto {
+    background: linear-gradient(135deg, var(--glass-cyan), var(--glass-teal)) !important;
+    border-radius: 32px !important;
+    margin: 0 2rem 2rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-salud-glass .cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 400px;
+    height: 400px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+}
+
+.template-salud-glass .cta-section h2,
+.template-salud-glass #contacto h2 {
+    color: #fff !important;
+}
+
+.template-salud-glass .cta-section h2::after {
+    background: rgba(255, 255, 255, 0.3) !important;
+}
+
+.template-salud-glass .cta-section p,
+.template-salud-glass #contacto p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+.template-salud-glass .cta-section .btn-shine {
+    background: #fff !important;
+    color: var(--glass-cyan) !important;
+}
+
+/* ===== FOOTER ===== */
+.template-salud-glass footer {
+    background: var(--glass-dark) !important;
+    border-radius: 32px 32px 0 0 !important;
+}
+
+.template-salud-glass footer h4 {
+    color: #fff !important;
+    font-weight: 600 !important;
+}
+
+.template-salud-glass footer a {
+    color: rgba(255, 255, 255, 0.6) !important;
+}
+
+.template-salud-glass footer a:hover {
+    color: var(--glass-cyan) !important;
+}
+
+/* ===== WHATSAPP ===== */
+.template-salud-glass .whatsapp-float {
+    border-radius: 16px !important;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4) !important;
+}
+
+/* ===== CLIENT LOGOS ===== */
+.template-salud-glass .client-logo {
+    background: rgba(255, 255, 255, 0.6) !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 16px !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-salud-glass .client-logo:hover {
+    background: rgba(255, 255, 255, 0.9) !important;
+    box-shadow: 0 10px 30px var(--glass-shadow) !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-salud-glass .scroll-progress {
+    background: linear-gradient(90deg, var(--glass-cyan), var(--glass-teal)) !important;
+    height: 3px !important;
+}
+
+/* ===== TOP BAR ===== */
+.template-salud-glass .top-bar {
+    background: var(--glass-dark) !important;
+}
+
+.template-salud-glass .top-bar a {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+/* ===== DEMO BANNER ===== */
+.template-salud-glass .demo-banner {
+    background: linear-gradient(135deg, var(--glass-cyan), var(--glass-teal)) !important;
+    border-radius: 0 0 20px 20px !important;
+}
+
+/* ===== ANIMACIONES ===== */
+.template-salud-glass .reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.template-salud-glass .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ===== GEOMETRIC DECORATIONS ===== */
+.template-salud-glass .geometric-decoration {
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.2), rgba(20, 184, 166, 0.1)) !important;
+    filter: blur(80px) !important;
+    border-radius: 50% !important;
+}
+
+/* ===== EFECTOS GLASSMORPHISM AVANZADOS ===== */
+
+/* Orbes flotantes animados */
+@keyframes orb-float-1 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    25% { transform: translate(30px, -20px) scale(1.1); }
+    50% { transform: translate(-20px, 30px) scale(0.9); }
+    75% { transform: translate(20px, 20px) scale(1.05); }
+}
+
+@keyframes orb-float-2 {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(-40px, 20px) scale(1.15); }
+    66% { transform: translate(30px, -30px) scale(0.85); }
+}
+
+.template-salud-glass::before {
+    animation: orb-float-1 15s ease-in-out infinite;
+}
+
+.template-salud-glass::after {
+    animation: orb-float-2 20s ease-in-out infinite;
+}
+
+/* Efecto de brillo en cards */
+@keyframes glass-shimmer {
+    0% { left: -100%; }
+    100% { left: 200%; }
+}
+
+.template-salud-glass .bg-white.rounded-2xl::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.4),
+        transparent
+    );
+    transform: skewX(-15deg);
+    pointer-events: none;
+}
+
+.template-salud-glass .bg-white.rounded-2xl:hover::before {
+    animation: glass-shimmer 0.8s ease;
+}
+
+/* Pulso suave en iconos de servicio */
+@keyframes service-pulse {
+    0%, 100% {
+        box-shadow: 0 8px 25px rgba(6, 182, 212, 0.3);
+    }
+    50% {
+        box-shadow: 0 8px 40px rgba(6, 182, 212, 0.5), 0 0 60px rgba(6, 182, 212, 0.2);
+    }
+}
+
+.template-salud-glass .service-type {
+    animation: service-pulse 3s ease-in-out infinite;
+}
+
+/* Efecto de respiración en stats */
+@keyframes breathe {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+}
+
+.template-salud-glass .stat-card {
+    animation: breathe 4s ease-in-out infinite;
+}
+
+.template-salud-glass .stat-card:nth-child(2) { animation-delay: 0.5s; }
+.template-salud-glass .stat-card:nth-child(3) { animation-delay: 1s; }
+.template-salud-glass .stat-card:nth-child(4) { animation-delay: 1.5s; }
+
+/* Hover con glass effect aumentado */
+.template-salud-glass .bg-white.rounded-2xl:hover {
+    backdrop-filter: blur(25px) !important;
+    background: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Gradient border animado */
+@keyframes gradient-rotate {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.template-salud-glass .btn-primary,
+.template-salud-glass .btn-shine {
+    position: relative;
+    z-index: 1;
+}
+
+.template-salud-glass .btn-primary::before,
+.template-salud-glass .btn-shine::before {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    background: linear-gradient(90deg, var(--glass-cyan), var(--glass-teal), var(--glass-blue), var(--glass-cyan));
+    background-size: 300% 100%;
+    border-radius: 16px;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    animation: gradient-rotate 3s linear infinite;
+}
+
+.template-salud-glass .btn-primary:hover::before,
+.template-salud-glass .btn-shine:hover::before {
+    opacity: 1;
+}
+
+/* Input focus con glow */
+.template-salud-glass input:focus,
+.template-salud-glass textarea:focus {
+    box-shadow: 0 0 0 4px rgba(6, 182, 212, 0.15),
+                0 10px 30px rgba(6, 182, 212, 0.1) !important;
+}
+
+/* Efecto de conexión entre elementos */
+@keyframes connection-pulse {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 0.8; }
+}
+
+.template-salud-glass .team-card::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, var(--glass-cyan), transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.template-salud-glass .team-card:not(:last-child):hover::after {
+    opacity: 1;
+    animation: connection-pulse 2s ease infinite;
+}
+
+/* WhatsApp con glow effect */
+@keyframes whatsapp-glow {
+    0%, 100% {
+        box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 8px 40px rgba(37, 211, 102, 0.6), 0 0 80px rgba(37, 211, 102, 0.3);
+    }
+}
+
+.template-salud-glass .whatsapp-float {
+    animation: whatsapp-glow 2s ease-in-out infinite;
+}
+
+/* Morphing orbs adicionales */
+.template-salud-glass .orb-1,
+.template-salud-glass .orb-2,
+.template-salud-glass .orb-3 {
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(60px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Selection estilo glass */
+.template-salud-glass ::selection {
+    background: rgba(6, 182, 212, 0.3);
+    color: var(--glass-dark);
+}
+
+/* Scroll reveal mejorado */
+.template-salud-glass .reveal {
+    opacity: 0;
+    transform: translateY(40px) scale(0.98);
+    transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.template-salud-glass .reveal.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* Stagger delays */
+.template-salud-glass .reveal.delay-1 { transition-delay: 0.1s; }
+.template-salud-glass .reveal.delay-2 { transition-delay: 0.2s; }
+.template-salud-glass .reveal.delay-3 { transition-delay: 0.3s; }
+.template-salud-glass .reveal.delay-4 { transition-delay: 0.4s; }
+.template-salud-glass .reveal.delay-5 { transition-delay: 0.5s; }
+
+/* Loading skeleton glass */
+@keyframes glass-skeleton {
+    0% {
+        background-position: -200px 0;
+    }
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
+.template-salud-glass .skeleton {
+    background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.3) 0%,
+        rgba(255, 255, 255, 0.6) 50%,
+        rgba(255, 255, 255, 0.3) 100%
+    );
+    background-size: 200px 100%;
+    animation: glass-skeleton 1.5s ease-in-out infinite;
+}
+
+/* Parallax suave en scroll */
+.template-salud-glass .parallax-glass {
+    will-change: transform;
+    transition: transform 0.1s ease-out;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+    .template-salud-glass::before,
+    .template-salud-glass::after {
+        width: 300px;
+        height: 300px;
+    }
+
+    .template-salud-glass .navbar-animated {
+        margin: 0.5rem 1rem !important;
+    }
+
+    .template-salud-glass .cta-section,
+    .template-salud-glass #contacto {
+        margin: 0 1rem 1rem !important;
+        border-radius: 24px !important;
+    }
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .template-salud-glass::before,
+    .template-salud-glass::after,
+    .template-salud-glass .stat-card,
+    .template-salud-glass .service-type,
+    .template-salud-glass .whatsapp-float {
+        animation: none !important;
+    }
+
+    .template-salud-glass .reveal {
+        transition: opacity 0.3s ease !important;
+        transform: none !important;
+    }
+}
