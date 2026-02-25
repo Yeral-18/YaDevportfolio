@@ -3074,13 +3074,25 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
             updateSaveButton();
         }
 
-        // Obtener el siguiente consecutivo
+        // Obtener el siguiente consecutivo basado en cotizaciones existentes
         function getNextConsecutivo() {
-            const STORAGE_KEY = 'yadev_quote_consecutivo';
-            let consecutivo = parseInt(localStorage.getItem(STORAGE_KEY)) || 314;
-            consecutivo++;
-            localStorage.setItem(STORAGE_KEY, consecutivo.toString());
-            return consecutivo;
+            const quotes = getSavedQuotes();
+            let maxConsecutivo = 314; // Base inicial
+
+            // Buscar el consecutivo más alto en las cotizaciones guardadas
+            quotes.forEach(quote => {
+                if (quote.quoteNumber) {
+                    const match = quote.quoteNumber.match(/COT-\d{4}-(\d+)/);
+                    if (match) {
+                        const num = parseInt(match[1]);
+                        if (num > maxConsecutivo) {
+                            maxConsecutivo = num;
+                        }
+                    }
+                }
+            });
+
+            return maxConsecutivo + 1;
         }
 
         // Generar nuevo número de cotización (incremental)
