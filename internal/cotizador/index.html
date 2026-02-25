@@ -1,0 +1,3076 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <title>YaDev - Generador de Cotizaciones</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-light: #818cf8;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --dark: #0f172a;
+            --darker: #020617;
+            --gray-50: #f9fafb;
+            --gray-100: #f3f4f6;
+            --gray-200: #e5e7eb;
+            --gray-300: #d1d5db;
+            --gray-400: #9ca3af;
+            --gray-500: #6b7280;
+            --gray-600: #4b5563;
+            --gray-700: #374151;
+            --gray-800: #1f2937;
+            --gray-900: #111827;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --gradient: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--gray-100);
+            min-height: 100vh;
+            color: var(--gray-800);
+        }
+
+        /* Header */
+        .header {
+            background: var(--gradient);
+            padding: 1rem 1.5rem;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 1.25rem;
+        }
+
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+
+        .logo-text span {
+            opacity: 0.8;
+            font-weight: 400;
+        }
+
+        .badge {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Botones del header */
+        .btn-new-quote, .btn-back-list {
+            background: white;
+            color: var(--primary);
+            padding: 0.625rem 1.25rem;
+            border-radius: 10px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: all 0.2s;
+        }
+
+        .btn-new-quote:hover, .btn-back-list:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .btn-new-quote svg, .btn-back-list svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .btn-back-list {
+            background: rgba(255,255,255,0.2);
+            color: white;
+        }
+
+        /* ==================== VISTA LISTA DE COTIZACIONES ==================== */
+        .quotes-list-view {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .quotes-list-container {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .quotes-list-header {
+            background: var(--gray-50);
+            padding: 1.5rem;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .quotes-list-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--gray-800);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .quotes-list-title svg {
+            width: 24px;
+            height: 24px;
+            color: var(--primary);
+        }
+
+        .quotes-list-stats {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .stat-number {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+            text-transform: uppercase;
+        }
+
+        /* Tabla de cotizaciones */
+        .quotes-table-wrapper {
+            overflow-x: auto;
+        }
+
+        .quotes-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .quotes-table th {
+            background: var(--gray-100);
+            padding: 1rem;
+            text-align: left;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--gray-600);
+            border-bottom: 2px solid var(--gray-200);
+            white-space: nowrap;
+        }
+
+        .quotes-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 0.9375rem;
+            color: var(--gray-700);
+        }
+
+        .quotes-table tbody tr {
+            transition: background 0.15s;
+        }
+
+        .quotes-table tbody tr:hover {
+            background: var(--gray-50);
+        }
+
+        .quotes-table .quote-number {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .quotes-table .quote-client {
+            font-weight: 500;
+            color: var(--gray-800);
+        }
+
+        .quotes-table .quote-project {
+            color: var(--gray-500);
+            font-size: 0.875rem;
+        }
+
+        .quotes-table .quote-total {
+            font-weight: 700;
+            color: var(--gray-900);
+        }
+
+        .quotes-table .quote-date {
+            color: var(--gray-500);
+            font-size: 0.875rem;
+        }
+
+        .quotes-table .quote-actions {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .quotes-table .btn-action {
+            padding: 0.5rem;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.15s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quotes-table .btn-action svg {
+            width: 16px;
+            height: 16px;
+        }
+
+        .quotes-table .btn-edit {
+            background: var(--gray-100);
+            color: var(--primary);
+        }
+
+        .quotes-table .btn-edit:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .quotes-table .btn-pdf {
+            background: var(--gray-100);
+            color: var(--success);
+        }
+
+        .quotes-table .btn-pdf:hover {
+            background: var(--success);
+            color: white;
+        }
+
+        .quotes-table .btn-delete {
+            background: var(--gray-100);
+            color: var(--danger);
+        }
+
+        .quotes-table .btn-delete:hover {
+            background: var(--danger);
+            color: white;
+        }
+
+        /* Estado vacío */
+        .quotes-empty-state {
+            padding: 4rem 2rem;
+            text-align: center;
+        }
+
+        .quotes-empty-state svg {
+            width: 80px;
+            height: 80px;
+            color: var(--gray-300);
+            margin-bottom: 1.5rem;
+        }
+
+        .quotes-empty-state h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--gray-700);
+            margin-bottom: 0.5rem;
+        }
+
+        .quotes-empty-state p {
+            color: var(--gray-500);
+            margin-bottom: 1.5rem;
+        }
+
+        /* Vista del formulario */
+        .form-view {
+            /* El main ya tiene sus estilos */
+        }
+
+        /* Responsive para lista */
+        @media (max-width: 768px) {
+            .quotes-list-view {
+                padding: 1rem;
+            }
+
+            .quotes-list-header {
+                padding: 1rem;
+            }
+
+            .quotes-list-title {
+                font-size: 1.1rem;
+            }
+
+            .quotes-table th,
+            .quotes-table td {
+                padding: 0.75rem 0.5rem;
+                font-size: 0.8125rem;
+            }
+
+            .quotes-table .quote-project {
+                display: none;
+            }
+
+            .btn-new-quote span,
+            .btn-back-list span:not(.icon) {
+                display: none;
+            }
+
+            .btn-new-quote, .btn-back-list {
+                padding: 0.625rem;
+            }
+        }
+
+        /* Main Layout */
+        .main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width: 1024px) {
+            .main {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Cards */
+        .card {
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .card-header {
+            background: var(--gray-50);
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid var(--gray-200);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-title {
+            font-weight: 600;
+            font-size: 1rem;
+            color: var(--gray-800);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-title svg {
+            width: 20px;
+            height: 20px;
+            color: var(--primary);
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        /* Form */
+        .form-section {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .form-section-title {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--gray-500);
+            margin-bottom: 1rem;
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+
+        .form-group.full {
+            grid-column: span 2;
+        }
+
+        label {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--gray-700);
+        }
+
+        input, textarea, select {
+            padding: 0.75rem 1rem;
+            border: 1.5px solid var(--gray-200);
+            border-radius: 10px;
+            font-size: 0.9375rem;
+            font-family: inherit;
+            transition: all 0.2s;
+            background: white;
+        }
+
+        input:focus, textarea:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        /* Item form */
+        .item-form {
+            background: var(--gray-50);
+            padding: 1.25rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+        }
+
+        .item-form-title {
+            font-weight: 600;
+            font-size: 0.9375rem;
+            margin-bottom: 1rem;
+            color: var(--gray-800);
+        }
+
+        .item-form-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 0.75rem;
+            align-items: end;
+        }
+
+        @media (max-width: 900px) {
+            .item-form-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .item-form-grid .form-group:first-child {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .item-form-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.5rem;
+            }
+            .item-form-grid .form-group:first-child {
+                grid-column: span 2;
+            }
+        }
+
+        @media (max-width: 400px) {
+            .item-form-grid {
+                grid-template-columns: 1fr;
+            }
+            .item-form-grid .form-group:first-child {
+                grid-column: span 1;
+            }
+        }
+
+        /* Buttons */
+        .btn {
+            padding: 0.75rem 1.5rem;
+            border-radius: 10px;
+            font-weight: 600;
+            font-size: 0.9375rem;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+        }
+
+        .btn-success {
+            background: var(--success);
+            color: white;
+        }
+
+        .btn-success:hover {
+            background: #059669;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1.5px solid var(--gray-300);
+            color: var(--gray-700);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: rgba(99, 102, 241, 0.05);
+        }
+
+        .btn-danger {
+            background: transparent;
+            border: none;
+            color: var(--danger);
+            padding: 0.5rem;
+        }
+
+        .btn-danger:hover {
+            background: rgba(239, 68, 68, 0.1);
+        }
+
+        .btn-sm {
+            padding: 0.5rem 1rem;
+            font-size: 0.8125rem;
+        }
+
+        .btn-warning {
+            background: var(--warning);
+            color: white;
+        }
+
+        .btn-warning:hover {
+            background: #d97706;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.35);
+        }
+
+        .btn-edit {
+            background: transparent;
+            border: none;
+            color: var(--primary);
+            padding: 0.5rem;
+        }
+
+        .btn-edit:hover {
+            background: rgba(99, 102, 241, 0.1);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 0.25rem;
+            justify-content: flex-end;
+        }
+
+        .item-form-buttons {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1rem;
+        }
+
+        .item-form-buttons .btn {
+            flex: 1;
+        }
+
+        /* Table */
+        .items-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .items-table th {
+            text-align: left;
+            padding: 0.75rem 1rem;
+            background: var(--gray-50);
+            font-weight: 600;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--gray-600);
+            border-bottom: 2px solid var(--gray-200);
+        }
+
+        .items-table td {
+            padding: 1rem;
+            border-bottom: 1px solid var(--gray-100);
+            font-size: 0.9375rem;
+        }
+
+        .items-table tr:hover td {
+            background: var(--gray-50);
+        }
+
+        .items-table tr.editing td {
+            background: rgba(245, 158, 11, 0.1);
+            border-bottom-color: var(--warning);
+        }
+
+        .items-table tr.editing:hover td {
+            background: rgba(245, 158, 11, 0.15);
+        }
+
+        .items-table .text-right {
+            text-align: right;
+        }
+
+        .items-table .text-center {
+            text-align: center;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--gray-400);
+        }
+
+        .empty-state svg {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        /* Totals */
+        .totals {
+            background: var(--gray-50);
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin-top: 1.5rem;
+        }
+
+        .totals-row {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            font-size: 0.9375rem;
+        }
+
+        .totals-row.subtotal {
+            color: var(--gray-600);
+        }
+
+        .totals-row.iva {
+            color: var(--gray-600);
+            border-bottom: 1px dashed var(--gray-300);
+            padding-bottom: 0.75rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .totals-row.total {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--primary);
+        }
+
+        /* Actions */
+        .actions {
+            display: flex;
+            gap: 0.75rem;
+            margin-top: 1.5rem;
+        }
+
+        .actions .btn {
+            flex: 1;
+        }
+
+        /* Preview */
+        .preview-container {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        /* =====================================================
+           PDF STYLES - LETTER FORMAT (215.9mm x 279.4mm)
+           ===================================================== */
+
+        #pdf-content {
+            position: absolute;
+            left: -9999px;
+            top: 0;
+            width: 200mm;
+            background: white;
+        }
+
+        .pdf-page {
+            width: 200mm;
+            min-height: auto;
+            padding: 0;
+            font-family: 'Inter', Arial, sans-serif;
+            font-size: 10px;
+            color: #1f2937;
+            background: white;
+        }
+
+        .pdf-topbar {
+            height: 3px;
+            background-color: #6366f1;
+        }
+
+        .pdf-content-wrapper {
+            padding: 10px 15px;
+        }
+
+        /* Flujo natural sin saltos de página forzados */
+        .pdf-header,
+        .pdf-client-section,
+        .pdf-table-wrapper,
+        .pdf-totals-section,
+        .pdf-totals,
+        .pdf-notes,
+        .pdf-validity,
+        .pdf-contact-section,
+        .pdf-footer {
+            page-break-inside: auto;
+            break-inside: auto;
+        }
+
+        .pdf-table tr {
+            page-break-inside: avoid;
+        }
+
+        /* Header Table */
+        .pdf-header {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #6366f1;
+            padding-bottom: 10px;
+        }
+
+        .pdf-header td {
+            vertical-align: middle;
+            padding: 0;
+            border: none;
+        }
+
+        .pdf-logo {
+            text-align: left;
+        }
+
+        .pdf-logo-icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #6366f1;
+            border-radius: 5px;
+            color: white;
+            font-weight: 800;
+            font-size: 15px;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 6px;
+        }
+
+        .pdf-logo-text {
+            display: inline-block;
+            font-size: 18px;
+            font-weight: 800;
+            color: #0f172a;
+            vertical-align: middle;
+        }
+
+        .pdf-logo-text span {
+            color: #6366f1;
+        }
+
+        .pdf-quote-info {
+            text-align: right;
+            background-color: #f8fafc;
+            padding: 8px 12px;
+            border-radius: 4px;
+        }
+
+        .pdf-quote-number {
+            font-size: 11pt;
+            font-weight: 700;
+            color: #6366f1;
+        }
+
+        .pdf-quote-date {
+            font-size: 8pt;
+            color: #64748b;
+            margin-top: 2px;
+        }
+
+        /* Client Section Table */
+        .pdf-client-section {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-bottom: 14px;
+        }
+
+        .pdf-client-box {
+            width: 50%;
+            padding: 10px 14px;
+            vertical-align: top;
+        }
+
+        .pdf-client-box:first-child {
+            background-color: #6366f1;
+            border-radius: 4px 0 0 4px;
+        }
+
+        .pdf-client-box:first-child .pdf-client-title {
+            color: #c7d2fe;
+        }
+
+        .pdf-client-box:first-child .pdf-client-name,
+        .pdf-client-box:first-child .pdf-client-detail {
+            color: white;
+        }
+
+        .pdf-client-box:last-child {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: none;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .pdf-client-title {
+            font-size: 7pt;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            color: #94a3b8;
+            margin-bottom: 4px;
+        }
+
+        .pdf-client-name {
+            font-size: 10pt;
+            font-weight: 700;
+            color: #0f172a;
+            margin-bottom: 2px;
+        }
+
+        .pdf-client-detail {
+            font-size: 8pt;
+            color: #64748b;
+            margin-bottom: 1px;
+        }
+
+        /* Items Table */
+        .pdf-table-wrapper {
+            margin-bottom: 12px;
+        }
+
+        .pdf-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .pdf-table th {
+            background-color: #1e293b;
+            color: white;
+            padding: 8px 10px;
+            font-size: 7pt;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+            text-align: left;
+            border: none;
+        }
+
+        .pdf-table th:last-child {
+            text-align: right;
+        }
+
+        .pdf-table td {
+            padding: 8px 10px;
+            font-size: 9pt;
+            color: #374151;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .pdf-table tbody tr:nth-child(even) td {
+            background-color: #f9fafb;
+        }
+
+        .pdf-table .text-right {
+            text-align: right;
+        }
+
+        .pdf-table .text-center {
+            text-align: center;
+        }
+
+        /* Totals Table */
+        .pdf-totals-section {
+            text-align: right;
+            margin-bottom: 14px;
+        }
+
+        .pdf-totals {
+            width: 180px;
+            margin-left: auto;
+            background-color: #1e293b;
+            border-radius: 4px;
+            border-collapse: collapse;
+        }
+
+        .pdf-totals td {
+            padding: 6px 12px;
+            color: white;
+            font-size: 9pt;
+            border: none;
+        }
+
+        .pdf-totals .pdf-totals-row.subtotal td {
+            color: #94a3b8;
+        }
+
+        .pdf-totals .pdf-totals-row.iva td {
+            color: #94a3b8;
+            border-bottom: 1px solid #475569;
+        }
+
+        .pdf-totals .pdf-totals-row.total td {
+            font-size: 10pt;
+            font-weight: 700;
+            color: white;
+            padding-top: 8px;
+        }
+
+        .pdf-totals .pdf-totals-row.total td:last-child {
+            color: #a5b4fc;
+        }
+
+        /* Footer */
+        .pdf-footer {
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid #e5e7eb;
+        }
+
+        /* Notes */
+        .pdf-notes {
+            background-color: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-left: 3px solid #6366f1;
+            padding: 10px 12px;
+            margin-bottom: 10px;
+        }
+
+        .pdf-notes-header {
+            margin-bottom: 6px;
+        }
+
+        .pdf-notes-icon {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #6366f1;
+            border-radius: 2px;
+            color: white;
+            font-size: 8px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 12px;
+            margin-right: 4px;
+        }
+
+        .pdf-notes-title {
+            font-size: 7.5pt;
+            font-weight: 700;
+            color: #1e293b;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+        }
+
+        .pdf-notes-text {
+            font-size: 7.5pt;
+            color: #374151;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        .pdf-notes-text .notes-section-title {
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 4px;
+            font-size: 8pt;
+        }
+
+        .pdf-notes-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .pdf-notes-list li {
+            position: relative;
+            padding-left: 12px;
+            margin-bottom: 3px;
+            font-size: 7.5pt;
+            color: #374151;
+            line-height: 1.4;
+        }
+
+        .pdf-notes-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        .pdf-notes-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #6366f1;
+            font-weight: bold;
+            font-size: 9pt;
+            line-height: 1.15;
+        }
+
+        /* Contact */
+        .pdf-contact-section {
+            text-align: center;
+            padding: 8px 0;
+        }
+
+        .pdf-contact-item {
+            display: inline-block;
+            margin: 0 8px;
+            font-size: 7pt;
+        }
+
+        .pdf-contact-icon {
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            background-color: #e0e7ff;
+            border-radius: 2px;
+            color: #6366f1;
+            font-size: 7px;
+            font-weight: bold;
+            text-align: center;
+            line-height: 14px;
+            margin-right: 3px;
+        }
+
+        .pdf-contact-text {
+            color: #374151;
+            font-weight: 500;
+        }
+
+        /* Validity */
+        .pdf-validity {
+            text-align: center;
+            padding: 8px 12px;
+            background-color: #eef2ff;
+            border: 1px solid #c7d2fe;
+            border-radius: 4px;
+            margin-top: 8px;
+        }
+
+        .pdf-validity-label {
+            font-size: 6.5pt;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .pdf-validity-date {
+            font-size: 9pt;
+            font-weight: 700;
+            color: #6366f1;
+            margin-top: 1px;
+        }
+
+        /* Watermark */
+        .pdf-watermark {
+            text-align: right;
+            font-size: 7pt;
+            color: #94a3b8;
+            margin-top: 8px;
+        }
+
+        /* Observaciones - Texto continuo numerado */
+        .pdf-observations {
+            margin-top: 12px;
+            margin-bottom: 10px;
+        }
+
+        .pdf-observations-title {
+            font-size: 8pt;
+            font-weight: 700;
+            color: #1e293b;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .pdf-observations-content {
+            font-size: 8pt;
+            color: #374151;
+            line-height: 1.5;
+        }
+
+        .pdf-observations-content .notes-main-title {
+            font-weight: 700;
+            color: #1e293b;
+            font-size: 8pt;
+            margin-top: 10px;
+            margin-bottom: 4px;
+        }
+
+        .pdf-observations-content .notes-main-title:first-child {
+            margin-top: 0;
+        }
+
+        .pdf-observations-content .notes-numbered {
+            font-weight: 600;
+            color: #1e293b;
+            margin-top: 6px;
+            margin-bottom: 2px;
+        }
+
+        .pdf-observations-content .notes-subitem {
+            color: #374151;
+            padding-left: 12px;
+            margin-bottom: 1px;
+        }
+
+        /* Footer compacto */
+        .pdf-footer-compact {
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+        }
+
+        .pdf-validity-inline {
+            font-size: 9pt;
+            color: #374151;
+            margin-bottom: 4px;
+        }
+
+        .pdf-validity-inline strong {
+            color: #6366f1;
+        }
+
+        .pdf-contact-line {
+            font-size: 8pt;
+            color: #64748b;
+            margin-bottom: 4px;
+        }
+
+        /* Number input spinner hide */
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+
+        /* Checkbox */
+        .checkbox-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--primary);
+        }
+
+        /* Notification */
+        .notification {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: var(--dark);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .notification.success {
+            background: var(--success);
+        }
+
+        /* Saved Quotes Panel */
+        .quotes-panel {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 400px;
+            max-width: 100vw;
+            height: 100vh;
+            background: white;
+            box-shadow: -4px 0 30px rgba(0,0,0,0.15);
+            z-index: 200;
+            transition: right 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .quotes-panel.open {
+            right: 0;
+        }
+
+        .quotes-panel-header {
+            padding: 1.5rem;
+            background: var(--gradient);
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .quotes-panel-title {
+            font-weight: 600;
+            font-size: 1.125rem;
+        }
+
+        .quotes-panel-close {
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.2s;
+        }
+
+        .quotes-panel-close:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .quotes-panel-body {
+            flex: 1;
+            overflow-y: auto;
+            padding: 1rem;
+        }
+
+        .quote-card {
+            background: var(--gray-50);
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 0.75rem;
+            border: 1.5px solid var(--gray-200);
+            transition: all 0.2s;
+        }
+
+        .quote-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.15);
+        }
+
+        .quote-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.75rem;
+        }
+
+        .quote-card-number {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 0.9375rem;
+        }
+
+        .quote-card-date {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+        }
+
+        .quote-card-client {
+            font-weight: 500;
+            color: var(--gray-800);
+            margin-bottom: 0.25rem;
+        }
+
+        .quote-card-project {
+            font-size: 0.8125rem;
+            color: var(--gray-500);
+            margin-bottom: 0.75rem;
+        }
+
+        .quote-card-total {
+            font-weight: 700;
+            font-size: 1.125rem;
+            color: var(--dark);
+        }
+
+        .quote-card-items {
+            font-size: 0.75rem;
+            color: var(--gray-500);
+        }
+
+        .quote-card-actions {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 0.75rem;
+            padding-top: 0.75rem;
+            border-top: 1px solid var(--gray-200);
+        }
+
+        .quote-card-actions .btn {
+            flex: 1;
+            padding: 0.5rem;
+            font-size: 0.8125rem;
+        }
+
+        .quotes-empty {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--gray-400);
+        }
+
+        .quotes-empty svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 1rem;
+            opacity: 0.5;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 150;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s;
+        }
+
+        .overlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Header button for saved quotes */
+        .header-actions {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            flex-shrink: 0;
+        }
+
+        .btn-header {
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            gap: 0.5rem;
+            transition: background 0.2s;
+        }
+
+        .btn-header:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        .btn-header svg {
+            width: 18px;
+            height: 18px;
+        }
+
+        .quote-count {
+            background: white;
+            color: var(--primary);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.125rem 0.5rem;
+            border-radius: 10px;
+            margin-left: 0.25rem;
+        }
+
+        /* =====================================================
+           RESPONSIVE STYLES
+           ===================================================== */
+
+        /* Tablets */
+        @media (max-width: 1024px) {
+            .main {
+                padding: 1.5rem;
+                gap: 1.5rem;
+            }
+        }
+
+        /* Mobile Large */
+        @media (max-width: 768px) {
+            .header {
+                padding: 1rem;
+            }
+
+            .header-content {
+                flex-wrap: wrap;
+                gap: 0.75rem;
+            }
+
+            .logo-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .logo-text span {
+                display: none;
+            }
+
+            .header-actions {
+                gap: 0.5rem;
+            }
+
+            .badge {
+                padding: 0.375rem 0.75rem;
+                font-size: 0.65rem;
+                order: -1;
+            }
+
+            .btn-header {
+                padding: 0.5rem 0.75rem;
+                font-size: 0.8rem;
+            }
+
+            .btn-header .btn-text {
+                display: none;
+            }
+
+            .main {
+                padding: 1rem;
+                gap: 1rem;
+            }
+
+            .card-header {
+                padding: 1rem;
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+
+            .card-body {
+                padding: 1rem;
+            }
+
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-group.full {
+                grid-column: span 1;
+            }
+
+            .item-form {
+                padding: 1rem;
+            }
+
+            .item-form-grid {
+                grid-template-columns: 1fr;
+                gap: 0.75rem;
+            }
+
+            .item-form-buttons {
+                flex-direction: column;
+            }
+
+            /* Table responsive */
+            .items-table {
+                display: block;
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            .items-table th,
+            .items-table td {
+                padding: 0.625rem 0.5rem;
+                font-size: 0.8125rem;
+                white-space: nowrap;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                gap: 0.25rem;
+            }
+
+            .totals {
+                padding: 1rem;
+            }
+
+            .actions {
+                flex-direction: column;
+            }
+
+            .quotes-panel {
+                width: 100%;
+                right: -100%;
+            }
+
+            .quote-card-actions {
+                flex-wrap: wrap;
+            }
+
+            .quote-card-actions .btn {
+                min-width: calc(50% - 0.25rem);
+            }
+        }
+
+        /* Mobile Small */
+        @media (max-width: 480px) {
+            .header {
+                padding: 0.75rem;
+            }
+
+            .header-actions .badge {
+                display: none;
+            }
+
+            .logo-icon {
+                width: 32px;
+                height: 32px;
+                font-size: 0.9rem;
+                border-radius: 8px;
+            }
+
+            .logo-text {
+                font-size: 1rem;
+            }
+
+            .main {
+                padding: 0.75rem;
+            }
+
+            .card {
+                border-radius: 12px;
+            }
+
+            .card-header {
+                padding: 0.875rem;
+            }
+
+            .card-title {
+                font-size: 0.9rem;
+            }
+
+            .card-body {
+                padding: 0.875rem;
+            }
+
+            .form-section-title {
+                font-size: 0.7rem;
+            }
+
+            input, textarea, select {
+                padding: 0.625rem 0.875rem;
+                font-size: 0.875rem;
+            }
+
+            label {
+                font-size: 0.8125rem;
+            }
+
+            .btn {
+                padding: 0.625rem 1rem;
+                font-size: 0.875rem;
+            }
+
+            .btn svg {
+                width: 16px;
+                height: 16px;
+            }
+
+            /* Simplified table for very small screens */
+            .items-table th:nth-child(3),
+            .items-table td:nth-child(3) {
+                display: none;
+            }
+
+            .totals-row {
+                font-size: 0.875rem;
+            }
+
+            .totals-row.total {
+                font-size: 1.125rem;
+            }
+
+            .quotes-panel-header {
+                padding: 1rem;
+            }
+
+            .quotes-panel-title {
+                font-size: 1rem;
+            }
+
+            .quote-card {
+                padding: 0.875rem;
+            }
+
+            .quote-card-number {
+                font-size: 0.875rem;
+            }
+
+            .quote-card-total {
+                font-size: 1rem;
+            }
+        }
+
+        /* Fix for iOS input zoom */
+        @media (max-width: 768px) {
+            input, select, textarea {
+                font-size: 16px !important;
+            }
+        }
+
+        /* Landscape mobile */
+        @media (max-width: 768px) and (orientation: landscape) {
+            .header {
+                padding: 0.5rem 1rem;
+            }
+
+            .main {
+                padding: 0.75rem;
+            }
+        }
+
+        /* Print styles */
+        @media print {
+            .header, .quotes-panel, .overlay, .notification {
+                display: none !important;
+            }
+
+            .main {
+                padding: 0;
+            }
+
+            .card {
+                box-shadow: none;
+                border: 1px solid #ddd;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">Y</div>
+                <div class="logo-text">YaDev <span>| Cotizador</span></div>
+            </div>
+            <div class="header-actions">
+                <button class="btn-new-quote" onclick="showFormView()" id="btnNewQuote">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                    </svg>
+                    Nueva Cotización
+                </button>
+                <button class="btn-back-list" onclick="showListView()" id="btnBackList" style="display: none;">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"/>
+                    </svg>
+                    Volver a Lista
+                </button>
+                <div class="badge">Uso Interno</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Overlay -->
+    <div class="overlay" id="overlay" onclick="toggleQuotesPanel()"></div>
+
+    <!-- ==================== VISTA PRINCIPAL: LISTA DE COTIZACIONES ==================== -->
+    <div class="quotes-list-view" id="quotesListView">
+        <div class="quotes-list-container">
+            <div class="quotes-list-header">
+                <h1 class="quotes-list-title">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Cotizaciones
+                </h1>
+                <div class="quotes-list-stats">
+                    <span class="stat-item">
+                        <span class="stat-number" id="totalQuotesCount">0</span>
+                        <span class="stat-label">Total</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Tabla de cotizaciones -->
+            <div class="quotes-table-wrapper">
+                <table class="quotes-table" id="quotesTable">
+                    <thead>
+                        <tr>
+                            <th>No. Cotización</th>
+                            <th>Cliente</th>
+                            <th>Proyecto</th>
+                            <th>Total</th>
+                            <th>Fecha</th>
+                            <th>Válida hasta</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="quotesTableBody">
+                        <!-- Se llena dinámicamente -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Estado vacío -->
+            <div class="quotes-empty-state" id="quotesEmptyState" style="display: none;">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                </svg>
+                <h3>No hay cotizaciones</h3>
+                <p>Crea tu primera cotización haciendo clic en "Nueva Cotización"</p>
+                <button class="btn btn-primary" onclick="showFormView()">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                    </svg>
+                    Nueva Cotización
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== VISTA FORMULARIO (oculta por defecto) ==================== -->
+    <div class="form-view" id="formView" style="display: none;">
+
+    <!-- Saved Quotes Panel (ya no se usa, pero lo mantengo por compatibilidad) -->
+    <div class="quotes-panel" id="quotesPanel">
+        <div class="quotes-panel-header">
+            <span class="quotes-panel-title">Cotizaciones Guardadas</span>
+            <button class="quotes-panel-close" onclick="toggleQuotesPanel()">
+                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+        <div class="quotes-panel-body" id="quotesList">
+            <!-- Quotes will be rendered here -->
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Left Column: Form -->
+        <div class="card">
+            <div class="card-header">
+                <h2 class="card-title">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                    </svg>
+                    Nueva Cotizacion
+                </h2>
+                <button class="btn btn-outline btn-sm" onclick="resetForm()">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/>
+                    </svg>
+                    Limpiar
+                </button>
+            </div>
+            <div class="card-body">
+                <!-- Company Info -->
+                <div class="form-section">
+                    <div class="form-section-title">Informacion del Cliente</div>
+                    <div class="form-grid">
+                        <div class="form-group full">
+                            <label for="clientName">Nombre / Empresa</label>
+                            <input type="text" id="clientName" placeholder="Nombre del cliente o empresa">
+                        </div>
+                        <div class="form-group">
+                            <label for="clientEmail">Email</label>
+                            <input type="email" id="clientEmail" placeholder="email@ejemplo.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="clientPhone">Telefono</label>
+                            <input type="tel" id="clientPhone" placeholder="+57 300 000 0000">
+                        </div>
+                        <div class="form-group full">
+                            <label for="projectName">Proyecto / Descripcion</label>
+                            <input type="text" id="projectName" placeholder="Nombre o descripcion del proyecto">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quote Settings -->
+                <div class="form-section">
+                    <div class="form-section-title">Configuracion</div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="quoteNumber">No. Cotizacion</label>
+                            <input type="text" id="quoteNumber" placeholder="COT-001">
+                        </div>
+                        <div class="form-group">
+                            <label for="validityDays">Validez (dias)</label>
+                            <input type="number" id="validityDays" value="15" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="currency">Moneda</label>
+                            <select id="currency">
+                                <option value="COP">COP - Peso Colombiano</option>
+                                <option value="USD">USD - Dolar</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="ivaRate">IVA (%)</label>
+                            <input type="number" id="ivaRate" value="19" min="0" max="100">
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="includeIva" checked>
+                        <label for="includeIva">Incluir IVA en la cotizacion</label>
+                    </div>
+                </div>
+
+                <!-- Add Item -->
+                <div class="item-form">
+                    <div class="item-form-title">Agregar Item</div>
+                    <div class="item-form-grid">
+                        <div class="form-group">
+                            <label for="itemDesc">Descripcion</label>
+                            <input type="text" id="itemDesc" placeholder="Servicio o producto">
+                        </div>
+                        <div class="form-group">
+                            <label for="itemQty">Cantidad</label>
+                            <input type="number" id="itemQty" value="1" min="1">
+                        </div>
+                        <div class="form-group">
+                            <label for="itemPrice">Precio Unit.</label>
+                            <input type="number" id="itemPrice" placeholder="0" min="0">
+                        </div>
+                    </div>
+                    <div class="item-form-buttons">
+                        <button id="addItemBtn" class="btn btn-primary" onclick="addItem()">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                            </svg>
+                            Agregar Item
+                        </button>
+                        <button id="cancelEditBtn" class="btn btn-outline" onclick="cancelEdit()" style="display: none;">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                            Cancelar
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Notes -->
+                <div class="form-section" style="margin-top: 1.5rem;">
+                    <div class="form-group">
+                        <label for="notes">Notas / Condiciones</label>
+                        <textarea id="notes" placeholder="Condiciones de pago, tiempos de entrega, garantias...">ALCANCE DEL SERVICIO
+1. Registro de dominio y hosting
+Compra y configuracion de dominio corporativo
+Adquisicion y configuracion de hosting anual
+Instalacion de certificado SSL (sitio seguro https)
+Configuracion inicial del servidor
+
+2. Diseno y desarrollo de pagina web corporativa
+Diseno personalizado enfocado en imagen empresarial
+Desarrollo de sitio responsive (computador, tablet y movil)
+Estructura corporativa (inicio, servicios, contacto, etc.)
+Formularios de contacto integrados
+Integracion con canal de contacto por WhatsApp
+
+CONDICIONES DEL SERVICIO
+50% de anticipo para inicio del proyecto
+50% contra entrega y publicacion
+Tiempo estimado de desarrollo: 2 a 3 semanas
+Incluye dominio y hosting por 1 ano
+Incluye acompanamiento en la publicacion del sitio</textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Column: Preview & Items -->
+        <div>
+            <!-- Items List -->
+            <div class="card" style="margin-bottom: 1.5rem;">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                        Items (<span id="itemCount">0</span>)
+                    </h2>
+                </div>
+                <div class="card-body" style="padding: 0;">
+                    <table class="items-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 50%;">Descripcion</th>
+                                <th class="text-center">Cant.</th>
+                                <th class="text-right">Precio</th>
+                                <th class="text-right">Subtotal</th>
+                                <th style="width: 50px;"></th>
+                            </tr>
+                        </thead>
+                        <tbody id="itemsBody">
+                            <tr>
+                                <td colspan="5">
+                                    <div class="empty-state">
+                                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                                        </svg>
+                                        <p>No hay items agregados</p>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Totals -->
+            <div class="card">
+                <div class="card-header">
+                    <h2 class="card-title">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                        </svg>
+                        Resumen
+                    </h2>
+                </div>
+                <div class="card-body">
+                    <div class="totals">
+                        <div class="totals-row subtotal">
+                            <span>Subtotal</span>
+                            <span id="subtotalDisplay">$0</span>
+                        </div>
+                        <div class="totals-row iva" id="ivaRow">
+                            <span>IVA (<span id="ivaRateDisplay">19</span>%)</span>
+                            <span id="ivaDisplay">$0</span>
+                        </div>
+                        <div class="totals-row total">
+                            <span>TOTAL</span>
+                            <span id="totalDisplay">$0</span>
+                        </div>
+                    </div>
+
+                    <div class="actions">
+                        <button class="btn btn-primary" onclick="saveQuote()" id="saveQuoteBtn">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7H5a2 2 0 00-2 2v9a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-3m-1 4l-3 3m0 0l-3-3m3 3V4"/>
+                            </svg>
+                            <span id="saveQuoteBtnText">Guardar</span>
+                        </button>
+                    </div>
+                    <div class="actions" style="margin-top: 0.75rem;">
+                        <button class="btn btn-outline" onclick="previewPDF()">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                            Vista Previa
+                        </button>
+                        <button class="btn btn-success" onclick="generatePDF()">
+                            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                            </svg>
+                            Descargar PDF
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    </div><!-- Cierre de form-view -->
+
+    <!-- PDF Content (Hidden) -->
+    <div id="pdf-content">
+        <div class="pdf-page" id="pdf-page">
+            <!-- Content will be generated dynamically -->
+        </div>
+    </div>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="20" height="20">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+        </svg>
+        <span id="notificationText">Item agregado</span>
+    </div>
+
+    <script>
+        // State
+        let items = [];
+        let editingId = null; // ID del item siendo editado
+
+        // Format notes for PDF - formato exacto del usuario
+        function formatNotesForPDF(notes) {
+            if (!notes) return '';
+
+            const lines = notes.split('\n');
+            let html = '';
+
+            for (let i = 0; i < lines.length; i++) {
+                const line = lines[i].trim();
+
+                // Skip empty lines
+                if (!line) continue;
+
+                // Check if line is ALL CAPS (main title like "ALCANCE DEL SERVICIO")
+                if (line === line.toUpperCase() && line.length > 3 && !line.match(/^\d+\./)) {
+                    html += `<div class="notes-main-title">${line}</div>`;
+                }
+                // Check if line starts with number and dot (1. Section title)
+                else if (line.match(/^\d+\.\s*/)) {
+                    html += `<div class="notes-numbered">${line}</div>`;
+                }
+                // Regular sub-item
+                else {
+                    html += `<div class="notes-subitem">${line}</div>`;
+                }
+            }
+
+            return html;
+        }
+
+        // Format currency
+        function formatCurrency(amount, currency = 'COP') {
+            if (currency === 'USD') {
+                return '$' + amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            }
+            return '$' + amount.toLocaleString('es-CO');
+        }
+
+        // Show notification
+        function showNotification(message, type = 'success') {
+            const notification = document.getElementById('notification');
+            const text = document.getElementById('notificationText');
+            text.textContent = message;
+            notification.className = 'notification ' + type + ' show';
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 2500);
+        }
+
+        // Add or Update item
+        function addItem() {
+            const desc = document.getElementById('itemDesc').value.trim();
+            const qty = parseInt(document.getElementById('itemQty').value) || 1;
+            const price = parseFloat(document.getElementById('itemPrice').value) || 0;
+
+            if (!desc) {
+                showNotification('Ingresa una descripcion', 'error');
+                return;
+            }
+
+            if (price <= 0) {
+                showNotification('Ingresa un precio valido', 'error');
+                return;
+            }
+
+            if (editingId) {
+                // Actualizar item existente
+                const index = items.findIndex(item => item.id === editingId);
+                if (index !== -1) {
+                    items[index] = {
+                        id: editingId,
+                        description: desc,
+                        quantity: qty,
+                        price: price,
+                        subtotal: qty * price
+                    };
+                }
+                editingId = null;
+                updateAddButton(false);
+                showNotification('Item actualizado');
+            } else {
+                // Agregar nuevo item
+                items.push({
+                    id: Date.now(),
+                    description: desc,
+                    quantity: qty,
+                    price: price,
+                    subtotal: qty * price
+                });
+                showNotification('Item agregado');
+            }
+
+            // Clear inputs
+            document.getElementById('itemDesc').value = '';
+            document.getElementById('itemQty').value = '1';
+            document.getElementById('itemPrice').value = '';
+
+            renderItems();
+            updateTotals();
+        }
+
+        // Edit item - cargar datos en el formulario
+        function editItem(id) {
+            const item = items.find(i => i.id === id);
+            if (!item) return;
+
+            editingId = id;
+            document.getElementById('itemDesc').value = item.description;
+            document.getElementById('itemQty').value = item.quantity;
+            document.getElementById('itemPrice').value = item.price;
+
+            updateAddButton(true);
+            document.getElementById('itemDesc').focus();
+
+            // Scroll al formulario en mobile
+            document.querySelector('.item-form').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        // Cancel edit
+        function cancelEdit() {
+            editingId = null;
+            document.getElementById('itemDesc').value = '';
+            document.getElementById('itemQty').value = '1';
+            document.getElementById('itemPrice').value = '';
+            updateAddButton(false);
+        }
+
+        // Update add button text/style
+        function updateAddButton(isEditing) {
+            const btn = document.getElementById('addItemBtn');
+            const cancelBtn = document.getElementById('cancelEditBtn');
+
+            if (isEditing) {
+                btn.innerHTML = `
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
+                    </svg>
+                    Actualizar Item
+                `;
+                btn.classList.remove('btn-primary');
+                btn.classList.add('btn-warning');
+                cancelBtn.style.display = 'inline-flex';
+            } else {
+                btn.innerHTML = `
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
+                    </svg>
+                    Agregar Item
+                `;
+                btn.classList.remove('btn-warning');
+                btn.classList.add('btn-primary');
+                cancelBtn.style.display = 'none';
+            }
+        }
+
+        // Remove item
+        function removeItem(id) {
+            if (editingId === id) {
+                cancelEdit();
+            }
+            items = items.filter(item => item.id !== id);
+            renderItems();
+            updateTotals();
+        }
+
+        // Render items table
+        function renderItems() {
+            const tbody = document.getElementById('itemsBody');
+            const currency = document.getElementById('currency').value;
+
+            document.getElementById('itemCount').textContent = items.length;
+
+            if (items.length === 0) {
+                tbody.innerHTML = `
+                    <tr>
+                        <td colspan="5">
+                            <div class="empty-state">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/>
+                                </svg>
+                                <p>No hay items agregados</p>
+                            </div>
+                        </td>
+                    </tr>
+                `;
+                return;
+            }
+
+            tbody.innerHTML = items.map(item => `
+                <tr class="${editingId === item.id ? 'editing' : ''}">
+                    <td>${item.description}</td>
+                    <td class="text-center">${item.quantity}</td>
+                    <td class="text-right">${formatCurrency(item.price, currency)}</td>
+                    <td class="text-right">${formatCurrency(item.subtotal, currency)}</td>
+                    <td>
+                        <div class="action-buttons">
+                            <button class="btn btn-edit" onclick="editItem(${item.id})" title="Editar">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                </svg>
+                            </button>
+                            <button class="btn btn-danger" onclick="removeItem(${item.id})" title="Eliminar">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="16" height="16">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        // Update totals
+        function updateTotals() {
+            const currency = document.getElementById('currency').value;
+            const includeIva = document.getElementById('includeIva').checked;
+            const ivaRate = parseFloat(document.getElementById('ivaRate').value) || 0;
+
+            const subtotal = items.reduce((sum, item) => sum + item.subtotal, 0);
+            const iva = includeIva ? subtotal * (ivaRate / 100) : 0;
+            const total = subtotal + iva;
+
+            document.getElementById('subtotalDisplay').textContent = formatCurrency(subtotal, currency);
+            document.getElementById('ivaDisplay').textContent = formatCurrency(iva, currency);
+            document.getElementById('totalDisplay').textContent = formatCurrency(total, currency);
+            document.getElementById('ivaRateDisplay').textContent = ivaRate;
+
+            // Show/hide IVA row
+            document.getElementById('ivaRow').style.display = includeIva ? 'flex' : 'none';
+        }
+
+        // Generate PDF content
+        function generatePDFContent() {
+            const clientName = document.getElementById('clientName').value || 'Cliente';
+            const clientEmail = document.getElementById('clientEmail').value || '-';
+            const clientPhone = document.getElementById('clientPhone').value || '-';
+            const projectName = document.getElementById('projectName').value || 'Proyecto';
+            const quoteNumber = document.getElementById('quoteNumber').value || 'COT-' + Date.now().toString().slice(-6);
+            const validityDays = document.getElementById('validityDays').value || '15';
+            const currency = document.getElementById('currency').value;
+            const includeIva = document.getElementById('includeIva').checked;
+            const ivaRate = parseFloat(document.getElementById('ivaRate').value) || 0;
+            const notes = document.getElementById('notes').value;
+
+            const subtotal = items.reduce((sum, item) => sum + item.subtotal, 0);
+            const iva = includeIva ? subtotal * (ivaRate / 100) : 0;
+            const total = subtotal + iva;
+
+            const today = new Date();
+            const validUntil = new Date(today.getTime() + (validityDays * 24 * 60 * 60 * 1000));
+
+            const formatDate = (date) => {
+                return date.toLocaleDateString('es-CO', { day: '2-digit', month: 'long', year: 'numeric' });
+            };
+
+            return `
+                <div class="pdf-topbar"></div>
+                <div class="pdf-content-wrapper">
+                    <!-- Header -->
+                    <table class="pdf-header">
+                        <tr>
+                            <td class="pdf-logo">
+                                <span class="pdf-logo-icon">Y</span>
+                                <span class="pdf-logo-text">Ya<span>Dev</span></span>
+                            </td>
+                            <td class="pdf-quote-info">
+                                <div class="pdf-quote-number">${quoteNumber}</div>
+                                <div class="pdf-quote-date">${formatDate(today)}</div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- Client Info -->
+                    <table class="pdf-client-section">
+                        <tr>
+                            <td class="pdf-client-box">
+                                <div class="pdf-client-title">Cliente</div>
+                                <div class="pdf-client-name">${clientName}</div>
+                                <div class="pdf-client-detail">${clientEmail}</div>
+                                <div class="pdf-client-detail">${clientPhone}</div>
+                            </td>
+                            <td class="pdf-client-box">
+                                <div class="pdf-client-title">Detalles del Proyecto</div>
+                                <div class="pdf-client-name">${projectName}</div>
+                                <div class="pdf-client-detail">Moneda: ${currency}</div>
+                                <div class="pdf-client-detail">Validez: ${validityDays} dias</div>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <!-- Items Table -->
+                    <div class="pdf-table-wrapper">
+                        <table class="pdf-table">
+                            <thead>
+                                <tr>
+                                    <th style="width: 48%;">Descripcion</th>
+                                    <th class="text-center" style="width: 12%;">Cant.</th>
+                                    <th class="text-right" style="width: 20%;">Precio Unit.</th>
+                                    <th class="text-right" style="width: 20%;">Subtotal</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${items.map((item, index) => `
+                                    <tr>
+                                        <td>${item.description}</td>
+                                        <td class="text-center">${item.quantity}</td>
+                                        <td class="text-right">${formatCurrency(item.price, currency)}</td>
+                                        <td class="text-right">${formatCurrency(item.subtotal, currency)}</td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Totals -->
+                    <div class="pdf-totals-section">
+                        <table class="pdf-totals">
+                            <tr class="pdf-totals-row subtotal">
+                                <td>Subtotal</td>
+                                <td style="text-align: right;">${formatCurrency(subtotal, currency)}</td>
+                            </tr>
+                            ${includeIva ? `
+                            <tr class="pdf-totals-row iva">
+                                <td>IVA (${ivaRate}%)</td>
+                                <td style="text-align: right;">${formatCurrency(iva, currency)}</td>
+                            </tr>
+                            ` : ''}
+                            <tr class="pdf-totals-row total">
+                                <td>TOTAL</td>
+                                <td style="text-align: right;">${formatCurrency(total, currency)}</td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <!-- Observaciones - Estilo similar a ODIR -->
+                    ${notes ? `
+                    <div class="pdf-observations">
+                        <div class="pdf-observations-title">OBSERVACIONES</div>
+                        <div class="pdf-observations-content">${formatNotesForPDF(notes)}</div>
+                    </div>
+                    ` : ''}
+
+                    <!-- Footer compacto -->
+                    <div class="pdf-footer-compact">
+                        <div class="pdf-validity-inline">
+                            <span>Cotizacion valida hasta: <strong>${formatDate(validUntil)}</strong></span>
+                        </div>
+                        <div class="pdf-contact-line">
+                            yadevsistem@gmail.com | +57 300 752 8265 | +57 300 477 3174
+                        </div>
+                        <div class="pdf-watermark">Generado por YaDev</div>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Preview PDF
+        function previewPDF() {
+            if (items.length === 0) {
+                showNotification('Agrega al menos un item', 'error');
+                return;
+            }
+
+            const content = generatePDFContent();
+            const newWindow = window.open('', '_blank');
+            newWindow.document.write(`
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>Vista Previa - Cotizacion YaDev</title>
+                    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+                    <style>
+                        body {
+                            margin: 0;
+                            padding: 30px;
+                            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+                            min-height: 100vh;
+                            font-family: 'Inter', sans-serif;
+                        }
+                        .preview-container {
+                            max-width: 200mm;
+                            margin: 0 auto;
+                            background: white;
+                            box-shadow: 0 25px 80px rgba(0,0,0,0.4);
+                            border-radius: 4px;
+                            overflow: hidden;
+                        }
+                        .preview-header {
+                            background: #6366f1;
+                            color: white;
+                            padding: 10px 16px;
+                            font-size: 10px;
+                            font-weight: 600;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                        }
+                        .preview-header span { opacity: 0.8; font-weight: 400; }
+                        .preview-info {
+                            text-align: center;
+                            padding: 8px;
+                            background: #fef3c7;
+                            color: #92400e;
+                            font-size: 11px;
+                        }
+                        ${document.querySelector('style').textContent}
+                    </style>
+                </head>
+                <body>
+                    <div class="preview-info">Formato: Carta (Letter) - Con margenes de 10mm</div>
+                    <div class="preview-container">
+                        <div class="preview-header">
+                            <span>Vista Previa de Cotizacion</span>
+                            <span>YaDev</span>
+                        </div>
+                        <div class="pdf-page">${content}</div>
+                    </div>
+                </body>
+                </html>
+            `);
+        }
+
+        // Generate PDF
+        function generatePDF() {
+            if (items.length === 0) {
+                showNotification('Agrega al menos un item', 'error');
+                return;
+            }
+
+            const pdfPage = document.getElementById('pdf-page');
+            pdfPage.innerHTML = generatePDFContent();
+
+            const quoteNumber = document.getElementById('quoteNumber').value || 'COT-' + Date.now().toString().slice(-6);
+            const clientName = document.getElementById('clientName').value || 'Cliente';
+
+            const opt = {
+                margin: [2, 8, 5, 8],
+                filename: `Cotizacion_${quoteNumber}_${clientName.replace(/\s+/g, '_')}.pdf`,
+                image: { type: 'jpeg', quality: 0.98 },
+                html2canvas: { scale: 2, useCORS: true, logging: false },
+                jsPDF: { unit: 'mm', format: 'letter', orientation: 'portrait' },
+                pagebreak: { mode: 'avoid-all' }
+            };
+
+            html2pdf().set(opt).from(pdfPage).save().then(() => {
+                showNotification('PDF generado correctamente');
+            });
+        }
+
+        // Reset form
+        function resetForm() {
+            if (items.length > 0 && !confirm('¿Estas seguro de limpiar la cotizacion?')) {
+                return;
+            }
+
+            items = [];
+            document.getElementById('clientName').value = '';
+            document.getElementById('clientEmail').value = '';
+            document.getElementById('clientPhone').value = '';
+            document.getElementById('projectName').value = '';
+            document.getElementById('quoteNumber').value = '';
+            document.getElementById('validityDays').value = '15';
+            document.getElementById('ivaRate').value = '19';
+            document.getElementById('includeIva').checked = true;
+
+            renderItems();
+            updateTotals();
+            showNotification('Formulario limpiado');
+        }
+
+        // Event listeners
+        document.getElementById('currency').addEventListener('change', () => {
+            renderItems();
+            updateTotals();
+        });
+
+        document.getElementById('includeIva').addEventListener('change', updateTotals);
+        document.getElementById('ivaRate').addEventListener('input', updateTotals);
+
+        // Enter key to add item
+        document.getElementById('itemPrice').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') addItem();
+        });
+
+        // =====================================================
+        // SAVED QUOTES MANAGEMENT (LocalStorage)
+        // =====================================================
+
+        const STORAGE_KEY = 'yadev_quotes';
+        let currentQuoteId = null; // ID de la cotización siendo editada
+
+        // Get all saved quotes
+        function getSavedQuotes() {
+            const data = localStorage.getItem(STORAGE_KEY);
+            return data ? JSON.parse(data) : [];
+        }
+
+        // Save quotes to storage
+        function saveQuotesToStorage(quotes) {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(quotes));
+            updateSavedQuotesCount();
+        }
+
+        // Update saved quotes count badge
+        function updateSavedQuotesCount() {
+            const quotes = getSavedQuotes();
+            const countEl = document.getElementById('totalQuotesCount');
+            if (countEl) countEl.textContent = quotes.length;
+        }
+
+        // Toggle quotes panel
+        function toggleQuotesPanel() {
+            const panel = document.getElementById('quotesPanel');
+            const overlay = document.getElementById('overlay');
+            panel.classList.toggle('open');
+            overlay.classList.toggle('show');
+
+            if (panel.classList.contains('open')) {
+                renderSavedQuotes();
+            }
+        }
+
+        // Save current quote
+        function saveQuote() {
+            if (items.length === 0) {
+                showNotification('Agrega al menos un item', 'error');
+                return;
+            }
+
+            const clientName = document.getElementById('clientName').value || 'Sin nombre';
+            const clientEmail = document.getElementById('clientEmail').value;
+            const clientPhone = document.getElementById('clientPhone').value;
+            const projectName = document.getElementById('projectName').value || 'Sin proyecto';
+            const quoteNumber = document.getElementById('quoteNumber').value;
+            const validityDays = document.getElementById('validityDays').value;
+            const currency = document.getElementById('currency').value;
+            const includeIva = document.getElementById('includeIva').checked;
+            const ivaRate = parseFloat(document.getElementById('ivaRate').value) || 0;
+            const notes = document.getElementById('notes').value;
+
+            const subtotal = items.reduce((sum, item) => sum + item.subtotal, 0);
+            const iva = includeIva ? subtotal * (ivaRate / 100) : 0;
+            const total = subtotal + iva;
+
+            const quoteData = {
+                id: currentQuoteId || Date.now(),
+                quoteNumber,
+                clientName,
+                clientEmail,
+                clientPhone,
+                projectName,
+                validityDays,
+                currency,
+                includeIva,
+                ivaRate,
+                notes,
+                items: [...items],
+                subtotal,
+                iva,
+                total,
+                createdAt: currentQuoteId ? undefined : new Date().toISOString(),
+                updatedAt: new Date().toISOString()
+            };
+
+            const quotes = getSavedQuotes();
+
+            if (currentQuoteId) {
+                // Update existing
+                const index = quotes.findIndex(q => q.id === currentQuoteId);
+                if (index !== -1) {
+                    quoteData.createdAt = quotes[index].createdAt;
+                    quotes[index] = quoteData;
+                }
+                showNotification('Cotizacion actualizada');
+            } else {
+                // Add new
+                quotes.unshift(quoteData);
+                currentQuoteId = quoteData.id;
+                showNotification('Cotizacion guardada');
+            }
+
+            saveQuotesToStorage(quotes);
+            updateSaveButton();
+        }
+
+        // Load quote into form
+        function loadQuote(id) {
+            const quotes = getSavedQuotes();
+            const quote = quotes.find(q => q.id === id);
+
+            if (!quote) return;
+
+            // Set form values
+            document.getElementById('clientName').value = quote.clientName || '';
+            document.getElementById('clientEmail').value = quote.clientEmail || '';
+            document.getElementById('clientPhone').value = quote.clientPhone || '';
+            document.getElementById('projectName').value = quote.projectName || '';
+            document.getElementById('quoteNumber').value = quote.quoteNumber || '';
+            document.getElementById('validityDays').value = quote.validityDays || '15';
+            document.getElementById('currency').value = quote.currency || 'COP';
+            document.getElementById('includeIva').checked = quote.includeIva !== false;
+            document.getElementById('ivaRate').value = quote.ivaRate || '19';
+            document.getElementById('notes').value = quote.notes || '';
+
+            // Load items
+            items = quote.items ? [...quote.items] : [];
+            currentQuoteId = id;
+
+            renderItems();
+            updateTotals();
+            updateSaveButton();
+            toggleQuotesPanel();
+
+            showNotification('Cotizacion cargada');
+        }
+
+        // Delete quote
+        function deleteQuote(id) {
+            if (!confirm('¿Eliminar esta cotizacion?')) return;
+
+            let quotes = getSavedQuotes();
+            quotes = quotes.filter(q => q.id !== id);
+            saveQuotesToStorage(quotes);
+
+            if (currentQuoteId === id) {
+                currentQuoteId = null;
+                updateSaveButton();
+            }
+
+            renderSavedQuotes();
+            showNotification('Cotizacion eliminada');
+        }
+
+        // Duplicate quote
+        function duplicateQuote(id) {
+            const quotes = getSavedQuotes();
+            const quote = quotes.find(q => q.id === id);
+
+            if (!quote) return;
+
+            const newQuote = {
+                ...quote,
+                id: Date.now(),
+                quoteNumber: quote.quoteNumber + '-COPIA',
+                createdAt: new Date().toISOString(),
+                updatedAt: new Date().toISOString()
+            };
+
+            quotes.unshift(newQuote);
+            saveQuotesToStorage(quotes);
+            renderSavedQuotes();
+            showNotification('Cotizacion duplicada');
+        }
+
+        // Render saved quotes list
+        function renderSavedQuotes() {
+            const container = document.getElementById('quotesList');
+            const quotes = getSavedQuotes();
+
+            if (quotes.length === 0) {
+                container.innerHTML = `
+                    <div class="quotes-empty">
+                        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <p>No hay cotizaciones guardadas</p>
+                        <p style="font-size: 0.8125rem; margin-top: 0.5rem;">Las cotizaciones se guardan en este navegador</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = quotes.map(quote => {
+                const date = new Date(quote.createdAt);
+                const dateStr = date.toLocaleDateString('es-CO', { day: '2-digit', month: 'short', year: 'numeric' });
+                const isActive = currentQuoteId === quote.id;
+
+                return `
+                    <div class="quote-card ${isActive ? 'active' : ''}" style="${isActive ? 'border-color: var(--primary); background: rgba(99, 102, 241, 0.05);' : ''}">
+                        <div class="quote-card-header">
+                            <span class="quote-card-number">${quote.quoteNumber}</span>
+                            <span class="quote-card-date">${dateStr}</span>
+                        </div>
+                        <div class="quote-card-client">${quote.clientName}</div>
+                        <div class="quote-card-project">${quote.projectName}</div>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                            <span class="quote-card-total">${formatCurrency(quote.total, quote.currency)}</span>
+                            <span class="quote-card-items">${quote.items?.length || 0} items</span>
+                        </div>
+                        <div class="quote-card-actions">
+                            <button class="btn btn-outline btn-sm" onclick="loadQuote(${quote.id})">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                </svg>
+                                Editar
+                            </button>
+                            <button class="btn btn-outline btn-sm" onclick="duplicateQuote(${quote.id})">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
+                                </svg>
+                                Duplicar
+                            </button>
+                            <button class="btn btn-danger btn-sm" onclick="deleteQuote(${quote.id})">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24" width="14" height="14">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        // Update save button text based on state
+        function updateSaveButton() {
+            const btn = document.getElementById('saveQuoteBtn');
+            const text = document.getElementById('saveQuoteBtnText');
+
+            if (currentQuoteId) {
+                text.textContent = 'Actualizar';
+                btn.classList.remove('btn-primary');
+                btn.classList.add('btn-warning');
+            } else {
+                text.textContent = 'Guardar';
+                btn.classList.remove('btn-warning');
+                btn.classList.add('btn-primary');
+            }
+        }
+
+        // New quote (reset form and clear currentQuoteId)
+        function newQuote() {
+            currentQuoteId = null;
+            resetForm();
+            updateSaveButton();
+        }
+
+        // Override resetForm to also clear currentQuoteId
+        const originalResetForm = resetForm;
+        resetForm = function() {
+            if (items.length > 0 && !confirm('¿Estas seguro de limpiar la cotizacion?')) {
+                return;
+            }
+
+            currentQuoteId = null;
+            items = [];
+            document.getElementById('clientName').value = '';
+            document.getElementById('clientEmail').value = '';
+            document.getElementById('clientPhone').value = '';
+            document.getElementById('projectName').value = '';
+            document.getElementById('validityDays').value = '15';
+            document.getElementById('ivaRate').value = '19';
+            document.getElementById('includeIva').checked = true;
+
+            // Generate new quote number
+            const today = new Date();
+            const year = today.getFullYear().toString().slice(-2);
+            const month = (today.getMonth() + 1).toString().padStart(2, '0');
+            const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+            document.getElementById('quoteNumber').value = `COT-${year}${month}-${random}`;
+
+            renderItems();
+            updateTotals();
+            updateSaveButton();
+            showNotification('Formulario limpiado');
+        };
+
+        // =====================================================
+        // VISTA LISTA / FORMULARIO
+        // =====================================================
+
+        // Mostrar vista de lista (principal)
+        function showListView() {
+            document.getElementById('quotesListView').style.display = 'block';
+            document.getElementById('formView').style.display = 'none';
+            document.getElementById('btnNewQuote').style.display = 'flex';
+            document.getElementById('btnBackList').style.display = 'none';
+            renderQuotesTable();
+        }
+
+        // Mostrar vista de formulario
+        function showFormView() {
+            document.getElementById('quotesListView').style.display = 'none';
+            document.getElementById('formView').style.display = 'block';
+            document.getElementById('btnNewQuote').style.display = 'none';
+            document.getElementById('btnBackList').style.display = 'flex';
+        }
+
+        // Renderizar tabla de cotizaciones
+        function renderQuotesTable() {
+            const quotes = getSavedQuotes();
+            const tbody = document.getElementById('quotesTableBody');
+            const emptyState = document.getElementById('quotesEmptyState');
+            const tableWrapper = document.querySelector('.quotes-table-wrapper');
+
+            document.getElementById('totalQuotesCount').textContent = quotes.length;
+
+            if (quotes.length === 0) {
+                tableWrapper.style.display = 'none';
+                emptyState.style.display = 'block';
+                return;
+            }
+
+            tableWrapper.style.display = 'block';
+            emptyState.style.display = 'none';
+
+            tbody.innerHTML = quotes.map(quote => {
+                const createdDate = new Date(quote.createdAt);
+                const validUntil = new Date(createdDate.getTime() + (quote.validityDays * 24 * 60 * 60 * 1000));
+
+                const formatDate = (date) => {
+                    return date.toLocaleDateString('es-CO', { day: '2-digit', month: '2-digit', year: 'numeric' });
+                };
+
+                return `
+                    <tr>
+                        <td class="quote-number">${quote.quoteNumber || '-'}</td>
+                        <td class="quote-client">${quote.clientName || '-'}</td>
+                        <td class="quote-project">${quote.projectName || '-'}</td>
+                        <td class="quote-total">${formatCurrency(quote.total, quote.currency)}</td>
+                        <td class="quote-date">${formatDate(createdDate)}</td>
+                        <td class="quote-date">${formatDate(validUntil)}</td>
+                        <td class="quote-actions">
+                            <button class="btn-action btn-edit" onclick="editQuoteFromList(${quote.id})" title="Editar">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+                                </svg>
+                            </button>
+                            <button class="btn-action btn-pdf" onclick="generatePDFFromList(${quote.id})" title="Descargar PDF">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                </svg>
+                            </button>
+                            <button class="btn-action btn-delete" onclick="deleteQuoteFromList(${quote.id})" title="Eliminar">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+                                </svg>
+                            </button>
+                        </td>
+                    </tr>
+                `;
+            }).join('');
+        }
+
+        // Editar cotización desde la lista
+        function editQuoteFromList(id) {
+            loadQuote(id);
+            showFormView();
+        }
+
+        // Generar PDF desde la lista
+        function generatePDFFromList(id) {
+            loadQuote(id);
+            setTimeout(() => {
+                generatePDF();
+            }, 100);
+        }
+
+        // Eliminar cotización desde la lista
+        function deleteQuoteFromList(id) {
+            if (!confirm('¿Eliminar esta cotización?')) return;
+
+            let quotes = getSavedQuotes();
+            quotes = quotes.filter(q => q.id !== id);
+            saveQuotesToStorage(quotes);
+            renderQuotesTable();
+            showNotification('Cotización eliminada');
+        }
+
+        // Modificar saveQuote para volver a la lista después de guardar
+        const originalSaveQuote = saveQuote;
+        saveQuote = function() {
+            if (items.length === 0) {
+                showNotification('Agrega al menos un item', 'error');
+                return;
+            }
+
+            const clientName = document.getElementById('clientName').value || 'Sin nombre';
+            const clientEmail = document.getElementById('clientEmail').value;
+            const clientPhone = document.getElementById('clientPhone').value;
+            const projectName = document.getElementById('projectName').value || 'Sin proyecto';
+            const quoteNumber = document.getElementById('quoteNumber').value;
+            const validityDays = document.getElementById('validityDays').value;
+            const currency = document.getElementById('currency').value;
+            const includeIva = document.getElementById('includeIva').checked;
+            const ivaRate = parseFloat(document.getElementById('ivaRate').value) || 0;
+            const notes = document.getElementById('notes').value;
+
+            const subtotal = items.reduce((sum, item) => sum + item.subtotal, 0);
+            const iva = includeIva ? subtotal * (ivaRate / 100) : 0;
+            const total = subtotal + iva;
+
+            const quoteData = {
+                id: currentQuoteId || Date.now(),
+                quoteNumber,
+                clientName,
+                clientEmail,
+                clientPhone,
+                projectName,
+                validityDays,
+                currency,
+                includeIva,
+                ivaRate,
+                notes,
+                items: [...items],
+                subtotal,
+                iva,
+                total,
+                createdAt: currentQuoteId ? undefined : new Date().toISOString(),
+                updatedAt: new Date().toISOString()
+            };
+
+            const quotes = getSavedQuotes();
+
+            if (currentQuoteId) {
+                const index = quotes.findIndex(q => q.id === currentQuoteId);
+                if (index !== -1) {
+                    quoteData.createdAt = quotes[index].createdAt;
+                    quotes[index] = quoteData;
+                }
+                showNotification('Cotización actualizada');
+            } else {
+                quotes.unshift(quoteData);
+                currentQuoteId = quoteData.id;
+                showNotification('Cotización guardada');
+            }
+
+            saveQuotesToStorage(quotes);
+            updateSaveButton();
+
+            // Volver a la lista después de guardar
+            setTimeout(() => {
+                showListView();
+                resetFormData();
+            }, 500);
+        };
+
+        // Reset form data sin confirmación
+        function resetFormData() {
+            currentQuoteId = null;
+            items = [];
+            document.getElementById('clientName').value = '';
+            document.getElementById('clientEmail').value = '';
+            document.getElementById('clientPhone').value = '';
+            document.getElementById('projectName').value = '';
+            document.getElementById('validityDays').value = '15';
+            document.getElementById('ivaRate').value = '19';
+            document.getElementById('includeIva').checked = true;
+            generateNewQuoteNumber();
+            renderItems();
+            updateTotals();
+            updateSaveButton();
+        }
+
+        // Generar nuevo número de cotización
+        function generateNewQuoteNumber() {
+            const today = new Date();
+            const year = today.getFullYear().toString().slice(-2);
+            const month = (today.getMonth() + 1).toString().padStart(2, '0');
+            const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
+            document.getElementById('quoteNumber').value = `COT-${year}${month}-${random}`;
+        }
+
+        // Auto-generate quote number and load saved quotes count
+        document.addEventListener('DOMContentLoaded', () => {
+            generateNewQuoteNumber();
+
+            // Renderizar tabla de cotizaciones
+            renderQuotesTable();
+        });
+    </script>
+</body>
+</html>
