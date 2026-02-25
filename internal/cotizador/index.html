@@ -308,6 +308,16 @@
             color: white;
         }
 
+        .quotes-table .btn-duplicate {
+            background: var(--gray-100);
+            color: #8b5cf6;
+        }
+
+        .quotes-table .btn-duplicate:hover {
+            background: #8b5cf6;
+            color: white;
+        }
+
         .quotes-table .btn-delete {
             background: var(--gray-100);
             color: var(--danger);
@@ -2742,10 +2752,17 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
 
             if (!quote) return;
 
+            // Generar nuevo número incremental
+            const today = new Date();
+            const day = today.getDate().toString().padStart(2, '0');
+            const month = (today.getMonth() + 1).toString().padStart(2, '0');
+            const consecutivo = getNextConsecutivo();
+            const newQuoteNumber = `COT-${day}${month}-${consecutivo}`;
+
             const newQuote = {
                 ...quote,
                 id: Date.now(),
-                quoteNumber: quote.quoteNumber + '-COPIA',
+                quoteNumber: newQuoteNumber,
                 createdAt: new Date().toISOString(),
                 updatedAt: new Date().toISOString()
             };
@@ -2753,7 +2770,8 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
             quotes.unshift(newQuote);
             saveQuotesToStorage(quotes);
             renderSavedQuotes();
-            showNotification('Cotizacion duplicada');
+            renderQuotesTable();
+            showNotification('Cotizacion duplicada: ' + newQuoteNumber);
         }
 
         // Render saved quotes list
@@ -2855,12 +2873,8 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
             document.getElementById('ivaRate').value = '19';
             document.getElementById('includeIva').checked = true;
 
-            // Generate new quote number
-            const today = new Date();
-            const year = today.getFullYear().toString().slice(-2);
-            const month = (today.getMonth() + 1).toString().padStart(2, '0');
-            const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
-            document.getElementById('quoteNumber').value = `COT-${year}${month}-${random}`;
+            // Generate new quote number (incremental)
+            generateNewQuoteNumber();
 
             renderItems();
             updateTotals();
@@ -2932,6 +2946,11 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
                             <button class="btn-action btn-pdf" onclick="generatePDFFromList(${quote.id})" title="Descargar PDF">
                                 <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                                </svg>
+                            </button>
+                            <button class="btn-action btn-duplicate" onclick="duplicateQuote(${quote.id})" title="Duplicar">
+                                <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"/>
                                 </svg>
                             </button>
                             <button class="btn-action btn-delete" onclick="deleteQuoteFromList(${quote.id})" title="Eliminar">
@@ -3055,13 +3074,23 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
             updateSaveButton();
         }
 
-        // Generar nuevo número de cotización
+        // Obtener el siguiente consecutivo
+        function getNextConsecutivo() {
+            const STORAGE_KEY = 'yadev_quote_consecutivo';
+            let consecutivo = parseInt(localStorage.getItem(STORAGE_KEY)) || 314;
+            consecutivo++;
+            localStorage.setItem(STORAGE_KEY, consecutivo.toString());
+            return consecutivo;
+        }
+
+        // Generar nuevo número de cotización (incremental)
         function generateNewQuoteNumber() {
             const today = new Date();
-            const year = today.getFullYear().toString().slice(-2);
+            const day = today.getDate().toString().padStart(2, '0');
             const month = (today.getMonth() + 1).toString().padStart(2, '0');
-            const random = Math.floor(Math.random() * 1000).toString().padStart(3, '0');
-            document.getElementById('quoteNumber').value = `COT-${year}${month}-${random}`;
+            const consecutivo = getNextConsecutivo();
+            document.getElementById('quoteNumber').value = `COT-${day}${month}-${consecutivo}`;
+            return `COT-${day}${month}-${consecutivo}`;
         }
 
         // Auto-generate quote number and load saved quotes count
