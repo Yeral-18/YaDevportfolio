@@ -1,0 +1,313 @@
+---
+const values = [
+  {
+    name: 'Sostenibilidad Ambiental',
+    description: 'Cada proyecto integra practicas que minimizan el impacto ecologico.',
+    icon: `<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 21C12 21 4 15 4 9.5C4 6.5 6.5 4 9 4C10 4 11 4.5 12 5.5C13 4.5 14 4 15 4C17.5 4 20 6.5 20 9.5C20 11 19 12.5 18 14M6 21H18M9 17L12 14L15 17M12 3V2M12 14V21" />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 9.5C15 9.5 14 11 12 11C10 11 9 9.5 9 9.5" />
+    </svg>`,
+  },
+  {
+    name: 'Compromiso',
+    description: 'Dedicacion al exito de nuestros clientes.',
+    icon: `<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M7 11L9.5 13.5L7 16M12 8L10 6L7 3H3V7L6 10L8 12M17 13L14.5 10.5L17 8M12 16L14 18L17 21H21V17L18 14L16 12M9.5 13.5L14.5 10.5" />
+    </svg>`,
+  },
+  {
+    name: 'Innovacion',
+    description: 'Busqueda constante de nuevas soluciones.',
+    icon: `<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 18V22M8 22H16M9 18H15M15.5 14C17 12.5 18 10.5 18 9C18 5.69 15.31 3 12 3C8.69 3 6 5.69 6 9C6 10.5 7 12.5 8.5 14H15.5Z" />
+    </svg>`,
+  },
+  {
+    name: 'Trabajo en Equipo',
+    description: 'Colaboracion para lograr objetivos comunes.',
+    icon: `<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
+    </svg>`,
+  },
+  {
+    name: 'Responsabilidad',
+    description: 'Etica y sostenibilidad en nuestras acciones.',
+    icon: `<svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+    </svg>`,
+  },
+];
+---
+
+<section id="sobre-nosotros" class="about-section">
+  <div class="section-container section-padding">
+    <!-- Two-column layout -->
+    <div class="grid items-center gap-8 lg:gap-12 lg:grid-cols-2">
+      <!-- Left column -->
+      <div>
+        <span class="mb-3 inline-block text-xs font-semibold uppercase tracking-widest text-accent sm:mb-4">
+          Sobre Nosotros
+        </span>
+        <h2 class="heading-primary mb-4 text-[1.5rem] sm:text-3xl lg:text-5xl sm:mb-6">
+          Comprometidos con el desarrollo sostenible de Colombia
+        </h2>
+        <p class="text-body mb-6 text-[0.9375rem] leading-relaxed sm:text-base sm:mb-8">
+          ECOMAG S.A.S es una empresa de ingenieria civil y gestion ambiental con sede en
+          Barrancabermeja, Santander. Nos especializamos en brindar soluciones integrales que
+          combinan innovacion, calidad y sostenibilidad, ejecutando proyectos que cumplen con los
+          mas altos estandares tecnicos mientras protegen y regeneran el medio ambiente. Con
+          certificaciones ISO 9001, ISO 14001 e ISO 45001, respaldamos cada compromiso con
+          excelencia operativa.
+        </p>
+        <a
+          href="#contacto"
+          class="btn-secondary group inline-flex items-center gap-2 min-h-[44px] min-w-[44px]"
+        >
+          Conocer mas
+          <svg
+            class="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          </svg>
+        </a>
+      </div>
+
+      <!-- Right column: placeholder image -->
+      <div class="about-image-wrapper relative" id="about-image-container">
+        <div class="about-image-reveal aspect-[4/3] overflow-hidden rounded-xl sm:rounded-2xl bg-primary-50" style="opacity: 0; clip-path: inset(0 100% 0 0); will-change: transform, opacity;">
+          <img
+            src="/images/about-placeholder.jpg"
+            alt="Equipo de ECOMAG S.A.S trabajando en un proyecto de obra civil y gestion ambiental"
+            loading="lazy"
+            decoding="async"
+            class="about-hover-image h-full w-full object-cover"
+          />
+        </div>
+        <!-- Decorative accent (hidden on small screens to avoid overflow) -->
+        <div class="about-accent-reveal about-hover-accent absolute -bottom-4 -right-4 -z-10 h-full w-full rounded-2xl bg-accent-100 hidden sm:block" aria-hidden="true" style="opacity: 0; transform: translate3d(60px, 60px, 0); will-change: transform, opacity;"></div>
+      </div>
+    </div>
+
+    <!-- Mission, Vision, Values cards -->
+    <div class="mt-10 grid gap-5 sm:mt-16 sm:gap-8 md:grid-cols-3">
+      <!-- Mision -->
+      <div class="card card-mision">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-primary-50 text-primary">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
+            <circle cx="12" cy="12" r="10" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="12" cy="12" r="4" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="12" cy="12" r="1" fill="currentColor" />
+          </svg>
+        </div>
+        <h3 class="heading-secondary mb-3 text-lg sm:text-xl">Mision</h3>
+        <p class="text-body text-sm leading-relaxed">
+          Brindamos soluciones integrales en obra civil y gestion ambiental en toda Colombia,
+          combinando innovacion, calidad y sostenibilidad. Nos comprometemos a ejecutar proyectos
+          que no solo cumplan con los mas altos estandares tecnicos, sino que tambien protejan y
+          regeneren el medio ambiente, contribuyendo al desarrollo responsable del pais.
+        </p>
+      </div>
+
+      <!-- Vision -->
+      <div class="card card-vision">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-secondary-50 text-secondary">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 010-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178z" />
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+        <h3 class="heading-secondary mb-3 text-lg sm:text-xl">Vision</h3>
+        <p class="text-body text-sm">
+          Ser reconocidos para 2030 como referentes nacionales en obra civil y servicios ambientales,
+          destacandonos por nuestra capacidad de adaptacion a los retos del sector, nuestra
+          responsabilidad ecologica y nuestra excelencia operativa. Queremos ser la opcion preferida
+          de clientes que buscan infraestructura duradera y soluciones ambientales con impacto positivo.
+        </p>
+      </div>
+
+      <!-- Valores -->
+      <div class="card card-valores">
+        <div class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-accent-50 text-accent">
+          <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z" />
+          </svg>
+        </div>
+        <h3 class="heading-secondary mb-3 text-lg sm:text-xl">Valores</h3>
+        <p class="text-body text-sm">
+          Nuestros valores fundamentales guian cada decision: sostenibilidad ambiental, compromiso
+          con el exito de nuestros clientes, innovacion constante, trabajo en equipo colaborativo
+          y responsabilidad etica en todas nuestras acciones.
+        </p>
+      </div>
+    </div>
+
+    <!-- Values sub-section -->
+    <div class="mt-10 valores-subsection sm:mt-16">
+      <h3 class="heading-secondary mb-6 text-center text-xl sm:text-2xl sm:mb-8">Nuestros Valores</h3>
+      <div class="flex gap-4 overflow-x-auto pb-4 scrollbar-thin snap-x snap-mandatory sm:gap-6 md:grid md:grid-cols-5 md:overflow-visible md:pb-0 md:snap-none">
+        {values.map((value) => (
+          <div class="value-item flex min-w-[160px] flex-shrink-0 flex-col items-center rounded-xl bg-light p-4 text-center snap-start sm:min-w-[200px] sm:p-6 md:min-w-0">
+            <div class="mb-3 flex h-12 w-12 items-center justify-center rounded-full bg-primary-50 text-primary sm:h-14 sm:w-14">
+              <Fragment set:html={value.icon} />
+            </div>
+            <h4 class="mb-2 font-display text-sm font-semibold text-dark">{value.name}</h4>
+            <p class="text-xs leading-relaxed text-gray-600">{value.description}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about-section {
+    background-color: #FFFFFF;
+    background-image: radial-gradient(circle, rgba(27,94,32,0.04) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+
+  .valores-subsection {
+    background-color: #DCE8D4;
+    background-image: radial-gradient(circle, rgba(27,94,32,0.06) 1px, transparent 1px);
+    background-size: 20px 20px;
+    border-radius: 1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .valores-subsection {
+      border-radius: 1.5rem;
+      padding: 2.5rem 2rem;
+    }
+  }
+
+  /* Misión/Visión/Valores card hover enhancements */
+  .card-mision,
+  .card-vision,
+  .card-valores {
+    border-top: 3px solid transparent;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .card-mision:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-top-color: var(--color-primary);
+    background: linear-gradient(180deg, rgba(27,94,32,0.03) 0%, #ffffff 40%);
+  }
+
+  .card-vision:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-top-color: var(--color-secondary);
+    background: linear-gradient(180deg, rgba(2,119,168,0.03) 0%, #ffffff 40%);
+  }
+
+  .card-valores:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.15);
+    border-top-color: var(--color-accent);
+    background: linear-gradient(180deg, rgba(124,179,66,0.03) 0%, #ffffff 40%);
+  }
+
+  /* Values items hover glow */
+  .value-item {
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .value-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px -5px rgba(27, 94, 32, 0.2);
+  }
+
+  /* About image reveal animation */
+  .about-image-reveal.revealed {
+    opacity: 1 !important;
+    clip-path: inset(0 0 0 0) !important;
+    transition: clip-path 0.8s ease-out, opacity 0.8s ease-out;
+  }
+
+  .about-accent-reveal.revealed {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+    transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s, opacity 0.7s ease-out 0.3s;
+  }
+
+  /* Disable hover-only animations on touch devices */
+  @media (hover: none) {
+    .card-mision:hover,
+    .card-vision:hover,
+    .card-valores:hover {
+      transform: none;
+    }
+
+    .value-item:hover {
+      transform: none;
+    }
+  }
+
+  /* Image hover floating animation */
+  .about-image-wrapper {
+    overflow: hidden;
+  }
+
+  .about-hover-image {
+    transition: transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .about-image-wrapper:hover .about-hover-image {
+    animation: aboutImageFloat 4s ease-in-out infinite;
+  }
+
+  @keyframes aboutImageFloat {
+    0%, 100% { transform: translate(0, 0) scale(1.02); }
+    25% { transform: translate(8px, -5px) scale(1.04); }
+    50% { transform: translate(-5px, -10px) scale(1.03); }
+    75% { transform: translate(10px, -3px) scale(1.05); }
+  }
+
+  .about-hover-accent {
+    transition: transform 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s, opacity 0.7s ease-out 0.3s;
+  }
+
+  .about-image-wrapper:hover .about-hover-accent.revealed {
+    animation: accentFloat 5s ease-in-out infinite;
+  }
+
+  @keyframes accentFloat {
+    0%, 100% { transform: translate3d(0, 0, 0); }
+    50% { transform: translate3d(-8px, 8px, 0); }
+  }
+
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('about-image-container');
+    if (!container) return;
+
+    const imageEl = container.querySelector('.about-image-reveal');
+    const accentEl = container.querySelector('.about-accent-reveal');
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            if (imageEl) imageEl.classList.add('revealed');
+            if (accentEl) accentEl.classList.add('revealed');
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    observer.observe(container);
+  });
+</script>

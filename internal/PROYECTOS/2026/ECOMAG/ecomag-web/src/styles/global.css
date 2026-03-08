@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary:   #1B5E20;
+    --color-secondary: #0277A8;
+    --color-accent:    #7CB342;
+    --color-dark:      #1a1a2e;
+    --color-light:     #F5F7F2;
+    --color-cta:       #E65100;
+    --font-display:    'Plus Jakarta Sans', system-ui, sans-serif;
+    --font-body:       'Inter', system-ui, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-body);
+    color: var(--color-dark);
+    background-color: var(--color-light);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+
+  /* reduced-motion: only disable scroll-behavior globally,
+     component animations are always shown */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .heading-primary {
+    @apply font-display text-3xl font-bold tracking-tight text-dark sm:text-4xl lg:text-5xl;
+  }
+
+  .heading-secondary {
+    @apply font-display text-2xl font-semibold tracking-tight text-dark sm:text-3xl;
+  }
+
+  .text-body {
+    @apply font-body text-base leading-relaxed text-gray-700 sm:text-lg;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center rounded-lg bg-cta px-6 py-3 text-sm font-semibold text-white
+           shadow-lg transition-all duration-300 hover:bg-orange-700 hover:shadow-xl
+           focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cta;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center rounded-lg border-2 border-primary px-6 py-3 text-sm
+           font-semibold text-primary transition-all duration-300 hover:bg-primary hover:text-white
+           focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary;
+  }
+
+  .card {
+    @apply rounded-2xl bg-white p-6 shadow-md transition-all duration-300
+           hover:-translate-y-1 hover:shadow-xl;
+  }
+}

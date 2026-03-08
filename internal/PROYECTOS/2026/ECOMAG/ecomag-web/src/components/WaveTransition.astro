@@ -1,0 +1,95 @@
+---
+/**
+ * WaveTransition — Animated SVG wave separator between hero and next section.
+ */
+---
+
+<div class="wave-transition" aria-hidden="true">
+  <!-- Back wave (slower, more depth) -->
+  <svg
+    class="wave-svg wave-svg--back"
+    viewBox="0 0 1440 150"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0,50 C180,120 360,10 540,70 C720,130 900,20 1080,80 C1260,130 1380,40 1440,60 L1440,150 L0,150 Z"
+      fill="var(--color-light, #F5F7F2)"
+      opacity="0.45"
+    />
+  </svg>
+
+  <!-- Front wave (main, faster) -->
+  <svg
+    class="wave-svg wave-svg--front"
+    viewBox="0 0 1440 150"
+    preserveAspectRatio="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0,80 C160,20 320,110 480,60 C640,10 800,100 960,50 C1120,0 1280,90 1440,40 L1440,150 L0,150 Z"
+      fill="var(--color-light, #F5F7F2)"
+    />
+  </svg>
+</div>
+
+<style>
+  .wave-transition {
+    position: relative;
+    width: 100%;
+    margin-top: -3rem;
+    z-index: 2;
+    line-height: 0;
+    overflow: hidden;
+    height: 50px;
+  }
+
+  .wave-svg {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: block;
+    width: 200%;
+    height: 100%;
+    will-change: transform;
+  }
+
+  .wave-svg--back {
+    animation: waveDriftBack 12s ease-in-out infinite;
+  }
+
+  .wave-svg--front {
+    animation: waveDriftFront 8s ease-in-out infinite;
+  }
+
+  @keyframes waveDriftFront {
+    0%, 100% { transform: translateX(0); }
+    50%      { transform: translateX(-25%); }
+  }
+
+  @keyframes waveDriftBack {
+    0%, 100% { transform: translateX(-10%); }
+    50%      { transform: translateX(-35%); }
+  }
+
+  @media (min-width: 640px) {
+    .wave-transition {
+      margin-top: -4rem;
+      height: 80px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .wave-transition {
+      margin-top: -5rem;
+      height: 110px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .wave-transition {
+      margin-top: -6rem;
+      height: 140px;
+    }
+  }
+</style>
