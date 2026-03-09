@@ -2770,8 +2770,9 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
             document.getElementById('ivaRate').value = quote.ivaRate || '19';
             document.getElementById('notes').value = quote.notes || '';
 
-            // Load items
-            items = quote.items ? quote.items.map(i => ({
+            // Load items - asignar IDs únicos si no existen
+            items = quote.items ? quote.items.map((i, index) => ({
+                id: i.id || Date.now() + index,
                 description: i.description || '',
                 quantity: i.quantity || 1,
                 unitPrice: i.unitPrice || 0,
