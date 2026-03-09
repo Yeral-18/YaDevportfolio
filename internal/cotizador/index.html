@@ -2597,27 +2597,61 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
         });
 
         // =====================================================
-        // SAVED QUOTES MANAGEMENT (LocalStorage)
+        // SAVED QUOTES MANAGEMENT (API MySQL)
         // =====================================================
 
-        const STORAGE_KEY = 'yadev_quotes';
+        const API_URL = 'api/cotizaciones.php';
         let currentQuoteId = null; // ID de la cotización siendo editada
+        let cachedQuotes = []; // Cache local de cotizaciones
 
-        // Get all saved quotes
-        function getSavedQuotes() {
-            const data = localStorage.getItem(STORAGE_KEY);
-            return data ? JSON.parse(data) : [];
+        // Get all saved quotes from API
+        async function getSavedQuotes() {
+            try {
+                const response = await fetch(API_URL);
+                if (!response.ok) throw new Error('Error al cargar cotizaciones');
+                cachedQuotes = await response.json();
+                // Convertir nombres de campos de snake_case a camelCase
+                cachedQuotes = cachedQuotes.map(q => ({
+                    id: q.id,
+                    quoteNumber: q.quote_number,
+                    clientName: q.client_name,
+                    clientEmail: q.client_email,
+                    clientPhone: q.client_phone,
+                    projectName: q.project_name,
+                    currency: q.currency,
+                    subtotal: parseFloat(q.subtotal),
+                    ivaRate: parseFloat(q.iva_rate),
+                    ivaAmount: parseFloat(q.iva_amount),
+                    includeIva: q.include_iva == 1,
+                    total: parseFloat(q.total),
+                    validityDays: parseInt(q.validity_days),
+                    notes: q.notes,
+                    createdAt: q.created_at,
+                    updatedAt: q.updated_at,
+                    items: (q.items || []).map(i => ({
+                        id: i.id,
+                        description: i.description,
+                        quantity: parseFloat(i.quantity),
+                        unitPrice: parseFloat(i.unit_price),
+                        subtotal: parseFloat(i.total)
+                    }))
+                }));
+                return cachedQuotes;
+            } catch (error) {
+                console.error('Error:', error);
+                showNotification('Error al cargar cotizaciones', 'error');
+                return [];
+            }
         }
 
-        // Save quotes to storage
-        function saveQuotesToStorage(quotes) {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(quotes));
-            updateSavedQuotesCount();
+        // Get cached quotes (sync version for compatibility)
+        function getCachedQuotes() {
+            return cachedQuotes;
         }
 
         // Update saved quotes count badge
-        function updateSavedQuotesCount() {
-            const quotes = getSavedQuotes();
+        async function updateSavedQuotesCount() {
+            const quotes = await getSavedQuotes();
             const countEl = document.getElementById('totalQuotesCount');
             if (countEl) countEl.textContent = quotes.length;
         }
@@ -2635,7 +2669,7 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
         }
 
         // Save current quote
-        function saveQuote() {
+        async function saveQuote() {
             if (items.length === 0) {
                 showNotification('Agrega al menos un item', 'error');
                 return;
@@ -2653,54 +2687,73 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
             const notes = document.getElementById('notes').value;
 
             const subtotal = items.reduce((sum, item) => sum + item.subtotal, 0);
-            const iva = includeIva ? subtotal * (ivaRate / 100) : 0;
-            const total = subtotal + iva;
+            const ivaAmount = includeIva ? subtotal * (ivaRate / 100) : 0;
+            const total = subtotal + ivaAmount;
 
             const quoteData = {
-                id: currentQuoteId || Date.now(),
                 quoteNumber,
                 clientName,
                 clientEmail,
                 clientPhone,
                 projectName,
-                validityDays,
+                validityDays: parseInt(validityDays),
                 currency,
-                includeIva,
+                includeIva: includeIva ? 1 : 0,
                 ivaRate,
+                ivaAmount,
                 notes,
-                items: [...items],
+                items: items.map(i => ({
+                    description: i.description,
+                    quantity: i.quantity,
+                    unitPrice: i.unitPrice,
+                    total: i.subtotal
+                })),
                 subtotal,
-                iva,
-                total,
-                createdAt: currentQuoteId ? undefined : new Date().toISOString(),
-                updatedAt: new Date().toISOString()
+                total
             };
 
-            const quotes = getSavedQuotes();
-
-            if (currentQuoteId) {
-                // Update existing
-                const index = quotes.findIndex(q => q.id === currentQuoteId);
-                if (index !== -1) {
-                    quoteData.createdAt = quotes[index].createdAt;
-                    quotes[index] = quoteData;
+            try {
+                let response;
+                if (currentQuoteId) {
+                    // Update existing
+                    response = await fetch(`${API_URL}?id=${currentQuoteId}`, {
+                        method: 'PUT',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(quoteData)
+                    });
+                } else {
+                    // Create new
+                    response = await fetch(API_URL, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(quoteData)
+                    });
                 }
-                showNotification('Cotizacion actualizada');
-            } else {
-                // Add new
-                quotes.unshift(quoteData);
-                currentQuoteId = quoteData.id;
-                showNotification('Cotizacion guardada');
+
+                const result = await response.json();
+
+                if (result.success) {
+                    if (!currentQuoteId) {
+                        currentQuoteId = result.id;
+                    }
+                    showNotification(currentQuoteId ? 'Cotizacion actualizada' : 'Cotizacion guardada');
+                    await updateSavedQuotesCount();
+                    showListView();
+                } else {
+                    throw new Error(result.error || 'Error al guardar');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showNotification('Error al guardar cotización', 'error');
             }
 
-            saveQuotesToStorage(quotes);
             updateSaveButton();
         }
 
         // Load quote into form
-        function loadQuote(id) {
-            const quotes = getSavedQuotes();
-            const quote = quotes.find(q => q.id === id);
+        async function loadQuote(id) {
+            const quotes = await getSavedQuotes();
+            const quote = quotes.find(q => q.id == id);
 
             if (!quote) return;
 
@@ -2717,67 +2770,107 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
             document.getElementById('notes').value = quote.notes || '';
 
             // Load items
-            items = quote.items ? [...quote.items] : [];
+            items = quote.items ? quote.items.map(i => ({
+                description: i.description,
+                quantity: i.quantity,
+                unitPrice: i.unitPrice,
+                subtotal: i.subtotal || (i.quantity * i.unitPrice)
+            })) : [];
             currentQuoteId = id;
 
             renderItems();
             updateTotals();
             updateSaveButton();
-            toggleQuotesPanel();
 
             showNotification('Cotizacion cargada');
         }
 
         // Delete quote
-        function deleteQuote(id) {
+        async function deleteQuote(id) {
             if (!confirm('¿Eliminar esta cotizacion?')) return;
 
-            let quotes = getSavedQuotes();
-            quotes = quotes.filter(q => q.id !== id);
-            saveQuotesToStorage(quotes);
+            try {
+                const response = await fetch(`${API_URL}?id=${id}`, {
+                    method: 'DELETE'
+                });
 
-            if (currentQuoteId === id) {
-                currentQuoteId = null;
-                updateSaveButton();
+                const result = await response.json();
+
+                if (result.success) {
+                    if (currentQuoteId == id) {
+                        currentQuoteId = null;
+                        updateSaveButton();
+                    }
+                    await renderQuotesTable();
+                    showNotification('Cotizacion eliminada');
+                } else {
+                    throw new Error(result.error);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showNotification('Error al eliminar', 'error');
             }
-
-            renderSavedQuotes();
-            showNotification('Cotizacion eliminada');
         }
 
         // Duplicate quote
-        function duplicateQuote(id) {
-            const quotes = getSavedQuotes();
-            const quote = quotes.find(q => q.id === id);
+        async function duplicateQuote(id) {
+            const quotes = await getSavedQuotes();
+            const quote = quotes.find(q => q.id == id);
 
             if (!quote) return;
 
-            // Generar nuevo número incremental
-            const today = new Date();
-            const day = today.getDate().toString().padStart(2, '0');
-            const month = (today.getMonth() + 1).toString().padStart(2, '0');
-            const consecutivo = getNextConsecutivo();
-            const newQuoteNumber = `COT-${day}${month}-${consecutivo}`;
+            try {
+                // Obtener nuevo número de cotización desde la API
+                const consResponse = await fetch('api/consecutivo.php');
+                const consData = await consResponse.json();
+                const newQuoteNumber = consData.quoteNumber;
 
-            const newQuote = {
-                ...quote,
-                id: Date.now(),
-                quoteNumber: newQuoteNumber,
-                createdAt: new Date().toISOString(),
-                updatedAt: new Date().toISOString()
-            };
+                const newQuoteData = {
+                    quoteNumber: newQuoteNumber,
+                    clientName: quote.clientName,
+                    clientEmail: quote.clientEmail,
+                    clientPhone: quote.clientPhone,
+                    projectName: quote.projectName,
+                    validityDays: quote.validityDays,
+                    currency: quote.currency,
+                    includeIva: quote.includeIva ? 1 : 0,
+                    ivaRate: quote.ivaRate,
+                    ivaAmount: quote.ivaAmount || 0,
+                    notes: quote.notes,
+                    items: quote.items.map(i => ({
+                        description: i.description,
+                        quantity: i.quantity,
+                        unitPrice: i.unitPrice,
+                        total: i.subtotal
+                    })),
+                    subtotal: quote.subtotal,
+                    total: quote.total
+                };
 
-            quotes.unshift(newQuote);
-            saveQuotesToStorage(quotes);
-            renderSavedQuotes();
-            renderQuotesTable();
-            showNotification('Cotizacion duplicada: ' + newQuoteNumber);
+                const response = await fetch(API_URL, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(newQuoteData)
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    await renderQuotesTable();
+                    showNotification('Cotizacion duplicada: ' + newQuoteNumber);
+                } else {
+                    throw new Error(result.error);
+                }
+            } catch (error) {
+                console.error('Error:', error);
+                showNotification('Error al duplicar', 'error');
+            }
         }
 
         // Render saved quotes list
-        function renderSavedQuotes() {
+        async function renderSavedQuotes() {
             const container = document.getElementById('quotesList');
-            const quotes = getSavedQuotes();
+            const quotes = await getSavedQuotes();
 
             if (quotes.length === 0) {
                 container.innerHTML = `
@@ -2786,7 +2879,7 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
                         </svg>
                         <p>No hay cotizaciones guardadas</p>
-                        <p style="font-size: 0.8125rem; margin-top: 0.5rem;">Las cotizaciones se guardan en este navegador</p>
+                        <p style="font-size: 0.8125rem; margin-top: 0.5rem;">Las cotizaciones se guardan en la base de datos</p>
                     </div>
                 `;
                 return;
@@ -2904,8 +2997,8 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
         }
 
         // Renderizar tabla de cotizaciones
-        function renderQuotesTable() {
-            const quotes = getSavedQuotes();
+        async function renderQuotesTable() {
+            const quotes = await getSavedQuotes();
             const tbody = document.getElementById('quotesTableBody');
             const emptyState = document.getElementById('quotesEmptyState');
             const tableWrapper = document.querySelector('.quotes-table-wrapper');
@@ -2965,100 +3058,26 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
         }
 
         // Editar cotización desde la lista
-        function editQuoteFromList(id) {
-            loadQuote(id);
+        async function editQuoteFromList(id) {
+            await loadQuote(id);
             showFormView();
         }
 
         // Generar PDF desde la lista
-        function generatePDFFromList(id) {
-            loadQuote(id);
+        async function generatePDFFromList(id) {
+            await loadQuote(id);
             setTimeout(() => {
                 generatePDF();
             }, 100);
         }
 
         // Eliminar cotización desde la lista
-        function deleteQuoteFromList(id) {
-            if (!confirm('¿Eliminar esta cotización?')) return;
-
-            let quotes = getSavedQuotes();
-            quotes = quotes.filter(q => q.id !== id);
-            saveQuotesToStorage(quotes);
-            renderQuotesTable();
-            showNotification('Cotización eliminada');
+        async function deleteQuoteFromList(id) {
+            await deleteQuote(id);
         }
 
-        // Modificar saveQuote para volver a la lista después de guardar
-        const originalSaveQuote = saveQuote;
-        saveQuote = function() {
-            if (items.length === 0) {
-                showNotification('Agrega al menos un item', 'error');
-                return;
-            }
-
-            const clientName = document.getElementById('clientName').value || 'Sin nombre';
-            const clientEmail = document.getElementById('clientEmail').value;
-            const clientPhone = document.getElementById('clientPhone').value;
-            const projectName = document.getElementById('projectName').value || 'Sin proyecto';
-            const quoteNumber = document.getElementById('quoteNumber').value;
-            const validityDays = document.getElementById('validityDays').value;
-            const currency = document.getElementById('currency').value;
-            const includeIva = document.getElementById('includeIva').checked;
-            const ivaRate = parseFloat(document.getElementById('ivaRate').value) || 0;
-            const notes = document.getElementById('notes').value;
-
-            const subtotal = items.reduce((sum, item) => sum + item.subtotal, 0);
-            const iva = includeIva ? subtotal * (ivaRate / 100) : 0;
-            const total = subtotal + iva;
-
-            const quoteData = {
-                id: currentQuoteId || Date.now(),
-                quoteNumber,
-                clientName,
-                clientEmail,
-                clientPhone,
-                projectName,
-                validityDays,
-                currency,
-                includeIva,
-                ivaRate,
-                notes,
-                items: [...items],
-                subtotal,
-                iva,
-                total,
-                createdAt: currentQuoteId ? undefined : new Date().toISOString(),
-                updatedAt: new Date().toISOString()
-            };
-
-            const quotes = getSavedQuotes();
-
-            if (currentQuoteId) {
-                const index = quotes.findIndex(q => q.id === currentQuoteId);
-                if (index !== -1) {
-                    quoteData.createdAt = quotes[index].createdAt;
-                    quotes[index] = quoteData;
-                }
-                showNotification('Cotización actualizada');
-            } else {
-                quotes.unshift(quoteData);
-                currentQuoteId = quoteData.id;
-                showNotification('Cotización guardada');
-            }
-
-            saveQuotesToStorage(quotes);
-            updateSaveButton();
-
-            // Volver a la lista después de guardar
-            setTimeout(() => {
-                showListView();
-                resetFormData();
-            }, 500);
-        };
-
         // Reset form data sin confirmación
-        function resetFormData() {
+        async function resetFormData() {
             currentQuoteId = null;
             items = [];
             document.getElementById('clientName').value = '';
@@ -3074,43 +3093,31 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
             updateSaveButton();
         }
 
-        // Obtener el siguiente consecutivo basado en cotizaciones existentes
-        function getNextConsecutivo() {
-            const quotes = getSavedQuotes();
-            let maxConsecutivo = 314; // Base inicial
-
-            // Buscar el consecutivo más alto en las cotizaciones guardadas
-            quotes.forEach(quote => {
-                if (quote.quoteNumber) {
-                    const match = quote.quoteNumber.match(/COT-\d{4}-(\d+)/);
-                    if (match) {
-                        const num = parseInt(match[1]);
-                        if (num > maxConsecutivo) {
-                            maxConsecutivo = num;
-                        }
-                    }
-                }
-            });
-
-            return maxConsecutivo + 1;
-        }
-
-        // Generar nuevo número de cotización (incremental)
-        function generateNewQuoteNumber() {
-            const today = new Date();
-            const day = today.getDate().toString().padStart(2, '0');
-            const month = (today.getMonth() + 1).toString().padStart(2, '0');
-            const consecutivo = getNextConsecutivo();
-            document.getElementById('quoteNumber').value = `COT-${day}${month}-${consecutivo}`;
-            return `COT-${day}${month}-${consecutivo}`;
+        // Generar nuevo número de cotización desde la API
+        async function generateNewQuoteNumber() {
+            try {
+                const response = await fetch('api/consecutivo.php');
+                const data = await response.json();
+                document.getElementById('quoteNumber').value = data.quoteNumber;
+                return data.quoteNumber;
+            } catch (error) {
+                console.error('Error al obtener consecutivo:', error);
+                // Fallback local
+                const today = new Date();
+                const day = today.getDate().toString().padStart(2, '0');
+                const month = (today.getMonth() + 1).toString().padStart(2, '0');
+                const fallback = `COT-${day}${month}-${Date.now().toString().slice(-3)}`;
+                document.getElementById('quoteNumber').value = fallback;
+                return fallback;
+            }
         }
 
         // Auto-generate quote number and load saved quotes count
-        document.addEventListener('DOMContentLoaded', () => {
-            generateNewQuoteNumber();
+        document.addEventListener('DOMContentLoaded', async () => {
+            await generateNewQuoteNumber();
 
             // Renderizar tabla de cotizaciones
-            renderQuotesTable();
+            await renderQuotesTable();
         });
     </script>
 </body>
