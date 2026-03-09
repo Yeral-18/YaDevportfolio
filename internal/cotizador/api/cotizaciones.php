@@ -96,10 +96,10 @@ function createCotizacion($conn) {
     try {
         $stmt = $conn->prepare("INSERT INTO cotizaciones
             (quote_number, client_name, client_email, client_phone, project_name,
-             currency, subtotal, iva_rate, iva_amount, include_iva, total, validity_days, notes)
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+             currency, subtotal, iva_rate, iva_amount, include_iva, total, validity_days, notes, payment_methods)
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
 
-        $stmt->bind_param("ssssssdddidis",
+        $stmt->bind_param("ssssssdddidiss",
             $data['quoteNumber'],
             $data['clientName'],
             $data['clientEmail'],
@@ -112,7 +112,8 @@ function createCotizacion($conn) {
             $data['includeIva'],
             $data['total'],
             $data['validityDays'],
-            $data['notes']
+            $data['notes'],
+            $data['paymentMethods']
         );
 
         $stmt->execute();
@@ -168,10 +169,10 @@ function updateCotizacion($conn, $id) {
         $stmt = $conn->prepare("UPDATE cotizaciones SET
             quote_number = ?, client_name = ?, client_email = ?, client_phone = ?,
             project_name = ?, currency = ?, subtotal = ?, iva_rate = ?,
-            iva_amount = ?, include_iva = ?, total = ?, validity_days = ?, notes = ?
+            iva_amount = ?, include_iva = ?, total = ?, validity_days = ?, notes = ?, payment_methods = ?
             WHERE id = ?");
 
-        $stmt->bind_param("ssssssdddidisi",
+        $stmt->bind_param("ssssssdddidissi",
             $data['quoteNumber'],
             $data['clientName'],
             $data['clientEmail'],
@@ -185,6 +186,7 @@ function updateCotizacion($conn, $id) {
             $data['total'],
             $data['validityDays'],
             $data['notes'],
+            $data['paymentMethods'],
             $id
         );
 

@@ -1218,6 +1218,31 @@
             margin-bottom: 1px;
         }
 
+        /* Medios de Pago */
+        .pdf-payment-methods {
+            background-color: #f0fdf4;
+            border: 1px solid #bbf7d0;
+            border-left: 3px solid #22c55e;
+            padding: 10px 12px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+
+        .pdf-payment-title {
+            font-size: 8pt;
+            font-weight: 700;
+            color: #166534;
+            margin-bottom: 6px;
+            text-transform: uppercase;
+        }
+
+        .pdf-payment-content {
+            font-size: 8pt;
+            color: #374151;
+            line-height: 1.5;
+            white-space: pre-line;
+        }
+
         /* Footer compacto */
         .pdf-footer-compact {
             margin-top: 12px;
@@ -1994,6 +2019,18 @@ Tiempo estimado de desarrollo: 2 a 3 semanas
 Incluye dominio y hosting por 1 ano
 Incluye acompanamiento en la publicacion del sitio</textarea>
                     </div>
+                    <div class="form-group" style="margin-top: 1rem;">
+                        <label for="paymentMethods">Medios de Pago</label>
+                        <textarea id="paymentMethods" rows="6" placeholder="Métodos de pago aceptados...">MEDIOS DE PAGO
+
+Transferencia Bancaria
+Banco Davivienda
+Cuenta de Ahorros No. 0550 4869 4696
+Titular: Yeral Andres Daza Castaneda
+CC. 1.098.822.027
+
+Nequi / Daviplata: 304 579 4564</textarea>
+                    </div>
                 </div>
             </div>
         </div>
@@ -2356,6 +2393,7 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
             const includeIva = document.getElementById('includeIva').checked;
             const ivaRate = parseFloat(document.getElementById('ivaRate').value) || 0;
             const notes = document.getElementById('notes').value;
+            const paymentMethods = document.getElementById('paymentMethods').value;
 
             const subtotal = items.reduce((sum, item) => sum + item.subtotal, 0);
             const iva = includeIva ? subtotal * (ivaRate / 100) : 0;
@@ -2452,6 +2490,14 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
                     <div class="pdf-observations">
                         <div class="pdf-observations-title">OBSERVACIONES</div>
                         <div class="pdf-observations-content">${formatNotesForPDF(notes)}</div>
+                    </div>
+                    ` : ''}
+
+                    <!-- Medios de Pago -->
+                    ${paymentMethods ? `
+                    <div class="pdf-payment-methods">
+                        <div class="pdf-payment-title">MEDIOS DE PAGO</div>
+                        <div class="pdf-payment-content">${paymentMethods}</div>
                     </div>
                     ` : ''}
 
@@ -2627,6 +2673,7 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
                     total: parseFloat(q.total),
                     validityDays: parseInt(q.validity_days),
                     notes: q.notes,
+                    paymentMethods: q.payment_methods,
                     createdAt: q.created_at,
                     updatedAt: q.updated_at,
                     items: (q.items || []).map(i => ({
@@ -2686,6 +2733,7 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
             const includeIva = document.getElementById('includeIva').checked;
             const ivaRate = parseFloat(document.getElementById('ivaRate').value) || 0;
             const notes = document.getElementById('notes').value;
+            const paymentMethods = document.getElementById('paymentMethods').value;
 
             const subtotal = items.reduce((sum, item) => sum + item.subtotal, 0);
             const ivaAmount = includeIva ? subtotal * (ivaRate / 100) : 0;
@@ -2703,6 +2751,7 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
                 ivaRate,
                 ivaAmount,
                 notes,
+                paymentMethods,
                 items: items.map(i => ({
                     description: i.description,
                     quantity: i.quantity,
@@ -2769,6 +2818,7 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
             document.getElementById('includeIva').checked = quote.includeIva !== false;
             document.getElementById('ivaRate').value = quote.ivaRate || '19';
             document.getElementById('notes').value = quote.notes || '';
+            document.getElementById('paymentMethods').value = quote.paymentMethods || '';
 
             // Load items - asignar IDs únicos si no existen
             items = quote.items ? quote.items.map((i, index) => ({
@@ -2839,6 +2889,7 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
                     ivaRate: quote.ivaRate,
                     ivaAmount: quote.ivaAmount || 0,
                     notes: quote.notes,
+                    paymentMethods: quote.paymentMethods,
                     items: quote.items.map(i => ({
                         description: i.description,
                         quantity: i.quantity,
