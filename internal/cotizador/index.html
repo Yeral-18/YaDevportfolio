@@ -2630,10 +2630,10 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
                     updatedAt: q.updated_at,
                     items: (q.items || []).map(i => ({
                         id: i.id,
-                        description: i.description,
-                        quantity: parseFloat(i.quantity),
-                        unitPrice: parseFloat(i.unit_price),
-                        subtotal: parseFloat(i.total)
+                        description: i.description || '',
+                        quantity: parseFloat(i.quantity) || 1,
+                        unitPrice: parseFloat(i.unit_price) || 0,
+                        subtotal: parseFloat(i.total) || 0
                     }))
                 }));
                 return cachedQuotes;
@@ -2771,10 +2771,10 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
 
             // Load items
             items = quote.items ? quote.items.map(i => ({
-                description: i.description,
-                quantity: i.quantity,
-                unitPrice: i.unitPrice,
-                subtotal: i.subtotal || (i.quantity * i.unitPrice)
+                description: i.description || '',
+                quantity: i.quantity || 1,
+                unitPrice: i.unitPrice || 0,
+                subtotal: i.subtotal || (i.quantity * i.unitPrice) || 0
             })) : [];
             currentQuoteId = id;
 
