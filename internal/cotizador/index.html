@@ -2144,10 +2144,11 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
 
         // Format currency
         function formatCurrency(amount, currency = 'COP') {
+            const value = amount || 0;
             if (currency === 'USD') {
-                return '$' + amount.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+                return '$' + value.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
             }
-            return '$' + amount.toLocaleString('es-CO');
+            return '$' + value.toLocaleString('es-CO');
         }
 
         // Show notification
@@ -2221,7 +2222,7 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
             editingId = id;
             document.getElementById('itemDesc').value = item.description;
             document.getElementById('itemQty').value = item.quantity;
-            document.getElementById('itemPrice').value = item.price;
+            document.getElementById('itemPrice').value = item.unitPrice;
 
             updateAddButton(true);
             document.getElementById('itemDesc').focus();
@@ -2304,7 +2305,7 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
                 <tr class="${editingId === item.id ? 'editing' : ''}">
                     <td>${item.description}</td>
                     <td class="text-center">${item.quantity}</td>
-                    <td class="text-right">${formatCurrency(item.price, currency)}</td>
+                    <td class="text-right">${formatCurrency(item.unitPrice, currency)}</td>
                     <td class="text-right">${formatCurrency(item.subtotal, currency)}</td>
                     <td>
                         <div class="action-buttons">
@@ -2418,7 +2419,7 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
                                     <tr>
                                         <td>${item.description}</td>
                                         <td class="text-center">${item.quantity}</td>
-                                        <td class="text-right">${formatCurrency(item.price, currency)}</td>
+                                        <td class="text-right">${formatCurrency(item.unitPrice, currency)}</td>
                                         <td class="text-right">${formatCurrency(item.subtotal, currency)}</td>
                                     </tr>
                                 `).join('')}
