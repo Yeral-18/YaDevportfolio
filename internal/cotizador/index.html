@@ -1771,7 +1771,7 @@
                 <div class="logo-text">YaDev <span>| Cotizador</span></div>
             </div>
             <div class="header-actions">
-                <button class="btn-new-quote" onclick="showFormView()" id="btnNewQuote">
+                <button class="btn-new-quote" onclick="newQuoteAndShowForm()" id="btnNewQuote">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"/>
                     </svg>
@@ -2186,7 +2186,7 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
                         id: editingId,
                         description: desc,
                         quantity: qty,
-                        price: price,
+                        unitPrice: price,
                         subtotal: qty * price
                     };
                 }
@@ -2199,7 +2199,7 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
                     id: Date.now(),
                     description: desc,
                     quantity: qty,
-                    price: price,
+                    unitPrice: price,
                     subtotal: qty * price
                 });
                 showNotification('Item agregado');
@@ -2995,6 +2995,25 @@ Incluye acompanamiento en la publicacion del sitio</textarea>
             document.getElementById('formView').style.display = 'block';
             document.getElementById('btnNewQuote').style.display = 'none';
             document.getElementById('btnBackList').style.display = 'flex';
+        }
+
+        // Nueva cotización y mostrar formulario
+        async function newQuoteAndShowForm() {
+            currentQuoteId = null;
+            items = [];
+            document.getElementById('clientName').value = '';
+            document.getElementById('clientEmail').value = '';
+            document.getElementById('clientPhone').value = '';
+            document.getElementById('projectName').value = '';
+            document.getElementById('validityDays').value = '15';
+            document.getElementById('ivaRate').value = '19';
+            document.getElementById('includeIva').checked = true;
+            document.getElementById('notes').value = '';
+            await generateNewQuoteNumber();
+            renderItems();
+            updateTotals();
+            updateSaveButton();
+            showFormView();
         }
 
         // Renderizar tabla de cotizaciones
