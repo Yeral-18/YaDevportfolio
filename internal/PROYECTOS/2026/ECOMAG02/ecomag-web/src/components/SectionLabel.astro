@@ -1,0 +1,47 @@
+---
+interface Props {
+  text: string;
+  align?: 'left' | 'center';
+}
+
+const { text, align = 'center' } = Astro.props;
+---
+
+<div class:list={['section-label', { 'section-label--center': align === 'center', 'section-label--left': align === 'left' }]}>
+  <span class="section-label__line" aria-hidden="true"></span>
+  <span class="section-label__text">{text}</span>
+</div>
+
+<style>
+  .section-label {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .section-label--center {
+    justify-content: center;
+  }
+
+  .section-label--left {
+    justify-content: flex-start;
+  }
+
+  .section-label__line {
+    display: block;
+    width: 2rem;
+    height: 2px;
+    border-radius: 1px;
+    background-color: var(--color-accent, #22c55e);
+  }
+
+  .section-label__text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--color-accent, #22c55e);
+    line-height: 1;
+  }
+</style>

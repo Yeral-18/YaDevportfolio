@@ -1,0 +1,51 @@
+---
+import Layout from '@layouts/Layout.astro';
+import Topbar from '@components/Topbar.astro';
+import Navbar from '@components/Navbar.astro';
+import Hero from '@components/Hero.svelte';
+import WaveTransition from '@components/WaveTransition.astro';
+import AboutUs from '@components/AboutUs.astro';
+
+import Services from '@components/Services.astro';
+import Projects from '@components/Projects.astro';
+import Contact from '@components/Contact.svelte';
+import Footer from '@components/Footer.astro';
+import WhatsAppButton from '@components/WhatsAppButton.svelte';
+import LeafCursor from '@components/LeafCursor.svelte';
+import ProgressBar from '@components/ProgressBar.svelte';
+import ScrollToTop from '@components/ScrollToTop.svelte';
+---
+
+<Layout
+  title="ECOMAG S.A.S — Soluciones Integrales en Obra Civil y Gestión Ambiental | Colombia"
+  description="ECOMAG S.A.S ofrece soluciones integrales en obra civil, gestión ambiental, mantenimiento industrial e ingeniería en toda Colombia. Certificados ISO 9001, 14001 y 45001."
+>
+  <ProgressBar client:load />
+
+  <!-- Skip to content link for accessibility -->
+  <a
+    href="#main-content"
+    class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[9999] focus:rounded-lg focus:bg-primary focus:px-4 focus:py-2 focus:text-white focus:outline-none focus:ring-2 focus:ring-accent"
+  >
+    Ir al contenido principal
+  </a>
+
+  <header>
+    <Topbar />
+    <Navbar />
+  </header>
+
+  <main id="main-content">
+    <Hero client:load />
+    <WaveTransition />
+    <AboutUs />
+    <Services />
+    <Projects />
+    <Contact client:visible />
+  </main>
+
+  <Footer />
+  <ScrollToTop client:idle />
+  <WhatsAppButton client:idle />
+  <LeafCursor client:idle />
+</Layout>

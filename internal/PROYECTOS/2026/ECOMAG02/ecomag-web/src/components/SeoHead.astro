@@ -1,0 +1,49 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  canonical?: string;
+  ogImage?: string;
+  type?: 'website' | 'article';
+}
+
+const siteUrl = 'https://ecomagsas.com';
+const siteName = 'ECOMAG S.A.S';
+
+const {
+  title = 'ECOMAG S.A.S | Obra Civil y Gestion Ambiental en Barrancabermeja',
+  description = 'Soluciones integrales en obra civil y gestion ambiental en Barrancabermeja, Santander. Certificados ISO 9001, ISO 14001 e ISO 45001.',
+  canonical,
+  ogImage = '/og-default.jpg',
+  type = 'website',
+} = Astro.props;
+
+const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
+const ogImageUrl = ogImage.startsWith('http') ? ogImage : new URL(ogImage, siteUrl).href;
+---
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalUrl} />
+<meta name="robots" content="index, follow" />
+<meta name="author" content={siteName} />
+
+<!-- Geo Tags -->
+<meta name="geo.region" content="CO-SAN" />
+<meta name="geo.placename" content="Barrancabermeja" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={ogImageUrl} />
+<meta property="og:locale" content="es_CO" />
+<meta property="og:site_name" content={siteName} />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImageUrl} />

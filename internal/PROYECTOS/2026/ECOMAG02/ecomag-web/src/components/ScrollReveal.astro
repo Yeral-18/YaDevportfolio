@@ -1,0 +1,99 @@
+---
+interface Props {
+  delay?: number;
+  threshold?: number;
+  once?: boolean;
+  class?: string;
+}
+
+const {
+  delay = 0,
+  threshold = 0.15,
+  once = true,
+  class: className = '',
+} = Astro.props;
+
+const id = `sr-${Math.random().toString(36).slice(2, 9)}`;
+---
+
+<div
+  id={id}
+  class:list={['scroll-reveal', className]}
+  data-sr-delay={delay}
+  data-sr-threshold={threshold}
+  data-sr-once={once}
+>
+  <slot />
+</div>
+
+<style>
+  .scroll-reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    will-change: opacity, transform;
+  }
+
+  .scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Respect reduced motion preference */
+  @media (prefers-reduced-motion: reduce) {
+    .scroll-reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+</style>
+
+<script>
+  function initScrollReveal() {
+    const elements = document.querySelectorAll<HTMLElement>('.scroll-reveal');
+
+    // If user prefers reduced motion, make everything visible immediately
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      elements.forEach((el) => el.classList.add('is-visible'));
+      return;
+    }
+
+    const observers = new Map<Element, IntersectionObserver>();
+
+    elements.forEach((el) => {
+      const delay = parseInt(el.dataset.srDelay || '0', 10);
+      const threshold = parseFloat(el.dataset.srThreshold || '0.15');
+      const once = el.dataset.srOnce !== 'false';
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              if (delay > 0) {
+                el.style.transitionDelay = `${delay}ms`;
+              }
+              el.classList.add('is-visible');
+
+              if (once) {
+                observer.unobserve(el);
+                observers.delete(el);
+              }
+            } else if (!once) {
+              el.classList.remove('is-visible');
+              el.style.transitionDelay = '0ms';
+            }
+          });
+        },
+        { threshold, rootMargin: '0px 0px -40px 0px' }
+      );
+
+      observer.observe(el);
+      observers.set(el, observer);
+    });
+  }
+
+  // Run on initial load and on Astro page transitions
+  initScrollReveal();
+  document.addEventListener('astro:after-swap', initScrollReveal);
+</script>
