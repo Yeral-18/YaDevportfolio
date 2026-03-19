@@ -1659,7 +1659,7 @@
       </p>
 
       <!-- Contact cards -->
-      <div class="reveal delay-3 grid grid-cols-1 sm:grid-cols-2 gap-4 mb-12">
+      <div class="reveal delay-3 grid grid-cols-1 max-w-md mx-auto gap-4 mb-12">
 
         <!-- WhatsApp -->
         <a href="https://wa.me/573004773174?text=Hola%2C%20quiero%20hablar%20sobre%20un%20proyecto%20web" target="_blank" rel="noopener"
@@ -1677,65 +1677,7 @@
           <svg class="ml-auto opacity-30 group-hover:opacity-70 transition-opacity" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H8M13 3V8" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </a>
 
-        <!-- Email -->
-        <a href="mailto:yadevsistem@gmail.com"
-           class="glass rounded-2xl p-6 flex items-center gap-4 hover:border-violet-500/40 transition-all duration-300 group text-left">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 transition-all group-hover:scale-110" style="background:rgba(99,102,241,0.12);border:1px solid rgba(99,102,241,0.2)">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-              <rect x="3" y="5" width="18" height="14" rx="2.5" stroke="#a5b4fc" stroke-width="1.5"/>
-              <path d="M3 8L12 13L21 8" stroke="#a5b4fc" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div>
-            <p class="text-zinc-500 text-xs font-medium uppercase tracking-wider mb-1">Email</p>
-            <p class="text-white font-display font-semibold text-base">yadevsistem@gmail.com</p>
-            <p class="text-zinc-500 text-xs mt-0.5">Para propuestas formales</p>
-          </div>
-          <svg class="ml-auto opacity-30 group-hover:opacity-70 transition-opacity" width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 13L13 3M13 3H8M13 3V8" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
 
-      </div>
-
-      <!-- Contact Form -->
-      <div class="reveal delay-3 glass rounded-2xl p-6 sm:p-8 mt-6 mb-8 text-left max-w-xl mx-auto">
-        <h3 class="text-white font-display font-bold text-lg mb-5">Envíanos tu proyecto</h3>
-        <form id="contact-form" class="space-y-4">
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-            <div>
-              <label class="block text-zinc-400 text-xs font-medium mb-1.5">Nombre *</label>
-              <input type="text" id="cf-name" required placeholder="Tu nombre"
-                class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:border-indigo-500/50 focus:outline-none transition-colors">
-            </div>
-            <div>
-              <label class="block text-zinc-400 text-xs font-medium mb-1.5">Email *</label>
-              <input type="email" id="cf-email" required placeholder="correo@ejemplo.com"
-                class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:border-indigo-500/50 focus:outline-none transition-colors">
-            </div>
-          </div>
-          <div>
-            <label class="block text-zinc-400 text-xs font-medium mb-1.5">Tipo de proyecto</label>
-            <select id="cf-type"
-              class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm focus:border-indigo-500/50 focus:outline-none transition-colors appearance-none"
-              style="background-image:url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2216%22 height=%2216%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%2371717a%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M6 9l6 6 6-6%22/%3E%3C/svg%3E');background-position:right 12px center;background-repeat:no-repeat;background-size:16px">
-              <option value="Sitio Web Corporativo" class="bg-zinc-900">Sitio Web Corporativo</option>
-              <option value="Aplicación Web" class="bg-zinc-900">Aplicación Web</option>
-              <option value="Plataforma / Sistema" class="bg-zinc-900">Plataforma / Sistema</option>
-              <option value="Business Intelligence" class="bg-zinc-900">Business Intelligence</option>
-              <option value="Branding & Identidad" class="bg-zinc-900">Branding &amp; Identidad</option>
-              <option value="Otro" class="bg-zinc-900">Otro</option>
-            </select>
-          </div>
-          <div>
-            <label class="block text-zinc-400 text-xs font-medium mb-1.5">Mensaje <span class="text-zinc-600">(opcional)</span></label>
-            <textarea id="cf-message" rows="3" placeholder="Cuéntanos sobre tu proyecto..."
-              class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:border-indigo-500/50 focus:outline-none transition-colors resize-none"></textarea>
-          </div>
-          <button type="submit" id="cf-submit" class="w-full btn-primary py-3">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 8L12 13L21 8"/></svg>
-            <span>Enviar Consulta</span>
-          </button>
-          <p id="cf-status" class="text-center text-sm hidden"></p>
-        </form>
       </div>
 
       <!-- Big CTA -->
@@ -1897,59 +1839,6 @@
 
     sections.forEach(s => sectionObserver.observe(s));
 
-    // ── Contact form → WhatsApp (no tokens exposed) ──────────────
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-      contactForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        const btn = document.getElementById('cf-submit');
-        const status = document.getElementById('cf-status');
-        const name = document.getElementById('cf-name').value.trim();
-        const email = document.getElementById('cf-email').value.trim();
-        const type = document.getElementById('cf-type').value;
-        const message = document.getElementById('cf-message').value.trim();
-
-        if (!name || !email) return;
-
-        btn.disabled = true;
-        btn.innerHTML = '<span>Enviando...</span>';
-
-        // Send via GitHub Issues API
-        const title = `Contacto: ${name} — ${type}`;
-        const body = `## Nueva Consulta desde YaDev Portfolio\n\n**Nombre:** ${name}\n**Email:** ${email}\n**Tipo de proyecto:** ${type}\n**Mensaje:** ${message || 'Sin mensaje adicional'}\n\n---\n*Enviado desde el formulario de contacto de yadev.co*`;
-
-        try {
-          const res = await fetch('https://api.github.com/repos/Yeral-18/YaDevportfolio/issues', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json',
-              'Authorization': 'Bearer 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'
-            },
-            body: JSON.stringify({ title, body, labels: ['contacto'] })
-          });
-
-          if (res.ok) {
-            status.textContent = '¡Mensaje enviado correctamente! Te contactaremos pronto.';
-            status.className = 'text-center text-sm text-green-400 mt-3';
-            status.classList.remove('hidden');
-            contactForm.reset();
-          } else {
-            throw new Error('API error');
-          }
-        } catch (err) {
-          // Fallback: open WhatsApp
-          const waMsg = encodeURIComponent(`*Contacto YaDev*\n\nNombre: ${name}\nEmail: ${email}\nTipo: ${type}\nMensaje: ${message || 'Sin mensaje'}`);
-          window.open(`https://wa.me/573004773174?text=${waMsg}`, '_blank');
-          status.textContent = 'Se abrió WhatsApp como alternativa.';
-          status.className = 'text-center text-sm text-amber-400 mt-3';
-          status.classList.remove('hidden');
-        }
-
-        btn.disabled = false;
-        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 8L12 13L21 8"/></svg><span>Enviar Consulta</span>';
-        setTimeout(() => { status.classList.add('hidden'); }, 6000);
-      });
-    }
   </script>
 
 </body>
