@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://multiserviciospj.com/sitemap-index.xml

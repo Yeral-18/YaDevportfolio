@@ -1,0 +1,393 @@
+---
+/**
+ * Projects — Featured Bento Grid Showcase
+ * MULTISERVICIOS P&J S.A.S
+ * Featured hero card + 3-column bento row, with gradient placeholders,
+ * SVG icons, pattern textures, and IntersectionObserver reveals.
+ */
+
+const featured = {
+  title: "UTCMM2",
+  category: "Izaje & Transporte",
+  description: "Movimiento de cargas, izaje, transporte y alquiler de maquinaria para proyectos de gran escala en el sector de transición energética.",
+  location: "Barrancabermeja, Colombia",
+  image: "/images/services/izaje.jpg",
+  badgeColor: "#0089D0",
+  icon: `<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v8m0 0l-3-3m3 3l3-3M4 14h16M6 14v6h12v-6M9 17h6"/></svg>`,
+};
+
+const projects = [
+  {
+    title: "Impulsa Social S.A.S",
+    category: "Transporte de Carga",
+    description: "Transporte de carga por carretera, movilización de equipos y logística integral para operaciones del sector energético.",
+    image: "/images/projects/transporte-proyecto.jpg",
+    badgeColor: "#0089D0",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>`,
+  },
+  {
+    title: "Ecomag S.A.S",
+    category: "Remediación Ambiental",
+    description: "Reforestación y remediación ambiental. Recuperación de cuerpos hídricos y ecosistemas a través de prácticas sostenibles.",
+    image: "/images/projects/ambiental-proyecto.jpg",
+    badgeColor: "#2E7D32",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 22c1.25-1.25 2.5-2 4-2 1.5 0 2.75.75 4 2"/><path d="M6 20V8"/><path d="M6 8c0-3 2-6 6-6 0 4-2 6-6 6z"/><path d="M6 12c0-2.5 2-5 5-5 0 3.5-2 5-5 5z"/></svg>`,
+  },
+  {
+    title: "Construagro Colombia S.A.S",
+    category: "Alquiler de Maquinaria",
+    description: "Alquiler de maquinaria pesada y equipos especializados para proyectos de construcción e infraestructura.",
+    image: "/images/projects/maquinaria-proyecto.jpg",
+    badgeColor: "#0089D0",
+    icon: `<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"><path d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085"/></svg>`,
+  },
+];
+---
+
+<section id="proyectos" class="bento-section">
+  <div class="bento-container">
+    <!-- Section Header -->
+    <div class="bento-header">
+      <span class="bento-label reveal">NUESTROS CLIENTES</span>
+      <h2 class="bento-heading reveal">Clientes que Confían en Nosotros</h2>
+    </div>
+
+    <!-- Bento Grid -->
+    <div class="bento-grid">
+      <!-- ROW 1: Featured Card (full width) -->
+      <article class="bento-featured reveal">
+        <div class="bento-featured__bg">
+          <img src={featured.image} alt={`Proyecto ${featured.title} - ${featured.category} en Barrancabermeja`} class="bento-bg-img" loading="lazy" width="1200" height="350" />
+          <!-- Bottom gradient overlay -->
+          <div class="bento-overlay"></div>
+        </div>
+        <!-- Badge -->
+        <span class="bento-badge" style={`background: ${featured.badgeColor};`}>
+          {featured.category}
+        </span>
+        <!-- Text content pinned bottom-left -->
+        <div class="bento-featured__content">
+          <h3 class="bento-featured__title">{featured.title}</h3>
+          <p class="bento-featured__desc">{featured.description}</p>
+          <span class="bento-location">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            {featured.location}
+          </span>
+        </div>
+      </article>
+
+      <!-- ROW 2: Three smaller cards -->
+      {projects.map((project, i) => (
+        <article class={`bento-card reveal reveal-delay-${i + 1}`}>
+          <div class="bento-card__bg">
+            <img src={project.image} alt={`Proyecto ${project.title} - ${project.category}`} class="bento-bg-img" loading="lazy" width="400" height="250" />
+            <div class="bento-overlay"></div>
+          </div>
+          <span class="bento-badge" style={`background: ${project.badgeColor};`}>
+            {project.category}
+          </span>
+          <div class="bento-card__content">
+            <h3 class="bento-card__title">{project.title}</h3>
+            <p class="bento-card__desc">{project.description}</p>
+          </div>
+        </article>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* ── Section ── */
+  .bento-section {
+    background: #F5F7FA;
+    padding: 3.5rem 1rem;
+  }
+
+  @media (min-width: 640px) {
+    .bento-section {
+      padding: 4rem 1.25rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .bento-section {
+      padding: 5rem 2rem;
+    }
+  }
+
+  .bento-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  /* ── Header ── */
+  .bento-header {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .bento-label {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #0089D0;
+    margin-bottom: 0.75rem;
+  }
+
+  .bento-heading {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: #1a1a2e;
+    line-height: 1.15;
+    margin: 0;
+  }
+
+  /* ── Grid ── */
+  .bento-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  @media (min-width: 768px) {
+    .bento-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+  }
+
+  /* ── Shared card base ── */
+  .bento-featured,
+  .bento-card {
+    position: relative;
+    border-radius: 1.25rem;
+    overflow: hidden;
+    cursor: default;
+    transition:
+      transform 0.4s cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  }
+
+  .bento-featured:hover,
+  .bento-card:hover {
+    transform: scale(1.018);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.16);
+  }
+
+  @media (hover: none) {
+    .bento-featured:hover,
+    .bento-card:hover {
+      transform: none;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    }
+  }
+
+  /* ── Featured card ── */
+  .bento-featured {
+    height: 300px;
+  }
+
+  @media (min-width: 768px) {
+    .bento-featured {
+      grid-column: 1 / -1;
+      height: 350px;
+    }
+  }
+
+  .bento-featured__bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .bento-featured__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 2rem 2rem 1.75rem;
+    z-index: 2;
+  }
+
+  .bento-featured__title {
+    font-size: clamp(1.35rem, 3vw, 1.75rem);
+    font-weight: 800;
+    color: #fff;
+    margin: 0 0 0.5rem;
+    line-height: 1.2;
+  }
+
+  .bento-featured__desc {
+    font-size: 0.925rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.55;
+    margin: 0 0 0.75rem;
+    max-width: 560px;
+  }
+
+  .bento-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+  }
+
+  /* ── Smaller cards ── */
+  .bento-card {
+    height: 250px;
+  }
+
+  @media (min-width: 768px) {
+    .bento-card {
+      height: 250px;
+    }
+  }
+
+  .bento-card__bg {
+    position: absolute;
+    inset: 0;
+  }
+
+  .bento-card__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.5rem;
+    z-index: 2;
+  }
+
+  .bento-card__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 0.35rem;
+    line-height: 1.25;
+  }
+
+  .bento-card__desc {
+    font-size: 0.825rem;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  /* ── Badge ── */
+  .bento-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 3;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0.3rem 0.75rem;
+    border-radius: 999px;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+
+  /* ── Background image ── */
+  .bento-bg-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .bento-featured:hover .bento-bg-img,
+  .bento-card:hover .bento-bg-img {
+    transform: scale(1.05);
+  }
+
+  @media (hover: none) {
+    .bento-featured:hover .bento-bg-img,
+    .bento-card:hover .bento-bg-img {
+      transform: none;
+    }
+  }
+
+  /* ── Overlay gradient (bottom) ── */
+  .bento-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
+      transparent 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  /* ── Reveal animations ── */
+  .reveal {
+    opacity: 0;
+    transform: translateY(32px);
+    transition:
+      opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.22s; }
+  .reveal-delay-3 { transition-delay: 0.34s; }
+
+  /* Better mobile touch targets and content */
+  @media (max-width: 640px) {
+    .bento-featured__content {
+      padding: 1.25rem;
+    }
+    .bento-featured__desc {
+      font-size: 0.85rem;
+    }
+    .bento-card__content {
+      padding: 1rem;
+    }
+    .bento-card__desc {
+      font-size: 0.78rem;
+      line-height: 1.45;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const reveals = document.querySelectorAll("#proyectos .reveal");
+    if (reveals.length === 0) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("revealed");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08, rootMargin: "0px 0px -60px 0px" }
+    );
+
+    reveals.forEach((el) => observer.observe(el));
+  });
+</script>

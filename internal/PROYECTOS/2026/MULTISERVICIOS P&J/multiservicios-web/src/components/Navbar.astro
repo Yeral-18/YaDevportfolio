@@ -1,0 +1,275 @@
+---
+/**
+ * Navbar - MULTISERVICIOS P&J S.A.S
+ * Fixed height. Two logo modes:
+ * - Transparent (over hero): text logo in white
+ * - Scrolled (white bg): real logo image
+ */
+
+const navLinks = [
+  { label: "Inicio", href: "#inicio" },
+  { label: "Nosotros", href: "#nosotros" },
+  { label: "Servicios", href: "#servicios" },
+  { label: "Proyectos", href: "#proyectos" },
+  { label: "Contacto", href: "#contacto" },
+];
+
+const basePath = import.meta.env.BASE_URL ?? "/";
+---
+
+<header
+  id="main-navbar"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-500"
+>
+  <nav aria-label="Navegación principal" class="section-container flex items-center justify-between" style="height: 72px;">
+    <!-- Logo area: fixed size, two versions -->
+    <a href="#inicio" class="flex items-center shrink-0 group" style="height: 72px;">
+      <img
+        src={`${basePath}logo.png`}
+        alt="Multiservicios P&J S.A.S - Transporte de carga y obras civiles en Barrancabermeja"
+        class="navbar-logo"
+        width="180"
+        height="56"
+        loading="eager"
+      />
+    </a>
+
+    <!-- Desktop Nav Links -->
+    <ul class="hidden lg:flex items-center gap-1">
+      {
+        navLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class="nav-link px-4 py-2 text-sm font-medium text-white/70 hover:text-white transition-colors duration-200"
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <!-- Right: CTA + Mobile Toggle -->
+    <div class="flex items-center gap-3">
+      <a
+        href="#contacto"
+        class="cta-btn hidden sm:inline-flex items-center gap-2 px-5 py-2 border border-white/30 text-white text-sm font-semibold transition-all duration-300 hover:bg-white hover:text-[#0089D0]"
+      >
+        Solicitar Cotización
+      </a>
+
+      <button
+        id="mobile-menu-toggle"
+        type="button"
+        class="lg:hidden relative w-11 h-11 flex items-center justify-center text-white transition-colors duration-200"
+        aria-label="Abrir menú de navegación"
+        aria-expanded="false"
+      >
+        <svg
+          id="menu-icon-open"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        >
+          <line x1="4" y1="7" x2="20" y2="7"></line>
+          <line x1="4" y1="17" x2="20" y2="17"></line>
+        </svg>
+        <svg
+          id="menu-icon-close"
+          xmlns="http://www.w3.org/2000/svg"
+          class="w-6 h-6 hidden"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+        >
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu Panel -->
+  <div
+    id="mobile-menu"
+    class="lg:hidden overflow-hidden max-h-0 transition-all duration-300 ease-in-out"
+  >
+    <div class="section-container py-4 space-y-1">
+      {
+        navLinks.map((link) => (
+          <a
+            href={link.href}
+            class="mobile-nav-link block px-4 py-3 text-sm font-medium text-white/80 hover:text-white hover:bg-white/10 transition-all duration-200"
+          >
+            {link.label}
+          </a>
+        ))
+      }
+      <div class="pt-3 px-4">
+        <a
+          href="#contacto"
+          class="flex items-center justify-center gap-2 w-full px-5 py-3 min-h-[48px] bg-[#0089D0] text-white text-sm font-semibold transition-all duration-200"
+        >
+          Solicitar Cotización
+        </a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<style>
+  #main-navbar {
+    background: transparent;
+  }
+
+  /* ── Scrolled: white background ── */
+  #main-navbar.scrolled {
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.06);
+  }
+
+  /* Logo */
+  .navbar-logo {
+    height: 3.5rem;
+    width: auto;
+    max-width: 180px;
+    object-fit: contain;
+    transition: filter 0.4s ease, drop-shadow 0.4s ease;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.3));
+  }
+
+  @media (min-width: 640px) {
+    .navbar-logo {
+      height: 4.5rem;
+      max-width: none;
+    }
+  }
+
+  #main-navbar.scrolled .navbar-logo {
+    filter: none;
+  }
+
+  /* Nav links */
+  #main-navbar.scrolled .nav-link {
+    color: rgba(55, 71, 79, 0.7);
+  }
+  #main-navbar.scrolled .nav-link:hover,
+  #main-navbar.scrolled .nav-link.active {
+    color: #0089D0;
+  }
+
+  /* CTA button */
+  #main-navbar.scrolled .cta-btn {
+    border-color: #0089D0;
+    color: #0089D0;
+  }
+  #main-navbar.scrolled .cta-btn:hover {
+    background: #0089D0;
+    color: white;
+  }
+
+  /* Mobile toggle */
+  #main-navbar.scrolled #mobile-menu-toggle {
+    color: #37474F;
+  }
+
+  /* Mobile menu bg */
+  #main-navbar.scrolled #mobile-menu {
+    background: white;
+  }
+  #main-navbar.scrolled .mobile-nav-link {
+    color: rgba(55, 71, 79, 0.8);
+  }
+  #main-navbar.scrolled .mobile-nav-link:hover {
+    color: #0089D0;
+    background: rgba(0, 137, 208, 0.05);
+  }
+
+  /* Active link */
+  .nav-link.active { color: white; font-weight: 600; }
+  #main-navbar.scrolled .nav-link.active { color: #0089D0; font-weight: 600; }
+
+  #mobile-menu.open { max-height: 400px; }
+
+  /* Mobile menu background when not scrolled (transparent navbar) */
+  #mobile-menu.open {
+    background: rgba(26, 35, 50, 0.95);
+    backdrop-filter: blur(12px);
+  }
+
+  #main-navbar.scrolled #mobile-menu.open {
+    background: white;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.getElementById("main-navbar");
+    const toggle = document.getElementById("mobile-menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const iconOpen = document.getElementById("menu-icon-open");
+    const iconClose = document.getElementById("menu-icon-close");
+    const mobileLinks = mobileMenu?.querySelectorAll(".mobile-nav-link");
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    let ticking = false;
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          if (window.scrollY > 80) {
+            navbar?.classList.add("scrolled");
+          } else {
+            navbar?.classList.remove("scrolled");
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+
+    let isOpen = false;
+    const setMenuState = (open: boolean) => {
+      isOpen = open;
+      mobileMenu?.classList.toggle("open", open);
+      iconOpen?.classList.toggle("hidden", open);
+      iconClose?.classList.toggle("hidden", !open);
+      toggle?.setAttribute("aria-expanded", String(open));
+    };
+
+    toggle?.addEventListener("click", () => setMenuState(!isOpen));
+    mobileLinks?.forEach((link) => {
+      link.addEventListener("click", () => setMenuState(false));
+    });
+
+    const sections = document.querySelectorAll("section[id]");
+    if (sections.length > 0) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const id = entry.target.getAttribute("id");
+              navLinks.forEach((link) => {
+                link.classList.toggle(
+                  "active",
+                  link.getAttribute("href") === `#${id}`
+                );
+              });
+            }
+          });
+        },
+        { rootMargin: "-40% 0px -60% 0px" }
+      );
+      sections.forEach((section) => observer.observe(section));
+    }
+  });
+</script>

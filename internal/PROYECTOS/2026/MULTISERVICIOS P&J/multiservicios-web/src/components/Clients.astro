@@ -1,0 +1,305 @@
+---
+/**
+ * Clients Section — "Clientes que Confían en Nosotros"
+ * Infinite auto-scrolling logo carousel — CSS-only, no JS dependencies
+ */
+
+const clients = [
+  {
+    name: 'Impulsa Social S.A.S',
+    industry: 'Transporte de carga por carretera',
+    initials: 'IS',
+    color: '#0089D0',
+    logo: '/images/clients/impulsa-social.png',
+  },
+  {
+    name: 'UTCMM2',
+    industry: 'Movimiento de cargas, Izaje, Transporte y Alquiler de Maquinaria',
+    initials: 'UT',
+    color: '#005B32',
+    logo: '/images/clients/utcmm2.png',
+  },
+  {
+    name: 'Ecomag S.A.S',
+    industry: 'Reforestación y Remediación Ambiental',
+    initials: 'EC',
+    color: '#8CC63F',
+    logo: '/images/clients/ecomag-logo.png',
+  },
+  {
+    name: 'Construagro Colombia S.A.S',
+    industry: 'Alquiler de Maquinaria',
+    initials: 'CA',
+    color: '#0089D0',
+    logo: '/images/clients/construagro.png',
+  },
+  {
+    name: 'Construcciones, Consultoría y Montajes J.R.S S.A.S',
+    industry: 'Construcción e Infraestructura',
+    initials: 'JR',
+    color: '#1a1a2e',
+    logo: '/images/clients/construcciones-jrs.png',
+  },
+];
+
+// Duplicate the array for seamless infinite loop
+const carouselClients = [...clients, ...clients];
+---
+
+<section id="proyectos" class="clients-section">
+  <div class="clients-container">
+
+    <!-- Header -->
+    <div class="clients-header">
+      <span class="clients-label">
+        <span class="clients-label-line"></span>
+        Nuestros Aliados
+        <span class="clients-label-line"></span>
+      </span>
+      <h2 class="clients-title">Clientes que Confían en Nosotros</h2>
+      <p class="clients-subtitle">
+        Empresas líderes del sector energético y de infraestructura en Colombia confían en nuestros servicios integrales.
+      </p>
+    </div>
+
+    <!-- Infinite Scrolling Carousel -->
+    <div class="carousel-wrapper">
+      <!-- Left fade mask -->
+      <div class="carousel-fade carousel-fade-left" aria-hidden="true"></div>
+
+      <!-- Scrolling track -->
+      <div class="carousel-viewport">
+        <div class="carousel-track">
+          {carouselClients.map((client, index) => (
+            <div class="client-card" aria-hidden={index >= clients.length ? "true" : undefined}>
+              <div class="client-logo-container">
+                <img
+                  src={client.logo}
+                  alt={`Logo de ${client.name}`}
+                  class="client-logo-img"
+                  loading="lazy"
+                  width="200"
+                  height="90"
+                />
+              </div>
+              <p class="client-name">{client.name}</p>
+              <p class="client-industry">{client.industry}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Right fade mask -->
+      <div class="carousel-fade carousel-fade-right" aria-hidden="true"></div>
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* ─── Section ─────────────────────────────────────────────── */
+  .clients-section {
+    padding: 5rem 0;
+    background: #f8fafb;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .clients-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  /* ─── Header ──────────────────────────────────────────────── */
+  .clients-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .clients-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0089D0;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 1rem;
+  }
+
+  .clients-label-line {
+    width: 32px;
+    height: 2px;
+    background: #8CC63F;
+    border-radius: 2px;
+  }
+
+  .clients-title {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 800;
+    color: #1a1a2e;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .clients-subtitle {
+    font-size: 1rem;
+    color: #6b7280;
+    max-width: 560px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ─── Carousel Wrapper ────────────────────────────────────── */
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+  }
+
+  /* Fade edge masks */
+  .carousel-fade {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 140px;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  .carousel-fade-left {
+    left: 0;
+    background: linear-gradient(to right, #f8fafb 0%, transparent 100%);
+  }
+
+  .carousel-fade-right {
+    right: 0;
+    background: linear-gradient(to left, #f8fafb 0%, transparent 100%);
+  }
+
+  /* Viewport clips overflow */
+  .carousel-viewport {
+    overflow: hidden;
+    width: 100%;
+    padding: 1rem 0 1.5rem;
+  }
+
+  /* ─── Scrolling Track ─────────────────────────────────────── */
+  .carousel-track {
+    display: flex;
+    gap: 1.5rem;
+    width: max-content;
+    animation: carousel-scroll 25s linear infinite;
+  }
+
+  .carousel-track:hover {
+    animation-play-state: paused;
+  }
+
+  /* Keyframes: move exactly half (the duplicated set) to create seamless loop */
+  @keyframes carousel-scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* ─── Individual Card ─────────────────────────────────────── */
+  .client-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    padding: 24px 32px;
+    text-align: center;
+    flex-shrink: 0;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.3s ease;
+    cursor: default;
+  }
+
+  .client-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 48px rgba(0, 137, 208, 0.13);
+    border-color: #0089D030;
+  }
+
+  /* ─── Logo Container ──────────────────────────────────────── */
+  .client-logo-container {
+    width: 200px;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .client-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    image-rendering: -webkit-optimize-contrast;
+    display: block;
+  }
+
+  /* ─── Card Text ───────────────────────────────────────────── */
+  .client-name {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.3;
+    max-width: 200px;
+  }
+
+  .client-industry {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #9ca3af;
+    line-height: 1.4;
+    max-width: 200px;
+  }
+
+  /* ─── Mobile ──────────────────────────────────────────────── */
+  @media (max-width: 640px) {
+    .clients-section {
+      padding: 3.5rem 0;
+    }
+
+    .carousel-track {
+      gap: 1rem;
+      animation-duration: 20s;
+    }
+
+    .client-card {
+      padding: 18px 20px;
+    }
+
+    .client-logo-container {
+      width: 160px;
+      height: 70px;
+    }
+
+    .client-name {
+      font-size: 0.82rem;
+      max-width: 160px;
+    }
+
+    .client-industry {
+      font-size: 0.7rem;
+      max-width: 160px;
+    }
+
+    .carousel-fade {
+      width: 60px;
+    }
+  }
+</style>

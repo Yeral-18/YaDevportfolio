@@ -1,0 +1,318 @@
+---
+import '../styles/global.css';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+}
+
+const {
+  title,
+  description = 'Empresa de ingeniería en Barrancabermeja, Santander. Transporte de carga, obras civiles, izaje de cargas pesadas, remediación ambiental, alquiler de maquinaria y paneles solares fotovoltaicos. Certificados ISO 9001, ISO 14001, ISO 45001. Colombia.',
+  ogImage = '/og-default.jpg',
+  canonical,
+} = Astro.props;
+
+const siteUrl = 'https://multiserviciospj.com';
+const canonicalUrl = canonical || new URL(Astro.url.pathname, siteUrl).href;
+const ogImageUrl = new URL(ogImage, siteUrl).href;
+
+const localBusinessJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  '@id': `${siteUrl}/#localbusiness`,
+  name: 'MULTISERVICIOS P&J S.A.S',
+  alternateName: 'Multiservicios PYJ',
+  description: 'Empresa de ingeniería en Barrancabermeja, Santander, Colombia. Servicios integrales de transporte de carga, obras civiles, remediación ambiental, izaje de cargas pesadas, alquiler de maquinaria y transición energética con paneles solares fotovoltaicos. Certificados ISO 9001, ISO 14001, ISO 45001.',
+  url: siteUrl,
+  logo: `${siteUrl}/logo.png`,
+  image: ogImageUrl,
+  telephone: '+573204464553',
+  email: 'multiserviciospjsas@gmail.com',
+  priceRange: '$$',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Corregimiento El Llanito',
+    addressLocality: 'Barrancabermeja',
+    addressRegion: 'Santander',
+    postalCode: '687001',
+    addressCountry: 'CO',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 7.0653,
+    longitude: -73.8547,
+  },
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '07:00',
+      closes: '17:00',
+    },
+  ],
+  sameAs: [],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Servicios Integrales',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Transporte de Carga por Carretera' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Obras Civiles y Mantenimiento Locativo' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Movimiento de Carga - Izaje' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Remediación Ambiental' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Transición Energética - Paneles Solares' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Alquiler de Maquinaria Pesada' } },
+    ],
+  },
+  areaServed: {
+    '@type': 'GeoCircle',
+    geoMidpoint: { '@type': 'GeoCoordinates', latitude: 7.0653, longitude: -73.8547 },
+    geoRadius: '200000',
+  },
+};
+
+const organizationJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
+  name: 'MULTISERVICIOS P&J S.A.S',
+  url: siteUrl,
+  logo: `${siteUrl}/logo.png`,
+  description: 'Empresa colombiana de servicios integrales en transporte de carga, obras civiles, remediación ambiental y transición energética.',
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+573204464553',
+    contactType: 'customer service',
+    areaServed: 'CO',
+    availableLanguage: 'Spanish',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Corregimiento El Llanito',
+    addressLocality: 'Barrancabermeja',
+    addressRegion: 'Santander',
+    postalCode: '687001',
+    addressCountry: 'CO',
+  },
+  sameAs: [],
+};
+
+const webpageJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': `${canonicalUrl}#webpage`,
+  url: canonicalUrl,
+  name: title,
+  description,
+  isPartOf: { '@id': `${siteUrl}/#website` },
+  about: { '@id': `${siteUrl}/#organization` },
+  inLanguage: 'es-CO',
+};
+
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: '¿Qué servicios de transporte de carga ofrece Multiservicios P&J en Barrancabermeja?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Multiservicios P&J S.A.S ofrece soluciones integrales de transporte de carga por carretera en Barrancabermeja, Santander y toda Colombia. Contamos con flota certificada para la movilización de equipos pesados, maquinaria industrial y materiales de construcción para el sector de transición energética.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Dónde puedo contratar obras civiles y mantenimiento locativo en Santander?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Multiservicios P&J S.A.S ejecuta obras civiles y mantenimiento locativo en edificaciones en Barrancabermeja, Santander y el Magdalena Medio. Ofrecemos construcción, remodelación y mantenimiento de infraestructura bajo los más altos estándares de calidad ISO 9001.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Qué empresa ofrece remediación ambiental en Colombia?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Multiservicios P&J S.A.S es una empresa certificada ISO 14001 que ofrece servicios de remediación ambiental en Barrancabermeja y toda Colombia. Realizamos recuperación de cuerpos hídricos, reforestación y retiro de material contaminante de ecosistemas ambientales.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Quién instala paneles solares fotovoltaicos en Barrancabermeja?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Multiservicios P&J S.A.S ofrece servicios de transición energética incluyendo la instalación de paneles solares fotovoltaicos en Barrancabermeja, Santander. Contribuimos al desarrollo de energías renovables y la reducción de la huella de carbono en la región del Magdalena Medio.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Dónde alquilar maquinaria pesada en Barrancabermeja?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Multiservicios P&J S.A.S ofrece alquiler de maquinaria pesada y equipos de construcción en Barrancabermeja y Santander. Contamos con excavadoras, retroexcavadoras, grúas y equipos certificados para proyectos de ingeniería civil y transición energética.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: '¿Qué empresa ofrece servicios de izaje y levantamiento de cargas en Santander?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Multiservicios P&J S.A.S ofrece servicios especializados de movimiento de carga e izaje en Barrancabermeja, Santander. Realizamos levantamiento de cargas pesadas con grúas y equipos certificados bajo normas ISO 45001 de seguridad y salud en el trabajo.',
+      },
+    },
+  ],
+};
+
+const serviceProvider = {
+  '@type': 'LocalBusiness',
+  name: 'Multiservicios P&J S.A.S',
+  '@id': `${siteUrl}/#localbusiness`,
+};
+
+const serviceArea = {
+  '@type': 'State',
+  name: 'Santander, Colombia',
+};
+
+const servicesJsonLd = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Transporte de Carga por Carretera',
+    provider: serviceProvider,
+    areaServed: serviceArea,
+    description: 'Solución integral en la movilización de carga por carretera de diferentes equipos en Barrancabermeja y Santander. Flota certificada para transporte de equipos pesados, maquinaria industrial y materiales de construcción.',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Obras Civiles y Mantenimiento Locativo',
+    provider: serviceProvider,
+    areaServed: serviceArea,
+    description: 'Ejecución de obras civiles, construcción, remodelación y mantenimiento locativo en edificaciones en Barrancabermeja, Santander y el Magdalena Medio. Certificación ISO 9001.',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Movimiento de Carga - Izaje',
+    provider: serviceProvider,
+    areaServed: serviceArea,
+    description: 'Servicios especializados de movimiento de carga e izaje con grúas y equipos certificados en Barrancabermeja, Santander. Levantamiento de cargas pesadas bajo normas ISO 45001.',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Remediación Ambiental',
+    provider: serviceProvider,
+    areaServed: serviceArea,
+    description: 'Servicios de remediación ambiental, recuperación de cuerpos hídricos, reforestación y retiro de material contaminante en Barrancabermeja y toda Colombia. Certificación ISO 14001.',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Transición Energética - Paneles Solares Fotovoltaicos',
+    provider: serviceProvider,
+    areaServed: serviceArea,
+    description: 'Instalación de paneles solares fotovoltaicos y soluciones de transición energética en Barrancabermeja, Santander. Energías renovables para reducción de huella de carbono.',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    serviceType: 'Alquiler de Maquinaria Pesada',
+    provider: serviceProvider,
+    areaServed: serviceArea,
+    description: 'Alquiler de maquinaria pesada y equipos de construcción en Barrancabermeja y Santander. Excavadoras, retroexcavadoras, grúas y equipos certificados para ingeniería civil.',
+  },
+];
+
+const breadcrumbJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Inicio', item: `${siteUrl}/` },
+    { '@type': 'ListItem', position: 2, name: 'Servicios', item: `${siteUrl}/#servicios` },
+    { '@type': 'ListItem', position: 3, name: 'Contacto', item: `${siteUrl}/#contacto` },
+  ],
+};
+---
+
+<!doctype html>
+<html lang="es-CO" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonicalUrl} />
+
+    <!-- Geo meta tags -->
+    <meta name="geo.region" content="CO-SAN" />
+    <meta name="geo.placename" content="Barrancabermeja" />
+    <meta name="geo.position" content="7.0653;-73.8547" />
+    <meta name="ICBM" content="7.0653, -73.8547" />
+
+    <!-- Additional SEO meta -->
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+    <meta name="author" content="MULTISERVICIOS P&J S.A.S" />
+    <meta name="keywords" content="transporte de carga Barrancabermeja, obras civiles Santander, remediación ambiental Colombia, transición energética, izaje, alquiler maquinaria pesada, paneles solares, ISO 9001, ISO 14001, ISO 45001, Multiservicios P&J" />
+
+    <!-- Preconnect hints -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Preload hero background image for LCP -->
+    <link rel="preload" as="image" href="/hero-bg.jpg" type="image/jpeg" fetchpriority="high" />
+
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImageUrl} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content="MULTISERVICIOS P&J S.A.S" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImageUrl} />
+
+    <!-- Structured Data: LocalBusiness -->
+    <script type="application/ld+json" set:html={JSON.stringify(localBusinessJsonLd)} />
+    <!-- Structured Data: Organization -->
+    <script type="application/ld+json" set:html={JSON.stringify(organizationJsonLd)} />
+    <!-- Structured Data: WebPage -->
+    <script type="application/ld+json" set:html={JSON.stringify(webpageJsonLd)} />
+    <!-- Structured Data: FAQPage -->
+    <script type="application/ld+json" set:html={JSON.stringify(faqJsonLd)} />
+    <!-- Structured Data: Individual Services -->
+    {servicesJsonLd.map((service) => (
+      <script type="application/ld+json" set:html={JSON.stringify(service)} />
+    ))}
+    <!-- Structured Data: BreadcrumbList -->
+    <script type="application/ld+json" set:html={JSON.stringify(breadcrumbJsonLd)} />
+
+    <!-- Google reCAPTCHA v3 (invisible bot detection) -->
+    <!-- TODO: Replace the TEST key below with your real site key from https://www.google.com/recaptcha/admin -->
+    <!-- The test key (6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI) always passes — it is for development only. -->
+    <script src="https://www.google.com/recaptcha/api.js?render=6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" defer></script>
+
+  </head>
+  <body class="min-h-screen bg-light font-body text-dark antialiased">
+    <slot />
+  </body>
+</html>

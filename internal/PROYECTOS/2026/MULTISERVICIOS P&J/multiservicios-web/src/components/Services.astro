@@ -1,0 +1,531 @@
+---
+const services = [
+  {
+    number: '01',
+    title: 'Transporte de Carga por Carretera',
+    description: 'Servicio de transporte de carga por carretera en Barrancabermeja, Santander y toda Colombia. Contamos con una flota certificada para la movilización segura de equipos, materiales y maquinaria pesada para el sector energético e industrial.',
+    image: '/images/services/transporte.jpg',
+    icon: `<svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+    </svg>`,
+  },
+  {
+    number: '02',
+    title: 'Obras Civiles y Mantenimiento Locativo',
+    description: 'Ejecución de obras civiles, construcción y mantenimiento locativo de edificaciones en Santander y el Magdalena Medio. Desarrollamos proyectos de infraestructura con los más altos estándares de calidad y seguridad certificada.',
+    image: '/images/services/obras-civiles.jpg',
+    icon: `<svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M2 22h20M6 22V6l6-4 6 4v16M10 22v-4h4v4M10 10h.01M14 10h.01M10 14h.01M14 14h.01" />
+    </svg>`,
+  },
+  {
+    number: '03',
+    title: 'Movimiento de Carga - Izaje',
+    description: 'Levantamiento de cargas pesadas con grúas y equipos certificados para proyectos industriales en Barrancabermeja y Colombia. Operaciones de izaje seguro y eficiente con personal capacitado y maquinaria especializada.',
+    image: '/images/services/izaje.jpg',
+    icon: `<svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 2v8m0 0l-3-3m3 3l3-3M4 14h16M6 14v6h12v-6M9 17h6" />
+    </svg>`,
+  },
+  {
+    number: '04',
+    title: 'Remediación Ambiental',
+    description: 'Servicios de remediación ambiental en Colombia: recuperación de cuerpos hídricos, restauración de ecosistemas, reforestación y retiro de material contaminante. Gestión ambiental integral certificada bajo ISO 14001 en Santander y el Magdalena Medio.',
+    image: '/images/services/remediacion.jpg',
+    icon: `<svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M2 22c1.25-1.25 2.5-2 4-2 1.5 0 2.75.75 4 2" />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 20V8" />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 8c0-3 2-6 6-6 0 4-2 6-6 6z" />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 12c0-2.5 2-5 5-5 0 3.5-2 5-5 5z" />
+    </svg>`,
+  },
+  {
+    number: '05',
+    title: 'Transición Energética',
+    description: 'Instalación de paneles solares fotovoltaicos y soluciones de energía renovable en Colombia. Impulsamos la transición energética empresarial con proyectos sostenibles que reducen costos operativos y la huella de carbono.',
+    image: '/images/services/transicion-energetica.jpg',
+    icon: `<svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <circle cx="12" cy="12" r="5" />
+      <path stroke-linecap="round" stroke-linejoin="round" d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
+    </svg>`,
+  },
+  {
+    number: '06',
+    title: 'Alquiler de Maquinaria',
+    description: 'Alquiler de maquinaria pesada y equipos de construcción en Barrancabermeja y Santander. Disponemos de retroexcavadoras, volquetas, grúas y equipos especializados para proyectos de infraestructura y operaciones industriales.',
+    image: '/images/services/maquinaria.jpg',
+    icon: `<svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M11.42 15.17L17.25 21A2.652 2.652 0 0021 17.25l-5.877-5.877M11.42 15.17l2.496-3.03c.317-.384.74-.626 1.208-.766M11.42 15.17l-4.655 5.653a2.548 2.548 0 11-3.586-3.586l6.837-5.63m5.108-.233c.55-.164 1.163-.188 1.743-.14a4.5 4.5 0 004.486-6.336l-3.276 3.277a3.004 3.004 0 01-2.25-2.25l3.276-3.276a4.5 4.5 0 00-6.336 4.486c.091 1.076-.071 2.264-.904 2.95l-.102.085" />
+    </svg>`,
+  },
+];
+---
+
+<section id="servicios" class="services-section">
+  <!-- Logo watermark -->
+  <img
+    src={`${import.meta.env.BASE_URL ?? '/'}logo.png`}
+    alt=""
+    aria-hidden="true"
+    class="services-watermark"
+    loading="lazy"
+  />
+  <div class="services-container">
+    <!-- Header - Left aligned -->
+    <div class="services-header">
+      <span class="services-label">
+        <span class="services-label__line" aria-hidden="true"></span>
+        <span class="services-label__text">NUESTROS SERVICIOS</span>
+      </span>
+      <h2 class="services-heading">
+        Servicios Integrales de Ingeniería<br />en Barrancabermeja y Colombia
+      </h2>
+      <p class="services-description">
+        Ofrecemos un portafolio completo de servicios de transporte de carga,
+        obras civiles, remediación ambiental y transición energética en Santander.
+        Calidad, seguridad y sostenibilidad certificadas bajo ISO 9001, ISO 14001
+        e ISO 45001.
+      </p>
+    </div>
+
+    <!-- Zigzag Service Rows -->
+    <div class="services-rows">
+      {services.map((service, i) => {
+        const isEven = i % 2 === 1;
+        const direction = isEven ? 'row-reverse' : 'row-normal';
+        const slideFrom = isEven ? 'slide-from-right' : 'slide-from-left';
+        return (
+          <div
+            class={`service-row ${direction} ${slideFrom}`}
+            data-index={i}
+            style="opacity: 0; will-change: transform, opacity;"
+          >
+            {/* Visual side */}
+            <div class="service-visual-side">
+              <div class="service-image-card">
+                <img
+                  src={`${import.meta.env.BASE_URL ?? '/multiservicios/'}${service.image.replace(/^\//, '')}`}
+                  alt={`${service.title} - Multiservicios P&J Barrancabermeja`}
+                  class="service-image"
+                  loading="lazy"
+                  width="400"
+                  height="300"
+                />
+                <div class="service-image-overlay" aria-hidden="true"></div>
+                <div class="service-image-icon-pill">
+                  <Fragment set:html={service.icon} />
+                </div>
+              </div>
+            </div>
+
+            {/* Text side */}
+            <div class="service-text-side">
+              <span class="service-number">{service.number}</span>
+              <h3 class="service-title">{service.title}</h3>
+              <p class="service-desc">{service.description}</p>
+              <a href="#contacto" class="service-link" aria-label={`Solicitar cotización de ${service.title}`}>
+                Solicitar cotización
+                <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                </svg>
+              </a>
+            </div>
+
+            {/* Divider */}
+            {i < services.length - 1 && (
+              <div class="row-divider" aria-hidden="true" />
+            )}
+          </div>
+        );
+      })}
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Section */
+  .services-section {
+    background-color: #ffffff;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .services-watermark {
+    position: absolute;
+    right: -20px;
+    bottom: 10%;
+    height: 200px;
+    opacity: 0.04;
+    mix-blend-mode: multiply;
+    filter: grayscale(1);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 5rem 1.25rem;
+  }
+
+  @media (min-width: 640px) {
+    .services-container {
+      padding: 6rem 2rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .services-container {
+      padding: 7rem 2rem;
+    }
+  }
+
+  /* Header - Left aligned */
+  .services-header {
+    max-width: 560px;
+    margin-bottom: 4rem;
+  }
+
+  @media (min-width: 1024px) {
+    .services-header {
+      margin-bottom: 5rem;
+    }
+  }
+
+  .services-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .services-label__line {
+    display: block;
+    width: 2rem;
+    height: 2px;
+    border-radius: 1px;
+    background-color: #8CC63F;
+  }
+
+  .services-label__text {
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: #0089D0;
+    line-height: 1;
+  }
+
+  .services-heading {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.15;
+    color: #005B32;
+    margin-top: 1rem;
+    letter-spacing: -0.02em;
+  }
+
+  @media (min-width: 640px) {
+    .services-heading {
+      font-size: 2.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .services-heading {
+      font-size: 3rem;
+    }
+  }
+
+  .services-description {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #607D8B;
+    margin-top: 1rem;
+  }
+
+  /* Service Rows */
+  .services-rows {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .service-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 2.5rem 0;
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    .service-row {
+      flex-direction: row;
+      gap: 3rem;
+      padding: 3.5rem 0;
+    }
+
+    .service-row.row-reverse {
+      flex-direction: row-reverse;
+    }
+
+    .service-row.row-normal {
+      flex-direction: row;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .service-row {
+      gap: 4rem;
+      padding: 4rem 0;
+    }
+  }
+
+  /* Divider between rows */
+  .row-divider {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 800px;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(0, 137, 208, 0.15) 20%,
+      rgba(0, 137, 208, 0.15) 80%,
+      transparent 100%
+    );
+  }
+
+  /* Visual Side */
+  .service-visual-side {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  @media (min-width: 768px) {
+    .service-visual-side {
+      width: 40%;
+      flex-shrink: 0;
+    }
+  }
+
+  /* Image Card */
+  .service-image-card {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 4 / 3;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s cubic-bezier(0.34, 1.3, 0.64, 1),
+                box-shadow 0.4s ease;
+  }
+
+  .service-row:hover .service-image-card {
+    transform: scale(1.02);
+    box-shadow: 0 20px 60px -15px rgba(0, 0, 0, 0.3);
+  }
+
+  .service-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .service-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      to bottom,
+      transparent 40%,
+      rgba(0, 0, 0, 0.45) 100%
+    );
+    pointer-events: none;
+  }
+
+  .service-image-icon-pill {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 9999px;
+    background: rgba(255, 255, 255, 0.95);
+    color: #0089D0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(4px);
+    z-index: 2;
+  }
+
+  /* Text Side */
+  .service-text-side {
+    width: 100%;
+    text-align: center;
+  }
+
+  @media (min-width: 768px) {
+    .service-text-side {
+      width: 60%;
+      text-align: left;
+    }
+  }
+
+  .service-number {
+    display: block;
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: rgba(0, 91, 50, 0.06);
+    line-height: 1;
+    letter-spacing: -0.04em;
+    margin-bottom: 0.25rem;
+    user-select: none;
+  }
+
+  @media (min-width: 640px) {
+    .service-number {
+      font-size: 4.5rem;
+    }
+  }
+
+  .service-title {
+    font-size: 1.375rem;
+    font-weight: 700;
+    color: #005B32;
+    margin-bottom: 0.75rem;
+    line-height: 1.3;
+  }
+
+  @media (min-width: 640px) {
+    .service-title {
+      font-size: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .service-title {
+      font-size: 1.75rem;
+    }
+  }
+
+  .service-desc {
+    font-size: 0.9375rem;
+    line-height: 1.75;
+    color: #607D8B;
+    max-width: 480px;
+  }
+
+  @media (max-width: 767px) {
+    .service-desc {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+    margin-top: 1.25rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #0089D0;
+    text-decoration: none;
+    transition: color 0.2s ease, gap 0.3s ease;
+  }
+
+  .service-link:hover {
+    color: #0089D0;
+    gap: 0.625rem;
+  }
+
+  .service-link svg {
+    transition: transform 0.3s ease;
+  }
+
+  .service-link:hover svg {
+    transform: translateX(3px);
+  }
+
+  /* Scroll Reveal Animations */
+  .service-row.slide-from-left.revealed {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+    transition: opacity 0.7s cubic-bezier(0, 0, 0.2, 1),
+                transform 0.7s cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  .service-row.slide-from-right.revealed {
+    opacity: 1 !important;
+    transform: translate3d(0, 0, 0) !important;
+    transition: opacity 0.7s cubic-bezier(0, 0, 0.2, 1),
+                transform 0.7s cubic-bezier(0, 0, 0.2, 1);
+  }
+
+  .service-row.slide-from-left:not(.revealed) {
+    transform: translate3d(-40px, 20px, 0);
+  }
+
+  .service-row.slide-from-right:not(.revealed) {
+    transform: translate3d(40px, 20px, 0);
+  }
+
+  /* On mobile, only use vertical slide to prevent horizontal overflow */
+  @media (max-width: 640px) {
+    .service-row.slide-from-left:not(.revealed),
+    .service-row.slide-from-right:not(.revealed) {
+      transform: translate3d(0, 30px, 0);
+    }
+  }
+
+  /* Disable motion for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    .service-row {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+  }
+
+  /* Disable hover lift on touch devices */
+  @media (hover: none) {
+    .service-row:hover .service-image-card {
+      transform: none;
+      box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.2);
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const rows = document.querySelectorAll<HTMLElement>('.service-row');
+    if (!rows.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const row = entry.target as HTMLElement;
+            const index = parseInt(row.dataset.index || '0', 10);
+            setTimeout(() => {
+              row.classList.add('revealed');
+            }, index * 150);
+            observer.unobserve(row);
+          }
+        });
+      },
+      { threshold: 0.15, rootMargin: '0px 0px -50px 0px' }
+    );
+
+    rows.forEach((row) => observer.observe(row));
+  });
+</script>
