@@ -1,0 +1,540 @@
+/* ============================================
+   Template: Inmobiliaria Elegant
+   Navy + gold luxury variant
+   Premium real estate aesthetic
+   ============================================ */
+
+/* ===== VARIABLES ===== */
+.template-inmobiliaria-elegant {
+    --navy: #1B2A4A;
+    --navy-mid: #253D6B;
+    --navy-deep: #0F1A30;
+    --gold: #C9A96E;
+    --gold-light: #E8C98A;
+    --gold-pale: rgba(201, 169, 110, 0.12);
+    --white: #FFFFFF;
+    --off-white: #F7F8FA;
+    --gray-cool: #94A3B8;
+    --border: #E2E8F0;
+    --border-gold: rgba(201, 169, 110, 0.3);
+    --shadow-navy: rgba(15, 26, 48, 0.12);
+    --shadow-gold: rgba(201, 169, 110, 0.20);
+}
+
+/* ===== BASE ===== */
+.template-inmobiliaria-elegant,
+.template-inmobiliaria-elegant body {
+    background: var(--white) !important;
+    color: var(--navy) !important;
+    font-family: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* ===== NAVBAR ===== */
+.template-inmobiliaria-elegant .navbar-animated {
+    background: transparent !important;
+    border-bottom: none !important;
+    box-shadow: none !important;
+    transition: all 0.4s ease !important;
+}
+
+.template-inmobiliaria-elegant .navbar-animated.scrolled {
+    background: rgba(255, 255, 255, 0.97) !important;
+    border-bottom: 1px solid var(--border-gold) !important;
+    box-shadow: 0 4px 40px var(--shadow-navy) !important;
+}
+
+.template-inmobiliaria-elegant .navbar-animated a {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 400 !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+}
+
+.template-inmobiliaria-elegant .navbar-animated.scrolled a {
+    color: var(--navy) !important;
+}
+
+.template-inmobiliaria-elegant .navbar-animated a:hover {
+    color: var(--gold) !important;
+}
+
+.template-inmobiliaria-elegant .navbar-animated.scrolled a:hover {
+    color: var(--gold) !important;
+}
+
+.template-inmobiliaria-elegant .navbar-animated .btn-primary {
+    background: transparent !important;
+    color: var(--gold) !important;
+    border: 1.5px solid var(--gold) !important;
+    border-radius: 0.25rem !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    padding: 0.5rem 1.5rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-inmobiliaria-elegant .navbar-animated .btn-primary:hover {
+    background: var(--gold) !important;
+    color: var(--navy) !important;
+}
+
+/* ===== DROPDOWN ===== */
+.template-inmobiliaria-elegant .group .absolute,
+.template-inmobiliaria-elegant nav .absolute {
+    background: var(--white) !important;
+    border: 1px solid var(--border) !important;
+    border-top: 2px solid var(--gold) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 20px 60px var(--shadow-navy) !important;
+}
+
+.template-inmobiliaria-elegant .group .absolute a,
+.template-inmobiliaria-elegant nav .absolute a {
+    color: var(--navy) !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.5px !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.template-inmobiliaria-elegant .group .absolute a:hover,
+.template-inmobiliaria-elegant nav .absolute a:hover {
+    background: var(--off-white) !important;
+    color: var(--gold) !important;
+    padding-left: 1.75rem !important;
+}
+
+/* ===== HERO ===== */
+.template-inmobiliaria-elegant #inicio {
+    background: var(--navy-deep) !important;
+    min-height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-inmobiliaria-elegant #inicio::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 70% 50%, rgba(201, 169, 110, 0.08) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(15, 26, 48, 0.2) 0%, rgba(15, 26, 48, 0.7) 100%);
+    z-index: 0;
+}
+
+.template-inmobiliaria-elegant #inicio::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    z-index: 2;
+}
+
+.template-inmobiliaria-elegant #inicio h1 {
+    color: #FFFFFF !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-size: clamp(3rem, 7vw, 6.5rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.02em !important;
+    position: relative;
+    z-index: 1;
+}
+
+.template-inmobiliaria-elegant #inicio h1 span {
+    color: var(--gold) !important;
+    font-style: italic !important;
+}
+
+.template-inmobiliaria-elegant #inicio p {
+    color: rgba(255, 255, 255, 0.60) !important;
+    font-size: 1rem !important;
+    line-height: 1.85 !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.25px !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== STATS ===== */
+.template-inmobiliaria-elegant .stat-card {
+    background: var(--white) !important;
+    border: 1px solid var(--border-gold) !important;
+    border-top: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 2.5rem 2rem !important;
+    position: relative;
+}
+
+.template-inmobiliaria-elegant .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 2rem;
+    right: 2rem;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.template-inmobiliaria-elegant .stat-card .text-4xl,
+.template-inmobiliaria-elegant .stat-card .text-3xl {
+    color: var(--navy) !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-size: 4rem !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+}
+
+.template-inmobiliaria-elegant .stat-card p {
+    color: var(--gray-cool) !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+}
+
+/* ===== SECCIONES ===== */
+.template-inmobiliaria-elegant section {
+    padding: 8rem 0 !important;
+}
+
+.template-inmobiliaria-elegant section:nth-child(even) {
+    background: var(--off-white) !important;
+}
+
+.template-inmobiliaria-elegant section:nth-child(odd) {
+    background: var(--white) !important;
+}
+
+/* ===== TITULOS ===== */
+.template-inmobiliaria-elegant section h2 {
+    color: var(--navy) !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-size: clamp(2.25rem, 4.5vw, 4rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.1 !important;
+    margin-bottom: 0.75rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+.template-inmobiliaria-elegant section h2 span {
+    color: var(--gold) !important;
+    font-style: italic !important;
+}
+
+.template-inmobiliaria-elegant section h2::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 1px;
+    background: var(--gold);
+    margin-top: 1.5rem;
+}
+
+/* ===== CARDS ===== */
+.template-inmobiliaria-elegant .bg-white.rounded-2xl {
+    background: var(--white) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease !important;
+    position: relative;
+    overflow: visible !important;
+}
+
+.template-inmobiliaria-elegant .bg-white.rounded-2xl::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.35s ease;
+}
+
+.template-inmobiliaria-elegant .bg-white.rounded-2xl:hover::after {
+    width: 100%;
+}
+
+.template-inmobiliaria-elegant .bg-white.rounded-2xl:hover {
+    box-shadow: 0 8px 40px var(--shadow-navy) !important;
+    transform: translateY(-2px) !important;
+}
+
+.template-inmobiliaria-elegant .bg-white.rounded-2xl h3 {
+    color: var(--navy) !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-weight: 600 !important;
+    font-size: 1.5rem !important;
+}
+
+/* ===== ICONOS ===== */
+.template-inmobiliaria-elegant .service-type {
+    background: var(--gold-pale) !important;
+    border: 1px solid var(--border-gold) !important;
+    border-radius: 0 !important;
+    width: 60px !important;
+    height: 60px !important;
+}
+
+.template-inmobiliaria-elegant .service-type svg {
+    color: var(--gold) !important;
+}
+
+/* ===== BOTONES ===== */
+.template-inmobiliaria-elegant .btn-primary,
+.template-inmobiliaria-elegant .btn-shine {
+    background: var(--navy) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-weight: 400 !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+    padding: 1rem 3rem !important;
+    transition: all 0.3s ease !important;
+    font-family: 'Nunito Sans', sans-serif !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-inmobiliaria-elegant .btn-primary::after,
+.template-inmobiliaria-elegant .btn-shine::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.template-inmobiliaria-elegant .btn-primary:hover::after,
+.template-inmobiliaria-elegant .btn-shine:hover::after {
+    transform: scaleX(1);
+}
+
+.template-inmobiliaria-elegant .btn-primary:hover,
+.template-inmobiliaria-elegant .btn-shine:hover {
+    background: var(--navy-mid) !important;
+}
+
+.template-inmobiliaria-elegant .btn-secondary {
+    background: transparent !important;
+    color: var(--navy) !important;
+    border: 1px solid var(--navy) !important;
+    border-radius: 0 !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.template-inmobiliaria-elegant .team-card {
+    background: var(--white) !important;
+    border: none !important;
+    border-bottom: 2px solid var(--gold) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.template-inmobiliaria-elegant .team-card__image {
+    border-radius: 0 !important;
+    border: none !important;
+}
+
+.template-inmobiliaria-elegant .team-card__name {
+    color: var(--navy) !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-weight: 600 !important;
+    font-size: 1.375rem !important;
+}
+
+.template-inmobiliaria-elegant .team-card__position {
+    color: var(--gold) !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.template-inmobiliaria-elegant #testimonios .grid > div,
+.template-inmobiliaria-elegant .testimonial-card {
+    background: var(--off-white) !important;
+    border: none !important;
+    border-left: 2px solid var(--gold) !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    padding: 2.5rem !important;
+}
+
+.template-inmobiliaria-elegant #testimonios .text-5xl {
+    color: var(--gold) !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-size: 6rem !important;
+    line-height: 0.5 !important;
+    opacity: 0.6 !important;
+}
+
+.template-inmobiliaria-elegant #testimonios p {
+    color: var(--navy) !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+    font-style: italic !important;
+    font-size: 1.125rem !important;
+}
+
+/* ===== FORMULARIO ===== */
+.template-inmobiliaria-elegant form {
+    background: var(--white) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 4px 40px var(--shadow-navy) !important;
+}
+
+.template-inmobiliaria-elegant input,
+.template-inmobiliaria-elegant textarea,
+.template-inmobiliaria-elegant select {
+    background: var(--off-white) !important;
+    border: none !important;
+    border-bottom: 1px solid var(--border) !important;
+    border-radius: 0 !important;
+    color: var(--navy) !important;
+    font-family: 'Nunito Sans', sans-serif !important;
+    padding: 0.875rem 0 !important;
+}
+
+.template-inmobiliaria-elegant input:focus,
+.template-inmobiliaria-elegant textarea:focus,
+.template-inmobiliaria-elegant select:focus {
+    border-bottom-color: var(--gold) !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background: var(--white) !important;
+}
+
+.template-inmobiliaria-elegant label {
+    color: var(--gray-cool) !important;
+    font-weight: 600 !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+}
+
+/* ===== CTA ===== */
+.template-inmobiliaria-elegant .cta-section,
+.template-inmobiliaria-elegant #contacto {
+    background: var(--navy-deep) !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-inmobiliaria-elegant .cta-section::before,
+.template-inmobiliaria-elegant #contacto::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.template-inmobiliaria-elegant .cta-section h2,
+.template-inmobiliaria-elegant #contacto h2 {
+    color: #FFFFFF !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
+}
+
+.template-inmobiliaria-elegant .cta-section h2 span {
+    color: var(--gold) !important;
+    font-style: italic !important;
+}
+
+.template-inmobiliaria-elegant .cta-section h2::after {
+    background: var(--gold);
+    opacity: 0.5;
+}
+
+/* ===== FOOTER ===== */
+.template-inmobiliaria-elegant footer {
+    background: var(--navy-deep) !important;
+    border-top: 1px solid rgba(201, 169, 110, 0.2) !important;
+    border-radius: 0 !important;
+}
+
+.template-inmobiliaria-elegant footer h4 {
+    color: var(--gold) !important;
+    font-family: 'Nunito Sans', sans-serif !important;
+    font-size: 0.6875rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 3px !important;
+    text-transform: uppercase !important;
+}
+
+.template-inmobiliaria-elegant footer a {
+    color: rgba(255, 255, 255, 0.40) !important;
+    font-size: 0.875rem !important;
+    font-weight: 300 !important;
+}
+
+.template-inmobiliaria-elegant footer a:hover {
+    color: var(--gold) !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-inmobiliaria-elegant .scroll-progress {
+    background: var(--gold) !important;
+    height: 1px !important;
+}
+
+/* ===== ANIMACIONES ===== */
+.template-inmobiliaria-elegant .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.template-inmobiliaria-elegant .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.template-inmobiliaria-elegant .reveal.delay-1 { transition-delay: 0.1s; }
+.template-inmobiliaria-elegant .reveal.delay-2 { transition-delay: 0.2s; }
+.template-inmobiliaria-elegant .reveal.delay-3 { transition-delay: 0.3s; }
+.template-inmobiliaria-elegant .reveal.delay-4 { transition-delay: 0.4s; }
+
+/* ===== SCROLLBAR ===== */
+.template-inmobiliaria-elegant ::-webkit-scrollbar {
+    width: 4px;
+    background: var(--white);
+}
+
+.template-inmobiliaria-elegant ::-webkit-scrollbar-thumb {
+    background: rgba(201, 169, 110, 0.4);
+}
+
+/* ===== SELECTION ===== */
+.template-inmobiliaria-elegant ::selection {
+    background: rgba(201, 169, 110, 0.2);
+    color: var(--navy);
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .template-inmobiliaria-elegant * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
+}

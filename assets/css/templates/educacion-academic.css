@@ -1,0 +1,469 @@
+/* ============================================
+   Template: Educacion Academic
+   Institutional blue + green academic variant
+   Trustworthy, structured, scholarly feel
+   ============================================ */
+
+/* ===== VARIABLES ===== */
+.template-educacion-academic {
+    --acad-navy: #1A365D;
+    --acad-navy-mid: #2A4A80;
+    --acad-navy-deep: #0F2444;
+    --acad-green: #38A169;
+    --acad-green-dark: #2F8558;
+    --acad-amber: #D69E2E;
+    --acad-bg: #F0F7FF;
+    --acad-surface: #FFFFFF;
+    --acad-surface-blue: #EBF4FF;
+    --acad-text: #1A202C;
+    --acad-text-mid: #4A5568;
+    --acad-text-soft: #718096;
+    --acad-border: #BEE3F8;
+    --acad-border-navy: rgba(26, 54, 93, 0.15);
+    --acad-shadow: rgba(26, 54, 93, 0.10);
+    --acad-shadow-green: rgba(56, 161, 105, 0.12);
+}
+
+/* ===== BASE ===== */
+.template-educacion-academic,
+.template-educacion-academic body {
+    background: var(--acad-bg) !important;
+    color: var(--acad-text) !important;
+    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* ===== NAVBAR ===== */
+.template-educacion-academic .navbar-animated {
+    background: var(--acad-navy) !important;
+    border-bottom: none !important;
+    box-shadow: 0 2px 16px rgba(15, 36, 68, 0.25) !important;
+}
+
+.template-educacion-academic .navbar-animated.scrolled {
+    background: var(--acad-navy-deep) !important;
+}
+
+.template-educacion-academic .navbar-animated a {
+    color: rgba(255, 255, 255, 0.80) !important;
+    font-weight: 400 !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.25px !important;
+}
+
+.template-educacion-academic .navbar-animated a:hover {
+    color: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.08) !important;
+}
+
+.template-educacion-academic .navbar-animated .btn-primary {
+    background: var(--acad-green) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 0.375rem !important;
+    font-weight: 700 !important;
+    font-size: 0.875rem !important;
+}
+
+/* ===== DROPDOWN ===== */
+.template-educacion-academic .group .absolute,
+.template-educacion-academic nav .absolute {
+    background: var(--acad-surface) !important;
+    border: 1px solid var(--acad-border) !important;
+    border-top: 3px solid var(--acad-green) !important;
+    border-radius: 0 0 0.75rem 0.75rem !important;
+    box-shadow: 0 16px 48px var(--acad-shadow) !important;
+}
+
+.template-educacion-academic .group .absolute a,
+.template-educacion-academic nav .absolute a {
+    color: var(--acad-text) !important;
+    border-bottom: 1px solid var(--acad-border) !important;
+}
+
+.template-educacion-academic .group .absolute a:hover,
+.template-educacion-academic nav .absolute a:hover {
+    background: var(--acad-surface-blue) !important;
+    color: var(--acad-navy) !important;
+}
+
+/* ===== HERO ===== */
+.template-educacion-academic #inicio {
+    background: var(--acad-navy) !important;
+    min-height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-educacion-academic #inicio::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(135deg, rgba(26, 54, 93, 0.0) 40%, rgba(56, 161, 105, 0.12) 100%),
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 60px,
+            rgba(255, 255, 255, 0.02) 60px,
+            rgba(255, 255, 255, 0.02) 61px
+        ),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 60px,
+            rgba(255, 255, 255, 0.02) 60px,
+            rgba(255, 255, 255, 0.02) 61px
+        );
+    z-index: 0;
+}
+
+.template-educacion-academic #inicio::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: linear-gradient(90deg, var(--acad-navy-mid) 0%, var(--acad-green) 50%, var(--acad-amber) 100%);
+    z-index: 2;
+}
+
+.template-educacion-academic #inicio h1 {
+    color: #FFFFFF !important;
+    font-family: 'Merriweather', Georgia, serif !important;
+    font-size: clamp(2.25rem, 5.5vw, 5rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.01em !important;
+    position: relative;
+    z-index: 1;
+}
+
+.template-educacion-academic #inicio h1 span {
+    color: var(--acad-green) !important;
+}
+
+.template-educacion-academic #inicio p {
+    color: rgba(255, 255, 255, 0.68) !important;
+    font-size: 1.0625rem !important;
+    line-height: 1.85 !important;
+    font-weight: 300 !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== STATS ===== */
+.template-educacion-academic .stat-card {
+    background: var(--acad-surface) !important;
+    border: none !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 6px 28px var(--acad-shadow) !important;
+    padding: 2rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-educacion-academic .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(180deg, var(--acad-navy), var(--acad-green));
+}
+
+.template-educacion-academic .stat-card .text-4xl,
+.template-educacion-academic .stat-card .text-3xl {
+    color: var(--acad-navy) !important;
+    font-family: 'Merriweather', Georgia, serif !important;
+    font-weight: 700 !important;
+    font-size: 3rem !important;
+}
+
+.template-educacion-academic .stat-card p {
+    color: var(--acad-text-soft) !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+}
+
+/* ===== SECCIONES ===== */
+.template-educacion-academic section {
+    padding: 6rem 0 !important;
+}
+
+.template-educacion-academic section:nth-child(even) {
+    background: var(--acad-surface-blue) !important;
+}
+
+.template-educacion-academic section:nth-child(odd) {
+    background: var(--acad-bg) !important;
+}
+
+/* ===== TITULOS ===== */
+.template-educacion-academic section h2 {
+    color: var(--acad-navy) !important;
+    font-family: 'Merriweather', Georgia, serif !important;
+    font-size: clamp(1.875rem, 3.5vw, 3rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.template-educacion-academic section h2 span {
+    color: var(--acad-green) !important;
+}
+
+.template-educacion-academic section h2::after {
+    content: '';
+    display: block;
+    width: 4rem;
+    height: 4px;
+    background: linear-gradient(90deg, var(--acad-navy), var(--acad-green));
+    border-radius: 2px;
+    margin-top: 1rem;
+}
+
+/* ===== CARDS ===== */
+.template-educacion-academic .bg-white.rounded-2xl {
+    background: var(--acad-surface) !important;
+    border: 1px solid var(--acad-border) !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 4px 20px var(--acad-shadow) !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-educacion-academic .bg-white.rounded-2xl:hover {
+    transform: translateY(-5px) !important;
+    border-color: var(--acad-navy) !important;
+    box-shadow: 0 16px 44px var(--acad-shadow) !important;
+}
+
+.template-educacion-academic .bg-white.rounded-2xl h3 {
+    color: var(--acad-navy) !important;
+    font-family: 'Merriweather', Georgia, serif !important;
+    font-weight: 700 !important;
+    font-size: 1.125rem !important;
+}
+
+/* ===== ICONOS ===== */
+.template-educacion-academic .service-type {
+    background: rgba(26, 54, 93, 0.08) !important;
+    border: 2px solid var(--acad-border) !important;
+    border-radius: 1rem !important;
+    width: 64px !important;
+    height: 64px !important;
+}
+
+.template-educacion-academic .service-type svg {
+    color: var(--acad-navy) !important;
+}
+
+/* ===== BOTONES ===== */
+.template-educacion-academic .btn-primary,
+.template-educacion-academic .btn-shine {
+    background: var(--acad-navy) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    font-weight: 700 !important;
+    font-size: 0.9375rem !important;
+    padding: 0.875rem 2.25rem !important;
+    transition: all 0.25s ease !important;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.template-educacion-academic .btn-primary:hover,
+.template-educacion-academic .btn-shine:hover {
+    background: var(--acad-navy-mid) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 24px var(--acad-shadow) !important;
+}
+
+.template-educacion-academic .btn-secondary {
+    background: var(--acad-green) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    font-weight: 700 !important;
+}
+
+.template-educacion-academic .btn-secondary:hover {
+    background: var(--acad-green-dark) !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.template-educacion-academic #testimonios .grid > div,
+.template-educacion-academic .testimonial-card {
+    background: var(--acad-surface) !important;
+    border: 1px solid var(--acad-border) !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 4px 20px var(--acad-shadow) !important;
+}
+
+.template-educacion-academic #testimonios .text-5xl {
+    color: var(--acad-navy) !important;
+    opacity: 0.2 !important;
+}
+
+.template-educacion-academic #testimonios p {
+    color: var(--acad-text-mid) !important;
+    font-size: 1rem !important;
+    line-height: 1.75 !important;
+}
+
+/* ===== FORMULARIO ===== */
+.template-educacion-academic form {
+    background: var(--acad-surface) !important;
+    border: 1px solid var(--acad-border) !important;
+    border-radius: 1.25rem !important;
+    box-shadow: 0 8px 40px var(--acad-shadow) !important;
+}
+
+.template-educacion-academic input,
+.template-educacion-academic textarea,
+.template-educacion-academic select {
+    background: var(--acad-bg) !important;
+    border: 1.5px solid var(--acad-border) !important;
+    border-radius: 0.5rem !important;
+    color: var(--acad-text) !important;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+.template-educacion-academic input:focus,
+.template-educacion-academic textarea:focus,
+.template-educacion-academic select:focus {
+    border-color: var(--acad-navy) !important;
+    box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.12) !important;
+    outline: none !important;
+}
+
+.template-educacion-academic label {
+    color: var(--acad-text) !important;
+    font-weight: 700 !important;
+    font-size: 0.875rem !important;
+}
+
+/* ===== CTA ===== */
+.template-educacion-academic .cta-section,
+.template-educacion-academic #contacto {
+    background: linear-gradient(135deg, var(--acad-navy) 0%, var(--acad-navy-deep) 100%) !important;
+    border-radius: 1.5rem !important;
+    margin: 0 2rem !important;
+}
+
+.template-educacion-academic .cta-section h2,
+.template-educacion-academic #contacto h2 {
+    color: #FFFFFF !important;
+    font-family: 'Merriweather', Georgia, serif !important;
+}
+
+.template-educacion-academic .cta-section h2 span {
+    color: var(--acad-amber) !important;
+}
+
+.template-educacion-academic .cta-section h2::after {
+    background: var(--acad-green) !important;
+}
+
+/* ===== FOOTER ===== */
+.template-educacion-academic footer {
+    background: var(--acad-navy-deep) !important;
+    border-top: 4px solid var(--acad-green) !important;
+    border-radius: 0 !important;
+}
+
+.template-educacion-academic footer h4 {
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+}
+
+.template-educacion-academic footer a {
+    color: rgba(255, 255, 255, 0.50) !important;
+    font-size: 0.875rem !important;
+    font-weight: 300 !important;
+}
+
+.template-educacion-academic footer a:hover {
+    color: var(--acad-amber) !important;
+}
+
+/* ===== TOP BAR ===== */
+.template-educacion-academic .top-bar {
+    background: var(--acad-navy-deep) !important;
+}
+
+.template-educacion-academic .top-bar a {
+    color: rgba(255, 255, 255, 0.80) !important;
+    font-size: 0.8125rem !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-educacion-academic .scroll-progress {
+    background: linear-gradient(90deg, var(--acad-navy), var(--acad-green), var(--acad-amber)) !important;
+    height: 4px !important;
+}
+
+/* ===== PROCESO ===== */
+.template-educacion-academic .process-step-light {
+    background: var(--acad-surface) !important;
+    border: 1px solid var(--acad-border) !important;
+    border-radius: 1rem !important;
+}
+
+.template-educacion-academic .process-step-light .text-4xl {
+    background: var(--acad-green) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== ANIMACIONES ===== */
+.template-educacion-academic .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease !important;
+}
+
+.template-educacion-academic .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.template-educacion-academic .reveal.delay-1 { transition-delay: 0.08s; }
+.template-educacion-academic .reveal.delay-2 { transition-delay: 0.16s; }
+.template-educacion-academic .reveal.delay-3 { transition-delay: 0.24s; }
+.template-educacion-academic .reveal.delay-4 { transition-delay: 0.32s; }
+
+/* ===== SCROLLBAR ===== */
+.template-educacion-academic ::-webkit-scrollbar {
+    width: 6px;
+    background: var(--acad-bg);
+}
+
+.template-educacion-academic ::-webkit-scrollbar-thumb {
+    background: var(--acad-navy);
+    border-radius: 3px;
+}
+
+/* ===== SELECTION ===== */
+.template-educacion-academic ::selection {
+    background: rgba(56, 161, 105, 0.18);
+    color: var(--acad-navy);
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .template-educacion-academic * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
+}

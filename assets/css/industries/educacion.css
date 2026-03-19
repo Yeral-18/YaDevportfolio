@@ -1,0 +1,476 @@
+/* ============================================
+   Industry: Educacion
+   Institutional palette: light blue, navy,
+   green accents, trustworthy and clean feel
+   ============================================ */
+
+/* ===== VARIABLES EDUCACION ===== */
+.industry-educacion {
+    --primary: #1A365D;
+    --secondary: #38A169;
+    --accent: #D69E2E;
+    --background: #F0F7FF;
+    --surface: #FFFFFF;
+    --surface-alt: #EBF4FF;
+    --surface-green: #F0FFF4;
+    --text-primary: #1A202C;
+    --text-secondary: #4A5568;
+    --text-muted: #718096;
+    --border: #BEE3F8;
+    --border-navy: rgba(26, 54, 93, 0.15);
+    --shadow-blue: rgba(26, 54, 93, 0.10);
+    --shadow-green: rgba(56, 161, 105, 0.12);
+    --radius-card: 1rem;
+    --radius-btn: 0.5rem;
+    --font-display: 'Merriweather', Georgia, 'Times New Roman', serif;
+    --font-body: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ===== BASE ===== */
+.industry-educacion,
+.industry-educacion body {
+    background: var(--background) !important;
+    color: var(--text-primary) !important;
+    font-family: var(--font-body) !important;
+}
+
+/* ===== NAVBAR ===== */
+.industry-educacion .navbar-animated {
+    background: rgba(255, 255, 255, 0.96) !important;
+    backdrop-filter: blur(12px) !important;
+    border-bottom: 2px solid var(--primary) !important;
+    box-shadow: 0 2px 20px var(--shadow-blue) !important;
+}
+
+.industry-educacion .navbar-animated.scrolled {
+    background: rgba(255, 255, 255, 0.99) !important;
+}
+
+.industry-educacion .navbar-animated a {
+    color: var(--text-primary) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+}
+
+.industry-educacion .navbar-animated a:hover {
+    color: var(--primary) !important;
+}
+
+.industry-educacion .navbar-animated .btn-primary {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: var(--radius-btn) !important;
+    font-weight: 700 !important;
+}
+
+/* ===== DROPDOWN ===== */
+.industry-educacion .group .absolute,
+.industry-educacion nav .absolute {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-top: 3px solid var(--secondary) !important;
+    border-radius: 0 0 var(--radius-card) var(--radius-card) !important;
+    box-shadow: 0 12px 40px var(--shadow-blue) !important;
+}
+
+.industry-educacion .group .absolute a,
+.industry-educacion nav .absolute a {
+    color: var(--text-primary) !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.industry-educacion .group .absolute a:hover,
+.industry-educacion nav .absolute a:hover {
+    background: var(--surface-alt) !important;
+    color: var(--primary) !important;
+}
+
+/* ===== HERO ===== */
+.industry-educacion #inicio {
+    background: linear-gradient(160deg, var(--surface) 0%, var(--background) 50%, var(--surface-alt) 100%) !important;
+    min-height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.industry-educacion #inicio::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, var(--primary) 60%, var(--secondary) 60%, var(--secondary) 80%, var(--accent) 80%);
+    z-index: 1;
+}
+
+.industry-educacion #inicio h1 {
+    color: var(--primary) !important;
+    font-family: var(--font-display) !important;
+    font-size: clamp(2.25rem, 5vw, 4.5rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.01em !important;
+}
+
+.industry-educacion #inicio h1 span {
+    color: var(--secondary) !important;
+}
+
+.industry-educacion #inicio p {
+    color: var(--text-secondary) !important;
+    font-size: 1.0625rem !important;
+    line-height: 1.8 !important;
+    font-weight: 400 !important;
+}
+
+/* ===== STATS ===== */
+.industry-educacion .stat-card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 4px 20px var(--shadow-blue) !important;
+    padding: 2rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.industry-educacion .stat-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary), var(--secondary));
+}
+
+.industry-educacion .stat-card .text-4xl,
+.industry-educacion .stat-card .text-3xl {
+    color: var(--primary) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 700 !important;
+}
+
+.industry-educacion .stat-card p {
+    color: var(--text-muted) !important;
+    font-size: 0.875rem !important;
+    font-weight: 600 !important;
+}
+
+/* ===== SECCIONES ===== */
+.industry-educacion section {
+    padding: 6rem 0 !important;
+}
+
+.industry-educacion section:nth-child(even) {
+    background: var(--surface-alt) !important;
+}
+
+.industry-educacion section:nth-child(odd) {
+    background: var(--background) !important;
+}
+
+/* ===== TITULOS ===== */
+.industry-educacion section h2 {
+    color: var(--primary) !important;
+    font-family: var(--font-display) !important;
+    font-size: clamp(1.875rem, 3.5vw, 3rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 1rem !important;
+}
+
+.industry-educacion section h2 span {
+    color: var(--secondary) !important;
+}
+
+/* ===== CARDS ===== */
+.industry-educacion .bg-white.rounded-2xl {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 4px 16px var(--shadow-blue) !important;
+    transition: all 0.3s ease !important;
+}
+
+.industry-educacion .bg-white.rounded-2xl:hover {
+    transform: translateY(-4px) !important;
+    border-color: var(--secondary) !important;
+    box-shadow: 0 12px 36px var(--shadow-green) !important;
+}
+
+.industry-educacion .bg-white.rounded-2xl h3 {
+    color: var(--primary) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 700 !important;
+    font-size: 1.25rem !important;
+}
+
+/* ===== ICONOS SERVICIO ===== */
+.industry-educacion .service-type {
+    background: rgba(26, 54, 93, 0.08) !important;
+    border: 2px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    width: 64px !important;
+    height: 64px !important;
+}
+
+.industry-educacion .service-type svg {
+    color: var(--primary) !important;
+}
+
+/* ===== BOTONES ===== */
+.industry-educacion .btn-primary,
+.industry-educacion .btn-shine {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: var(--radius-btn) !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.25px !important;
+    padding: 0.875rem 2rem !important;
+    transition: all 0.25s ease !important;
+    font-family: var(--font-body) !important;
+}
+
+.industry-educacion .btn-primary:hover,
+.industry-educacion .btn-shine:hover {
+    background: #2A4A80 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px var(--shadow-blue) !important;
+}
+
+.industry-educacion .btn-secondary {
+    background: var(--secondary) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: var(--radius-btn) !important;
+}
+
+.industry-educacion .btn-secondary:hover {
+    background: #2F8558 !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.industry-educacion .team-card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 4px 16px var(--shadow-blue) !important;
+}
+
+.industry-educacion .team-card__image {
+    border-radius: 50% !important;
+    border: 3px solid var(--primary) !important;
+}
+
+.industry-educacion .team-card__name {
+    color: var(--primary) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 700 !important;
+}
+
+.industry-educacion .team-card__position {
+    color: var(--secondary) !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.industry-educacion #testimonios .grid > div,
+.industry-educacion .testimonial-card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 4px 20px var(--shadow-blue) !important;
+}
+
+.industry-educacion #testimonios .text-5xl {
+    color: var(--primary) !important;
+    opacity: 0.3 !important;
+    font-family: var(--font-display) !important;
+}
+
+.industry-educacion #testimonios p {
+    color: var(--text-secondary) !important;
+    font-size: 1rem !important;
+    line-height: 1.7 !important;
+}
+
+/* ===== FORMULARIO ===== */
+.industry-educacion form {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: calc(var(--radius-card) * 1.25) !important;
+    box-shadow: 0 8px 32px var(--shadow-blue) !important;
+}
+
+.industry-educacion input,
+.industry-educacion textarea,
+.industry-educacion select {
+    background: var(--background) !important;
+    border: 1.5px solid var(--border) !important;
+    border-radius: 0.5rem !important;
+    color: var(--text-primary) !important;
+    font-family: var(--font-body) !important;
+}
+
+.industry-educacion input:focus,
+.industry-educacion textarea:focus,
+.industry-educacion select:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(26, 54, 93, 0.12) !important;
+    outline: none !important;
+}
+
+.industry-educacion label {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+}
+
+/* ===== CTA / CONTACTO ===== */
+.industry-educacion .cta-section,
+.industry-educacion #contacto {
+    background: linear-gradient(135deg, var(--primary) 0%, #0F2444 100%) !important;
+    border-radius: var(--radius-card) !important;
+    margin: 0 1.5rem !important;
+}
+
+.industry-educacion .cta-section h2,
+.industry-educacion #contacto h2 {
+    color: #FFFFFF !important;
+    font-family: var(--font-display) !important;
+}
+
+.industry-educacion .cta-section h2 span {
+    color: var(--accent) !important;
+}
+
+.industry-educacion .cta-section p,
+.industry-educacion #contacto p {
+    color: rgba(255, 255, 255, 0.70) !important;
+}
+
+/* ===== FOOTER ===== */
+.industry-educacion footer {
+    background: var(--primary) !important;
+    border-top: 4px solid var(--secondary) !important;
+}
+
+.industry-educacion footer h4 {
+    color: #FFFFFF !important;
+    font-family: var(--font-body) !important;
+    font-weight: 700 !important;
+    font-size: 0.875rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 1px !important;
+}
+
+.industry-educacion footer a {
+    color: rgba(255, 255, 255, 0.60) !important;
+    font-size: 0.875rem !important;
+}
+
+.industry-educacion footer a:hover {
+    color: var(--accent) !important;
+}
+
+/* ===== TOP BAR ===== */
+.industry-educacion .top-bar {
+    background: var(--primary) !important;
+}
+
+.industry-educacion .top-bar a {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-size: 0.8125rem !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.industry-educacion .scroll-progress {
+    background: linear-gradient(90deg, var(--primary), var(--secondary)) !important;
+    height: 4px !important;
+}
+
+/* ===== PROCESO ===== */
+.industry-educacion .process-step-light {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+}
+
+.industry-educacion .process-step-light .text-4xl {
+    background: var(--secondary) !important;
+    color: #FFFFFF !important;
+    font-weight: 700 !important;
+    font-family: var(--font-display) !important;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== WHATSAPP ===== */
+.industry-educacion .whatsapp-float {
+    border-radius: 1rem !important;
+    box-shadow: 0 8px 32px rgba(26, 54, 93, 0.25) !important;
+}
+
+/* ===== CLIENT LOGOS ===== */
+.industry-educacion .client-logo {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+}
+
+.industry-educacion .client-logo:hover {
+    border-color: var(--primary) !important;
+    box-shadow: 0 4px 16px var(--shadow-blue) !important;
+}
+
+/* ===== ANIMACIONES ===== */
+.industry-educacion .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease !important;
+}
+
+.industry-educacion .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.industry-educacion .reveal.delay-1 { transition-delay: 0.08s; }
+.industry-educacion .reveal.delay-2 { transition-delay: 0.16s; }
+.industry-educacion .reveal.delay-3 { transition-delay: 0.24s; }
+.industry-educacion .reveal.delay-4 { transition-delay: 0.32s; }
+
+/* ===== SCROLLBAR ===== */
+.industry-educacion ::-webkit-scrollbar {
+    width: 6px;
+    background: var(--background);
+}
+
+.industry-educacion ::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 3px;
+}
+
+/* ===== SELECTION ===== */
+.industry-educacion ::selection {
+    background: rgba(26, 54, 93, 0.15);
+    color: var(--primary);
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .industry-educacion * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
+}

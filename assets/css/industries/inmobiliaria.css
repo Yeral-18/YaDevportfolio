@@ -1,0 +1,500 @@
+/* ============================================
+   Industry: Inmobiliaria
+   Elegant luxury palette: midnight blue,
+   gold accents, refined classic spacing
+   ============================================ */
+
+/* ===== VARIABLES INMOBILIARIA ===== */
+.industry-inmobiliaria {
+    --primary: #1B2A4A;
+    --secondary: #C9A96E;
+    --accent: #C9A96E;
+    --background: #FFFFFF;
+    --surface: #FFFFFF;
+    --surface-alt: #F7F8FA;
+    --surface-dark: #1B2A4A;
+    --text-primary: #1B2A4A;
+    --text-secondary: #4A5568;
+    --text-muted: #94A3B8;
+    --border: #E2E8F0;
+    --border-gold: rgba(201, 169, 110, 0.4);
+    --shadow-blue: rgba(27, 42, 74, 0.10);
+    --shadow-gold: rgba(201, 169, 110, 0.18);
+    --radius-card: 0.75rem;
+    --radius-btn: 0.375rem;
+    --font-display: 'Cormorant Garamond', 'Georgia', 'Times New Roman', serif;
+    --font-body: 'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ===== BASE ===== */
+.industry-inmobiliaria,
+.industry-inmobiliaria body {
+    background: var(--background) !important;
+    color: var(--text-primary) !important;
+    font-family: var(--font-body) !important;
+}
+
+/* ===== NAVBAR ===== */
+.industry-inmobiliaria .navbar-animated {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(16px) !important;
+    border-bottom: 1px solid var(--border) !important;
+    box-shadow: 0 1px 24px var(--shadow-blue) !important;
+}
+
+.industry-inmobiliaria .navbar-animated.scrolled {
+    background: rgba(255, 255, 255, 0.99) !important;
+    border-bottom-color: var(--border-gold) !important;
+}
+
+.industry-inmobiliaria .navbar-animated a {
+    color: var(--text-primary) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.75px !important;
+    font-size: 0.875rem !important;
+    text-transform: uppercase !important;
+}
+
+.industry-inmobiliaria .navbar-animated a:hover {
+    color: var(--secondary) !important;
+}
+
+.industry-inmobiliaria .navbar-animated .btn-primary {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: var(--radius-btn) !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    padding: 0.625rem 1.5rem !important;
+}
+
+/* ===== DROPDOWN ===== */
+.industry-inmobiliaria .group .absolute,
+.industry-inmobiliaria nav .absolute {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-top: 2px solid var(--secondary) !important;
+    border-radius: 0 0 var(--radius-card) var(--radius-card) !important;
+    box-shadow: 0 16px 48px var(--shadow-blue) !important;
+}
+
+.industry-inmobiliaria .group .absolute a,
+.industry-inmobiliaria nav .absolute a {
+    color: var(--text-primary) !important;
+    font-size: 0.8125rem !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.industry-inmobiliaria .group .absolute a:hover,
+.industry-inmobiliaria nav .absolute a:hover {
+    background: var(--surface-alt) !important;
+    color: var(--secondary) !important;
+    padding-left: 1.5rem !important;
+}
+
+/* ===== HERO ===== */
+.industry-inmobiliaria #inicio {
+    background: var(--surface-dark) !important;
+    min-height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.industry-inmobiliaria #inicio::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(135deg, rgba(27, 42, 74, 0.96) 50%, rgba(27, 42, 74, 0.75) 100%),
+        repeating-linear-gradient(
+            45deg,
+            transparent,
+            transparent 40px,
+            rgba(201, 169, 110, 0.03) 40px,
+            rgba(201, 169, 110, 0.03) 80px
+        );
+    z-index: 0;
+}
+
+.industry-inmobiliaria #inicio h1 {
+    color: #FFFFFF !important;
+    font-family: var(--font-display) !important;
+    font-size: clamp(2.75rem, 6vw, 5.5rem) !important;
+    font-weight: 600 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.01em !important;
+    position: relative;
+    z-index: 1;
+}
+
+.industry-inmobiliaria #inicio h1 span {
+    color: var(--secondary) !important;
+}
+
+.industry-inmobiliaria #inicio p {
+    color: rgba(255, 255, 255, 0.72) !important;
+    font-size: 1.0625rem !important;
+    line-height: 1.75 !important;
+    font-weight: 300 !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== STATS ===== */
+.industry-inmobiliaria .stat-card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border-gold) !important;
+    border-top: 3px solid var(--secondary) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 6px 24px var(--shadow-blue) !important;
+    padding: 2.25rem 2rem !important;
+}
+
+.industry-inmobiliaria .stat-card .text-4xl,
+.industry-inmobiliaria .stat-card .text-3xl {
+    color: var(--primary) !important;
+    font-family: var(--font-display) !important;
+    font-size: 3.5rem !important;
+    font-weight: 600 !important;
+    line-height: 1 !important;
+}
+
+.industry-inmobiliaria .stat-card p {
+    color: var(--text-muted) !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 1px !important;
+    text-transform: uppercase !important;
+}
+
+/* ===== SECCIONES ===== */
+.industry-inmobiliaria section {
+    padding: 7rem 0 !important;
+}
+
+.industry-inmobiliaria section:nth-child(even) {
+    background: var(--surface-alt) !important;
+}
+
+.industry-inmobiliaria section:nth-child(odd) {
+    background: var(--background) !important;
+}
+
+/* ===== TITULOS ===== */
+.industry-inmobiliaria section h2 {
+    color: var(--primary) !important;
+    font-family: var(--font-display) !important;
+    font-size: clamp(2rem, 4vw, 3.75rem) !important;
+    font-weight: 500 !important;
+    line-height: 1.15 !important;
+    margin-bottom: 1rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+.industry-inmobiliaria section h2 span {
+    color: var(--secondary) !important;
+}
+
+.industry-inmobiliaria section h2::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 2px;
+    background: var(--secondary);
+    margin-top: 1.25rem;
+}
+
+/* ===== CARDS ===== */
+.industry-inmobiliaria .bg-white.rounded-2xl {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 2px 16px var(--shadow-blue) !important;
+    transition: all 0.3s ease !important;
+}
+
+.industry-inmobiliaria .bg-white.rounded-2xl:hover {
+    transform: translateY(-4px) !important;
+    border-color: var(--border-gold) !important;
+    box-shadow: 0 12px 40px var(--shadow-gold) !important;
+}
+
+.industry-inmobiliaria .bg-white.rounded-2xl h3 {
+    color: var(--primary) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 600 !important;
+    font-size: 1.375rem !important;
+}
+
+/* ===== ICONOS SERVICIO ===== */
+.industry-inmobiliaria .service-type {
+    background: rgba(201, 169, 110, 0.12) !important;
+    border: 1px solid var(--border-gold) !important;
+    border-radius: var(--radius-card) !important;
+    width: 60px !important;
+    height: 60px !important;
+}
+
+.industry-inmobiliaria .service-type svg {
+    color: var(--secondary) !important;
+}
+
+/* ===== BOTONES ===== */
+.industry-inmobiliaria .btn-primary,
+.industry-inmobiliaria .btn-shine {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: var(--radius-btn) !important;
+    font-weight: 600 !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    padding: 0.875rem 2.5rem !important;
+    transition: all 0.3s ease !important;
+    font-family: var(--font-body) !important;
+}
+
+.industry-inmobiliaria .btn-primary:hover,
+.industry-inmobiliaria .btn-shine:hover {
+    background: #253D6B !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 24px var(--shadow-blue) !important;
+}
+
+.industry-inmobiliaria .btn-secondary {
+    background: transparent !important;
+    color: var(--primary) !important;
+    border: 1.5px solid var(--primary) !important;
+    border-radius: var(--radius-btn) !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.industry-inmobiliaria .team-card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 4px 20px var(--shadow-blue) !important;
+}
+
+.industry-inmobiliaria .team-card__image {
+    border-radius: var(--radius-card) !important;
+    border: 2px solid var(--border-gold) !important;
+}
+
+.industry-inmobiliaria .team-card__name {
+    color: var(--primary) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 600 !important;
+}
+
+.industry-inmobiliaria .team-card__position {
+    color: var(--secondary) !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.75px !important;
+    text-transform: uppercase !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.industry-inmobiliaria #testimonios .grid > div,
+.industry-inmobiliaria .testimonial-card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-left: 3px solid var(--secondary) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 4px 20px var(--shadow-blue) !important;
+}
+
+.industry-inmobiliaria #testimonios .text-5xl {
+    color: var(--secondary) !important;
+    font-family: var(--font-display) !important;
+    font-size: 5rem !important;
+    line-height: 0.6 !important;
+}
+
+.industry-inmobiliaria #testimonios p {
+    color: var(--text-secondary) !important;
+    font-family: var(--font-display) !important;
+    font-style: italic !important;
+    font-size: 1.0625rem !important;
+}
+
+/* ===== FORMULARIO ===== */
+.industry-inmobiliaria form {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 8px 40px var(--shadow-blue) !important;
+}
+
+.industry-inmobiliaria input,
+.industry-inmobiliaria textarea,
+.industry-inmobiliaria select {
+    background: var(--surface-alt) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 0.375rem !important;
+    color: var(--text-primary) !important;
+    font-family: var(--font-body) !important;
+}
+
+.industry-inmobiliaria input:focus,
+.industry-inmobiliaria textarea:focus,
+.industry-inmobiliaria select:focus {
+    border-color: var(--secondary) !important;
+    box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15) !important;
+    outline: none !important;
+}
+
+.industry-inmobiliaria label {
+    color: var(--text-secondary) !important;
+    font-weight: 600 !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.75px !important;
+    text-transform: uppercase !important;
+}
+
+/* ===== CTA / CONTACTO ===== */
+.industry-inmobiliaria .cta-section,
+.industry-inmobiliaria #contacto {
+    background: var(--primary) !important;
+    border-radius: 0 !important;
+}
+
+.industry-inmobiliaria .cta-section h2,
+.industry-inmobiliaria #contacto h2 {
+    color: #FFFFFF !important;
+    font-family: var(--font-display) !important;
+}
+
+.industry-inmobiliaria .cta-section h2 span {
+    color: var(--secondary) !important;
+}
+
+.industry-inmobiliaria .cta-section p,
+.industry-inmobiliaria #contacto p {
+    color: rgba(255, 255, 255, 0.65) !important;
+}
+
+/* ===== FOOTER ===== */
+.industry-inmobiliaria footer {
+    background: #0F1A30 !important;
+    border-top: 1px solid rgba(201, 169, 110, 0.25) !important;
+}
+
+.industry-inmobiliaria footer h4 {
+    color: var(--secondary) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 600 !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+}
+
+.industry-inmobiliaria footer a {
+    color: rgba(255, 255, 255, 0.55) !important;
+    font-weight: 300 !important;
+    font-size: 0.875rem !important;
+}
+
+.industry-inmobiliaria footer a:hover {
+    color: var(--secondary) !important;
+}
+
+/* ===== TOP BAR ===== */
+.industry-inmobiliaria .top-bar {
+    background: #0F1A30 !important;
+}
+
+.industry-inmobiliaria .top-bar a {
+    color: var(--secondary) !important;
+    font-size: 0.8125rem !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.industry-inmobiliaria .scroll-progress {
+    background: linear-gradient(90deg, var(--secondary), #E8C98A) !important;
+    height: 2px !important;
+}
+
+/* ===== PROCESO ===== */
+.industry-inmobiliaria .process-step-light {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+}
+
+.industry-inmobiliaria .process-step-light .text-4xl {
+    background: var(--primary) !important;
+    color: var(--secondary) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 600 !important;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== WHATSAPP ===== */
+.industry-inmobiliaria .whatsapp-float {
+    border-radius: 0.75rem !important;
+    box-shadow: 0 8px 32px rgba(27, 42, 74, 0.25) !important;
+}
+
+/* ===== CLIENT LOGOS ===== */
+.industry-inmobiliaria .client-logo {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    transition: all 0.3s ease !important;
+}
+
+.industry-inmobiliaria .client-logo:hover {
+    border-color: var(--border-gold) !important;
+    box-shadow: 0 4px 16px var(--shadow-gold) !important;
+}
+
+/* ===== ANIMACIONES ===== */
+.industry-inmobiliaria .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.industry-inmobiliaria .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.industry-inmobiliaria .reveal.delay-1 { transition-delay: 0.1s; }
+.industry-inmobiliaria .reveal.delay-2 { transition-delay: 0.2s; }
+.industry-inmobiliaria .reveal.delay-3 { transition-delay: 0.3s; }
+.industry-inmobiliaria .reveal.delay-4 { transition-delay: 0.4s; }
+
+/* ===== SCROLLBAR ===== */
+.industry-inmobiliaria ::-webkit-scrollbar {
+    width: 6px;
+    background: var(--surface-alt);
+}
+
+.industry-inmobiliaria ::-webkit-scrollbar-thumb {
+    background: var(--border-gold);
+    border-radius: 3px;
+}
+
+/* ===== SELECTION ===== */
+.industry-inmobiliaria ::selection {
+    background: rgba(201, 169, 110, 0.25);
+    color: var(--primary);
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .industry-inmobiliaria * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
+}

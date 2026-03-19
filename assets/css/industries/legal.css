@@ -1,0 +1,516 @@
+/* ============================================
+   Industry: Legal
+   Conservative authoritative palette: dark
+   slate, off-white, burgundy, antique gold
+   ============================================ */
+
+/* ===== VARIABLES LEGAL ===== */
+.industry-legal {
+    --primary: #1E293B;
+    --secondary: #7C2D36;
+    --accent: #B8860B;
+    --background: #F8F9FA;
+    --surface: #FFFFFF;
+    --surface-alt: #F1F3F5;
+    --surface-dark: #1E293B;
+    --text-primary: #1E293B;
+    --text-secondary: #475569;
+    --text-muted: #94A3B8;
+    --border: #E2E8F0;
+    --border-dark: rgba(30, 41, 59, 0.15);
+    --shadow-dark: rgba(30, 41, 59, 0.08);
+    --shadow-burgundy: rgba(124, 45, 54, 0.10);
+    --radius-card: 0.5rem;
+    --radius-btn: 0.25rem;
+    --font-display: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+    --font-body: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ===== BASE ===== */
+.industry-legal,
+.industry-legal body {
+    background: var(--background) !important;
+    color: var(--text-primary) !important;
+    font-family: var(--font-body) !important;
+}
+
+/* ===== NAVBAR ===== */
+.industry-legal .navbar-animated {
+    background: var(--surface) !important;
+    border-bottom: 1px solid var(--border) !important;
+    box-shadow: 0 1px 8px var(--shadow-dark) !important;
+}
+
+.industry-legal .navbar-animated.scrolled {
+    background: var(--surface) !important;
+    box-shadow: 0 2px 16px var(--shadow-dark) !important;
+}
+
+.industry-legal .navbar-animated a {
+    color: var(--text-primary) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 400 !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.25px !important;
+}
+
+.industry-legal .navbar-animated a:hover {
+    color: var(--secondary) !important;
+}
+
+.industry-legal .navbar-animated .btn-primary {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: var(--radius-btn) !important;
+    font-weight: 600 !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.5px !important;
+    padding: 0.625rem 1.5rem !important;
+}
+
+/* ===== DROPDOWN ===== */
+.industry-legal .group .absolute,
+.industry-legal nav .absolute {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 8px 32px var(--shadow-dark) !important;
+}
+
+.industry-legal .group .absolute a,
+.industry-legal nav .absolute a {
+    color: var(--text-primary) !important;
+    font-size: 0.875rem !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.industry-legal .group .absolute a:hover,
+.industry-legal nav .absolute a:hover {
+    background: var(--surface-alt) !important;
+    color: var(--secondary) !important;
+}
+
+/* ===== HERO ===== */
+.industry-legal #inicio {
+    background: var(--primary) !important;
+    min-height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.industry-legal #inicio::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(30, 41, 59, 0.0) 0%, rgba(30, 41, 59, 0.4) 100%),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 80px,
+            rgba(255, 255, 255, 0.015) 80px,
+            rgba(255, 255, 255, 0.015) 81px
+        );
+    z-index: 0;
+}
+
+.industry-legal #inicio::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--secondary) 0%, var(--accent) 50%, var(--secondary) 100%);
+    z-index: 2;
+}
+
+.industry-legal #inicio h1 {
+    color: #FFFFFF !important;
+    font-family: var(--font-display) !important;
+    font-size: clamp(2.25rem, 5vw, 4.5rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.01em !important;
+    position: relative;
+    z-index: 1;
+}
+
+.industry-legal #inicio h1 span {
+    color: var(--accent) !important;
+}
+
+.industry-legal #inicio p {
+    color: rgba(255, 255, 255, 0.65) !important;
+    font-size: 1.0625rem !important;
+    line-height: 1.8 !important;
+    font-weight: 300 !important;
+    max-width: 580px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== STATS ===== */
+.industry-legal .stat-card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-left: 4px solid var(--secondary) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 2px 12px var(--shadow-dark) !important;
+    padding: 2rem !important;
+}
+
+.industry-legal .stat-card .text-4xl,
+.industry-legal .stat-card .text-3xl {
+    color: var(--primary) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 700 !important;
+    font-size: 3rem !important;
+}
+
+.industry-legal .stat-card p {
+    color: var(--text-muted) !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+}
+
+/* ===== SECCIONES ===== */
+.industry-legal section {
+    padding: 7rem 0 !important;
+}
+
+.industry-legal section:nth-child(even) {
+    background: var(--surface-alt) !important;
+}
+
+.industry-legal section:nth-child(odd) {
+    background: var(--background) !important;
+}
+
+/* ===== TITULOS ===== */
+.industry-legal section h2 {
+    color: var(--primary) !important;
+    font-family: var(--font-display) !important;
+    font-size: clamp(1.875rem, 3.5vw, 3rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 1rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+.industry-legal section h2 span {
+    color: var(--secondary) !important;
+}
+
+.industry-legal section h2::after {
+    content: '';
+    display: block;
+    width: 2.5rem;
+    height: 3px;
+    background: var(--accent);
+    margin-top: 1rem;
+}
+
+/* ===== CARDS ===== */
+.industry-legal .bg-white.rounded-2xl {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 2px 12px var(--shadow-dark) !important;
+    transition: all 0.25s ease !important;
+}
+
+.industry-legal .bg-white.rounded-2xl:hover {
+    transform: translateY(-3px) !important;
+    border-color: rgba(124, 45, 54, 0.25) !important;
+    box-shadow: 0 8px 28px var(--shadow-dark) !important;
+}
+
+.industry-legal .bg-white.rounded-2xl h3 {
+    color: var(--primary) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 700 !important;
+    font-size: 1.125rem !important;
+}
+
+/* ===== ICONOS SERVICIO ===== */
+.industry-legal .service-type {
+    background: rgba(30, 41, 59, 0.06) !important;
+    border: 1px solid var(--border-dark) !important;
+    border-radius: var(--radius-card) !important;
+    width: 56px !important;
+    height: 56px !important;
+}
+
+.industry-legal .service-type svg {
+    color: var(--secondary) !important;
+}
+
+/* ===== BOTONES ===== */
+.industry-legal .btn-primary,
+.industry-legal .btn-shine {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: var(--radius-btn) !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.5px !important;
+    padding: 0.875rem 2.25rem !important;
+    transition: all 0.2s ease !important;
+    font-family: var(--font-body) !important;
+}
+
+.industry-legal .btn-primary:hover,
+.industry-legal .btn-shine:hover {
+    background: #2D3B52 !important;
+    transform: translateY(-1px) !important;
+    box-shadow: 0 4px 16px var(--shadow-dark) !important;
+}
+
+.industry-legal .btn-secondary {
+    background: transparent !important;
+    color: var(--secondary) !important;
+    border: 1.5px solid var(--secondary) !important;
+    border-radius: var(--radius-btn) !important;
+}
+
+.industry-legal .btn-secondary:hover {
+    background: var(--secondary) !important;
+    color: #FFFFFF !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.industry-legal .team-card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 2px 12px var(--shadow-dark) !important;
+}
+
+.industry-legal .team-card__image {
+    border-radius: var(--radius-card) !important;
+    border: 2px solid var(--border) !important;
+}
+
+.industry-legal .team-card__name {
+    color: var(--primary) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 700 !important;
+}
+
+.industry-legal .team-card__position {
+    color: var(--secondary) !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.5px !important;
+    font-weight: 600 !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.industry-legal #testimonios .grid > div,
+.industry-legal .testimonial-card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 2px 12px var(--shadow-dark) !important;
+}
+
+.industry-legal #testimonios .text-5xl {
+    color: var(--accent) !important;
+    font-family: var(--font-display) !important;
+    opacity: 0.6 !important;
+}
+
+.industry-legal #testimonios p {
+    color: var(--text-secondary) !important;
+    font-family: var(--font-display) !important;
+    font-style: italic !important;
+    font-size: 0.9375rem !important;
+    line-height: 1.75 !important;
+}
+
+/* ===== FORMULARIO ===== */
+.industry-legal form {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 4px 24px var(--shadow-dark) !important;
+}
+
+.industry-legal input,
+.industry-legal textarea,
+.industry-legal select {
+    background: var(--background) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-btn) !important;
+    color: var(--text-primary) !important;
+    font-family: var(--font-body) !important;
+    font-size: 0.9375rem !important;
+}
+
+.industry-legal input:focus,
+.industry-legal textarea:focus,
+.industry-legal select:focus {
+    border-color: var(--secondary) !important;
+    box-shadow: 0 0 0 3px rgba(124, 45, 54, 0.10) !important;
+    outline: none !important;
+}
+
+.industry-legal label {
+    color: var(--text-primary) !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.25px !important;
+}
+
+/* ===== CTA / CONTACTO ===== */
+.industry-legal .cta-section,
+.industry-legal #contacto {
+    background: var(--primary) !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+}
+
+.industry-legal .cta-section h2,
+.industry-legal #contacto h2 {
+    color: #FFFFFF !important;
+    font-family: var(--font-display) !important;
+}
+
+.industry-legal .cta-section h2 span {
+    color: var(--accent) !important;
+}
+
+.industry-legal .cta-section h2::after {
+    background: var(--accent) !important;
+}
+
+.industry-legal .cta-section p,
+.industry-legal #contacto p {
+    color: rgba(255, 255, 255, 0.60) !important;
+}
+
+/* ===== FOOTER ===== */
+.industry-legal footer {
+    background: #0F1923 !important;
+    border-top: 3px solid var(--secondary) !important;
+}
+
+.industry-legal footer h4 {
+    color: rgba(255, 255, 255, 0.90) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 700 !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+}
+
+.industry-legal footer a {
+    color: rgba(255, 255, 255, 0.45) !important;
+    font-weight: 300 !important;
+    font-size: 0.875rem !important;
+}
+
+.industry-legal footer a:hover {
+    color: var(--accent) !important;
+}
+
+/* ===== TOP BAR ===== */
+.industry-legal .top-bar {
+    background: #0F1923 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
+
+.industry-legal .top-bar a {
+    color: rgba(255, 255, 255, 0.70) !important;
+    font-size: 0.8125rem !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.industry-legal .scroll-progress {
+    background: linear-gradient(90deg, var(--secondary), var(--accent)) !important;
+    height: 2px !important;
+}
+
+/* ===== PROCESO ===== */
+.industry-legal .process-step-light {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+}
+
+.industry-legal .process-step-light .text-4xl {
+    background: var(--secondary) !important;
+    color: #FFFFFF !important;
+    font-family: var(--font-display) !important;
+    font-weight: 700 !important;
+    width: 3rem;
+    height: 3rem;
+    border-radius: var(--radius-btn) !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== WHATSAPP ===== */
+.industry-legal .whatsapp-float {
+    border-radius: 0.5rem !important;
+    box-shadow: 0 6px 24px rgba(30, 41, 59, 0.25) !important;
+}
+
+/* ===== CLIENT LOGOS ===== */
+.industry-legal .client-logo {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+}
+
+.industry-legal .client-logo:hover {
+    border-color: var(--accent) !important;
+    box-shadow: 0 2px 12px var(--shadow-burgundy) !important;
+}
+
+/* ===== ANIMACIONES ===== */
+.industry-legal .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: all 0.45s ease !important;
+}
+
+.industry-legal .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.industry-legal .reveal.delay-1 { transition-delay: 0.1s; }
+.industry-legal .reveal.delay-2 { transition-delay: 0.2s; }
+.industry-legal .reveal.delay-3 { transition-delay: 0.3s; }
+.industry-legal .reveal.delay-4 { transition-delay: 0.4s; }
+
+/* ===== SCROLLBAR ===== */
+.industry-legal ::-webkit-scrollbar {
+    width: 6px;
+    background: var(--background);
+}
+
+.industry-legal ::-webkit-scrollbar-thumb {
+    background: var(--border-dark);
+    border-radius: 3px;
+}
+
+/* ===== SELECTION ===== */
+.industry-legal ::selection {
+    background: rgba(124, 45, 54, 0.15);
+    color: var(--primary);
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .industry-legal * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
+}

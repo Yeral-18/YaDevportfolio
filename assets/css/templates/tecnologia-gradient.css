@@ -1,0 +1,701 @@
+/* ============================================
+   Template: Tecnologia Gradient
+   Bold gradient style (Linear.app-inspired):
+   purple-to-blue gradients, glassmorphism,
+   glowing borders, luminous depth
+   ============================================ */
+
+/* ===== VARIABLES ===== */
+.template-tecnologia-gradient {
+    --grad-bg: #09090F;
+    --grad-surface: rgba(255, 255, 255, 0.04);
+    --grad-surface-hover: rgba(255, 255, 255, 0.07);
+    --grad-glass: rgba(15, 10, 30, 0.60);
+    --grad-purple: #7C3AED;
+    --grad-purple-mid: #9D5CF6;
+    --grad-blue: #3B82F6;
+    --grad-blue-mid: #60A5FA;
+    --grad-indigo: #4F46E5;
+    --grad-pink: #EC4899;
+    --grad-cyan: #22D3EE;
+    --grad-text: #F8FAFC;
+    --grad-text-mid: #CBD5E1;
+    --grad-text-soft: #64748B;
+    --grad-border: rgba(255, 255, 255, 0.08);
+    --grad-border-glow: rgba(124, 58, 237, 0.35);
+    --grad-border-blue: rgba(59, 130, 246, 0.30);
+    --grad-glow-purple: rgba(124, 58, 237, 0.20);
+    --grad-glow-blue: rgba(59, 130, 246, 0.20);
+    --grad-gradient: linear-gradient(135deg, var(--grad-purple), var(--grad-blue));
+    --grad-gradient-text: linear-gradient(90deg, var(--grad-purple-mid), var(--grad-blue-mid));
+    --grad-gradient-border: linear-gradient(135deg, var(--grad-purple), var(--grad-blue), var(--grad-cyan));
+    --grad-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ===== BASE ===== */
+.template-tecnologia-gradient,
+.template-tecnologia-gradient body {
+    background: var(--grad-bg) !important;
+    color: var(--grad-text) !important;
+    font-family: var(--grad-sans) !important;
+}
+
+/* ===== AMBIENT GLOW ===== */
+.template-tecnologia-gradient body::before {
+    content: '';
+    position: fixed;
+    top: -20%;
+    left: -10%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(ellipse, rgba(124, 58, 237, 0.10) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.template-tecnologia-gradient body::after {
+    content: '';
+    position: fixed;
+    bottom: -20%;
+    right: -10%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(ellipse, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* ===== NAVBAR ===== */
+.template-tecnologia-gradient .navbar-animated {
+    background: rgba(9, 9, 15, 0.70) !important;
+    backdrop-filter: blur(24px) saturate(1.8) !important;
+    border-bottom: 1px solid var(--grad-border) !important;
+    box-shadow: none !important;
+}
+
+.template-tecnologia-gradient .navbar-animated.scrolled {
+    background: rgba(9, 9, 15, 0.90) !important;
+    border-bottom: 1px solid var(--grad-border-glow) !important;
+    box-shadow: 0 1px 0 var(--grad-border-glow), 0 4px 40px rgba(0, 0, 0, 0.6) !important;
+}
+
+.template-tecnologia-gradient .navbar-animated a {
+    color: var(--grad-text-mid) !important;
+    font-weight: 400 !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.1px !important;
+    transition: color 0.2s ease !important;
+}
+
+.template-tecnologia-gradient .navbar-animated a:hover {
+    color: var(--grad-text) !important;
+}
+
+.template-tecnologia-gradient .navbar-animated .btn-primary {
+    background: var(--grad-gradient) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    box-shadow: 0 0 24px var(--grad-glow-purple), 0 0 48px rgba(59, 130, 246, 0.10) !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-tecnologia-gradient .navbar-animated .btn-primary:hover {
+    box-shadow: 0 0 36px rgba(124, 58, 237, 0.4), 0 0 60px rgba(59, 130, 246, 0.15) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* ===== DROPDOWN ===== */
+.template-tecnologia-gradient .group .absolute,
+.template-tecnologia-gradient nav .absolute {
+    background: var(--grad-glass) !important;
+    backdrop-filter: blur(20px) !important;
+    border: 1px solid var(--grad-border) !important;
+    border-radius: 0.75rem !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--grad-border-glow) !important;
+}
+
+.template-tecnologia-gradient .group .absolute a,
+.template-tecnologia-gradient nav .absolute a {
+    color: var(--grad-text-mid) !important;
+    font-size: 0.875rem !important;
+    border-bottom: 1px solid var(--grad-border) !important;
+}
+
+.template-tecnologia-gradient .group .absolute a:hover,
+.template-tecnologia-gradient nav .absolute a:hover {
+    background: var(--grad-surface-hover) !important;
+    color: var(--grad-text) !important;
+}
+
+/* ===== HERO ===== */
+.template-tecnologia-gradient #inicio {
+    background: var(--grad-bg) !important;
+    min-height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-tecnologia-gradient #inicio::before {
+    content: '';
+    position: absolute;
+    top: -30%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(
+        ellipse at center,
+        rgba(124, 58, 237, 0.14) 0%,
+        rgba(59, 130, 246, 0.08) 40%,
+        transparent 70%
+    );
+    z-index: 0;
+    pointer-events: none;
+}
+
+.template-tecnologia-gradient #inicio::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--grad-purple), var(--grad-blue), transparent);
+    z-index: 2;
+}
+
+.template-tecnologia-gradient #inicio h1 {
+    color: var(--grad-text) !important;
+    font-family: var(--grad-sans) !important;
+    font-size: clamp(2.5rem, 6vw, 5.5rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.08 !important;
+    letter-spacing: -0.04em !important;
+    position: relative;
+    z-index: 1;
+}
+
+.template-tecnologia-gradient #inicio h1 span {
+    background: var(--grad-gradient-text) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.template-tecnologia-gradient #inicio p {
+    color: var(--grad-text-mid) !important;
+    font-size: 1.0625rem !important;
+    line-height: 1.75 !important;
+    font-weight: 400 !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== STATS ===== */
+.template-tecnologia-gradient .stat-card {
+    background: var(--grad-surface) !important;
+    border: 1px solid var(--grad-border) !important;
+    border-radius: 1rem !important;
+    box-shadow: none !important;
+    padding: 2rem !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.35s ease !important;
+    backdrop-filter: blur(12px) !important;
+}
+
+.template-tecnologia-gradient .stat-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: var(--grad-gradient-border);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.35s ease;
+    pointer-events: none;
+}
+
+.template-tecnologia-gradient .stat-card:hover::before {
+    opacity: 1;
+}
+
+.template-tecnologia-gradient .stat-card:hover {
+    background: var(--grad-surface-hover) !important;
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.12) !important;
+}
+
+.template-tecnologia-gradient .stat-card .text-4xl,
+.template-tecnologia-gradient .stat-card .text-3xl {
+    background: var(--grad-gradient-text) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-weight: 800 !important;
+    font-size: 3rem !important;
+    letter-spacing: -0.03em !important;
+}
+
+.template-tecnologia-gradient .stat-card p {
+    color: var(--grad-text-soft) !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    font-weight: 500 !important;
+}
+
+/* ===== SECCIONES ===== */
+.template-tecnologia-gradient section {
+    padding: 6rem 0 !important;
+    background: var(--grad-bg) !important;
+}
+
+.template-tecnologia-gradient section:nth-child(even) {
+    background: rgba(15, 10, 30, 0.5) !important;
+}
+
+/* ===== TITULOS ===== */
+.template-tecnologia-gradient section h2 {
+    color: var(--grad-text) !important;
+    font-family: var(--grad-sans) !important;
+    font-size: clamp(2rem, 4vw, 3.5rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.03em !important;
+    margin-bottom: 0.75rem !important;
+}
+
+.template-tecnologia-gradient section h2 span {
+    background: var(--grad-gradient-text) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.template-tecnologia-gradient section h2::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 2px;
+    background: var(--grad-gradient);
+    border-radius: 1px;
+    margin-top: 1.25rem;
+    box-shadow: 0 0 12px var(--grad-glow-purple);
+}
+
+/* ===== CARDS ===== */
+.template-tecnologia-gradient .bg-white.rounded-2xl {
+    background: var(--grad-surface) !important;
+    border: 1px solid var(--grad-border) !important;
+    border-radius: 1rem !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease !important;
+    backdrop-filter: blur(12px) !important;
+    position: relative;
+    overflow: hidden !important;
+}
+
+.template-tecnologia-gradient .bg-white.rounded-2xl::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.03) 0%, rgba(59, 130, 246, 0.03) 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.template-tecnologia-gradient .bg-white.rounded-2xl:hover::after {
+    opacity: 1;
+}
+
+.template-tecnologia-gradient .bg-white.rounded-2xl:hover {
+    border-color: var(--grad-border-glow) !important;
+    box-shadow: 0 0 0 1px var(--grad-border-glow), 0 8px 40px rgba(0, 0, 0, 0.4), 0 0 40px var(--grad-glow-purple) !important;
+    transform: translateY(-4px) !important;
+}
+
+.template-tecnologia-gradient .bg-white.rounded-2xl h3 {
+    color: var(--grad-text) !important;
+    font-weight: 700 !important;
+    font-size: 1.0625rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+.template-tecnologia-gradient .bg-white.rounded-2xl p {
+    color: var(--grad-text-mid) !important;
+}
+
+/* ===== ICONOS ===== */
+.template-tecnologia-gradient .service-type {
+    background: linear-gradient(135deg, rgba(124, 58, 237, 0.15), rgba(59, 130, 246, 0.15)) !important;
+    border: 1px solid var(--grad-border-glow) !important;
+    border-radius: 0.875rem !important;
+    width: 60px !important;
+    height: 60px !important;
+    box-shadow: 0 0 20px var(--grad-glow-purple) !important;
+}
+
+.template-tecnologia-gradient .service-type svg {
+    color: var(--grad-purple-mid) !important;
+}
+
+/* ===== BOTONES ===== */
+.template-tecnologia-gradient .btn-primary,
+.template-tecnologia-gradient .btn-shine {
+    background: var(--grad-gradient) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 0.625rem !important;
+    font-weight: 600 !important;
+    font-size: 0.9375rem !important;
+    letter-spacing: -0.01em !important;
+    padding: 0.875rem 2.25rem !important;
+    box-shadow: 0 0 24px var(--grad-glow-purple), 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+    transition: all 0.3s ease !important;
+    font-family: var(--grad-sans) !important;
+    position: relative;
+    z-index: 1;
+}
+
+.template-tecnologia-gradient .btn-primary::before,
+.template-tecnologia-gradient .btn-shine::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    background: linear-gradient(135deg, var(--grad-purple-mid), var(--grad-blue-mid));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.template-tecnologia-gradient .btn-primary:hover::before,
+.template-tecnologia-gradient .btn-shine:hover::before {
+    opacity: 1;
+}
+
+.template-tecnologia-gradient .btn-primary:hover,
+.template-tecnologia-gradient .btn-shine:hover {
+    box-shadow: 0 0 40px rgba(124, 58, 237, 0.4), 0 0 60px rgba(59, 130, 246, 0.15), 0 8px 24px rgba(0, 0, 0, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+.template-tecnologia-gradient .btn-secondary {
+    background: transparent !important;
+    color: var(--grad-text) !important;
+    border: 1px solid var(--grad-border) !important;
+    border-radius: 0.625rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-tecnologia-gradient .btn-secondary:hover {
+    background: var(--grad-surface-hover) !important;
+    border-color: var(--grad-border-glow) !important;
+    box-shadow: 0 0 16px var(--grad-glow-purple) !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.template-tecnologia-gradient .team-card {
+    background: var(--grad-surface) !important;
+    border: 1px solid var(--grad-border) !important;
+    border-radius: 1rem !important;
+    backdrop-filter: blur(12px) !important;
+    box-shadow: none !important;
+}
+
+.template-tecnologia-gradient .team-card:hover {
+    border-color: var(--grad-border-glow) !important;
+    box-shadow: 0 0 32px var(--grad-glow-purple) !important;
+}
+
+.template-tecnologia-gradient .team-card__image {
+    border-radius: 0.875rem !important;
+    border: 1px solid var(--grad-border-glow) !important;
+}
+
+.template-tecnologia-gradient .team-card__name {
+    color: var(--grad-text) !important;
+    font-weight: 700 !important;
+}
+
+.template-tecnologia-gradient .team-card__position {
+    background: var(--grad-gradient) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-weight: 600 !important;
+    font-size: 0.8125rem !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.template-tecnologia-gradient #testimonios .grid > div,
+.template-tecnologia-gradient .testimonial-card {
+    background: var(--grad-surface) !important;
+    border: 1px solid var(--grad-border) !important;
+    border-radius: 1rem !important;
+    backdrop-filter: blur(12px) !important;
+    box-shadow: none !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-tecnologia-gradient #testimonios .grid > div:hover,
+.template-tecnologia-gradient .testimonial-card:hover {
+    border-color: var(--grad-border-glow) !important;
+    box-shadow: 0 0 32px var(--grad-glow-purple) !important;
+}
+
+.template-tecnologia-gradient #testimonios .text-5xl {
+    background: var(--grad-gradient-text) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    opacity: 0.6 !important;
+}
+
+.template-tecnologia-gradient #testimonios p {
+    color: var(--grad-text-mid) !important;
+}
+
+/* ===== FORMULARIO ===== */
+.template-tecnologia-gradient form {
+    background: var(--grad-surface) !important;
+    border: 1px solid var(--grad-border) !important;
+    border-radius: 1.25rem !important;
+    backdrop-filter: blur(20px) !important;
+    box-shadow: 0 0 0 1px var(--grad-border), 0 24px 64px rgba(0, 0, 0, 0.5) !important;
+}
+
+.template-tecnologia-gradient input,
+.template-tecnologia-gradient textarea,
+.template-tecnologia-gradient select {
+    background: rgba(0, 0, 0, 0.3) !important;
+    border: 1px solid var(--grad-border) !important;
+    border-radius: 0.625rem !important;
+    color: var(--grad-text) !important;
+    font-family: var(--grad-sans) !important;
+    backdrop-filter: blur(8px) !important;
+}
+
+.template-tecnologia-gradient input:focus,
+.template-tecnologia-gradient textarea:focus,
+.template-tecnologia-gradient select:focus {
+    border-color: var(--grad-purple) !important;
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.15), 0 0 16px var(--grad-glow-purple) !important;
+    outline: none !important;
+}
+
+.template-tecnologia-gradient input::placeholder,
+.template-tecnologia-gradient textarea::placeholder {
+    color: var(--grad-text-soft) !important;
+}
+
+.template-tecnologia-gradient label {
+    color: var(--grad-text-soft) !important;
+    font-weight: 500 !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* ===== CTA ===== */
+.template-tecnologia-gradient .cta-section,
+.template-tecnologia-gradient #contacto {
+    background: var(--grad-surface) !important;
+    border: 1px solid var(--grad-border-glow) !important;
+    border-radius: 1.5rem !important;
+    margin: 0 1.5rem !important;
+    position: relative;
+    overflow: hidden;
+    backdrop-filter: blur(20px) !important;
+}
+
+.template-tecnologia-gradient .cta-section::before,
+.template-tecnologia-gradient #contacto::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 30% 50%, rgba(124, 58, 237, 0.12) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 50%, rgba(59, 130, 246, 0.10) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.template-tecnologia-gradient .cta-section h2,
+.template-tecnologia-gradient #contacto h2 {
+    color: var(--grad-text) !important;
+}
+
+.template-tecnologia-gradient .cta-section h2 span {
+    background: var(--grad-gradient-text) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+}
+
+.template-tecnologia-gradient .cta-section h2::after {
+    background: var(--grad-gradient) !important;
+    box-shadow: 0 0 12px var(--grad-glow-purple);
+}
+
+.template-tecnologia-gradient .cta-section p,
+.template-tecnologia-gradient #contacto p {
+    color: var(--grad-text-mid) !important;
+}
+
+/* ===== FOOTER ===== */
+.template-tecnologia-gradient footer {
+    background: rgba(9, 9, 15, 0.95) !important;
+    border-top: 1px solid var(--grad-border) !important;
+    border-radius: 0 !important;
+    position: relative;
+}
+
+.template-tecnologia-gradient footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--grad-purple), var(--grad-blue), transparent);
+}
+
+.template-tecnologia-gradient footer h4 {
+    color: var(--grad-text-soft) !important;
+    font-size: 0.6875rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+}
+
+.template-tecnologia-gradient footer a {
+    color: var(--grad-text-soft) !important;
+    font-size: 0.875rem !important;
+    transition: color 0.2s ease !important;
+}
+
+.template-tecnologia-gradient footer a:hover {
+    color: var(--grad-purple-mid) !important;
+}
+
+/* ===== TOP BAR ===== */
+.template-tecnologia-gradient .top-bar {
+    background: rgba(9, 9, 15, 0.95) !important;
+    border-bottom: 1px solid var(--grad-border) !important;
+}
+
+.template-tecnologia-gradient .top-bar a {
+    color: var(--grad-text-soft) !important;
+    font-size: 0.8125rem !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-tecnologia-gradient .scroll-progress {
+    background: var(--grad-gradient) !important;
+    height: 2px !important;
+    box-shadow: 0 0 8px var(--grad-glow-purple) !important;
+}
+
+/* ===== PROCESO ===== */
+.template-tecnologia-gradient .process-step-light {
+    background: var(--grad-surface) !important;
+    border: 1px solid var(--grad-border) !important;
+    border-radius: 1rem !important;
+    backdrop-filter: blur(12px) !important;
+}
+
+.template-tecnologia-gradient .process-step-light .text-4xl {
+    background: var(--grad-gradient) !important;
+    color: #FFFFFF !important;
+    font-weight: 800 !important;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.75rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 20px var(--grad-glow-purple) !important;
+}
+
+/* ===== WHATSAPP ===== */
+.template-tecnologia-gradient .whatsapp-float {
+    border-radius: 1rem !important;
+    border: 1px solid var(--grad-border-glow) !important;
+    box-shadow: 0 0 24px var(--grad-glow-purple), 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* ===== CLIENT LOGOS ===== */
+.template-tecnologia-gradient .client-logo {
+    background: var(--grad-surface) !important;
+    border: 1px solid var(--grad-border) !important;
+    border-radius: 0.75rem !important;
+    filter: grayscale(1) brightness(0.5) !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-tecnologia-gradient .client-logo:hover {
+    filter: grayscale(0) brightness(1) !important;
+    border-color: var(--grad-border-glow) !important;
+    box-shadow: 0 0 24px var(--grad-glow-purple) !important;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes grad-float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+}
+
+@keyframes grad-pulse-glow {
+    0%, 100% { box-shadow: 0 0 24px var(--grad-glow-purple); }
+    50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.3), 0 0 60px rgba(59, 130, 246, 0.15); }
+}
+
+.template-tecnologia-gradient .reveal {
+    opacity: 0;
+    transform: translateY(20px);
+    filter: blur(4px);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.template-tecnologia-gradient .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+}
+
+.template-tecnologia-gradient .reveal.delay-1 { transition-delay: 0.07s; }
+.template-tecnologia-gradient .reveal.delay-2 { transition-delay: 0.14s; }
+.template-tecnologia-gradient .reveal.delay-3 { transition-delay: 0.21s; }
+.template-tecnologia-gradient .reveal.delay-4 { transition-delay: 0.28s; }
+
+/* ===== SCROLLBAR ===== */
+.template-tecnologia-gradient ::-webkit-scrollbar {
+    width: 6px;
+    background: var(--grad-bg);
+}
+
+.template-tecnologia-gradient ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--grad-purple), var(--grad-blue));
+    border-radius: 3px;
+}
+
+/* ===== SELECTION ===== */
+.template-tecnologia-gradient ::selection {
+    background: rgba(124, 58, 237, 0.25);
+    color: var(--grad-text);
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .template-tecnologia-gradient * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+        filter: none !important;
+    }
+}

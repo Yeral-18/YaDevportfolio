@@ -1,0 +1,598 @@
+/* ============================================
+   Template: Tecnologia Dashboard
+   Data-dashboard aesthetic: deep navy base,
+   grid lines, monospace accents, stats cards
+   ============================================ */
+
+/* ===== VARIABLES ===== */
+.template-tecnologia-dashboard {
+    --dash-bg: #0F172A;
+    --dash-surface: #1E293B;
+    --dash-surface-2: #162032;
+    --dash-panel: rgba(30, 41, 59, 0.8);
+    --dash-blue: #3B82F6;
+    --dash-blue-bright: #60A5FA;
+    --dash-cyan: #06B6D4;
+    --dash-green: #10B981;
+    --dash-amber: #F59E0B;
+    --dash-red: #EF4444;
+    --dash-purple: #8B5CF6;
+    --dash-text: #F1F5F9;
+    --dash-text-mid: #94A3B8;
+    --dash-text-soft: #475569;
+    --dash-border: rgba(148, 163, 184, 0.10);
+    --dash-border-bright: rgba(59, 130, 246, 0.25);
+    --dash-glow: rgba(59, 130, 246, 0.15);
+    --dash-mono: 'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+    --dash-sans: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ===== BASE ===== */
+.template-tecnologia-dashboard,
+.template-tecnologia-dashboard body {
+    background: var(--dash-bg) !important;
+    color: var(--dash-text) !important;
+    font-family: var(--dash-sans) !important;
+}
+
+/* ===== GRID BACKGROUND ===== */
+.template-tecnologia-dashboard #inicio,
+.template-tecnologia-dashboard section {
+    background-image:
+        linear-gradient(var(--dash-border) 1px, transparent 1px),
+        linear-gradient(90deg, var(--dash-border) 1px, transparent 1px) !important;
+    background-size: 32px 32px !important;
+}
+
+/* ===== NAVBAR ===== */
+.template-tecnologia-dashboard .navbar-animated {
+    background: rgba(15, 23, 42, 0.90) !important;
+    backdrop-filter: blur(16px) saturate(1.5) !important;
+    border-bottom: 1px solid var(--dash-border) !important;
+    box-shadow: none !important;
+}
+
+.template-tecnologia-dashboard .navbar-animated.scrolled {
+    background: rgba(15, 23, 42, 0.97) !important;
+    border-bottom-color: var(--dash-border-bright) !important;
+    box-shadow: 0 1px 0 var(--dash-border-bright), 0 4px 32px rgba(0, 0, 0, 0.5) !important;
+}
+
+.template-tecnologia-dashboard .navbar-animated a {
+    color: var(--dash-text-mid) !important;
+    font-family: var(--dash-sans) !important;
+    font-weight: 400 !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.25px !important;
+}
+
+.template-tecnologia-dashboard .navbar-animated a:hover {
+    color: var(--dash-blue-bright) !important;
+}
+
+.template-tecnologia-dashboard .navbar-animated .btn-primary {
+    background: var(--dash-blue) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 0.375rem !important;
+    font-weight: 600 !important;
+    font-size: 0.8125rem !important;
+    box-shadow: 0 0 16px var(--dash-glow) !important;
+}
+
+.template-tecnologia-dashboard .navbar-animated .btn-primary:hover {
+    background: var(--dash-blue-bright) !important;
+    box-shadow: 0 0 24px rgba(59, 130, 246, 0.35) !important;
+}
+
+/* ===== DROPDOWN ===== */
+.template-tecnologia-dashboard .group .absolute,
+.template-tecnologia-dashboard nav .absolute {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border-bright) !important;
+    border-radius: 0.5rem !important;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6), 0 0 0 1px var(--dash-border) !important;
+}
+
+.template-tecnologia-dashboard .group .absolute a,
+.template-tecnologia-dashboard nav .absolute a {
+    color: var(--dash-text-mid) !important;
+    font-size: 0.875rem !important;
+    border-bottom: 1px solid var(--dash-border) !important;
+}
+
+.template-tecnologia-dashboard .group .absolute a:hover,
+.template-tecnologia-dashboard nav .absolute a:hover {
+    background: rgba(59, 130, 246, 0.08) !important;
+    color: var(--dash-blue-bright) !important;
+}
+
+/* ===== HERO ===== */
+.template-tecnologia-dashboard #inicio {
+    background: var(--dash-bg) !important;
+    min-height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-tecnologia-dashboard #inicio::before {
+    content: '';
+    position: absolute;
+    top: 10%;
+    left: 5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.template-tecnologia-dashboard #inicio::after {
+    content: 'DASHBOARD';
+    position: absolute;
+    bottom: -5%;
+    right: -2%;
+    font-family: var(--dash-mono) !important;
+    font-size: clamp(6rem, 15vw, 14rem);
+    font-weight: 900;
+    color: rgba(59, 130, 246, 0.04);
+    letter-spacing: -0.04em;
+    line-height: 0.8;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.template-tecnologia-dashboard #inicio h1 {
+    color: var(--dash-text) !important;
+    font-family: var(--dash-sans) !important;
+    font-size: clamp(2.25rem, 5.5vw, 5rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.03em !important;
+    position: relative;
+    z-index: 1;
+}
+
+.template-tecnologia-dashboard #inicio h1 span {
+    color: var(--dash-blue-bright) !important;
+    position: relative;
+}
+
+.template-tecnologia-dashboard #inicio h1 span::before {
+    content: attr(data-text);
+    position: absolute;
+    color: transparent;
+    text-shadow: 0 0 20px var(--dash-blue);
+    inset: 0;
+    z-index: -1;
+}
+
+.template-tecnologia-dashboard #inicio p {
+    color: var(--dash-text-mid) !important;
+    font-size: 1rem !important;
+    line-height: 1.75 !important;
+    font-weight: 400 !important;
+    font-family: var(--dash-mono) !important;
+    font-size: 0.9375rem !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== STATS - DASHBOARD CARDS ===== */
+.template-tecnologia-dashboard .stat-card {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 0.75rem !important;
+    box-shadow: none !important;
+    padding: 1.5rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-tecnologia-dashboard .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--dash-blue), transparent);
+}
+
+.template-tecnologia-dashboard .stat-card:nth-child(1)::before { background: linear-gradient(90deg, transparent, var(--dash-blue), transparent); }
+.template-tecnologia-dashboard .stat-card:nth-child(2)::before { background: linear-gradient(90deg, transparent, var(--dash-cyan), transparent); }
+.template-tecnologia-dashboard .stat-card:nth-child(3)::before { background: linear-gradient(90deg, transparent, var(--dash-green), transparent); }
+.template-tecnologia-dashboard .stat-card:nth-child(4)::before { background: linear-gradient(90deg, transparent, var(--dash-purple), transparent); }
+
+.template-tecnologia-dashboard .stat-card .text-4xl,
+.template-tecnologia-dashboard .stat-card .text-3xl {
+    color: var(--dash-text) !important;
+    font-family: var(--dash-mono) !important;
+    font-weight: 700 !important;
+    font-size: 2.5rem !important;
+    letter-spacing: -0.02em !important;
+}
+
+.template-tecnologia-dashboard .stat-card p {
+    color: var(--dash-text-soft) !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    font-family: var(--dash-mono) !important;
+}
+
+/* ===== SECCIONES ===== */
+.template-tecnologia-dashboard section {
+    padding: 5rem 0 !important;
+    background: var(--dash-bg) !important;
+}
+
+.template-tecnologia-dashboard section:nth-child(even) {
+    background: var(--dash-surface-2) !important;
+}
+
+.template-tecnologia-dashboard section:nth-child(odd) {
+    background: var(--dash-bg) !important;
+}
+
+/* ===== TITULOS ===== */
+.template-tecnologia-dashboard section h2 {
+    color: var(--dash-text) !important;
+    font-family: var(--dash-sans) !important;
+    font-size: clamp(1.75rem, 3.5vw, 3rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.025em !important;
+    margin-bottom: 0.5rem !important;
+}
+
+.template-tecnologia-dashboard section h2 span {
+    color: var(--dash-blue-bright) !important;
+}
+
+.template-tecnologia-dashboard section h2::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 2px;
+    background: linear-gradient(90deg, var(--dash-blue), var(--dash-cyan));
+    margin-top: 1rem;
+    border-radius: 1px;
+}
+
+/* ===== CARDS ===== */
+.template-tecnologia-dashboard .bg-white.rounded-2xl {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 0.75rem !important;
+    box-shadow: none !important;
+    transition: all 0.25s ease !important;
+}
+
+.template-tecnologia-dashboard .bg-white.rounded-2xl:hover {
+    border-color: var(--dash-border-bright) !important;
+    box-shadow: 0 0 0 1px var(--dash-border-bright), 0 8px 32px rgba(0, 0, 0, 0.4) !important;
+    transform: translateY(-2px) !important;
+}
+
+.template-tecnologia-dashboard .bg-white.rounded-2xl h3 {
+    color: var(--dash-text) !important;
+    font-family: var(--dash-sans) !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+.template-tecnologia-dashboard .bg-white.rounded-2xl p {
+    color: var(--dash-text-mid) !important;
+    font-size: 0.875rem !important;
+}
+
+/* ===== ICONOS ===== */
+.template-tecnologia-dashboard .service-type {
+    background: rgba(59, 130, 246, 0.10) !important;
+    border: 1px solid var(--dash-border-bright) !important;
+    border-radius: 0.625rem !important;
+    width: 56px !important;
+    height: 56px !important;
+}
+
+.template-tecnologia-dashboard .service-type svg {
+    color: var(--dash-blue-bright) !important;
+}
+
+/* ===== BOTONES ===== */
+.template-tecnologia-dashboard .btn-primary,
+.template-tecnologia-dashboard .btn-shine {
+    background: var(--dash-blue) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 0.5rem !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.25px !important;
+    padding: 0.75rem 2rem !important;
+    box-shadow: 0 0 20px var(--dash-glow) !important;
+    transition: all 0.25s ease !important;
+    font-family: var(--dash-sans) !important;
+}
+
+.template-tecnologia-dashboard .btn-primary:hover,
+.template-tecnologia-dashboard .btn-shine:hover {
+    background: var(--dash-blue-bright) !important;
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.4), 0 4px 16px rgba(0, 0, 0, 0.3) !important;
+    transform: translateY(-1px) !important;
+}
+
+.template-tecnologia-dashboard .btn-secondary {
+    background: transparent !important;
+    color: var(--dash-blue-bright) !important;
+    border: 1px solid var(--dash-border-bright) !important;
+    border-radius: 0.5rem !important;
+}
+
+.template-tecnologia-dashboard .btn-secondary:hover {
+    background: rgba(59, 130, 246, 0.08) !important;
+    border-color: var(--dash-blue-bright) !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.template-tecnologia-dashboard .team-card {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 0.75rem !important;
+    box-shadow: none !important;
+}
+
+.template-tecnologia-dashboard .team-card__image {
+    border-radius: 0.5rem !important;
+    border: 2px solid var(--dash-border-bright) !important;
+}
+
+.template-tecnologia-dashboard .team-card__name {
+    color: var(--dash-text) !important;
+    font-weight: 700 !important;
+    font-family: var(--dash-sans) !important;
+}
+
+.template-tecnologia-dashboard .team-card__position {
+    color: var(--dash-blue-bright) !important;
+    font-family: var(--dash-mono) !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 1px !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.template-tecnologia-dashboard #testimonios .grid > div,
+.template-tecnologia-dashboard .testimonial-card {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 0.75rem !important;
+    box-shadow: none !important;
+}
+
+.template-tecnologia-dashboard #testimonios .text-5xl {
+    color: var(--dash-blue) !important;
+    opacity: 0.4 !important;
+    font-family: var(--dash-mono) !important;
+}
+
+.template-tecnologia-dashboard #testimonios p {
+    color: var(--dash-text-mid) !important;
+    font-size: 0.9375rem !important;
+    line-height: 1.7 !important;
+}
+
+/* ===== FORMULARIO ===== */
+.template-tecnologia-dashboard form {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 1rem !important;
+    box-shadow: 0 0 0 1px var(--dash-border), 0 16px 48px rgba(0, 0, 0, 0.4) !important;
+}
+
+.template-tecnologia-dashboard input,
+.template-tecnologia-dashboard textarea,
+.template-tecnologia-dashboard select {
+    background: var(--dash-bg) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 0.5rem !important;
+    color: var(--dash-text) !important;
+    font-family: var(--dash-mono) !important;
+    font-size: 0.875rem !important;
+}
+
+.template-tecnologia-dashboard input:focus,
+.template-tecnologia-dashboard textarea:focus,
+.template-tecnologia-dashboard select:focus {
+    border-color: var(--dash-blue) !important;
+    box-shadow: 0 0 0 3px var(--dash-glow) !important;
+    outline: none !important;
+}
+
+.template-tecnologia-dashboard label {
+    color: var(--dash-text-soft) !important;
+    font-family: var(--dash-mono) !important;
+    font-weight: 500 !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+}
+
+/* ===== CTA ===== */
+.template-tecnologia-dashboard .cta-section,
+.template-tecnologia-dashboard #contacto {
+    background: var(--dash-surface) !important;
+    border-radius: 1rem !important;
+    margin: 0 1.5rem !important;
+    border: 1px solid var(--dash-border-bright) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-tecnologia-dashboard .cta-section::before,
+.template-tecnologia-dashboard #contacto::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at 50% 0%, rgba(59, 130, 246, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.template-tecnologia-dashboard .cta-section h2,
+.template-tecnologia-dashboard #contacto h2 {
+    color: var(--dash-text) !important;
+}
+
+.template-tecnologia-dashboard .cta-section h2 span {
+    color: var(--dash-blue-bright) !important;
+}
+
+.template-tecnologia-dashboard .cta-section h2::after {
+    background: linear-gradient(90deg, var(--dash-blue), var(--dash-cyan)) !important;
+}
+
+.template-tecnologia-dashboard .cta-section p,
+.template-tecnologia-dashboard #contacto p {
+    color: var(--dash-text-mid) !important;
+}
+
+/* ===== FOOTER ===== */
+.template-tecnologia-dashboard footer {
+    background: var(--dash-surface) !important;
+    border-top: 1px solid var(--dash-border) !important;
+    border-radius: 0 !important;
+}
+
+.template-tecnologia-dashboard footer h4 {
+    color: var(--dash-text-mid) !important;
+    font-family: var(--dash-mono) !important;
+    font-size: 0.6875rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+}
+
+.template-tecnologia-dashboard footer a {
+    color: var(--dash-text-soft) !important;
+    font-size: 0.875rem !important;
+}
+
+.template-tecnologia-dashboard footer a:hover {
+    color: var(--dash-blue-bright) !important;
+}
+
+/* ===== TOP BAR ===== */
+.template-tecnologia-dashboard .top-bar {
+    background: var(--dash-surface) !important;
+    border-bottom: 1px solid var(--dash-border) !important;
+}
+
+.template-tecnologia-dashboard .top-bar a {
+    color: var(--dash-text-mid) !important;
+    font-size: 0.8125rem !important;
+    font-family: var(--dash-mono) !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-tecnologia-dashboard .scroll-progress {
+    background: linear-gradient(90deg, var(--dash-blue), var(--dash-cyan)) !important;
+    height: 2px !important;
+}
+
+/* ===== PROCESO ===== */
+.template-tecnologia-dashboard .process-step-light {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 0.75rem !important;
+}
+
+.template-tecnologia-dashboard .process-step-light .text-4xl {
+    background: rgba(59, 130, 246, 0.12) !important;
+    color: var(--dash-blue-bright) !important;
+    font-family: var(--dash-mono) !important;
+    font-weight: 700 !important;
+    border: 1px solid var(--dash-border-bright) !important;
+    border-radius: 0.5rem !important;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===== WHATSAPP ===== */
+.template-tecnologia-dashboard .whatsapp-float {
+    border-radius: 0.75rem !important;
+    border: 1px solid var(--dash-border) !important;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4) !important;
+}
+
+/* ===== CLIENT LOGOS ===== */
+.template-tecnologia-dashboard .client-logo {
+    background: var(--dash-surface) !important;
+    border: 1px solid var(--dash-border) !important;
+    border-radius: 0.5rem !important;
+    filter: grayscale(1) brightness(0.6) !important;
+    transition: all 0.3s ease !important;
+}
+
+.template-tecnologia-dashboard .client-logo:hover {
+    filter: grayscale(0) brightness(1) !important;
+    border-color: var(--dash-border-bright) !important;
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes dash-fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+        filter: blur(4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+.template-tecnologia-dashboard .reveal {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: all 0.4s ease !important;
+}
+
+.template-tecnologia-dashboard .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.template-tecnologia-dashboard .reveal.delay-1 { transition-delay: 0.06s; }
+.template-tecnologia-dashboard .reveal.delay-2 { transition-delay: 0.12s; }
+.template-tecnologia-dashboard .reveal.delay-3 { transition-delay: 0.18s; }
+.template-tecnologia-dashboard .reveal.delay-4 { transition-delay: 0.24s; }
+
+/* ===== SCROLLBAR ===== */
+.template-tecnologia-dashboard ::-webkit-scrollbar {
+    width: 6px;
+    background: var(--dash-bg);
+}
+
+.template-tecnologia-dashboard ::-webkit-scrollbar-thumb {
+    background: var(--dash-text-soft);
+    border-radius: 3px;
+}
+
+/* ===== SELECTION ===== */
+.template-tecnologia-dashboard ::selection {
+    background: rgba(59, 130, 246, 0.25);
+    color: var(--dash-text);
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .template-tecnologia-dashboard * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
+}

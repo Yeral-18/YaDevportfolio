@@ -1,0 +1,387 @@
+/* ============================================
+   Template: Restaurante Warm
+   Warm editorial variant with terracotta
+   accents, rich textures, organic layout
+   ============================================ */
+
+/* ===== VARIABLES ===== */
+.template-restaurante-warm {
+    --warm-cream: #FFF8F0;
+    --warm-terra: #C44D23;
+    --warm-terra-dark: #9E3B18;
+    --warm-olive: #2D2B1F;
+    --warm-gold: #D4A574;
+    --warm-gold-light: #E8C49A;
+    --warm-surface: #FFFFFF;
+    --warm-bg-alt: #FAF0E6;
+    --warm-text: #2D2B1F;
+    --warm-text-mid: #6B5E4E;
+    --warm-text-soft: #A0927F;
+    --warm-border: #E8D5BE;
+    --warm-shadow: rgba(196, 77, 35, 0.14);
+}
+
+/* ===== BASE ===== */
+.template-restaurante-warm,
+.template-restaurante-warm body {
+    background: var(--warm-cream) !important;
+    color: var(--warm-text) !important;
+    font-family: 'Lato', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* ===== NAVBAR ===== */
+.template-restaurante-warm .navbar-animated {
+    background: rgba(255, 248, 240, 0.94) !important;
+    backdrop-filter: blur(16px) !important;
+    border-bottom: 1px solid var(--warm-border) !important;
+    box-shadow: none !important;
+}
+
+.template-restaurante-warm .navbar-animated.scrolled {
+    background: rgba(255, 255, 255, 0.98) !important;
+    box-shadow: 0 4px 32px var(--warm-shadow) !important;
+}
+
+.template-restaurante-warm .navbar-animated a {
+    color: var(--warm-olive) !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.template-restaurante-warm .navbar-animated a:hover {
+    color: var(--warm-terra) !important;
+}
+
+.template-restaurante-warm .navbar-animated .btn-primary {
+    background: var(--warm-terra) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 3rem !important;
+    font-weight: 600 !important;
+}
+
+/* ===== HERO ===== */
+.template-restaurante-warm #inicio {
+    background: var(--warm-cream) !important;
+    min-height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-restaurante-warm #inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(160deg, var(--warm-bg-alt) 0%, #EDD5B8 100%);
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.template-restaurante-warm #inicio::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--warm-terra) 0%, var(--warm-gold) 100%);
+    z-index: 2;
+}
+
+.template-restaurante-warm #inicio h1 {
+    color: var(--warm-olive) !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: clamp(2.75rem, 7vw, 5.5rem) !important;
+    font-weight: 700 !important;
+    font-style: italic !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.02em !important;
+    position: relative;
+    z-index: 1;
+}
+
+.template-restaurante-warm #inicio h1 span {
+    color: var(--warm-terra) !important;
+    font-style: normal !important;
+    position: relative;
+}
+
+.template-restaurante-warm #inicio h1 span::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--warm-gold);
+}
+
+.template-restaurante-warm #inicio p {
+    color: var(--warm-text-mid) !important;
+    font-size: 1.125rem !important;
+    line-height: 1.8 !important;
+    font-weight: 300 !important;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== STATS ===== */
+.template-restaurante-warm .stat-card {
+    background: var(--warm-surface) !important;
+    border: none !important;
+    border-radius: 1.5rem 0.5rem 1.5rem 0.5rem !important;
+    box-shadow: 0 8px 40px var(--warm-shadow) !important;
+    padding: 2rem 1.75rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-restaurante-warm .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--warm-terra), var(--warm-gold));
+}
+
+.template-restaurante-warm .stat-card .text-4xl,
+.template-restaurante-warm .stat-card .text-3xl {
+    color: var(--warm-terra) !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-weight: 700 !important;
+    font-size: 3.5rem !important;
+}
+
+/* ===== SECCIONES ===== */
+.template-restaurante-warm section {
+    padding: 7rem 0 !important;
+}
+
+.template-restaurante-warm section:nth-child(even) {
+    background: var(--warm-bg-alt) !important;
+}
+
+.template-restaurante-warm section:nth-child(odd) {
+    background: var(--warm-cream) !important;
+}
+
+/* ===== TITULOS ===== */
+.template-restaurante-warm section h2 {
+    color: var(--warm-olive) !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-size: clamp(2rem, 4.5vw, 3.75rem) !important;
+    font-weight: 700 !important;
+    font-style: italic !important;
+    line-height: 1.15 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.template-restaurante-warm section h2 span {
+    color: var(--warm-terra) !important;
+    font-style: normal !important;
+}
+
+/* ===== CARDS ===== */
+.template-restaurante-warm .bg-white.rounded-2xl {
+    background: var(--warm-surface) !important;
+    border: 1px solid var(--warm-border) !important;
+    border-radius: 1.5rem 0.5rem 1.5rem 0.5rem !important;
+    box-shadow: 0 4px 24px rgba(45, 43, 31, 0.07) !important;
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.template-restaurante-warm .bg-white.rounded-2xl:hover {
+    transform: translateY(-8px) rotate(0.5deg) !important;
+    box-shadow: 0 20px 56px var(--warm-shadow) !important;
+    border-color: var(--warm-gold) !important;
+}
+
+.template-restaurante-warm .bg-white.rounded-2xl h3 {
+    color: var(--warm-olive) !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-weight: 600 !important;
+    font-style: italic !important;
+}
+
+/* ===== ICONOS ===== */
+.template-restaurante-warm .service-type {
+    background: linear-gradient(135deg, var(--warm-terra) 0%, #E86040 100%) !important;
+    border-radius: 1.5rem 0.5rem 1.5rem 0.5rem !important;
+    width: 68px !important;
+    height: 68px !important;
+    box-shadow: 0 8px 24px var(--warm-shadow) !important;
+}
+
+.template-restaurante-warm .service-type svg {
+    color: #FFFFFF !important;
+}
+
+/* ===== BOTONES ===== */
+.template-restaurante-warm .btn-primary,
+.template-restaurante-warm .btn-shine {
+    background: var(--warm-terra) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 3rem !important;
+    font-weight: 600 !important;
+    padding: 0.9375rem 2.5rem !important;
+    box-shadow: 0 4px 20px var(--warm-shadow) !important;
+    transition: all 0.3s ease !important;
+    font-family: 'Lato', sans-serif !important;
+}
+
+.template-restaurante-warm .btn-primary:hover,
+.template-restaurante-warm .btn-shine:hover {
+    background: var(--warm-terra-dark) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 10px 36px var(--warm-shadow) !important;
+}
+
+.template-restaurante-warm .btn-secondary {
+    background: transparent !important;
+    color: var(--warm-terra) !important;
+    border: 2px solid var(--warm-terra) !important;
+    border-radius: 3rem !important;
+}
+
+/* ===== FORMULARIO ===== */
+.template-restaurante-warm form {
+    background: var(--warm-surface) !important;
+    border: 1px solid var(--warm-border) !important;
+    border-radius: 2rem !important;
+    box-shadow: 0 16px 56px var(--warm-shadow) !important;
+}
+
+.template-restaurante-warm input,
+.template-restaurante-warm textarea,
+.template-restaurante-warm select {
+    background: var(--warm-cream) !important;
+    border: 1.5px solid var(--warm-border) !important;
+    border-radius: 0.875rem !important;
+    color: var(--warm-text) !important;
+    font-family: 'Lato', sans-serif !important;
+}
+
+.template-restaurante-warm input:focus,
+.template-restaurante-warm textarea:focus,
+.template-restaurante-warm select:focus {
+    border-color: var(--warm-terra) !important;
+    box-shadow: 0 0 0 3px rgba(196, 77, 35, 0.12) !important;
+    outline: none !important;
+}
+
+/* ===== CTA ===== */
+.template-restaurante-warm .cta-section,
+.template-restaurante-warm #contacto {
+    background: linear-gradient(135deg, var(--warm-olive) 0%, #1A1912 100%) !important;
+    border-radius: 3rem !important;
+    margin: 0 1.5rem !important;
+}
+
+.template-restaurante-warm .cta-section h2,
+.template-restaurante-warm #contacto h2 {
+    color: #FFFFFF !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-style: italic !important;
+}
+
+.template-restaurante-warm .cta-section h2 span {
+    color: var(--warm-gold) !important;
+    font-style: normal !important;
+}
+
+/* ===== FOOTER ===== */
+.template-restaurante-warm footer {
+    background: var(--warm-olive) !important;
+    border-top: none !important;
+    border-radius: 2rem 2rem 0 0 !important;
+}
+
+.template-restaurante-warm footer h4 {
+    color: var(--warm-gold) !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+    font-weight: 600 !important;
+}
+
+.template-restaurante-warm footer a {
+    color: rgba(255, 248, 240, 0.55) !important;
+    font-weight: 300 !important;
+}
+
+.template-restaurante-warm footer a:hover {
+    color: var(--warm-gold) !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-restaurante-warm .scroll-progress {
+    background: linear-gradient(90deg, var(--warm-terra), var(--warm-gold)) !important;
+    height: 3px !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.template-restaurante-warm #testimonios .grid > div,
+.template-restaurante-warm .testimonial-card {
+    background: var(--warm-surface) !important;
+    border: 1px solid var(--warm-border) !important;
+    border-radius: 1.5rem 0.5rem 1.5rem 0.5rem !important;
+    box-shadow: 0 8px 32px rgba(45, 43, 31, 0.07) !important;
+}
+
+.template-restaurante-warm #testimonios .text-5xl {
+    color: var(--warm-gold) !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+}
+
+.template-restaurante-warm #testimonios p {
+    color: var(--warm-text-mid) !important;
+    font-style: italic !important;
+    font-family: 'Playfair Display', Georgia, serif !important;
+}
+
+/* ===== ANIMACIONES ===== */
+.template-restaurante-warm .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: all 0.65s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.template-restaurante-warm .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.template-restaurante-warm .reveal.delay-1 { transition-delay: 0.08s; }
+.template-restaurante-warm .reveal.delay-2 { transition-delay: 0.16s; }
+.template-restaurante-warm .reveal.delay-3 { transition-delay: 0.24s; }
+.template-restaurante-warm .reveal.delay-4 { transition-delay: 0.32s; }
+
+/* ===== SCROLLBAR ===== */
+.template-restaurante-warm ::-webkit-scrollbar {
+    width: 6px;
+    background: var(--warm-cream);
+}
+
+.template-restaurante-warm ::-webkit-scrollbar-thumb {
+    background: var(--warm-gold);
+    border-radius: 3px;
+}
+
+/* ===== SELECTION ===== */
+.template-restaurante-warm ::selection {
+    background: rgba(196, 77, 35, 0.18);
+    color: var(--warm-olive);
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .template-restaurante-warm * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
+}

@@ -1,0 +1,489 @@
+/* ============================================
+   Industry: Restaurante
+   Warm editorial palette with terracotta,
+   organic shapes, and editorial typography
+   ============================================ */
+
+/* ===== VARIABLES RESTAURANTE ===== */
+.industry-restaurante {
+    --primary: #C44D23;
+    --secondary: #2D2B1F;
+    --accent: #D4A574;
+    --background: #FFF8F0;
+    --surface: #FFFFFF;
+    --surface-alt: #FAF0E6;
+    --text-primary: #2D2B1F;
+    --text-secondary: #6B5E4E;
+    --text-muted: #A0927F;
+    --border: #E8D5BE;
+    --shadow-warm: rgba(196, 77, 35, 0.12);
+    --shadow-soft: rgba(45, 43, 31, 0.08);
+    --radius-organic: 1.5rem 0.5rem 1.5rem 0.5rem;
+    --radius-card: 1.25rem;
+    --radius-btn: 3rem;
+    --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    --font-body: 'Lato', 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* ===== BASE ===== */
+.industry-restaurante,
+.industry-restaurante body {
+    background: var(--background) !important;
+    color: var(--text-primary) !important;
+    font-family: var(--font-body) !important;
+}
+
+/* ===== NAVBAR ===== */
+.industry-restaurante .navbar-animated {
+    background: rgba(255, 248, 240, 0.92) !important;
+    backdrop-filter: blur(12px) !important;
+    border-bottom: 1px solid var(--border) !important;
+    box-shadow: 0 2px 20px var(--shadow-soft) !important;
+}
+
+.industry-restaurante .navbar-animated.scrolled {
+    background: rgba(255, 255, 255, 0.97) !important;
+    box-shadow: 0 4px 30px var(--shadow-soft) !important;
+}
+
+.industry-restaurante .navbar-animated a {
+    color: var(--text-primary) !important;
+    font-family: var(--font-body) !important;
+    font-weight: 400 !important;
+    letter-spacing: 0.5px !important;
+}
+
+.industry-restaurante .navbar-animated a:hover {
+    color: var(--primary) !important;
+}
+
+.industry-restaurante .navbar-animated .btn-primary {
+    background: var(--primary) !important;
+    border-radius: var(--radius-btn) !important;
+    border: none !important;
+    color: #FFFFFF !important;
+    font-weight: 600 !important;
+}
+
+/* ===== DROPDOWN ===== */
+.industry-restaurante .group .absolute,
+.industry-restaurante nav .absolute {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 12px 40px var(--shadow-warm) !important;
+}
+
+.industry-restaurante .group .absolute a,
+.industry-restaurante nav .absolute a {
+    color: var(--text-primary) !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.industry-restaurante .group .absolute a:hover,
+.industry-restaurante nav .absolute a:hover {
+    background: var(--surface-alt) !important;
+    color: var(--primary) !important;
+}
+
+/* ===== HERO ===== */
+.industry-restaurante #inicio {
+    background: var(--background) !important;
+    min-height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.industry-restaurante #inicio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10%;
+    width: 55%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--surface-alt) 0%, #F5E6D3 100%);
+    border-radius: 0 0 0 40%;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.industry-restaurante #inicio h1 {
+    color: var(--secondary) !important;
+    font-family: var(--font-display) !important;
+    font-size: clamp(2.5rem, 6vw, 5rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.15 !important;
+    letter-spacing: -0.02em !important;
+    font-style: italic !important;
+    position: relative;
+    z-index: 1;
+}
+
+.industry-restaurante #inicio h1 span {
+    color: var(--primary) !important;
+    font-style: normal !important;
+}
+
+.industry-restaurante #inicio p {
+    color: var(--text-secondary) !important;
+    font-size: 1.125rem !important;
+    line-height: 1.7 !important;
+    font-weight: 300 !important;
+}
+
+/* ===== STATS ===== */
+.industry-restaurante .stat-card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 8px 32px var(--shadow-warm) !important;
+    padding: 2rem !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.industry-restaurante .stat-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--primary);
+}
+
+.industry-restaurante .stat-card .text-4xl,
+.industry-restaurante .stat-card .text-3xl {
+    color: var(--primary) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 700 !important;
+}
+
+.industry-restaurante .stat-card p {
+    color: var(--text-secondary) !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* ===== SECCIONES ===== */
+.industry-restaurante section {
+    padding: 6rem 0 !important;
+}
+
+.industry-restaurante section:nth-child(even) {
+    background: var(--surface-alt) !important;
+}
+
+.industry-restaurante section:nth-child(odd) {
+    background: var(--background) !important;
+}
+
+/* ===== TITULOS ===== */
+.industry-restaurante section h2 {
+    color: var(--secondary) !important;
+    font-family: var(--font-display) !important;
+    font-size: clamp(2rem, 4vw, 3.5rem) !important;
+    font-weight: 700 !important;
+    font-style: italic !important;
+    line-height: 1.2 !important;
+    margin-bottom: 1.5rem !important;
+}
+
+.industry-restaurante section h2 span {
+    color: var(--primary) !important;
+    font-style: normal !important;
+}
+
+/* ===== CARDS ===== */
+.industry-restaurante .bg-white.rounded-2xl {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 4px 20px var(--shadow-soft) !important;
+    transition: all 0.35s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.industry-restaurante .bg-white.rounded-2xl:hover {
+    transform: translateY(-6px) !important;
+    box-shadow: 0 16px 48px var(--shadow-warm) !important;
+    border-color: var(--accent) !important;
+}
+
+.industry-restaurante .bg-white.rounded-2xl h3 {
+    color: var(--secondary) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 600 !important;
+}
+
+/* ===== ICONOS SERVICIO ===== */
+.industry-restaurante .service-type {
+    background: linear-gradient(135deg, var(--primary), #E8603A) !important;
+    border-radius: var(--radius-organic) !important;
+    width: 64px !important;
+    height: 64px !important;
+    box-shadow: 0 8px 24px var(--shadow-warm) !important;
+}
+
+.industry-restaurante .service-type svg {
+    color: #FFFFFF !important;
+}
+
+/* ===== BOTONES ===== */
+.industry-restaurante .btn-primary,
+.industry-restaurante .btn-shine {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: var(--radius-btn) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.5px !important;
+    padding: 0.875rem 2.25rem !important;
+    box-shadow: 0 4px 20px var(--shadow-warm) !important;
+    transition: all 0.3s ease !important;
+    font-family: var(--font-body) !important;
+}
+
+.industry-restaurante .btn-primary:hover,
+.industry-restaurante .btn-shine:hover {
+    background: #A83D1A !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 32px var(--shadow-warm) !important;
+}
+
+.industry-restaurante .btn-secondary {
+    background: transparent !important;
+    color: var(--primary) !important;
+    border: 2px solid var(--primary) !important;
+    border-radius: var(--radius-btn) !important;
+}
+
+.industry-restaurante .btn-secondary:hover {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.industry-restaurante .team-card {
+    background: var(--surface) !important;
+    border-radius: var(--radius-card) !important;
+    border: 1px solid var(--border) !important;
+    box-shadow: 0 6px 24px var(--shadow-soft) !important;
+    overflow: hidden !important;
+}
+
+.industry-restaurante .team-card__image {
+    border-radius: 50% !important;
+    border: 3px solid var(--accent) !important;
+}
+
+.industry-restaurante .team-card__name {
+    color: var(--secondary) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 600 !important;
+}
+
+.industry-restaurante .team-card__position {
+    color: var(--primary) !important;
+    font-weight: 400 !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 1px !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.industry-restaurante #testimonios .grid > div,
+.industry-restaurante .testimonial-card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 8px 32px var(--shadow-soft) !important;
+}
+
+.industry-restaurante #testimonios .text-5xl {
+    color: var(--accent) !important;
+    font-family: var(--font-display) !important;
+    line-height: 0.7 !important;
+}
+
+.industry-restaurante #testimonios p {
+    color: var(--text-secondary) !important;
+    font-style: italic !important;
+    font-family: var(--font-display) !important;
+    font-size: 1.05rem !important;
+}
+
+/* ===== FORMULARIO ===== */
+.industry-restaurante form {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: calc(var(--radius-card) * 1.5) !important;
+    box-shadow: 0 12px 48px var(--shadow-warm) !important;
+}
+
+.industry-restaurante input,
+.industry-restaurante textarea,
+.industry-restaurante select {
+    background: var(--surface-alt) !important;
+    border: 1.5px solid var(--border) !important;
+    border-radius: 0.75rem !important;
+    color: var(--text-primary) !important;
+    font-family: var(--font-body) !important;
+}
+
+.industry-restaurante input:focus,
+.industry-restaurante textarea:focus,
+.industry-restaurante select:focus {
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 3px rgba(196, 77, 35, 0.15) !important;
+    outline: none !important;
+}
+
+.industry-restaurante label {
+    color: var(--text-secondary) !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.5px !important;
+}
+
+/* ===== CTA / CONTACTO ===== */
+.industry-restaurante .cta-section,
+.industry-restaurante #contacto {
+    background: linear-gradient(135deg, var(--secondary) 0%, #1A1912 100%) !important;
+    border-radius: 2.5rem !important;
+    margin: 0 1rem !important;
+}
+
+.industry-restaurante .cta-section h2,
+.industry-restaurante #contacto h2 {
+    color: #FFFFFF !important;
+    font-family: var(--font-display) !important;
+    font-style: italic !important;
+}
+
+.industry-restaurante .cta-section h2 span {
+    color: var(--accent) !important;
+}
+
+.industry-restaurante .cta-section p,
+.industry-restaurante #contacto p {
+    color: var(--text-muted) !important;
+}
+
+/* ===== FOOTER ===== */
+.industry-restaurante footer {
+    background: var(--secondary) !important;
+    border-radius: 2rem 2rem 0 0 !important;
+}
+
+.industry-restaurante footer h4 {
+    color: var(--accent) !important;
+    font-family: var(--font-display) !important;
+    font-weight: 600 !important;
+}
+
+.industry-restaurante footer a {
+    color: #C4B5A5 !important;
+    font-weight: 300 !important;
+}
+
+.industry-restaurante footer a:hover {
+    color: var(--accent) !important;
+}
+
+/* ===== PROCESO ===== */
+.industry-restaurante .process-step-light {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: var(--radius-card) !important;
+    box-shadow: 0 4px 16px var(--shadow-soft) !important;
+}
+
+.industry-restaurante .process-step-light .text-4xl {
+    background: var(--primary) !important;
+    color: #FFFFFF !important;
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-display) !important;
+    font-weight: 700 !important;
+}
+
+/* ===== TOP BAR ===== */
+.industry-restaurante .top-bar {
+    background: var(--secondary) !important;
+    border-bottom: none !important;
+}
+
+.industry-restaurante .top-bar a {
+    color: var(--accent) !important;
+    font-weight: 400 !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.industry-restaurante .scroll-progress {
+    background: linear-gradient(90deg, var(--primary), var(--accent)) !important;
+    height: 3px !important;
+}
+
+/* ===== WHATSAPP ===== */
+.industry-restaurante .whatsapp-float {
+    border-radius: 1.25rem !important;
+    box-shadow: 0 8px 32px rgba(196, 77, 35, 0.3) !important;
+}
+
+/* ===== CLIENT LOGOS ===== */
+.industry-restaurante .client-logo {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 1rem !important;
+    transition: all 0.3s ease !important;
+}
+
+.industry-restaurante .client-logo:hover {
+    border-color: var(--accent) !important;
+    box-shadow: 0 4px 16px var(--shadow-warm) !important;
+}
+
+/* ===== ANIMACIONES ===== */
+.industry-restaurante .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) !important;
+}
+
+.industry-restaurante .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.industry-restaurante .reveal.delay-1 { transition-delay: 0.08s; }
+.industry-restaurante .reveal.delay-2 { transition-delay: 0.16s; }
+.industry-restaurante .reveal.delay-3 { transition-delay: 0.24s; }
+.industry-restaurante .reveal.delay-4 { transition-delay: 0.32s; }
+
+/* ===== SCROLLBAR ===== */
+.industry-restaurante ::-webkit-scrollbar {
+    width: 6px;
+    background: var(--surface-alt);
+}
+
+.industry-restaurante ::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 3px;
+}
+
+/* ===== SELECTION ===== */
+.industry-restaurante ::selection {
+    background: rgba(196, 77, 35, 0.2);
+    color: var(--secondary);
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .industry-restaurante * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
+}

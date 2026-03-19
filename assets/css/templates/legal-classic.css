@@ -1,0 +1,539 @@
+/* ============================================
+   Template: Legal Classic
+   Dark slate + burgundy conservative variant
+   Authoritative, formal, serif-driven
+   ============================================ */
+
+/* ===== VARIABLES ===== */
+.template-legal-classic {
+    --slate: #1E293B;
+    --slate-mid: #2D3B52;
+    --slate-deep: #0F1923;
+    --burgundy: #7C2D36;
+    --burgundy-dark: #5C1F27;
+    --gold: #B8860B;
+    --gold-light: #D4A842;
+    --off-white: #F8F9FA;
+    --surface: #FFFFFF;
+    --surface-alt: #F1F3F5;
+    --text: #1E293B;
+    --text-mid: #475569;
+    --text-soft: #94A3B8;
+    --border: #E2E8F0;
+    --border-dark: rgba(30, 41, 59, 0.12);
+    --shadow: rgba(30, 41, 59, 0.08);
+    --shadow-burgundy: rgba(124, 45, 54, 0.12);
+}
+
+/* ===== BASE ===== */
+.template-legal-classic,
+.template-legal-classic body {
+    background: var(--off-white) !important;
+    color: var(--text) !important;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* ===== NAVBAR ===== */
+.template-legal-classic .navbar-animated {
+    background: var(--slate) !important;
+    border-bottom: 2px solid var(--burgundy) !important;
+    box-shadow: 0 2px 12px rgba(15, 25, 35, 0.3) !important;
+}
+
+.template-legal-classic .navbar-animated.scrolled {
+    background: var(--slate-deep) !important;
+    box-shadow: 0 4px 24px rgba(15, 25, 35, 0.4) !important;
+}
+
+.template-legal-classic .navbar-animated a {
+    color: rgba(255, 255, 255, 0.75) !important;
+    font-weight: 400 !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.25px !important;
+}
+
+.template-legal-classic .navbar-animated a:hover {
+    color: #FFFFFF !important;
+    background: rgba(255, 255, 255, 0.06) !important;
+}
+
+.template-legal-classic .navbar-animated .btn-primary {
+    background: var(--burgundy) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 0.25rem !important;
+    font-weight: 600 !important;
+    font-size: 0.8125rem !important;
+    padding: 0.5rem 1.5rem !important;
+}
+
+/* ===== DROPDOWN ===== */
+.template-legal-classic .group .absolute,
+.template-legal-classic nav .absolute {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-top: 2px solid var(--burgundy) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 12px 40px var(--shadow) !important;
+}
+
+.template-legal-classic .group .absolute a,
+.template-legal-classic nav .absolute a {
+    color: var(--text) !important;
+    font-size: 0.875rem !important;
+    border-bottom: 1px solid var(--border) !important;
+}
+
+.template-legal-classic .group .absolute a:hover,
+.template-legal-classic nav .absolute a:hover {
+    background: var(--surface-alt) !important;
+    color: var(--burgundy) !important;
+    padding-left: 1.75rem !important;
+}
+
+/* ===== HERO ===== */
+.template-legal-classic #inicio {
+    background: var(--slate) !important;
+    min-height: 100vh !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.template-legal-classic #inicio::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(180deg, rgba(30, 41, 59, 0.0) 0%, rgba(15, 25, 35, 0.5) 100%),
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 100px,
+            rgba(255, 255, 255, 0.012) 100px,
+            rgba(255, 255, 255, 0.012) 101px
+        );
+    z-index: 0;
+}
+
+.template-legal-classic #inicio::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--burgundy) 0%, var(--gold) 50%, var(--burgundy) 100%);
+    z-index: 2;
+}
+
+.template-legal-classic #inicio h1 {
+    color: #FFFFFF !important;
+    font-family: 'Libre Baskerville', Georgia, serif !important;
+    font-size: clamp(2rem, 5vw, 4.5rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.01em !important;
+    position: relative;
+    z-index: 1;
+}
+
+.template-legal-classic #inicio h1 span {
+    color: var(--gold-light) !important;
+    font-style: italic !important;
+}
+
+.template-legal-classic #inicio p {
+    color: rgba(255, 255, 255, 0.60) !important;
+    font-size: 1.0625rem !important;
+    line-height: 1.85 !important;
+    font-weight: 300 !important;
+    max-width: 560px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ===== STATS ===== */
+.template-legal-classic .stat-card {
+    background: var(--surface) !important;
+    border: none !important;
+    border-left: 4px solid var(--burgundy) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 2px 16px var(--shadow) !important;
+    padding: 2rem !important;
+}
+
+.template-legal-classic .stat-card .text-4xl,
+.template-legal-classic .stat-card .text-3xl {
+    color: var(--slate) !important;
+    font-family: 'Libre Baskerville', Georgia, serif !important;
+    font-weight: 700 !important;
+    font-size: 3rem !important;
+    line-height: 1 !important;
+}
+
+.template-legal-classic .stat-card p {
+    color: var(--text-soft) !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 1.5px !important;
+    text-transform: uppercase !important;
+    font-weight: 600 !important;
+}
+
+/* ===== SECCIONES ===== */
+.template-legal-classic section {
+    padding: 7rem 0 !important;
+}
+
+.template-legal-classic section:nth-child(even) {
+    background: var(--surface-alt) !important;
+}
+
+.template-legal-classic section:nth-child(odd) {
+    background: var(--off-white) !important;
+}
+
+/* ===== TITULOS ===== */
+.template-legal-classic section h2 {
+    color: var(--slate) !important;
+    font-family: 'Libre Baskerville', Georgia, serif !important;
+    font-size: clamp(1.875rem, 3.5vw, 3rem) !important;
+    font-weight: 700 !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.75rem !important;
+    letter-spacing: -0.01em !important;
+}
+
+.template-legal-classic section h2 span {
+    color: var(--burgundy) !important;
+    font-style: italic !important;
+}
+
+.template-legal-classic section h2::after {
+    content: '';
+    display: block;
+    width: 3rem;
+    height: 2px;
+    background: linear-gradient(90deg, var(--burgundy), var(--gold));
+    margin-top: 1.25rem;
+}
+
+/* ===== CARDS ===== */
+.template-legal-classic .bg-white.rounded-2xl {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 2px 8px var(--shadow) !important;
+    transition: all 0.25s ease !important;
+    position: relative;
+    overflow: hidden !important;
+}
+
+.template-legal-classic .bg-white.rounded-2xl::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, var(--burgundy), var(--gold));
+    transition: left 0.35s ease;
+}
+
+.template-legal-classic .bg-white.rounded-2xl:hover::before {
+    left: 0;
+}
+
+.template-legal-classic .bg-white.rounded-2xl:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 32px var(--shadow) !important;
+}
+
+.template-legal-classic .bg-white.rounded-2xl h3 {
+    color: var(--slate) !important;
+    font-family: 'Libre Baskerville', Georgia, serif !important;
+    font-weight: 700 !important;
+    font-size: 1.0625rem !important;
+}
+
+/* ===== ICONOS ===== */
+.template-legal-classic .service-type {
+    background: rgba(30, 41, 59, 0.06) !important;
+    border: 1px solid var(--border-dark) !important;
+    border-radius: 0 !important;
+    width: 56px !important;
+    height: 56px !important;
+}
+
+.template-legal-classic .service-type svg {
+    color: var(--burgundy) !important;
+}
+
+/* ===== BOTONES ===== */
+.template-legal-classic .btn-primary,
+.template-legal-classic .btn-shine {
+    background: var(--slate) !important;
+    color: #FFFFFF !important;
+    border: none !important;
+    border-radius: 0 !important;
+    font-weight: 600 !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.5px !important;
+    padding: 0.875rem 2.5rem !important;
+    transition: all 0.2s ease !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    position: relative;
+}
+
+.template-legal-classic .btn-primary::after,
+.template-legal-classic .btn-shine::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background: var(--burgundy);
+    transition: width 0.25s ease;
+    z-index: 0;
+}
+
+.template-legal-classic .btn-primary:hover::after,
+.template-legal-classic .btn-shine:hover::after {
+    width: 100%;
+}
+
+.template-legal-classic .btn-primary:hover,
+.template-legal-classic .btn-shine:hover {
+    background: var(--slate) !important;
+    box-shadow: none !important;
+}
+
+.template-legal-classic .btn-secondary {
+    background: transparent !important;
+    color: var(--slate) !important;
+    border: 1.5px solid var(--slate) !important;
+    border-radius: 0 !important;
+    font-size: 0.875rem !important;
+    letter-spacing: 0.5px !important;
+}
+
+.template-legal-classic .btn-secondary:hover {
+    background: var(--slate) !important;
+    color: #FFFFFF !important;
+}
+
+/* ===== TEAM CARDS ===== */
+.template-legal-classic .team-card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-top: 3px solid var(--burgundy) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 2px 12px var(--shadow) !important;
+}
+
+.template-legal-classic .team-card__image {
+    border-radius: 0 !important;
+    border: 1px solid var(--border) !important;
+}
+
+.template-legal-classic .team-card__name {
+    color: var(--slate) !important;
+    font-family: 'Libre Baskerville', Georgia, serif !important;
+    font-weight: 700 !important;
+}
+
+.template-legal-classic .team-card__position {
+    color: var(--burgundy) !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.5px !important;
+    font-weight: 600 !important;
+    text-transform: uppercase !important;
+    font-size: 0.75rem !important;
+}
+
+/* ===== TESTIMONIOS ===== */
+.template-legal-classic #testimonios .grid > div,
+.template-legal-classic .testimonial-card {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 2px 12px var(--shadow) !important;
+    padding: 2rem !important;
+    position: relative;
+}
+
+.template-legal-classic #testimonios .grid > div::before,
+.template-legal-classic .testimonial-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--burgundy), transparent);
+}
+
+.template-legal-classic #testimonios .text-5xl {
+    color: var(--gold) !important;
+    font-family: 'Libre Baskerville', Georgia, serif !important;
+    opacity: 0.5 !important;
+}
+
+.template-legal-classic #testimonios p {
+    color: var(--text-mid) !important;
+    font-family: 'Libre Baskerville', Georgia, serif !important;
+    font-style: italic !important;
+    font-size: 0.9375rem !important;
+    line-height: 1.8 !important;
+}
+
+/* ===== FORMULARIO ===== */
+.template-legal-classic form {
+    background: var(--surface) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 0 !important;
+    box-shadow: 0 4px 24px var(--shadow) !important;
+    border-top: 3px solid var(--slate) !important;
+}
+
+.template-legal-classic input,
+.template-legal-classic textarea,
+.template-legal-classic select {
+    background: var(--off-white) !important;
+    border: 1px solid var(--border) !important;
+    border-radius: 0 !important;
+    color: var(--text) !important;
+    font-family: 'Source Sans Pro', sans-serif !important;
+    font-size: 0.9375rem !important;
+}
+
+.template-legal-classic input:focus,
+.template-legal-classic textarea:focus,
+.template-legal-classic select:focus {
+    border-color: var(--burgundy) !important;
+    box-shadow: 0 0 0 3px rgba(124, 45, 54, 0.10) !important;
+    outline: none !important;
+    background: var(--surface) !important;
+}
+
+.template-legal-classic label {
+    color: var(--text) !important;
+    font-weight: 600 !important;
+    font-size: 0.8125rem !important;
+    letter-spacing: 0.5px !important;
+    text-transform: uppercase !important;
+}
+
+/* ===== CTA ===== */
+.template-legal-classic .cta-section,
+.template-legal-classic #contacto {
+    background: var(--slate) !important;
+    border-radius: 0 !important;
+    margin: 0 !important;
+    border-top: 4px solid var(--burgundy) !important;
+}
+
+.template-legal-classic .cta-section h2,
+.template-legal-classic #contacto h2 {
+    color: #FFFFFF !important;
+    font-family: 'Libre Baskerville', Georgia, serif !important;
+}
+
+.template-legal-classic .cta-section h2 span {
+    color: var(--gold-light) !important;
+    font-style: italic !important;
+}
+
+.template-legal-classic .cta-section h2::after {
+    background: var(--gold) !important;
+    opacity: 0.6;
+}
+
+.template-legal-classic .cta-section p,
+.template-legal-classic #contacto p {
+    color: rgba(255, 255, 255, 0.55) !important;
+}
+
+/* ===== FOOTER ===== */
+.template-legal-classic footer {
+    background: var(--slate-deep) !important;
+    border-top: 3px solid var(--burgundy) !important;
+    border-radius: 0 !important;
+}
+
+.template-legal-classic footer h4 {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 600 !important;
+    font-size: 0.75rem !important;
+    letter-spacing: 2px !important;
+    text-transform: uppercase !important;
+}
+
+.template-legal-classic footer a {
+    color: rgba(255, 255, 255, 0.40) !important;
+    font-size: 0.875rem !important;
+    font-weight: 300 !important;
+}
+
+.template-legal-classic footer a:hover {
+    color: var(--gold-light) !important;
+}
+
+/* ===== TOP BAR ===== */
+.template-legal-classic .top-bar {
+    background: var(--slate-deep) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06) !important;
+}
+
+.template-legal-classic .top-bar a {
+    color: rgba(255, 255, 255, 0.65) !important;
+    font-size: 0.8125rem !important;
+}
+
+/* ===== SCROLL PROGRESS ===== */
+.template-legal-classic .scroll-progress {
+    background: linear-gradient(90deg, var(--burgundy), var(--gold)) !important;
+    height: 2px !important;
+}
+
+/* ===== ANIMACIONES ===== */
+.template-legal-classic .reveal {
+    opacity: 0;
+    transform: translateY(16px);
+    transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) !important;
+}
+
+.template-legal-classic .reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.template-legal-classic .reveal.delay-1 { transition-delay: 0.1s; }
+.template-legal-classic .reveal.delay-2 { transition-delay: 0.2s; }
+.template-legal-classic .reveal.delay-3 { transition-delay: 0.3s; }
+.template-legal-classic .reveal.delay-4 { transition-delay: 0.4s; }
+
+/* ===== SCROLLBAR ===== */
+.template-legal-classic ::-webkit-scrollbar {
+    width: 6px;
+    background: var(--off-white);
+}
+
+.template-legal-classic ::-webkit-scrollbar-thumb {
+    background: var(--slate-mid);
+    border-radius: 0;
+}
+
+/* ===== SELECTION ===== */
+.template-legal-classic ::selection {
+    background: rgba(124, 45, 54, 0.15);
+    color: var(--slate);
+}
+
+/* ===== REDUCED MOTION ===== */
+@media (prefers-reduced-motion: reduce) {
+    .template-legal-classic * {
+        animation: none !important;
+        transition-duration: 0.01ms !important;
+    }
+}
