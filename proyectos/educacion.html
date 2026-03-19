@@ -1,0 +1,1533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universidad Académica Nacional | Formando el Futuro con Excelencia</title>
+  <meta name="description" content="Universidad Académica Nacional: programas de pregrado y posgrado con acreditación de alta calidad. Ingeniería, Ciencias, Humanidades y Tecnología." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <meta property="og:title" content="Universidad Académica Nacional | Formando el Futuro con Excelencia">
+  <meta property="og:description" content="Universidad Académica Nacional: programas de pregrado y posgrado con acreditación de alta calidad. Ingeniería, Ciencias, Humanidades y Tecnología.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://yadev.co/assets/img/og-default.jpg">
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["EducationalOrganization", "LocalBusiness"],
+    "name": "Universidad Académica Nacional",
+    "description": "Institución de educación superior con acreditación de alta calidad. Formamos profesionales íntegros con impacto social.",
+    "url": "https://universidadacademica.edu.co",
+    "telephone": "+573001234567",
+    "email": "admisiones@universidadacademica.edu.co",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrera 15 # 85-32",
+      "addressLocality": "Bogotá",
+      "addressRegion": "Cundinamarca",
+      "postalCode": "110221",
+      "addressCountry": "CO"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 4.6097,
+      "longitude": -74.0817
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+      "opens": "07:00",
+      "closes": "20:00"
+    },
+    "numberOfStudents": 8500,
+    "accreditationStatus": "Acreditación de Alta Calidad - MEN"
+  }
+  </script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'edu-bg': '#F0F7FF',
+            'edu-navy': '#1A365D',
+            'edu-green': '#38A169',
+            'edu-amber': '#D69E2E',
+            'edu-blue': '#2B6CB0',
+            'edu-purple': '#6B46C1',
+            'edu-light': '#EBF8F0',
+            'edu-surface': '#FFFFFF',
+          },
+          fontFamily: {
+            'display': ['Merriweather', 'Georgia', 'serif'],
+            'body': ['Open Sans', 'system-ui', 'sans-serif'],
+          },
+          boxShadow: {
+            'edu': '0 4px 24px rgba(26,54,93,0.08)',
+            'edu-md': '0 8px 40px rgba(26,54,93,0.12)',
+            'edu-lg': '0 16px 64px rgba(26,54,93,0.16)',
+            'float': '0 8px 32px rgba(26,54,93,0.18)',
+          },
+          keyframes: {
+            'fade-up': {
+              '0%': { opacity: '0', transform: 'translateY(32px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            'bounce-in': {
+              '0%': { opacity: '0', transform: 'scale(0.92) translateY(20px)' },
+              '60%': { transform: 'scale(1.03) translateY(-4px)' },
+              '100%': { opacity: '1', transform: 'scale(1) translateY(0)' }
+            },
+            'slide-right': {
+              '0%': { opacity: '0', transform: 'translateX(-32px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' }
+            },
+            'float-up': {
+              '0%, 100%': { transform: 'translateY(0px)' },
+              '50%': { transform: 'translateY(-12px)' }
+            },
+            'count-up': {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            'progress-fill': {
+              '0%': { width: '0%' },
+              '100%': { width: '85%' }
+            }
+          },
+          animation: {
+            'fade-up': 'fade-up 0.7s cubic-bezier(0.34,1.56,0.64,1) forwards',
+            'bounce-in': 'bounce-in 0.8s cubic-bezier(0.34,1.56,0.64,1) forwards',
+            'slide-right': 'slide-right 0.7s cubic-bezier(0.34,1.56,0.64,1) forwards',
+            'float-up': 'float-up 4s ease-in-out infinite',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Open Sans', system-ui, sans-serif;
+      background-color: #F0F7FF;
+      color: #1A365D;
+      overflow-x: hidden;
+    }
+
+    /* ── Reveal animations ── */
+    .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.7s cubic-bezier(0.34,1.56,0.64,1), transform 0.7s cubic-bezier(0.34,1.56,0.64,1); }
+    .reveal.from-left { transform: translateX(-32px) translateY(0); }
+    .reveal.from-right { transform: translateX(32px) translateY(0); }
+    .reveal.scale { transform: scale(0.94); }
+    .reveal.visible { opacity: 1 !important; transform: translate(0,0) scale(1) !important; }
+
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+    .reveal-delay-5 { transition-delay: 0.5s; }
+
+    /* ── Floating Navbar ── */
+    #navbar {
+      transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease, padding 0.4s ease;
+    }
+    #navbar.scrolled {
+      box-shadow: 0 8px 40px rgba(26,54,93,0.18);
+      background: rgba(255,255,255,0.97) !important;
+    }
+    #navbar.hidden-nav {
+      transform: translateY(-110%);
+    }
+
+    /* ── Nav pills ── */
+    .nav-pill {
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: #1A365D;
+      padding: 0.45rem 1rem;
+      border-radius: 9999px;
+      transition: background 0.2s, color 0.2s;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+    .nav-pill:hover { background: #EBF8F0; color: #38A169; }
+
+    /* ── Campus illustration ── */
+    .campus-scene {
+      position: relative;
+      width: 100%;
+      height: 480px;
+      overflow: hidden;
+    }
+    .campus-sky {
+      position: absolute; inset: 0;
+      background: linear-gradient(160deg, #BEE3F8 0%, #90CDF4 40%, #63B3ED 100%);
+      border-radius: 2rem;
+    }
+    .campus-ground {
+      position: absolute; bottom: 0; left: 0; right: 0; height: 40%;
+      background: linear-gradient(180deg, #C6F6D5 0%, #9AE6B4 100%);
+      border-radius: 0 0 2rem 2rem;
+    }
+    .building-main {
+      position: absolute; bottom: 38%; left: 50%; transform: translateX(-50%);
+      width: 140px; height: 160px;
+      background: #FFFFFF;
+      border-radius: 8px 8px 0 0;
+      box-shadow: 0 4px 32px rgba(26,54,93,0.15);
+    }
+    .building-main::before {
+      content: '';
+      position: absolute; top: -28px; left: 50%; transform: translateX(-50%);
+      border-left: 20px solid transparent;
+      border-right: 20px solid transparent;
+      border-bottom: 28px solid #1A365D;
+    }
+    .building-left {
+      position: absolute; bottom: 38%; left: 20%;
+      width: 80px; height: 100px;
+      background: #EBF8FF;
+      border-radius: 6px 6px 0 0;
+      box-shadow: 0 4px 16px rgba(26,54,93,0.10);
+    }
+    .building-right {
+      position: absolute; bottom: 38%; right: 20%;
+      width: 90px; height: 110px;
+      background: #F0FFF4;
+      border-radius: 6px 6px 0 0;
+      box-shadow: 0 4px 16px rgba(26,54,93,0.10);
+    }
+    .window-grid {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      gap: 8px; padding: 20px 16px; margin-top: 40px;
+    }
+    .window-grid span {
+      display: block; height: 18px;
+      background: #BEE3F8;
+      border-radius: 2px;
+    }
+    .window-grid span.lit { background: #F6E05E; }
+    .tree {
+      position: absolute;
+      bottom: 37%;
+    }
+    .tree-trunk {
+      width: 10px; height: 24px;
+      background: #744210;
+      margin: 0 auto;
+      border-radius: 2px;
+    }
+    .tree-top {
+      width: 36px; height: 44px;
+      background: #276749;
+      border-radius: 50% 50% 40% 40%;
+      margin: 0 auto;
+      position: relative; top: 4px;
+    }
+    .path-line {
+      position: absolute; bottom: 35%;
+      left: 50%; transform: translateX(-50%);
+      width: 40px; height: 60px;
+      background: #E2E8F0;
+      border-radius: 4px;
+    }
+    .sun-circle {
+      position: absolute; top: 28px; right: 48px;
+      width: 52px; height: 52px;
+      background: radial-gradient(circle, #F6E05E 40%, #ECC94B 100%);
+      border-radius: 50%;
+      box-shadow: 0 0 32px rgba(246,224,94,0.5);
+      animation: float-up 4s ease-in-out infinite;
+    }
+    .cloud {
+      position: absolute;
+      background: white;
+      border-radius: 50px;
+      opacity: 0.85;
+    }
+    .cloud::before, .cloud::after {
+      content: '';
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+    }
+    .cloud-1 { top: 60px; left: 40px; width: 80px; height: 24px; }
+    .cloud-1::before { width: 36px; height: 36px; top: -16px; left: 12px; }
+    .cloud-1::after { width: 28px; height: 28px; top: -12px; left: 36px; }
+    .cloud-2 { top: 100px; right: 80px; width: 60px; height: 18px; opacity: 0.6; }
+    .cloud-2::before { width: 26px; height: 26px; top: -12px; left: 8px; }
+    .cloud-2::after { width: 20px; height: 20px; top: -8px; left: 26px; }
+    .floating-badge {
+      position: absolute;
+      background: white;
+      border-radius: 12px;
+      padding: 10px 14px;
+      box-shadow: 0 4px 20px rgba(26,54,93,0.15);
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #1A365D;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .badge-tl { top: 24px; left: 24px; animation: float-up 5s ease-in-out infinite; }
+    .badge-tr { top: 80px; right: 24px; animation: float-up 5s ease-in-out infinite 1.5s; }
+    .badge-bl { bottom: 44%; left: 16px; animation: float-up 5s ease-in-out infinite 0.8s; }
+
+    /* ── Accreditation badges row ── */
+    .accred-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: white;
+      border: 1.5px solid #BEE3F8;
+      border-radius: 9999px;
+      padding: 6px 16px;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #2B6CB0;
+      white-space: nowrap;
+    }
+
+    /* ── Program cards bento ── */
+    .program-card {
+      background: white;
+      border-radius: 1.25rem;
+      padding: 1.75rem;
+      box-shadow: 0 4px 24px rgba(26,54,93,0.08);
+      border: 1.5px solid transparent;
+      transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease, border-color 0.3s ease;
+      cursor: default;
+      position: relative;
+      overflow: hidden;
+    }
+    .program-card::after {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0;
+      height: 3px;
+      background: transparent;
+      transition: background 0.3s ease;
+      border-radius: 1.25rem 1.25rem 0 0;
+    }
+    .program-card:hover { transform: translateY(-6px); box-shadow: 0 16px 48px rgba(26,54,93,0.14); }
+    .program-card.blue:hover::after { background: #2B6CB0; border-color: #2B6CB0; }
+    .program-card.green:hover::after { background: #38A169; }
+    .program-card.amber:hover::after { background: #D69E2E; }
+    .program-card.purple:hover::after { background: #6B46C1; }
+    .program-card:hover { border-color: #BEE3F8; }
+
+    .cat-tag {
+      display: inline-flex; align-items: center; gap: 4px;
+      border-radius: 9999px;
+      padding: 3px 12px;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .tag-blue { background: #EBF8FF; color: #2B6CB0; }
+    .tag-green { background: #F0FFF4; color: #276749; }
+    .tag-amber { background: #FFFFF0; color: #975A16; }
+    .tag-purple { background: #FAF5FF; color: #553C9A; }
+
+    /* ── Faculty cards horizontal scroll ── */
+    .faculty-scroll {
+      display: flex;
+      gap: 1.25rem;
+      overflow-x: auto;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+    }
+    .faculty-scroll::-webkit-scrollbar { height: 4px; }
+    .faculty-scroll::-webkit-scrollbar-track { background: #EBF8FF; border-radius: 2px; }
+    .faculty-scroll::-webkit-scrollbar-thumb { background: #90CDF4; border-radius: 2px; }
+
+    .faculty-card {
+      flex: 0 0 220px;
+      scroll-snap-align: start;
+      background: white;
+      border-radius: 1.25rem;
+      padding: 1.5rem;
+      box-shadow: 0 4px 24px rgba(26,54,93,0.08);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .faculty-card:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(26,54,93,0.14); }
+    .faculty-avatar {
+      width: 72px; height: 72px;
+      border-radius: 50%;
+      margin: 0 auto 12px;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Merriweather', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: white;
+    }
+
+    /* ── Testimonial carousel ── */
+    .testimonial-item { display: none; }
+    .testimonial-item.active { display: block; }
+
+    /* ── Event date badge ── */
+    .event-date {
+      display: flex; flex-direction: column; align-items: center; justify-content: center;
+      width: 60px; height: 60px;
+      background: #1A365D;
+      border-radius: 12px;
+      color: white;
+      flex-shrink: 0;
+    }
+    .event-date .day {
+      font-family: 'Merriweather', serif;
+      font-size: 1.5rem;
+      font-weight: 900;
+      line-height: 1;
+    }
+    .event-date .month {
+      font-size: 0.65rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: #90CDF4;
+    }
+
+    /* ── Stats counter ── */
+    .stat-number {
+      font-family: 'Merriweather', serif;
+      font-size: 3.5rem;
+      font-weight: 900;
+      color: #1A365D;
+      line-height: 1;
+      display: block;
+    }
+
+    /* ── CTA section ── */
+    .cta-section {
+      background: linear-gradient(135deg, #276749 0%, #38A169 50%, #48BB78 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 280px; height: 280px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+    .cta-section::after {
+      content: '';
+      position: absolute;
+      bottom: -80px; left: -40px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.05);
+    }
+
+    /* ── Progress bar ── */
+    .progress-track {
+      height: 6px;
+      background: rgba(255,255,255,0.25);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background: white;
+      border-radius: 3px;
+      width: 0%;
+      transition: width 1.8s cubic-bezier(0.34,1.06,0.64,1) 0.4s;
+    }
+
+    /* ── Form inputs ── */
+    .form-input {
+      width: 100%;
+      padding: 0.75rem 1rem;
+      border: 1.5px solid rgba(255,255,255,0.35);
+      border-radius: 0.75rem;
+      background: rgba(255,255,255,0.15);
+      color: white;
+      font-family: 'Open Sans', sans-serif;
+      font-size: 0.9rem;
+      backdrop-filter: blur(4px);
+      outline: none;
+      transition: border-color 0.2s, background 0.2s;
+    }
+    .form-input::placeholder { color: rgba(255,255,255,0.65); }
+    .form-input:focus { border-color: white; background: rgba(255,255,255,0.2); }
+    .form-input option { color: #1A365D; background: white; }
+
+    /* ── Footer ── */
+    footer { background: #1A365D; color: #CBD5E0; }
+    footer a { color: #68D391; text-decoration: none; transition: color 0.2s; }
+    footer a:hover { color: #9AE6B4; }
+
+    /* ── WhatsApp ── */
+    .whatsapp-btn {
+      position: fixed; bottom: 24px; right: 24px; z-index: 9999;
+      width: 56px; height: 56px;
+      background: #25D366;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      box-shadow: 0 4px 20px rgba(37,211,102,0.45);
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.3s ease;
+      text-decoration: none;
+    }
+    .whatsapp-btn:hover { transform: scale(1.12); box-shadow: 0 8px 32px rgba(37,211,102,0.55); }
+
+    /* ── Section headings ── */
+    .section-eyebrow {
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #38A169;
+      display: block;
+      margin-bottom: 0.75rem;
+    }
+    .section-title {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 700;
+      color: #1A365D;
+      line-height: 1.3;
+    }
+
+    /* ── Mobile nav ── */
+    #mobile-menu { display: none; }
+    #mobile-menu.open { display: flex; }
+
+    /* ── Hero typography ── */
+    .hero-title {
+      font-family: 'Merriweather', serif;
+      font-size: clamp(2rem, 4.5vw, 3.4rem);
+      font-weight: 900;
+      line-height: 1.18;
+      color: #1A365D;
+    }
+    .hero-title span { color: #38A169; font-style: italic; }
+
+    /* ── Smooth scroll snap for testimonials ── */
+    @media (max-width: 640px) {
+      .campus-scene { height: 300px; }
+      .stat-number { font-size: 2.5rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════════════════════════ FLOATING NAVBAR ═══════════════════════════════ -->
+  <div class="fixed top-4 left-0 right-0 z-50 flex justify-center px-4" id="navbar-wrapper">
+    <nav id="navbar" class="bg-white/95 backdrop-blur-md rounded-full px-4 py-2.5 flex items-center gap-2 w-full max-w-5xl shadow-float" role="navigation" aria-label="Navegación principal">
+      <!-- Logo -->
+      <a href="#inicio" class="flex items-center gap-2.5 flex-shrink-0 mr-2">
+        <div class="w-8 h-8 bg-edu-navy rounded-full flex items-center justify-center flex-shrink-0">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+            <path d="M12 3L2 8l10 5 10-5-10-5z" fill="white"/>
+            <path d="M2 14l10 5 10-5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <span class="font-display font-bold text-edu-navy text-sm hidden sm:block leading-tight">UAN <span class="text-edu-green">Académica</span></span>
+      </a>
+
+      <!-- Pills — desktop -->
+      <div class="hidden md:flex items-center gap-1 flex-1 justify-center">
+        <a href="#programas" class="nav-pill">Programas</a>
+        <a href="#nosotros" class="nav-pill">Nosotros</a>
+        <a href="#docentes" class="nav-pill">Docentes</a>
+        <a href="#eventos" class="nav-pill">Eventos</a>
+        <a href="#testimonios" class="nav-pill">Egresados</a>
+      </div>
+
+      <!-- CTA -->
+      <a href="#inscripcion" class="ml-auto flex-shrink-0 bg-edu-green text-white text-sm font-semibold px-5 py-2 rounded-full hover:bg-green-700 transition-colors duration-200" style="font-family:'Open Sans',sans-serif;">
+        Inscríbete
+      </a>
+
+      <!-- Mobile hamburger -->
+      <button id="menu-toggle" class="md:hidden ml-2 p-2 rounded-full hover:bg-edu-bg transition-colors" aria-label="Abrir menú">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1A365D" stroke-width="2.5" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </nav>
+
+    <!-- Mobile dropdown -->
+    <div id="mobile-menu" class="absolute top-16 left-4 right-4 bg-white rounded-2xl shadow-edu-lg p-4 flex-col gap-1 z-50">
+      <a href="#programas" class="nav-pill block text-center py-3" onclick="closeMobileMenu()">Programas</a>
+      <a href="#nosotros" class="nav-pill block text-center py-3" onclick="closeMobileMenu()">Nosotros</a>
+      <a href="#docentes" class="nav-pill block text-center py-3" onclick="closeMobileMenu()">Docentes</a>
+      <a href="#eventos" class="nav-pill block text-center py-3" onclick="closeMobileMenu()">Eventos</a>
+      <a href="#testimonios" class="nav-pill block text-center py-3" onclick="closeMobileMenu()">Egresados</a>
+      <a href="#inscripcion" class="block text-center bg-edu-green text-white font-semibold py-3 rounded-full mt-2 hover:bg-green-700 transition-colors" style="font-family:'Open Sans',sans-serif;" onclick="closeMobileMenu()">Inscríbete Ahora</a>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+  <section id="inicio" class="min-h-screen flex items-center pt-24 pb-16 px-4" style="background: linear-gradient(160deg, #EBF8FF 0%, #F0F7FF 60%, #F0FFF4 100%);">
+    <div class="max-w-6xl mx-auto w-full">
+      <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+        <!-- Left: text -->
+        <div class="reveal from-left">
+          <!-- Eyebrow -->
+          <div class="flex items-center gap-2 mb-6">
+            <span class="w-8 h-0.5 bg-edu-green block"></span>
+            <span class="text-xs font-bold uppercase tracking-widest text-edu-green" style="font-family:'Open Sans',sans-serif;">Acreditación de Alta Calidad · MEN</span>
+          </div>
+
+          <h1 class="hero-title mb-6">
+            Formando el Futuro con <span>Excelencia Académica</span>
+          </h1>
+
+          <p class="text-edu-navy/70 text-base md:text-lg mb-8 leading-relaxed" style="font-family:'Open Sans',sans-serif; max-width:480px;">
+            Más de 25 años transformando vidas a través del conocimiento. Programas acreditados, docentes de excelencia y un campus diseñado para inspirar.
+          </p>
+
+          <!-- Accreditation badges row -->
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="accred-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2B6CB0" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Alta Calidad MEN
+            </span>
+            <span class="accred-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2B6CB0" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><path d="M9 12l2 2 4-4"/></svg>
+              SNIES 10847
+            </span>
+            <span class="accred-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2B6CB0" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12h8M12 8v8"/></svg>
+              ISO 9001:2015
+            </span>
+            <span class="accred-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#2B6CB0" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              +8500 Estudiantes
+            </span>
+          </div>
+
+          <!-- CTAs -->
+          <div class="flex flex-wrap gap-3">
+            <a href="#inscripcion" class="inline-flex items-center gap-2 bg-edu-navy text-white font-semibold px-7 py-3.5 rounded-full hover:bg-edu-blue transition-all duration-300 hover:-translate-y-0.5 shadow-edu" style="font-family:'Open Sans',sans-serif;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Inscríbete Ahora
+            </a>
+            <a href="#programas" class="inline-flex items-center gap-2 border-2 border-edu-navy text-edu-navy font-semibold px-7 py-3.5 rounded-full hover:bg-edu-navy hover:text-white transition-all duration-300" style="font-family:'Open Sans',sans-serif;">
+              Conoce Programas
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
+
+          <!-- Quick stats -->
+          <div class="flex gap-8 mt-10 pt-8 border-t border-edu-navy/10">
+            <div>
+              <span class="block font-display font-black text-2xl text-edu-navy">25+</span>
+              <span class="text-sm text-edu-navy/60" style="font-family:'Open Sans',sans-serif;">Años de historia</span>
+            </div>
+            <div>
+              <span class="block font-display font-black text-2xl text-edu-green">15</span>
+              <span class="text-sm text-edu-navy/60" style="font-family:'Open Sans',sans-serif;">Programas</span>
+            </div>
+            <div>
+              <span class="block font-display font-black text-2xl text-edu-amber">98%</span>
+              <span class="text-sm text-edu-navy/60" style="font-family:'Open Sans',sans-serif;">Empleabilidad</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: campus illustration -->
+        <div class="reveal scale reveal-delay-2">
+          <div class="campus-scene shadow-edu-lg">
+            <div class="campus-sky">
+              <div class="sun-circle"></div>
+              <div class="cloud cloud-1"></div>
+              <div class="cloud cloud-2"></div>
+            </div>
+            <div class="campus-ground"></div>
+            <div class="building-left">
+              <div style="padding:12px 8px; display:grid; grid-template-columns:repeat(2,1fr); gap:5px; margin-top:20px;">
+                <span style="display:block;height:12px;background:#BEE3F8;border-radius:2px;"></span>
+                <span style="display:block;height:12px;background:#F6E05E;border-radius:2px;"></span>
+                <span style="display:block;height:12px;background:#BEE3F8;border-radius:2px;"></span>
+                <span style="display:block;height:12px;background:#BEE3F8;border-radius:2px;"></span>
+              </div>
+            </div>
+            <div class="building-main">
+              <div class="window-grid">
+                <span></span><span class="lit"></span><span></span>
+                <span class="lit"></span><span></span><span class="lit"></span>
+                <span></span><span class="lit"></span><span></span>
+              </div>
+            </div>
+            <div class="building-right">
+              <div style="padding:12px 10px; display:grid; grid-template-columns:repeat(2,1fr); gap:6px; margin-top:24px;">
+                <span style="display:block;height:14px;background:#C6F6D5;border-radius:2px;"></span>
+                <span style="display:block;height:14px;background:#F6E05E;border-radius:2px;"></span>
+                <span style="display:block;height:14px;background:#C6F6D5;border-radius:2px;"></span>
+                <span style="display:block;height:14px;background:#C6F6D5;border-radius:2px;"></span>
+              </div>
+            </div>
+            <div class="path-line"></div>
+            <div class="tree" style="left:12%">
+              <div class="tree-top"></div>
+              <div class="tree-trunk"></div>
+            </div>
+            <div class="tree" style="right:14%; bottom:39%">
+              <div class="tree-top" style="width:28px;height:36px;background:#22543D;"></div>
+              <div class="tree-trunk"></div>
+            </div>
+            <div class="tree" style="left:30%; bottom:37%">
+              <div class="tree-top" style="width:20px;height:28px;background:#276749;"></div>
+              <div class="tree-trunk" style="width:6px;height:18px;"></div>
+            </div>
+
+            <!-- Floating info badges -->
+            <div class="floating-badge badge-tl">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#38A169" stroke-width="2.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+              Acreditada MEN
+            </div>
+            <div class="floating-badge badge-tr" style="font-size:0.7rem;">
+              <span style="width:8px;height:8px;background:#38A169;border-radius:50%;display:inline-block;"></span>
+              Inscripciones abiertas
+            </div>
+            <div class="floating-badge badge-bl" style="font-size:0.7rem;">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#D69E2E" stroke-width="2.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+              8,500 Estudiantes
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ PROGRAMAS — BENTO GRID ═══════════════════════════════ -->
+  <section id="programas" class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12 reveal">
+        <span class="section-eyebrow">Oferta Académica</span>
+        <h2 class="section-title mb-4">Programas de Excelencia</h2>
+        <p class="text-edu-navy/60 max-w-xl mx-auto leading-relaxed" style="font-family:'Open Sans',sans-serif;">
+          Elige el camino que transformará tu futuro. Todos nuestros programas cuentan con acreditación vigente y planta docente con maestría y doctorado.
+        </p>
+      </div>
+
+      <!-- Bento 2x2 -->
+      <div class="grid md:grid-cols-2 gap-5">
+
+        <!-- Ingeniería -->
+        <div class="program-card blue reveal reveal-delay-1">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#EBF8FF;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#2B6CB0" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+            </div>
+            <span class="cat-tag tag-blue">Ingeniería</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-edu-navy mb-2">Facultad de Ingeniería</h3>
+          <p class="text-edu-navy/60 text-sm leading-relaxed mb-4" style="font-family:'Open Sans',sans-serif;">
+            Ingeniería de Sistemas, Civil, Industrial y Electrónica. Laboratorios de última generación y convenios con empresas líderes del sector.
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2 text-xs text-edu-navy/50" style="font-family:'Open Sans',sans-serif;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Duración: 10 semestres
+            </div>
+            <span class="text-xs font-semibold text-edu-blue" style="font-family:'Open Sans',sans-serif;">4 programas →</span>
+          </div>
+        </div>
+
+        <!-- Ciencias -->
+        <div class="program-card green reveal reveal-delay-2">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#F0FFF4;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#38A169" stroke-width="2" stroke-linecap="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v11m0 0H5m4 0h10m-10 0v4m10-4v4m-10 4h10"/></svg>
+            </div>
+            <span class="cat-tag tag-green">Ciencias</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-edu-navy mb-2">Facultad de Ciencias</h3>
+          <p class="text-edu-navy/60 text-sm leading-relaxed mb-4" style="font-family:'Open Sans',sans-serif;">
+            Biología, Química, Matemáticas y Física. Investigación aplicada con grupos reconocidos por Colciencias y convenios internacionales.
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2 text-xs text-edu-navy/50" style="font-family:'Open Sans',sans-serif;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Duración: 8-10 semestres
+            </div>
+            <span class="text-xs font-semibold text-edu-green" style="font-family:'Open Sans',sans-serif;">3 programas →</span>
+          </div>
+        </div>
+
+        <!-- Humanidades -->
+        <div class="program-card amber reveal reveal-delay-3">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#FFFFF0;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D69E2E" stroke-width="2" stroke-linecap="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+            </div>
+            <span class="cat-tag tag-amber">Humanidades</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-edu-navy mb-2">Facultad de Humanidades</h3>
+          <p class="text-edu-navy/60 text-sm leading-relaxed mb-4" style="font-family:'Open Sans',sans-serif;">
+            Derecho, Psicología, Comunicación Social y Trabajo Social. Formamos profesionales con sólida base ética y pensamiento crítico.
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2 text-xs text-edu-navy/50" style="font-family:'Open Sans',sans-serif;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Duración: 8-10 semestres
+            </div>
+            <span class="text-xs font-semibold" style="color:#975A16;font-family:'Open Sans',sans-serif;">4 programas →</span>
+          </div>
+        </div>
+
+        <!-- Tecnología -->
+        <div class="program-card purple reveal reveal-delay-4">
+          <div class="flex items-start justify-between mb-4">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center" style="background:#FAF5FF;">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#6B46C1" stroke-width="2" stroke-linecap="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            </div>
+            <span class="cat-tag tag-purple">Tecnología</span>
+          </div>
+          <h3 class="font-display font-bold text-xl text-edu-navy mb-2">Facultad de Tecnología</h3>
+          <p class="text-edu-navy/60 text-sm leading-relaxed mb-4" style="font-family:'Open Sans',sans-serif;">
+            Tecnología en Desarrollo de Software, Redes, Gestión de TI y Ciberseguridad. Programas de 6 semestres con salida laboral inmediata.
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2 text-xs text-edu-navy/50" style="font-family:'Open Sans',sans-serif;">
+              <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              Duración: 6 semestres
+            </div>
+            <span class="text-xs font-semibold text-purple-700" style="font-family:'Open Sans',sans-serif;">4 programas →</span>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="text-center mt-8 reveal">
+        <a href="#inscripcion" class="inline-flex items-center gap-2 text-edu-green font-semibold text-sm hover:gap-3 transition-all duration-200" style="font-family:'Open Sans',sans-serif;">
+          Ver todos los programas disponibles
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ POR QUÉ ELEGIRNOS — STATS ═══════════════════════════════ -->
+  <section id="nosotros" class="py-20 px-4" style="background: linear-gradient(160deg, #F0F7FF 0%, #EBF8F0 100%);">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-14 reveal">
+        <span class="section-eyebrow">Por Qué Elegirnos</span>
+        <h2 class="section-title mb-4">Números que Hablan por Nosotros</h2>
+        <p class="text-edu-navy/60 max-w-xl mx-auto" style="font-family:'Open Sans',sans-serif;">
+          Décadas de compromiso con la calidad académica, la investigación y el bienestar estudiantil nos respaldan.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mb-16">
+        <!-- Stat 1 -->
+        <div class="bg-white rounded-2xl p-8 shadow-edu text-center reveal reveal-delay-1">
+          <span class="stat-number" data-target="1500" data-suffix="+">0</span>
+          <span class="block font-display font-bold text-lg text-edu-navy mt-2 mb-3">Egresados Exitosos</span>
+          <p class="text-edu-navy/55 text-sm leading-relaxed" style="font-family:'Open Sans',sans-serif;">
+            Profesionales que hoy lideran empresas, instituciones y emprendimientos en Colombia y el mundo.
+          </p>
+          <div class="mt-4 progress-track">
+            <div class="progress-fill" data-width="92%"></div>
+          </div>
+          <span class="text-xs text-edu-navy/40 mt-2 block" style="font-family:'Open Sans',sans-serif;">92% en posiciones directivas</span>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="bg-white rounded-2xl p-8 shadow-edu text-center reveal reveal-delay-2">
+          <span class="stat-number" data-target="15" data-suffix="">0</span>
+          <span class="block font-display font-bold text-lg text-edu-navy mt-2 mb-3">Programas Acreditados</span>
+          <p class="text-edu-navy/55 text-sm leading-relaxed" style="font-family:'Open Sans',sans-serif;">
+            Pregrados y posgrados con acreditación de alta calidad del Ministerio de Educación Nacional.
+          </p>
+          <div class="mt-4 progress-track">
+            <div class="progress-fill" data-width="100%"></div>
+          </div>
+          <span class="text-xs text-edu-navy/40 mt-2 block" style="font-family:'Open Sans',sans-serif;">100% con registro calificado vigente</span>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="bg-white rounded-2xl p-8 shadow-edu text-center reveal reveal-delay-3">
+          <span class="stat-number" data-target="98" data-suffix="%">0</span>
+          <span class="block font-display font-bold text-lg text-edu-navy mt-2 mb-3">Tasa de Empleabilidad</span>
+          <p class="text-edu-navy/55 text-sm leading-relaxed" style="font-family:'Open Sans',sans-serif;">
+            De nuestros egresados encuentran trabajo en su área de formación dentro de los 6 meses posteriores a su grado.
+          </p>
+          <div class="mt-4 progress-track">
+            <div class="progress-fill" data-width="98%"></div>
+          </div>
+          <span class="text-xs text-edu-navy/40 mt-2 block" style="font-family:'Open Sans',sans-serif;">Encuesta de seguimiento 2025</span>
+        </div>
+      </div>
+
+      <!-- Feature list -->
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="flex items-start gap-4 bg-white rounded-xl p-5 shadow-edu reveal reveal-delay-1">
+          <div class="w-10 h-10 rounded-full bg-edu-light flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38A169" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-edu-navy mb-1">Bienestar Universitario Integral</h4>
+            <p class="text-edu-navy/55 text-sm" style="font-family:'Open Sans',sans-serif;">Psicología, enfermería, deporte, cultura y alimentación saludable para todos los estudiantes.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-white rounded-xl p-5 shadow-edu reveal reveal-delay-2">
+          <div class="w-10 h-10 rounded-full bg-edu-light flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38A169" stroke-width="2.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-edu-navy mb-1">Movilidad Estudiantil Internacional</h4>
+            <p class="text-edu-navy/55 text-sm" style="font-family:'Open Sans',sans-serif;">Convenios activos con 40+ universidades en América, Europa y Asia para intercambios académicos.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-white rounded-xl p-5 shadow-edu reveal reveal-delay-3">
+          <div class="w-10 h-10 rounded-full bg-edu-light flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38A169" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-edu-navy mb-1">Financiación y Becas Disponibles</h4>
+            <p class="text-edu-navy/55 text-sm" style="font-family:'Open Sans',sans-serif;">Créditos ICETEX, becas de mérito, descuentos para hermanos y planes de pago flexibles.</p>
+          </div>
+        </div>
+        <div class="flex items-start gap-4 bg-white rounded-xl p-5 shadow-edu reveal reveal-delay-4">
+          <div class="w-10 h-10 rounded-full bg-edu-light flex items-center justify-center flex-shrink-0 mt-0.5">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#38A169" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.87 12 19.79 19.79 0 0 1 1.8 3.4 2 2 0 0 1 3.77 1.19h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div>
+            <h4 class="font-display font-bold text-edu-navy mb-1">Atención Personalizada 24/7</h4>
+            <p class="text-edu-navy/55 text-sm" style="font-family:'Open Sans',sans-serif;">Asesor académico asignado desde el primer semestre y canales de atención permanentes.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ DOCENTES — HORIZONTAL SCROLL ═══════════════════════════════ -->
+  <section id="docentes" class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end md:justify-between mb-10 reveal">
+        <div>
+          <span class="section-eyebrow">Nuestros Docentes</span>
+          <h2 class="section-title">Maestros con <em class="text-edu-green not-italic">Vocación</em></h2>
+        </div>
+        <p class="text-edu-navy/55 max-w-sm mt-3 md:mt-0 text-sm leading-relaxed" style="font-family:'Open Sans',sans-serif;">
+          El 80% de nuestra planta docente cuenta con posgrado. Investigadores activos que traen el conocimiento más reciente al aula.
+        </p>
+      </div>
+
+      <div class="faculty-scroll reveal">
+        <!-- Card 1 -->
+        <div class="faculty-card">
+          <div class="faculty-avatar" style="background: linear-gradient(135deg, #2B6CB0, #1A365D);">MA</div>
+          <h4 class="font-display font-bold text-edu-navy text-sm mb-0.5">Dr. Miguel Ángel Torres</h4>
+          <span class="text-xs text-edu-green font-semibold block mb-1" style="font-family:'Open Sans',sans-serif;">Ingeniería de Sistemas</span>
+          <span class="text-xs text-edu-navy/50 block" style="font-family:'Open Sans',sans-serif;">PhD. MIT · 15 años experiencia</span>
+          <div class="flex justify-center gap-1 mt-3">
+            <span class="w-1.5 h-1.5 bg-edu-blue rounded-full"></span>
+            <span class="w-1.5 h-1.5 bg-edu-blue/40 rounded-full"></span>
+            <span class="w-1.5 h-1.5 bg-edu-blue/40 rounded-full"></span>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="faculty-card">
+          <div class="faculty-avatar" style="background: linear-gradient(135deg, #38A169, #276749);">LR</div>
+          <h4 class="font-display font-bold text-edu-navy text-sm mb-0.5">Dra. Laura Rodríguez</h4>
+          <span class="text-xs text-edu-green font-semibold block mb-1" style="font-family:'Open Sans',sans-serif;">Biología Molecular</span>
+          <span class="text-xs text-edu-navy/50 block" style="font-family:'Open Sans',sans-serif;">PhD. Barcelona · 12 años exp.</span>
+          <div class="flex justify-center gap-1 mt-3">
+            <span class="w-1.5 h-1.5 bg-edu-green rounded-full"></span>
+            <span class="w-1.5 h-1.5 bg-edu-green/40 rounded-full"></span>
+            <span class="w-1.5 h-1.5 bg-edu-green/40 rounded-full"></span>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="faculty-card">
+          <div class="faculty-avatar" style="background: linear-gradient(135deg, #D69E2E, #975A16);">CF</div>
+          <h4 class="font-display font-bold text-edu-navy text-sm mb-0.5">Dr. Carlos Fonseca</h4>
+          <span class="text-xs text-edu-green font-semibold block mb-1" style="font-family:'Open Sans',sans-serif;">Derecho Constitucional</span>
+          <span class="text-xs text-edu-navy/50 block" style="font-family:'Open Sans',sans-serif;">PhD. Externado · 20 años exp.</span>
+          <div class="flex justify-center gap-1 mt-3">
+            <span class="w-1.5 h-1.5 bg-edu-amber rounded-full"></span>
+            <span class="w-1.5 h-1.5 bg-edu-amber/40 rounded-full"></span>
+            <span class="w-1.5 h-1.5 bg-edu-amber/40 rounded-full"></span>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="faculty-card">
+          <div class="faculty-avatar" style="background: linear-gradient(135deg, #6B46C1, #44337A);">SM</div>
+          <h4 class="font-display font-bold text-edu-navy text-sm mb-0.5">Dra. Sandra Moreno</h4>
+          <span class="text-xs text-edu-green font-semibold block mb-1" style="font-family:'Open Sans',sans-serif;">Ciberseguridad</span>
+          <span class="text-xs text-edu-navy/50 block" style="font-family:'Open Sans',sans-serif;">MSc. UNAL · 10 años exp.</span>
+          <div class="flex justify-center gap-1 mt-3">
+            <span class="w-1.5 h-1.5 bg-edu-purple rounded-full"></span>
+            <span class="w-1.5 h-1.5 bg-edu-purple/40 rounded-full"></span>
+            <span class="w-1.5 h-1.5 bg-edu-purple/40 rounded-full"></span>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="faculty-card">
+          <div class="faculty-avatar" style="background: linear-gradient(135deg, #2B6CB0, #44337A);">RV</div>
+          <h4 class="font-display font-bold text-edu-navy text-sm mb-0.5">Dr. Ricardo Valencia</h4>
+          <span class="text-xs text-edu-green font-semibold block mb-1" style="font-family:'Open Sans',sans-serif;">Matemáticas Aplicadas</span>
+          <span class="text-xs text-edu-navy/50 block" style="font-family:'Open Sans',sans-serif;">PhD. Chicago · 18 años exp.</span>
+          <div class="flex justify-center gap-1 mt-3">
+            <span class="w-1.5 h-1.5 bg-edu-blue rounded-full"></span>
+            <span class="w-1.5 h-1.5 bg-edu-blue/40 rounded-full"></span>
+            <span class="w-1.5 h-1.5 bg-edu-blue/40 rounded-full"></span>
+          </div>
+        </div>
+        <!-- Card 6 -->
+        <div class="faculty-card">
+          <div class="faculty-avatar" style="background: linear-gradient(135deg, #38A169, #2B6CB0);">PC</div>
+          <h4 class="font-display font-bold text-edu-navy text-sm mb-0.5">Dra. Paula Castillo</h4>
+          <span class="text-xs text-edu-green font-semibold block mb-1" style="font-family:'Open Sans',sans-serif;">Psicología Organizacional</span>
+          <span class="text-xs text-edu-navy/50 block" style="font-family:'Open Sans',sans-serif;">PhD. Javeriana · 14 años exp.</span>
+          <div class="flex justify-center gap-1 mt-3">
+            <span class="w-1.5 h-1.5 bg-edu-green rounded-full"></span>
+            <span class="w-1.5 h-1.5 bg-edu-green/40 rounded-full"></span>
+            <span class="w-1.5 h-1.5 bg-edu-green/40 rounded-full"></span>
+          </div>
+        </div>
+        <!-- Card 7 -->
+        <div class="faculty-card">
+          <div class="faculty-avatar" style="background: linear-gradient(135deg, #D69E2E, #38A169);">JO</div>
+          <h4 class="font-display font-bold text-edu-navy text-sm mb-0.5">Ing. Jorge Ospina</h4>
+          <span class="text-xs text-edu-green font-semibold block mb-1" style="font-family:'Open Sans',sans-serif;">Ingeniería Industrial</span>
+          <span class="text-xs text-edu-navy/50 block" style="font-family:'Open Sans',sans-serif;">MSc. Los Andes · 11 años exp.</span>
+          <div class="flex justify-center gap-1 mt-3">
+            <span class="w-1.5 h-1.5 bg-edu-amber rounded-full"></span>
+            <span class="w-1.5 h-1.5 bg-edu-amber/40 rounded-full"></span>
+            <span class="w-1.5 h-1.5 bg-edu-amber/40 rounded-full"></span>
+          </div>
+        </div>
+      </div>
+
+      <p class="text-center text-xs text-edu-navy/40 mt-4" style="font-family:'Open Sans',sans-serif;">← Desliza para ver más docentes →</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ TESTIMONIOS ═══════════════════════════════ -->
+  <section id="testimonios" class="py-20 px-4" style="background: linear-gradient(160deg, #EBF8FF 0%, #F0FFF4 100%);">
+    <div class="max-w-3xl mx-auto text-center">
+      <span class="section-eyebrow">Egresados</span>
+      <h2 class="section-title mb-12">Voces que Nos <em class="text-edu-green not-italic">Inspiran</em></h2>
+
+      <div id="testimonial-container" class="relative reveal">
+        <!-- Testimonial 1 -->
+        <div class="testimonial-item active">
+          <div class="bg-white rounded-2xl p-8 md:p-10 shadow-edu-md relative">
+            <svg class="absolute top-6 left-8 text-edu-green/20" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="font-display text-lg md:text-xl text-edu-navy leading-relaxed mb-8 italic relative z-10">
+              "Gracias a la formación recibida en Ingeniería de Sistemas pude ingresar a una empresa multinacional al mes de graduarme. Los profesores no solo enseñan teoría, forman profesionales reales."
+            </p>
+            <div class="flex items-center justify-center gap-4">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center font-display font-bold text-white text-lg" style="background: linear-gradient(135deg, #2B6CB0, #1A365D);">AS</div>
+              <div class="text-left">
+                <span class="block font-semibold text-edu-navy" style="font-family:'Open Sans',sans-serif;">Andrés Suárez</span>
+                <span class="text-xs text-edu-green font-semibold" style="font-family:'Open Sans',sans-serif;">Egresado Ingeniería de Sistemas · 2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="testimonial-item">
+          <div class="bg-white rounded-2xl p-8 md:p-10 shadow-edu-md relative">
+            <svg class="absolute top-6 left-8 text-edu-green/20" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="font-display text-lg md:text-xl text-edu-navy leading-relaxed mb-8 italic relative z-10">
+              "Estudiar Psicología aquí fue transformador. Las prácticas clínicas desde tercer semestre y el apoyo constante del bienestar universitario me permitieron crecer personal y profesionalmente."
+            </p>
+            <div class="flex items-center justify-center gap-4">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center font-display font-bold text-white text-lg" style="background: linear-gradient(135deg, #38A169, #276749);">VM</div>
+              <div class="text-left">
+                <span class="block font-semibold text-edu-navy" style="font-family:'Open Sans',sans-serif;">Valentina Mora</span>
+                <span class="text-xs text-edu-green font-semibold" style="font-family:'Open Sans',sans-serif;">Egresada Psicología · 2022</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="testimonial-item">
+          <div class="bg-white rounded-2xl p-8 md:p-10 shadow-edu-md relative">
+            <svg class="absolute top-6 left-8 text-edu-green/20" width="48" height="48" viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+            <p class="font-display text-lg md:text-xl text-edu-navy leading-relaxed mb-8 italic relative z-10">
+              "La beca de excelencia que me otorgaron cambió mi vida. Hoy soy investigador en química molecular y cada día agradezco haber elegido esta universidad. La calidad académica es incomparable."
+            </p>
+            <div class="flex items-center justify-center gap-4">
+              <div class="w-12 h-12 rounded-full flex items-center justify-center font-display font-bold text-white text-lg" style="background: linear-gradient(135deg, #D69E2E, #975A16);">DG</div>
+              <div class="text-left">
+                <span class="block font-semibold text-edu-navy" style="font-family:'Open Sans',sans-serif;">Daniel García</span>
+                <span class="text-xs text-edu-green font-semibold" style="font-family:'Open Sans',sans-serif;">Egresado Química · 2021</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel controls -->
+      <div class="flex items-center justify-center gap-4 mt-8 reveal">
+        <button onclick="prevTestimonial()" class="w-10 h-10 rounded-full border-2 border-edu-navy/20 flex items-center justify-center hover:border-edu-green hover:text-edu-green transition-colors" aria-label="Anterior">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        </button>
+        <div class="flex gap-2" id="testimonial-dots">
+          <span class="w-2.5 h-2.5 rounded-full bg-edu-green cursor-pointer" onclick="goToTestimonial(0)"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-edu-navy/20 cursor-pointer" onclick="goToTestimonial(1)"></span>
+          <span class="w-2.5 h-2.5 rounded-full bg-edu-navy/20 cursor-pointer" onclick="goToTestimonial(2)"></span>
+        </div>
+        <button onclick="nextTestimonial()" class="w-10 h-10 rounded-full border-2 border-edu-navy/20 flex items-center justify-center hover:border-edu-green hover:text-edu-green transition-colors" aria-label="Siguiente">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ EVENTOS ═══════════════════════════════ -->
+  <section id="eventos" class="py-20 px-4 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12 reveal">
+        <span class="section-eyebrow">Agenda Académica</span>
+        <h2 class="section-title mb-4">Próximos Eventos</h2>
+        <p class="text-edu-navy/60 max-w-xl mx-auto" style="font-family:'Open Sans',sans-serif;">
+          Conferencias, talleres, ferias de empleo y jornadas de ciencia abierta. La vida universitaria más allá del aula.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-5">
+        <!-- Event 1 -->
+        <div class="bg-white border border-edu-bg rounded-2xl p-6 shadow-edu hover:shadow-edu-md transition-shadow duration-300 reveal reveal-delay-1">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="event-date">
+              <span class="day">28</span>
+              <span class="month">Mar</span>
+            </div>
+            <div>
+              <span class="cat-tag tag-blue mb-2 inline-block">Conferencia</span>
+              <h4 class="font-display font-bold text-edu-navy text-sm leading-tight">IA y el Futuro del Trabajo</h4>
+            </div>
+          </div>
+          <p class="text-edu-navy/55 text-sm mb-4 leading-relaxed" style="font-family:'Open Sans',sans-serif;">
+            Panel de expertos sobre inteligencia artificial, automatización y las nuevas competencias profesionales para 2030.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-edu-navy/40" style="font-family:'Open Sans',sans-serif;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            9:00 AM · Auditorio Central
+          </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="bg-white border border-edu-bg rounded-2xl p-6 shadow-edu hover:shadow-edu-md transition-shadow duration-300 reveal reveal-delay-2">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="event-date" style="background:#276749;">
+              <span class="day">04</span>
+              <span class="month">Abr</span>
+            </div>
+            <div>
+              <span class="cat-tag tag-green mb-2 inline-block">Feria</span>
+              <h4 class="font-display font-bold text-edu-navy text-sm leading-tight">Feria de Empleo 2026</h4>
+            </div>
+          </div>
+          <p class="text-edu-navy/55 text-sm mb-4 leading-relaxed" style="font-family:'Open Sans',sans-serif;">
+            Más de 80 empresas nacionales e internacionales en busca de talento. Trae tu hoja de vida y conquista tu primer empleo.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-edu-navy/40" style="font-family:'Open Sans',sans-serif;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            8:00 AM - 6:00 PM · Campus Norte
+          </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="bg-white border border-edu-bg rounded-2xl p-6 shadow-edu hover:shadow-edu-md transition-shadow duration-300 reveal reveal-delay-3">
+          <div class="flex items-start gap-4 mb-4">
+            <div class="event-date" style="background:#975A16;">
+              <span class="day">12</span>
+              <span class="month">Abr</span>
+            </div>
+            <div>
+              <span class="cat-tag tag-amber mb-2 inline-block">Inscripciones</span>
+              <h4 class="font-display font-bold text-edu-navy text-sm leading-tight">Cierre Inscripciones 2026-1</h4>
+            </div>
+          </div>
+          <p class="text-edu-navy/55 text-sm mb-4 leading-relaxed" style="font-family:'Open Sans',sans-serif;">
+            Fecha límite para presentar documentos completos de admisión al primer período académico 2026. No dejes para después tu futuro.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-edu-navy/40" style="font-family:'Open Sans',sans-serif;">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Hasta las 5:00 PM · Admisiones
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ CTA INSCRIPCIÓN ═══════════════════════════════ -->
+  <section id="inscripcion" class="cta-section py-20 px-4">
+    <div class="max-w-5xl mx-auto relative z-10">
+      <div class="grid lg:grid-cols-2 gap-12 items-center">
+        <!-- Text -->
+        <div class="text-white reveal from-left">
+          <span class="block text-green-200 text-xs font-bold uppercase tracking-widest mb-4" style="font-family:'Open Sans',sans-serif;">Admisiones Abiertas 2026-1</span>
+          <h2 class="font-display font-black text-3xl md:text-4xl leading-tight mb-4">Tu Futuro Comienza con una Decisión</h2>
+          <p class="text-green-100 leading-relaxed mb-6" style="font-family:'Open Sans',sans-serif;">
+            Completa el formulario y un asesor académico te contactará en menos de 24 horas con toda la información sobre programas, costos y financiación disponible.
+          </p>
+          <div class="space-y-3">
+            <div class="flex items-center gap-3 text-green-100 text-sm" style="font-family:'Open Sans',sans-serif;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#86EFAC" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+              Proceso de admisión 100% en línea
+            </div>
+            <div class="flex items-center gap-3 text-green-100 text-sm" style="font-family:'Open Sans',sans-serif;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#86EFAC" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+              Respuesta en menos de 24 horas
+            </div>
+            <div class="flex items-center gap-3 text-green-100 text-sm" style="font-family:'Open Sans',sans-serif;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#86EFAC" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+              Asesoría financiera sin costo
+            </div>
+            <div class="flex items-center gap-3 text-green-100 text-sm" style="font-family:'Open Sans',sans-serif;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#86EFAC" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+              Cupos limitados · ¡Reserva el tuyo!
+            </div>
+          </div>
+
+          <!-- Progress bar -->
+          <div class="mt-8">
+            <div class="flex justify-between text-xs text-green-200 mb-2" style="font-family:'Open Sans',sans-serif;">
+              <span>Cupos disponibles 2026-1</span>
+              <span id="progress-label">Cargando...</span>
+            </div>
+            <div class="progress-track">
+              <div class="progress-fill" id="main-progress" data-width="72%"></div>
+            </div>
+            <span class="text-xs text-green-200 mt-1 block" style="font-family:'Open Sans',sans-serif;">72% de cupos ya reservados</span>
+          </div>
+        </div>
+
+        <!-- Form -->
+        <div class="reveal reveal-delay-2">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-7 border border-white/20">
+            <h3 class="font-display font-bold text-white text-xl mb-6">Solicita tu Información</h3>
+            <form onsubmit="submitForm(event)" class="space-y-4">
+              <div>
+                <label class="block text-green-200 text-xs font-semibold mb-1.5 uppercase tracking-wide" style="font-family:'Open Sans',sans-serif;">Nombre Completo</label>
+                <input type="text" class="form-input" placeholder="Ej: Juan David Martínez" required />
+              </div>
+              <div>
+                <label class="block text-green-200 text-xs font-semibold mb-1.5 uppercase tracking-wide" style="font-family:'Open Sans',sans-serif;">Correo Electrónico</label>
+                <input type="email" class="form-input" placeholder="tucorreo@email.com" required />
+              </div>
+              <div>
+                <label class="block text-green-200 text-xs font-semibold mb-1.5 uppercase tracking-wide" style="font-family:'Open Sans',sans-serif;">Teléfono / WhatsApp</label>
+                <input type="tel" class="form-input" placeholder="+57 300 000 0000" />
+              </div>
+              <div>
+                <label class="block text-green-200 text-xs font-semibold mb-1.5 uppercase tracking-wide" style="font-family:'Open Sans',sans-serif;">Programa de Interés</label>
+                <select class="form-input" required>
+                  <option value="" disabled selected>Selecciona un programa...</option>
+                  <optgroup label="Ingeniería">
+                    <option>Ingeniería de Sistemas</option>
+                    <option>Ingeniería Civil</option>
+                    <option>Ingeniería Industrial</option>
+                    <option>Ingeniería Electrónica</option>
+                  </optgroup>
+                  <optgroup label="Ciencias">
+                    <option>Biología</option>
+                    <option>Química</option>
+                    <option>Matemáticas</option>
+                  </optgroup>
+                  <optgroup label="Humanidades">
+                    <option>Derecho</option>
+                    <option>Psicología</option>
+                    <option>Comunicación Social</option>
+                    <option>Trabajo Social</option>
+                  </optgroup>
+                  <optgroup label="Tecnología">
+                    <option>Tecnología en Desarrollo de Software</option>
+                    <option>Tecnología en Redes</option>
+                    <option>Gestión de TI</option>
+                    <option>Ciberseguridad</option>
+                  </optgroup>
+                </select>
+              </div>
+              <button type="submit" id="submit-btn" class="w-full bg-white text-edu-green font-bold py-3.5 rounded-full hover:bg-green-50 transition-colors duration-200 flex items-center justify-center gap-2" style="font-family:'Open Sans',sans-serif;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg>
+                Quiero Mi Información
+              </button>
+            </form>
+            <p class="text-green-200/70 text-xs mt-4 text-center" style="font-family:'Open Sans',sans-serif;">
+              Tus datos están protegidos. No compartimos información con terceros.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+  <footer class="py-16 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+        <!-- Col 1: Brand -->
+        <div class="col-span-2 md:col-span-1">
+          <div class="flex items-center gap-2.5 mb-4">
+            <div class="w-9 h-9 bg-edu-green rounded-full flex items-center justify-center">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+                <path d="M12 3L2 8l10 5 10-5-10-5z" fill="white"/>
+                <path d="M2 14l10 5 10-5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <span class="font-display font-bold text-white text-base">UAN Académica</span>
+          </div>
+          <p class="text-sm leading-relaxed mb-4" style="font-family:'Open Sans',sans-serif; color:#A0AEC0;">
+            Formando profesionales íntegros con impacto social desde 1999. Acreditación de Alta Calidad — MEN.
+          </p>
+          <div class="flex gap-3">
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-edu-green transition-colors" aria-label="Facebook">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-edu-green transition-colors" aria-label="Instagram">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/></svg>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-edu-green transition-colors" aria-label="YouTube">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="#1A365D"/></svg>
+            </a>
+            <a href="#" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-edu-green transition-colors" aria-label="LinkedIn">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="white"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Programas -->
+        <div>
+          <h5 class="font-display font-bold text-white text-sm mb-4">Programas</h5>
+          <ul class="space-y-2.5">
+            <li><a href="#programas" class="text-sm" style="font-family:'Open Sans',sans-serif;">Ingeniería de Sistemas</a></li>
+            <li><a href="#programas" class="text-sm" style="font-family:'Open Sans',sans-serif;">Ingeniería Civil</a></li>
+            <li><a href="#programas" class="text-sm" style="font-family:'Open Sans',sans-serif;">Derecho</a></li>
+            <li><a href="#programas" class="text-sm" style="font-family:'Open Sans',sans-serif;">Psicología</a></li>
+            <li><a href="#programas" class="text-sm" style="font-family:'Open Sans',sans-serif;">Biología</a></li>
+            <li><a href="#programas" class="text-sm" style="font-family:'Open Sans',sans-serif;">Ver todos →</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Institucional -->
+        <div>
+          <h5 class="font-display font-bold text-white text-sm mb-4">Institucional</h5>
+          <ul class="space-y-2.5">
+            <li><a href="#nosotros" class="text-sm" style="font-family:'Open Sans',sans-serif;">Quiénes somos</a></li>
+            <li><a href="#docentes" class="text-sm" style="font-family:'Open Sans',sans-serif;">Planta Docente</a></li>
+            <li><a href="#" class="text-sm" style="font-family:'Open Sans',sans-serif;">Investigación</a></li>
+            <li><a href="#" class="text-sm" style="font-family:'Open Sans',sans-serif;">Bienestar</a></li>
+            <li><a href="#" class="text-sm" style="font-family:'Open Sans',sans-serif;">Egresados</a></li>
+            <li><a href="#" class="text-sm" style="font-family:'Open Sans',sans-serif;">Transparencia</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contacto -->
+        <div>
+          <h5 class="font-display font-bold text-white text-sm mb-4">Contacto</h5>
+          <ul class="space-y-3">
+            <li class="flex items-start gap-2.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68D391" stroke-width="2" class="mt-0.5 flex-shrink-0"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span class="text-sm" style="font-family:'Open Sans',sans-serif; color:#A0AEC0;">Cra. 15 #85-32, Bogotá D.C.</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68D391" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.87 12 19.79 19.79 0 0 1 1.8 3.4 2 2 0 0 1 3.77 1.19h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.93a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              <a href="tel:+573001234567" class="text-sm" style="font-family:'Open Sans',sans-serif;">+57 300 123 4567</a>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68D391" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              <a href="mailto:admisiones@universidadacademica.edu.co" class="text-sm" style="font-family:'Open Sans',sans-serif; word-break:break-all;">admisiones@uan.edu.co</a>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#68D391" stroke-width="2" class="mt-0.5 flex-shrink-0"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+              <span class="text-sm" style="font-family:'Open Sans',sans-serif; color:#A0AEC0;">Lun–Vie: 7AM–8PM<br/>Sáb: 8AM–2PM</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p class="text-xs text-center sm:text-left" style="font-family:'Open Sans',sans-serif; color:#718096;">
+          &copy; 2026 Universidad Académica Nacional · Registro SNIES 10847 · Personería Jurídica Res. 1234/1999
+        </p>
+        <div class="flex gap-4">
+          <a href="#" class="text-xs hover:text-green-400 transition-colors" style="font-family:'Open Sans',sans-serif; color:#718096;">Política de Datos</a>
+          <a href="#" class="text-xs hover:text-green-400 transition-colors" style="font-family:'Open Sans',sans-serif; color:#718096;">Términos</a>
+          <a href="#" class="text-xs hover:text-green-400 transition-colors" style="font-family:'Open Sans',sans-serif; color:#718096;">Accesibilidad</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════ WHATSAPP BUTTON ═══════════════════════════════ -->
+  <a href="https://wa.me/573001234567?text=Hola,%20me%20interesa%20conocer%20más%20sobre%20los%20programas%20académicos%20disponibles." class="whatsapp-btn" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <!-- ═══════════════════════════════ JAVASCRIPT ═══════════════════════════════ -->
+  <script>
+    // ── Scroll Reveal ──
+    const revealEls = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revealObserver.observe(el));
+
+    // ── Counter Animation ──
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      const duration = 1800;
+      const start = performance.now();
+      function update(now) {
+        const elapsed = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        // Ease out cubic
+        const eased = 1 - Math.pow(1 - progress, 3);
+        const value = Math.floor(eased * target);
+        el.textContent = value.toLocaleString('es-CO') + suffix;
+        if (progress < 1) requestAnimationFrame(update);
+      }
+      requestAnimationFrame(update);
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.stat-number[data-target]').forEach(el => counterObserver.observe(el));
+
+    // ── Progress Bars ──
+    const progressObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const fill = entry.target;
+          const width = fill.dataset.width || '80%';
+          setTimeout(() => { fill.style.width = width; }, 300);
+          progressObserver.unobserve(fill);
+        }
+      });
+    }, { threshold: 0.5 });
+    document.querySelectorAll('.progress-fill').forEach(el => progressObserver.observe(el));
+
+    // Update label when progress fills
+    const mainProgress = document.getElementById('main-progress');
+    if (mainProgress) {
+      const progressLabelEl = document.getElementById('progress-label');
+      const labelObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && progressLabelEl) {
+            progressLabelEl.textContent = '72% reservados';
+            labelObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+      labelObserver.observe(mainProgress);
+    }
+
+    // ── Floating Navbar ──
+    let lastScroll = 0;
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+      if (currentScroll > 80) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+      lastScroll = currentScroll;
+    }, { passive: true });
+
+    // ── Mobile Menu ──
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.toggle('open');
+    });
+    function closeMobileMenu() {
+      mobileMenu.classList.remove('open');
+    }
+    document.addEventListener('click', (e) => {
+      if (!menuToggle.contains(e.target) && !mobileMenu.contains(e.target)) {
+        closeMobileMenu();
+      }
+    });
+
+    // ── Testimonial Carousel ──
+    let currentTestimonial = 0;
+    const testimonials = document.querySelectorAll('.testimonial-item');
+    const dots = document.querySelectorAll('#testimonial-dots span');
+    function goToTestimonial(index) {
+      testimonials[currentTestimonial].classList.remove('active');
+      dots[currentTestimonial].style.background = 'rgba(26,54,93,0.2)';
+      currentTestimonial = (index + testimonials.length) % testimonials.length;
+      testimonials[currentTestimonial].classList.add('active');
+      dots[currentTestimonial].style.background = '#38A169';
+    }
+    function nextTestimonial() { goToTestimonial(currentTestimonial + 1); }
+    function prevTestimonial() { goToTestimonial(currentTestimonial - 1); }
+
+    // Auto-advance testimonials
+    setInterval(nextTestimonial, 6000);
+
+    // ── Form Submit ──
+    function submitForm(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submit-btn');
+      btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg> ¡Solicitud Enviada!';
+      btn.style.background = '#276749';
+      btn.style.color = 'white';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 2L11 13"/><path d="M22 2L15 22l-4-9-9-4 20-7z"/></svg> Quiero Mi Información';
+        btn.style.background = 'white';
+        btn.style.color = '#38A169';
+        btn.disabled = false;
+        e.target.reset();
+      }, 3500);
+    }
+
+    // ── Smooth scroll for nav links ──
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        e.preventDefault();
+        const target = document.querySelector(href);
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ── Keyboard accessibility for testimonial dots ──
+    dots.forEach((dot, i) => {
+      dot.setAttribute('tabindex', '0');
+      dot.setAttribute('role', 'button');
+      dot.setAttribute('aria-label', `Testimonio ${i + 1}`);
+      dot.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') goToTestimonial(i);
+      });
+    });
+  </script>
+</body>
+</html>

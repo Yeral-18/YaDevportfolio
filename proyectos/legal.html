@@ -1,0 +1,1579 @@
+<!DOCTYPE html>
+<html lang="es" data-industry="legal" data-yadev-cookies data-privacy-url="#privacidad" data-terms-url="#terminos">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Valcárcel & Asociados — Firma de abogados en Bogotá con más de 15 años de experiencia en derecho civil, penal, laboral, comercial y familiar.">
+    <meta property="og:title" content="Valcárcel & Asociados — Firma de Abogados">
+    <meta property="og:description" content="Defensa legal con excelencia y compromiso. Más de 15 años al servicio de nuestros clientes en Colombia.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yadev.co/assets/img/og-default.jpg">
+    <title>Valcárcel & Asociados | Firma de Abogados — Demo YaDev</title>
+    <link rel="icon" type="image/png" href="../assets/img/icon.png">
+
+    <!-- Schema.org: LegalService + LocalBusiness + Attorney -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": ["LegalService", "LocalBusiness"],
+                "@id": "#valcarcel-firm",
+                "name": "Valcárcel & Asociados",
+                "description": "Firma de abogados en Bogotá especializada en derecho civil, penal, laboral, comercial y familiar.",
+                "url": "https://valcarcelasociados.co",
+                "telephone": "+573001234567",
+                "email": "consultas@valcarcelasociados.co",
+                "priceRange": "$$",
+                "openingHours": "Mo-Fr 08:00-18:00",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "Calle 72 # 10-07, Piso 8",
+                    "addressLocality": "Bogotá",
+                    "addressRegion": "Cundinamarca",
+                    "postalCode": "110221",
+                    "addressCountry": "CO"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": 4.6482,
+                    "longitude": -74.0759
+                },
+                "areaServed": {
+                    "@type": "Country",
+                    "name": "Colombia"
+                },
+                "hasOfferCatalog": {
+                    "@type": "OfferCatalog",
+                    "name": "Áreas de Práctica Legal",
+                    "itemListElement": [
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Derecho Civil" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Derecho Penal" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Derecho Laboral" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Derecho Comercial" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Derecho Familiar" } },
+                        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Propiedad Intelectual" } }
+                    ]
+                }
+            },
+            {
+                "@type": "Attorney",
+                "@id": "#attorney-valcarcel",
+                "name": "Dr. Rodrigo Valcárcel",
+                "jobTitle": "Socio Fundador",
+                "worksFor": { "@id": "#valcarcel-firm" },
+                "knowsAbout": ["Derecho Civil", "Derecho Comercial", "Litigios"],
+                "alumniOf": "Universidad de los Andes"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate:    '#1E293B',
+                        'slate-mid': '#2D3F55',
+                        'slate-light': '#3D526B',
+                        burgundy: '#7C2D36',
+                        'burgundy-dark': '#5E1F27',
+                        'burgundy-light': '#9B3A45',
+                        gold:     '#B8860B',
+                        'gold-light': '#D4A017',
+                        'off-white': '#F8F9FA',
+                        ink:      '#111827',
+                        muted:    '#6B7280',
+                        rule:     '#E5E7EB',
+                    },
+                    fontFamily: {
+                        display: ['"Libre Baskerville"', 'Georgia', 'serif'],
+                        body:    ['"Source Sans Pro"', 'system-ui', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        widest2: '0.2em',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+Pro:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ======================================
+           BASE
+        ====================================== */
+        *, *::before, *::after { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Source Sans Pro', system-ui, sans-serif;
+            background-color: #F8F9FA;
+            color: #111827;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ======================================
+           MARBLE TEXTURE (CSS-only, hero)
+        ====================================== */
+        .marble-texture {
+            position: relative;
+            overflow: hidden;
+        }
+        .marble-texture::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 120% 80% at 15% 30%, rgba(255,255,255,0.035) 0%, transparent 60%),
+                radial-gradient(ellipse 80% 120% at 85% 70%, rgba(255,255,255,0.025) 0%, transparent 55%),
+                radial-gradient(ellipse 60% 60% at 50% 10%, rgba(124,45,54,0.12) 0%, transparent 50%),
+                radial-gradient(ellipse 100% 50% at 10% 90%, rgba(184,134,11,0.07) 0%, transparent 50%),
+                radial-gradient(ellipse 70% 70% at 90% 20%, rgba(255,255,255,0.02) 0%, transparent 40%);
+            pointer-events: none;
+            z-index: 1;
+        }
+        .marble-texture > * { position: relative; z-index: 2; }
+
+        /* ======================================
+           TYPOGRAPHY
+        ====================================== */
+        .font-display { font-family: 'Libre Baskerville', Georgia, serif; }
+
+        /* ======================================
+           FADE REVEAL (scroll-triggered)
+        ====================================== */
+        .fade-reveal {
+            opacity: 0;
+            transform: translateY(16px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .fade-reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .fade-reveal-delay-1 { transition-delay: 0.1s; }
+        .fade-reveal-delay-2 { transition-delay: 0.2s; }
+        .fade-reveal-delay-3 { transition-delay: 0.3s; }
+        .fade-reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ======================================
+           NAVBAR
+        ====================================== */
+        #navbar {
+            background: #1E293B;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+            transition: box-shadow 0.3s ease;
+        }
+        #navbar.scrolled {
+            box-shadow: 0 2px 20px rgba(0,0,0,0.35);
+        }
+        .nav-link {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: #94A3B8;
+            text-decoration: none;
+            letter-spacing: 0.03em;
+            transition: color 0.2s ease;
+            padding-bottom: 2px;
+            border-bottom: 1px solid transparent;
+        }
+        .nav-link:hover {
+            color: #F8F9FA;
+            border-bottom-color: rgba(184,134,11,0.5);
+        }
+        .nav-cta {
+            background: #7C2D36;
+            color: #F8F9FA;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding: 0.5rem 1.25rem;
+            border: 1px solid #9B3A45;
+            transition: background 0.2s ease, border-color 0.2s ease;
+            text-transform: uppercase;
+        }
+        .nav-cta:hover {
+            background: #9B3A45;
+            border-color: #B8470F;
+        }
+
+        /* Mobile menu */
+        #mobile-menu {
+            display: none;
+            background: #1E293B;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        #mobile-menu.open { display: block; }
+        .mobile-nav-link {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            font-size: 0.9rem;
+            color: #94A3B8;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            text-decoration: none;
+            font-family: 'Source Sans Pro', sans-serif;
+        }
+        .mobile-nav-link:hover { color: #F8F9FA; background: rgba(255,255,255,0.04); }
+
+        /* ======================================
+           HERO
+        ====================================== */
+        #hero {
+            background-color: #1E293B;
+            min-height: 92vh;
+            display: flex;
+            align-items: center;
+        }
+        .hero-rule {
+            width: 3rem;
+            height: 1px;
+            background: #B8860B;
+            display: inline-block;
+        }
+        .hero-headline {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: clamp(2.2rem, 5vw, 3.75rem);
+            line-height: 1.18;
+            color: #F8F9FA;
+            font-weight: 700;
+        }
+        .hero-subhead {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1.125rem;
+            color: #94A3B8;
+            font-weight: 300;
+            line-height: 1.75;
+            max-width: 540px;
+        }
+        .hero-btn-primary {
+            display: inline-block;
+            background: #7C2D36;
+            color: #F8F9FA;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 0.875rem 2.25rem;
+            border: 1px solid #9B3A45;
+            text-decoration: none;
+            transition: background 0.25s ease, border-color 0.25s ease;
+        }
+        .hero-btn-primary:hover {
+            background: #9B3A45;
+        }
+        .hero-btn-secondary {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: #94A3B8;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 400;
+            letter-spacing: 0.04em;
+            text-decoration: none;
+            transition: color 0.2s ease;
+            border-bottom: 1px solid transparent;
+        }
+        .hero-btn-secondary:hover {
+            color: #F8F9FA;
+            border-bottom-color: rgba(184,134,11,0.4);
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.75rem;
+            font-family: 'Source Sans Pro', sans-serif;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: #B8860B;
+            font-weight: 600;
+        }
+
+        /* ======================================
+           SECTION LABEL
+        ====================================== */
+        .section-label {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.6875rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: #7C2D36;
+        }
+        .section-title {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: clamp(1.625rem, 3.5vw, 2.5rem);
+            font-weight: 700;
+            color: #111827;
+            line-height: 1.25;
+        }
+        .section-title-light {
+            color: #F8F9FA;
+        }
+        .section-desc {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 1rem;
+            color: #6B7280;
+            line-height: 1.75;
+        }
+
+        /* ======================================
+           ACCORDION (Áreas de Práctica)
+        ====================================== */
+        .accordion-item {
+            border-bottom: 1px solid #E5E7EB;
+        }
+        .accordion-item:first-child {
+            border-top: 1px solid #E5E7EB;
+        }
+        .accordion-trigger {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.375rem 0;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            gap: 1rem;
+        }
+        .accordion-title {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: 1.0625rem;
+            color: #111827;
+            font-weight: 400;
+            transition: color 0.2s ease;
+        }
+        .accordion-trigger:hover .accordion-title,
+        .accordion-trigger[aria-expanded="true"] .accordion-title {
+            color: #7C2D36;
+        }
+        .accordion-icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            color: #6B7280;
+            transition: transform 0.3s ease, color 0.2s ease;
+            flex-shrink: 0;
+        }
+        .accordion-trigger[aria-expanded="true"] .accordion-icon {
+            transform: rotate(45deg);
+            color: #7C2D36;
+        }
+        .accordion-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.3s ease;
+        }
+        .accordion-body.open {
+            max-height: 300px;
+        }
+        .accordion-body-inner {
+            padding-bottom: 1.375rem;
+        }
+        .accordion-body p {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.9375rem;
+            color: #6B7280;
+            line-height: 1.75;
+        }
+        .accordion-tag {
+            display: inline-block;
+            font-size: 0.6875rem;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #7C2D36;
+            border: 1px solid rgba(124,45,54,0.3);
+            padding: 0.2rem 0.6rem;
+            margin-top: 0.75rem;
+            margin-right: 0.35rem;
+        }
+
+        /* ======================================
+           SOBRE LA FIRMA
+        ====================================== */
+        .firm-photo {
+            background: linear-gradient(160deg, #2D3F55 0%, #1E293B 50%, #0F1A2A 100%);
+            min-height: 420px;
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+            padding: 2rem;
+        }
+        .firm-photo-label {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-style: italic;
+            font-size: 1rem;
+            color: rgba(248,249,250,0.5);
+            line-height: 1.5;
+        }
+        .gold-rule {
+            width: 2.5rem;
+            height: 2px;
+            background: #B8860B;
+            display: block;
+            margin-bottom: 1.5rem;
+        }
+
+        /* ======================================
+           TEAM CARDS
+        ====================================== */
+        .lawyer-card {
+            background: #fff;
+            border: 1px solid #E5E7EB;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .lawyer-card:hover {
+            border-color: #7C2D36;
+            box-shadow: 0 4px 24px rgba(124,45,54,0.08);
+        }
+        .lawyer-photo {
+            background: linear-gradient(145deg, #2D3F55, #1E293B);
+            height: 220px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .lawyer-photo-initials {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: 2rem;
+            color: rgba(248,249,250,0.3);
+            letter-spacing: 0.05em;
+        }
+        .lawyer-name {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: 1.125rem;
+            color: #111827;
+            font-weight: 700;
+        }
+        .lawyer-title {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #7C2D36;
+        }
+        .lawyer-specialty {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.875rem;
+            color: #6B7280;
+        }
+
+        /* ======================================
+           STATS
+        ====================================== */
+        #resultados {
+            background: #1E293B;
+        }
+        .stat-number {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: clamp(2.5rem, 5vw, 3.75rem);
+            font-weight: 700;
+            color: #B8860B;
+            line-height: 1;
+        }
+        .stat-label {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 400;
+            color: #94A3B8;
+            letter-spacing: 0.04em;
+            margin-top: 0.5rem;
+        }
+        .stat-divider {
+            width: 1px;
+            background: rgba(255,255,255,0.08);
+        }
+
+        /* ======================================
+           PROCESO (Timeline)
+        ====================================== */
+        .timeline-item { position: relative; }
+        .timeline-number {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: rgba(184,134,11,0.2);
+            line-height: 1;
+            min-width: 3rem;
+        }
+        .timeline-connector {
+            position: absolute;
+            left: 1.45rem;
+            top: 3.5rem;
+            bottom: -1rem;
+            width: 1px;
+            background: linear-gradient(to bottom, rgba(184,134,11,0.35), rgba(184,134,11,0.08));
+        }
+        .timeline-title {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: 1.125rem;
+            color: #111827;
+            font-weight: 700;
+        }
+        .timeline-desc {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.9375rem;
+            color: #6B7280;
+            line-height: 1.7;
+            margin-top: 0.375rem;
+        }
+
+        /* ======================================
+           CTA / CONSULTA
+        ====================================== */
+        #consulta {
+            background: #1E293B;
+        }
+        .form-label {
+            display: block;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.8125rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: #94A3B8;
+            margin-bottom: 0.5rem;
+        }
+        .form-input {
+            width: 100%;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            color: #F8F9FA;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.9375rem;
+            padding: 0.75rem 1rem;
+            outline: none;
+            transition: border-color 0.2s ease, background 0.2s ease;
+        }
+        .form-input::placeholder { color: rgba(148,163,184,0.5); }
+        .form-input:focus {
+            border-color: rgba(124,45,54,0.7);
+            background: rgba(255,255,255,0.07);
+        }
+        .form-input option { background: #1E293B; color: #F8F9FA; }
+        .form-submit {
+            width: 100%;
+            background: #7C2D36;
+            color: #F8F9FA;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 1rem;
+            border: 1px solid #9B3A45;
+            cursor: pointer;
+            transition: background 0.2s ease;
+        }
+        .form-submit:hover { background: #9B3A45; }
+
+        /* ======================================
+           FOOTER
+        ====================================== */
+        #footer {
+            background: #111827;
+            border-top: 1px solid rgba(255,255,255,0.06);
+        }
+        .footer-heading {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: 0.9375rem;
+            color: #F8F9FA;
+            font-weight: 700;
+            margin-bottom: 1.25rem;
+        }
+        .footer-link {
+            display: block;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.875rem;
+            color: #6B7280;
+            text-decoration: none;
+            margin-bottom: 0.625rem;
+            transition: color 0.2s ease;
+            border-bottom: 1px solid transparent;
+            width: fit-content;
+        }
+        .footer-link:hover {
+            color: #B8860B;
+            border-bottom-color: rgba(184,134,11,0.3);
+        }
+        .footer-text {
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.875rem;
+            color: #6B7280;
+            line-height: 1.7;
+        }
+        .footer-rule {
+            border: none;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            margin: 2.5rem 0 1.5rem;
+        }
+        .footer-logo {
+            font-family: 'Libre Baskerville', Georgia, serif;
+            font-size: 1.125rem;
+            color: #F8F9FA;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+        }
+        .footer-logo span { color: #B8860B; }
+
+        /* ======================================
+           WHATSAPP BUTTON
+        ====================================== */
+        #whatsapp-btn {
+            position: fixed;
+            bottom: 1.75rem;
+            right: 1.75rem;
+            z-index: 999;
+            width: 2.875rem;
+            height: 2.875rem;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 2px 12px rgba(37,211,102,0.25);
+            transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+            text-decoration: none;
+        }
+        #whatsapp-btn:hover {
+            background: #1EBE5A;
+            box-shadow: 0 4px 18px rgba(37,211,102,0.35);
+            transform: scale(1.06);
+        }
+        #whatsapp-btn svg {
+            width: 1.375rem;
+            height: 1.375rem;
+            fill: #fff;
+        }
+        #whatsapp-tooltip {
+            position: fixed;
+            bottom: 2.125rem;
+            right: 5rem;
+            background: #1E293B;
+            color: #F8F9FA;
+            font-family: 'Source Sans Pro', sans-serif;
+            font-size: 0.8125rem;
+            padding: 0.4rem 0.875rem;
+            border: 1px solid rgba(255,255,255,0.08);
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.2s ease;
+            z-index: 998;
+        }
+        #whatsapp-btn:hover ~ #whatsapp-tooltip { opacity: 1; }
+
+        /* ======================================
+           UTILITIES
+        ====================================== */
+        .divider-gold {
+            width: 2rem;
+            height: 2px;
+            background: #B8860B;
+            display: block;
+        }
+
+        /* counter target */
+        .counter-val { display: inline; }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================================
+         NAVBAR
+    ============================================================ -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <a href="#hero" class="footer-logo" style="font-size:1rem; text-decoration:none;">
+                    Valcárcel<span> &</span> Asociados
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#areas" class="nav-link">Áreas de Práctica</a>
+                    <a href="#firma" class="nav-link">La Firma</a>
+                    <a href="#equipo" class="nav-link">Equipo</a>
+                    <a href="#proceso" class="nav-link">Proceso</a>
+                    <a href="#consulta" class="nav-cta">Consulta Gratis</a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="hamburger" aria-label="Abrir menú" class="lg:hidden p-2 text-slate-400 hover:text-white transition-colors">
+                    <svg id="hamburger-open" class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5M3.75 17.25h16.5"/>
+                    </svg>
+                    <svg id="hamburger-close" class="w-5 h-5 hidden" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" role="navigation" aria-label="Menú móvil">
+            <a href="#areas" class="mobile-nav-link">Áreas de Práctica</a>
+            <a href="#firma" class="mobile-nav-link">La Firma</a>
+            <a href="#equipo" class="mobile-nav-link">Equipo</a>
+            <a href="#proceso" class="mobile-nav-link">Proceso</a>
+            <a href="#consulta" class="mobile-nav-link" style="color:#F8F9FA; font-weight:600;">Consulta Gratis</a>
+        </div>
+    </nav>
+
+    <!-- ============================================================
+         HERO
+    ============================================================ -->
+    <section id="hero" class="marble-texture pt-16">
+        <div class="max-w-6xl mx-auto px-6 py-24 lg:py-32">
+            <div class="max-w-2xl">
+                <!-- Badge -->
+                <div class="hero-badge fade-reveal mb-8">
+                    <span class="divider-gold" style="width:1.75rem; height:1px; margin-bottom:0;"></span>
+                    Bogotá, Colombia — Est. 2009
+                </div>
+
+                <!-- Headline -->
+                <h1 class="hero-headline fade-reveal fade-reveal-delay-1">
+                    Defensa Legal con<br>
+                    Excelencia y<br>
+                    Compromiso
+                </h1>
+
+                <!-- Rule -->
+                <div class="flex items-center gap-3 mt-6 mb-6 fade-reveal fade-reveal-delay-2">
+                    <span class="hero-rule"></span>
+                    <p class="hero-subhead" style="font-size:0.875rem; color:rgba(148,163,184,0.8); margin:0;">
+                        Derecho Civil · Penal · Laboral · Comercial
+                    </p>
+                </div>
+
+                <!-- Subhead -->
+                <p class="hero-subhead fade-reveal fade-reveal-delay-2">
+                    Más de quince años representando los intereses de personas, familias y empresas colombianas con rigor jurídico, discreción y resultados demostrables.
+                </p>
+
+                <!-- CTAs -->
+                <div class="flex flex-wrap items-center gap-5 mt-10 fade-reveal fade-reveal-delay-3">
+                    <a href="#consulta" class="hero-btn-primary">Agendar Consulta Gratuita</a>
+                    <a href="#areas" class="hero-btn-secondary">
+                        Áreas de Práctica
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Trust line -->
+                <div class="mt-14 pt-10 border-t border-white/10 fade-reveal fade-reveal-delay-4">
+                    <div class="flex flex-wrap gap-8">
+                        <div>
+                            <div class="stat-number" style="font-size:1.875rem;">200+</div>
+                            <div class="stat-label">Casos ganados</div>
+                        </div>
+                        <div class="stat-divider hidden sm:block"></div>
+                        <div>
+                            <div class="stat-number" style="font-size:1.875rem;">15</div>
+                            <div class="stat-label">Años de experiencia</div>
+                        </div>
+                        <div class="stat-divider hidden sm:block"></div>
+                        <div>
+                            <div class="stat-number" style="font-size:1.875rem;">98%</div>
+                            <div class="stat-label">Satisfacción del cliente</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         ÁREAS DE PRÁCTICA (Accordion)
+    ============================================================ -->
+    <section id="areas" class="py-24 bg-off-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <!-- Left: intro -->
+                <div class="lg:col-span-4 fade-reveal">
+                    <p class="section-label mb-4">Especialidades</p>
+                    <h2 class="section-title mb-5">Áreas de<br>Práctica Legal</h2>
+                    <span class="gold-rule"></span>
+                    <p class="section-desc">
+                        Nuestra firma ofrece asesoría integral en las principales ramas del derecho colombiano. Cada área cuenta con especialistas dedicados con trayectoria probada ante los tribunales.
+                    </p>
+                    <div class="mt-8">
+                        <a href="#consulta" class="hero-btn-primary" style="display:inline-block;">Agendar Consulta</a>
+                    </div>
+                </div>
+
+                <!-- Right: accordion -->
+                <div class="lg:col-span-8 fade-reveal fade-reveal-delay-1">
+                    <div class="accordion" id="areas-accordion">
+
+                        <!-- Derecho Civil -->
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false" aria-controls="area-1-body" data-accordion>
+                                <span class="accordion-title">Derecho Civil</span>
+                                <svg class="accordion-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-body" id="area-1-body" role="region">
+                                <div class="accordion-body-inner">
+                                    <p>Asesoría y representación en contratos, responsabilidad civil, sucesiones, bienes inmuebles, arrendamientos y disputas patrimoniales. Defendemos sus intereses con el rigor que la ley colombiana exige.</p>
+                                    <div class="mt-3">
+                                        <span class="accordion-tag">Contratos</span>
+                                        <span class="accordion-tag">Sucesiones</span>
+                                        <span class="accordion-tag">Responsabilidad Civil</span>
+                                        <span class="accordion-tag">Arrendamientos</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Derecho Penal -->
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false" aria-controls="area-2-body" data-accordion>
+                                <span class="accordion-title">Derecho Penal</span>
+                                <svg class="accordion-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-body" id="area-2-body" role="region">
+                                <div class="accordion-body-inner">
+                                    <p>Defensa penal en todas las etapas del proceso, desde la indagación previa hasta los recursos de casación. Representamos tanto a imputados como a víctimas, garantizando el respeto al debido proceso.</p>
+                                    <div class="mt-3">
+                                        <span class="accordion-tag">Defensa Penal</span>
+                                        <span class="accordion-tag">Víctimas</span>
+                                        <span class="accordion-tag">Delitos Económicos</span>
+                                        <span class="accordion-tag">Apelaciones</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Derecho Laboral -->
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false" aria-controls="area-3-body" data-accordion>
+                                <span class="accordion-title">Derecho Laboral</span>
+                                <svg class="accordion-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-body" id="area-3-body" role="region">
+                                <div class="accordion-body-inner">
+                                    <p>Asesoría a empleadores y trabajadores en contratación laboral, despidos, acoso laboral, liquidaciones, pensiones y demandas ante los juzgados laborales del circuito.</p>
+                                    <div class="mt-3">
+                                        <span class="accordion-tag">Despidos</span>
+                                        <span class="accordion-tag">Liquidaciones</span>
+                                        <span class="accordion-tag">Pensiones</span>
+                                        <span class="accordion-tag">Acoso Laboral</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Derecho Comercial -->
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false" aria-controls="area-4-body" data-accordion>
+                                <span class="accordion-title">Derecho Comercial</span>
+                                <svg class="accordion-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-body" id="area-4-body" role="region">
+                                <div class="accordion-body-inner">
+                                    <p>Constitución de sociedades, fusiones y adquisiciones, contratos comerciales, arbitraje mercantil, recuperación empresarial y asesoría a juntas directivas.</p>
+                                    <div class="mt-3">
+                                        <span class="accordion-tag">Sociedades</span>
+                                        <span class="accordion-tag">M&A</span>
+                                        <span class="accordion-tag">Arbitraje</span>
+                                        <span class="accordion-tag">Insolvencia</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Derecho Familiar -->
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false" aria-controls="area-5-body" data-accordion>
+                                <span class="accordion-title">Derecho Familiar</span>
+                                <svg class="accordion-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-body" id="area-5-body" role="region">
+                                <div class="accordion-body-inner">
+                                    <p>Divorcios, custodia de menores, alimentos, liquidación de sociedad conyugal, adopciones y resolución alternativa de conflictos familiares. Abordamos estos procesos con sensibilidad y discreción.</p>
+                                    <div class="mt-3">
+                                        <span class="accordion-tag">Divorcios</span>
+                                        <span class="accordion-tag">Custodia</span>
+                                        <span class="accordion-tag">Alimentos</span>
+                                        <span class="accordion-tag">Sociedad Conyugal</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Propiedad Intelectual -->
+                        <div class="accordion-item">
+                            <button class="accordion-trigger" aria-expanded="false" aria-controls="area-6-body" data-accordion>
+                                <span class="accordion-title">Propiedad Intelectual</span>
+                                <svg class="accordion-icon" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15"/>
+                                </svg>
+                            </button>
+                            <div class="accordion-body" id="area-6-body" role="region">
+                                <div class="accordion-body-inner">
+                                    <p>Registro de marcas, patentes y derechos de autor ante la Superintendencia de Industria y Comercio. Defensa ante infracciones, contratos de licencia y transferencia de tecnología.</p>
+                                    <div class="mt-3">
+                                        <span class="accordion-tag">Marcas</span>
+                                        <span class="accordion-tag">Patentes</span>
+                                        <span class="accordion-tag">Derechos de Autor</span>
+                                        <span class="accordion-tag">Licencias</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!-- /accordion -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         SOBRE LA FIRMA
+    ============================================================ -->
+    <section id="firma" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-0">
+                <!-- Photo placeholder -->
+                <div class="firm-photo fade-reveal">
+                    <div>
+                        <p class="firm-photo-label">"La justicia no es una aspiración.<br>Es una obligación profesional."</p>
+                        <p style="font-size:0.75rem; color:rgba(148,163,184,0.4); font-family:'Source Sans Pro',sans-serif; margin-top:0.5rem;">— Dr. Rodrigo Valcárcel</p>
+                    </div>
+                </div>
+
+                <!-- Text -->
+                <div class="bg-off-white p-10 lg:p-14 flex flex-col justify-center fade-reveal fade-reveal-delay-1">
+                    <p class="section-label mb-4">La Firma</p>
+                    <span class="gold-rule"></span>
+                    <h2 class="section-title mb-6" style="font-size:1.875rem;">Una Firma Fundada<br>sobre Principios</h2>
+                    <p class="section-desc mb-5">
+                        Valcárcel & Asociados fue fundada en 2009 con una premisa clara: ofrecer representación legal de primer nivel sin comprometer la ética profesional. En quince años hemos construido una reputación basada en resultados, no en promesas.
+                    </p>
+                    <p class="section-desc mb-8">
+                        Nuestra práctica se sustenta en tres pilares: rigor técnico en cada caso, comunicación transparente con el cliente, y un compromiso irrenunciable con la justicia. Somos una firma de tamaño deliberadamente controlado: cada cliente recibe atención directa de un socio.
+                    </p>
+
+                    <!-- Values -->
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <span style="width:0.375rem; height:0.375rem; background:#7C2D36; border-radius:50%; flex-shrink:0; margin-top:0.5rem;"></span>
+                            <div>
+                                <p style="font-family:'Libre Baskerville',serif; font-size:0.9375rem; color:#111827; font-weight:700;">Confidencialidad Absoluta</p>
+                                <p class="section-desc" style="font-size:0.875rem; margin-top:0.2rem;">Cada caso se maneja con la más estricta reserva profesional.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span style="width:0.375rem; height:0.375rem; background:#7C2D36; border-radius:50%; flex-shrink:0; margin-top:0.5rem;"></span>
+                            <div>
+                                <p style="font-family:'Libre Baskerville',serif; font-size:0.9375rem; color:#111827; font-weight:700;">Estrategia Personalizada</p>
+                                <p class="section-desc" style="font-size:0.875rem; margin-top:0.2rem;">No existen casos genéricos. Cada situación requiere una estrategia propia.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <span style="width:0.375rem; height:0.375rem; background:#7C2D36; border-radius:50%; flex-shrink:0; margin-top:0.5rem;"></span>
+                            <div>
+                                <p style="font-family:'Libre Baskerville',serif; font-size:0.9375rem; color:#111827; font-weight:700;">Honorarios Transparentes</p>
+                                <p class="section-desc" style="font-size:0.875rem; margin-top:0.2rem;">Costos claros desde la primera consulta, sin sorpresas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         EQUIPO
+    ============================================================ -->
+    <section id="equipo" class="py-24 bg-off-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <!-- Header -->
+            <div class="text-center mb-14 fade-reveal">
+                <p class="section-label mb-4">Nuestros Abogados</p>
+                <h2 class="section-title mb-5">El Equipo</h2>
+                <span class="gold-rule" style="margin:0 auto;"></span>
+                <p class="section-desc mt-5 max-w-xl mx-auto">
+                    Profesionales de alto nivel académico con décadas de experiencia en litigio, asesoría corporativa y resolución de conflictos.
+                </p>
+            </div>
+
+            <!-- Cards -->
+            <div class="grid md:grid-cols-3 gap-6">
+
+                <!-- Card 1 -->
+                <div class="lawyer-card fade-reveal fade-reveal-delay-1">
+                    <div class="lawyer-photo">
+                        <span class="lawyer-photo-initials">RV</span>
+                    </div>
+                    <div class="p-7">
+                        <p class="lawyer-title mb-2">Socio Fundador</p>
+                        <h3 class="lawyer-name mb-1">Dr. Rodrigo Valcárcel</h3>
+                        <p class="lawyer-specialty mb-4">Derecho Civil y Comercial</p>
+                        <p class="section-desc" style="font-size:0.875rem;">
+                            Abogado de la Universidad de los Andes con Maestría en Derecho Privado en la Universidad Externado. Más de 20 años de trayectoria en litigios civiles y reestructuraciones corporativas.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="lawyer-card fade-reveal fade-reveal-delay-2">
+                    <div class="lawyer-photo">
+                        <span class="lawyer-photo-initials">CM</span>
+                    </div>
+                    <div class="p-7">
+                        <p class="lawyer-title mb-2">Socia</p>
+                        <h3 class="lawyer-name mb-1">Dra. Catalina Mora</h3>
+                        <p class="lawyer-specialty mb-4">Derecho Penal y Garantías</p>
+                        <p class="section-desc" style="font-size:0.875rem;">
+                            Especialista en Derecho Procesal Penal de la Universidad Javeriana. Defensora de oficio por cinco años ante el Tribunal Superior de Bogotá. Más de 80 casos de defensa penal resueltos favorablemente.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="lawyer-card fade-reveal fade-reveal-delay-3">
+                    <div class="lawyer-photo">
+                        <span class="lawyer-photo-initials">JO</span>
+                    </div>
+                    <div class="p-7">
+                        <p class="lawyer-title mb-2">Asociado Senior</p>
+                        <h3 class="lawyer-name mb-1">Dr. Julián Ospina</h3>
+                        <p class="lawyer-specialty mb-4">Derecho Laboral y Familia</p>
+                        <p class="section-desc" style="font-size:0.875rem;">
+                            Abogado de la Universidad Nacional con Especialización en Seguridad Social. Asesor de más de 40 empresas medianas en materia de cumplimiento laboral y gestión de riesgos de nómina.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         RESULTADOS (Stats)
+    ============================================================ -->
+    <section id="resultados" class="py-24">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="text-center mb-14 fade-reveal">
+                <p class="section-label mb-4" style="color:#B8860B;">Trayectoria</p>
+                <h2 class="section-title section-title-light mb-4">Resultados que<br>Hablan por Sí Solos</h2>
+                <span class="gold-rule" style="margin:0 auto;"></span>
+            </div>
+
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-px" style="background:rgba(255,255,255,0.06);">
+                <div class="bg-slate p-10 text-center fade-reveal fade-reveal-delay-1">
+                    <div class="stat-number" id="stat-cases">0</div>
+                    <div class="stat-label">Casos ganados</div>
+                </div>
+                <div class="bg-slate p-10 text-center fade-reveal fade-reveal-delay-2">
+                    <div class="stat-number" id="stat-years">0</div>
+                    <div class="stat-label">Años de experiencia</div>
+                </div>
+                <div class="bg-slate p-10 text-center fade-reveal fade-reveal-delay-3">
+                    <div class="stat-number" id="stat-clients">0</div>
+                    <div class="stat-label">Clientes atendidos</div>
+                </div>
+                <div class="bg-slate p-10 text-center fade-reveal fade-reveal-delay-4">
+                    <div class="stat-number" id="stat-satisfaction">0</div>
+                    <div class="stat-label">Satisfacción</div>
+                </div>
+            </div>
+
+            <!-- Footnote -->
+            <p class="text-center mt-8 fade-reveal" style="font-family:'Source Sans Pro',sans-serif; font-size:0.8125rem; color:rgba(148,163,184,0.5); letter-spacing:0.04em;">
+                Datos acumulados desde 2009. Cifras verificables bajo solicitud.
+            </p>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         PROCESO (Timeline)
+    ============================================================ -->
+    <section id="proceso" class="py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <!-- Left -->
+                <div class="lg:col-span-4 fade-reveal">
+                    <p class="section-label mb-4">Cómo Trabajamos</p>
+                    <h2 class="section-title mb-5">Nuestro<br>Proceso</h2>
+                    <span class="gold-rule"></span>
+                    <p class="section-desc mt-5">
+                        Un proceso claro, estructurado y transparente. Usted sabe en todo momento en qué etapa se encuentra su caso y cuál es la estrategia que estamos siguiendo.
+                    </p>
+                </div>
+
+                <!-- Timeline -->
+                <div class="lg:col-span-8 fade-reveal fade-reveal-delay-1">
+                    <div class="space-y-0">
+
+                        <!-- Step 1 -->
+                        <div class="timeline-item flex gap-6 pb-10">
+                            <div class="relative flex flex-col items-center">
+                                <div class="timeline-number">01</div>
+                                <div class="timeline-connector"></div>
+                            </div>
+                            <div class="pb-2" style="padding-top:0.25rem;">
+                                <h3 class="timeline-title">Consulta Inicial</h3>
+                                <p class="timeline-desc">
+                                    Primera reunión gratuita de 45 minutos en la que analizamos su situación, identificamos los hechos relevantes y le damos una opinión jurídica honesta sobre sus opciones.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 2 -->
+                        <div class="timeline-item flex gap-6 pb-10">
+                            <div class="relative flex flex-col items-center">
+                                <div class="timeline-number">02</div>
+                                <div class="timeline-connector"></div>
+                            </div>
+                            <div class="pb-2" style="padding-top:0.25rem;">
+                                <h3 class="timeline-title">Diseño de Estrategia</h3>
+                                <p class="timeline-desc">
+                                    Elaboramos un plan jurídico personalizado con rutas alternativas, tiempos estimados, recursos necesarios y honorarios detallados. Usted decide con información completa.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 3 -->
+                        <div class="timeline-item flex gap-6 pb-10">
+                            <div class="relative flex flex-col items-center">
+                                <div class="timeline-number">03</div>
+                                <div class="timeline-connector"></div>
+                            </div>
+                            <div class="pb-2" style="padding-top:0.25rem;">
+                                <h3 class="timeline-title">Representación Activa</h3>
+                                <p class="timeline-desc">
+                                    Gestionamos todos los trámites, presentaciones y audiencias. Le mantenemos informado con reportes periódicos de avance. Su caso siempre tiene un socio responsable asignado.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Step 4 -->
+                        <div class="timeline-item flex gap-6">
+                            <div class="relative flex flex-col items-center">
+                                <div class="timeline-number">04</div>
+                            </div>
+                            <div style="padding-top:0.25rem;">
+                                <h3 class="timeline-title">Resolución y Seguimiento</h3>
+                                <p class="timeline-desc">
+                                    Alcanzada la resolución del caso, documentamos los resultados y asesoramos en las acciones de seguimiento para garantizar que los acuerdos o sentencias se ejecuten correctamente.
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         CONSULTA CTA (Form)
+    ============================================================ -->
+    <section id="consulta" class="py-24 marble-texture">
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <!-- Left: text -->
+                <div class="lg:col-span-5 fade-reveal">
+                    <p class="section-label mb-4" style="color:#B8860B;">Contacto</p>
+                    <h2 class="section-title section-title-light mb-5" style="font-size:2rem;">
+                        Agende su<br>Consulta Gratuita
+                    </h2>
+                    <span class="gold-rule"></span>
+                    <p class="section-desc mt-6" style="color:#94A3B8;">
+                        La primera consulta es sin costo y sin compromiso. Un socio analizará su situación de forma confidencial y le dará una orientación jurídica clara.
+                    </p>
+
+                    <!-- Contact info -->
+                    <div class="mt-10 space-y-5">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-4 h-4 mt-0.5 flex-shrink-0" style="color:#B8860B;" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/>
+                            </svg>
+                            <p class="footer-text">Calle 72 # 10-07, Piso 8<br>Bogotá, Colombia</p>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-4 h-4 flex-shrink-0" style="color:#B8860B;" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z"/>
+                            </svg>
+                            <a href="tel:+573001234567" class="footer-text" style="text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#B8860B'" onmouseout="this.style.color='#6B7280'">+57 (300) 123-4567</a>
+                        </div>
+                        <div class="flex items-center gap-3">
+                            <svg class="w-4 h-4 flex-shrink-0" style="color:#B8860B;" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/>
+                            </svg>
+                            <a href="mailto:consultas@valcarcelasociados.co" class="footer-text" style="text-decoration:none; transition:color 0.2s;" onmouseover="this.style.color='#B8860B'" onmouseout="this.style.color='#6B7280'">consultas@valcarcelasociados.co</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: form -->
+                <div class="lg:col-span-7 fade-reveal fade-reveal-delay-1">
+                    <form id="consulta-form" novalidate>
+                        <div class="grid sm:grid-cols-2 gap-5">
+                            <div>
+                                <label class="form-label" for="f-nombre">Nombre completo</label>
+                                <input type="text" id="f-nombre" name="nombre" class="form-input" placeholder="Su nombre" required autocomplete="name">
+                            </div>
+                            <div>
+                                <label class="form-label" for="f-telefono">Teléfono</label>
+                                <input type="tel" id="f-telefono" name="telefono" class="form-input" placeholder="+57 300 000 0000" required autocomplete="tel">
+                            </div>
+                            <div>
+                                <label class="form-label" for="f-email">Correo electrónico</label>
+                                <input type="email" id="f-email" name="email" class="form-input" placeholder="correo@ejemplo.com" autocomplete="email">
+                            </div>
+                            <div>
+                                <label class="form-label" for="f-tipo">Tipo de caso</label>
+                                <select id="f-tipo" name="tipo" class="form-input" required>
+                                    <option value="" disabled selected>Seleccione un área</option>
+                                    <option value="civil">Derecho Civil</option>
+                                    <option value="penal">Derecho Penal</option>
+                                    <option value="laboral">Derecho Laboral</option>
+                                    <option value="comercial">Derecho Comercial</option>
+                                    <option value="familiar">Derecho Familiar</option>
+                                    <option value="propiedad">Propiedad Intelectual</option>
+                                    <option value="otro">Otro / No estoy seguro</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mt-5">
+                            <label class="form-label" for="f-mensaje">Descripción breve</label>
+                            <textarea id="f-mensaje" name="mensaje" class="form-input" rows="4" placeholder="Describa brevemente su situación..." style="resize:vertical; min-height:100px;"></textarea>
+                        </div>
+                        <div class="mt-6">
+                            <button type="submit" class="form-submit">Enviar Solicitud de Consulta</button>
+                        </div>
+                        <p style="font-family:'Source Sans Pro',sans-serif; font-size:0.75rem; color:rgba(148,163,184,0.5); margin-top:0.75rem; letter-spacing:0.02em;">
+                            Toda la información proporcionada es estrictamente confidencial y está protegida por el secreto profesional.
+                        </p>
+
+                        <!-- Success message (hidden by default) -->
+                        <div id="form-success" style="display:none; margin-top:1rem; padding:1rem 1.25rem; background:rgba(124,45,54,0.15); border:1px solid rgba(124,45,54,0.35);">
+                            <p style="font-family:'Source Sans Pro',sans-serif; font-size:0.9375rem; color:#F8F9FA;">
+                                Solicitud recibida. Un miembro de nuestro equipo se comunicará con usted dentro de las próximas 24 horas hábiles.
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer id="footer">
+        <div class="max-w-6xl mx-auto px-6 pt-16 pb-8">
+            <div class="grid md:grid-cols-3 gap-10 lg:gap-16">
+                <!-- Col 1: Brand -->
+                <div>
+                    <p class="footer-logo mb-4">Valcárcel<span> &</span> Asociados</p>
+                    <p class="footer-text mb-6">
+                        Firma de abogados con sede en Bogotá, Colombia. Quince años de práctica legal con rigor, ética y resultados.
+                    </p>
+                    <div class="space-y-1">
+                        <p class="footer-text" style="font-size:0.8125rem;">
+                            <span style="color:#B8860B; font-weight:600;">Tarjeta Profesional:</span> 123.456 del C.S.J.
+                        </p>
+                        <p class="footer-text" style="font-size:0.8125rem;">
+                            <span style="color:#B8860B; font-weight:600;">NIT:</span> 900.456.789-1
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Col 2: Links -->
+                <div>
+                    <p class="footer-heading">Áreas de Práctica</p>
+                    <a href="#areas" class="footer-link">Derecho Civil</a>
+                    <a href="#areas" class="footer-link">Derecho Penal</a>
+                    <a href="#areas" class="footer-link">Derecho Laboral</a>
+                    <a href="#areas" class="footer-link">Derecho Comercial</a>
+                    <a href="#areas" class="footer-link">Derecho Familiar</a>
+                    <a href="#areas" class="footer-link">Propiedad Intelectual</a>
+                </div>
+
+                <!-- Col 3: Hours + Contact -->
+                <div>
+                    <p class="footer-heading">Horario de Atención</p>
+                    <div class="space-y-2 mb-6">
+                        <div class="flex justify-between">
+                            <span class="footer-text" style="font-size:0.875rem;">Lunes — Viernes</span>
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.875rem; color:#B8860B; font-weight:400;">8:00 — 18:00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="footer-text" style="font-size:0.875rem;">Sábado</span>
+                            <span style="font-family:'Libre Baskerville',serif; font-size:0.875rem; color:#B8860B; font-weight:400;">9:00 — 13:00</span>
+                        </div>
+                        <div class="flex justify-between">
+                            <span class="footer-text" style="font-size:0.875rem;">Domingo</span>
+                            <span class="footer-text" style="font-size:0.875rem;">Cerrado</span>
+                        </div>
+                    </div>
+                    <p class="footer-heading" style="margin-top:1.5rem;">Contacto</p>
+                    <a href="tel:+573001234567" class="footer-link">+57 (300) 123-4567</a>
+                    <a href="mailto:consultas@valcarcelasociados.co" class="footer-link">consultas@valcarcelasociados.co</a>
+                    <p class="footer-text" style="font-size:0.875rem; margin-top:0.5rem;">
+                        Calle 72 # 10-07, Piso 8<br>Bogotá D.C., Colombia
+                    </p>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <hr class="footer-rule">
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-3">
+                <p style="font-family:'Source Sans Pro',sans-serif; font-size:0.8125rem; color:#4B5563;">
+                    &copy; 2026 Valcárcel &amp; Asociados. Todos los derechos reservados.
+                </p>
+                <div class="flex gap-5">
+                    <a href="#privacidad" class="footer-link" style="font-size:0.8125rem; margin:0;">Política de Privacidad</a>
+                    <a href="#terminos" class="footer-link" style="font-size:0.8125rem; margin:0;">Términos de Uso</a>
+                </div>
+            </div>
+            <p class="text-center mt-6" style="font-family:'Source Sans Pro',sans-serif; font-size:0.75rem; color:#374151;">
+                Demo generado por <a href="#" style="color:#B8860B; text-decoration:none; border-bottom:1px solid rgba(184,134,11,0.3);">YaDev</a> — Plantilla de industria legal
+            </p>
+        </div>
+    </footer>
+
+    <!-- ============================================================
+         WHATSAPP
+    ============================================================ -->
+    <a id="whatsapp-btn"
+       href="https://wa.me/573001234567?text=Hola%2C+me+gustaría+agendar+una+consulta+legal."
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+    <div id="whatsapp-tooltip">Consulta por WhatsApp</div>
+
+    <!-- ============================================================
+         JAVASCRIPT
+    ============================================================ -->
+    <script>
+    (function() {
+        'use strict';
+
+        /* ------------------------------------------------
+           NAVBAR: scroll shadow + mobile menu
+        ------------------------------------------------ */
+        const navbar  = document.getElementById('navbar');
+        const hamburger = document.getElementById('hamburger');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const iconOpen  = document.getElementById('hamburger-open');
+        const iconClose = document.getElementById('hamburger-close');
+
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 20) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }, { passive: true });
+
+        hamburger.addEventListener('click', function() {
+            const isOpen = mobileMenu.classList.toggle('open');
+            iconOpen.classList.toggle('hidden', isOpen);
+            iconClose.classList.toggle('hidden', !isOpen);
+            hamburger.setAttribute('aria-expanded', String(isOpen));
+        });
+
+        // Close mobile menu on nav link click
+        mobileMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('open');
+                iconOpen.classList.remove('hidden');
+                iconClose.classList.add('hidden');
+            });
+        });
+
+        /* ------------------------------------------------
+           FADE REVEAL (Intersection Observer)
+        ------------------------------------------------ */
+        const fadeEls = document.querySelectorAll('.fade-reveal');
+        const revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        fadeEls.forEach(function(el) { revealObserver.observe(el); });
+
+        /* ------------------------------------------------
+           ACCORDION
+        ------------------------------------------------ */
+        document.querySelectorAll('[data-accordion]').forEach(function(trigger) {
+            trigger.addEventListener('click', function() {
+                const expanded = trigger.getAttribute('aria-expanded') === 'true';
+                const bodyId = trigger.getAttribute('aria-controls');
+                const body = document.getElementById(bodyId);
+
+                // Close all others
+                document.querySelectorAll('[data-accordion]').forEach(function(t) {
+                    t.setAttribute('aria-expanded', 'false');
+                    const bid = t.getAttribute('aria-controls');
+                    const b = document.getElementById(bid);
+                    if (b) b.classList.remove('open');
+                });
+
+                // Toggle current
+                if (!expanded) {
+                    trigger.setAttribute('aria-expanded', 'true');
+                    if (body) body.classList.add('open');
+                }
+            });
+        });
+
+        /* ------------------------------------------------
+           COUNTER ANIMATION
+        ------------------------------------------------ */
+        const counters = [
+            { id: 'stat-cases',        target: 200,  suffix: '+',  duration: 1800 },
+            { id: 'stat-years',        target: 15,   suffix: '',   duration: 1200 },
+            { id: 'stat-clients',      target: 500,  suffix: '+',  duration: 1800 },
+            { id: 'stat-satisfaction', target: 98,   suffix: '%',  duration: 1400 },
+        ];
+
+        function animateCounter(el, target, suffix, duration) {
+            let start = null;
+            const startVal = 0;
+            function step(timestamp) {
+                if (!start) start = timestamp;
+                const progress = Math.min((timestamp - start) / duration, 1);
+                // Ease out cubic
+                const ease = 1 - Math.pow(1 - progress, 3);
+                const current = Math.floor(ease * target);
+                el.textContent = current + suffix;
+                if (progress < 1) {
+                    requestAnimationFrame(step);
+                } else {
+                    el.textContent = target + suffix;
+                }
+            }
+            requestAnimationFrame(step);
+        }
+
+        const statsSection = document.getElementById('resultados');
+        let countersStarted = false;
+        const statsObserver = new IntersectionObserver(function(entries) {
+            if (entries[0].isIntersecting && !countersStarted) {
+                countersStarted = true;
+                counters.forEach(function(c) {
+                    const el = document.getElementById(c.id);
+                    if (el) animateCounter(el, c.target, c.suffix, c.duration);
+                });
+            }
+        }, { threshold: 0.4 });
+        if (statsSection) statsObserver.observe(statsSection);
+
+        /* ------------------------------------------------
+           FORM SUBMIT (demo)
+        ------------------------------------------------ */
+        const form = document.getElementById('consulta-form');
+        const formSuccess = document.getElementById('form-success');
+
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const nombre = form.querySelector('#f-nombre').value.trim();
+                const telefono = form.querySelector('#f-telefono').value.trim();
+                const tipo = form.querySelector('#f-tipo').value;
+
+                if (!nombre || !telefono || !tipo) {
+                    // Simple inline error — no alert dialogs
+                    [['f-nombre', nombre], ['f-telefono', telefono], ['f-tipo', tipo]].forEach(function(pair) {
+                        const input = document.getElementById(pair[0]);
+                        if (!pair[1]) {
+                            input.style.borderColor = 'rgba(239,68,68,0.6)';
+                            input.addEventListener('input', function() {
+                                input.style.borderColor = '';
+                            }, { once: true });
+                        }
+                    });
+                    return;
+                }
+
+                // Simulate submit
+                const submitBtn = form.querySelector('.form-submit');
+                submitBtn.textContent = 'Enviando...';
+                submitBtn.disabled = true;
+                submitBtn.style.opacity = '0.7';
+
+                setTimeout(function() {
+                    form.querySelectorAll('input, select, textarea').forEach(function(el) {
+                        el.value = '';
+                    });
+                    submitBtn.textContent = 'Enviar Solicitud de Consulta';
+                    submitBtn.disabled = false;
+                    submitBtn.style.opacity = '';
+                    if (formSuccess) {
+                        formSuccess.style.display = 'block';
+                        setTimeout(function() {
+                            formSuccess.style.display = 'none';
+                        }, 6000);
+                    }
+                }, 1200);
+            });
+        }
+
+        /* ------------------------------------------------
+           SMOOTH SCROLL for anchor links
+        ------------------------------------------------ */
+        document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href === '#' || href === '#privacidad' || href === '#terminos') return;
+                const target = document.querySelector(href);
+                if (target) {
+                    e.preventDefault();
+                    const offset = navbar.offsetHeight;
+                    const top = target.getBoundingClientRect().top + window.scrollY - offset;
+                    window.scrollTo({ top: top, behavior: 'smooth' });
+                }
+            });
+        });
+
+    })();
+    </script>
+
+</body>
+</html>

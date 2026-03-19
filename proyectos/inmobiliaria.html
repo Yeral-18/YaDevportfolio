@@ -1,0 +1,1652 @@
+<!DOCTYPE html>
+<html lang="es" data-industry="inmobiliaria" data-yadev-cookies data-privacy-url="#privacidad" data-terms-url="#terminos">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Élite Propiedades | Demo</title>
+    <link rel="icon" type="image/png" href="../assets/img/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        midnight: '#1B2A4A',
+                        'midnight-light': '#243660',
+                        gold: '#C9A96E',
+                        'gold-light': '#DFC08E',
+                        'gold-dark': '#A8834A',
+                        'cool-gray': '#94A3B8',
+                        'warm-white': '#FAFAF8',
+                    },
+                    fontFamily: {
+                        display: ['Cormorant Garamond', 'Georgia', 'serif'],
+                        body: ['Nunito Sans', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <meta name="description" content="Elite Propiedades — inmobiliaria premium especializada en propiedades de lujo en Colombia.">
+    <meta property="og:title" content="Élite Propiedades | Demo">
+    <meta property="og:description" content="Elite Propiedades — inmobiliaria premium especializada en propiedades de lujo en Colombia.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yadev.co/assets/img/og-default.jpg">
+    <!-- Schema.org Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["RealEstateAgent", "LocalBusiness"],
+      "name": "Élite Propiedades",
+      "description": "Inmobiliaria premium especializada en propiedades de lujo y alta gama en Colombia.",
+      "url": "https://elitepropiedades.com",
+      "telephone": "+57-300-000-0000",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bogotá",
+        "addressRegion": "Cundinamarca",
+        "addressCountry": "CO"
+      },
+      "areaServed": "Colombia",
+      "priceRange": "$$$"
+    }
+    </script>
+
+    <style>
+        /* ============================================
+           ÉLITE PROPIEDADES — Classic Elegant Luxury
+           Inspired by: Sotheby's Realty, Christie's,
+           Knight Frank, Barnes International
+           ============================================ */
+
+        :root {
+            --midnight: #1B2A4A;
+            --midnight-light: #243660;
+            --gold: #C9A96E;
+            --gold-light: #DFC08E;
+            --gold-dark: #A8834A;
+            --cool-gray: #94A3B8;
+            --warm-white: #FAFAF8;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Nunito Sans', system-ui, sans-serif;
+            color: var(--midnight);
+            background: #ffffff;
+            overflow-x: hidden;
+        }
+
+        /* ─── Typography ─── */
+        .font-display { font-family: 'Cormorant Garamond', Georgia, serif; }
+
+        .display-xl {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(2.8rem, 6vw, 5.5rem);
+            font-weight: 300;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+        }
+
+        .display-lg {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(2rem, 4vw, 3.5rem);
+            font-weight: 400;
+            line-height: 1.15;
+        }
+
+        .display-md {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(1.5rem, 2.5vw, 2.25rem);
+            font-weight: 500;
+            line-height: 1.2;
+        }
+
+        /* ─── Navbar ─── */
+        #navbar {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            background: rgba(255,255,255,0.98);
+            backdrop-filter: blur(12px);
+            transition: box-shadow 0.4s ease, background 0.4s ease;
+            border-bottom: 1px solid transparent;
+        }
+
+        #navbar.scrolled {
+            box-shadow: 0 2px 24px rgba(27,42,74,0.08);
+            border-bottom-color: rgba(201,169,110,0.2);
+        }
+
+        .nav-link {
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--midnight);
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 4px;
+            transition: color 0.3s;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 1.5px;
+            background: var(--gold);
+            transition: width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .nav-link:hover { color: var(--gold-dark); }
+        .nav-link:hover::after { width: 100%; }
+
+        .btn-gold {
+            background: var(--gold);
+            color: white;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.65rem 1.5rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s, box-shadow 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-gold:hover {
+            background: var(--gold-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(201,169,110,0.35);
+        }
+
+        .btn-outline-gold {
+            background: transparent;
+            color: var(--gold);
+            border: 1.5px solid var(--gold);
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.65rem 1.5rem;
+            cursor: pointer;
+            transition: background 0.3s, color 0.3s, transform 0.2s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-outline-gold:hover {
+            background: var(--gold);
+            color: white;
+            transform: translateY(-1px);
+        }
+
+        /* ─── Hero Slider (CSS-only) ─── */
+        .hero-slider {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            overflow: hidden;
+        }
+
+        .slider-input { display: none; }
+
+        .slide {
+            position: absolute;
+            inset: 0;
+            opacity: 0;
+            transition: opacity 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 1;
+        }
+
+        #slide1:checked ~ .slides-wrapper .slide:nth-child(1),
+        #slide2:checked ~ .slides-wrapper .slide:nth-child(2),
+        #slide3:checked ~ .slides-wrapper .slide:nth-child(3) {
+            opacity: 1;
+            z-index: 2;
+        }
+
+        .slide-bg {
+            position: absolute;
+            inset: 0;
+            background-size: cover;
+            background-position: center;
+            transform: scale(1.05);
+            transition: transform 8s ease;
+        }
+
+        #slide1:checked ~ .slides-wrapper .slide:nth-child(1) .slide-bg,
+        #slide2:checked ~ .slides-wrapper .slide:nth-child(2) .slide-bg,
+        #slide3:checked ~ .slides-wrapper .slide:nth-child(3) .slide-bg {
+            transform: scale(1);
+        }
+
+        .slide-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(27,42,74,0.15) 0%,
+                rgba(27,42,74,0.4) 50%,
+                rgba(27,42,74,0.75) 100%
+            );
+        }
+
+        .slide-content {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            padding: 3rem 4rem;
+            z-index: 3;
+            transform: translateY(8px);
+            opacity: 0;
+            transition: transform 0.7s 0.3s ease, opacity 0.7s 0.3s ease;
+        }
+
+        #slide1:checked ~ .slides-wrapper .slide:nth-child(1) .slide-content,
+        #slide2:checked ~ .slides-wrapper .slide:nth-child(2) .slide-content,
+        #slide3:checked ~ .slides-wrapper .slide:nth-child(3) .slide-content {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        .price-badge {
+            display: inline-flex;
+            align-items: center;
+            background: var(--gold);
+            color: white;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            padding: 0.4rem 1rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Slider dots */
+        .slider-dots {
+            position: absolute;
+            bottom: 2rem; left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .dot-label {
+            width: 8px; height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            display: block;
+        }
+
+        #slide1:checked ~ .slider-dots label[for="slide1"],
+        #slide2:checked ~ .slider-dots label[for="slide2"],
+        #slide3:checked ~ .slider-dots label[for="slide3"] {
+            background: var(--gold);
+            transform: scale(1.4);
+        }
+
+        /* ─── Filter Pills ─── */
+        .filter-pill input[type="radio"] { display: none; }
+
+        .pill-label {
+            display: inline-block;
+            padding: 0.5rem 1.25rem;
+            border: 1.5px solid #e2e8f0;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--cool-gray);
+            cursor: pointer;
+            transition: all 0.25s;
+            user-select: none;
+        }
+
+        .pill-label:hover {
+            border-color: var(--gold);
+            color: var(--gold-dark);
+        }
+
+        .filter-pill input[type="radio"]:checked + .pill-label {
+            background: var(--midnight);
+            border-color: var(--midnight);
+            color: white;
+        }
+
+        /* ─── Property Cards ─── */
+        .property-card {
+            background: white;
+            box-shadow: 0 2px 16px rgba(27,42,74,0.07);
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                        box-shadow 0.4s ease;
+            overflow: hidden;
+        }
+
+        .property-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 16px 48px rgba(27,42,74,0.14);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            overflow: hidden;
+            height: 220px;
+        }
+
+        .card-img-wrapper img,
+        .card-img-placeholder {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .property-card:hover .card-img-placeholder {
+            transform: scale(1.06);
+        }
+
+        .card-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(27,42,74,0.6);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .property-card:hover .card-overlay {
+            opacity: 1;
+        }
+
+        .card-price-tag {
+            position: absolute;
+            bottom: 0; left: 0;
+            background: var(--gold);
+            color: white;
+            font-family: 'Nunito Sans', sans-serif;
+            font-size: 0.9rem;
+            font-weight: 700;
+            padding: 0.4rem 0.9rem;
+        }
+
+        .card-type-tag {
+            position: absolute;
+            top: 1rem; right: 1rem;
+            background: var(--midnight);
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.7rem;
+        }
+
+        /* ─── Stat counters ─── */
+        .stat-counter {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(3rem, 5vw, 4.5rem);
+            font-weight: 300;
+            line-height: 1;
+            color: white;
+        }
+
+        .stat-counter span {
+            color: var(--gold-light);
+        }
+
+        /* ─── Scroll reveal ─── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(32px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+        .reveal-delay-4 { transition-delay: 0.4s; }
+
+        /* ─── Service Cards ─── */
+        .service-card {
+            padding: 2.5rem;
+            border: 1px solid #e8eef5;
+            transition: border-color 0.3s, transform 0.4s;
+        }
+
+        .service-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+
+        .service-icon {
+            width: 52px; height: 52px;
+            border: 1.5px solid var(--gold);
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1.5rem;
+            transition: background 0.3s;
+        }
+
+        .service-card:hover .service-icon {
+            background: var(--gold);
+        }
+
+        .service-card:hover .service-icon svg {
+            stroke: white;
+        }
+
+        /* ─── Testimonial Cards ─── */
+        .testimonial-card {
+            background: var(--warm-white);
+            border-left: 3px solid var(--gold);
+            padding: 2rem 2.5rem;
+            transition: box-shadow 0.3s;
+        }
+
+        .testimonial-card:hover {
+            box-shadow: 0 8px 32px rgba(27,42,74,0.08);
+        }
+
+        /* ─── Gold Gradient CTA ─── */
+        .cta-gold {
+            background: linear-gradient(135deg, #A8834A 0%, #C9A96E 40%, #DFC08E 100%);
+        }
+
+        /* ─── Separator ornament ─── */
+        .ornament {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+
+        .ornament-line {
+            width: 48px;
+            height: 1px;
+            background: var(--gold);
+        }
+
+        .ornament-diamond {
+            width: 8px; height: 8px;
+            background: var(--gold);
+            transform: rotate(45deg);
+            flex-shrink: 0;
+        }
+
+        /* ─── WhatsApp Button ─── */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 2rem; right: 2rem;
+            z-index: 999;
+            width: 56px; height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 28px rgba(37,211,102,0.5);
+        }
+
+        /* ─── Footer ─── */
+        .footer-link {
+            color: #94A3B8;
+            text-decoration: none;
+            font-size: 0.875rem;
+            transition: color 0.3s;
+            display: inline-block;
+        }
+
+        .footer-link:hover {
+            color: var(--gold-light);
+        }
+
+        /* ─── Mobile nav ─── */
+        #mobile-menu {
+            display: none;
+        }
+
+        #mobile-toggle:checked ~ #mobile-menu {
+            display: block;
+        }
+
+        /* ─── Divider ─── */
+        .divider-gold {
+            width: 48px;
+            height: 2px;
+            background: var(--gold);
+            margin: 1rem 0;
+        }
+
+        /* ─── Section label ─── */
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        /* ─── About section ─── */
+        .about-stat {
+            border-left: 2px solid var(--gold);
+            padding-left: 1.25rem;
+        }
+
+        /* ─── Slide backgrounds using CSS gradients as property photo placeholders ─── */
+        .slide-bg-1 {
+            background: linear-gradient(135deg,
+                #1B2A4A 0%, #243660 30%,
+                #2d4a7a 60%, #1B2A4A 100%),
+                repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 40px,
+                    rgba(201,169,110,0.05) 40px,
+                    rgba(201,169,110,0.05) 41px
+                );
+        }
+
+        .slide-bg-2 {
+            background: linear-gradient(160deg,
+                #2d3a1e 0%, #3d5427 30%,
+                #4a6332 50%, #2d3a1e 100%),
+                repeating-linear-gradient(
+                    -45deg,
+                    transparent,
+                    transparent 60px,
+                    rgba(255,255,255,0.03) 60px,
+                    rgba(255,255,255,0.03) 61px
+                );
+        }
+
+        .slide-bg-3 {
+            background: linear-gradient(120deg,
+                #2a1b3d 0%, #3d2655 30%,
+                #4a2e6a 55%, #2a1b3d 100%),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 80px,
+                    rgba(201,169,110,0.04) 80px,
+                    rgba(201,169,110,0.04) 81px
+                );
+        }
+
+        /* Property image placeholders */
+        .prop-img-1 {
+            background: linear-gradient(135deg, #c8d8e8 0%, #a8bcd0 50%, #8aafc8 100%);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .prop-img-2 {
+            background: linear-gradient(135deg, #d4cfc8 0%, #bfb8ae 50%, #a8a098 100%);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .prop-img-3 {
+            background: linear-gradient(135deg, #c8d4c0 0%, #b0c0a8 50%, #98ad90 100%);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .prop-img-4 {
+            background: linear-gradient(135deg, #d8cfc8 0%, #c2b8ae 50%, #a8a098 100%);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .prop-img-5 {
+            background: linear-gradient(135deg, #c8d0d8 0%, #b0bec8 50%, #98aab8 100%);
+            display: flex; align-items: center; justify-content: center;
+        }
+        .prop-img-6 {
+            background: linear-gradient(135deg, #d0ccd8 0%, #b8b0c8 50%, #a098b8 100%);
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        .about-img-placeholder {
+            background: linear-gradient(135deg, #c8d8e8 0%, #a8bcd0 40%, #8aafc8 100%);
+            height: 100%;
+            min-height: 480px;
+            display: flex; align-items: center; justify-content: center;
+        }
+
+        /* ─── Counter animation ─── */
+        @keyframes countUp {
+            from { opacity: 0; transform: translateY(12px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .counter-animate {
+            animation: countUp 0.8s ease forwards;
+        }
+
+        /* ─── Stars ─── */
+        .star-filled { color: var(--gold); }
+    </style>
+</head>
+<body>
+
+    <!-- ═══════════════════════════════════════════
+         NAVBAR
+    ═══════════════════════════════════════════ -->
+    <nav id="navbar">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+
+                <!-- Logo -->
+                <a href="#inicio" class="flex items-center gap-3 no-underline">
+                    <div class="flex flex-col leading-none">
+                        <span class="font-display text-xl font-semibold text-midnight tracking-wide">Élite</span>
+                        <span style="font-size:0.6rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); font-weight:700; font-family:'Nunito Sans',sans-serif;">Propiedades</span>
+                    </div>
+                    <div style="width:1px; height:32px; background:var(--gold); opacity:0.5; margin-left:4px;"></div>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden lg:flex items-center gap-8">
+                    <a href="#propiedades" class="nav-link">Propiedades</a>
+                    <a href="#servicios" class="nav-link">Servicios</a>
+                    <a href="#nosotros" class="nav-link">Nosotros</a>
+                    <a href="#testimonios" class="nav-link">Testimonios</a>
+                    <a href="#contacto" class="nav-link">Contacto</a>
+                </div>
+
+                <!-- CTA -->
+                <div class="hidden lg:flex items-center gap-4">
+                    <a href="https://wa.me/573000000000" class="btn-gold">Contactar Asesor</a>
+                </div>
+
+                <!-- Mobile toggle -->
+                <label for="mobile-toggle" class="lg:hidden cursor-pointer p-2">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M3 12h18M3 6h18M3 18h18"/>
+                    </svg>
+                </label>
+            </div>
+        </div>
+
+        <!-- Mobile menu -->
+        <input type="checkbox" id="mobile-toggle" class="hidden">
+        <div id="mobile-menu" class="lg:hidden bg-white border-t border-gray-100 py-4 px-6">
+            <div class="flex flex-col gap-4">
+                <a href="#propiedades" class="nav-link text-sm">Propiedades</a>
+                <a href="#servicios" class="nav-link text-sm">Servicios</a>
+                <a href="#nosotros" class="nav-link text-sm">Nosotros</a>
+                <a href="#testimonios" class="nav-link text-sm">Testimonios</a>
+                <a href="#contacto" class="nav-link text-sm">Contacto</a>
+                <a href="https://wa.me/573000000000" class="btn-gold text-center mt-2">Contactar Asesor</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ═══════════════════════════════════════════
+         HERO SLIDER
+    ═══════════════════════════════════════════ -->
+    <section class="hero-slider" id="inicio">
+        <input type="radio" name="slider" id="slide1" class="slider-input" checked>
+        <input type="radio" name="slider" id="slide2" class="slider-input">
+        <input type="radio" name="slider" id="slide3" class="slider-input">
+
+        <div class="slides-wrapper" style="position:absolute;inset:0;">
+
+            <!-- Slide 1 -->
+            <div class="slide">
+                <div class="slide-bg slide-bg-1">
+                    <!-- Architectural illustration overlay -->
+                    <svg style="position:absolute;bottom:0;left:0;right:0;width:100%;height:65%;opacity:0.12" viewBox="0 0 1440 400" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="200" y="100" width="180" height="300" fill="white"/>
+                        <rect x="390" y="60" width="200" height="340" fill="white"/>
+                        <rect x="600" y="140" width="120" height="260" fill="white"/>
+                        <rect x="730" y="80" width="160" height="320" fill="white"/>
+                        <rect x="900" y="160" width="100" height="240" fill="white"/>
+                        <rect x="1010" y="100" width="220" height="300" fill="white"/>
+                        <rect x="50" y="180" width="140" height="220" fill="white"/>
+                    </svg>
+                </div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="price-badge">$ 1.850.000.000 COP</span>
+                        <h1 class="display-xl text-white mb-3">Casa Campestre<br><em style="font-style:italic;font-weight:300;">La Calera</em></h1>
+                        <p style="color:rgba(255,255,255,0.75); font-size:1rem; font-family:'Nunito Sans',sans-serif; display:flex; align-items:center; gap:8px;">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            La Calera, Cundinamarca &nbsp;·&nbsp; 5 hab &nbsp;·&nbsp; 4 baños &nbsp;·&nbsp; 620 m²
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="slide">
+                <div class="slide-bg slide-bg-2">
+                    <svg style="position:absolute;bottom:0;left:0;right:0;width:100%;height:55%;opacity:0.1" viewBox="0 0 1440 360" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="100" y="120" width="300" height="240" fill="white" rx="4"/>
+                        <rect x="420" y="80" width="260" height="280" fill="white" rx="4"/>
+                        <rect x="700" y="100" width="200" height="260" fill="white" rx="4"/>
+                        <rect x="920" y="140" width="280" height="220" fill="white" rx="4"/>
+                        <rect x="1220" y="160" width="180" height="200" fill="white" rx="4"/>
+                    </svg>
+                </div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="price-badge">$ 920.000.000 COP</span>
+                        <h1 class="display-xl text-white mb-3">Penthouse<br><em style="font-style:italic;font-weight:300;">El Chicó</em></h1>
+                        <p style="color:rgba(255,255,255,0.75); font-size:1rem; font-family:'Nunito Sans',sans-serif; display:flex; align-items:center; gap:8px;">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            El Chicó, Bogotá D.C. &nbsp;·&nbsp; 3 hab &nbsp;·&nbsp; 3 baños &nbsp;·&nbsp; 280 m²
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="slide">
+                <div class="slide-bg slide-bg-3">
+                    <svg style="position:absolute;bottom:0;left:0;right:0;width:100%;height:60%;opacity:0.1" viewBox="0 0 1440 380" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg">
+                        <polygon points="150,380 150,180 280,100 410,180 410,380" fill="white"/>
+                        <polygon points="500,380 500,140 660,60 820,140 820,380" fill="white"/>
+                        <polygon points="900,380 900,200 1000,140 1100,200 1100,380" fill="white"/>
+                        <polygon points="1180,380 1180,160 1310,90 1440,160 1440,380" fill="white"/>
+                    </svg>
+                </div>
+                <div class="slide-overlay"></div>
+                <div class="slide-content">
+                    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                        <span class="price-badge">$ 12.500.000 COP/mes</span>
+                        <h1 class="display-xl text-white mb-3">Oficina Premium<br><em style="font-style:italic;font-weight:300;">Centro Andino</em></h1>
+                        <p style="color:rgba(255,255,255,0.75); font-size:1rem; font-family:'Nunito Sans',sans-serif; display:flex; align-items:center; gap:8px;">
+                            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Zona Rosa, Bogotá D.C. &nbsp;·&nbsp; Piso 18 &nbsp;·&nbsp; 4 privados &nbsp;·&nbsp; 340 m²
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Dot navigation -->
+        <div class="slider-dots">
+            <label for="slide1" class="dot-label"></label>
+            <label for="slide2" class="dot-label"></label>
+            <label for="slide3" class="dot-label"></label>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div style="position:absolute; bottom:5rem; right:3rem; z-index:10; display:flex; flex-direction:column; align-items:center; gap:8px;">
+            <span style="font-size:0.65rem; letter-spacing:0.2em; text-transform:uppercase; color:rgba(255,255,255,0.6); writing-mode:vertical-lr; font-family:'Nunito Sans',sans-serif;">Scroll</span>
+            <div style="width:1px; height:40px; background:rgba(201,169,110,0.6);"></div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         FEATURED PROPERTIES
+    ═══════════════════════════════════════════ -->
+    <section id="propiedades" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <!-- Section header -->
+            <div class="mb-14 reveal">
+                <p class="section-label mb-3">Portafolio Exclusivo</p>
+                <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+                    <div>
+                        <h2 class="display-lg text-midnight">Propiedades<br><em style="font-style:italic;">Destacadas</em></h2>
+                        <div class="ornament justify-start mt-4">
+                            <div class="ornament-line"></div>
+                            <div class="ornament-diamond"></div>
+                        </div>
+                    </div>
+                    <p class="text-cool-gray max-w-sm" style="font-size:0.95rem; line-height:1.7;">Selección curada de las propiedades más exclusivas del mercado colombiano.</p>
+                </div>
+            </div>
+
+            <!-- Filter pills -->
+            <div class="flex flex-wrap gap-2 mb-10 reveal">
+                <div class="filter-pill">
+                    <input type="radio" name="filter" id="f-all" checked>
+                    <label class="pill-label" for="f-all">Todos</label>
+                </div>
+                <div class="filter-pill">
+                    <input type="radio" name="filter" id="f-casa">
+                    <label class="pill-label" for="f-casa">Casas</label>
+                </div>
+                <div class="filter-pill">
+                    <input type="radio" name="filter" id="f-apto">
+                    <label class="pill-label" for="f-apto">Apartamentos</label>
+                </div>
+                <div class="filter-pill">
+                    <input type="radio" name="filter" id="f-oficina">
+                    <label class="pill-label" for="f-oficina">Oficinas</label>
+                </div>
+                <div class="filter-pill">
+                    <input type="radio" name="filter" id="f-terreno">
+                    <label class="pill-label" for="f-terreno">Terrenos</label>
+                </div>
+            </div>
+
+            <!-- Cards grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- Card 1 -->
+                <div class="property-card reveal reveal-delay-1">
+                    <div class="card-img-wrapper">
+                        <div class="card-img-placeholder prop-img-1">
+                            <svg width="64" height="64" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </div>
+                        <div class="card-type-tag">Casa</div>
+                        <div class="card-price-tag">$1.850.000.000</div>
+                        <div class="card-overlay">
+                            <a href="#contacto" class="btn-gold" style="font-size:0.75rem;">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="display-md text-midnight mb-1">Casa Campestre La Calera</h3>
+                        <p class="text-cool-gray text-sm mb-4 flex items-center gap-1">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            La Calera, Cundinamarca
+                        </p>
+                        <div class="flex items-center gap-4 text-sm text-cool-gray mb-5" style="border-top:1px solid #f0f4f8; padding-top:1rem;">
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                                5 hab
+                            </span>
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+                                4 baños
+                            </span>
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                                620 m²
+                            </span>
+                        </div>
+                        <a href="#contacto" class="btn-outline-gold w-full text-center text-xs">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="property-card reveal reveal-delay-2">
+                    <div class="card-img-wrapper">
+                        <div class="card-img-placeholder prop-img-2">
+                            <svg width="64" height="64" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" viewBox="0 0 24 24">
+                                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+                            </svg>
+                        </div>
+                        <div class="card-type-tag">Penthouse</div>
+                        <div class="card-price-tag">$920.000.000</div>
+                        <div class="card-overlay">
+                            <a href="#contacto" class="btn-gold" style="font-size:0.75rem;">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="display-md text-midnight mb-1">Penthouse El Chicó</h3>
+                        <p class="text-cool-gray text-sm mb-4 flex items-center gap-1">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            El Chicó, Bogotá D.C.
+                        </p>
+                        <div class="flex items-center gap-4 text-sm text-cool-gray mb-5" style="border-top:1px solid #f0f4f8; padding-top:1rem;">
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                                3 hab
+                            </span>
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+                                3 baños
+                            </span>
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                                280 m²
+                            </span>
+                        </div>
+                        <a href="#contacto" class="btn-outline-gold w-full text-center text-xs">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="property-card reveal reveal-delay-3">
+                    <div class="card-img-wrapper">
+                        <div class="card-img-placeholder prop-img-3">
+                            <svg width="64" height="64" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </div>
+                        <div class="card-type-tag">Oficina</div>
+                        <div class="card-price-tag">$12.500.000/mes</div>
+                        <div class="card-overlay">
+                            <a href="#contacto" class="btn-gold" style="font-size:0.75rem;">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="display-md text-midnight mb-1">Oficina Centro Andino</h3>
+                        <p class="text-cool-gray text-sm mb-4 flex items-center gap-1">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Zona Rosa, Bogotá D.C.
+                        </p>
+                        <div class="flex items-center gap-4 text-sm text-cool-gray mb-5" style="border-top:1px solid #f0f4f8; padding-top:1rem;">
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="3" width="20" height="14" rx="2"/></svg>
+                                Piso 18
+                            </span>
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/></svg>
+                                4 privados
+                            </span>
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                                340 m²
+                            </span>
+                        </div>
+                        <a href="#contacto" class="btn-outline-gold w-full text-center text-xs">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="property-card reveal reveal-delay-1">
+                    <div class="card-img-wrapper">
+                        <div class="card-img-placeholder prop-img-4">
+                            <svg width="64" height="64" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                            </svg>
+                        </div>
+                        <div class="card-type-tag">Casa</div>
+                        <div class="card-price-tag">$2.400.000.000</div>
+                        <div class="card-overlay">
+                            <a href="#contacto" class="btn-gold" style="font-size:0.75rem;">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="display-md text-midnight mb-1">Villa Exclusiva Sopó</h3>
+                        <p class="text-cool-gray text-sm mb-4 flex items-center gap-1">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Sopó, Cundinamarca
+                        </p>
+                        <div class="flex items-center gap-4 text-sm text-cool-gray mb-5" style="border-top:1px solid #f0f4f8; padding-top:1rem;">
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                                6 hab
+                            </span>
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+                                5 baños
+                            </span>
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                                850 m²
+                            </span>
+                        </div>
+                        <a href="#contacto" class="btn-outline-gold w-full text-center text-xs">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="property-card reveal reveal-delay-2">
+                    <div class="card-img-wrapper">
+                        <div class="card-img-placeholder prop-img-5">
+                            <svg width="64" height="64" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" viewBox="0 0 24 24">
+                                <rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/>
+                            </svg>
+                        </div>
+                        <div class="card-type-tag">Apartamento</div>
+                        <div class="card-price-tag">$680.000.000</div>
+                        <div class="card-overlay">
+                            <a href="#contacto" class="btn-gold" style="font-size:0.75rem;">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="display-md text-midnight mb-1">Apto Rosales Premium</h3>
+                        <p class="text-cool-gray text-sm mb-4 flex items-center gap-1">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Los Rosales, Bogotá D.C.
+                        </p>
+                        <div class="flex items-center gap-4 text-sm text-cool-gray mb-5" style="border-top:1px solid #f0f4f8; padding-top:1rem;">
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                                3 hab
+                            </span>
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+                                2 baños
+                            </span>
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                                195 m²
+                            </span>
+                        </div>
+                        <a href="#contacto" class="btn-outline-gold w-full text-center text-xs">Ver Detalles</a>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="property-card reveal reveal-delay-3">
+                    <div class="card-img-wrapper">
+                        <div class="card-img-placeholder prop-img-6">
+                            <svg width="64" height="64" fill="none" stroke="rgba(255,255,255,0.5)" stroke-width="1.5" viewBox="0 0 24 24">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <div class="card-type-tag">Terreno</div>
+                        <div class="card-price-tag">$3.200.000.000</div>
+                        <div class="card-overlay">
+                            <a href="#contacto" class="btn-gold" style="font-size:0.75rem;">Ver Detalles</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="display-md text-midnight mb-1">Lote Exclusivo Tabio</h3>
+                        <p class="text-cool-gray text-sm mb-4 flex items-center gap-1">
+                            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Tabio, Cundinamarca
+                        </p>
+                        <div class="flex items-center gap-4 text-sm text-cool-gray mb-5" style="border-top:1px solid #f0f4f8; padding-top:1rem;">
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                                1.200 m²
+                            </span>
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M12 3v18"/></svg>
+                                Uso mixto
+                            </span>
+                            <span class="flex items-center gap-1.5">
+                                <svg width="15" height="15" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                                Escriturado
+                            </span>
+                        </div>
+                        <a href="#contacto" class="btn-outline-gold w-full text-center text-xs">Ver Detalles</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         SERVICIOS
+    ═══════════════════════════════════════════ -->
+    <section id="servicios" style="background:var(--warm-white);" class="py-24">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <div class="text-center mb-16 reveal">
+                <p class="section-label mb-3">Lo Que Hacemos</p>
+                <h2 class="display-lg text-midnight">Nuestros <em style="font-style:italic;">Servicios</em></h2>
+                <div class="ornament mt-4">
+                    <div class="ornament-line"></div>
+                    <div class="ornament-diamond"></div>
+                    <div class="ornament-line"></div>
+                </div>
+                <p class="text-cool-gray mt-4 max-w-lg mx-auto" style="font-size:0.95rem; line-height:1.7;">
+                    Acompañamos cada etapa de su proceso inmobiliario con la mayor discreción y profesionalismo.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+                <!-- Compra -->
+                <div class="service-card bg-white reveal reveal-delay-1">
+                    <div class="service-icon">
+                        <svg width="24" height="24" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24">
+                            <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+                        </svg>
+                    </div>
+                    <h3 class="display-md text-midnight mb-3">Compra</h3>
+                    <div class="divider-gold mb-4"></div>
+                    <p class="text-cool-gray" style="font-size:0.9rem; line-height:1.8;">
+                        Le ayudamos a encontrar la propiedad perfecta según sus necesidades, presupuesto y estilo de vida. Asesoría integral desde la búsqueda hasta la escrituración.
+                    </p>
+                    <ul class="mt-5 space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-cool-gray">
+                            <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            Búsqueda personalizada
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-cool-gray">
+                            <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            Evaluación y due diligence
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-cool-gray">
+                            <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            Negociación y cierre
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Venta -->
+                <div class="service-card bg-white reveal reveal-delay-2">
+                    <div class="service-icon">
+                        <svg width="24" height="24" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24">
+                            <polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/>
+                        </svg>
+                    </div>
+                    <h3 class="display-md text-midnight mb-3">Venta</h3>
+                    <div class="divider-gold mb-4"></div>
+                    <p class="text-cool-gray" style="font-size:0.9rem; line-height:1.8;">
+                        Maximizamos el valor de su propiedad con estrategias de marketing premium y una red de compradores calificados de alto patrimonio.
+                    </p>
+                    <ul class="mt-5 space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-cool-gray">
+                            <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            Valoración profesional
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-cool-gray">
+                            <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            Marketing exclusivo 360°
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-cool-gray">
+                            <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            Red de compradores VIP
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Arriendo -->
+                <div class="service-card bg-white reveal reveal-delay-3">
+                    <div class="service-icon">
+                        <svg width="24" height="24" fill="none" stroke="var(--gold)" stroke-width="1.5" viewBox="0 0 24 24">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/><line x1="1" y1="10" x2="23" y2="10"/>
+                        </svg>
+                    </div>
+                    <h3 class="display-md text-midnight mb-3">Arriendo</h3>
+                    <div class="divider-gold mb-4"></div>
+                    <p class="text-cool-gray" style="font-size:0.9rem; line-height:1.8;">
+                        Administración integral de propiedades en arriendo, garantizando tranquilidad total para propietarios e inquilinos de perfil alto.
+                    </p>
+                    <ul class="mt-5 space-y-2">
+                        <li class="flex items-center gap-2 text-sm text-cool-gray">
+                            <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            Estudio de arrendatario
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-cool-gray">
+                            <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            Contratos legales
+                        </li>
+                        <li class="flex items-center gap-2 text-sm text-cool-gray">
+                            <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+                            Administración mensual
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         SOBRE NOSOTROS — Split layout
+    ═══════════════════════════════════════════ -->
+    <section id="nosotros" class="py-0">
+        <div class="grid grid-cols-1 lg:grid-cols-2 min-h-screen lg:min-h-0">
+
+            <!-- Left: Content -->
+            <div class="flex items-center px-8 lg:px-16 xl:px-24 py-24 bg-white order-2 lg:order-1">
+                <div class="max-w-lg reveal">
+                    <p class="section-label mb-4">Nuestra Historia</p>
+                    <h2 class="display-lg text-midnight mb-6">Expertos en<br><em style="font-style:italic;">Propiedades de Lujo</em></h2>
+                    <div class="ornament justify-start mb-6">
+                        <div class="ornament-line"></div>
+                        <div class="ornament-diamond"></div>
+                    </div>
+                    <p class="text-cool-gray mb-6" style="font-size:0.95rem; line-height:1.9;">
+                        Desde 2008, Élite Propiedades ha sido sinónimo de exclusividad y confianza en el mercado inmobiliario de lujo colombiano. Nuestro equipo de asesores certificados gestiona con discreción las transacciones más importantes del sector.
+                    </p>
+                    <p class="text-cool-gray mb-10" style="font-size:0.95rem; line-height:1.9;">
+                        Somos miembros de la red internacional de inmobiliarias de lujo y representamos propiedades en Bogotá, Medellín, Cartagena y destinos de altísimo valor.
+                    </p>
+
+                    <!-- Stats -->
+                    <div class="grid grid-cols-3 gap-6">
+                        <div class="about-stat reveal reveal-delay-1">
+                            <div class="font-display text-4xl font-light text-midnight">480<span style="color:var(--gold)">+</span></div>
+                            <p class="text-cool-gray text-xs mt-1" style="letter-spacing:0.05em;">Propiedades vendidas</p>
+                        </div>
+                        <div class="about-stat reveal reveal-delay-2">
+                            <div class="font-display text-4xl font-light text-midnight">16<span style="color:var(--gold)">+</span></div>
+                            <p class="text-cool-gray text-xs mt-1" style="letter-spacing:0.05em;">Años de experiencia</p>
+                        </div>
+                        <div class="about-stat reveal reveal-delay-3">
+                            <div class="font-display text-4xl font-light text-midnight">98<span style="color:var(--gold)">%</span></div>
+                            <p class="text-cool-gray text-xs mt-1" style="letter-spacing:0.05em;">Clientes satisfechos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Image placeholder -->
+            <div class="about-img-placeholder order-1 lg:order-2 reveal" style="min-height:400px;">
+                <!-- Architectural interior illustration -->
+                <div style="text-align:center; padding:2rem;">
+                    <svg width="220" height="260" viewBox="0 0 220 260" fill="none" xmlns="http://www.w3.org/2000/svg" style="opacity:0.3;">
+                        <rect x="30" y="60" width="160" height="180" rx="2" stroke="white" stroke-width="2"/>
+                        <rect x="50" y="80" width="50" height="70" rx="1" stroke="white" stroke-width="1.5"/>
+                        <rect x="120" y="80" width="50" height="70" rx="1" stroke="white" stroke-width="1.5"/>
+                        <rect x="80" y="170" width="60" height="70" rx="1" stroke="white" stroke-width="1.5"/>
+                        <line x1="30" y1="60" x2="110" y2="20" stroke="white" stroke-width="1.5"/>
+                        <line x1="190" y1="60" x2="110" y2="20" stroke="white" stroke-width="1.5"/>
+                        <circle cx="110" cy="20" r="5" fill="white" fill-opacity="0.4"/>
+                        <line x1="0" y1="240" x2="220" y2="240" stroke="white" stroke-width="1" opacity="0.4"/>
+                    </svg>
+                    <p style="color:rgba(255,255,255,0.4); font-family:'Cormorant Garamond',serif; font-size:1.1rem; font-style:italic; margin-top:1rem;">Equipo Élite Propiedades</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         STATS BAND
+    ═══════════════════════════════════════════ -->
+    <section style="background:var(--midnight);" class="py-20">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 text-center">
+
+                <div class="reveal reveal-delay-1" id="counter-1">
+                    <div class="stat-counter" data-target="480">480<span>+</span></div>
+                    <div style="width:32px; height:1px; background:var(--gold); margin:0.75rem auto;"></div>
+                    <p style="color:#94A3B8; font-size:0.8rem; letter-spacing:0.12em; text-transform:uppercase; font-family:'Nunito Sans',sans-serif;">Propiedades Vendidas</p>
+                </div>
+
+                <div class="reveal reveal-delay-2" id="counter-2">
+                    <div class="stat-counter">$2.8<span>B+</span></div>
+                    <div style="width:32px; height:1px; background:var(--gold); margin:0.75rem auto;"></div>
+                    <p style="color:#94A3B8; font-size:0.8rem; letter-spacing:0.12em; text-transform:uppercase; font-family:'Nunito Sans',sans-serif;">En Activos Gestionados</p>
+                </div>
+
+                <div class="reveal reveal-delay-3" id="counter-3">
+                    <div class="stat-counter">16<span>+</span></div>
+                    <div style="width:32px; height:1px; background:var(--gold); margin:0.75rem auto;"></div>
+                    <p style="color:#94A3B8; font-size:0.8rem; letter-spacing:0.12em; text-transform:uppercase; font-family:'Nunito Sans',sans-serif;">Años de Experiencia</p>
+                </div>
+
+                <div class="reveal reveal-delay-4" id="counter-4">
+                    <div class="stat-counter">98<span>%</span></div>
+                    <div style="width:32px; height:1px; background:var(--gold); margin:0.75rem auto;"></div>
+                    <p style="color:#94A3B8; font-size:0.8rem; letter-spacing:0.12em; text-transform:uppercase; font-family:'Nunito Sans',sans-serif;">Satisfacción de Clientes</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         TESTIMONIALS
+    ═══════════════════════════════════════════ -->
+    <section id="testimonios" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <div class="text-center mb-16 reveal">
+                <p class="section-label mb-3">Lo Que Dicen Nuestros Clientes</p>
+                <h2 class="display-lg text-midnight">Testimonios</h2>
+                <div class="ornament mt-4">
+                    <div class="ornament-line"></div>
+                    <div class="ornament-diamond"></div>
+                    <div class="ornament-line"></div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="flex gap-1 mb-4">
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <blockquote class="font-display text-xl text-midnight mb-6" style="font-style:italic; font-weight:300; line-height:1.6;">
+                        "La experiencia de comprar nuestra casa campestre con Élite Propiedades fue impecable. Discretos, conocedores del mercado y con una red de contactos impresionante."
+                    </blockquote>
+                    <div class="flex items-center gap-4">
+                        <div style="width:44px; height:44px; background:linear-gradient(135deg,#c8d8e8,#8aafc8); border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center;">
+                            <span style="color:white; font-weight:700; font-size:0.9rem; font-family:'Cormorant Garamond',serif;">JR</span>
+                        </div>
+                        <div>
+                            <p class="font-medium text-midnight text-sm">Juliana Rodríguez</p>
+                            <p class="text-cool-gray text-xs">Directora Financiera — Bogotá</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="flex gap-1 mb-4">
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <blockquote class="font-display text-xl text-midnight mb-6" style="font-style:italic; font-weight:300; line-height:1.6;">
+                        "Vendimos nuestro penthouse en tiempo récord y al precio que esperábamos. El equipo de Élite entiende perfectamente el segmento de lujo y lo que los compradores buscan."
+                    </blockquote>
+                    <div class="flex items-center gap-4">
+                        <div style="width:44px; height:44px; background:linear-gradient(135deg,#d4cfc8,#a8a098); border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center;">
+                            <span style="color:white; font-weight:700; font-size:0.9rem; font-family:'Cormorant Garamond',serif;">AM</span>
+                        </div>
+                        <div>
+                            <p class="font-medium text-midnight text-sm">Andrés Montoya</p>
+                            <p class="text-cool-gray text-xs">Empresario — Medellín</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="testimonial-card reveal reveal-delay-1">
+                    <div class="flex gap-1 mb-4">
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <blockquote class="font-display text-xl text-midnight mb-6" style="font-style:italic; font-weight:300; line-height:1.6;">
+                        "Llevan más de 5 años administrando mis propiedades en arriendo. Jamás he tenido problemas con pagos ni con el estado de los inmuebles. Total confianza."
+                    </blockquote>
+                    <div class="flex items-center gap-4">
+                        <div style="width:44px; height:44px; background:linear-gradient(135deg,#c8d0d8,#98aab8); border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center;">
+                            <span style="color:white; font-weight:700; font-size:0.9rem; font-family:'Cormorant Garamond',serif;">SV</span>
+                        </div>
+                        <div>
+                            <p class="font-medium text-midnight text-sm">Sofía Valencia</p>
+                            <p class="text-cool-gray text-xs">Inversionista Inmobiliaria — Cali</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 4 -->
+                <div class="testimonial-card reveal reveal-delay-2">
+                    <div class="flex gap-1 mb-4">
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                        <svg width="16" height="16" fill="var(--gold)" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    </div>
+                    <blockquote class="font-display text-xl text-midnight mb-6" style="font-style:italic; font-weight:300; line-height:1.6;">
+                        "El asesor asignado conocía a la perfección cada detalle de las propiedades que visitamos. La atención es de otra categoría. Sin duda, el estándar de lujo en Colombia."
+                    </blockquote>
+                    <div class="flex items-center gap-4">
+                        <div style="width:44px; height:44px; background:linear-gradient(135deg,#d0ccd8,#a098b8); border-radius:50%; flex-shrink:0; display:flex; align-items:center; justify-content:center;">
+                            <span style="color:white; font-weight:700; font-size:0.9rem; font-family:'Cormorant Garamond',serif;">CM</span>
+                        </div>
+                        <div>
+                            <p class="font-medium text-midnight text-sm">Carlos Mejía</p>
+                            <p class="text-cool-gray text-xs">Arquitecto — Bogotá</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         CTA BAND
+    ═══════════════════════════════════════════ -->
+    <section id="contacto" class="cta-gold py-24">
+        <div class="max-w-5xl mx-auto px-6 lg:px-8 text-center reveal">
+            <div class="ornament mb-6" style="--gold-line:rgba(255,255,255,0.5);">
+                <div style="width:48px; height:1px; background:rgba(255,255,255,0.5);"></div>
+                <div style="width:8px; height:8px; background:white; transform:rotate(45deg);"></div>
+                <div style="width:48px; height:1px; background:rgba(255,255,255,0.5);"></div>
+            </div>
+            <h2 class="display-xl text-white mb-5">¿Buscas tu<br><em style="font-style:italic;">Hogar Ideal?</em></h2>
+            <p style="color:rgba(255,255,255,0.85); font-size:1.1rem; line-height:1.7; max-width:520px; margin:0 auto 2.5rem;" class="font-body">
+                Nuestros asesores especializados están listos para acompañarte en cada paso. Agenda una consulta privada y sin compromiso.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://wa.me/573000000000" style="background:var(--midnight); color:white; font-family:'Nunito Sans',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:1rem 2.5rem; text-decoration:none; transition:all 0.3s;" onmouseover="this.style.background='#243660'" onmouseout="this.style.background='var(--midnight)'">
+                    Hablar con un Asesor
+                </a>
+                <a href="#propiedades" style="background:transparent; color:white; border:1.5px solid rgba(255,255,255,0.7); font-family:'Nunito Sans',sans-serif; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; padding:1rem 2.5rem; text-decoration:none; transition:all 0.3s;" onmouseover="this.style.borderColor='white'" onmouseout="this.style.borderColor='rgba(255,255,255,0.7)'">
+                    Ver Propiedades
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ═══════════════════════════════════════════
+         FOOTER
+    ═══════════════════════════════════════════ -->
+    <footer id="footer" style="background:var(--midnight);" class="py-16">
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <!-- Top: 4 columns -->
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-12 pb-12" style="border-bottom:1px solid rgba(255,255,255,0.08);">
+
+                <!-- Brand -->
+                <div class="col-span-2 lg:col-span-1">
+                    <div class="mb-4">
+                        <span class="font-display text-2xl font-light text-white">Élite</span>
+                        <div style="font-size:0.6rem; letter-spacing:0.3em; text-transform:uppercase; color:var(--gold); font-weight:700; font-family:'Nunito Sans',sans-serif; margin-top:2px;">Propiedades</div>
+                    </div>
+                    <div style="width:32px; height:1px; background:var(--gold); margin-bottom:1rem;"></div>
+                    <p class="footer-link" style="font-size:0.85rem; line-height:1.8;">Especialistas en propiedades de lujo y alta gama en Colombia desde 2008.</p>
+                    <div class="flex gap-3 mt-5">
+                        <a href="#" style="width:36px; height:36px; border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; transition:border-color 0.3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.12)'">
+                            <svg width="14" height="14" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+                        </a>
+                        <a href="#" style="width:36px; height:36px; border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; transition:border-color 0.3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.12)'">
+                            <svg width="14" height="14" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                        </a>
+                        <a href="#" style="width:36px; height:36px; border:1px solid rgba(255,255,255,0.12); display:flex; align-items:center; justify-content:center; transition:border-color 0.3s;" onmouseover="this.style.borderColor='var(--gold)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.12)'">
+                            <svg width="14" height="14" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Propiedades -->
+                <div>
+                    <h4 style="color:white; font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:700; font-family:'Nunito Sans',sans-serif; margin-bottom:1.25rem;">Propiedades</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#propiedades" class="footer-link">Casas de Lujo</a></li>
+                        <li><a href="#propiedades" class="footer-link">Apartamentos Premium</a></li>
+                        <li><a href="#propiedades" class="footer-link">Oficinas Corporativas</a></li>
+                        <li><a href="#propiedades" class="footer-link">Terrenos y Lotes</a></li>
+                        <li><a href="#propiedades" class="footer-link">Propiedades en Arriendo</a></li>
+                    </ul>
+                </div>
+
+                <!-- Servicios -->
+                <div>
+                    <h4 style="color:white; font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:700; font-family:'Nunito Sans',sans-serif; margin-bottom:1.25rem;">Servicios</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#servicios" class="footer-link">Asesoría de Compra</a></li>
+                        <li><a href="#servicios" class="footer-link">Gestión de Venta</a></li>
+                        <li><a href="#servicios" class="footer-link">Administración en Arriendo</a></li>
+                        <li><a href="#nosotros" class="footer-link">Avalúos Comerciales</a></li>
+                        <li><a href="#contacto" class="footer-link">Consultoría Privada</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contacto -->
+                <div>
+                    <h4 style="color:white; font-size:0.75rem; letter-spacing:0.18em; text-transform:uppercase; font-weight:700; font-family:'Nunito Sans',sans-serif; margin-bottom:1.25rem;">Contacto</h4>
+                    <ul class="space-y-3">
+                        <li class="flex items-start gap-2">
+                            <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24" style="margin-top:3px; flex-shrink:0;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            <span class="footer-link">Cra 15 #93-47 Of. 502<br>Bogotá, Colombia</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.63 19.79 19.79 0 01.07 1H3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L4.09 8a16 16 0 006 6l.38-.38a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+                            <a href="tel:+573000000000" class="footer-link">+57 300 000 0000</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                            <a href="mailto:info@elitepropiedades.com" class="footer-link">info@elitepropiedades.com</a>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <svg width="14" height="14" fill="none" stroke="var(--gold)" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                            <span class="footer-link">Lun–Vie: 8am – 6pm</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="flex flex-col sm:flex-row justify-between items-center gap-4 pt-8">
+                <p style="color:#4a5a74; font-size:0.8rem; font-family:'Nunito Sans',sans-serif;">
+                    © 2026 Élite Propiedades. Todos los derechos reservados.
+                </p>
+                <div class="flex gap-6">
+                    <a href="#privacidad" class="footer-link" style="font-size:0.8rem;">Política de Privacidad</a>
+                    <a href="#terminos" class="footer-link" style="font-size:0.8rem;">Términos y Condiciones</a>
+                </div>
+                <p style="color:#4a5a74; font-size:0.75rem; font-family:'Nunito Sans',sans-serif;">
+                    Desarrollado por <a href="#" style="color:var(--gold); text-decoration:none;">YaDev</a>
+                </p>
+            </div>
+
+        </div>
+    </footer>
+
+
+    <!-- ═══════════════════════════════════════════
+         WHATSAPP FLOATING BUTTON
+    ═══════════════════════════════════════════ -->
+    <a href="https://wa.me/573000000000?text=Hola,%20me%20interesa%20conocer%20propiedades%20disponibles." class="whatsapp-btn" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+
+    <!-- ═══════════════════════════════════════════
+         JAVASCRIPT
+    ═══════════════════════════════════════════ -->
+    <script>
+        // ─── Navbar scroll effect ───
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        }, { passive: true });
+
+        // ─── Scroll reveal ───
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ─── Auto-advance hero slider ───
+        const slideInputs = [
+            document.getElementById('slide1'),
+            document.getElementById('slide2'),
+            document.getElementById('slide3')
+        ];
+        let currentSlide = 0;
+        let sliderTimer = setInterval(advanceSlider, 6000);
+
+        function advanceSlider() {
+            currentSlide = (currentSlide + 1) % 3;
+            slideInputs[currentSlide].checked = true;
+        }
+
+        // Pause auto-advance on manual dot click
+        document.querySelectorAll('.dot-label').forEach((label, i) => {
+            label.addEventListener('click', () => {
+                clearInterval(sliderTimer);
+                currentSlide = i;
+                sliderTimer = setInterval(advanceSlider, 6000);
+            });
+        });
+
+        // ─── Counter animation on stats section ───
+        const statsSection = document.querySelector('[style*="background:var(--midnight)"]');
+        let countersAnimated = false;
+
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !countersAnimated) {
+                    countersAnimated = true;
+                    document.querySelectorAll('.stat-counter').forEach(counter => {
+                        counter.style.animation = 'none';
+                        counter.offsetHeight; // trigger reflow
+                        counter.style.animation = 'countUp 0.8s ease forwards';
+                        counter.style.animationDelay = Math.random() * 0.3 + 's';
+                    });
+                }
+            });
+        }, { threshold: 0.4 });
+
+        if (statsSection) statsObserver.observe(statsSection);
+
+        // ─── Smooth scroll for anchor links ───
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    const offset = 80;
+                    const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+                    window.scrollTo({ top, behavior: 'smooth' });
+                    // Close mobile menu if open
+                    const mobileToggle = document.getElementById('mobile-toggle');
+                    if (mobileToggle) mobileToggle.checked = false;
+                }
+            });
+        });
+
+        // ─── Property card staggered entrance ───
+        const cardObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    cardObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.property-card').forEach((card, i) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(24px)';
+            card.style.transition = `opacity 0.6s ease ${i * 0.1}s, transform 0.6s ease ${i * 0.1}s, box-shadow 0.4s ease`;
+            cardObserver.observe(card);
+        });
+    </script>
+
+</body>
+</html>

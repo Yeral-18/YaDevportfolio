@@ -1,0 +1,1819 @@
+<!DOCTYPE html>
+<html lang="es" data-industry="restaurante" data-yadev-cookies data-privacy-url="#privacidad" data-terms-url="#terminos">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Casa Raíces | Restaurante de Alta Cocina</title>
+    <link rel="icon" type="image/png" href="../assets/img/icon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Typography: Playfair Display + Lato -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,900;1,400;1,600&family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet">
+
+    <meta name="description" content="Casa Raíces — restaurante de alta cocina colombiana contemporánea.">
+    <meta property="og:title" content="Casa Raíces | Restaurante de Alta Cocina">
+    <meta property="og:description" content="Casa Raíces — restaurante de alta cocina colombiana contemporánea.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://yadev.co/assets/img/og-default.jpg">
+    <!-- Schema.org: Restaurant + FoodEstablishment -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Restaurant", "FoodEstablishment"],
+      "name": "Casa Raíces",
+      "description": "Restaurante de alta cocina colombiana contemporánea. Sabores que cuentan historias.",
+      "url": "https://casaraices.co",
+      "telephone": "+57 300 000 0000",
+      "priceRange": "$$$",
+      "servesCuisine": ["Colombiana contemporánea", "Fusión latinoamericana"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 93 # 11-27",
+        "addressLocality": "Bogotá",
+        "addressRegion": "Cundinamarca",
+        "addressCountry": "CO"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "4.6762",
+        "longitude": "-74.0478"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Tuesday","Wednesday","Thursday"],
+          "opens": "12:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Friday","Saturday"],
+          "opens": "12:00",
+          "closes": "23:30"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Sunday",
+          "opens": "12:00",
+          "closes": "17:00"
+        }
+      ],
+      "hasMenu": {
+        "@type": "Menu",
+        "name": "Carta Principal",
+        "hasMenuSection": [
+          {
+            "@type": "MenuSection",
+            "name": "Entradas",
+            "hasMenuItem": [
+              {"@type": "MenuItem", "name": "Ceviche de Mar Adentro", "offers": {"@type": "Offer", "price": "38000", "priceCurrency": "COP"}},
+              {"@type": "MenuItem", "name": "Carpaccio de Res Angus", "offers": {"@type": "Offer", "price": "42000", "priceCurrency": "COP"}}
+            ]
+          }
+        ]
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "reviewCount": "284"
+      }
+    }
+    </script>
+
+    <style>
+        /* ============================================
+           CASA RAÍCES - Warm Editorial Fine Dining
+           Inspired by: Noma, Eleven Madison Park, Quintonil
+           Typography: Playfair Display + Lato
+           Palette: Cream + Terracotta + Gold + Dark Olive
+        ============================================ */
+
+        :root {
+            --cream: #FFF8F0;
+            --cream-deep: #F5EDE0;
+            --olive: #2D2B1F;
+            --olive-soft: #4A4737;
+            --terracotta: #C44D23;
+            --terracotta-light: #D9693F;
+            --gold: #D4A574;
+            --gold-light: #E8C89A;
+            --white: #FFFFFF;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Lato', system-ui, sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--cream);
+            color: var(--olive);
+            overflow-x: hidden;
+        }
+
+        /* Grain texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.035'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.4;
+        }
+
+        /* ---- TYPOGRAPHY ---- */
+        .font-display { font-family: var(--font-display); }
+        .font-body { font-family: var(--font-body); }
+
+        /* ---- BLUR-IN ANIMATION (unique to this template) ---- */
+        .blur-reveal {
+            opacity: 0;
+            filter: blur(12px);
+            transform: translateY(16px);
+            transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                        filter 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .blur-reveal.visible {
+            opacity: 1;
+            filter: blur(0px);
+            transform: translateY(0px);
+        }
+        .blur-reveal-delay-1 { transition-delay: 0.1s; }
+        .blur-reveal-delay-2 { transition-delay: 0.2s; }
+        .blur-reveal-delay-3 { transition-delay: 0.35s; }
+        .blur-reveal-delay-4 { transition-delay: 0.5s; }
+        .blur-reveal-delay-5 { transition-delay: 0.65s; }
+
+        /* ---- NAVBAR ---- */
+        #navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            transition: background 0.5s ease, box-shadow 0.5s ease, backdrop-filter 0.5s ease;
+        }
+        #navbar.transparent {
+            background: transparent;
+        }
+        #navbar.scrolled {
+            background: rgba(255, 248, 240, 0.96);
+            backdrop-filter: blur(12px);
+            box-shadow: 0 1px 0 rgba(45, 43, 31, 0.08);
+        }
+
+        .nav-link {
+            font-family: var(--font-body);
+            font-size: 0.8125rem;
+            font-weight: 400;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--white);
+            text-decoration: none;
+            transition: color 0.3s ease, opacity 0.3s ease;
+            opacity: 0.85;
+        }
+        #navbar.scrolled .nav-link { color: var(--olive); }
+        .nav-link:hover { opacity: 1; }
+
+        .nav-logo {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1.375rem;
+            font-weight: 600;
+            color: var(--white);
+            letter-spacing: 0.02em;
+            transition: color 0.3s ease;
+        }
+        #navbar.scrolled .nav-logo { color: var(--olive); }
+
+        /* ---- HERO ---- */
+        #hero {
+            position: relative;
+            height: 100vh;
+            min-height: 600px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                linear-gradient(
+                    160deg,
+                    rgba(45, 43, 31, 0.72) 0%,
+                    rgba(196, 77, 35, 0.28) 45%,
+                    rgba(45, 43, 31, 0.82) 100%
+                ),
+                /* Warm food photography simulation */
+                radial-gradient(ellipse at 30% 40%, #8B4513 0%, #5C2D0E 25%, #2D1A0A 55%, #1A0F05 100%);
+            background-size: cover;
+            background-position: center;
+            transform-origin: center;
+            will-change: transform;
+            transition: transform 0.05s linear;
+        }
+
+        /* Decorative warm light spots */
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 60% 50% at 25% 35%, rgba(212, 165, 116, 0.18) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 40% at 75% 65%, rgba(196, 77, 35, 0.12) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 0 1.5rem;
+            max-width: 800px;
+        }
+
+        .hero-eyebrow {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 400;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--gold);
+            margin-bottom: 1.25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+        }
+        .hero-eyebrow::before,
+        .hero-eyebrow::after {
+            content: '';
+            display: block;
+            width: 32px;
+            height: 1px;
+            background: var(--gold);
+            opacity: 0.7;
+        }
+
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 7vw, 5.5rem);
+            font-weight: 600;
+            font-style: italic;
+            color: var(--white);
+            line-height: 1.12;
+            letter-spacing: -0.01em;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-family: var(--font-body);
+            font-size: 1.0625rem;
+            font-weight: 300;
+            color: rgba(255, 248, 240, 0.78);
+            letter-spacing: 0.03em;
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn-reserve {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.625rem;
+            background: var(--terracotta);
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1rem 2.25rem;
+            border: none;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn-reserve:hover {
+            background: var(--terracotta-light);
+            transform: translateY(-2px);
+            box-shadow: 0 12px 32px rgba(196, 77, 35, 0.35);
+        }
+
+        .btn-reserve-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            color: var(--white);
+            font-family: var(--font-body);
+            font-size: 0.8125rem;
+            font-weight: 400;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            text-decoration: none;
+            padding: 1rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.35);
+            cursor: pointer;
+            transition: border-color 0.3s ease, background 0.3s ease;
+        }
+        .btn-reserve-ghost:hover {
+            border-color: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.06);
+        }
+
+        .hero-scroll-hint {
+            position: absolute;
+            bottom: 2.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            z-index: 2;
+        }
+        .hero-scroll-hint span {
+            font-family: var(--font-body);
+            font-size: 0.6875rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: rgba(255, 248, 240, 0.5);
+        }
+        .scroll-line {
+            width: 1px;
+            height: 40px;
+            background: linear-gradient(to bottom, rgba(255,248,240,0.5), transparent);
+            animation: scrollPulse 2s ease-in-out infinite;
+        }
+        @keyframes scrollPulse {
+            0%, 100% { opacity: 0.4; transform: scaleY(1); }
+            50% { opacity: 1; transform: scaleY(1.1); }
+        }
+
+        /* ---- SECTION STYLES ---- */
+        .section-eyebrow {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.875rem;
+        }
+        .section-eyebrow::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 1px;
+            background: var(--terracotta);
+        }
+
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 4vw, 3.25rem);
+            font-weight: 600;
+            color: var(--olive);
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+        }
+        .section-title em {
+            font-style: italic;
+            color: var(--terracotta);
+        }
+
+        /* ---- MENU SECTION ---- */
+        .tab-btn {
+            font-family: var(--font-body);
+            font-size: 0.8125rem;
+            font-weight: 400;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--olive-soft);
+            background: none;
+            border: none;
+            border-bottom: 2px solid transparent;
+            padding: 0.75rem 1.25rem;
+            cursor: pointer;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+        .tab-btn:hover { color: var(--olive); }
+        .tab-btn.active {
+            color: var(--terracotta);
+            border-bottom-color: var(--terracotta);
+            font-weight: 700;
+        }
+
+        .tab-panel {
+            display: none;
+            animation: tabFadeIn 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .tab-panel.active { display: block; }
+        @keyframes tabFadeIn {
+            from { opacity: 0; filter: blur(6px); transform: translateY(10px); }
+            to { opacity: 1; filter: blur(0px); transform: translateY(0); }
+        }
+
+        .menu-card {
+            background: var(--white);
+            border-radius: 0;
+            padding: 1.75rem;
+            box-shadow: 0 2px 20px rgba(45, 43, 31, 0.06), 0 1px 4px rgba(45, 43, 31, 0.04);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .menu-card::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(to right, var(--terracotta), var(--gold));
+            transform: scaleX(0);
+            transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+            transform-origin: left;
+        }
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 16px 48px rgba(45, 43, 31, 0.12), 0 4px 12px rgba(45, 43, 31, 0.06);
+        }
+        .menu-card:hover::before { transform: scaleX(1); }
+
+        .menu-card-img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            margin-bottom: 1.25rem;
+            overflow: hidden;
+            position: relative;
+        }
+        .menu-card-img-inner {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #8B5E3C 0%, #C4813A 40%, #6B3E1E 70%, #3D1F0A 100%);
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .menu-card:hover .menu-card-img-inner { transform: scale(1.06); }
+        .menu-card-img-inner::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(196, 77, 35, 0.12);
+            opacity: 0;
+            transition: opacity 0.35s ease;
+        }
+        .menu-card:hover .menu-card-img-inner::after { opacity: 1; }
+
+        .menu-food-icon {
+            font-size: 2.5rem;
+            opacity: 0.4;
+            user-select: none;
+        }
+
+        .menu-card-name {
+            font-family: var(--font-display);
+            font-size: 1.1875rem;
+            font-weight: 600;
+            color: var(--olive);
+            margin-bottom: 0.375rem;
+        }
+        .menu-card-desc {
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 300;
+            color: var(--olive-soft);
+            line-height: 1.65;
+            margin-bottom: 1rem;
+        }
+        .menu-card-price {
+            font-family: var(--font-display);
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: var(--terracotta);
+            font-style: italic;
+        }
+        .menu-card-tag {
+            font-family: var(--font-body);
+            font-size: 0.6875rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            background: var(--cream-deep);
+            color: var(--olive-soft);
+            padding: 0.2rem 0.6rem;
+            border-radius: 2px;
+        }
+
+        /* ---- CHEF SECTION ---- */
+        .chef-photo {
+            width: 320px;
+            height: 380px;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            background: linear-gradient(145deg, #8B5E3C 0%, #C4813A 35%, #6B3E1E 65%, #2D1A0A 100%);
+            position: relative;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .chef-photo::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 40% 30%, rgba(212,165,116,0.2) 0%, transparent 60%);
+        }
+        .chef-photo-ring {
+            position: absolute;
+            inset: -8px;
+            border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+            border: 2px solid;
+            border-color: var(--gold);
+            opacity: 0.25;
+        }
+
+        .chef-accent-line {
+            width: 48px;
+            height: 3px;
+            background: var(--terracotta);
+            margin-bottom: 1.5rem;
+        }
+
+        .chef-quote {
+            font-family: var(--font-display);
+            font-size: clamp(1.375rem, 2.5vw, 1.75rem);
+            font-style: italic;
+            font-weight: 400;
+            color: var(--olive);
+            line-height: 1.5;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .chef-quote::before {
+            content: '"';
+            font-size: 5rem;
+            font-family: var(--font-display);
+            color: var(--gold-light);
+            opacity: 0.6;
+            position: absolute;
+            top: -1.5rem;
+            left: -1rem;
+            line-height: 1;
+        }
+
+        /* ---- GALLERY ---- */
+        .gallery-grid {
+            columns: 3;
+            column-gap: 1rem;
+        }
+        @media (max-width: 768px) {
+            .gallery-grid { columns: 2; }
+        }
+        @media (max-width: 480px) {
+            .gallery-grid { columns: 1; }
+        }
+
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 1rem;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+        .gallery-item-inner {
+            width: 100%;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .gallery-item:hover .gallery-item-inner { transform: scale(1.04); }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(45,43,31,0.6) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.25rem;
+        }
+        .gallery-item:hover .gallery-overlay { opacity: 1; }
+        .gallery-overlay-text {
+            font-family: var(--font-display);
+            font-size: 0.9375rem;
+            font-style: italic;
+            color: var(--white);
+        }
+
+        /* Gallery image placeholders with varied warm gradients */
+        .g1 { background: linear-gradient(135deg, #A0522D 0%, #CD853F 50%, #8B4513 100%); height: 260px; }
+        .g2 { background: linear-gradient(145deg, #C44D23 0%, #E8874D 40%, #8B3A0F 100%); height: 180px; }
+        .g3 { background: linear-gradient(120deg, #6B3E1E 0%, #A0673A 45%, #D4A574 100%); height: 320px; }
+        .g4 { background: linear-gradient(150deg, #8B5E3C 0%, #C4813A 35%, #5C2D0E 100%); height: 200px; }
+        .g5 { background: linear-gradient(130deg, #D4A574 0%, #C44D23 50%, #6B3E1E 100%); height: 280px; }
+        .g6 { background: linear-gradient(140deg, #A0522D 0%, #8B5E3C 35%, #D4A574 100%); height: 160px; }
+        .g7 { background: linear-gradient(125deg, #5C2D0E 0%, #C44D23 40%, #E8C89A 100%); height: 240px; }
+        .g8 { background: linear-gradient(155deg, #8B4513 0%, #CD853F 50%, #A0522D 100%); height: 200px; }
+        .g9 { background: linear-gradient(135deg, #C44D23 0%, #6B3E1E 40%, #D4A574 100%); height: 300px; }
+
+        /* ---- RESERVATION FORM ---- */
+        .form-field {
+            width: 100%;
+            background: var(--white);
+            border: 1px solid rgba(45, 43, 31, 0.14);
+            padding: 0.875rem 1.125rem;
+            font-family: var(--font-body);
+            font-size: 0.9375rem;
+            color: var(--olive);
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+            appearance: none;
+        }
+        .form-field::placeholder { color: rgba(45, 43, 31, 0.4); }
+        .form-field:focus {
+            border-color: var(--terracotta);
+            box-shadow: 0 0 0 3px rgba(196, 77, 35, 0.08);
+        }
+        .form-label {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--olive-soft);
+            margin-bottom: 0.375rem;
+            display: block;
+        }
+
+        /* ---- TESTIMONIALS ---- */
+        .testimonial-track {
+            display: flex;
+            gap: 1.5rem;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .testimonial-card {
+            flex: 0 0 calc(33.333% - 1rem);
+            background: var(--white);
+            padding: 2rem;
+            box-shadow: 0 2px 20px rgba(45, 43, 31, 0.06);
+            position: relative;
+        }
+        @media (max-width: 900px) {
+            .testimonial-card { flex: 0 0 calc(50% - 0.75rem); }
+        }
+        @media (max-width: 600px) {
+            .testimonial-card { flex: 0 0 100%; }
+        }
+        .quote-mark {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            color: var(--gold-light);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+            opacity: 0.7;
+        }
+        .testimonial-text {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 1.0625rem;
+            color: var(--olive);
+            line-height: 1.65;
+            margin-bottom: 1.25rem;
+        }
+        .testimonial-author {
+            font-family: var(--font-body);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+        }
+        .testimonial-source {
+            font-family: var(--font-body);
+            font-size: 0.8125rem;
+            color: var(--olive-soft);
+            font-weight: 300;
+        }
+
+        /* Stars */
+        .stars { color: var(--gold); font-size: 0.875rem; letter-spacing: 0.05em; margin-bottom: 0.75rem; }
+
+        /* ---- FOOTER ---- */
+        #footer {
+            background: var(--olive);
+            color: rgba(255, 248, 240, 0.65);
+        }
+        .footer-logo {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--cream);
+            letter-spacing: 0.02em;
+        }
+        .footer-link {
+            font-family: var(--font-body);
+            font-size: 0.8125rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255, 248, 240, 0.55);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .footer-link:hover { color: var(--gold); }
+        .footer-divider {
+            border: none;
+            border-top: 1px solid rgba(255, 248, 240, 0.1);
+        }
+
+        /* ---- SOCIAL ICONS ---- */
+        .social-btn {
+            width: 38px;
+            height: 38px;
+            border: 1px solid rgba(255, 248, 240, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: rgba(255, 248, 240, 0.55);
+            text-decoration: none;
+            transition: border-color 0.3s ease, color 0.3s ease, background 0.3s ease;
+        }
+        .social-btn:hover {
+            border-color: var(--gold);
+            color: var(--gold);
+            background: rgba(212, 165, 116, 0.08);
+        }
+
+        /* ---- WHATSAPP FLOATING BUTTON ---- */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            z-index: 999;
+            width: 56px;
+            height: 56px;
+            background: #25D366;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+            text-decoration: none;
+            transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+        }
+        .whatsapp-float:hover {
+            transform: scale(1.1) translateY(-2px);
+            box-shadow: 0 16px 40px rgba(37, 211, 102, 0.5);
+        }
+        .whatsapp-float svg { width: 28px; height: 28px; fill: white; }
+
+        /* ---- MOBILE NAV ---- */
+        .mobile-menu {
+            position: fixed;
+            inset: 0;
+            background: var(--cream);
+            z-index: 998;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            transform: translateX(100%);
+            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .mobile-menu.open { transform: translateX(0); }
+        .mobile-menu-link {
+            font-family: var(--font-display);
+            font-style: italic;
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--olive);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .mobile-menu-link:hover { color: var(--terracotta); }
+
+        /* ---- HOURS TABLE ---- */
+        .hours-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem 0;
+            border-bottom: 1px solid rgba(45, 43, 31, 0.08);
+        }
+        .hours-row:last-child { border-bottom: none; }
+        .hours-day {
+            font-family: var(--font-body);
+            font-size: 0.875rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--olive-soft);
+        }
+        .hours-time {
+            font-family: var(--font-display);
+            font-style: italic;
+            color: var(--olive);
+            font-size: 0.9375rem;
+        }
+        .hours-closed { color: rgba(45, 43, 31, 0.35); }
+
+        /* ---- MAP PLACEHOLDER ---- */
+        .map-placeholder {
+            width: 100%;
+            height: 400px;
+            background:
+                linear-gradient(135deg, #E8DDD0 0%, #D4C4B0 30%, #C8B090 60%, #BCA07A 100%);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .map-placeholder::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                repeating-linear-gradient(0deg, transparent, transparent 38px, rgba(45,43,31,0.06) 38px, rgba(45,43,31,0.06) 39px),
+                repeating-linear-gradient(90deg, transparent, transparent 38px, rgba(45,43,31,0.06) 38px, rgba(45,43,31,0.06) 39px);
+        }
+        .map-pin {
+            width: 40px;
+            height: 40px;
+            background: var(--terracotta);
+            border-radius: 50% 50% 50% 0;
+            transform: rotate(-45deg);
+            position: relative;
+            z-index: 2;
+            box-shadow: 0 8px 24px rgba(196, 77, 35, 0.4);
+        }
+        .map-pin::after {
+            content: '';
+            position: absolute;
+            inset: 8px;
+            background: var(--white);
+            border-radius: 50%;
+        }
+        .map-label {
+            position: absolute;
+            bottom: 1.5rem;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--white);
+            padding: 0.5rem 1.25rem;
+            font-family: var(--font-body);
+            font-size: 0.8125rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--olive);
+            box-shadow: 0 4px 16px rgba(45,43,31,0.1);
+            white-space: nowrap;
+        }
+
+        /* ---- AWARD STRIP ---- */
+        .award-strip {
+            background: var(--terracotta);
+            padding: 0.875rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .award-item {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255, 248, 240, 0.9);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        /* ---- UTILITIES ---- */
+        .warm-band {
+            background: var(--cream-deep);
+        }
+        .container-narrow {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+        .divider-ornament {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+        .divider-ornament::before,
+        .divider-ornament::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(to right, transparent, rgba(45,43,31,0.15), transparent);
+        }
+        .divider-ornament-icon {
+            font-size: 1rem;
+            color: var(--gold);
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ============================================
+         NAVBAR
+    ============================================ -->
+    <nav id="navbar" class="transparent">
+        <!-- Desktop -->
+        <div class="hidden md:flex items-center justify-between px-10 py-5">
+            <!-- Left links -->
+            <div class="flex items-center gap-8">
+                <a href="#menu" class="nav-link">Menú</a>
+                <a href="#chef" class="nav-link">El Chef</a>
+                <a href="#galeria" class="nav-link">Galería</a>
+            </div>
+            <!-- Logo center -->
+            <a href="#hero" class="nav-logo">Casa Raíces</a>
+            <!-- Right links -->
+            <div class="flex items-center gap-8">
+                <a href="#ubicacion" class="nav-link">Visítanos</a>
+                <a href="#reservar" class="nav-link">Reservas</a>
+                <a href="#reservar" class="btn-reserve text-xs">Reservar Mesa</a>
+            </div>
+        </div>
+        <!-- Mobile -->
+        <div class="flex md:hidden items-center justify-between px-5 py-4">
+            <a href="#hero" class="nav-logo" style="font-size:1.125rem;">Casa Raíces</a>
+            <button id="menuToggle" class="p-2 text-white" aria-label="Abrir menú" style="color:inherit;">
+                <svg id="menuIcon" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                    <rect y="4" width="22" height="2" rx="1" fill="currentColor"/>
+                    <rect y="10" width="22" height="2" rx="1" fill="currentColor"/>
+                    <rect y="16" width="22" height="2" rx="1" fill="currentColor"/>
+                </svg>
+                <svg id="closeIcon" width="22" height="22" viewBox="0 0 22 22" fill="none" class="hidden">
+                    <line x1="3" y1="3" x2="19" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="19" y1="3" x2="3" y2="19" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#menu" class="mobile-menu-link" onclick="closeMobileMenu()">Menú</a>
+        <a href="#chef" class="mobile-menu-link" onclick="closeMobileMenu()">El Chef</a>
+        <a href="#galeria" class="mobile-menu-link" onclick="closeMobileMenu()">Galería</a>
+        <a href="#ubicacion" class="mobile-menu-link" onclick="closeMobileMenu()">Visítanos</a>
+        <a href="#reservar" class="mobile-menu-link" onclick="closeMobileMenu()">Reservas</a>
+        <a href="#reservar" class="btn-reserve mt-4" onclick="closeMobileMenu()">Reservar Mesa</a>
+    </div>
+
+    <!-- ============================================
+         HERO
+    ============================================ -->
+    <section id="hero">
+        <div class="hero-bg" id="heroBg"></div>
+        <div class="hero-content">
+            <div class="hero-eyebrow blur-reveal">Bogotá, Colombia · Desde 2018</div>
+            <h1 class="hero-title blur-reveal blur-reveal-delay-1">
+                Sabores que<br>Cuentan Historias
+            </h1>
+            <p class="hero-subtitle blur-reveal blur-reveal-delay-2">
+                Alta cocina colombiana contemporánea. Ingredientes de origen,<br class="hidden md:block">
+                técnica impecable y el alma de nuestra tierra en cada plato.
+            </p>
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 blur-reveal blur-reveal-delay-3">
+                <a href="#reservar" class="btn-reserve">Reservar Mesa</a>
+                <a href="#menu" class="btn-reserve-ghost">Ver Menú</a>
+            </div>
+        </div>
+        <div class="hero-scroll-hint blur-reveal blur-reveal-delay-5">
+            <div class="scroll-line"></div>
+            <span>Descubrir</span>
+        </div>
+    </section>
+
+    <!-- Award Strip -->
+    <div class="award-strip">
+        <div class="award-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Mejor Restaurante Bogotá 2024
+        </div>
+        <div class="award-item" style="color:rgba(255,248,240,0.4);">·</div>
+        <div class="award-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Lista Latin America's 50 Best
+        </div>
+        <div class="award-item" style="color:rgba(255,248,240,0.4);">·</div>
+        <div class="award-item">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            Toque de Oro · Guía Gourmet
+        </div>
+    </div>
+
+    <!-- ============================================
+         MENU DESTACADO
+    ============================================ -->
+    <section id="menu" class="py-24" style="background:var(--cream);">
+        <div class="container-narrow">
+            <!-- Header -->
+            <div class="text-center mb-14 blur-reveal">
+                <div class="section-eyebrow justify-center">
+                    <span style="width:24px;height:1px;background:var(--terracotta);display:block;"></span>
+                    Nuestra Carta
+                    <span style="width:24px;height:1px;background:var(--terracotta);display:block;"></span>
+                </div>
+                <h2 class="section-title">Menú <em>Destacado</em></h2>
+                <p class="font-body text-base font-light mt-4 max-w-lg mx-auto" style="color:var(--olive-soft);line-height:1.75;letter-spacing:0.01em;">
+                    Ingredientes seleccionados de pequeños productores colombianos. La carta cambia con las estaciones.
+                </p>
+                <div class="divider-ornament max-w-xs mx-auto">
+                    <span class="divider-ornament-icon">✦</span>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="flex justify-center mb-10 blur-reveal blur-reveal-delay-1" style="border-bottom:1px solid rgba(45,43,31,0.1);">
+                <button class="tab-btn active" data-tab="entradas">Entradas</button>
+                <button class="tab-btn" data-tab="principales">Principales</button>
+                <button class="tab-btn" data-tab="postres">Postres</button>
+            </div>
+
+            <!-- Entradas -->
+            <div class="tab-panel active" id="tab-entradas">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="menu-card blur-reveal">
+                        <div class="menu-card-img">
+                            <div class="menu-card-img-inner" style="background:linear-gradient(135deg,#5C8A5C 0%,#2D6A2D 35%,#8BBCA0 60%,#C0E8C0 100%);height:200px;display:flex;align-items:center;justify-content:center;">
+                                <span class="menu-food-icon">🥗</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="menu-card-tag">Vegetariano</span>
+                            <span class="menu-card-price">$38.000</span>
+                        </div>
+                        <div class="menu-card-name">Ceviche de Mar Adentro</div>
+                        <div class="menu-card-desc">Corvina fresca, leche de tigre de maracuyá, aguacate criollo, chifles artesanales y cilantro de la huerta.</div>
+                    </div>
+                    <div class="menu-card blur-reveal blur-reveal-delay-1">
+                        <div class="menu-card-img">
+                            <div class="menu-card-img-inner" style="height:200px;display:flex;align-items:center;justify-content:center;">
+                                <span class="menu-food-icon">🥩</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="menu-card-tag">Signature</span>
+                            <span class="menu-card-price">$48.000</span>
+                        </div>
+                        <div class="menu-card-name">Carpaccio Angus de los Llanos</div>
+                        <div class="menu-card-desc">Res Angus madurada 28 días, alioli de chipotle ahumado, alcaparras, rúcula silvestre y aceite virgen.</div>
+                    </div>
+                    <div class="menu-card blur-reveal blur-reveal-delay-2">
+                        <div class="menu-card-img">
+                            <div class="menu-card-img-inner" style="background:linear-gradient(135deg,#B8860B 0%,#DAA520 40%,#8B6914 70%,#5C4500 100%);height:200px;display:flex;align-items:center;justify-content:center;">
+                                <span class="menu-food-icon">🍄</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="menu-card-tag">De Temporada</span>
+                            <span class="menu-card-price">$42.000</span>
+                        </div>
+                        <div class="menu-card-name">Sopa de Setas del Bosque</div>
+                        <div class="menu-card-desc">Hongos shiitake, portobello y champiñones de Cundinamarca, crema de pimentón asado y trufa negra rallada.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Principales -->
+            <div class="tab-panel" id="tab-principales">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="menu-card blur-reveal">
+                        <div class="menu-card-img">
+                            <div class="menu-card-img-inner" style="background:linear-gradient(135deg,#8B1A1A 0%,#C44D23 40%,#6B0F0F 100%);height:200px;display:flex;align-items:center;justify-content:center;">
+                                <span class="menu-food-icon">🥩</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="menu-card-tag">Signature</span>
+                            <span class="menu-card-price">$98.000</span>
+                        </div>
+                        <div class="menu-card-name">Lomo Fino a la Brasa</div>
+                        <div class="menu-card-desc">Corte prime madurado en seco, salsa de reducción de vino tinto y panela, papas criollas confitadas y espárragos a la plancha.</div>
+                    </div>
+                    <div class="menu-card blur-reveal blur-reveal-delay-1">
+                        <div class="menu-card-img">
+                            <div class="menu-card-img-inner" style="background:linear-gradient(135deg,#1A5C8A 0%,#2E86C1 35%,#0D3B5E 70%,#051D30 100%);height:200px;display:flex;align-items:center;justify-content:center;">
+                                <span class="menu-food-icon">🐟</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="menu-card-tag">Del Mar</span>
+                            <span class="menu-card-price">$86.000</span>
+                        </div>
+                        <div class="menu-card-name">Pargo Rojo del Pacífico</div>
+                        <div class="menu-card-desc">Pargo fresco en costra de hierbas, bisque de langostinos, puré de yuca ahumada y vinagreta de mango biche.</div>
+                    </div>
+                    <div class="menu-card blur-reveal blur-reveal-delay-2">
+                        <div class="menu-card-img">
+                            <div class="menu-card-img-inner" style="background:linear-gradient(135deg,#3D5A2A 0%,#6B9E47 40%,#2A3D1A 100%);height:200px;display:flex;align-items:center;justify-content:center;">
+                                <span class="menu-food-icon">🌿</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="menu-card-tag">Vegetariano</span>
+                            <span class="menu-card-price">$72.000</span>
+                        </div>
+                        <div class="menu-card-name">Risotto de Quinua Andina</div>
+                        <div class="menu-card-desc">Quinua real del Altiplano en textura cremosa, queso campesino curado, cebolla caramelizada y flores comestibles de temporada.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Postres -->
+            <div class="tab-panel" id="tab-postres">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="menu-card blur-reveal">
+                        <div class="menu-card-img">
+                            <div class="menu-card-img-inner" style="background:linear-gradient(135deg,#4A1C00 0%,#8B4513 40%,#C67348 70%,#E8A87C 100%);height:200px;display:flex;align-items:center;justify-content:center;">
+                                <span class="menu-food-icon">🍫</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="menu-card-tag">Signature</span>
+                            <span class="menu-card-price">$34.000</span>
+                        </div>
+                        <div class="menu-card-name">Volcán de Cacao Tumaco</div>
+                        <div class="menu-card-desc">Fondant de cacao 70% origen Tumaco, helado de panela artesanal, sal de mar y hoja de guanábana.</div>
+                    </div>
+                    <div class="menu-card blur-reveal blur-reveal-delay-1">
+                        <div class="menu-card-img">
+                            <div class="menu-card-img-inner" style="background:linear-gradient(135deg,#D4A017 0%,#FFC300 35%,#A07B0F 100%);height:200px;display:flex;align-items:center;justify-content:center;">
+                                <span class="menu-food-icon">🍮</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="menu-card-tag">Clásico</span>
+                            <span class="menu-card-price">$28.000</span>
+                        </div>
+                        <div class="menu-card-name">Flan de Arequipe y Naranjas</div>
+                        <div class="menu-card-desc">Natilla tradicional renovada con arequipe de leche de búfala, cítricos confitados y bizcocho borracho de aguardiente.</div>
+                    </div>
+                    <div class="menu-card blur-reveal blur-reveal-delay-2">
+                        <div class="menu-card-img">
+                            <div class="menu-card-img-inner" style="background:linear-gradient(135deg,#8B1A5C 0%,#C44D8A 40%,#E8A0C8 80%,#FFD6ED 100%);height:200px;display:flex;align-items:center;justify-content:center;">
+                                <span class="menu-food-icon">🍓</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="menu-card-tag">De Temporada</span>
+                            <span class="menu-card-price">$30.000</span>
+                        </div>
+                        <div class="menu-card-name">Pavlova de Frutos del Bosque</div>
+                        <div class="menu-card-desc">Merengue artesanal crujiente, crema chantilly de vainilla de Boyacá, moras, fresas y coulis de mora azul.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Menu CTA -->
+            <div class="text-center mt-12 blur-reveal">
+                <p class="font-body text-sm font-light mb-4" style="color:var(--olive-soft);letter-spacing:0.05em;">Menú degustación de 7 tiempos disponible con reserva anticipada</p>
+                <a href="#reservar" class="btn-reserve">Reservar para Degustar</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SOBRE EL CHEF
+    ============================================ -->
+    <section id="chef" class="py-24 warm-band">
+        <div class="container-narrow">
+            <div class="flex flex-col md:flex-row items-center gap-16">
+                <!-- Photo -->
+                <div class="blur-reveal flex-shrink-0 flex justify-center" style="width:100%;max-width:320px;margin:0 auto;">
+                    <div style="position:relative;">
+                        <div class="chef-photo" style="width:280px;height:340px;">
+                            <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" style="opacity:0.25;">
+                                    <circle cx="32" cy="22" r="14" stroke="white" stroke-width="2"/>
+                                    <path d="M8 56c0-13.255 10.745-24 24-24s24 10.745 24 24" stroke="white" stroke-width="2"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="chef-photo-ring" style="width:280px;height:340px;"></div>
+                        <!-- Floating badge -->
+                        <div style="position:absolute;bottom:-12px;right:-12px;background:var(--terracotta);padding:0.75rem 1.25rem;box-shadow:0 8px 24px rgba(196,77,35,0.3);">
+                            <div style="font-family:var(--font-display);font-style:italic;font-size:0.9375rem;color:white;font-weight:600;">Chef Ejecutivo</div>
+                            <div style="font-family:var(--font-body);font-size:0.75rem;color:rgba(255,255,255,0.8);letter-spacing:0.1em;text-transform:uppercase;margin-top:2px;">Desde 2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div class="blur-reveal blur-reveal-delay-2 flex-1">
+                    <div class="section-eyebrow">Nuestro Chef</div>
+                    <h2 class="section-title mb-6">Santiago<br><em>Morales Ríos</em></h2>
+                    <div class="chef-accent-line"></div>
+                    <blockquote class="chef-quote">
+                        Cocinar es volver a los orígenes. Cada ingrediente lleva la historia del lugar donde nació.
+                    </blockquote>
+                    <p class="font-body text-base font-light leading-relaxed mb-6" style="color:var(--olive-soft);">
+                        Formado en el Basque Culinary Center de San Sebastián y con pasantías en Noma (Copenhague) y Central (Lima), Santiago regresó a Colombia con una misión: elevar la cocina nacional sin perder su alma campesina.
+                    </p>
+                    <p class="font-body text-base font-light leading-relaxed mb-8" style="color:var(--olive-soft);">
+                        Trabaja directamente con productores del Huila, Boyacá y el Pacífico para asegurar ingredientes de máxima calidad y apoyar la economía local. Su menú cambia según lo que dicta la tierra.
+                    </p>
+                    <div class="flex flex-wrap gap-6">
+                        <div>
+                            <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--terracotta);font-style:italic;">15+</div>
+                            <div style="font-family:var(--font-body);font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--olive-soft);">Años de experiencia</div>
+                        </div>
+                        <div style="width:1px;background:rgba(45,43,31,0.12);"></div>
+                        <div>
+                            <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--terracotta);font-style:italic;">3</div>
+                            <div style="font-family:var(--font-body);font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--olive-soft);">Premios nacionales</div>
+                        </div>
+                        <div style="width:1px;background:rgba(45,43,31,0.12);"></div>
+                        <div>
+                            <div style="font-family:var(--font-display);font-size:2rem;font-weight:700;color:var(--terracotta);font-style:italic;">40+</div>
+                            <div style="font-family:var(--font-body);font-size:0.75rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;color:var(--olive-soft);">Productores aliados</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         GALERÍA
+    ============================================ -->
+    <section id="galeria" class="py-24" style="background:var(--cream);">
+        <div class="container-narrow">
+            <div class="text-center mb-14 blur-reveal">
+                <div class="section-eyebrow justify-center">
+                    <span style="width:24px;height:1px;background:var(--terracotta);display:block;"></span>
+                    Nuestra Experiencia
+                    <span style="width:24px;height:1px;background:var(--terracotta);display:block;"></span>
+                </div>
+                <h2 class="section-title">Una <em>Galería</em> de Sabores</h2>
+            </div>
+            <div class="gallery-grid blur-reveal">
+                <div class="gallery-item">
+                    <div class="gallery-item-inner g1" style="display:flex;align-items:center;justify-content:center;">
+                        <div class="gallery-overlay"><span class="gallery-overlay-text">Lomo a la brasa</span></div>
+                        <span style="font-size:3rem;opacity:0.3;">🥩</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner g2" style="display:flex;align-items:center;justify-content:center;">
+                        <div class="gallery-overlay"><span class="gallery-overlay-text">Sala principal</span></div>
+                        <span style="font-size:3rem;opacity:0.3;">🕯️</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner g3" style="display:flex;align-items:center;justify-content:center;">
+                        <div class="gallery-overlay"><span class="gallery-overlay-text">Mise en place</span></div>
+                        <span style="font-size:3rem;opacity:0.3;">🍽️</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner g4" style="display:flex;align-items:center;justify-content:center;">
+                        <div class="gallery-overlay"><span class="gallery-overlay-text">Volcán de cacao</span></div>
+                        <span style="font-size:3rem;opacity:0.3;">🍫</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner g5" style="display:flex;align-items:center;justify-content:center;">
+                        <div class="gallery-overlay"><span class="gallery-overlay-text">Huerta propia</span></div>
+                        <span style="font-size:3rem;opacity:0.3;">🌿</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner g6" style="display:flex;align-items:center;justify-content:center;">
+                        <div class="gallery-overlay"><span class="gallery-overlay-text">Ceviche del mar</span></div>
+                        <span style="font-size:3rem;opacity:0.3;">🐟</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner g7" style="display:flex;align-items:center;justify-content:center;">
+                        <div class="gallery-overlay"><span class="gallery-overlay-text">Bodega de vinos</span></div>
+                        <span style="font-size:3rem;opacity:0.3;">🍷</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner g8" style="display:flex;align-items:center;justify-content:center;">
+                        <div class="gallery-overlay"><span class="gallery-overlay-text">Terraza exterior</span></div>
+                        <span style="font-size:3rem;opacity:0.3;">✨</span>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <div class="gallery-item-inner g9" style="display:flex;align-items:center;justify-content:center;">
+                        <div class="gallery-overlay"><span class="gallery-overlay-text">Chef en acción</span></div>
+                        <span style="font-size:3rem;opacity:0.3;">👨‍🍳</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         RESERVACIONES
+    ============================================ -->
+    <section id="reservar" class="py-24 warm-band">
+        <div class="container-narrow">
+            <div class="max-w-2xl mx-auto">
+                <div class="text-center mb-12 blur-reveal">
+                    <div class="section-eyebrow justify-center">
+                        <span style="width:24px;height:1px;background:var(--terracotta);display:block;"></span>
+                        Reservaciones
+                        <span style="width:24px;height:1px;background:var(--terracotta);display:block;"></span>
+                    </div>
+                    <h2 class="section-title">Reserve su <em>Mesa</em></h2>
+                    <p class="font-body text-base font-light mt-4" style="color:var(--olive-soft);line-height:1.75;">
+                        Confirmamos su reserva dentro de las 2 horas siguientes. Para eventos privados o grupos mayores de 8 personas, contáctenos directamente.
+                    </p>
+                </div>
+
+                <form id="reservationForm" class="blur-reveal blur-reveal-delay-1" onsubmit="handleReservation(event)">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5 mb-5">
+                        <div>
+                            <label class="form-label" for="resNombre">Nombre completo</label>
+                            <input type="text" id="resNombre" class="form-field" placeholder="Ana García Restrepo" required>
+                        </div>
+                        <div>
+                            <label class="form-label" for="resEmail">Correo electrónico</label>
+                            <input type="email" id="resEmail" class="form-field" placeholder="ana@correo.com" required>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5 mb-5">
+                        <div>
+                            <label class="form-label" for="resFecha">Fecha</label>
+                            <input type="date" id="resFecha" class="form-field" required>
+                        </div>
+                        <div>
+                            <label class="form-label" for="resHora">Hora</label>
+                            <select id="resHora" class="form-field" required>
+                                <option value="">Seleccionar</option>
+                                <option>12:00</option>
+                                <option>12:30</option>
+                                <option>13:00</option>
+                                <option>13:30</option>
+                                <option>14:00</option>
+                                <option>19:00</option>
+                                <option>19:30</option>
+                                <option>20:00</option>
+                                <option>20:30</option>
+                                <option>21:00</option>
+                                <option>21:30</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="form-label" for="resPersonas">Personas</label>
+                            <select id="resPersonas" class="form-field" required>
+                                <option value="">Seleccionar</option>
+                                <option>1 persona</option>
+                                <option>2 personas</option>
+                                <option>3 personas</option>
+                                <option>4 personas</option>
+                                <option>5 personas</option>
+                                <option>6 personas</option>
+                                <option>7 personas</option>
+                                <option>8 personas</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <label class="form-label" for="resNota">Solicitudes especiales</label>
+                        <textarea id="resNota" class="form-field" rows="3" placeholder="Alergias, celebraciones, preferencias de mesa, menú degustación..."></textarea>
+                    </div>
+                    <div class="text-center">
+                        <button type="submit" class="btn-reserve w-full md:w-auto" style="justify-content:center;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                            </svg>
+                            Confirmar Reserva
+                        </button>
+                    </div>
+                    <div id="formSuccess" class="hidden mt-6 text-center py-4" style="background:rgba(45,43,31,0.05);border-left:3px solid var(--terracotta);">
+                        <p class="font-display italic" style="color:var(--olive);font-size:1.0625rem;">¡Reserva recibida! Confirmaremos en breve.</p>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         TESTIMONIOS
+    ============================================ -->
+    <section id="testimonios" class="py-24" style="background:var(--cream);">
+        <div class="container-narrow">
+            <div class="text-center mb-14 blur-reveal">
+                <div class="section-eyebrow justify-center">
+                    <span style="width:24px;height:1px;background:var(--terracotta);display:block;"></span>
+                    Opiniones
+                    <span style="width:24px;height:1px;background:var(--terracotta);display:block;"></span>
+                </div>
+                <h2 class="section-title">Lo que Dicen<br><em>Nuestros Comensales</em></h2>
+            </div>
+
+            <!-- Carousel container -->
+            <div class="overflow-hidden blur-reveal" id="testimonialsContainer">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <div class="quote-mark">"</div>
+                        <p class="testimonial-text">Una experiencia que va más allá de comer. Cada plato es una historia contada con precisión y emoción. El ceviche de mar adentro es simplemente indescriptible.</p>
+                        <div class="testimonial-author">Valentina Ospina</div>
+                        <div class="testimonial-source">Bogotá · Google Reviews</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <div class="quote-mark">"</div>
+                        <p class="testimonial-text">El mejor restaurante que he visitado en Colombia. El menú degustación de 7 tiempos es una obra de arte. Santiago Morales tiene un talento extraordinario.</p>
+                        <div class="testimonial-author">Andrés Mejía</div>
+                        <div class="testimonial-source">Medellín · TripAdvisor</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <div class="quote-mark">"</div>
+                        <p class="testimonial-text">Celebramos nuestro aniversario aquí y fue perfecto. El ambiente, el servicio, la comida... todo en perfecta armonía. Volveremos sin duda.</p>
+                        <div class="testimonial-author">Camila & Julián</div>
+                        <div class="testimonial-source">Cali · Instagram</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <div class="quote-mark">"</div>
+                        <p class="testimonial-text">Como chef que soy, reconozco la técnica impecable y el respeto por el producto. Casa Raíces es lo que necesitaba la escena gastronómica colombiana.</p>
+                        <div class="testimonial-author">Ricardo Patiño</div>
+                        <div class="testimonial-source">Chef · Revista Saveur Colombia</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <div class="quote-mark">"</div>
+                        <p class="testimonial-text">Vine desde Miami solo para cenar aquí. El volcán de cacao Tumaco cambió mi perspectiva sobre el chocolate. Un lujo para los sentidos.</p>
+                        <div class="testimonial-author">María del Mar</div>
+                        <div class="testimonial-source">Miami · Yelp</div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="stars">★★★★★</div>
+                        <div class="quote-mark">"</div>
+                        <p class="testimonial-text">El maridaje de vinos fue excepcional. El sommelier conoce cada productor y cada botella. Terminamos con una copa de vino colombiano del Valle del Cauca, memorable.</p>
+                        <div class="testimonial-author">Felipe Arango</div>
+                        <div class="testimonial-source">Bogotá · Google Reviews</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Carousel Controls -->
+            <div class="flex items-center justify-center gap-4 mt-8 blur-reveal">
+                <button id="prevTestimonial" class="w-10 h-10 border flex items-center justify-center transition-all hover:bg-terracotta group" style="border-color:rgba(45,43,31,0.2);" aria-label="Anterior">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="group-hover:stroke-white" style="color:var(--olive);">
+                        <polyline points="15 18 9 12 15 6"/>
+                    </svg>
+                </button>
+                <div class="flex gap-2" id="testimonialDots"></div>
+                <button id="nextTestimonial" class="w-10 h-10 border flex items-center justify-center transition-all group" style="border-color:rgba(45,43,31,0.2);" aria-label="Siguiente">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color:var(--olive);">
+                        <polyline points="9 18 15 12 9 6"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         UBICACIÓN
+    ============================================ -->
+    <section id="ubicacion" class="py-24 warm-band">
+        <div class="container-narrow">
+            <div class="text-center mb-14 blur-reveal">
+                <div class="section-eyebrow justify-center">
+                    <span style="width:24px;height:1px;background:var(--terracotta);display:block;"></span>
+                    Visítanos
+                    <span style="width:24px;height:1px;background:var(--terracotta);display:block;"></span>
+                </div>
+                <h2 class="section-title">Encuéntrenos en <em>Bogotá</em></h2>
+            </div>
+            <div class="flex flex-col md:flex-row gap-0 overflow-hidden" style="box-shadow:0 8px 48px rgba(45,43,31,0.1);">
+                <!-- Map placeholder -->
+                <div class="blur-reveal flex-1">
+                    <div class="map-placeholder">
+                        <div class="map-pin"></div>
+                        <div class="map-label">Casa Raíces · Zona Rosa</div>
+                    </div>
+                </div>
+                <!-- Info panel -->
+                <div class="blur-reveal blur-reveal-delay-2 flex-1 bg-white p-10 md:p-12 flex flex-col justify-between">
+                    <div>
+                        <h3 class="font-display text-2xl font-semibold mb-6" style="color:var(--olive);">Información <em style="color:var(--terracotta);">y Horarios</em></h3>
+
+                        <div class="mb-8">
+                            <div class="section-eyebrow mb-3" style="font-size:0.7rem;">Dirección</div>
+                            <p class="font-body" style="color:var(--olive);font-size:1rem;line-height:1.7;">
+                                Calle 93 # 11-27, Zona Rosa<br>
+                                Bogotá D.C., Colombia
+                            </p>
+                        </div>
+
+                        <div class="mb-8">
+                            <div class="section-eyebrow mb-3" style="font-size:0.7rem;">Horarios de Atención</div>
+                            <div class="hours-row">
+                                <span class="hours-day">Martes — Jueves</span>
+                                <span class="hours-time">12:00 – 22:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="hours-day">Viernes — Sábado</span>
+                                <span class="hours-time">12:00 – 23:30</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="hours-day">Domingo</span>
+                                <span class="hours-time">12:00 – 17:00</span>
+                            </div>
+                            <div class="hours-row">
+                                <span class="hours-day hours-closed">Lunes</span>
+                                <span class="hours-time hours-closed">Cerrado</span>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div class="section-eyebrow mb-3" style="font-size:0.7rem;">Contacto</div>
+                            <p class="font-body text-sm mb-1" style="color:var(--olive-soft);">
+                                <a href="tel:+573000000000" style="color:inherit;text-decoration:none;">+57 300 000 0000</a>
+                            </p>
+                            <p class="font-body text-sm" style="color:var(--olive-soft);">
+                                <a href="mailto:reservas@casaraices.co" style="color:inherit;text-decoration:none;">reservas@casaraices.co</a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 pt-6" style="border-top:1px solid rgba(45,43,31,0.1);">
+                        <a href="#reservar" class="btn-reserve">Hacer una Reserva</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
+    <footer id="footer" class="pt-16 pb-8">
+        <div class="container-narrow">
+            <!-- Top section -->
+            <div class="text-center mb-12">
+                <div class="footer-logo mb-3">Casa Raíces</div>
+                <p class="font-body text-sm font-light" style="color:rgba(255,248,240,0.45);letter-spacing:0.08em;text-transform:uppercase;">
+                    Alta Cocina Colombiana · Bogotá
+                </p>
+                <div class="flex items-center justify-center gap-3 mt-6">
+                    <a href="#" class="social-btn" aria-label="Instagram">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="Facebook">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/>
+                        </svg>
+                    </a>
+                    <a href="#" class="social-btn" aria-label="TripAdvisor">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l6 4.5-6 4.5z"/>
+                        </svg>
+                    </a>
+                    <a href="https://wa.me/573000000000" class="social-btn" aria-label="WhatsApp">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" stroke="none">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+                            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.553 4.107 1.522 5.83L.057 23.158a.5.5 0 00.611.663l5.565-1.457A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.493-5.178-1.357l-.37-.215-3.838 1.005 1.022-3.729-.233-.381A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Nav links -->
+            <nav class="flex flex-wrap items-center justify-center gap-6 mb-10">
+                <a href="#menu" class="footer-link">Menú</a>
+                <span style="color:rgba(255,248,240,0.2);">·</span>
+                <a href="#chef" class="footer-link">El Chef</a>
+                <span style="color:rgba(255,248,240,0.2);">·</span>
+                <a href="#galeria" class="footer-link">Galería</a>
+                <span style="color:rgba(255,248,240,0.2);">·</span>
+                <a href="#reservar" class="footer-link">Reservas</a>
+                <span style="color:rgba(255,248,240,0.2);">·</span>
+                <a href="#ubicacion" class="footer-link">Ubicación</a>
+                <span style="color:rgba(255,248,240,0.2);">·</span>
+                <a href="#privacidad" class="footer-link">Privacidad</a>
+            </nav>
+
+            <hr class="footer-divider mb-8">
+
+            <!-- Bottom row -->
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center md:text-left">
+                <p class="font-body text-xs" style="color:rgba(255,248,240,0.35);letter-spacing:0.05em;">
+                    © 2026 Casa Raíces. Todos los derechos reservados.
+                </p>
+                <p class="font-body text-xs" style="color:rgba(255,248,240,0.25);letter-spacing:0.05em;">
+                    Diseño por <a href="https://yadev.co" style="color:rgba(255,248,240,0.45);text-decoration:none;">YaDev.co</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/573000000000?text=Hola,%20me%20gustaría%20reservar%20una%20mesa%20en%20Casa%20Raíces"
+       class="whatsapp-float"
+       target="_blank"
+       rel="noopener noreferrer"
+       aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.118.553 4.107 1.522 5.83L.057 23.158a.5.5 0 00.611.663l5.565-1.457A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.885 0-3.65-.493-5.178-1.357l-.37-.215-3.838 1.005 1.022-3.729-.233-.381A9.96 9.96 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+        </svg>
+    </a>
+
+    <!-- ============================================
+         JAVASCRIPT
+    ============================================ -->
+    <script>
+        // ---- NAVBAR SCROLL ----
+        const navbar = document.getElementById('navbar');
+        const menuToggle = document.getElementById('menuToggle');
+        const menuIcon = document.getElementById('menuIcon');
+        const closeIcon = document.getElementById('closeIcon');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 60) {
+                navbar.classList.remove('transparent');
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+                navbar.classList.add('transparent');
+            }
+        }, { passive: true });
+
+        // Mobile menu
+        menuToggle.addEventListener('click', () => {
+            const isOpen = mobileMenu.classList.contains('open');
+            if (isOpen) {
+                closeMobileMenu();
+            } else {
+                mobileMenu.classList.add('open');
+                menuIcon.classList.add('hidden');
+                closeIcon.classList.remove('hidden');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+
+        function closeMobileMenu() {
+            mobileMenu.classList.remove('open');
+            menuIcon.classList.remove('hidden');
+            closeIcon.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        // ---- HERO PARALLAX ----
+        const heroBg = document.getElementById('heroBg');
+        window.addEventListener('scroll', () => {
+            const scrolled = window.scrollY;
+            if (scrolled < window.innerHeight) {
+                heroBg.style.transform = `translateY(${scrolled * 0.35}px) scale(1.05)`;
+            }
+        }, { passive: true });
+
+        // ---- BLUR REVEAL (IntersectionObserver) ----
+        const blurItems = document.querySelectorAll('.blur-reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        blurItems.forEach(item => revealObserver.observe(item));
+
+        // Trigger hero items immediately
+        document.querySelectorAll('#hero .blur-reveal').forEach(el => {
+            setTimeout(() => el.classList.add('visible'), 200);
+        });
+
+        // ---- TABS ----
+        const tabBtns = document.querySelectorAll('.tab-btn');
+        const tabPanels = document.querySelectorAll('.tab-panel');
+
+        tabBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const target = btn.dataset.tab;
+                tabBtns.forEach(b => b.classList.remove('active'));
+                tabPanels.forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+                document.getElementById('tab-' + target).classList.add('active');
+            });
+        });
+
+        // ---- TESTIMONIAL CAROUSEL ----
+        const track = document.getElementById('testimonialTrack');
+        const dotsContainer = document.getElementById('testimonialDots');
+        const cards = track.querySelectorAll('.testimonial-card');
+        let currentSlide = 0;
+        let slidesPerView = 3;
+
+        function getSlidesPerView() {
+            if (window.innerWidth < 600) return 1;
+            if (window.innerWidth < 900) return 2;
+            return 3;
+        }
+
+        function getTotalSlides() {
+            return Math.ceil(cards.length / getSlidesPerView());
+        }
+
+        function buildDots() {
+            dotsContainer.innerHTML = '';
+            const total = getTotalSlides();
+            for (let i = 0; i < total; i++) {
+                const dot = document.createElement('button');
+                dot.style.cssText = `width:8px;height:8px;border-radius:50%;border:none;cursor:pointer;transition:all 0.3s ease;background:${i === currentSlide ? 'var(--terracotta)' : 'rgba(45,43,31,0.2)'};transform:${i === currentSlide ? 'scale(1.25)' : 'scale(1)'};`;
+                dot.setAttribute('aria-label', `Slide ${i + 1}`);
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+        }
+
+        function goToSlide(index) {
+            const spv = getSlidesPerView();
+            const total = getTotalSlides();
+            currentSlide = Math.max(0, Math.min(index, total - 1));
+            const cardWidth = cards[0].offsetWidth;
+            const gap = 24;
+            const offset = currentSlide * spv * (cardWidth + gap);
+            track.style.transform = `translateX(-${offset}px)`;
+            buildDots();
+        }
+
+        document.getElementById('prevTestimonial').addEventListener('click', () => {
+            goToSlide(currentSlide - 1);
+        });
+        document.getElementById('nextTestimonial').addEventListener('click', () => {
+            goToSlide(currentSlide + 1 >= getTotalSlides() ? 0 : currentSlide + 1);
+        });
+
+        // Auto-advance
+        let autoplay = setInterval(() => {
+            goToSlide(currentSlide + 1 >= getTotalSlides() ? 0 : currentSlide + 1);
+        }, 5000);
+
+        track.parentElement.addEventListener('mouseenter', () => clearInterval(autoplay));
+        track.parentElement.addEventListener('mouseleave', () => {
+            autoplay = setInterval(() => {
+                goToSlide(currentSlide + 1 >= getTotalSlides() ? 0 : currentSlide + 1);
+            }, 5000);
+        });
+
+        window.addEventListener('resize', () => {
+            currentSlide = 0;
+            goToSlide(0);
+        });
+
+        buildDots();
+
+        // ---- RESERVATION FORM ----
+        function handleReservation(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button[type=submit]');
+            btn.textContent = 'Enviando...';
+            btn.disabled = true;
+            setTimeout(() => {
+                document.getElementById('formSuccess').classList.remove('hidden');
+                btn.textContent = 'Confirmar Reserva';
+                btn.disabled = false;
+                e.target.reset();
+                document.getElementById('formSuccess').scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }, 1400);
+        }
+
+        // ---- SET MIN DATE FOR RESERVATION ----
+        const today = new Date();
+        const yyyy = today.getFullYear();
+        const mm = String(today.getMonth() + 1).padStart(2, '0');
+        const dd = String(today.getDate()).padStart(2, '0');
+        document.getElementById('resFecha').min = `${yyyy}-${mm}-${dd}`;
+    </script>
+</body>
+</html>
