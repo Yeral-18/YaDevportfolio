@@ -1731,8 +1731,8 @@
               class="w-full bg-white/5 border border-white/10 rounded-lg px-4 py-2.5 text-white text-sm placeholder-zinc-600 focus:border-indigo-500/50 focus:outline-none transition-colors resize-none"></textarea>
           </div>
           <button type="submit" id="cf-submit" class="w-full btn-primary py-3">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22L11 13L2 9L22 2Z"/></svg>
-            <span>Enviar Consulta</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 8L12 13L21 8"/></svg>
+            <span>Enviar por Email</span>
           </button>
           <p id="cf-status" class="text-center text-sm hidden"></p>
         </form>
@@ -1911,14 +1911,15 @@
 
         if (!name || !email) return;
 
-        // Send via WhatsApp directly (no API calls, no tokens)
-        const waMsg = encodeURIComponent(
-          `*Contacto YaDev*\n\nNombre: ${name}\nEmail: ${email}\nTipo: ${type}\nMensaje: ${message || 'Sin mensaje'}`
+        // Send via email (mailto pre-filled)
+        const subject = encodeURIComponent(`Consulta YaDev: ${name} — ${type}`);
+        const body = encodeURIComponent(
+          `Nombre: ${name}\nEmail: ${email}\nTipo de proyecto: ${type}\nMensaje: ${message || 'Sin mensaje adicional'}\n\n---\nEnviado desde yadev.co`
         );
-        window.open(`https://wa.me/573004773174?text=${waMsg}`, '_blank');
+        window.location.href = `mailto:yadevsistem@gmail.com?subject=${subject}&body=${body}`;
 
         // Show success
-        status.textContent = '¡Se abrió WhatsApp con tu consulta! También puedes enviarnos un email a yadevsistem@gmail.com';
+        status.textContent = '¡Se abrió tu cliente de correo! Envía el email para completar tu consulta.';
         status.className = 'text-center text-sm text-green-400 mt-3';
         status.classList.remove('hidden');
 
