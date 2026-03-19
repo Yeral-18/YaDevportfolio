@@ -1732,7 +1732,7 @@
           </div>
           <button type="submit" id="cf-submit" class="w-full btn-primary py-3">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 8L12 13L21 8"/></svg>
-            <span>Enviar por Email</span>
+            <span>Enviar Consulta</span>
           </button>
           <p id="cf-status" class="text-center text-sm hidden"></p>
         </form>
@@ -1900,7 +1900,7 @@
     // ── Contact form → WhatsApp (no tokens exposed) ──────────────
     const contactForm = document.getElementById('contact-form');
     if (contactForm) {
-      contactForm.addEventListener('submit', (e) => {
+      contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
         const btn = document.getElementById('cf-submit');
         const status = document.getElementById('cf-status');
@@ -1911,19 +1911,42 @@
 
         if (!name || !email) return;
 
-        // Send via email (mailto pre-filled)
-        const subject = encodeURIComponent(`Consulta YaDev: ${name} — ${type}`);
-        const body = encodeURIComponent(
-          `Nombre: ${name}\nEmail: ${email}\nTipo de proyecto: ${type}\nMensaje: ${message || 'Sin mensaje adicional'}\n\n---\nEnviado desde yadev.co`
-        );
-        window.location.href = `mailto:yadevsistem@gmail.com?subject=${subject}&body=${body}`;
+        btn.disabled = true;
+        btn.innerHTML = '<span>Enviando...</span>';
 
-        // Show success
-        status.textContent = '¡Se abrió tu cliente de correo! Envía el email para completar tu consulta.';
-        status.className = 'text-center text-sm text-green-400 mt-3';
-        status.classList.remove('hidden');
+        // Send via GitHub Issues API
+        const title = `Contacto: ${name} — ${type}`;
+        const body = `## Nueva Consulta desde YaDev Portfolio\n\n**Nombre:** ${name}\n**Email:** ${email}\n**Tipo de proyecto:** ${type}\n**Mensaje:** ${message || 'Sin mensaje adicional'}\n\n---\n*Enviado desde el formulario de contacto de yadev.co*`;
 
-        contactForm.reset();
+        try {
+          const res = await fetch('https://api.github.com/repos/Yeral-18/YaDevportfolio/issues', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer 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'
+            },
+            body: JSON.stringify({ title, body, labels: ['contacto'] })
+          });
+
+          if (res.ok) {
+            status.textContent = '¡Mensaje enviado correctamente! Te contactaremos pronto.';
+            status.className = 'text-center text-sm text-green-400 mt-3';
+            status.classList.remove('hidden');
+            contactForm.reset();
+          } else {
+            throw new Error('API error');
+          }
+        } catch (err) {
+          // Fallback: open WhatsApp
+          const waMsg = encodeURIComponent(`*Contacto YaDev*\n\nNombre: ${name}\nEmail: ${email}\nTipo: ${type}\nMensaje: ${message || 'Sin mensaje'}`);
+          window.open(`https://wa.me/573004773174?text=${waMsg}`, '_blank');
+          status.textContent = 'Se abrió WhatsApp como alternativa.';
+          status.className = 'text-center text-sm text-amber-400 mt-3';
+          status.classList.remove('hidden');
+        }
+
+        btn.disabled = false;
+        btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"/><path d="M3 8L12 13L21 8"/></svg><span>Enviar Consulta</span>';
         setTimeout(() => { status.classList.add('hidden'); }, 6000);
       });
     }
