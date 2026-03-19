@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '⚠️  Modificando: '$CLAUDE_TOOL_INPUT_PATH' — verifica que sea el cliente correcto'"
+          }
+        ]
+      }
+    ]
+  }
+}
