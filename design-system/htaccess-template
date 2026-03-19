@@ -1,0 +1,204 @@
+# ══════════════════════════════════════════════════════════════════
+# YaDev Design System — .htaccess Template for Hostinger Deployment
+# ══════════════════════════════════════════════════════════════════
+#
+# SETUP:
+#   1. Copy to: public/.htaccess (Astro will include it in /dist/)
+#   2. No PLACEHOLDER values in this file — it is ready to use as-is.
+#   3. Read the WARNING comments before making changes.
+#
+# DEPLOYMENT NOTES:
+#   - Upload this file to your Hostinger public_html/ root.
+#   - After upload, purge Hostinger cache from hPanel > Hosting > Cache.
+#   - Test in incognito window (browser cache will hide issues).
+#
+# CRITICAL — DO NOT ADD Content-Security-Policy:
+#   CSP headers break Google Fonts (@font-face), inline Svelte styles,
+#   and Astro's hydration scripts on Hostinger shared hosting.
+#   If you need CSP, use meta http-equiv tags per-page instead.
+#
+# ══════════════════════════════════════════════════════════════════
+
+# Enable mod_rewrite engine
+RewriteEngine On
+
+
+# ─────────────────────────────────────────────────────────────────
+# HTTPS REDIRECT — Force all traffic to HTTPS
+# ─────────────────────────────────────────────────────────────────
+# Requires SSL certificate covering both domain.com and www.domain.com
+# Check Hostinger hPanel > SSL > Auto SSL before enabling.
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+
+# ─────────────────────────────────────────────────────────────────
+# TRAILING SLASH REMOVAL — Canonical URL normalization
+# ─────────────────────────────────────────────────────────────────
+# Redirects /servicios/ → /servicios (except actual directories).
+# Prevents duplicate content penalization by search engines.
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)/$ /$1 [L,R=301]
+
+
+# ─────────────────────────────────────────────────────────────────
+# DIRECTORY LISTING — Disabled
+# ─────────────────────────────────────────────────────────────────
+# Prevents Apache from showing file listings for directories
+# that don't have an index file.
+Options -Indexes
+
+
+# ─────────────────────────────────────────────────────────────────
+# GZIP COMPRESSION — Reduce transfer size
+# ─────────────────────────────────────────────────────────────────
+# Compresses text-based files before sending to browser.
+# Typically reduces HTML/CSS/JS size by 60-80%.
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE text/plain
+  AddOutputFilterByType DEFLATE font/woff
+  AddOutputFilterByType DEFLATE font/woff2
+  AddOutputFilterByType DEFLATE application/font-woff
+  AddOutputFilterByType DEFLATE application/font-woff2
+</IfModule>
+
+
+# ─────────────────────────────────────────────────────────────────
+# BROWSER CACHE — Long-lived cache for static assets
+# ─────────────────────────────────────────────────────────────────
+# Astro content-hashes all assets in /assets/ (e.g., main.a1b2c3.js)
+# so 1-year cache is safe — file name changes when content changes.
+# HTML is cached for 1 hour (it's not hashed, content can change).
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML — short cache, pages may update
+  ExpiresByType text/html                "access plus 1 hour"
+
+  # Hashed assets — can be cached forever
+  ExpiresByType text/css                 "access plus 1 year"
+  ExpiresByType application/javascript   "access plus 1 year"
+
+  # Images
+  ExpiresByType image/jpeg               "access plus 1 year"
+  ExpiresByType image/png                "access plus 1 year"
+  ExpiresByType image/gif                "access plus 1 year"
+  ExpiresByType image/webp               "access plus 1 year"
+  ExpiresByType image/avif               "access plus 1 year"
+  ExpiresByType image/svg+xml            "access plus 1 year"
+  ExpiresByType image/x-icon             "access plus 1 year"
+  ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/woff                "access plus 1 year"
+  ExpiresByType font/woff2               "access plus 1 year"
+  ExpiresByType application/font-woff    "access plus 1 year"
+  ExpiresByType application/font-woff2   "access plus 1 year"
+
+  # Data
+  ExpiresByType application/json         "access plus 0 seconds"
+  ExpiresByType application/xml          "access plus 0 seconds"
+</IfModule>
+
+
+# ─────────────────────────────────────────────────────────────────
+# MIME TYPES — Explicit type declarations
+# ─────────────────────────────────────────────────────────────────
+# CRITICAL for Hostinger: without these, CSS and JS files may be
+# served as text/plain, causing browsers to ignore them entirely.
+# This is the most common cause of "site looks unstyled" on Hostinger.
+AddType text/css                    .css
+AddType application/javascript      .js
+AddType application/json            .json
+AddType image/svg+xml               .svg
+AddType font/woff                   .woff
+AddType font/woff2                  .woff2
+AddType image/webp                  .webp
+AddType image/avif                  .avif
+
+
+# ─────────────────────────────────────────────────────────────────
+# SECURITY HEADERS — Safe subset for Hostinger shared hosting
+# ─────────────────────────────────────────────────────────────────
+# WARNING: Do NOT add Content-Security-Policy here.
+#   CSP is incompatible with Google Fonts served from fonts.googleapis.com
+#   and fonts.gstatic.com on Hostinger shared hosting. Adding CSP will
+#   break fonts and Svelte hydration. Use <meta http-equiv="Content-Security-Policy">
+#   per page if you specifically need CSP for one page only.
+<IfModule mod_headers.c>
+  # Prevent site from being embedded in iframes (clickjacking protection)
+  Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Prevent MIME type sniffing (XSS vector)
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Only send referrer to same origin and HTTPS destinations
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+
+  # Restrict browser API access (no camera, mic, geolocation without explicit grant)
+  Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+
+  # Remove Apache version disclosure from error pages
+  Header always unset Server
+
+  # Cache-Control for HTML pages (supplement to mod_expires)
+  <FilesMatch "\.html$">
+    Header set Cache-Control "public, max-age=3600, must-revalidate"
+  </FilesMatch>
+
+  # Immutable cache for Astro hashed assets (assets/ folder)
+  <FilesMatch "^assets/.*\.(js|css|woff2?|png|jpg|webp|avif|svg)$">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </FilesMatch>
+</IfModule>
+
+
+# ─────────────────────────────────────────────────────────────────
+# SENSITIVE FILE PROTECTION — Block direct access
+# ─────────────────────────────────────────────────────────────────
+# Prevents direct browser access to sensitive file types.
+# These should never be publicly accessible on production.
+<FilesMatch "\.(env|bak|sql|log|ini|conf|md|lock|json|yaml|yml|sh|bat|cmd)$">
+  Require all denied
+</FilesMatch>
+
+# Block hidden files (starting with .)
+<FilesMatch "^\.">
+  Require all denied
+</FilesMatch>
+
+# Specific sensitive filenames
+<FilesMatch "^(package\.json|package-lock\.json|composer\.json|composer\.lock|tsconfig\.json|tailwind\.config\..*|astro\.config\..*)$">
+  Require all denied
+</FilesMatch>
+
+
+# ─────────────────────────────────────────────────────────────────
+# ERROR PAGES — Optional custom error pages
+# ─────────────────────────────────────────────────────────────────
+# Uncomment and create these pages if you want branded error pages.
+# ErrorDocument 404 /404.html
+# ErrorDocument 403 /403.html
+# ErrorDocument 500 /500.html
+
+
+# ─────────────────────────────────────────────────────────────────
+# PHP CONTACT FORM — Allow access to contact.php
+# ─────────────────────────────────────────────────────────────────
+# contact.php is blocked by the .json/.conf pattern above only if
+# the FilesMatch is overly broad. The patterns above target specific
+# extensions, so contact.php is accessible by default.
+# This section is a reminder — no action needed unless you add PHP
+# files to the blocked patterns above.
+#
+# If contact.php returns 403:
+#   <Files "contact.php">
+#     Require all granted
+#   </Files>
