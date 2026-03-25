@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generador de Firma — ECOMAG S.A.S</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    * { box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; }
+
+    /* Form focus ring */
+    .field-input:focus {
+      outline: none;
+      border-color: #1B5E20;
+      box-shadow: 0 0 0 3px rgba(27,94,32,0.12);
+    }
+
+    /* Toast animations */
+    @keyframes toastIn  { from { opacity:0; transform:translateY(10px) translateX(-50%); } to { opacity:1; transform:translateY(0) translateX(-50%); } }
+    @keyframes toastOut { from { opacity:1; transform:translateY(0) translateX(-50%); } to { opacity:0; transform:translateY(10px) translateX(-50%); } }
+    .toast-in  { animation: toastIn  0.22s ease forwards; }
+    .toast-out { animation: toastOut 0.22s ease forwards; }
+
+    /* Code panel scrollbar */
+    #html-out::-webkit-scrollbar { width:5px; height:5px; }
+    #html-out::-webkit-scrollbar-track { background:#f1f5f9; }
+    #html-out::-webkit-scrollbar-thumb { background:#cbd5e1; border-radius:4px; }
+    #html-out::-webkit-scrollbar-thumb:hover { background:#94a3b8; }
+
+    /* Prevent layout shift while preview loads */
+    #sig-preview { min-height: 80px; }
+  </style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+
+  <!-- Skip to content (accessibility) -->
+  <a href="#main-content"
+     class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-50 focus:bg-white focus:text-slate-800 focus:px-4 focus:py-2 focus:rounded-lg focus:shadow-lg focus:text-sm focus:font-medium">
+    Ir al contenido principal
+  </a>
+
+  <!-- ─── HEADER ─────────────────────────────────────────────────────────── -->
+  <header class="bg-white border-b border-slate-200 sticky top-0 z-30">
+    <div class="max-w-6xl mx-auto px-5 py-3.5 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <!-- Brand icon -->
+        <div class="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0"
+             style="background: linear-gradient(135deg, #1B5E20, #0277A8);">
+          <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+            <path d="M7.5 2C4 2 2 5 2 8.5c0 2 1 3.5 2.5 4.5C5.5 10 7 8 10 6c-2 3-2.5 5-1.5 7C10 12 13 10 13 7.5 13 4.5 11 2 7.5 2z" fill="white" fill-opacity="0.95"/>
+          </svg>
+        </div>
+        <div class="leading-tight">
+          <div class="font-bold text-slate-800 text-sm">ECOMAG S.A.S</div>
+          <div class="text-slate-400 text-xs">Generador de Firma Corporativa</div>
+        </div>
+      </div>
+      <!-- Badge -->
+      <span class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-xs font-semibold"
+            style="background: #e8f5e9; color: #1B5E20;">
+        <span class="w-1.5 h-1.5 rounded-full inline-block" style="background: #1B5E20;"></span>
+        Compatible Outlook &amp; Gmail
+      </span>
+    </div>
+  </header>
+
+  <!-- ─── MAIN ──────────────────────────────────────────────────────────────── -->
+  <main id="main-content" class="max-w-6xl mx-auto px-5 py-8">
+
+    <!-- Page title -->
+    <div class="mb-7">
+      <h1 class="text-2xl font-bold text-slate-800 mb-1.5">Generador de Firma de Correo</h1>
+      <p class="text-sm text-slate-500 max-w-xl leading-relaxed">
+        Completa los datos del colaborador, visualiza la firma en tiempo real y cópiala directo a Outlook o Gmail con un clic. Todas las firmas usan tablas HTML compatibles con Outlook 2013–365.
+      </p>
+    </div>
+
+    <!-- Two-column grid -->
+    <div class="grid grid-cols-1 xl:grid-cols-2 gap-7 items-start">
+
+      <!-- ── LEFT COLUMN: Form + Actions ────────────────────────────────── -->
+      <div class="space-y-5">
+
+        <!-- Form card -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm">
+          <!-- Card header -->
+          <div class="px-5 py-4 border-b border-slate-100 flex items-center gap-2">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+              <circle cx="7" cy="5" r="2.5" stroke="#64748b" stroke-width="1.3"/>
+              <path d="M2 12c0-2.761 2.239-4 5-4s5 1.239 5 4" stroke="#64748b" stroke-width="1.3" stroke-linecap="round"/>
+            </svg>
+            <h2 class="text-xs font-bold text-slate-600 uppercase tracking-widest">Datos del Colaborador</h2>
+          </div>
+
+          <!-- Fields -->
+          <div class="p-5 space-y-4">
+
+            <!-- Row 1: Nombre + Cargo -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div>
+                <label for="f-nombre" class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">
+                  Nombre Completo <span class="text-red-400" aria-hidden="true">*</span>
+                </label>
+                <input id="f-nombre" type="text"
+                  value="Nombre Apellido"
+                  placeholder="Ej. María García"
+                  autocomplete="name"
+                  aria-required="true"
+                  class="field-input w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-300 transition-all"
+                  oninput="updatePreview()">
+              </div>
+              <div>
+                <label for="f-cargo" class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">
+                  Cargo <span class="text-red-400" aria-hidden="true">*</span>
+                </label>
+                <input id="f-cargo" type="text"
+                  value="CARGO — ECOMAG S.A.S"
+                  placeholder="Ej. INGENIERA AMBIENTAL"
+                  aria-required="true"
+                  class="field-input w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-300 transition-all"
+                  oninput="updatePreview()">
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div>
+              <label for="f-email" class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">
+                Correo Electrónico <span class="text-red-400" aria-hidden="true">*</span>
+              </label>
+              <input id="f-email" type="email"
+                value="contacto@ecomagsas.com"
+                placeholder="nombre@ecomagsas.com"
+                autocomplete="email"
+                aria-required="true"
+                class="field-input w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-300 transition-all"
+                oninput="updatePreview()">
+            </div>
+
+            <!-- Website -->
+            <div>
+              <label for="f-web" class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">
+                Sitio Web
+              </label>
+              <input id="f-web" type="text"
+                value="www.ecomagsas.com"
+                placeholder="www.ecomagsas.com"
+                class="field-input w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-300 transition-all"
+                oninput="updatePreview()">
+            </div>
+
+            <!-- Row 2: Teléfono + Celular -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+              <div>
+                <label for="f-tel" class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">
+                  Teléfono Fijo
+                </label>
+                <input id="f-tel" type="text"
+                  value=""
+                  placeholder="(1) 234 5678"
+                  autocomplete="tel"
+                  class="field-input w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-300 transition-all"
+                  oninput="updatePreview()">
+              </div>
+              <div>
+                <label for="f-cel" class="block text-xs font-semibold text-slate-500 uppercase tracking-wide mb-1.5">
+                  Celular / WhatsApp
+                </label>
+                <input id="f-cel" type="text"
+                  value=""
+                  placeholder="+57 300 000 0000"
+                  autocomplete="tel"
+                  class="field-input w-full px-3.5 py-2.5 rounded-xl border border-slate-200 text-sm text-slate-800 placeholder-slate-300 transition-all"
+                  oninput="updatePreview()">
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- /Form card -->
+
+        <!-- Action buttons card -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm p-5">
+          <p class="text-xs font-semibold text-slate-400 mb-4 uppercase tracking-wide">Copiar firma:</p>
+          <div class="flex flex-col sm:flex-row gap-3">
+            <!-- Primary: Rich HTML copy -->
+            <button id="btn-rich"
+              onclick="copiarRich()"
+              title="Copia la firma como HTML enriquecido. Pega directo en Outlook o Gmail."
+              class="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold text-white transition-all duration-150 hover:shadow-lg active:scale-95 select-none"
+              style="background: linear-gradient(135deg, #1B5E20 0%, #2E7D32 100%);">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                <rect x="1.5" y="3" width="12" height="9" rx="1.5" stroke="white" stroke-width="1.3"/>
+                <path d="M1.5 5l6 3.5 6-3.5" stroke="white" stroke-width="1.3" stroke-linecap="round"/>
+              </svg>
+              Copiar Firma
+              <span class="opacity-70 font-normal text-xs">(Outlook / Gmail)</span>
+            </button>
+            <!-- Secondary: Raw HTML code -->
+            <button id="btn-html"
+              onclick="copiarHTML()"
+              title="Copia el código HTML crudo para clientes avanzados."
+              class="flex-1 flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-bold transition-all duration-150 hover:shadow-lg active:scale-95 select-none border-2"
+              style="border-color: #0277A8; color: #0277A8; background: white;">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" aria-hidden="true">
+                <path d="M4.5 3.5L1 7.5l3.5 4M10.5 3.5L14 7.5l-3.5 4M8.5 2l-2 11" stroke="#0277A8" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Copiar como HTML
+              <span class="opacity-60 font-normal text-xs">(Código)</span>
+            </button>
+          </div>
+          <p class="text-xs text-slate-400 mt-3.5 leading-relaxed">
+            <strong class="text-slate-500">Copiar Firma:</strong> pega directo en el editor de firmas de Outlook o Gmail.<br>
+            <strong class="text-slate-500">Copiar como HTML:</strong> código fuente para clientes avanzados o CRM.
+          </p>
+        </div>
+        <!-- /Action buttons -->
+
+        <!-- Instructions (collapsible) -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <button onclick="toggleInstr()"
+            class="w-full px-5 py-3.5 flex items-center justify-between hover:bg-slate-50 transition-colors"
+            aria-expanded="false" aria-controls="instr-body">
+            <span class="flex items-center gap-2 text-xs font-bold text-slate-600 uppercase tracking-wide">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <circle cx="7" cy="7" r="5.5" stroke="#64748b" stroke-width="1.3"/>
+                <path d="M7 6v4M7 4v.5" stroke="#64748b" stroke-width="1.5" stroke-linecap="round"/>
+              </svg>
+              Como instalar la firma
+            </span>
+            <svg id="instr-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                 class="text-slate-400 transition-transform duration-200" aria-hidden="true">
+              <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div id="instr-body" class="hidden border-t border-slate-100 p-5 space-y-4">
+            <!-- Outlook -->
+            <div>
+              <p class="text-xs font-bold mb-2" style="color: #1B5E20;">Outlook (Windows / Microsoft 365)</p>
+              <ol class="text-xs text-slate-600 space-y-1.5 list-decimal list-inside leading-relaxed">
+                <li>Clic en <strong>Copiar Firma</strong> arriba.</li>
+                <li>En Outlook: <strong>Archivo &rarr; Opciones &rarr; Correo &rarr; Firmas</strong>.</li>
+                <li>Crear nueva firma o seleccionar una existente.</li>
+                <li>Clic en el editor de firma y pegar con <kbd class="bg-slate-100 border border-slate-200 rounded px-1.5 py-0.5">Ctrl&nbsp;+&nbsp;V</kbd>.</li>
+                <li>Clic en <strong>Guardar</strong> y luego en <strong>Aceptar</strong>.</li>
+              </ol>
+            </div>
+            <!-- Gmail -->
+            <div class="border-t border-slate-100 pt-4">
+              <p class="text-xs font-bold mb-2" style="color: #0277A8;">Gmail</p>
+              <ol class="text-xs text-slate-600 space-y-1.5 list-decimal list-inside leading-relaxed">
+                <li>Clic en <strong>Copiar Firma</strong> arriba.</li>
+                <li>En Gmail: <strong>Ajustes (&#9881;) &rarr; Ver todos los ajustes &rarr; General &rarr; Firma</strong>.</li>
+                <li>Crear nueva firma. Clic en el área de texto y pegar con <kbd class="bg-slate-100 border border-slate-200 rounded px-1.5 py-0.5">Ctrl&nbsp;+&nbsp;V</kbd>.</li>
+                <li>Clic en <strong>Guardar cambios</strong> al final de la página.</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+        <!-- /Instructions -->
+
+      </div>
+      <!-- /LEFT -->
+
+      <!-- ── RIGHT COLUMN: Preview ──────────────────────────────────────── -->
+      <div class="space-y-5 xl:sticky xl:top-20">
+
+        <!-- Simulated email window -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <!-- Fake window chrome -->
+          <div class="bg-slate-50 border-b border-slate-200 px-5 py-3">
+            <div class="flex items-center gap-1.5 mb-3" aria-hidden="true">
+              <span class="w-2.5 h-2.5 rounded-full bg-red-400 inline-block"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-amber-400 inline-block"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-green-400 inline-block"></span>
+              <span class="text-xs text-slate-400 ml-1.5">Vista Previa — Bandeja de Entrada</span>
+            </div>
+            <div class="space-y-0.5 text-xs" aria-live="polite">
+              <div>
+                <span class="text-slate-400 inline-block w-10">De:</span>
+                <span id="from-field" class="text-slate-700 font-medium">Nombre Apellido &lt;contacto@ecomagsas.com&gt;</span>
+              </div>
+              <div>
+                <span class="text-slate-400 inline-block w-10">Para:</span>
+                <span class="text-slate-600">cliente@empresa.com</span>
+              </div>
+              <div>
+                <span class="text-slate-400 inline-block w-10">Asunto:</span>
+                <span class="text-slate-600">Propuesta Técnica — Proyecto Ambiental 2026</span>
+              </div>
+            </div>
+          </div>
+          <!-- Email body -->
+          <div class="p-6">
+            <p class="text-sm text-slate-500 leading-relaxed mb-5">
+              Estimado equipo,<br><br>
+              Adjuntamos la propuesta técnica para el proyecto de gestión ambiental.
+              Quedamos atentos a sus comentarios y disponibles para cualquier aclaración.<br><br>
+              Atentamente,
+            </p>
+            <!-- Divider -->
+            <div class="border-t border-slate-200 pt-5">
+              <!-- Live signature renders here -->
+              <div id="sig-preview" aria-label="Vista previa de la firma"></div>
+            </div>
+          </div>
+        </div>
+        <!-- /Email window -->
+
+        <!-- HTML Code panel (collapsible) -->
+        <div class="bg-white rounded-2xl border border-slate-200 shadow-sm overflow-hidden">
+          <button onclick="toggleCode()"
+            class="w-full px-5 py-3.5 flex items-center justify-between hover:bg-slate-50 transition-colors"
+            aria-expanded="false" aria-controls="code-body">
+            <span class="flex items-center gap-2 text-xs font-bold text-slate-600 uppercase tracking-wide">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <path d="M4 3.5L1 7l3 3.5M10 3.5L13 7l-3 3.5M8 2l-2 10" stroke="#64748b" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+              Código HTML Generado
+            </span>
+            <svg id="code-chevron" width="14" height="14" viewBox="0 0 14 14" fill="none"
+                 class="text-slate-400 transition-transform duration-200" aria-hidden="true">
+              <path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+          </button>
+          <div id="code-body" class="hidden border-t border-slate-100">
+            <pre id="html-out"
+              class="text-xs text-slate-500 p-4 overflow-auto max-h-72 bg-slate-50 leading-relaxed"
+              style="font-family: Consolas, 'Cascadia Code', 'Fira Code', monospace; white-space: pre-wrap; word-break: break-all;"
+              aria-label="Código HTML de la firma"></pre>
+          </div>
+        </div>
+        <!-- /Code panel -->
+
+      </div>
+      <!-- /RIGHT -->
+
+    </div>
+    <!-- /Grid -->
+
+  </main>
+
+  <!-- ─── TOAST ─────────────────────────────────────────────────────────────── -->
+  <div id="toast"
+       class="fixed bottom-6 left-1/2 z-50 pointer-events-none opacity-0"
+       style="transform: translateX(-50%);"
+       role="status" aria-live="polite" aria-atomic="true">
+    <div class="flex items-center gap-2.5 px-5 py-3 rounded-xl shadow-xl text-sm font-semibold text-white"
+         style="background: #1B5E20; min-width: 230px;">
+      <svg id="toast-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+        <path d="M3 8l3.5 3.5L13 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span id="toast-msg">Firma copiada</span>
+    </div>
+  </div>
+
+  <!-- ─── JAVASCRIPT ────────────────────────────────────────────────────────── -->
+  <script>
+    // ── LOGO (100 px — base64 embedded) ───────────────────────────────────────
+    // Generated from: logo_100_b64.txt
+    var LOGO_DATA_URI = 'data:image/png;base64,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';
+
+    // ── BRAND COLOR TOKENS ─────────────────────────────────────────────────────
+    var C = {
+      green:  '#1B5E20',
+      greenM: '#2E7D32',
+      blue:   '#0277A8',
+      gray:   '#546E7A',
+      dark:   '#1C2B1E',
+      body:   '#37474F',
+    };
+
+    // ── HTML ENTITY ESCAPING ──────────────────────────────────────────────────
+    function esc(s) {
+      return String(s)
+        .replace(/&/g,  '&amp;')
+        .replace(/</g,  '&lt;')
+        .replace(/>/g,  '&gt;')
+        .replace(/"/g,  '&quot;');
+    }
+
+    // ── BUILD ONE CONTACT ROW ─────────────────────────────────────────────────
+    function contactRow(icon, contentHTML) {
+      return '<tr>\n'
+           + '          <td style="padding:0 0 4px 0; font-family:Arial,Helvetica,sans-serif; font-size:12px; color:' + C.body + '; white-space:nowrap;">\n'
+           + '            <span style="display:inline-block; width:18px; font-size:12px;">' + icon + '</span>'
+           + contentHTML + '\n'
+           + '          </td>\n'
+           + '        </tr>\n';
+    }
+
+    // ── BUILD FULL SIGNATURE HTML (TABLE, ALL INLINE CSS, OUTLOOK-SAFE) ───────
+    function buildSig(d) {
+      var nombre = (d.nombre && d.nombre.length) ? d.nombre : 'Nombre Apellido';
+      var cargo  = (d.cargo  && d.cargo.length)  ? d.cargo  : 'CARGO \u2014 ECOMAG S.A.S';
+      var email  = d.email;
+      var web    = d.web;
+      var tel    = d.tel;
+      var cel    = d.cel;
+
+      // Build contact rows
+      var rows = '';
+
+      if (email) {
+        rows += contactRow(
+          '\u2709',
+          '<a href="mailto:' + esc(email) + '" style="color:' + C.green + '; text-decoration:none; font-family:Arial,Helvetica,sans-serif; font-size:12px;">' + esc(email) + '</a>'
+        );
+      }
+
+      if (web) {
+        var href = /^https?:\/\//.test(web) ? web : 'https://' + web;
+        var disp = web.replace(/^https?:\/\//, '');
+        rows += contactRow(
+          '\uD83C\uDF10',
+          '<a href="' + esc(href) + '" target="_blank" style="color:' + C.green + '; text-decoration:none; font-family:Arial,Helvetica,sans-serif; font-size:12px;">' + esc(disp) + '</a>'
+        );
+      }
+
+      if (tel) {
+        rows += contactRow(
+          '\u260E',
+          '<span style="color:' + C.body + '; font-family:Arial,Helvetica,sans-serif; font-size:12px;">' + esc(tel) + '</span>'
+        );
+      }
+
+      if (cel) {
+        var waHref = 'https://wa.me/' + cel.replace(/\D/g, '');
+        rows += contactRow(
+          '\uD83D\uDCF1',
+          '<a href="' + esc(waHref) + '" target="_blank" style="color:' + C.green + '; text-decoration:none; font-family:Arial,Helvetica,sans-serif; font-size:12px;">' + esc(cel) + '</a>'
+        );
+      }
+
+      // Fallback row if no contact data
+      if (!rows) {
+        rows += contactRow(
+          '\uD83C\uDF10',
+          '<a href="https://www.ecomagsas.com" target="_blank" style="color:' + C.green + '; text-decoration:none; font-family:Arial,Helvetica,sans-serif; font-size:12px;">www.ecomagsas.com</a>'
+        );
+      }
+
+      return (
+'<table cellpadding="0" cellspacing="0" border="0" width="480" style="border-collapse:collapse; max-width:480px;">\n'
++ '\n'
++ '  <!-- Accent bar: Outlook MSO fallback + modern gradient -->\n'
++ '  <tr>\n'
++ '    <td colspan="3" height="3" style="padding:0; font-size:0; line-height:0;">\n'
++ '      <!--[if mso]>\n'
++ '      <table width="100%" border="0" cellpadding="0" cellspacing="0"><tr>\n'
++ '        <td width="50%" height="3" bgcolor="' + C.green + '" style="font-size:0; line-height:0;">&nbsp;</td>\n'
++ '        <td width="50%" height="3" bgcolor="' + C.blue  + '" style="font-size:0; line-height:0;">&nbsp;</td>\n'
++ '      </tr></table>\n'
++ '      <![endif]-->\n'
++ '      <!--[if !mso]><!-->\n'
++ '      <div style="background:linear-gradient(90deg,' + C.green + ' 0%,' + C.greenM + ' 45%,' + C.blue + ' 100%); height:3px; width:100%; display:block;">&nbsp;</div>\n'
++ '      <!--<![endif]-->\n'
++ '    </td>\n'
++ '  </tr>\n'
++ '\n'
++ '  <!-- Main body row -->\n'
++ '  <tr>\n'
++ '\n'
++ '    <!-- Logo column -->\n'
++ '    <td valign="middle" style="padding:14px 16px 14px 0; width:120px;">\n'
++ '      <a href="https://www.ecomagsas.com" target="_blank"\n'
++ '         style="display:block; line-height:0; text-decoration:none;">\n'
++ '        <img\n'
++ '          src="' + LOGO_DATA_URI + '"\n'
++ '          alt="ECOMAG S.A.S \u2014 Ingenier\xEDa Civil y Gesti\xF3n Ambiental"\n'
++ '          width="120" height="auto"\n'
++ '          style="display:block; width:120px; height:auto; border:0; image-rendering:-webkit-optimize-contrast;">\n'
++ '      </a>\n'
++ '    </td>\n'
++ '\n'
++ '    <!-- Vertical separator -->\n'
++ '    <td valign="middle" style="padding:14px 18px; width:1px;">\n'
++ '      <table cellpadding="0" cellspacing="0" border="0">\n'
++ '        <tr>\n'
++ '          <td width="1" height="70"\n'
++ '              style="width:1px; height:70px; background:' + C.green + '; opacity:0.25;">\n'
++ '            &nbsp;\n'
++ '          </td>\n'
++ '        </tr>\n'
++ '      </table>\n'
++ '    </td>\n'
++ '\n'
++ '    <!-- Contact info column -->\n'
++ '    <td valign="middle" style="padding:14px 0;">\n'
++ '      <table cellpadding="0" cellspacing="0" border="0">\n'
++ '\n'
++ '        <!-- Full name -->\n'
++ '        <tr>\n'
++ '          <td style="padding:0 0 3px 0; font-family:Arial,Helvetica,sans-serif; font-size:16px; font-weight:bold; color:' + C.dark + '; white-space:nowrap;">\n'
++ '            ' + esc(nombre) + '\n'
++ '          </td>\n'
++ '        </tr>\n'
++ '\n'
++ '        <!-- Role / cargo -->\n'
++ '        <tr>\n'
++ '          <td style="padding:0 0 10px 0; font-family:Arial,Helvetica,sans-serif; font-size:10px; font-weight:700; color:' + C.gray + '; text-transform:uppercase; letter-spacing:0.08em; white-space:nowrap;">\n'
++ '            ' + esc(cargo) + '\n'
++ '          </td>\n'
++ '        </tr>\n'
++ '\n'
++ '        <!-- Contact data rows -->\n'
++ rows
++ '\n'
++ '      </table>\n'
++ '    </td>\n'
++ '\n'
++ '  </tr>\n'
++ '\n'
++ '  <!-- Bottom padding -->\n'
++ '  <tr>\n'
++ '    <td colspan="3" height="6" style="font-size:0; line-height:0;">&nbsp;</td>\n'
++ '  </tr>\n'
++ '\n'
++ '</table>'
+      );
+    }
+
+    // ── READ FORM VALUES ───────────────────────────────────────────────────────
+    function getVals() {
+      return {
+        nombre: document.getElementById('f-nombre').value.trim(),
+        cargo:  document.getElementById('f-cargo').value.trim(),
+        email:  document.getElementById('f-email').value.trim(),
+        web:    document.getElementById('f-web').value.trim(),
+        tel:    document.getElementById('f-tel').value.trim(),
+        cel:    document.getElementById('f-cel').value.trim(),
+      };
+    }
+
+    // ── LIVE PREVIEW ──────────────────────────────────────────────────────────
+    function updatePreview() {
+      var d = getVals();
+
+      // Update simulated "From" field
+      var name  = d.nombre || 'Nombre Apellido';
+      var email = d.email  || 'contacto@ecomagsas.com';
+      document.getElementById('from-field').textContent = name + ' <' + email + '>';
+
+      // Render signature
+      var html    = buildSig(d);
+      var preview = document.getElementById('sig-preview');
+      preview.innerHTML = html;
+
+      // Update code panel if open
+      if (codeOpen) {
+        document.getElementById('html-out').textContent = html;
+      }
+    }
+
+    // ── COPY: RICH HTML (text/html MIME, for paste into email clients) ────────
+    async function copiarRich() {
+      var html = buildSig(getVals());
+      var ok   = false;
+
+      // Modern Clipboard API (Chrome 86+, Edge 86+)
+      if (window.ClipboardItem) {
+        try {
+          var blob = new Blob([html], { type: 'text/html' });
+          await navigator.clipboard.write([new ClipboardItem({ 'text/html': blob })]);
+          ok = true;
+        } catch (e) { /* fall through to execCommand */ }
+      }
+
+      // Fallback: execCommand (Firefox, older Outlook WebApp)
+      if (!ok) {
+        try {
+          var tmp = document.createElement('div');
+          tmp.innerHTML = html;
+          tmp.style.cssText = 'position:fixed; top:-9999px; left:-9999px; opacity:0.01;';
+          document.body.appendChild(tmp);
+          var sel   = window.getSelection();
+          var range = document.createRange();
+          range.selectNodeContents(tmp);
+          sel.removeAllRanges();
+          sel.addRange(range);
+          ok = document.execCommand('copy');
+          sel.removeAllRanges();
+          document.body.removeChild(tmp);
+        } catch (e2) { ok = false; }
+      }
+
+      if (ok) {
+        showToast('Firma copiada \u2014 p\xE9gala en Outlook o Gmail', 'ok');
+        pulseBtn('btn-rich');
+      } else {
+        showToast('No se pudo copiar. Usa \u201CCopiar como HTML\u201D.', 'err');
+      }
+    }
+
+    // ── COPY: RAW HTML CODE (plain text) ──────────────────────────────────────
+    async function copiarHTML() {
+      var html = buildSig(getVals());
+      var ok   = false;
+
+      try {
+        await navigator.clipboard.writeText(html);
+        ok = true;
+      } catch (e) { ok = false; }
+
+      if (ok) {
+        showToast('C\xF3digo HTML copiado al portapapeles', 'ok');
+        pulseBtn('btn-html');
+      } else {
+        showToast('No se pudo copiar autom\xE1ticamente.', 'err');
+      }
+
+      // Always open and refresh code panel
+      if (!codeOpen) openCode();
+      document.getElementById('html-out').textContent = html;
+    }
+
+    // ── UI STATE: TOGGLES ─────────────────────────────────────────────────────
+    var codeOpen  = false;
+    var instrOpen = false;
+
+    function openCode() {
+      if (!codeOpen) toggleCode();
+    }
+
+    function toggleCode() {
+      codeOpen = !codeOpen;
+      var body  = document.getElementById('code-body');
+      var chev  = document.getElementById('code-chevron');
+      var btn   = chev.closest('button');
+      if (codeOpen) {
+        body.classList.remove('hidden');
+        chev.style.transform = 'rotate(180deg)';
+        btn && btn.setAttribute('aria-expanded', 'true');
+        document.getElementById('html-out').textContent = buildSig(getVals());
+      } else {
+        body.classList.add('hidden');
+        chev.style.transform = '';
+        btn && btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    function toggleInstr() {
+      instrOpen = !instrOpen;
+      var body = document.getElementById('instr-body');
+      var chev = document.getElementById('instr-chevron');
+      var btn  = chev.closest('button');
+      if (instrOpen) {
+        body.classList.remove('hidden');
+        chev.style.transform = 'rotate(180deg)';
+        btn && btn.setAttribute('aria-expanded', 'true');
+      } else {
+        body.classList.add('hidden');
+        chev.style.transform = '';
+        btn && btn.setAttribute('aria-expanded', 'false');
+      }
+    }
+
+    // ── TOAST NOTIFICATION ─────────────────────────────────────────────────────
+    var toastTimer = null;
+
+    function showToast(msg, type) {
+      var toast = document.getElementById('toast');
+      var inner = toast.firstElementChild;
+      var icon  = document.getElementById('toast-icon');
+
+      document.getElementById('toast-msg').textContent = msg;
+      inner.style.background = (type === 'err') ? '#b71c1c' : C.green;
+
+      icon.innerHTML = (type === 'err')
+        ? '<circle cx="8" cy="8" r="6" stroke="white" stroke-width="1.5" fill="none"/><path d="M8 5v3M8 10v.5" stroke="white" stroke-width="1.8" stroke-linecap="round"/>'
+        : '<path d="M3 8l3.5 3.5L13 4" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>';
+
+      // Reset animation
+      toast.classList.remove('toast-in', 'toast-out');
+      toast.style.opacity = '1';
+      void toast.offsetWidth; // force reflow
+      toast.classList.add('toast-in');
+
+      if (toastTimer) clearTimeout(toastTimer);
+      toastTimer = setTimeout(function() {
+        toast.classList.remove('toast-in');
+        toast.classList.add('toast-out');
+        setTimeout(function() {
+          toast.style.opacity = '0';
+          toast.classList.remove('toast-out');
+        }, 240);
+      }, 2800);
+    }
+
+    // ── BUTTON PULSE FEEDBACK ─────────────────────────────────────────────────
+    function pulseBtn(id) {
+      var btn = document.getElementById(id);
+      if (!btn) return;
+      var origBg    = btn.style.background;
+      var origColor = btn.style.color;
+      var origBdr   = btn.style.borderColor;
+      btn.style.background   = C.greenM;
+      btn.style.color        = 'white';
+      btn.style.borderColor  = C.greenM;
+      setTimeout(function() {
+        btn.style.background  = origBg;
+        btn.style.color       = origColor;
+        btn.style.borderColor = origBdr;
+      }, 550);
+    }
+
+    // ── INIT ──────────────────────────────────────────────────────────────────
+    document.addEventListener('DOMContentLoaded', function() {
+      updatePreview();
+    });
+  </script>
+
+</body>
+</html>
