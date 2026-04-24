@@ -2,3 +2,19 @@
 .env.*
 node_modules/
 nul
+
+# YaDev CMS — repos clonados que viven en yadevOs/*
+# Se manejan como proyectos git independientes; el monorepo solo rastrea
+# el blueprint y documentación en yadev-cms/ (fuera de estos subdirs).
+yadev-cms/api/
+yadev-cms/studio/
+yadev-cms/infra/
+
+# Build outputs locales
+yadev-cms/**/dist/
+yadev-cms/**/build/
+yadev-cms/**/.svelte-kit/
+yadev-cms/**/vendor/
+
+# Backups locales (Fase 0)
+yadev-cms/**/backups/
