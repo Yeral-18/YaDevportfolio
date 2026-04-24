@@ -16,10 +16,10 @@
 
 ## Contexto
 
-Yeral confirmó:
+El usuario confirmó:
 
 - **Q-SEC-1** (datos sensibles) — Ningún cliente actual maneja datos de salud / financieros / niños. Habeas Data Ley 1581 CO aplica en modo estándar (datos corporativos: emails, teléfonos, razón social), no en modo agravado.
-- **Q-SEC-2** (BitLocker) — La laptop tiene BitLocker disponible pero sin activar por ahora. Los dumps locales plain text quedan como riesgo aceptado hasta que se active FDE.
+- **Q-SEC-2** (BitLocker) — La laptop tiene BitLocker disponible pero sin activar por ahora. Los dumps locales plain text quedan como riesgo aceptado hasta que el usuario active FDE **manualmente**. **Claude NO debe activar BitLocker automáticamente** — requiere guardar la clave de recuperación en un medio externo (USB dedicado, password manager, impreso en físico) antes de cifrar, y esa gestión de claves es responsabilidad exclusiva del usuario. El sistema solo debe recordarle al llegar al trigger documentado, no ejecutar.
 - **Q-SEC-3** (Sanctum mode) — Pidió recomendación.
 
 ---
@@ -157,5 +157,5 @@ Elegimos **pragmatismo sobre idealismo**:
 - CSP + ESLint rules + zero `innerHTML` bajan el riesgo residual a aceptable para Fase 1.
 - En Fase 2, cuando existan datos reales de 3+ tenants y haya presión regulatoria real, migrar a cookies es un refactor aislado de 2-3 días.
 
-**Owner de la migración Fase 2:** Yeral + agente code-reviewer.
+**Owner de la migración Fase 2:** el usuario + agente code-reviewer.
 **Trigger de la migración:** primer cliente que manifieste preocupación de compliance, o 3+ tenants activos, lo que ocurra primero.
