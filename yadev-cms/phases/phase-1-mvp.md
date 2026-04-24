@@ -2,7 +2,7 @@
 
 > Duración: **4 semanas** (20 días hábiles).
 > Objetivo: Multiservicios P&J 100% editable desde el panel. Arquitectura multi-tenant establecida aunque haya 1 solo cliente.
-> Criterio de éxito: la clienta (gerencia@multiserviciospj.com) edita el título del hero, sube una foto al servicio "Transporte", presiona Publicar, y en <2min el cambio está live sin que Yeral toque nada.
+> Criterio de éxito: la clienta (gerencia@multiserviciospj.com) edita el título del hero, sube una foto al servicio "Transporte", presiona Publicar, y en <2min el cambio está live sin que Angel toque nada.
 
 ---
 
@@ -36,7 +36,7 @@
 - [ ] `composer require spatie/laravel-permission`.
 - [ ] Publicar y ejecutar migraciones de ambos.
 - [ ] Crear middleware `InitializeTenancyByToken` que lee el `tenant` claim del token y switchea la conexión.
-- [ ] Seed central: 1 super-admin Yeral.
+- [ ] Seed central: 1 super-admin Angel.
 
 ### Día 5: Tests foundation
 - [ ] Test `TenancyTestCase` base con setUp que crea tenant de prueba.
@@ -243,7 +243,7 @@ Flujo UX completo:
 - [ ] Test publish end-to-end → verificar que `multiserviciospj.com` sigue idéntico.
 
 ### Día 20: QA + cutover
-- [ ] QA manual por Yeral: cambiar cada uno de los 9 bloques desde el panel y ver que se refleja.
+- [ ] QA manual por Angel: cambiar cada uno de los 9 bloques desde el panel y ver que se refleja.
 - [ ] Credenciales reales a gerencia@multiserviciospj.com con password temporal.
 - [ ] Sesión de onboarding 30 min por video llamada — enseñar a la clienta el flujo.
 - [ ] Monitoreo de publishes en Horizon por 1 semana antes de declarar "estable".

@@ -1,6 +1,6 @@
 # READY FOR REVIEW — YaDev CMS Blueprint
 
-> Documento final del Blueprint. Pendiente aprobación de Yeral antes de pasar a Fase 1.
+> Documento final del Blueprint. Pendiente aprobación de Angel antes de pasar a Fase 1.
 > Fecha: 2026-04-22.
 
 ---
@@ -18,7 +18,7 @@ Se entregó el Blueprint completo del proyecto **YaDev CMS** — un gestor de co
 
 ## 2. Decisiones clave tomadas durante el blueprint
 
-Ninguna de las decisiones arquitectónicas principales fue cuestionada (respetadas las que Yeral impuso). Estas son las decisiones técnicas nuevas que se tomaron para completar el plan:
+Ninguna de las decisiones arquitectónicas principales fue cuestionada (respetadas las que Angel impuso). Estas son las decisiones técnicas nuevas que se tomaron para completar el plan:
 
 | # | Decisión | Justificación |
 |---|----------|---------------|
@@ -36,7 +36,7 @@ Ninguna de las decisiones arquitectónicas principales fue cuestionada (respetad
 
 ---
 
-## 3. Preguntas abiertas para Yeral (DEBES responder antes de Fase 1)
+## 3. Preguntas abiertas para Angel (DEBES responder antes de Fase 1)
 
 ### 3.1. Dominio del CMS
 **Pregunta:** ¿El subdominio del panel será `admin.yadev.co`, `panel.yadev.co`, `cms.yadev.co`, o `app.yadev.co`?
@@ -93,9 +93,9 @@ Ninguna de las decisiones arquitectónicas principales fue cuestionada (respetad
 
 ## 4. Estimación final en horas
 
-Asumiendo **~30h/semana de Yeral + Claude Code como pair programmer**:
+Asumiendo **~30h/semana de Angel + Claude Code como pair programmer**:
 
-| Fase | Semanas | Horas Yeral | Horas Claude | Cost AI estimado |
+| Fase | Semanas | Horas Angel | Horas Claude | Cost AI estimado |
 |------|---------|-------------|--------------|------------------|
 | Fase 0 — Setup VPS | 1 | 20 | ~5 | $2 |
 | Fase 1 — MVP Multiservicios | 4 | 120 | ~40 | $30 |
@@ -103,7 +103,7 @@ Asumiendo **~30h/semana de Yeral + Claude Code como pair programmer**:
 | Fase 3 — IA + PORON/COICEM | 4 | 120 | ~30 | $25 |
 | **Total** | **15 sem** | **440h** | **~135h** | **~$110** |
 
-Si Yeral trabaja **full-time** (40h/sem), reduce a ~11 semanas calendario.
+Si Angel trabaja **full-time** (40h/sem), reduce a ~11 semanas calendario.
 
 ### Costos mensuales recurrentes post-launch
 | Ítem | Costo |
@@ -123,7 +123,7 @@ Con 5 clientes pagando $120 USD/mes promedio = **$600 ingresos − $55 costs = $
 
 ## 5. Recomendación de primer commit de Fase 1
 
-Si Yeral aprueba este Blueprint, el **primer commit de Fase 1** recomendado es:
+Si Angel aprueba este Blueprint, el **primer commit de Fase 1** recomendado es:
 
 ### Commit: `feat: scaffold yadev-cms monorepo with Laravel 11 + stancl/tenancy`
 
@@ -163,7 +163,7 @@ yadev-cms/
 └── README.md                     (summary + quick start)
 ```
 
-**Comando sugerido para Yeral:**
+**Comando sugerido para Angel:**
 ```bash
 cd C:/Users/ASUS/APP/YaDevportfolio/yadev-cms/
 # Pedirle a Claude Code:
@@ -191,7 +191,7 @@ Después de ese commit, los siguientes commits son:
 
 ## 6. Cómo rechazar/modificar este Blueprint
 
-Si Yeral discrepa en algún punto, opciones:
+Si Angel discrepa en algún punto, opciones:
 - **Cambios menores** (ej: nombre subdominio, plan de precios): editar los archivos .md directamente y commitear.
 - **Cambios mayores** (ej: "quiero Filament en vez de SvelteKit"): escribir un decisión-record en `architecture/adr-001-panel-technology.md` y volver a correr este agent con esa restricción.
 - **Rechazar todo**: pedir un blueprint alternativo con arquitectura A (monolito Laravel+Blade).
@@ -233,7 +233,7 @@ yadev-cms/
 ### H1. El sitio Multiservicios es MUY específico en animaciones/cursor
 El `GearCursor.svelte` es un cursor personalizado de engranaje con posición absoluta siguiendo al mouse. Los badges del hero tienen posiciones x%/y% específicas. La dificultad de migrar esto al CMS editable es: **no editable directamente, debe ir como "config del sitio"**, no como bloque.
 
-→ Impacto en plan: confirmar con Yeral que está OK que estas cosas NO se editan desde el panel (quedan "hard-coded en el theme del sitio").
+→ Impacto en plan: confirmar con Angel que está OK que estas cosas NO se editan desde el panel (quedan "hard-coded en el theme del sitio").
 
 ### H2. El `Contact.svelte` tiene reCAPTCHA v3 con test key hardcoded
 ```ts
@@ -243,7 +243,7 @@ const RECAPTCHA_SITE_KEY = '6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI'; // TEST K
 → Impacto: en Fase 1, hay que migrar esto a `settings.recaptcha.site_key` (server-rendered al build-time) para que cada tenant tenga su par de keys.
 
 ### H3. El `index.astro` tiene un "YaDev panel" oculto con links a `/internal/brandbook.html` y `/internal/firma-correo.html`.
-Eso es útil para YaDev pero NO debe replicarse como feature del CMS para los clientes. Sí debe seguir existiendo como link manual que Yeral controla.
+Eso es útil para YaDev pero NO debe replicarse como feature del CMS para los clientes. Sí debe seguir existiendo como link manual que Angel controla.
 
 → Impacto: al refactorizar Astro, preservar ese panel oculto (no borrarlo), pero no exponer su edición en el CMS.
 
@@ -276,7 +276,7 @@ Eso sugiere que el repo puede haberse usado con base path alternativo en staging
 - NO tocamos `proyectos/`, `Modelos/`, `design-system/`, `assets/`.
 
 **Próximo paso:**
-Esperar aprobación de Yeral (responder preguntas sección 3) → arrancar Fase 0.
+Esperar aprobación de Angel (responder preguntas sección 3) → arrancar Fase 0.
 
 ---
 

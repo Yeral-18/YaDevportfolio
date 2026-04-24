@@ -1,6 +1,6 @@
 # READY FOR REVIEW v3 — YaDev CMS Blueprint (local-first pivot)
 
-> Continuación del v2 tras la sesión 2026-04-22 donde Yeral confirmó que arrancar local-first (sin VPS) y que la org GitHub ya existe como `yadevOs/` (no `yadev/`).
+> Continuación del v2 tras la sesión 2026-04-22 donde Angel confirmó que arrancar local-first (sin VPS) y que la org GitHub ya existe como `yadevOs/` (no `yadev/`).
 > Documenta la reescritura estructural que convierte Fase 0 en "setup del entorno local" en vez de "provisioning de VPS".
 > Fecha: 2026-04-24.
 
@@ -8,7 +8,7 @@
 
 ## 1. Qué cambió vs v2
 
-v2 dejó 5 preguntas abiertas (Q1-Q5) que bloqueaban el arranque. En esta sesión Yeral respondió las 5, y las respuestas implicaron un **pivot estructural**: en lugar de contratar VPS + dominio + registrar org en Fase 0, arrancamos local-first. Esto significó:
+v2 dejó 5 preguntas abiertas (Q1-Q5) que bloqueaban el arranque. En esta sesión Angel respondió las 5, y las respuestas implicaron un **pivot estructural**: en lugar de contratar VPS + dominio + registrar org en Fase 0, arrancamos local-first. Esto significó:
 
 - Reescribir completamente `phases/phase-0-setup.md` (~520 líneas → ~330 líneas, estructura distinta).
 - Crear `phases/phase-vps-migration.md` como nueva fase intermedia opcional.
@@ -114,16 +114,16 @@ yadev-cms/
 
 ## 4. Asunciones hechas durante la reescritura
 
-Yeral dio instrucciones claras en las 5 Q. Las siguientes asunciones se tomaron para rellenar detalles no explícitos:
+Angel dio instrucciones claras en las 5 Q. Las siguientes asunciones se tomaron para rellenar detalles no explícitos:
 
 ### A1. Puertos en Fase 0-1
-Asumí **Opción A** (`api:8000`, `studio:5173` en puertos distintos) como default para Fase 0-1 porque elimina el container `nginx-proxy` y acelera la iteración. Opción B (nginx con vhosts locales para reproducir CORS/SSL real) queda documentada como opcional para Fase 2+ si Yeral quiere probar el comportamiento de producción antes de migrar al VPS. **Revisar:** ¿ok con Opción A para Fase 0-1?
+Asumí **Opción A** (`api:8000`, `studio:5173` en puertos distintos) como default para Fase 0-1 porque elimina el container `nginx-proxy` y acelera la iteración. Opción B (nginx con vhosts locales para reproducir CORS/SSL real) queda documentada como opcional para Fase 2+ si Angel quiere probar el comportamiento de producción antes de migrar al VPS. **Revisar:** ¿ok con Opción A para Fase 0-1?
 
 ### A2. Retención de backups locales = 7 días
-Yeral dijo "retención 30 días rolling" en el contexto de producción con B2. Para local asumí **7 días** porque (a) el disco del dev es limitado, (b) los datos de dev son menos críticos, (c) el backup real de la intención de publicar ya está en el repo GitHub del sitio. **Revisar:** ¿subir local a 14 días? ¿30 días?
+Angel dijo "retención 30 días rolling" en el contexto de producción con B2. Para local asumí **7 días** porque (a) el disco del dev es limitado, (b) los datos de dev son menos críticos, (c) el backup real de la intención de publicar ya está en el repo GitHub del sitio. **Revisar:** ¿subir local a 14 días? ¿30 días?
 
 ### A3. Variables de entorno no sensibles en `.env.example`
-Usé passwords literales `yadev_dev_secret`, `yadev_root_dev_secret` en `.env.example` (no en `.env` real). Son strings triviales, pero cualquiera con acceso a leer el archivo sabe cómo entrar al MySQL local. En local-first esto es aceptable (127.0.0.1 bound, no internet). **Revisar:** si Yeral prefiere placeholders `CHANGE_ME_*` en el example para forzar edición consciente al copiar a `.env`, reemplazo.
+Usé passwords literales `yadev_dev_secret`, `yadev_root_dev_secret` en `.env.example` (no en `.env` real). Son strings triviales, pero cualquiera con acceso a leer el archivo sabe cómo entrar al MySQL local. En local-first esto es aceptable (127.0.0.1 bound, no internet). **Revisar:** si Angel prefiere placeholders `CHANGE_ME_*` en el example para forzar edición consciente al copiar a `.env`, reemplazo.
 
 ### A4. MinIO se crea bucket `yadev-media` automáticamente
 Agregué el servicio `minio-init` (one-shot container `minio/mc`) que bootstrap-ea el bucket `yadev-media` en cada arranque. Alternativa: dejarlo manual y documentar en README el comando. Elegí automático porque reduce fricción en onboarding. **Revisar:** ¿queda así?
@@ -132,13 +132,13 @@ Agregué el servicio `minio-init` (one-shot container `minio/mc`) que bootstrap-
 `3306`, `6379`, `1025`, `8025`, `9000`, `9001` se bindean al host para que Laravel/SvelteKit corriendo nativos puedan conectarse. En producción se cambian a `127.0.0.1:PORT` para que no sean accesibles desde internet — esto va en `docker-compose.prod.yml` (override documentado pero no escrito en esta ronda, llega en Fase VPS-migration).
 
 ### A6. No scaffoldee Laravel ni SvelteKit
-Yeral pidió explícitamente "NO instalar Laravel ni SvelteKit todavía". Los READMEs documentan los pasos de scaffold pero no los ejecuté. Los repos siguen con solo `.git/` + `README.md`.
+Angel pidió explícitamente "NO instalar Laravel ni SvelteKit todavía". Los READMEs documentan los pasos de scaffold pero no los ejecuté. Los repos siguen con solo `.git/` + `README.md`.
 
 ### A7. No toqué `competitive-analysis-damos.md` ni otros docs estables
 Solo toqué archivos que cambian por el pivot local-first o por el rename `yadev/` → `yadevOs/`. `competitive-analysis-damos.md`, `risks-and-tradeoffs.md`, `multiservicios-migration-plan.md`, `database/*.sql`, `architecture/api-contract.md` no se tocaron. Pueden necesitar revisión puntual de referencias futuras pero no bloquean Fase 0.
 
 ### A8. Task Scheduler en Windows (vs cron nativo)
-Para el backup local diario, recomendé Windows Task Scheduler porque la laptop de Yeral es Windows 11. Si corre WSL2 con cron nativo, el backup-local.sh puede instalarse como `crontab -e` dentro de WSL. Documenté ambos enfoques en el README pero el ejemplo principal es Task Scheduler.
+Para el backup local diario, recomendé Windows Task Scheduler porque la laptop de Angel es Windows 11. Si corre WSL2 con cron nativo, el backup-local.sh puede instalarse como `crontab -e` dentro de WSL. Documenté ambos enfoques en el README pero el ejemplo principal es Task Scheduler.
 
 ---
 
@@ -164,9 +164,9 @@ Cuando se cree `docker-compose.prod.yml` (Fase VPS-migration), hay que bindear p
 
 ---
 
-## 6. "Ready to start Fase 1" checklist — qué debe confirmar Yeral
+## 6. "Ready to start Fase 1" checklist — qué debe confirmar Angel
 
-Antes de mover un commit real a Fase 1 (scaffold Laravel + SvelteKit), Yeral debe validar:
+Antes de mover un commit real a Fase 1 (scaffold Laravel + SvelteKit), Angel debe validar:
 
 ### Entorno
 - [ ] **Docker Desktop instalado** con backend WSL2 activo. `docker --version` responde.
@@ -178,7 +178,7 @@ Antes de mover un commit real a Fase 1 (scaffold Laravel + SvelteKit), Yeral deb
 
 ### Repos
 - [ ] `git remote -v` en `yadev-cms/api/`, `yadev-cms/studio/`, `yadev-cms/infra/` apunta a `github.com:yadevOs/yadev-cms-{api,studio,infra}.git`.
-- [ ] Yeral puede pushear a cada repo (confirmar con un commit vacío o branch de prueba).
+- [ ] Angel puede pushear a cada repo (confirmar con un commit vacío o branch de prueba).
 
 ### Stack local funcional
 - [ ] Hosts con las 6 entries de `.yadev.local` (ver `infra/scripts/hosts-setup.md`).
@@ -188,9 +188,9 @@ Antes de mover un commit real a Fase 1 (scaffold Laravel + SvelteKit), Yeral deb
 - [ ] MinIO console abre en `http://localhost:9001` con bucket `yadev-media` ya creado.
 
 ### Revisión de documentos
-- [ ] Yeral leyó y aprobó `phases/phase-0-setup.md` (reescrito).
-- [ ] Yeral leyó y aprobó `phases/phase-vps-migration.md` (nuevo).
-- [ ] Yeral confirmó las asunciones A1-A8 de la sección 4 arriba (o pidió cambios).
+- [ ] Angel leyó y aprobó `phases/phase-0-setup.md` (reescrito).
+- [ ] Angel leyó y aprobó `phases/phase-vps-migration.md` (nuevo).
+- [ ] Angel confirmó las asunciones A1-A8 de la sección 4 arriba (o pidió cambios).
 
 ### Decisiones pendientes para Fase 1 (no bloquean Fase 0)
 - [ ] Elegir entre Pest v3 o PHPUnit nativo para tests (recomendación: Pest).
@@ -201,11 +201,11 @@ Antes de mover un commit real a Fase 1 (scaffold Laravel + SvelteKit), Yeral deb
 
 ## 7. Siguiente paso concreto
 
-1. **Yeral revisa este `READY-FOR-REVIEW-v3.md`** completo.
+1. **Angel revisa este `READY-FOR-REVIEW-v3.md`** completo.
 2. Confirma asunciones A1-A8 o pide cambios.
 3. Completa el checklist de sección 6 (install Docker, verificar Node/PHP/pnpm, agregar hosts entries).
 4. Ejecuta `phases/phase-0-setup.md` día 3 — `docker compose up -d` y verifica los 4 servicios healthy.
-5. Si todo OK: Yeral hace los 3 commits iniciales (uno por repo) que yo dejé listos sin committear:
+5. Si todo OK: Angel hace los 3 commits iniciales (uno por repo) que yo dejé listos sin committear:
    - `yadevOs/yadev-cms-infra`: agrega `docker-compose.yml`, `.env.example`, `scripts/hosts-setup.md`, `README.md` nuevo.
    - `yadevOs/yadev-cms-api`: agrega `README.md` nuevo.
    - `yadevOs/yadev-cms-studio`: agrega `README.md` nuevo.
@@ -217,6 +217,6 @@ Antes de mover un commit real a Fase 1 (scaffold Laravel + SvelteKit), Yeral deb
 
 Blueprint local-first consolidado. 13 archivos tocados (7 nuevos + 6 editados). Ningún código de aplicación, ningún commit en los 3 repos, ningún cambio fuera de `yadev-cms/`.
 
-**Yeral: revisá las asunciones A1-A8 y el checklist de sección 6. Si todo OK, arrancamos Fase 0 día 3 (levantar el stack).**
+**Angel: revisá las asunciones A1-A8 y el checklist de sección 6. Si todo OK, arrancamos Fase 0 día 3 (levantar el stack).**
 
 _Actualización v3 entregada por project-orchestrator agent. Fin del documento._

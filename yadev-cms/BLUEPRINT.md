@@ -10,7 +10,7 @@
 **Problema actual:** Los sitios de YaDev (ECOMAG, Multiservicios P&J, etc.) tienen todo el contenido hardcodeado en componentes `.astro`. Cuando un cliente quiere cambiar el texto del hero, añadir un servicio, subir una foto nueva o editar horarios, el flujo es:
 
 ```
-Cliente → WhatsApp a Yeral → Yeral edita código → commit → rebuild → rsync a Hostinger → cliente revisa
+Cliente → WhatsApp a Angel → Angel edita código → commit → rebuild → rsync a Hostinger → cliente revisa
 ```
 
 Tiempo promedio por cambio trivial: 30-90 min. No escala a 10+ clientes.
@@ -20,7 +20,7 @@ Tiempo promedio por cambio trivial: 30-90 min. No escala a 10+ clientes.
 **Valor para YaDev:**
 - Cerrar ciclo de ventas con "panel de administración incluido" como diferencial frente a competencia que entrega solo HTML estático.
 - Cobrar **mantenimiento mensual** recurrente (pricing TBD post-MVP, se definirá con data real de costos de operación).
-- Escalar a 15-20 clientes sin saturar a Yeral.
+- Escalar a 15-20 clientes sin saturar a Angel.
 
 **Valor para el cliente:**
 - Autonomía total sobre su contenido sin conocimiento técnico.
@@ -32,7 +32,7 @@ Tiempo promedio por cambio trivial: 30-90 min. No escala a 10+ clientes.
 
 ## 2. Arquitectura (decidida: Opción B)
 
-> **Callout — Fases local-first vs producción:** Fase 0-2 del proyecto se desarrolla 100% en la máquina local de Yeral usando Docker Compose + subdominios fake `.yadev.local` vía `/etc/hosts`. El VPS Hostinger KVM2 + dominio `yadev.co` real se contratan cuando el MVP funcione end-to-end (ver `phases/phase-vps-migration.md`). Toda la arquitectura descrita abajo aplica igual en ambos entornos — lo único que cambia es dónde corren los containers y qué DNS resuelve los subdominios.
+> **Callout — Fases local-first vs producción:** Fase 0-2 del proyecto se desarrolla 100% en la máquina local de Angel usando Docker Compose + subdominios fake `.yadev.local` vía `/etc/hosts`. El VPS Hostinger KVM2 + dominio `yadev.co` real se contratan cuando el MVP funcione end-to-end (ver `phases/phase-vps-migration.md`). Toda la arquitectura descrita abajo aplica igual en ambos entornos — lo único que cambia es dónde corren los containers y qué DNS resuelve los subdominios.
 
 
 ```
@@ -92,7 +92,7 @@ Tiempo promedio por cambio trivial: 30-90 min. No escala a 10+ clientes.
 
 | Subdominio | Rol | Quién entra |
 |------------|-----|-------------|
-| `studio.yadev.co` | Panel admin custom (SvelteKit + shadcn-svelte, look YaDev dark glassmorphism) | Yeral (super-admin) + clientes (admin/editor de su propio tenant) |
+| `studio.yadev.co` | Panel admin custom (SvelteKit + shadcn-svelte, look YaDev dark glassmorphism) | Angel (super-admin) + clientes (admin/editor de su propio tenant) |
 | `api.yadev.co` | Laravel 11 headless REST | Consumido por `studio.yadev.co` y por los builds Astro de cada cliente |
 
 **Dominios de cliente (cada empresa conserva el suyo):**
@@ -108,7 +108,7 @@ Cada sitio cliente vive en **Hostinger shared** (uno por cliente, un public_html
 3. Cuando el cliente guarda cambios en `studio.yadev.co`, el API encola un job que dispara el rebuild + rsync al Hostinger shared correspondiente.
 
 **Resolución de tenant:**
-- En `studio.yadev.co` — se resuelve por el tenant activo del usuario logueado (Sanctum token contiene `tenant_id`). Yeral como super-admin puede impersonar cualquier tenant.
+- En `studio.yadev.co` — se resuelve por el tenant activo del usuario logueado (Sanctum token contiene `tenant_id`). Angel como super-admin puede impersonar cualquier tenant.
 - En `api.yadev.co` — se resuelve por:
   1. `Authorization: Bearer {token}` (token embebe tenant) — caso panel.
   2. `tenant_id` en la URL path (`api.yadev.co/v1/tenants/{tenant_id}/...`) — caso build/runner.
@@ -147,7 +147,7 @@ Adicionalmente, los repos de sitios cliente (`yadevOs/site-multiservicios`, `yad
 | RBAC | spatie/laravel-permission | Roles + permisos granulares |
 | Mediateca | spatie/medialibrary + Intervention | Conversiones automáticas (thumb, webp, og) |
 | Queue | Redis + Laravel Horizon | Dashboard visual, reintentos, monitoreo |
-| Panel Admin | SvelteKit + Tailwind + shadcn-svelte | Stack que Yeral ya domina, misma estética del portfolio |
+| Panel Admin | SvelteKit + Tailwind + shadcn-svelte | Stack que Angel ya domina, misma estética del portfolio |
 | Editor WYSIWYG | TipTap | Extensible, headless, limpio HTML |
 | Frontend cliente | Astro 5.18 + Svelte 5.53 | Ya existe, se refactoriza para consumir API |
 | Build runner | Node + PM2 | Ejecuta `npm run build` + rsync por tenant |
@@ -176,7 +176,7 @@ Adicionalmente, los repos de sitios cliente (`yadevOs/site-multiservicios`, `yad
 - Semana 3: Panel SvelteKit login + dashboard + editor visual bloques + preview.
 - Semana 4: Webhook rebuild + rsync a Hostinger + migración real del contenido actual de Multiservicios + QA.
 
-**Criterio de éxito:** el cliente Multiservicios puede entrar al panel, cambiar el título del hero, subir una foto nueva a un servicio, publicar, y en <2 min el cambio está live en multiserviciospj.com sin que Yeral toque nada.
+**Criterio de éxito:** el cliente Multiservicios puede entrar al panel, cambiar el título del hero, subir una foto nueva a un servicio, publicar, y en <2 min el cambio está live en multiserviciospj.com sin que Angel toque nada.
 
 ### Fase 2 — Paridad Damos + onboarding ECOMAG (6 semanas)
 - Bloques avanzados: Bento, Timeline, FAQ, Stats counter, CTA, Form builder.
@@ -190,7 +190,7 @@ Adicionalmente, los repos de sitios cliente (`yadevOs/site-multiservicios`, `yad
 
 ### Fase VPS-migration — Ir a producción real (2 días, opcional-intermedia)
 
-Ejecutada cuando el MVP (Fases 0-1-2) corre estable en local y Yeral decide publicar. Ver `phases/phase-vps-migration.md`. Resumen:
+Ejecutada cuando el MVP (Fases 0-1-2) corre estable en local y Angel decide publicar. Ver `phases/phase-vps-migration.md`. Resumen:
 
 - Contratar VPS Hostinger KVM 2 (~$8 USD/mes) + dominio `yadev.co` (~$10/año).
 - Provisionar VPS: hardening, Docker Compose prod, Nginx real, Let's Encrypt auto-renew.
@@ -199,7 +199,7 @@ Ejecutada cuando el MVP (Fases 0-1-2) corre estable en local y Yeral decide publ
 - Migrar backups locales → B2 con retención 30 días diario + 12 meses mensual.
 - Activar deploy pipelines en los 3 workflows de GitHub Actions (secrets `SSH_PRIVATE_KEY`, `VPS_HOST`).
 
-No es una fase obligatoria del timeline original — puede ocurrir entre Fase 2 y Fase 3, o incluso después de Fase 3 si Yeral quiere seguir iterando local antes de publicar.
+No es una fase obligatoria del timeline original — puede ocurrir entre Fase 2 y Fase 3, o incluso después de Fase 3 si Angel quiere seguir iterando local antes de publicar.
 
 ### Fase 3 — IA + automatización (4 semanas)
 - "Asistente de contenido": generar/mejorar textos con Claude Haiku 4.5.
@@ -251,8 +251,8 @@ Diferenciadores técnicos clave de YaDev:
 
 ## 7. Dependencias y supuestos
 
-- Yeral tiene acceso root al VPS Hostinger.
-- Dominio `yadev.co` registrado y con DNS bajo control de Yeral (para crear `api.yadev.co` y `studio.yadev.co`).
+- Angel tiene acceso root al VPS Hostinger.
+- Dominio `yadev.co` registrado y con DNS bajo control de Angel (para crear `api.yadev.co` y `studio.yadev.co`).
 - Organización `yadevOs/` creada en GitHub con los 3 repos del CMS (`yadev-cms-api`, `yadev-cms-studio`, `yadev-cms-infra`) + repos por sitio cliente (`yadevOs/site-multiservicios`, `yadevOs/site-ecomag`, etc.).
 - Claude Code disponible para asistir el desarrollo (acelera 3-4x).
 - DNS de los dominios de cliente (`ecomagsas.com`, `multiserviciospj.com`, etc.) sigue apuntando a Hostinger shared — **no** se toca esa configuración.

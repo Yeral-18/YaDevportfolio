@@ -24,7 +24,7 @@ Revisión de los 10 threats de `security-model.md` §1.2:
 - **T6 File upload abuse** — Sin cambios; el nginx location block de `security-model.md` §6.3 NO existe en local (no hay nginx). Laravel sirve media directo via `php artisan serve` → **nueva superficie:** archivos `.php` subidos pueden ejecutarse si Laravel los sirve como alias estático. Control nuevo: rechazar extensiones peligrosas a nivel de Laravel storage disk, no depender de nginx.
 - **T7 Form spam** — Reducido en local (no hay public endpoint accesible desde internet). Control diferible.
 - **T8 Brute force login** — Reducido en local. Rate limit igual debe programarse desde Fase 1 para que el test exista.
-- **T9 MITM** — **No aplicable en local** (localhost no se intercepta). Pero cuidado: si Yeral prueba desde móvil en LAN apuntando a su laptop por IP, el tráfico va plain HTTP — el doc no advierte esto.
+- **T9 MITM** — **No aplicable en local** (localhost no se intercepta). Pero cuidado: si Angel prueba desde móvil en LAN apuntando a su laptop por IP, el tráfico va plain HTTP — el doc no advierte esto.
 - **T10 Backup leak** — Cambió sustancialmente. `security-model.md` §12 dice "dumps cifrados con openssl antes de subir a B2". En local-first, los backups van a `infra/backups/YYYY-MM-DD/dbs.sql.gz` **sin cifrado**. `phase-0-setup.md` día 5 confirma esto. Dado que las DBs tenant contendrán seeds reales de Multiservicios/ECOMAG (emails, teléfonos, nombres de gerentes) y la laptop puede extraviarse/ser comprometida, es un gap real.
 
 ---
@@ -56,7 +56,7 @@ Revisión de los 10 threats de `security-model.md` §1.2:
   **Recomendación:** en Fase 1 semana 2 (día 10 upload endpoint), agregar (a) validación magic-bytes con `finfo`, (b) rename obligatorio a hash content-addressed, (c) storage fuera de `public_path`, (d) rechazo explícito de `.php/.phtml/.phar/.htaccess/.svg-con-script`. SVG especialmente peligroso — `security-model.md` menciona DOMPurify pero DOMPurify es JS. Elegir `enshrined/svg-sanitize` en PHP.
 
 - **[CORS] Regex `^http://[a-z0-9-]+\.yadev\.local(:\d+)?$` muy laxa**
-  `security-model.md` §7 permite cualquier subdominio `.yadev.local`. Un atacante que convenza a Yeral de agregar `evil.yadev.local` al hosts (social engineering) gana acceso CORS.
+  `security-model.md` §7 permite cualquier subdominio `.yadev.local`. Un atacante que convenza a Angel de agregar `evil.yadev.local` al hosts (social engineering) gana acceso CORS.
   **Recomendación:** whitelist explícita de los 6 subdominios del hosts (`studio`, `api`, `multiservicios`, `ecomag`, `poron`, `coisem`) en vez de regex wildcard.
 
 ### MEDIUM
@@ -124,7 +124,7 @@ Revisión de los 10 threats de `security-model.md` §1.2:
 
 ---
 
-## 6. Nuevas preguntas bloqueantes para Yeral
+## 6. Nuevas preguntas bloqueantes para Angel
 
 1. **¿Algún cliente futuro manejará datos de salud, financieros, o niños?** Si sí, Habeas Data Ley 1581 Colombia + posiblemente HIPAA-equivalente cambian: encryption-at-rest obligatorio, DPA firmado, retención limitada. Cambia backups y logs.
 2. **¿La laptop de Fase 0-2 es de uso exclusivo (FDE BitLocker activo) o compartida?** Determina si dumps locales plain son aceptables o si el finding CRITICAL de backups sube a blocker.

@@ -1,7 +1,7 @@
 # Phase VPS-migration — De local-first a producción real
 
 > Fase intermedia opcional entre Fase 2 y el go-live real con clientes.
-> Se ejecuta **solo cuando el MVP funciona end-to-end en local** (docker compose + `.yadev.local` + primer tenant completo) y Yeral contrata el VPS.
+> Se ejecuta **solo cuando el MVP funciona end-to-end en local** (docker compose + `.yadev.local` + primer tenant completo) y Angel contrata el VPS.
 > Duración estimada: **2 días** una vez VPS + dominio adquiridos.
 
 ---
@@ -12,7 +12,7 @@ No tiene fecha fija en el timeline del BLUEPRINT. Se ejecuta cuando se cumplen e
 
 1. **Fase 1 cerrada** — Multiservicios editable end-to-end desde el panel local (`multiservicios.yadev.local` responde, publicación genera dist/ local, rsync diferido).
 2. **Fase 2 al menos al 60%** — bloques avanzados, forms, SEO básico, mediateca estable.
-3. **Yeral confirma** que el producto está listo para poner en vivo frente a Multiservicios (primer cliente beta).
+3. **Angel confirma** que el producto está listo para poner en vivo frente a Multiservicios (primer cliente beta).
 
 Antes de eso: **no migrar**. El costo de mantener local + iterar es cero; el costo de mantener un VPS que se itera es tiempo de ops que se resta de features.
 

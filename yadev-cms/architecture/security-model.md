@@ -9,7 +9,7 @@
 ### Actores
 | Actor | Acceso legítimo | Acceso prohibido |
 |-------|-----------------|------------------|
-| YaDev super-admin (Yeral) | Todos los tenants, impersonar, provisioning | Commitear `.env` a repo público |
+| YaDev super-admin (Angel) | Todos los tenants, impersonar, provisioning | Commitear `.env` a repo público |
 | Admin cliente | Su tenant: pages, blocks, media, forms, publish | Otros tenants, billing, impersonación |
 | Editor cliente | Su tenant: pages, blocks (sin publicar ni borrar) | Users management, settings globales, publish |
 | Usuario anónimo | Formularios públicos (submissions vía API pública con rate limit) | Cualquier otra cosa |
@@ -32,7 +32,7 @@
 ## 2. Roles y permisos (spatie/laravel-permission)
 
 ### Roles
-- `yadev_super_admin` (global, vive en central.users) — todo. Solo Yeral.
+- `yadev_super_admin` (global, vive en central.users) — todo. Solo Angel.
 - `tenant_admin` (por tenant) — todo dentro de SU tenant.
 - `tenant_editor` (por tenant) — editar y guardar borradores, NO publicar ni configurar ni gestionar users.
 - `tenant_viewer` (por tenant) — read-only, útil para que YaDev audite con permiso del cliente.
@@ -323,7 +323,7 @@ Nota: los **sitios públicos en Hostinger shared NO usan CSP** porque Hostinger 
 ## 12. Backups y cifrado
 
 - Dumps MySQL diarios → cifrados con `openssl enc -aes-256-cbc` antes de subir a BackBlaze B2.
-- Key de cifrado guardada en 1Password de Yeral + copia offline.
+- Key de cifrado guardada en 1Password de Angel + copia offline.
 - Test de restore mensual: tomar dump cifrado, descifrar, importar a VPS staging, verificar que API arranca.
 
 ---

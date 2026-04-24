@@ -130,7 +130,7 @@
   5. Feedback loop: entrevistar a los primeros 5 clientes cada mes.
 
 ### R12. Features feature-creep
-- **Síntoma:** Yeral o clientes piden features avanzados (ej: e-commerce) que escapan del core.
+- **Síntoma:** Angel o clientes piden features avanzados (ej: e-commerce) que escapan del core.
 - **Probabilidad:** Alta.
 - **Impacto:** Medio (retrasa roadmap).
 - **Mitigación:**
@@ -149,8 +149,8 @@
   3. Contrato anual con descuento para reducir churn.
   4. Net Promoter Score trimestral, actuar si <30.
 
-### R14. Yeral como único ingeniero = bus factor 1
-- **Síntoma:** Yeral se enferma, viaja, o se cansa. Todo el sistema depende de él.
+### R14. Angel como único ingeniero = bus factor 1
+- **Síntoma:** Angel se enferma, viaja, o se cansa. Todo el sistema depende de él.
 - **Probabilidad:** Media.
 - **Impacto:** Alto.
 - **Mitigación:**

@@ -1,7 +1,7 @@
 # System Diagram — YaDev CMS
 
 > Dos variantes:
-> - **Local-first (Fase 0-2):** todo corre en la máquina de Yeral con Docker Compose + subdominios fake `.yadev.local`. Ver sección "Variante local-first" abajo.
+> - **Local-first (Fase 0-2):** todo corre en la máquina de Angel con Docker Compose + subdominios fake `.yadev.local`. Ver sección "Variante local-first" abajo.
 > - **Producción (post Fase VPS-migration):** VPS Hostinger + dominio real `yadev.co`. Ver sección "Variante producción".
 
 ## Variante local-first (Fase 0-2)
@@ -45,7 +45,7 @@
                         └─────────────────────┘
 ```
 
-Sitios cliente en Hostinger shared siguen vivos, pero en Fase 0-2 **no se tocan** — el build Astro se genera local y no se rsync-ea todavía. El dual-write real llega en Fase 1 semana 4 cuando Yeral decida mover el primer cambio a producción, usando rsync desde la laptop (o delegando el webhook al VPS post Fase VPS-migration).
+Sitios cliente en Hostinger shared siguen vivos, pero en Fase 0-2 **no se tocan** — el build Astro se genera local y no se rsync-ea todavía. El dual-write real llega en Fase 1 semana 4 cuando Angel decida mover el primer cambio a producción, usando rsync desde la laptop (o delegando el webhook al VPS post Fase VPS-migration).
 
 ## Variante producción (post Fase VPS-migration)
 

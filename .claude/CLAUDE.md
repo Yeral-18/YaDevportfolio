@@ -14,8 +14,9 @@ Generar sitios web completos, listos para producción en Hostinger, con calidad 
 ## IDENTIDAD
 
 **Agencia:** YA Dev — Diseño Web & Automatización para Empresas Colombianas
-**Fundador:** Yeral (Developer & Designer)
-**Repositorio:** `Yeral-18/YaDevportfolio`
+**Fundador:** Angel (Developer & Designer) — `angelpelaezca@gmail.com`
+**Lead Developer:** Yeral (sigue como miembro del equipo, aparece en `index.html`)
+**Repositorio:** `Yeral-18/YaDevportfolio` (el username `Yeral-18` en GitHub se mantiene por compat. de URLs)
 **Portfolio:** `index.html` (dark theme, glassmorphism, Space Grotesk)
 **Mercado:** Empresas industriales colombianas (transporte, construcción, ambiental, energía)
 

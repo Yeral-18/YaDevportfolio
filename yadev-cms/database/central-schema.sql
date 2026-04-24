@@ -195,11 +195,11 @@ CREATE TABLE `failed_jobs` (
 ) ENGINE=InnoDB;
 
 -- ------------------------------------------------------------
--- Seed inicial: super-admin Yeral
+-- Seed inicial: super-admin Angel
 -- Password será setteado con artisan después, aquí solo shape.
 -- ------------------------------------------------------------
 INSERT INTO `users` (`name`, `email`, `role`, `password`, `created_at`, `updated_at`) VALUES
-('Yeral', 'yadevsistem@gmail.com', 'yadev_super_admin', '$2y$12$PLACEHOLDER_BCRYPT', NOW(), NOW());
+('Angel', 'yadevsistem@gmail.com', 'yadev_super_admin', '$2y$12$PLACEHOLDER_BCRYPT', NOW(), NOW());
 
 -- ============================================================
 -- END central-schema.sql

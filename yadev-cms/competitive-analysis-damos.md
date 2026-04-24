@@ -13,7 +13,7 @@
 
 Damos.co es el competidor directo más consolidado en Colombia para el segmento de PyMEs industriales/servicios que YaDev está atacando. Llevan 15+ años operando y acumulan cientos de clientes activos (Odir, Mater Clinic, clientes del sector salud, ingeniería, logística y comercio). Su propuesta es un CMS monolítico Laravel con WYSIWYG, mediateca, editor fotográfico, analytics server-side, webmail embebido, IA generativa y optimización SEO + GEO, todo bajo la misma plataforma. Cobran setup + mensualidad y son el "default choice" para empresas colombianas que quieren panel administrable sin pensar.
 
-YaDev CMS debe tratarlos como referencia de features pero **no como arquitectura a copiar**. La oportunidad estratégica es ofrecer un producto con las mismas capacidades de edición pero con arquitectura moderna (sitios SSG estáticos servidos desde CDN, panel headless en subdominio independiente, DB aislada por tenant, stack Svelte 5 con UX superior). El posicionamiento no es "más features" — es "mismas features, mejor arquitectura, menor riesgo operativo para el cliente, DX superior para Yeral". Este documento cierra los gaps funcionales y documenta la ventaja técnica estructural.
+YaDev CMS debe tratarlos como referencia de features pero **no como arquitectura a copiar**. La oportunidad estratégica es ofrecer un producto con las mismas capacidades de edición pero con arquitectura moderna (sitios SSG estáticos servidos desde CDN, panel headless en subdominio independiente, DB aislada por tenant, stack Svelte 5 con UX superior). El posicionamiento no es "más features" — es "mismas features, mejor arquitectura, menor riesgo operativo para el cliente, DX superior para Angel". Este documento cierra los gaps funcionales y documenta la ventaja técnica estructural.
 
 ---
 
@@ -310,4 +310,4 @@ Este análisis debe revisarse:
 
 ---
 
-_Documento v1 entregado en ronda v3 del blueprint. Autor: project-orchestrator agent, revisado por Yeral._
+_Documento v1 entregado en ronda v3 del blueprint. Autor: project-orchestrator agent, revisado por Angel._

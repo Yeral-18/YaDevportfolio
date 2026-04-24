@@ -8,10 +8,12 @@
 ## Contexto rápido
 
 Proyecto: **YaDev CMS** — gestor de contenidos multi-tenant headless para clientes de YA Dev.
-Fundador: Yeral.
+Fundador y único operador: **Angel** (`angelpelaezca@gmail.com`).
 Objetivo: reemplazar edición manual de componentes `.astro` por panel web self-service.
 Modelo de referencia: Damos.co (pero con look YaDev y stack propio).
 Estado actual: Fase 0 — Blueprint completado. NO hay código todavía.
+
+> **Scope del CMS (importante):** Este subproyecto lo desarrolla Angel solo. Yeral (Lead Developer listado en el portfolio raíz `index.html`) colabora en los sitios de clientes del monorepo `YaDevportfolio/`, pero **NO participa** en `yadev-cms/`. Cualquier decisión, acceso, tenant admin, clave o credencial del CMS pertenece únicamente a Angel.
 
 ### Arquitectura de dominios (decidida)
 
@@ -25,7 +27,7 @@ Estado actual: Fase 0 — Blueprint completado. NO hay código todavía.
 
 **Fase VPS-migration y posteriores — producción:**
 - Dominio maestro: **`yadev.co`** (se compra cuando MVP local funcione).
-- **`studio.yadev.co`** — panel admin (SvelteKit + shadcn-svelte). Entran Yeral (super-admin) y los clientes (admin/editor de su tenant).
+- **`studio.yadev.co`** — panel admin (SvelteKit + shadcn-svelte). Entran Angel (super-admin) y los clientes (admin/editor de su tenant).
 - **`api.yadev.co`** — Laravel 11 headless REST. Consumido por el studio y por los builds Astro en build time.
 - **Dominios cliente** (`ecomagsas.com`, `multiserviciospj.com`, `poronsas.com`, `coisem.com`, etc.) — siguen en Hostinger shared, sitios Astro estáticos, hacen fetch al API solo en build.
 - **Resolución de tenant:** por token Sanctum (panel) o por `tenant_id` en la URL (`api.yadev.co/v1/tenants/{tenant_id}/...` para el runner/build). Origin header validado contra whitelist `domains` por tenant.
@@ -51,7 +53,7 @@ Pricing del servicio: **TBD post-MVP**. Se define cuando haya data real de costo
 - `internal/PROYECTOS/2026/MULTISERVICIOS P&J/`
 - `index.html`, `main.js`, `proyectos/`, `Modelos/`, `design-system/`
 
-Trátalos como read-only excepto si Yeral pide explícitamente "migra Multiservicios al CMS" y ya estás en Fase 1+.
+Trátalos como read-only excepto si Angel pide explícitamente "migra Multiservicios al CMS" y ya estás en Fase 1+.
 
 ---
 
@@ -85,7 +87,7 @@ IA:            Anthropic SDK (Claude Haiku 4.5 por defecto, Sonnet 4.6 para tare
 yadev-cms/
 ├── BLUEPRINT.md                  ← Plan ejecutivo
 ├── CLAUDE.md                     ← ESTE ARCHIVO
-├── READY-FOR-REVIEW.md           ← Preguntas pendientes para Yeral
+├── READY-FOR-REVIEW.md           ← Preguntas pendientes para Angel
 ├── architecture/
 │   ├── system-diagram.md
 │   ├── multi-tenancy-strategy.md
@@ -121,7 +123,7 @@ yadev-cms/
 - Test obligatorio: "usuario del tenant A intenta leer recurso del tenant B" → debe devolver 404, NO 403 (no filtrar existencia).
 
 ### 2. No romper los sitios en producción
-- ECOMAG y Multiservicios están live. El CMS NO se conecta a ellos hasta que un tenant esté 100% migrado y Yeral apruebe el cutover.
+- ECOMAG y Multiservicios están live. El CMS NO se conecta a ellos hasta que un tenant esté 100% migrado y Angel apruebe el cutover.
 - Migración = dual-write por 1 semana (contenido hardcodeado + JSON del API). Luego se remueve el hardcode.
 
 ### 3. Schema-first
@@ -141,7 +143,7 @@ yadev-cms/
 ### 5. Colombiano first
 - UI en español colombiano: "Publicar cambios" > "Guardar". "Cotizar" > "Solicitar presupuesto".
 - Moneda COP por defecto en cualquier módulo de facturación futuro.
-- WhatsApp como canal de notificación prioritario (vía API Cloud de Meta) cuando Yeral necesite alertas.
+- WhatsApp como canal de notificación prioritario (vía API Cloud de Meta) cuando Angel necesite alertas.
 
 ---
 

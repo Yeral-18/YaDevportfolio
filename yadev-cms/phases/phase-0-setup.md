@@ -1,6 +1,6 @@
 # Phase 0 — Setup local-first
 
-> Objetivo: dejar el entorno de desarrollo local de Yeral listo para arrancar Fase 1 (scaffolding Laravel + SvelteKit) sin depender todavía de un VPS, sin tocar DNS públicos, sin gastar en infra.
+> Objetivo: dejar el entorno de desarrollo local de Angel listo para arrancar Fase 1 (scaffolding Laravel + SvelteKit) sin depender todavía de un VPS, sin tocar DNS públicos, sin gastar en infra.
 > Duración estimada: 1 semana (5 días hábiles, ~2-3h/día).
 > Resultado: `docker compose up` levanta todo el stack, `api.yadev.local:8000` y `studio.yadev.local:5173` responden, primer tenant creado vía CLI.
 
@@ -475,7 +475,7 @@ Ninguno por ahora. Cuando lleguemos a Fase VPS migration agregamos `SSH_PRIVATE_
 - [ ] Los 3 workflows verde al menos una vez.
 
 ### Documentación
-- [ ] `READY-FOR-REVIEW-v3.md` creado y revisado por Yeral.
+- [ ] `READY-FOR-REVIEW-v3.md` creado y revisado por Angel.
 - [ ] Inconsistencias documentadas en sección I.
 
 **Al marcar los 20 items, Fase 0 cerrada. Próximo paso: `phases/phase-1-mvp.md` — scaffold real de Laravel + SvelteKit dentro de los repos clonados.**

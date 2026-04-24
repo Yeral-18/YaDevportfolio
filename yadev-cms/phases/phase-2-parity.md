@@ -302,4 +302,4 @@ Al cerrar ECOMAG, documentar en `/docs/onboarding-playbook.md`:
 ## Preparación Fase 3
 - Con 2 tenants y tráfico real, decidir si el plan VPS $8 aguanta o upgradear.
 - Tener audit log de publishes que falaron para priorizar bugs de runner.
-- Preguntar a Yeral si quiere IA como default o como addon pago.
+- Preguntar a Angel si quiere IA como default o como addon pago.

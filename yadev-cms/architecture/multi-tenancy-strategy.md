@@ -71,8 +71,8 @@ El API `api.yadev.co` **no resuelve tenant por subdominio del propio API** (siem
    - Middleware `ResolveTenantFromOrigin` busca `Origin` en `yadev_central.domains` → resuelve tenant.
    - Solo aplica a endpoints listados como "públicos" (p.ej. `/v1/public/forms/{slug}/submit`).
 
-**4. Super-admin YaDev (Yeral) impersonando:**
-   - Yeral inicia sesión en `studio.yadev.co` con `super_admin` token.
+**4. Super-admin YaDev (Angel) impersonando:**
+   - Angel inicia sesión en `studio.yadev.co` con `super_admin` token.
    - Selecciona un tenant desde el selector del panel → obtiene un token impersonation con `impersonated_tenant_id`.
    - Middleware `ImpersonateTenant` switchea a ese tenant pero registra `impersonator_id` en `tenant_activity_log`.
 

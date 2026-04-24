@@ -1,14 +1,14 @@
 # READY FOR REVIEW v2 — YaDev CMS Blueprint
 
-> Continuación del v1 tras la ronda de revisión con Yeral.
-> Consolida las 3 decisiones que Yeral tomó, documenta cómo se tradujeron al blueprint, y lista las 5 nuevas preguntas que bloquean el arranque de Fase 0.
+> Continuación del v1 tras la ronda de revisión con Angel.
+> Consolida las 3 decisiones que Angel tomó, documenta cómo se tradujeron al blueprint, y lista las 5 nuevas preguntas que bloquean el arranque de Fase 0.
 > Fecha: 2026-04-22.
 
 ---
 
 ## 1. Resumen de cambios vs v1
 
-En v1 quedaron 10 preguntas abiertas. Yeral respondió las 3 más estructurales (dominios, pricing, repos). Este v2:
+En v1 quedaron 10 preguntas abiertas. Angel respondió las 3 más estructurales (dominios, pricing, repos). Este v2:
 
 - Marca esas 3 como **RESUELTAS** y documenta su traducción técnica.
 - Remueve propuestas de pricing específicas del blueprint (se posponen a post-MVP).
@@ -21,11 +21,11 @@ En v1 quedaron 10 preguntas abiertas. Yeral respondió las 3 más estructurales 
 
 ### Decisión 1 — Arquitectura de dominios (resuelve v1 §3.1 y v1 §3.4)
 
-**Respuesta de Yeral:**
+**Respuesta de Angel:**
 
 - Dominio maestro: **`yadev.co`**.
 - Dos subdominios en el VPS:
-  - `studio.yadev.co` → panel admin custom (SvelteKit + shadcn-svelte). Look YaDev dark glassmorphism. Entran Yeral (super-admin) y los clientes (admin/editor de su propio tenant).
+  - `studio.yadev.co` → panel admin custom (SvelteKit + shadcn-svelte). Look YaDev dark glassmorphism. Entran Angel (super-admin) y los clientes (admin/editor de su propio tenant).
   - `api.yadev.co` → Laravel headless REST. Consumido por el studio y por los builds Astro de cada cliente.
 - Los **dominios de cliente** (`ecomagsas.com`, `multiserviciospj.com`, `poronsas.com`, `coisem.com`, etc.) **siguen en Hostinger shared** y no cambian. Un public_html/ por dominio, sitios Astro estáticos.
 - **Resolución de tenant en el API** — tres fuentes posibles, validadas en cascada:
@@ -46,7 +46,7 @@ En v1 quedaron 10 preguntas abiertas. Yeral respondió las 3 más estructurales 
 
 ### Decisión 2 — Pricing fuera de scope técnico (resuelve v1 §3.2)
 
-**Respuesta de Yeral:**
+**Respuesta de Angel:**
 
 Fuera del scope técnico por ahora. Pricing se define **post-MVP** con data real de costos (VPS, storage, ancho de banda, tiempo de soporte). Mientras tanto: remover propuestas específicas de $80/$150/$300 del blueprint. Dejar únicamente la nota **"pricing TBD post-MVP, se definirá con data real de costos"**.
 
@@ -61,7 +61,7 @@ Fuera del scope técnico por ahora. Pricing se define **post-MVP** con data real
 
 ### Decisión 3 — Repositorios GitHub multi-repo (resuelve v1 §3.5)
 
-**Respuesta de Yeral:**
+**Respuesta de Angel:**
 
 Crear organización `yadev/` en GitHub. Tres repos del CMS:
 
@@ -84,7 +84,7 @@ Adicionales: repos por sitio cliente (`yadev/site-multiservicios`, `yadev/site-e
 
 ## 3. Nuevas preguntas pendientes (bloquean Fase 0)
 
-Estas 5 preguntas **deben resolverse antes de que Yeral ejecute el primer comando** de `phases/phase-0-setup.md`. Sin ellas, el setup no puede avanzar.
+Estas 5 preguntas **deben resolverse antes de que Angel ejecute el primer comando** de `phases/phase-0-setup.md`. Sin ellas, el setup no puede avanzar.
 
 ### Q1. Registro del dominio `yadev.co`
 **Pregunta:** ¿`yadev.co` ya está registrado? Si no, ¿dónde lo compra?
@@ -114,7 +114,7 @@ Estas 5 preguntas **deben resolverse antes de que Yeral ejecute el primer comand
 2. Crear 3 repos privados: `yadev-cms-api`, `yadev-cms-studio`, `yadev-cms-infra`.
 3. Crear deploy SSH key desde VPS (ver phase-0 Día 2), agregarla como **deploy key global a nivel de org**.
 4. Settings → Secrets → Actions → agregar `SSH_PRIVATE_KEY` y `VPS_HOST` a cada repo.
-**Recomendación:** Yeral crea manualmente en ~15min antes de Fase 0; este agent no puede crear orgs GitHub.
+**Recomendación:** Angel crea manualmente en ~15min antes de Fase 0; este agent no puede crear orgs GitHub.
 
 ### Q4. Mapeo de dominios cliente → VPS
 **Pregunta:** ¿Cómo se conectan los sitios cliente con el API?
@@ -181,7 +181,7 @@ yadev-cms/
 
 ## 6. Siguiente paso concreto
 
-**Yeral confirma los 5 puntos arriba (Q1-Q5) y arrancamos Fase 0 día 1 ejecutando el script `phases/phase-0-setup.md`.**
+**Angel confirma los 5 puntos arriba (Q1-Q5) y arrancamos Fase 0 día 1 ejecutando el script `phases/phase-0-setup.md`.**
 
 Orden de ejecución:
 1. Confirmar Q1-Q5 en este archivo (responder inline o en chat).
@@ -212,7 +212,7 @@ Eso venía del modelo monorepo. Ahora cada uno es un repo separado que se clona 
 Intencionalmente no se editó — v1 es histórico. Todas las nuevas refs usan `studio.yadev.co`.
 
 ### I5. `database/central-schema.sql` tiene ENUM `plan('starter','standard','pro','enterprise')`
-No se tocó porque el ENUM es estructura neutra, no compromete pricing. Cuando Yeral defina tiers post-MVP, los valores del ENUM pueden simplemente mapearse a esos tiers sin migración de schema. Si los tiers post-MVP tienen nombres distintos, se hace un `ALTER TABLE` trivial.
+No se tocó porque el ENUM es estructura neutra, no compromete pricing. Cuando Angel defina tiers post-MVP, los valores del ENUM pueden simplemente mapearse a esos tiers sin migración de schema. Si los tiers post-MVP tienen nombres distintos, se hace un `ALTER TABLE` trivial.
 
 ### I6. Un tema que quedó sin resolver en docs: nombres de tenant
 El CLI de provisioning usa `--slug=multiservicios` (corto), pero los endpoints runner usan `{tenant_id}` que puede ser slug o ID numérico. Convendría estandarizar a solo **slug** en URLs (human-readable) y solo **ID numérico** internamente. No es bloqueante para Fase 0.
@@ -221,7 +221,7 @@ El CLI de provisioning usa `--slug=multiservicios` (corto), pero los endpoints r
 
 ## 8. Estado: LISTO PARA Fase 0
 
-**Una vez Yeral responda Q1-Q5, el blueprint está 100% listo para ejecutar.**
+**Una vez Angel responda Q1-Q5, el blueprint está 100% listo para ejecutar.**
 
 Blueprint completo: 16 archivos, ~5000 líneas de documentación técnica.
 
@@ -231,7 +231,7 @@ No se escribió código. No se tocaron proyectos en producción. No se modificó
 
 ## 9. Actualización v3 — análisis competitivo Damos 2026
 
-Fecha: 2026-04-22. Yeral revisó la spec oficial 2026 actualizada de Damos.co (`https://www.damos.co/servicios/diseno-web/ventajas-de-nuestro-cms-gestor-de-contenidos`) + visitó en vivo un cliente real (`https://www.odircertificaciones.com`, admin en `/admin_245/`). Esta ronda cierra gaps funcionales detectados y formaliza el análisis competitivo.
+Fecha: 2026-04-22. Angel revisó la spec oficial 2026 actualizada de Damos.co (`https://www.damos.co/servicios/diseno-web/ventajas-de-nuestro-cms-gestor-de-contenidos`) + visitó en vivo un cliente real (`https://www.odircertificaciones.com`, admin en `/admin_245/`). Esta ronda cierra gaps funcionales detectados y formaliza el análisis competitivo.
 
 ### 9.1. Archivo nuevo
 
@@ -265,7 +265,7 @@ Razonamiento: construir un cliente webmail propio requiere 6-8 semanas full-time
 
 ### 9.5. Estado de bloqueadores
 
-**Ningún nuevo bloqueador.** Las 5 preguntas Q1-Q5 de la sección §3 (dominio yadev.co, VPS KVM2, org GitHub, mapeo DNS cliente, política backups) siguen siendo lo único que bloquea el arranque de Fase 0. Yeral sigue pendiente de responderlas.
+**Ningún nuevo bloqueador.** Las 5 preguntas Q1-Q5 de la sección §3 (dominio yadev.co, VPS KVM2, org GitHub, mapeo DNS cliente, política backups) siguen siendo lo único que bloquea el arranque de Fase 0. Angel sigue pendiente de responderlas.
 
 ### 9.6. Archivos editados en v3
 
@@ -290,9 +290,9 @@ yadev-cms/
 
 - **I7. Endpoint `/ai/audit` vs `/ai/seo-score` legacy.** El endpoint antiguo `POST /api/v1/ai/seo-score` (v1-v2 del blueprint) se mantiene documentado por retrocompatibilidad, pero el nuevo `/ai/audit` es el recomendado porque devuelve scores separados (SEO + GEO) y categoriza issues. Recomendación Fase 3: deprecar `/ai/seo-score` cuando se confirme que nadie depende del shape legacy, o hacer que redirija internamente al nuevo servicio.
 - **I8. Endpoint `/ai/translate` tiene dos firmas.** La legacy `{ text, target_lang }` (texto único) y la nueva `{ blocks, source_locale, target_locale, preserve_fields }` (estructurada). Ambas coexisten en Fase 3. Acción: el router Laravel debe discriminar por shape del body o exponerlas como rutas distintas (`/ai/translate-text` vs `/ai/translate-blocks`). Decisión de implementación, no bloqueante.
-- **I9. Tabla `translations` cambió de shape entre v1 y v3.** En v1-v2 era row-per-field (`translatable_type`, `field`, `value`). En v3 es row-per-page con `translated_blocks` JSON. Si Yeral ya scaffoldeó en la rama de desarrollo las migrations viejas, hay que reescribir ANTES de Fase 3 (no bloquea Fase 1 ni 2). Recomendación: dejar una nota en `CLAUDE.md` del subproyecto para que el primer comando `php artisan make:migration` use el shape nuevo.
+- **I9. Tabla `translations` cambió de shape entre v1 y v3.** En v1-v2 era row-per-field (`translatable_type`, `field`, `value`). En v3 es row-per-page con `translated_blocks` JSON. Si Angel ya scaffoldeó en la rama de desarrollo las migrations viejas, hay que reescribir ANTES de Fase 3 (no bloquea Fase 1 ni 2). Recomendación: dejar una nota en `CLAUDE.md` del subproyecto para que el primer comando `php artisan make:migration` use el shape nuevo.
 - **I10. `analytics_snapshots` en tenant schema asume que Nginx loggea por tenant.** Pero los sitios cliente viven en Hostinger shared, no en el VPS YaDev. Los logs hay que traerlos vía API Hostinger/cPanel cada día. Esa ingest task no está documentada aún — queda pendiente como detalle operacional de Fase 2. No bloqueante (es un cron job nuevo, no cambio de arquitectura).
-- **I11. `mail_accounts` decisión de ubicación.** Los dije en central (no tenant) para poder gestionar cuentas desde super-admin, pero contiene passwords cifradas del tenant. Trade-off: si se hackea la DB central, se expone todo el vault de correo. Alternativa: guardar en tenant DB (aislamiento físico) pero complica el SSO a Roundcube. **Pendiente de decisión final en Fase 2 semana 9.5** — si Yeral prefiere aislamiento más estricto, mover a tenant DB con pequeña complejidad adicional en el proxy Roundcube.
+- **I11. `mail_accounts` decisión de ubicación.** Los dije en central (no tenant) para poder gestionar cuentas desde super-admin, pero contiene passwords cifradas del tenant. Trade-off: si se hackea la DB central, se expone todo el vault de correo. Alternativa: guardar en tenant DB (aislamiento físico) pero complica el SSO a Roundcube. **Pendiente de decisión final en Fase 2 semana 9.5** — si Angel prefiere aislamiento más estricto, mover a tenant DB con pequeña complejidad adicional en el proxy Roundcube.
 
 ---
 
