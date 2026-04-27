@@ -151,7 +151,7 @@ Baseline: VALIDATION-PHASE-0-REPORT.md (agente H, 2026-04-24)
    127.0.0.1   poron.yadev.local
    127.0.0.1   coisem.yadev.local
    ```
-2. **`.env.smoke` para pruebas de container** — crear con `DB_CONNECTION=mysql`, `CACHE_STORE=redis`, `SESSION_DRIVER=redis` para poder ejecutar smoke tests end-to-end dentro del container Docker con el stack de infra levantado.
-3. **HSTS condicional en SecurityHeaders middleware** — condicionar emisión de `Strict-Transport-Security` a `APP_ENV=production` o `$request->secure()`.
-4. **Headers duplicados nginx+middleware** — revisar si `serversideup/php` emite `X-Frame-Options` y `X-Content-Type-Options` por defecto y suprimir la duplicación.
+2. ~~**`.env.smoke` para pruebas de container**~~ — **CERRADO** `2226c8f` (agente J, 2026-04-27). Creado con `DB_HOST=mysql`, `DB_PORT=3306`, `DB_CONNECTION=mysql`, `CACHE_STORE=redis`, `REDIS_HOST=redis`, `REDIS_PORT=6379`, `SESSION_DRIVER=redis`, `APP_ENV=testing`, `APP_DEBUG=false`. Uso documentado en `api/README.md §"Smoke testing dentro del container"`.
+3. ~~**HSTS condicional en SecurityHeaders middleware**~~ — **CERRADO** `1afef56` (agente J, 2026-04-27). HSTS ahora se emite si `$request->secure() || app()->environment('production')`. Test unitario `tests/Unit/SecurityHeadersTest.php` con 5 tests / 12 assertions cubre: headers obligatorios en HTTP y HTTPS, HSTS ausente en local+HTTP, HSTS presente en HTTPS, HSTS presente en producción+HTTP.
+4. ~~**Headers duplicados nginx+middleware**~~ — **CERRADO** `c6d993e` (agente J, 2026-04-27). Dockerfile `RUN find /etc/nginx -type f -name "*.conf" -exec sed -i` elimina `add_header` de `X-Frame-Options`, `X-Content-Type-Options`, `X-XSS-Protection`, `Referrer-Policy` del config base de la imagen. Middleware Laravel queda como única fuente de verdad. Verificación con `curl -I` requiere Docker (offline al momento del cierre).
 5. **Cifrado de backups** — diferido (Q-SEC-1), sin cambios desde H.
