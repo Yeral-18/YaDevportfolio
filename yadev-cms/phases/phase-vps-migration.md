@@ -243,7 +243,7 @@ Secrets nuevos a agregar en cada repo de la org `yadevOs`:
 
 ```bash
 # UptimeRobot (free tier) monitorea:
-#   https://api.yadev.co/v1/health
+#   https://api.yadev.co/health        (operational, unversioned)
 #   https://studio.yadev.co/
 # Alerta email + SMS si 2 fails consecutivos en 5min.
 
@@ -287,7 +287,7 @@ Una vez cerrada esta fase:
 - [ ] Lifecycle rules B2 configuradas (30d daily + 365d monthly).
 - [ ] GitHub Actions `deploy` workflows configurados con secrets correctos en los 3 repos.
 - [ ] UptimeRobot monitoreando ambos subdominios.
-- [ ] `curl https://api.yadev.co/v1/health` devuelve 200 + JSON healthy.
+- [ ] `curl https://api.yadev.co/health` devuelve 200 + JSON healthy. (unversioned by design — health is operational, not a business resource)
 - [ ] Test de restore desde B2: descargar último backup, descifrar, importar a DB staging, verificar datos.
 
 **Al marcar los 15 items: producción lista. Primer tenant real (Multiservicios) se conecta. Cliente ve cambios live en su `multiserviciospj.com` con el nuevo flujo.**

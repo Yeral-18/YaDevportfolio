@@ -224,7 +224,7 @@ Laravel y SvelteKit deben responder a `api.yadev.local` y `studio.yadev.local` p
 Laravel corre en `:8000` (artisan serve), SvelteKit en `:5173` (vite dev):
 
 ```
-http://api.yadev.local:8000/v1/health
+http://api.yadev.local:8000/health   (operational endpoint, unversioned by design)
 http://studio.yadev.local:5173/
 http://multiservicios.yadev.local:8000/v1/tenants/multiservicios/pages   (primer tenant)
 ```
@@ -268,7 +268,8 @@ En Fase 0 no hay app Laravel todavía. Placeholder para verificar routing local:
 cd yadev-cms/api
 # una vez scaffold Fase 1:
 php artisan serve --host=0.0.0.0 --port=8000
-# luego curl http://api.yadev.local:8000/v1/health → {"status":"ok"}
+# luego curl http://api.yadev.local:8000/health → {"status":"ok"}
+# (health is unversioned — k8s/docker/AWS healthchecks expect /health, not /v1/...)
 ```
 
 ### Levantar SvelteKit local (preview — Fase 1 lo scaffoldea real)
