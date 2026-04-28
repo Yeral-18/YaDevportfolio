@@ -9,6 +9,7 @@ nul
 yadev-cms/api/
 yadev-cms/studio/
 yadev-cms/infra/
+yadev-cms/runner/
 
 # Build outputs locales
 yadev-cms/**/dist/
