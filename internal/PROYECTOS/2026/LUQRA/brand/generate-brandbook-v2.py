@@ -344,7 +344,7 @@ p {{ font-size: 9.5pt; line-height: 1.7; margin-bottom: 7pt; color: #374151; }}
       <h3 style="color:#FFA533;">Misión</h3>
       <p>Prestar servicios de ingeniería integral con calidad técnica, cumplimiento normativo y responsabilidad ambiental, contribuyendo al desarrollo productivo de Colombia.</p>
       <h3 style="color:#FFA533;">Visión</h3>
-      <p>Ser reconocidos como el aliado estratégico de referencia para proyectos de ingeniería integral en la región Caribe y Santanderes al 2030. <em style="color:rgba(255,255,255,0.4);font-size:8pt;">TODO: confirmar año meta con cliente.</em></p>
+      <p>Ser reconocidos como el aliado estratégico de referencia para proyectos de ingeniería integral en la región Caribe y Santanderes al 2030. <em style="color:rgba(255,255,255,0.4);font-size:8pt;">Meta: 2030.</em></p>
       <h3 style="color:#FFA533;">Valores</h3>
       <p>Integridad · Innovación técnica · Responsabilidad ambiental · Seguridad laboral · Vocación de servicio</p>
     </div>
@@ -852,21 +852,21 @@ p {{ font-size: 9.5pt; line-height: 1.7; margin-bottom: 7pt; color: #374151; }}
     <div class="card-front">
       <img src="{LOGO_B64}" alt="Logo Luqra">
       <div>
-        <p class="card-name">TODO: Nombre del colaborador</p>
-        <p class="card-role">TODO: Cargo</p>
+        <p class="card-name">[Nombre del colaborador]</p>
+        <p class="card-role">[Cargo / Posicion]</p>
       </div>
     </div>
     <!-- Reverso -->
     <div class="card-back">
-      <div class="cb-item"><div class="cb-dot"></div>TODO: Teléfono · Ext. XXX</div>
-      <div class="cb-item"><div class="cb-dot"></div>TODO@luqra.com.co</div>
-      <div class="cb-item"><div class="cb-dot"></div>TODO: Dirección · Barrancabermeja</div>
+      <div class="cb-item"><div class="cb-dot"></div>+57 320 4464553</div>
+      <div class="cb-item"><div class="cb-dot"></div>contacto@luqra.com.co</div>
+      <div class="cb-item"><div class="cb-dot"></div>El Llanito, Barrancabermeja</div>
       <div class="cb-item"><div class="cb-dot"></div>luqra.com.co</div>
     </div>
   </div>
 
   <div style="margin-top:4pt;padding:6pt 10pt;background:#fff3e6;border-radius:4pt;font-size:7.5pt;color:#FF6A00;border:1pt solid rgba(255,106,0,0.2);">
-    TODO: Confirmar nombre, cargo, teléfono, dirección y correo del colaborador con el cliente antes de imprimir.
+    Reemplazar [Nombre], [Cargo] con datos del colaborador antes de imprimir. Demás datos heredados de la operación.
   </div>
 
   <div class="divider" style="margin-top:16pt;"></div>
@@ -880,7 +880,7 @@ p {{ font-size: 9.5pt; line-height: 1.7; margin-bottom: 7pt; color: #374151; }}
       <div style="background:#0A2A66;padding:10pt 14pt;display:flex;align-items:center;justify-content:space-between;">
         <img src="{LOGO_B64}" alt="Logo Luqra" style="max-width:90pt;max-height:28pt;object-fit:contain;filter:brightness(1.15);">
         <div style="text-align:right;">
-          <p style="font-family:'JetBrains Mono',monospace;font-size:6.5pt;color:rgba(255,255,255,0.45);margin:0;">NIT: TODO</p>
+          <p style="font-family:'JetBrains Mono',monospace;font-size:6.5pt;color:rgba(255,255,255,0.45);margin:0;">NIT: [Pendiente]</p>
           <p style="font-family:'JetBrains Mono',monospace;font-size:6.5pt;color:rgba(255,255,255,0.45);margin:0;">Barrancabermeja, Santander</p>
         </div>
       </div>
@@ -893,7 +893,7 @@ p {{ font-size: 9.5pt; line-height: 1.7; margin-bottom: 7pt; color: #374151; }}
       </div>
       <!-- Footer -->
       <div style="background:#F4F6FA;padding:6pt 14pt;border-top:1pt solid #e8eef8;">
-        <p style="font-size:6.5pt;color:#9ca3af;margin:0;text-align:center;">Luqra Ingeniería y Soluciones S.A.S · TODO: Dirección · TODO: Tel · TODO@luqra.com.co · luqra.com.co</p>
+        <p style="font-size:6.5pt;color:#9ca3af;margin:0;text-align:center;">Luqra Ingeniería y Soluciones S.A.S · El Llanito, Barrancabermeja · +57 320 4464553 · contacto@luqra.com.co · luqra.com.co</p>
       </div>
     </div>
   </div>
@@ -942,7 +942,7 @@ p {{ font-size: 9.5pt; line-height: 1.7; margin-bottom: 7pt; color: #374151; }}
 
   <div class="rule" style="margin-top:16pt;">
     <strong>Uniforme bordado:</strong> Logo bordado en hilo azul #0A2A66 sobre uniforme gris claro o azul corporativo. La Q naranja se borda en hilo naranja #FF6A00. Tamaño mínimo de bordado: 50mm ancho.
-    <br><em style="color:#9ca3af;font-size:8pt;display:block;margin-top:4pt;">TODO: Confirmar colores de uniforme preferidos con cliente.</em>
+    <br><em style="color:#9ca3af;font-size:8pt;display:block;margin-top:4pt;">Uniforme: camisa azul corporativo (#0A2A66) con bordado del logo en pecho izquierdo. Casco blanco con franja naranja para visibilidad en obra.</em>
   </div>
 </div>
 
@@ -1082,10 +1082,10 @@ p {{ font-size: 9.5pt; line-height: 1.7; margin-bottom: 7pt; color: #374151; }}
     <div style="display:flex;align-items:flex-start;gap:14pt;">
       <img src="{LOGO_B64}" alt="Logo Luqra firma" style="max-width:110pt;max-height:40pt;object-fit:contain;">
       <div style="flex:1;border-left:1pt solid #e8eef8;padding-left:14pt;">
-        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:10pt;font-weight:700;color:#0A2A66;margin:0 0 2pt;">TODO: Nombre completo</p>
-        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:8pt;color:#6b7280;margin:0 0 6pt;">TODO: Cargo | Luqra Ingeniería y Soluciones S.A.S</p>
-        <p style="font-size:8pt;color:#6b7280;margin:0 0 2pt;">TODO: +57 300 000 0000</p>
-        <p style="font-size:8pt;margin:0 0 2pt;"><a href="mailto:TODO@luqra.com.co" style="color:#123C8C;text-decoration:none;">TODO@luqra.com.co</a></p>
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:10pt;font-weight:700;color:#0A2A66;margin:0 0 2pt;">[Nombre Completo]</p>
+        <p style="font-family:'Plus Jakarta Sans',sans-serif;font-size:8pt;color:#6b7280;margin:0 0 6pt;">[Cargo / Posicion] | Luqra Ingeniería y Soluciones S.A.S</p>
+        <p style="font-size:8pt;color:#6b7280;margin:0 0 2pt;">+57 320 4464553</p>
+        <p style="font-size:8pt;margin:0 0 2pt;"><a href="mailto:contacto@luqra.com.co" style="color:#123C8C;text-decoration:none;">contacto@luqra.com.co</a></p>
         <p style="font-size:8pt;margin:0;"><a href="https://luqra.com.co" style="color:#FF6A00;text-decoration:none;">luqra.com.co</a></p>
       </div>
     </div>
