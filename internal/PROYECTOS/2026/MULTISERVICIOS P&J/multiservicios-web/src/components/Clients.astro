@@ -4,7 +4,24 @@
  * Infinite auto-scrolling logo carousel — CSS-only, no JS dependencies
  */
 
-const clients = [
+import Picture from './Picture.astro';
+
+interface Variant {
+  width: number;
+  format: string;
+  url: string;
+  size?: number;
+}
+
+const clients: Array<{
+  name: string;
+  industry: string;
+  initials: string;
+  color: string;
+  logo: string;
+  /** Optional WebP variants from media.variants[] — retrocompat: omitting is OK */
+  logoVariants?: Variant[];
+}> = [
   {
     name: 'Impulsa Social S.A.S',
     industry: 'Transporte de carga por carretera',
@@ -73,13 +90,14 @@ const carouselClients = [...clients, ...clients];
           {carouselClients.map((client, index) => (
             <div class="client-card" aria-hidden={index >= clients.length ? "true" : undefined}>
               <div class="client-logo-container">
-                <img
+                <Picture
                   src={client.logo}
                   alt={`Logo de ${client.name}`}
-                  class="client-logo-img"
+                  variants={client.logoVariants ?? []}
                   loading="lazy"
-                  width="200"
-                  height="90"
+                  width={200}
+                  height={90}
+                  class="client-logo-img"
                 />
               </div>
               <p class="client-name">{client.name}</p>

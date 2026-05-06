@@ -1,0 +1,69 @@
+---
+/**
+ * Picture — Multiservicios P&J
+ *
+ * Responsive <picture> component with WebP srcset support.
+ * Consumes `media.variants[]` from the EED runner API when available.
+ * 100% retrocompat: if variants[] is empty, renders a plain <img>.
+ */
+
+interface Variant {
+  width: number;
+  format: string;
+  url: string;
+  size?: number;
+}
+
+export interface Props {
+  /** Fallback / original image URL */
+  src: string;
+  /** Descriptive alt text (required for accessibility) */
+  alt: string;
+  /** WebP variants from API media.variants[] — optional, empty = plain img */
+  variants?: Variant[];
+  loading?: 'lazy' | 'eager';
+  fetchpriority?: 'high' | 'auto';
+  width?: number;
+  height?: number;
+  class?: string;
+  style?: string;
+}
+
+const {
+  src,
+  alt,
+  variants = [],
+  loading = 'lazy',
+  fetchpriority,
+  width,
+  height,
+  class: className,
+  style,
+}: Props = Astro.props;
+
+const webpVariants = variants
+  .filter((v) => v.format === 'webp')
+  .sort((a, b) => a.width - b.width);
+
+const srcset = webpVariants.length > 0
+  ? webpVariants.map((v) => `${v.url} ${v.width}w`).join(', ')
+  : null;
+
+const sizes = '(max-width: 480px) 480px, (max-width: 1024px) 1024px, 1920px';
+---
+
+<picture>
+  {srcset && (
+    <source type="image/webp" srcset={srcset} sizes={sizes} />
+  )}
+  <img
+    src={src}
+    alt={alt}
+    loading={loading}
+    fetchpriority={fetchpriority}
+    width={width}
+    height={height}
+    class={className}
+    style={style}
+  />
+</picture>
