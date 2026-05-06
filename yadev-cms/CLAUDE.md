@@ -11,26 +11,45 @@ Proyecto: **YaDev CMS** — gestor de contenidos multi-tenant headless para clie
 Fundador y único operador: **Angel** (`angelpelaezca@gmail.com`).
 Objetivo: reemplazar edición manual de componentes `.astro` por panel web self-service.
 Modelo de referencia: Damos.co (pero con look YaDev y stack propio).
-Estado actual: Fase 0 — Blueprint completado. NO hay código todavía.
+Estado actual (2026-05-06): **Phase 3 cerrada**. Stack producción completo.
+- API Laravel 11 con ~390 feature tests, multi-tenant DB-per-tenant, 2FA TOTP, Forms, Activity log, Search, Block templates + versioning, Page duplicate + bulk publish (`page_ids[]`).
+- Studio SvelteKit con 973 vitest + 8 specs Playwright e2e, WCAG AA pass.
+- Runner Node con 146 tests, sharp image variants, sitemap, pipeline de 6 pasos.
+- 3 sitios cliente live: Luqra (`luqraingenieria.com`), ECOMAG (`ecomagsas.com`), Multiservicios (`multiserviciospj.com`) — todos en Hostinger shared, deploy por rsync desde el Runner.
+- Hosting de la plataforma: Railway (`api.yadev.co`, `studio.yadev.co`, `yadev-cms-runner` interno, MySQL plugin, Redis plugin, cron `cms-backups`).
+- Infra: Backups B2 cron daily 08:00 UTC, Sentry monitoring 3 servicios con `before_send` filtrando 401/403/404/422, MinIO local + B2 prod.
+
+Pendientes manuales (Angel, no automatizables desde Claude):
+1. Comprar `yadev.co` (si todavía no) + opcional Hostinger KVM2 VPS si se quiere reemplazar Railway.
+2. `ANTHROPIC_API_KEY` + billing (Phase 3 AI dormant, endpoints degradan a 503 sin la key).
+3. DNS cutover Multiservicios → Luqra.
+4. `RAILWAY_API_TOKEN` env del runner para auto-redeploys de sitios cliente.
+5. BackBlaze B2 + Railway cron `cms-backups` — guía: [`infra/scripts/setup-backups-railway.md`](infra/scripts/setup-backups-railway.md).
+6. Sentry org + 3 DSNs — guía: [`infra/MONITORING.md`](infra/MONITORING.md).
+
+Detalle topológico: [`architecture/system-diagram.md`](architecture/system-diagram.md). Detalle de deploy: [`architecture/deployment.md`](architecture/deployment.md).
 
 > **Scope del CMS (importante):** Este subproyecto lo desarrolla Angel solo. Yeral (Lead Developer listado en el portfolio raíz `index.html`) colabora en los sitios de clientes del monorepo `YaDevportfolio/`, pero **NO participa** en `yadev-cms/`. Cualquier decisión, acceso, tenant admin, clave o credencial del CMS pertenece únicamente a Angel.
 
 ### Arquitectura de dominios (decidida)
 
-**Fase 0-2 — local-first (sin VPS, sin dominio real):**
-- Stack local via Docker Compose (`infra/docker-compose.yml`).
+**Dev local-first (Docker Compose):**
+- Stack via Docker Compose (`infra/docker-compose.yml`): mysql, redis, mailpit, minio, api.
 - Subdominios fake via `C:\Windows\System32\drivers\etc\hosts`:
   - `api.yadev.local` → Laravel API (puerto 8000).
   - `studio.yadev.local` → SvelteKit studio (puerto 5173).
-  - `{tenant}.yadev.local` → testing multi-tenant (`multiservicios.yadev.local`, `ecomag.yadev.local`, etc.).
+  - `{tenant}.yadev.local` → testing multi-tenant.
 - SSL no aplica en dev — HTTP plano, CORS permite `http://studio.yadev.local:5173` explícitamente.
+- Studio se levanta fuera del compose con `pnpm dev`.
 
-**Fase VPS-migration y posteriores — producción:**
-- Dominio maestro: **`yadev.co`** (se compra cuando MVP local funcione).
-- **`studio.yadev.co`** — panel admin (SvelteKit + shadcn-svelte). Entran Angel (super-admin) y los clientes (admin/editor de su tenant).
-- **`api.yadev.co`** — Laravel 11 headless REST. Consumido por el studio y por los builds Astro en build time.
-- **Dominios cliente** (`ecomagsas.com`, `multiserviciospj.com`, `poronsas.com`, `coisem.com`, etc.) — siguen en Hostinger shared, sitios Astro estáticos, hacen fetch al API solo en build.
-- **Resolución de tenant:** por token Sanctum (panel) o por `tenant_id` en la URL (`api.yadev.co/v1/tenants/{tenant_id}/...` para el runner/build). Origin header validado contra whitelist `domains` por tenant.
+**Producción (Railway, ya activa):**
+- Dominio maestro: **`yadev.co`** y **`studio.yadev.co`** → servicio `yadev-cms-studio` (SvelteKit static SPA).
+- **`api.yadev.co`** → servicio `yadev-cms-api` (Laravel 11 + php-fpm + nginx, Dockerfile).
+- **`yadev-cms-runner`** → servicio interno (Node + Fastify + BullMQ), sólo accesible vía red interna Railway desde la API.
+- **`MySQL`** y **`Redis`** plugins Railway dentro del mismo proyecto.
+- **`cms-backups`** cron (`0 8 * * *` UTC) → mysqldump + mc cp a BackBlaze B2.
+- **Dominios cliente** (`luqraingenieria.com`, `ecomagsas.com`, `multiserviciospj.com`) — siguen en Hostinger shared, sitios Astro estáticos, hacen fetch al API en build time, deploy por rsync sobre SSH desde el Runner.
+- **Resolución de tenant:** por token Sanctum (panel) o por `tenant_id` en la URL (`api.yadev.co/v1/tenants/{tenant_id}/...`). Origin header validado contra whitelist `central.domains` para form submits públicos. Runner→API usa HMAC sin Sanctum.
 
 ### Repositorios GitHub (decididos)
 
@@ -85,32 +104,40 @@ IA:            Anthropic SDK (Claude Haiku 4.5 por defecto, Sonnet 4.6 para tare
 
 ```
 yadev-cms/
-├── BLUEPRINT.md                  ← Plan ejecutivo
+├── BLUEPRINT.md                  ← Plan ejecutivo (histórico)
 ├── CLAUDE.md                     ← ESTE ARCHIVO
-├── READY-FOR-REVIEW.md           ← Preguntas pendientes para Angel
+├── READY-FOR-REVIEW.md           ← Preguntas históricas para Angel
 ├── architecture/
-│   ├── system-diagram.md
+│   ├── system-diagram.md         ← Topología Railway + Hostinger
+│   ├── deployment.md             ← Env vars, smoke tests, rollback, DNS
 │   ├── multi-tenancy-strategy.md
-│   ├── api-contract.md
-│   └── security-model.md
-├── database/
-│   ├── central-schema.sql
-│   ├── tenant-schema.sql
-│   └── seed-multiservicios.sql
+│   ├── api-contract.md           ← /v1/* completo
+│   ├── auth-decision.md          ← Sanctum bearer Phase 1 → cookies Phase 2
+│   ├── publish-flow.md           ← Handshake API ↔ Runner
+│   ├── security-model.md
+│   └── security-audit-post-v4.md
 ├── phases/
-│   ├── phase-0-setup.md
+│   ├── phase-0-setup.md          ← Histórico
 │   ├── phase-1-mvp.md
 │   ├── phase-2-parity.md
-│   └── phase-3-ai.md
+│   ├── phase-3-ai.md             ← Mergeado, dormant sin ANTHROPIC_API_KEY
+│   └── phase-vps-migration.md    ← Histórico (reemplazado por Railway)
+├── api/                          ← Laravel 11 app (sub-repo yadevOs/yadev-cms-api)
+├── studio/                       ← SvelteKit app (sub-repo yadevOs/yadev-cms-studio)
+├── runner/                       ← Node webhook runner (sub-repo yadevOs/yadev-cms-runner)
+├── infra/                        ← Docker Compose + scripts + runbooks (sub-repo yadevOs/yadev-cms-infra)
+│   ├── docker-compose.yml
+│   ├── MONITORING.md             ← Sentry setup
+│   ├── README.md
+│   ├── cron-backup/              ← Imagen para servicio Railway cms-backups
+│   └── scripts/
+│       ├── setup-backups-railway.md
+│       ├── restore-prod.md
+│       └── …
+├── database/
 ├── agents-orchestration.md
 ├── multiservicios-migration-plan.md
-├── risks-and-tradeoffs.md
-│
-│── [Fase 1+ agregará:]
-├── api/                         ← Laravel app
-├── admin/                       ← SvelteKit app
-├── runner/                      ← Node webhook runner
-└── infrastructure/              ← docker-compose, nginx configs, github actions
+└── risks-and-tradeoffs.md
 ```
 
 ---

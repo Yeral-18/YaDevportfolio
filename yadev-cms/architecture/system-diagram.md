@@ -1,226 +1,190 @@
 # System Diagram — YaDev CMS
 
-> Dos variantes:
-> - **Local-first (Fase 0-2):** todo corre en la máquina de Angel con Docker Compose + subdominios fake `.yadev.local`. Ver sección "Variante local-first" abajo.
-> - **Producción (post Fase VPS-migration):** VPS Hostinger + dominio real `yadev.co`. Ver sección "Variante producción".
+> Producción real desde Phase 3 cierre (2026-05-06). Tres servicios live en
+> Railway (`api`, `studio`, `runner`) más un cron de backups (`cms-backups`),
+> consumidos por tres sitios cliente publicados en Hostinger shared. Para la
+> variante local-first ver [`../infra/README.md`](../infra/README.md).
 
-## Variante local-first (Fase 0-2)
+## Topología actual
 
-```
-                        LAPTOP DE YERAL (Windows 11)
-                                   │
-                                   ▼
-               ┌──────────────────────────────────────┐
-               │ C:\Windows\System32\drivers\etc\hosts│
-               │  127.0.0.1  api.yadev.local          │
-               │  127.0.0.1  studio.yadev.local       │
-               │  127.0.0.1  multiservicios.yadev.local│
-               │  127.0.0.1  ecomag.yadev.local       │
-               └──────────────────────────────────────┘
-                                   │
-                  ┌────────────────┼────────────────────┐
-                  ▼                ▼                    ▼
-        ┌─────────────┐   ┌──────────────┐   ┌─────────────────────┐
-        │ Laravel API │   │ SvelteKit    │   │ Docker Compose      │
-        │ php artisan │   │ Studio       │   │ (infra/)            │
-        │ serve       │   │ pnpm dev     │   │                     │
-        │ :8000       │   │ :5173        │   │ mysql:8.0 :3306     │
-        │             │   │              │   │ redis:7 :6379       │
-        │  Conecta a: │   │  Conecta a:  │   │ mailpit :1025/:8025 │
-        │  - mysql    │◄──┼──────────────┼──►│ minio :9000/:9001   │
-        │  - redis    │   │  http://api. │   │                     │
-        │  - mailpit  │   │  yadev.local │   │ volumes:            │
-        │  - minio    │   │  :8000/v1    │   │  mysql-data         │
-        │             │   │              │   │  redis-data         │
-        └─────────────┘   └──────────────┘   │  minio-data         │
-                                             └─────────────────────┘
-                                   │
-                                   ▼
-                        ┌─────────────────────┐
-                        │ infra/backups/      │
-                        │  YYYY-MM-DD/        │
-                        │   dbs.sql.gz        │
-                        │   mediateca.tar.gz  │
-                        │ Retención 7 días    │
-                        └─────────────────────┘
-```
+```mermaid
+graph TB
+  subgraph Railway["Railway Cloud (yadev-cms project)"]
+    API[yadev-cms-api<br/>Laravel 11 + PHP 8.3<br/>api.yadev.co]
+    STUDIO[yadev-cms-studio<br/>SvelteKit static SPA<br/>studio.yadev.co]
+    RUNNER[yadev-cms-runner<br/>Node 22 + Fastify + BullMQ]
+    MYSQL[(MySQL 8<br/>yadev_cms_central<br/>+ tenant_* DBs)]
+    REDIS[(Redis 7<br/>BullMQ queue + cache)]
+    BACKUPS[cms-backups<br/>cron 0 8 UTC<br/>mysqldump + mc cp]
+  end
 
-Sitios cliente en Hostinger shared siguen vivos, pero en Fase 0-2 **no se tocan** — el build Astro se genera local y no se rsync-ea todavía. El dual-write real llega en Fase 1 semana 4 cuando Angel decida mover el primer cambio a producción, usando rsync desde la laptop (o delegando el webhook al VPS post Fase VPS-migration).
+  subgraph Hostinger["Hostinger Static Hosting"]
+    LUQRA[luqra-web<br/>luqraingenieria.com]
+    ECOMAG[ecomag-web<br/>ecomagsas.com]
+    MULTI[multiservicios-web<br/>multiserviciospj.com]
+  end
 
-## Variante producción (post Fase VPS-migration)
+  subgraph External["External services"]
+    B2[(BackBlaze B2<br/>yadev-cms-backups bucket<br/>retention 30d)]
+    SENTRY[Sentry<br/>3 projects: api / studio / runner]
+    M365[Microsoft 365<br/>SMTP outbound<br/>per-tenant]
+  end
 
-Idéntico al diagrama de abajo, pero todos los containers (mysql, redis, minio o B2, mailpit reemplazado por Resend/SES) corren en el VPS, Laravel+SvelteKit sirven detrás de Nginx con SSL, y los subdominios resuelven via DNS real.
-
-```
-                           INTERNET
-                              │
-                              ▼
-              ┌───────────────────────────────────┐
-              │   DNS (Hostinger DNS / Cloudflare)│
-              │  yadev.co             → VPS       │  (marketing landing, Fase 2)
-              │  api.yadev.co         → VPS       │  (Laravel headless)
-              │  studio.yadev.co      → VPS       │  (SvelteKit panel)
-              │  multiserviciospj.com → Shared    │
-              │  ecomagsas.com        → Shared    │
-              │  poronsas.com         → Shared    │
-              │  coisem.com           → Shared    │
-              └───────────────────────────────────┘
-                              │
-              ┌───────────────┴────────────────┐
-              ▼                                ▼
-  ┌──────────────────────┐        ┌─────────────────────────┐
-  │  VPS KVM2 (Ubuntu)   │        │ Hostinger SHARED        │
-  │  api.yadev.co        │        │ (sitios públicos live)  │
-  │  studio.yadev.co     │        │                         │
-  │                      │        │ /public_html/           │
-  │  Nginx (443 SSL)     │        │  ├─ multiserviciospj/   │
-  │   ├─ /api → php-fpm  │        │  │   ├─ assets/         │
-  │   └─ /admin → static │        │  │   ├─ index.html      │
-  │                      │        │  │   ├─ contact.php     │
-  │  PHP 8.3 FPM         │        │  │   └─ .htaccess       │
-  │   └─ Laravel 11 API  │        │  └─ ecomagsas/          │
-  │                      │        │                         │
-  │  MySQL 8             │        │  (no ejecuta PHP        │
-  │   ├─ yadev_central   │        │   más allá del          │
-  │   │   ├─ tenants     │        │   contact.php)          │
-  │   │   ├─ domains     │        └─────────────────────────┘
-  │   │   ├─ users       │                    ▲
-  │   │   └─ subscriptions                    │
-  │   ├─ tenant_multiservicios                │ rsync -az
-  │   │   ├─ pages       │                    │ sobre SSH
-  │   │   ├─ blocks      │        ┌───────────┴──────────┐
-  │   │   ├─ media       │        │ Webhook Runner (Node)│
-  │   │   └─ forms       │        │ PM2 daemon           │
-  │   ├─ tenant_ecomag   │        │ escucha 8080         │
-  │   └─ tenant_poron    │───────►│  /webhook/rebuild    │
-  │                      │HMAC    │  → git pull          │
-  │  Redis               │        │  → render JSON       │
-  │   ├─ sesiones        │        │  → npm run build     │
-  │   ├─ cache           │        │  → rsync → shared    │
-  │   └─ queue jobs      │        │  → callback al API   │
-  │                      │        └──────────────────────┘
-  │  Horizon dashboard   │                   │
-  │   (admin only)       │                   │
-  │                      │        ┌──────────▼──────────┐
-  │  certbot / cron      │        │ /srv/builds/        │
-  │                      │        │  ├─ multiservicios/ │
-  └──────────────────────┘        │  ├─ ecomag/         │
-              │                   │  └─ poron/          │
-              │                   └─────────────────────┘
-              │                              ▲
-              ▼                              │
-  ┌──────────────────────┐                   │
-  │ SvelteKit Panel Admin│                   │
-  │ (build estático en   │                   │
-  │  Nginx, served desde │                   │
-  │  studio.yadev.co)    │                   │
-  │                      │                   │
-  │  Consume:            │                   │
-  │   POST /api/v1/login │                   │
-  │   GET  /api/v1/pages │                   │
-  │   PUT  /api/v1/blocks│                   │
-  │   POST /api/v1/publish──────────────────►│ (encola PublishSite job
-  │                      │                      que invoca el runner)
-  └──────────────────────┘
+  STUDIO -->|REST /v1<br/>Bearer Sanctum| API
+  API --> MYSQL
+  API --> REDIS
+  API -->|POST /webhook/build<br/>HMAC-SHA256| RUNNER
+  RUNNER -->|GET /v1/runner/build-bundle<br/>HMAC-SHA256| API
+  RUNNER -->|rsync over SSH| LUQRA
+  RUNNER -->|rsync over SSH| ECOMAG
+  RUNNER -->|rsync over SSH| MULTI
+  RUNNER -->|POST /v1/.../publishes/{id}/complete<br/>HMAC-SHA256| API
+  BACKUPS -->|mysqldump| MYSQL
+  BACKUPS -->|mc cp| B2
+  API -.->|errors 5xx + unhandled| SENTRY
+  STUDIO -.->|window.onerror + unhandledrejection| SENTRY
+  RUNNER -.->|worker.failed events| SENTRY
+  API -->|password reset, verify-email,<br/>form notifications| M365
 ```
 
-## Flujo de datos: Editar bloque → Publicar
+## Sitios cliente vivos
+
+| Tenant | Dominio | Hosting | Correo | Estado | Última publicación |
+|--------|---------|---------|--------|--------|--------------------|
+| Luqra Ingeniería | luqraingenieria.com | Hostinger shared | M365 | Live (rebrand de Multiservicios) | Phase 3 |
+| ECOMAG S.A.S | ecomagsas.com | Hostinger shared | M365 | Live | Phase 2 cutover |
+| Multiservicios P&J | multiserviciospj.com | Hostinger shared | M365 | Live (legacy, pendiente DNS cutover a Luqra) | Phase 1 |
+
+Los tres sitios consumen el API en build time (no en runtime). El Runner
+empuja `dist/` por rsync sobre SSH al `public_html/` de Hostinger;
+Hostinger sirve solo estático + el `contact.php` heredado.
+
+## Servicios Railway
+
+| Servicio | Tipo | Responsabilidad | Tests | Notas |
+|----------|------|-----------------|-------|-------|
+| `yadev-cms-api` | Web (Dockerfile, php-fpm + nginx) | API REST `/v1`, multi-tenant DB-per-tenant, 2FA TOTP, Forms, Activity log, Search | ~390 feature tests | `api.yadev.co`, healthcheck `/health` |
+| `yadev-cms-studio` | Web (static, Vite build) | SPA admin SvelteKit + shadcn-svelte | 973 vitest + 8 specs Playwright e2e (WCAG AA) | `studio.yadev.co`, healthcheck `/` |
+| `yadev-cms-runner` | Worker (Node + Fastify) | Webhook `/webhook/build`, BullMQ pipeline 6 pasos (clone → fetch JSON → render → image variants `sharp` → sitemap → rsync) | 146 tests (unit + integration) | Privado, alcanzado por API vía red interna Railway |
+| `MySQL` | Plugin Railway | DB central + tenant DBs | — | Sólo accesible desde la red interna del proyecto |
+| `Redis` | Plugin Railway | BullMQ queue + Laravel cache | — | Mismo aislamiento |
+| `cms-backups` | Cron (0 8 * * *) | mysqldump → gzip → mc cp a B2 | — | Retention 30d, ver [`../infra/scripts/setup-backups-railway.md`](../infra/scripts/setup-backups-railway.md) |
+
+## Flujo: editar bloque → publicar
 
 ```
-Cliente (Multiservicios)
-   │
-   │ 1. Login: POST https://api.yadev.co/v1/auth/login
-   │    body: { email, password, tenant_domain: "multiserviciospj.com" }
-   │    respuesta: { token, user, tenant }
-   │    (tenant_domain es opcional si users_index resuelve email → tenant_id)
-   │
-   ▼
-Panel Admin (studio.yadev.co)
-   │
-   │ 2. GET https://api.yadev.co/v1/tenants/{tenant_id}/pages (header: Bearer $token)
-   │    Laravel middleware ResolveTenantFromToken → selecciona DB tenant
-   │    (valida que tenant_id del path coincide con el del token)
-   │    respuesta: [{ id, title, slug, blocks: [...] }, ...]
-   │
-   │ 3. Usuario edita bloque "Hero"
-   │    PUT /api/v1/blocks/42
-   │    body: { data: { title: "Nuevo título", subtitle: "...", image_id: 15 } }
-   │    → Laravel valida con BlockSchema\Hero
-   │    → guarda en tenant_multiservicios.blocks
-   │    → graba ActivityLog
-   │
-   │ 4. Usuario presiona "Publicar cambios"
-   │    POST /api/v1/publish
-   │    → Laravel encola job PublishSite($tenant_id)
-   │    respuesta: { publish_id, status: "queued" }
-   │
-   ▼
-Redis Queue
-   │
-   │ 5. Horizon procesa PublishSite job
-   │    → Genera JSON content-tree del tenant
-   │    → POST http://127.0.0.1:8080/webhook/rebuild
-   │       body: { tenant: "multiservicios", content_url: "...", hmac }
-   │
-   ▼
-Webhook Runner (Node, PM2)
-   │
-   │ 6. Valida HMAC
-   │    → cd /srv/builds/multiservicios/
-   │    → git pull (por si hay cambios en código)
-   │    → descarga content.json del API
-   │    → escribe en src/content/site.json
-   │    → npm run build (Astro genera dist/)
-   │    → rsync -az --delete dist/ user@shared:/public_html/multiserviciospj/
-   │    → callback POST /api/v1/publish/{publish_id}/complete
-   │       { status: "success", duration_ms: 94210, commit_sha: "abc123" }
-   │
-   ▼
-Laravel API
-   │
-   │ 7. Marca publish record como completo
-   │    → emit evento vía Pusher/Reverb → panel actualiza toast
-   │
-   ▼
-Panel Admin muestra:
-   "Publicado exitosamente en 1m 34s ✓
-    https://multiserviciospj.com"
+Cliente (Luqra)
+  │
+  │ 1. POST https://api.yadev.co/v1/auth/login
+  │    body { email, password, device_name }
+  │    respuesta { token, user, tenants[] }
+  │    (si 2FA enabled: 200 { challenge_id } → POST /v1/auth/2fa/challenge)
+  │
+  ▼
+Studio (studio.yadev.co)
+  │
+  │ 2. GET /v1/tenants/{tenant_id}/pages?with=sections.blocks
+  │    middleware: auth:sanctum + tenant.path
+  │
+  │ 3. PUT /v1/tenants/{tenant_id}/blocks/{id}
+  │    body { data: { ... } } → BlockSchema valida → guarda en tenant DB
+  │    BlockVersion auto-creado (versioning BBC)
+  │    ActivityLog graba quién/qué/cuándo
+  │
+  │ 4. POST /v1/tenants/{tenant_id}/publishes
+  │    body { page_ids?: [int], commit_sha?: string }   ← page_ids opcional para parcial
+  │    INSERT publishes status=pending
+  │
+  ▼
+API → Runner (HMAC)
+  │
+  │ 5. POST runner.internal/webhook/build
+  │    body { publishId, tenantId, pageIds, callbackUrl }
+  │    Runner valida HMAC → enqueue BullMQ → 202 { jobId }
+  │    API: UPDATE publishes status=queued, runner_job_id=jobId
+  │
+  ▼
+Runner BullMQ worker (6 pasos)
+  │
+  │ 6. clone/pull repo del sitio → fetch content tree del API
+  │    → render Astro → sharp image variants → sitemap.xml
+  │    → rsync -az --delete dist/ user@hostinger:/public_html/
+  │
+  │ 7. POST https://api.yadev.co/v1/tenants/{tenant_id}/publishes/{id}/complete
+  │    headers: X-YaDev-Signature: sha256=…
+  │    body { status: success|failed, build_log_url, commit_sha, error_message? }
+  │
+  ▼
+API
+  │
+  │ 8. tenancy()->initialize($tenant_id)
+  │    UPDATE publishes status=completed|failed completed_at=now
+  │    Studio polea cada 2-3s y ve el resultado
 ```
 
-## Componentes y puertos
+## Resolución de tenant (recordatorio)
 
-| Componente        | Puerto | Acceso      | Notas                                      |
-|-------------------|--------|-------------|--------------------------------------------|
-| Nginx             | 80/443 | Público     | Termina SSL, sirve `/api` y `/admin`       |
-| PHP-FPM           | 9000   | Solo local  | Laravel API                                |
-| MySQL             | 3306   | Solo local  | Nunca exponer al internet                  |
-| Redis             | 6379   | Solo local  | Sin password porque sólo local + ufw       |
-| Webhook Runner    | 8080   | Solo local  | Laravel API lo llama vía localhost         |
-| Horizon dashboard | /horizon (Laravel) | Solo super-admin | Protegido con Gate      |
+| Fuente | Middleware | Caso de uso |
+|--------|-----------|-------------|
+| `Authorization: Bearer {token}` con ability `tenant:{id}:*` | `auth:sanctum` + `tenant.path` | Studio → API |
+| `tenant_id` en URL path | `tenant.path` valida que coincida con la ability del token | Todas las rutas tenant-scoped |
+| HMAC `X-YaDev-Signature` sin bearer | Validado en controller (`PublishController::complete`) | Runner → API callback |
+| `Origin` header contra `central.domains` | `ResolveTenantFromOrigin` | Form submits públicos (`/v1/public/forms/{id}/submit`) |
 
-## Subdominios y rutas
+Inconsistencia entre fuentes ⇒ 404 (no 403, evita leak), log
+`cross_tenant_attempt`. Detalle en [`security-model.md`](security-model.md) §1.
 
-- `api.yadev.co/v1/...` — API REST, JSON only, CORS configurado para `studio.yadev.co` + whitelist `domains` por tenant (para fetchs desde builds).
-- `studio.yadev.co` — SPA SvelteKit estática (build generado, sirve index.html con SPA routing).
-- `yadev.co` — landing marketing del CMS (opcional, Fase 2).
-- `multiserviciospj.com`, `ecomagsas.com`, `poronsas.com`, `coisem.com`, etc. — sitios públicos finales (Hostinger shared, sin conexión directa al VPS salvo el rsync de deploy).
+## Redes y puertos
 
-## Resolución de tenant en el API
+| Servicio | Puerto público | Acceso interno | TLS |
+|---------|---------------|----------------|-----|
+| `api.yadev.co` | 443 (Railway edge) | http://api.railway.internal:8080 | Edge (Railway-managed) |
+| `studio.yadev.co` | 443 (Railway edge) | static, sin backend propio | Edge |
+| `yadev-cms-runner` | — | http://runner.railway.internal:8080 | sólo red interna |
+| `MySQL` | — | mysql.railway.internal:3306 | sólo red interna |
+| `Redis` | — | redis.railway.internal:6379 | sólo red interna |
+| Hostinger shared (3 sitios) | 443 | — | Hostinger-managed (incluye www) |
 
-El middleware de Laravel resuelve el tenant activo según la fuente del request:
-
-| Fuente | Cómo se resuelve | Uso típico |
-|--------|------------------|------------|
-| `Authorization: Bearer {token}` | El token Sanctum embebe `tenant_id` como ability o claim. Middleware `ResolveTenantFromToken`. | Requests desde el panel `studio.yadev.co` |
-| `tenant_id` en URL path (`/v1/tenants/{tenant_id}/...`) | Middleware `ResolveTenantFromPath`. Si hay token, valida que coincide con el del token (anti cross-tenant). | Requests desde el runner/build o calls administrativas |
-| `Origin` header | Middleware `ResolveTenantFromOrigin` busca en `central.domains` el tenant al que pertenece ese origin. | Fetchs desde el sitio cliente en runtime (raro, solo endpoints públicos tipo form-submit) |
-
-Si más de una fuente está presente, TODAS deben resolver al mismo tenant. Cualquier inconsistencia → 403 + log `cross_tenant_attempt`.
+Producción nunca expone MySQL/Redis a internet — sólo al network privado
+de Railway. Los sitios cliente reciben rsync por SSH (autenticación por
+key, sin password) desde el Runner.
 
 ## Backups y resiliencia
 
-- MySQL dump diario 3am UTC por tenant → BackBlaze B2 (retention 30 días).
-- Redis: no se respalda (sólo es queue + cache, datos efímeros).
-- `/srv/builds/` está en git + VPS backup semanal Hostinger.
-- Sitios públicos: ya viven en Hostinger shared que tiene backup nativo.
-- Plan de disaster recovery: restaurar VPS desde snapshot Hostinger + restaurar DBs desde B2 = RTO 2 horas, RPO 24 horas.
+- **MySQL**: cron `cms-backups` a las 08:00 UTC = 03:00 Bogotá, todas las
+  DBs (central + tenants) con `mysqldump --single-transaction`, gzip,
+  upload a `s3://yadev-cms-backups/yadev-cms/backups/YYYY-MM-DD/`.
+  Retention 30 días (objetos viejos borrados por el script).
+  Ver [`../infra/scripts/setup-backups-railway.md`](../infra/scripts/setup-backups-railway.md).
+- **Redis**: efímero (queue + cache). No se respalda.
+- **Media**: en Phase 3 vive en MinIO local (dev) y en B2 (prod) bajo
+  `s3://yadev-cms-media/`, atrás del CDN de Hostinger en cada sitio.
+- **Sitios cliente**: Hostinger shared incluye snapshots semanales nativos.
+- **Sentry**: 3 proyectos (`yadev-cms-api`, `yadev-cms-studio`,
+  `yadev-cms-runner`), free tier 5k events/mes con `before_send` que
+  filtra 401/403/404/422 para mantener la señal limpia. Setup completo en
+  [`../infra/MONITORING.md`](../infra/MONITORING.md).
+- **DR plan**: restaurar desde B2 (`gunzip | mysql`) sobre Railway MySQL
+  + redeploy de api/studio/runner desde GitHub. RTO ~30 min, RPO 24 h.
+
+## Variante local-first (dev)
+
+Idéntica a producción pero todos los servicios corren en Docker Compose
+(`infra/docker-compose.yml`): `mysql:8.0`, `redis:7-alpine`, `mailpit`
+(SMTP capture), `minio` (S3-compatible) y `api` (Laravel bind-mounted).
+El Studio corre fuera del compose con `pnpm dev`. Subdominios fake via
+`hosts`: `api.yadev.local`, `studio.yadev.local`, `{slug}.yadev.local`.
+No hay TLS, no se hace rsync — el Runner se invoca con
+`RUNNER_DRY_RUN=1` para validar el pipeline sin tocar Hostinger.
+
+## Componentes pendientes / opcionales
+
+- **VPS Hostinger KVM2**: ya no es necesario en el plan actual (Railway
+  reemplazó el VPS); la doc `phases/phase-vps-migration.md` queda como
+  referencia histórica.
+- **AI endpoints (Phase 3)**: `/v1/tenants/{id}/ai/seo-audit`,
+  `/suggest-copy`, `/rewrite-tone`. Código mergeado, deshabilitado en
+  prod (degrada a 503 cuando `ANTHROPIC_API_KEY` está vacío).
+- **DNS cutover Multiservicios → Luqra**: pendiente manual (Angel).
+- **Marketing landing yadev.co**: el dominio raíz sirve el Studio hoy;
+  la landing pública es opcional post-MVP.
