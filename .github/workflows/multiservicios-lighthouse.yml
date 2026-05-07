@@ -1,0 +1,57 @@
+name: Lighthouse CI (multiservicios)
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - "internal/PROYECTOS/2026/MULTISERVICIOS P&J/multiservicios-web/**"
+      - ".github/workflows/multiservicios-lighthouse.yml"
+  pull_request:
+    branches: [main, master]
+    paths:
+      - "internal/PROYECTOS/2026/MULTISERVICIOS P&J/multiservicios-web/**"
+      - ".github/workflows/multiservicios-lighthouse.yml"
+  workflow_dispatch:
+
+jobs:
+  lighthouse:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    defaults:
+      run:
+        working-directory: "internal/PROYECTOS/2026/MULTISERVICIOS P&J/multiservicios-web"
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 10
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Build
+        run: pnpm build
+
+      - name: Run Lighthouse CI
+        run: |
+          npm install -g @lhci/cli@0.13.x
+          lhci autorun --config=./lighthouserc.json
+        env:
+          LHCI_GITHUB_APP_TOKEN: ${{ secrets.LHCI_GITHUB_APP_TOKEN }}
+
+      - name: Upload report
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-report-multiservicios
+          path: "internal/PROYECTOS/2026/MULTISERVICIOS P&J/multiservicios-web/.lighthouseci/"
+          retention-days: 7
