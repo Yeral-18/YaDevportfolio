@@ -291,6 +291,9 @@ const breadcrumbJsonLd = {
     <meta name="twitter:description" content={description} />
     <meta name="twitter:image" content={ogImageUrl} />
 
+    <!-- Security: CSP via meta tag (Hostinger blocks CSP in headers) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google.com; frame-src https://www.google.com;">
+
     <!-- Structured Data: LocalBusiness -->
     <script type="application/ld+json" set:html={JSON.stringify(localBusinessJsonLd)} />
     <!-- Structured Data: Organization -->
