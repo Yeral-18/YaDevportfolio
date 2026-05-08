@@ -1,0 +1,19 @@
+---
+import BlogLayout from '../../layouts/BlogLayout.astro';
+
+export async function getStaticPaths() {
+  // Empty until API ships blog posts — build will not generate any slug pages.
+  // TODO(HHB): Populate from CMS/API when is_blog_post field is added.
+  return [];
+}
+
+const { slug } = Astro.params;
+---
+
+<BlogLayout
+  title="Artículo del Blog"
+  description="Detalle del artículo del blog de Multiservicios P&J S.A.S."
+>
+  <p>Slug: {slug}</p>
+  <p>El contenido de este artículo se cargará desde la API en versiones futuras.</p>
+</BlogLayout>

@@ -1,0 +1,73 @@
+---
+import Layout from './Layout.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  publishedAt?: string;
+  author?: string;
+}
+
+const { title, description, publishedAt, author } = Astro.props;
+---
+
+<Layout title={`${title} | Blog`} description={description}>
+  <Fragment slot="head">
+    <!-- noindex: activate blog indexing only when client approves content -->
+    <meta name="robots" content="noindex, nofollow" />
+  </Fragment>
+
+  <main id="main-content" class="blog-post container">
+    <article>
+      <header class="blog-header">
+        <h1>{title}</h1>
+        {publishedAt && <time datetime={publishedAt}>{publishedAt}</time>}
+        {author && <p class="author">Por {author}</p>}
+      </header>
+      <div class="content">
+        <slot />
+      </div>
+    </article>
+  </main>
+</Layout>
+
+<style>
+  .blog-post {
+    max-width: 720px;
+    margin: 64px auto;
+    padding: 0 24px;
+  }
+
+  .blog-header h1 {
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    margin-bottom: 8px;
+    line-height: 1.2;
+  }
+
+  .blog-header time {
+    color: #666;
+    font-size: 0.875rem;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  .blog-header .author {
+    color: #666;
+    font-size: 0.875rem;
+    margin: 0;
+  }
+
+  .content {
+    line-height: 1.7;
+    margin-top: 32px;
+  }
+
+  .content h2 {
+    font-size: 1.5rem;
+    margin: 2rem 0 0.75rem;
+  }
+
+  .content p {
+    margin-bottom: 1rem;
+  }
+</style>

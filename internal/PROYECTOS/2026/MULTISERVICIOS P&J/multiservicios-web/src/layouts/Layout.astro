@@ -314,6 +314,11 @@ const breadcrumbJsonLd = {
     <!-- The test key (6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI) always passes — it is for development only. -->
     <script src="https://www.google.com/recaptcha/api.js?render=6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" defer></script>
 
+    <!-- RSS feed -->
+    <link rel="alternate" type="application/rss+xml" title="Blog RSS" href="/rss.xml" />
+
+    <!-- Per-page head overrides (e.g. noindex on blog) -->
+    <slot name="head" />
   </head>
   <body class="min-h-screen bg-light font-body text-dark antialiased">
     <slot />
