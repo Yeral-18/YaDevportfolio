@@ -1,0 +1,55 @@
+name: Load Test (manual)
+
+on:
+  workflow_dispatch:
+    inputs:
+      api_base:
+        description: 'API base URL to test against'
+        required: true
+        default: 'https://api.staging.yadev.co/v1'
+      tenant_id:
+        description: 'Tenant ID for pages-list scenario'
+        required: false
+        default: '1'
+      page_id:
+        description: 'Page ID for webhooks-fanout scenario'
+        required: false
+        default: '1'
+      form_id:
+        description: 'Form ID for forms-public-submit scenario'
+        required: false
+        default: '1'
+
+jobs:
+  k6:
+    name: k6 Baseline Scenarios
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js (report generator)
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup k6
+        uses: grafana/setup-k6-action@v1
+
+      - name: Run baseline load tests
+        working-directory: infra/load-testing
+        run: sh run-baseline.sh
+        env:
+          API_BASE:   ${{ inputs.api_base }}
+          TENANT_ID:  ${{ inputs.tenant_id }}
+          PAGE_ID:    ${{ inputs.page_id }}
+          FORM_ID:    ${{ inputs.form_id }}
+
+      - name: Upload results artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: load-test-results-${{ github.run_id }}
+          path: infra/load-testing/results/
+          retention-days: 30
