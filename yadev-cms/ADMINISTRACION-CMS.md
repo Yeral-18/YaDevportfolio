@@ -14,6 +14,7 @@ El análisis exhaustivo feature-by-feature está en [`competitive-analysis-damos
 
 - WYSIWYG con bloques drag-drop (TipTap + 7 bloques schema-validated: Hero, Services, Projects, Stats, Cta, Contact, RichText) — `api/app/Blocks/`.
 - **Inserción de scripts HTML/JS** (G7) por tenant + override por página, sanitizada server-side (deny `<form>`/`<base>`/`<object>`/`<embed>`, iframes solo a dominios whitelisted, `<script src>` solo HTTPS). UI en Settings → Scripts y en el editor de página (panel "Scripts de esta página").
+- **Analítica server-side sin cookies** (G1) — pixel 1×1 GIF en `api.yadev.co/v1/track/pix.gif`, hash diario rotativo (sin correlación cross-day), honra DNT + Sec-GPC, agregador diario 03:00 UTC → `analytics_daily` por tenant, dashboard Studio en `/tenants/{id}/analytics` con top páginas/países/navegadores/referers/keywords + timeline + histograma horario. Retención cruda 30 días, rollups indefinidos. MaxMind GeoLite2 opcional (degrada a null si falta el mmdb).
 - Mediateca con carpetas, tags, variantes automáticas (thumb/webp/og), reemplazo manteniendo URL — `MediaController`, `MediaFolderController`.
 - Editor fotográfico inline (Cropper.js + Intervention) — modal en `studio/src/lib/components/media`.
 - Versionado por bloque + rollback — `block_versions` + `BlockVersionController`.
@@ -35,7 +36,7 @@ Los marco con prioridad y ubicación donde encajan:
 
 | # | Feature Damos | Estado YaDev | Prioridad | Esfuerzo | Dónde encaja |
 |---|---------------|--------------|-----------|----------|--------------|
-| G1 | **Analítica server-side sin cookies** (visitas, países, navegadores, palabras clave desde logs) | ✗ no implementado | **ALTA** — Damos lo vende fuerte | 3-5 días | Cron Railway parseando access logs Hostinger via SSH → tabla `tenant_analytics_daily` + dashboard Studio |
+| G1 | **Analítica server-side sin cookies** (visitas, países, navegadores, palabras clave desde logs) | ✅ DONE — pixel 1×1 + agregador diario + dashboard Studio | — | — | Movido a §1.1 |
 | G2 | **Auditor SEO/GEO IA en tiempo real** (panel lateral en editor con score H1/H2/schema/meta + sugerencias) | Endpoint `/ai/audit` existe pero dormant (sin API key) | **ALTA** — diferenciador IA | 1 día (solo activar + UI panel) | `AIController::audit` + nuevo componente `SeoPanel.svelte` en page editor |
 | G3 | **Generación de contenido con IA respetando ADN/voz de marca** | Tabla `brand_voice` diseñada, endpoint dormant | **ALTA** — copy ventaja vs Damos | 2 días (activar + UI prompt) | `AIController::generate` + modal en editor |
 | G4 | **Traducción multi-idioma con IA** (página completa de un clic preservando estructura de bloques) | Dormant | **MEDIA** — depende si cliente lo pide | 2 días | `AIController::translate` + botón en page header |
@@ -58,7 +59,7 @@ Los marco con prioridad y ubicación donde encajan:
 ### 1.4. Recomendación de orden si vas a cerrar gaps (próximas 2 semanas)
 
 1. **G2 + G3 + G4** (3 días) — activas IA. Requiere solo `ANTHROPIC_API_KEY` en Railway y UI panel lateral. Ganas 3 features de venta sin tocar arquitectura.
-2. **G1** (5 días) — analytics server-side. Es lo único técnicamente nuevo. Damos lo vende fuerte y tú no lo tienes.
+2. **G1** — **DONE.** Pixel analytics sin cookies, hash diario rotativo, dashboard Studio, agregador diario, retención 30 días. Falta: descargar mmdb MaxMind en producción (opcional, sin él los países quedan en NULL).
 3. **G7** — **DONE.** Scripts injection a nivel tenant + override por página, sanitizado server-side.
 4. **G8** (1 día) — graba el video tutorial con tu propio CMS administrando una página de Luqra. Sirve para onboarding + marketing.
 
@@ -241,6 +242,53 @@ Sidebar → **Settings**:
 - `Cmd/Ctrl + Shift + P` — Publicar.
 - `Esc` — Cerrar modal / volver atrás.
 - `?` — Mostrar este cheatsheet.
+
+### 2.16. Analítica (G1)
+
+Sidebar tenant → **Analítica**. Muestra los rollups diarios procesados por el cron `analytics:aggregate` (03:00 UTC).
+
+**Qué ves en el panel:**
+
+- **Cuatro tarjetas resumen:** visitas totales, visitantes únicos, días con datos en el rango, promedio diario. La tarjeta de visitas muestra `% vs período anterior` cuando hay datos suficientes (verde si crece, rojo si decrece).
+- **Línea de tiempo:** dos series (visitas + únicos) por día, con tooltip al pasar el mouse.
+- **Histograma horario:** las 24 horas del día agregadas dentro del rango. Útil para detectar cuándo recibe tráfico tu sitio.
+- **Seis listas top-N:** páginas, países, navegadores, referidos, palabras clave (de búsquedas Google/Bing/DuckDuckGo), dispositivos.
+
+**Selector de rango:**
+
+Inputs `Desde` / `Hasta` arriba a la derecha. Default: últimos 30 días. Máximo: 365 días (rangos más largos se recortan automáticamente sin error). Los parámetros se reflejan en la URL como `?from=YYYY-MM-DD&to=YYYY-MM-DD` para que puedas compartir un enlace exacto.
+
+**Cómo se recogen los datos:**
+
+1. Cada página construida por el Runner emite un `<img>` 1×1 invisible apuntando a `api.yadev.co/v1/track/pix.gif?t={tenant}&p={path}` (paso `inject-pixel` en el pipeline).
+2. Cuando un visitante abre la página el navegador descarga el GIF; la API responde inmediatamente con los 43 bytes del pixel y encola un job `RecordAnalyticsHitJob`.
+3. El worker parsea User-Agent (browser/OS/device), resuelve el país por IP via GeoLite2, hashea `IP+UA+salt_del_día` para uniques (la sal rota a las 00:00 UTC, **imposible correlacionar entre días**), descarta IP y UA crudos, e inserta una fila en `analytics_hits` del tenant.
+4. A las 03:00 UTC el cron rola `analytics_hits` del día anterior a `analytics_daily` y elimina los hits de más de 30 días.
+
+**Privacidad (lo que NUNCA persistimos):**
+
+- IP cruda — solo se usa en memoria para país + hash. Se descarta antes del INSERT.
+- User-Agent crudo — solo se parsea a los tres enums.
+- URL completa de referer — solo el host + utm_* + search_query.
+- Sin cookies. Sin localStorage. Sin fingerprinting.
+- Honra `DNT: 1` y `Sec-GPC: 1`: la API responde el pixel pero **no escribe nada**.
+
+**Bots:**
+
+Los bots conocidos (Googlebot, Bingbot, GPTBot, AhrefsBot, etc.) **sí cuentan** en visitas totales (para que tu número global sea comparable con otras herramientas), pero **se excluyen** del conteo de únicos. La lista está en `config/yadev.php` → `analytics.bot_user_agents`.
+
+**Operaciones manuales del operador:**
+
+| Tarea | Comando / acción |
+|-------|------------------|
+| Re-aggregar un día específico | `php artisan analytics:aggregate --date=2026-05-27` |
+| Cambiar retención (default 30 días) | env `ANALYTICS_RETENTION_DAYS=60` en Railway |
+| Bajar el mmdb MaxMind (países) | Ejecutar `infra/scripts/setup-geoip.sh` con `MAXMIND_LICENSE_KEY` seteado, o seguir `api/storage/app/geoip/README.md` |
+| Desactivar el pixel temporalmente | env `ANALYTICS_PIXEL_DISABLED=true` en el Runner antes del próximo publish |
+
+**Atribución GeoLite2:**
+
+Este producto incluye datos GeoLite2 creados por MaxMind, disponibles bajo licencia CC BY-SA 4.0 desde <https://www.maxmind.com>.
 
 ### 2.15. Errores comunes y cómo resolverlos
 
