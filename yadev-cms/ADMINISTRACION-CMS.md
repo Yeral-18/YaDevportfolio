@@ -15,6 +15,7 @@ El análisis exhaustivo feature-by-feature está en [`competitive-analysis-damos
 - WYSIWYG con bloques drag-drop (TipTap + 7 bloques schema-validated: Hero, Services, Projects, Stats, Cta, Contact, RichText) — `api/app/Blocks/`.
 - **Inserción de scripts HTML/JS** (G7) por tenant + override por página, sanitizada server-side (deny `<form>`/`<base>`/`<object>`/`<embed>`, iframes solo a dominios whitelisted, `<script src>` solo HTTPS). UI en Settings → Scripts y en el editor de página (panel "Scripts de esta página").
 - **Analítica server-side sin cookies** (G1) — pixel 1×1 GIF en `api.yadev.co/v1/track/pix.gif`, hash diario rotativo (sin correlación cross-day), honra DNT + Sec-GPC, agregador diario 03:00 UTC → `analytics_daily` por tenant, dashboard Studio en `/tenants/{id}/analytics` con top páginas/países/navegadores/referers/keywords + timeline + histograma horario. Retención cruda 30 días, rollups indefinidos. MaxMind GeoLite2 opcional (degrada a null si falta el mmdb).
+- **Popups programables con triggers + métricas** (G5) — módulo `Popups` paralelo a `Forms` con triggers (time / scroll / exit-intent / element_click / immediate), frecuencia (always / session / day / ever), segmentos (URL regex include/exclude, países ISO2, dispositivo, visitante first/returning), programación (fechas + días de la semana + horas del día), 5 layouts (modal central, barras superior/inferior, esquina, full-screen) y métricas diarias (impresiones, clicks, conversiones, CTR, CR). Snippet `<script src="/static-assets/popups.js">` vanilla en Shadow DOM (~3-5 KB minified gzip), honra DNT + Sec-GPC en el endpoint `/v1/track/popups/{id}/event`, agregador diario extendido para roll de `popup_events` → `popup_metrics_daily`. UI en `/tenants/{id}/popups`.
 - Mediateca con carpetas, tags, variantes automáticas (thumb/webp/og), reemplazo manteniendo URL — `MediaController`, `MediaFolderController`.
 - Editor fotográfico inline (Cropper.js + Intervention) — modal en `studio/src/lib/components/media`.
 - Versionado por bloque + rollback — `block_versions` + `BlockVersionController`.
@@ -40,7 +41,7 @@ Los marco con prioridad y ubicación donde encajan:
 | G2 | **Auditor SEO/GEO IA en tiempo real** (panel lateral en editor con score H1/H2/schema/meta + sugerencias) | Endpoint `/ai/audit` existe pero dormant (sin API key) | **ALTA** — diferenciador IA | 1 día (solo activar + UI panel) | `AIController::audit` + nuevo componente `SeoPanel.svelte` en page editor |
 | G3 | **Generación de contenido con IA respetando ADN/voz de marca** | Tabla `brand_voice` diseñada, endpoint dormant | **ALTA** — copy ventaja vs Damos | 2 días (activar + UI prompt) | `AIController::generate` + modal en editor |
 | G4 | **Traducción multi-idioma con IA** (página completa de un clic preservando estructura de bloques) | Dormant | **MEDIA** — depende si cliente lo pide | 2 días | `AIController::translate` + botón en page header |
-| G5 | **Popups programables con triggers** (time/scroll/exit, segmentos, horarios, métricas de clics) | ✗ no implementado | **MEDIA** — pocos clientes lo usan, pero el PDF lo destaca | 4-6 días | Nuevo módulo `Popups` paralelo a `Forms` |
+| G5 | **Popups programables con triggers** (time/scroll/exit, segmentos, horarios, métricas de clics) | ✅ DONE — módulo Popups + snippet snippet vanilla + agregador extendido | — | — | Movido a §1.1 / ver §2.17 |
 | G6 | **Webmail embebido** (Roundcube SSO) + gestión de cuentas correo desde panel | ✗ no implementado | **BAJA** — tus clientes usan M365, no Hostinger mail | 5-7 días si decides hacerlo | Sub-route `(protected)/tenants/[id]/mail/` con iframe SSO o deep-link |
 | G8 | **Capacitación + video tutorial + soporte 1 año** (oferta comercial, no feature técnico) | ✗ — no hay video grabado | **ALTA** comercial | 1 día de grabación con OBS | Pieza de marketing, no de código |
 | G9 | **Módulos personalizados** (directorios internos, calculadoras, intranets, reservas) | Diseño del sistema lo permite (block schema-first), pero ningún módulo construido | **BAJA** — bajo demanda | Variable | Caso a caso por cliente |
@@ -61,9 +62,10 @@ Los marco con prioridad y ubicación donde encajan:
 1. **G2 + G3 + G4** (3 días) — activas IA. Requiere solo `ANTHROPIC_API_KEY` en Railway y UI panel lateral. Ganas 3 features de venta sin tocar arquitectura.
 2. **G1** — **DONE.** Pixel analytics sin cookies, hash diario rotativo, dashboard Studio, agregador diario, retención 30 días. Falta: descargar mmdb MaxMind en producción (opcional, sin él los países quedan en NULL).
 3. **G7** — **DONE.** Scripts injection a nivel tenant + override por página, sanitizado server-side.
-4. **G8** (1 día) — graba el video tutorial con tu propio CMS administrando una página de Luqra. Sirve para onboarding + marketing.
+4. **G5** — **DONE.** Popups programables con triggers, segmentos, programación + métricas diarias. Snippet vanilla en Shadow DOM. Ver §2.17.
+5. **G8** (1 día) — graba el video tutorial con tu propio CMS administrando una página de Luqra. Sirve para onboarding + marketing.
 
-G5, G6, G9 los dejas en backlog hasta que un cliente concreto los pague.
+G6, G9 los dejas en backlog hasta que un cliente concreto los pague.
 
 ---
 
@@ -289,6 +291,79 @@ Los bots conocidos (Googlebot, Bingbot, GPTBot, AhrefsBot, etc.) **sí cuentan**
 **Atribución GeoLite2:**
 
 Este producto incluye datos GeoLite2 creados por MaxMind, disponibles bajo licencia CC BY-SA 4.0 desde <https://www.maxmind.com>.
+
+### 2.17. Popups programables (G5)
+
+Sidebar tenant → **Popups**. Módulo paralelo a Formularios para crear, programar y medir popups en el sitio del cliente.
+
+**Crear un popup:**
+
+1. Click en **Nuevo popup**. Se abre el editor de una sola página con vista previa en vivo.
+2. **Nombre interno** — solo lo ves tú en el panel; no se muestra al visitante.
+3. **Trigger** — elige uno de los 5:
+   - `time` → tras N milisegundos (típico: 2000–5000 ms).
+   - `scroll` → al alcanzar X % de scroll en la página.
+   - `exit_intent` → cuando el mouse sale por la barra superior (intención de cerrar la pestaña).
+   - `element_click` → al hacer click en un selector CSS (ej. `.cta-comprar`, `#boton-precio`).
+   - `immediate` → al cargar la página.
+4. **Frecuencia** — controla cuántas veces se muestra al mismo visitante:
+   - `always` → cada vez que se cumpla el trigger.
+   - `once_per_session` → una vez por pestaña/sesión (sessionStorage).
+   - `once_per_visitor_per_day` → una vez por visitante al día (localStorage + UTC date).
+   - `once_per_visitor_ever` → una sola vez para siempre.
+5. **Contenido + layout** — HTML del popup + uno de los 5 layouts (modal central, barra inferior, barra superior, esquina deslizable, full-screen). Permitido: `<form>`, `<input>`, `<button>`, `<iframe>` (YouTube, Vimeo, Typeform, Calendly), `<img>` HTTPS. Prohibido: `<script>`, `<base>`, `<object>`, `<embed>`. Para handlers inline solo se aceptan `yadev.dismiss()` y `yadev.cta(N)` — cualquier otro JS se rechaza con código `POPUP_FORBIDDEN_PATTERN`.
+6. **CTA** — texto + URL del botón de acción. Opcional (un popup puramente informativo no necesita CTA).
+7. **Programación** — fecha desde/hasta, días de la semana (chips), rango de horas del día. Cada eje es opcional; sin restricción = elegible siempre.
+8. **Segmentos** — URLs include/exclude (regex), países ISO2, dispositivos (desktop/mobile/tablet), tipo de visitante (first/returning/any).
+9. **Guardar borrador** o **Crear y activar**. Borradores no se muestran al visitante; activos sí.
+
+**Métricas:**
+
+En la vista del popup (`/tenants/{id}/popups/{popup_id}`) ves seis tarjetas: impresiones, clicks, conversiones, CTR (%), tasa de conversión (%), descartados. Más una línea de tiempo SVG simple y un widget en tiempo real (últimos 30 minutos). Las métricas históricas vienen de `popup_metrics_daily` (agregadas por el mismo cron `analytics:aggregate`). Los eventos crudos se purgan a los 30 días; los rollups diarios se conservan indefinidamente.
+
+Para registrar una **conversión** desde el sitio (cuando el visitante completa el objetivo, ej. envía un formulario tras ver el popup), el host llama a:
+
+```js
+window.yadevPopup.markConversion(popupId);
+```
+
+**Cómo se recoge la data:**
+
+1. El Runner inyecta un `<script src="/static-assets/popups.js" data-tenant=... data-api=...>` al final de `<body>` de cada página (paso `inject-popups`). El snippet es vanilla JS sin dependencias (~3-5 KB minified gzip).
+2. Tras `DOMContentLoaded` el snippet hashea un id de visitante por navegador (`localStorage`) + la fecha UTC del día → SHA-256 = 64 hex chars, mismo shape que el `visitor_hash` de G1.
+3. Llama a `GET /v1/track/popups?t={tenant}&p={path}&v={hash}&d={device}&vt={visitor_type}` y recibe la lista de popups elegibles para el contexto. La respuesta se cachea 60 s por (tenant, path).
+4. Para cada popup elegible programa su trigger. Cuando dispara, renderiza dentro de un Shadow DOM (`<div id="yadev-popup-N">`) para aislamiento CSS total (el host no puede romper el popup ni viceversa).
+5. Cada evento (`impression` / `click` / `conversion` / `dismissed`) se envía con `POST /v1/track/popups/{id}/event` + `keepalive: true`.
+6. A las 03:00 UTC el cron `analytics:aggregate` rola los `popup_events` del día anterior a `popup_metrics_daily` y elimina los crudos de más de 30 días.
+
+**Privacidad:**
+
+- DNT / Sec-GPC: el endpoint LIST sigue devolviendo los popups (el cliente necesita saber qué renderizar), pero el endpoint EVENT no escribe nada. El popup se muestra; las métricas no.
+- Sin IPs almacenadas. El `visitor_hash` es 64 hex chars derivado de `localStorage` + fecha UTC. Sin fingerprinting.
+- Shadow DOM `mode: "closed"` impide a scripts del host inspeccionar el contenido del popup.
+- No hay llamadas a CDNs de terceros desde el snippet — todo va contra `api.yadev.co` o el hosting del cliente.
+
+**Embed en un sitio NO administrado por YaDev:**
+
+Si quieres que un sitio externo use los popups del CMS, copia este tag al `<body>`:
+
+```html
+<script src="https://TU-SITIO.com/static-assets/popups.js"
+        data-tenant="tu-tenant-id"
+        data-api="https://api.yadev.co"
+        defer></script>
+```
+
+El dominio del sitio externo debe estar registrado en el tenant (`Settings → Dominios`) para que el endpoint público valide el Origin. Si el sitio se sirve desde otra infraestructura, sube `popups.js` (lo tienes en `runner/dist/static-assets/popups.js` después de `pnpm run build`) a la raíz pública del sitio o sírvelo desde un CDN.
+
+**Operaciones manuales del operador:**
+
+| Tarea | Comando / acción |
+|-------|------------------|
+| Re-aggregar un día específico | `php artisan analytics:aggregate --date=2026-05-27` (incluye también popups) |
+| Cambiar el rate limit del endpoint event | env `POPUPS_EVENT_RPM=600` en Railway |
+| Desactivar la inyección del snippet | env `POPUPS_INJECT_DISABLED=true` en el Runner antes del próximo publish |
+| Ampliar lista blanca de iframes | Editar `config/yadev.php` → `popups.allowed_iframe_domains` |
 
 ### 2.15. Errores comunes y cómo resolverlos
 
