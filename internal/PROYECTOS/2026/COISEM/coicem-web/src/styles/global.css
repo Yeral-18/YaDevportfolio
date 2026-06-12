@@ -1,0 +1,81 @@
+/* ══════════════════════════════════════════════════════════════════
+   COICEM S.A.S — global.css
+   Brutalist técnico: base oscura grafito, bordes duros, tipografía industrial.
+   Fuentes: Archivo Expanded (display) · IBM Plex Sans (body) · IBM Plex Mono.
+   Tokens: ver src/design-system/tokens.ts (paleta PROVISIONAL v1).
+   ══════════════════════════════════════════════════════════════════ */
+
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Paleta PROVISIONAL v1 (re-extraer con logo original — ver tokens.ts) */
+  --c-primary:    #025199;
+  --c-primary-700:#003069;
+  --c-accent:     #F79204;   /* hi-vis seguridad */
+  --c-accent-600: #DB7E00;
+  --c-metal:      #313F50;
+  --c-base:       #0B0E14;   /* base grafito */
+  --c-black:      #000000;
+  --c-light:      #EDEDE8;   /* off-white concreto */
+  --c-highlight:  #F6FCFD;
+
+  --font-display: 'Archivo Expanded', 'Archivo', system-ui, sans-serif;
+  --font-body:    'IBM Plex Sans', system-ui, sans-serif;
+  --font-mono:    'IBM Plex Mono', ui-monospace, monospace;
+
+  /* easeInOutQuint — firma de movimiento (sin rebote) */
+  --ease-quint: cubic-bezier(0.83, 0, 0.17, 1);
+  --ease-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background: var(--c-base);
+  color: var(--c-light);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;   /* señalética industrial */
+  line-height: 1.04;
+}
+
+/* Etiquetas/datos técnicos en mono */
+.mono, .spec { font-family: var(--font-mono); }
+
+/* Skip-link accesible (CSS propio, no depende de Tailwind) */
+.skip-link {
+  position: absolute; left: -9999px; top: 0; z-index: 9999;
+  padding: 0.5rem 1rem; background: var(--c-accent); color: #000;
+  font-family: var(--font-mono); font-weight: 600; text-decoration: none;
+}
+.skip-link:focus { left: 1rem; top: 1rem; outline: 2px solid var(--c-highlight); }
+
+/* Selección con color de marca */
+::selection { background: var(--c-accent); color: #000; }
+
+/* reCAPTCHA badge oculto (permitido por ToS si se da el aviso en el form) */
+.grecaptcha-badge { visibility: hidden; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

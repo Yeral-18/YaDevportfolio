@@ -1,0 +1,94 @@
+---
+import '../styles/global.css';
+import { siteConfig } from '../lib/site-config';
+import Sidebar from '../components/Sidebar.svelte';
+import Footer from '../components/Footer.astro';
+import CrosshairCursor from '../components/CrosshairCursor.svelte';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+const {
+  title = 'COICEM S.A.S | Mantenimiento Industrial Especializado · Energía e Infraestructura',
+  description = 'COICEM S.A.S — servicio de mantenimiento industrial especializado: operación, mantenimiento, construcción, energía e infraestructura para los sectores petrolero, petroquímico y energético en Colombia.',
+} = Astro.props;
+
+const siteUrl = siteConfig.domain;
+const canonical = new URL(Astro.url.pathname, siteUrl).href;
+
+// JSON-LD — solo datos reales. Sin teléfono/email/dirección (pendientes del cliente).
+const orgJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
+  name: siteConfig.legalName,
+  alternateName: siteConfig.shortName,
+  slogan: siteConfig.tagline,
+  url: siteUrl,
+  description,
+  areaServed: { '@type': 'Country', name: 'Colombia' },
+  makesOffer: siteConfig.areas.map((a) => ({
+    '@type': 'Offer',
+    itemOffered: { '@type': 'Service', name: a.name },
+  })),
+};
+const siteJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  url: siteUrl,
+  name: siteConfig.legalName,
+  inLanguage: 'es-CO',
+};
+---
+
+<!doctype html>
+<html lang="es-CO">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="theme-color" content="#0B0E14" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:locale" content="es_CO" />
+    <meta property="og:site_name" content={siteConfig.legalName} />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <script type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
+    <script type="application/ld+json" set:html={JSON.stringify(siteJsonLd)} />
+  </head>
+  <body>
+    <a href="#main-content" class="skip-link">Ir al contenido principal</a>
+
+    <Sidebar client:load />
+
+    <div class="content-shell">
+      <main id="main-content">
+        <slot />
+      </main>
+      <Footer />
+    </div>
+
+    <CrosshairCursor client:idle />
+
+    <style>
+      /* Offset por el riel-índice (desktop) y la top-bar móvil del Sidebar. */
+      .content-shell { padding-top: 52px; }            /* top-bar móvil (52px) */
+      @media (min-width: 1024px) {
+        .content-shell { padding-top: 0; margin-left: 210px; }  /* riel 210px */
+      }
+    </style>
+  </body>
+</html>

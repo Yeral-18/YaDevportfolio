@@ -1,0 +1,349 @@
+---
+/**
+ * Hero.astro — "Title block" brutalista (cajetín técnico / panel de instrumentos).
+ *
+ * Componente ESTÁTICO (cero JS de cliente). Estética de hoja de datos / plano técnico:
+ * rejilla de columnas visible, bordes duros 1px, mono para datos.
+ *
+ * ⚠️ CONDICIÓN CRÍTICA (CLAUDE.md "cero números inventados"):
+ *    siteConfig.telemetry.{continuidad,mwMantenidos,plantas} pueden ser null.
+ *    Si null → se muestra "—" + etiqueta mono "PENDIENTE". NUNCA se inventa un valor.
+ *
+ * El despiece del logo se inyecta vía <slot name="visual" /> desde index.astro.
+ * Si no llega slot, el contenedor queda como marco técnico vacío.
+ */
+import { siteConfig } from '../lib/site-config';
+
+const { shortName, legalName, tagline, sector, domain } = siteConfig;
+
+// Dominio "limpio" (sin protocolo) para el eyebrow mono.
+const domainLabel = domain.replace(/^https?:\/\//, '');
+
+// Telemetría: cada celda resuelve a un valor o al placeholder "—".
+const telemetryCells = [
+  { value: siteConfig.telemetry.continuidad,  label: '% CONTINUIDAD OPERATIVA' },
+  { value: siteConfig.telemetry.mwMantenidos, label: 'MW MANTENIDOS' },
+  { value: siteConfig.telemetry.plantas,      label: 'PLANTAS INTERVENIDAS' },
+];
+---
+
+<section id="inicio" class="hero" aria-labelledby="hero-title">
+  <!-- Rejilla técnica de fondo (decorativa) -->
+  <div class="hero__rules" aria-hidden="true">
+    <span></span><span></span><span></span><span></span>
+  </div>
+
+  <div class="hero__frame">
+    <!-- Columna de contenido -->
+    <div class="hero__content">
+      <p class="hero__eyebrow">
+        {legalName} · {domainLabel} · {tagline.toUpperCase()}
+      </p>
+
+      <h1 id="hero-title" class="hero__title">
+        MANTENIMIENTO INDUSTRIAL <span class="hero__title-key">DE PRECISIÓN</span>
+      </h1>
+
+      <p class="hero__subtitle">{sector}</p>
+
+      <div class="hero__ctas">
+        <a class="hero__cta hero__cta--primary" href="#areas">VER ÁREAS</a>
+        <a class="hero__cta hero__cta--ghost" href="#contacto">COTIZAR</a>
+      </div>
+
+      <p class="hero__meta" aria-hidden="true">
+        REF · {shortName}-HERO-01 · TITLE BLOCK
+      </p>
+    </div>
+
+    <!-- Zona reservada para el despiece del logo -->
+    <div class="hero__visual" role="img" aria-label={`Despiece técnico del logotipo de ${shortName}`}>
+      <span class="hero__visual-tag" aria-hidden="true">LOGO / DESPIECE</span>
+      <slot name="visual" />
+    </div>
+  </div>
+
+  <!-- Telemetry strip -->
+  <div class="hero__telemetry" aria-label="Indicadores operativos">
+    {telemetryCells.map((cell) => (
+      <div class="hero__cell">
+        {cell.value != null ? (
+          <span class="hero__num hero__num--live">{cell.value}</span>
+        ) : (
+          <span class="hero__num hero__num--empty">
+            —
+            <span class="hero__pending">PENDIENTE</span>
+          </span>
+        )}
+        <span class="hero__label">{cell.label}</span>
+      </div>
+    ))}
+  </div>
+</section>
+
+<style>
+  /* ── Tipografías (fallback robusto si no se cargan las webfonts) ── */
+  .hero {
+    --c-base:   #0B0E14;
+    --c-blue:   #025199;
+    --c-hivis:  #F79204;
+    --c-metal:  #313F50;
+    --c-metal2: #4B6881;
+    --c-text:   #EDEDE8;
+
+    --f-display: 'Archivo Expanded', 'Archivo', 'Arial Black', sans-serif;
+    --f-body:    'IBM Plex Sans', system-ui, -apple-system, sans-serif;
+    --f-mono:    'IBM Plex Mono', 'Courier New', monospace;
+
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--c-base);
+    color: var(--c-text);
+    overflow: hidden;
+    border-bottom: 1px solid var(--c-metal);
+  }
+
+  /* ── Rejilla de columnas visible (reglas de plano técnico) ── */
+  .hero__rules {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    pointer-events: none;
+    z-index: 0;
+  }
+  .hero__rules span {
+    border-left: 1px solid var(--c-metal);
+    opacity: 0.45;
+  }
+  .hero__rules span:last-child {
+    border-right: 1px solid var(--c-metal);
+  }
+
+  /* ── Marco principal (title block) ── */
+  .hero__frame {
+    position: relative;
+    z-index: 1;
+    flex: 1 1 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    align-items: stretch;
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    padding: clamp(5rem, 10vh, 8rem) clamp(1.25rem, 5vw, 4rem) clamp(2rem, 5vh, 4rem);
+    gap: 0;
+  }
+
+  .hero__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: clamp(1.5rem, 4vw, 3.5rem);
+    border-right: 1px solid var(--c-metal);
+  }
+
+  .hero__eyebrow {
+    margin: 0 0 1.75rem;
+    font-family: var(--f-mono);
+    font-size: clamp(0.62rem, 0.9vw, 0.78rem);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--c-metal2);
+    line-height: 1.6;
+  }
+
+  .hero__title {
+    margin: 0;
+    font-family: var(--f-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--c-text);
+    letter-spacing: 0.01em;
+    line-height: 0.98;
+    font-size: clamp(2.4rem, 6.5vw, 5.25rem);
+  }
+  .hero__title-key {
+    color: var(--c-hivis);
+  }
+
+  .hero__subtitle {
+    margin: 1.75rem 0 0;
+    max-width: 46ch;
+    font-family: var(--f-body);
+    font-size: clamp(0.95rem, 1.4vw, 1.12rem);
+    line-height: 1.55;
+    color: rgba(237, 237, 232, 0.8);
+  }
+
+  /* ── CTAs con bordes duros ── */
+  .hero__ctas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin-top: 2.5rem;
+  }
+  .hero__cta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.95rem 1.9rem;
+    font-family: var(--f-mono);
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid var(--c-hivis);
+    border-radius: 0;
+    transition: background-color 0.15s linear, color 0.15s linear;
+  }
+  .hero__cta--primary {
+    background: var(--c-hivis);
+    color: #000;
+  }
+  .hero__cta--primary:hover,
+  .hero__cta--primary:focus-visible {
+    background: #ffae3a;
+  }
+  .hero__cta--ghost {
+    background: transparent;
+    color: var(--c-text);
+    border-color: var(--c-text);
+    border-left: 0;
+  }
+  .hero__cta--ghost:hover,
+  .hero__cta--ghost:focus-visible {
+    background: var(--c-text);
+    color: var(--c-base);
+  }
+  .hero__cta:focus-visible {
+    outline: 2px solid var(--c-blue);
+    outline-offset: 2px;
+  }
+
+  .hero__meta {
+    margin: 2.5rem 0 0;
+    font-family: var(--f-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.18em;
+    color: var(--c-metal);
+    text-transform: uppercase;
+  }
+
+  /* ── Zona del despiece del logo (marco técnico) ── */
+  .hero__visual {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 280px;
+    border: 1px solid var(--c-metal);
+    border-left: 0;
+    background:
+      repeating-linear-gradient(
+        45deg,
+        transparent 0 11px,
+        rgba(49, 63, 80, 0.06) 11px 12px
+      );
+  }
+  .hero__visual-tag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0.35rem 0.6rem;
+    font-family: var(--f-mono);
+    font-size: 0.6rem;
+    letter-spacing: 0.18em;
+    color: var(--c-metal2);
+    border-right: 1px solid var(--c-metal);
+    border-bottom: 1px solid var(--c-metal);
+  }
+  .hero__visual :global(svg),
+  .hero__visual :global(img) {
+    max-width: 78%;
+    max-height: 78%;
+    height: auto;
+  }
+
+  /* ── Telemetry strip ── */
+  .hero__telemetry {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--c-metal);
+  }
+  .hero__cell {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    padding: clamp(1.4rem, 3vw, 2.4rem) clamp(1.25rem, 4vw, 3rem);
+    border-left: 1px solid var(--c-metal);
+  }
+  .hero__cell:first-child {
+    border-left: 0;
+  }
+  .hero__num {
+    font-family: var(--f-mono);
+    font-weight: 600;
+    font-size: clamp(2rem, 4.5vw, 3.4rem);
+    line-height: 1;
+    display: flex;
+    align-items: baseline;
+    gap: 0.6rem;
+  }
+  .hero__num--live  { color: var(--c-hivis); }
+  .hero__num--empty { color: var(--c-metal2); }
+  .hero__pending {
+    font-size: 0.6rem;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    color: var(--c-metal2);
+    border: 1px solid var(--c-metal);
+    padding: 0.18rem 0.4rem;
+    align-self: center;
+  }
+  .hero__label {
+    font-family: var(--f-mono);
+    font-size: clamp(0.6rem, 0.9vw, 0.72rem);
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--c-metal2);
+  }
+
+  /* ── Responsivo ── */
+  @media (max-width: 860px) {
+    .hero__rules { grid-template-columns: repeat(2, 1fr); }
+    .hero__frame {
+      grid-template-columns: 1fr;
+    }
+    .hero__content {
+      border-right: 0;
+      padding-right: 0;
+      padding-bottom: clamp(2rem, 6vw, 3rem);
+      border-bottom: 1px solid var(--c-metal);
+    }
+    .hero__visual {
+      border-left: 1px solid var(--c-metal);
+      margin-top: 2rem;
+      min-height: 220px;
+    }
+  }
+
+  @media (max-width: 540px) {
+    .hero__ctas { flex-direction: column; }
+    .hero__cta { width: 100%; }
+    .hero__cta--ghost { border-left: 1px solid var(--c-text); border-top: 0; }
+    .hero__telemetry { grid-template-columns: 1fr; }
+    .hero__cell { border-left: 0; border-top: 1px solid var(--c-metal); }
+    .hero__cell:first-child { border-top: 0; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__cta { transition: none; }
+  }
+</style>

@@ -97,7 +97,7 @@ YaDevportfolio/
 | Cliente | Industria | URL | Hosting | Correo | Estado |
 |---------|-----------|-----|---------|--------|--------|
 | ECOMAG S.A.S | Ingeniería Civil + Ambiental | ecomagsas.com | Pendiente | — | Completo |
-| Multiservicios P&J | Transporte + Obras + Ambiental | multiserviciospj.com | Hostinger | Microsoft 365 | En producción |
+| Multiservicios P&J | Transporte + Obras + Ambiental | multiserviciospj.com | Hostinger | Microsoft 365 | ⚰️ Retirado — reemplazado por LUQRA (rebrand) |
 | PORON S.A.S | Por definir | poronsas.com | Pendiente | — | Dominio activo |
 | COICEM | Por definir | coisem.com | Pendiente | — | Dominio activo |
 
@@ -135,23 +135,29 @@ Cada proyecto SIEMPRE incluye estos 8 entregables:
 ## REGLAS CRÍTICAS
 
 ### 1. DISEÑO ÚNICO POR PROYECTO
-Cada sitio debe parecer hecho por una agencia diferente con un director creativo diferente.
 
-**Lo que define la marca del CLIENTE** (puede coincidir entre proyectos):
-- Colores, tipografía, logo → los define la identidad corporativa del cliente
+El diseño único ya NO se decide a ojo. Se genera con el **Motor de Dirección
+Creativa**. Antes de escribir cualquier componente visual:
 
-**Lo que DEBE ser único por proyecto** (nuestra responsabilidad):
-- Estructura/layout de secciones
-- Estilo de hero (split, centered, full-video, parallax, immersive, etc.)
-- Patrón de grids/cards (bento, zigzag, masonry, carousel, timeline, etc.)
-- Tipo de animaciones (fade-up, slide-left, scale-in, blur-in, clip-reveal, etc.)
-- Hover effects (lift, glow, tilt 3D, border-color, expand, etc.)
-- Estilo de navbar (floating, transparent, sidebar, pill, sticky, etc.)
-- Estilo de footer (mega, minimal, CTA banner, mapa, etc.)
-- Cursor personalizado (por industria)
-- Transiciones entre secciones (waves, diagonal, sharp, gradient, etc.)
+1. Leer `.claude/CREATIVE_ENGINE.md` y `.claude/PROJECT_DNA_LOG.md`.
+2. Completar el **RITUAL** (Sección 4 del motor): elegir los 5 ejes creativos.
+3. **Verificar colisión:** la tripleta Director+Composición+Movimiento NO puede
+   repetir ninguna fila del log. Si choca → regenerar.
+4. Registrar el ADN en `PROJECT_DNA_LOG.md` ANTES de codear.
+5. Mostrar el bloque del ritual al usuario.
 
-**Test final:** Si dos sitios puestos lado a lado parecen del mismo diseñador → REDISEÑAR
+**Separación SISTEMA vs DISEÑO** (regla nueva, crítica):
+- **SISTEMA** (SEO, accesibilidad, fixes Hostinger, PHP mail, DNS, tokens, panel
+  YaDev) = idéntico siempre, copiar del boilerplate, NO innovar.
+- **DISEÑO** (hero, composición, grids, navegación, movimiento, cursor) = único
+  siempre, generado por el motor, PROHIBIDO copiar de otro proyecto.
+
+**El prompt `PROMPT_ECOMAG_WEBSITE.md` es un EJEMPLO, no un molde.** Úsalo solo
+como checklist de piezas de SISTEMA. Su estructura visual (navbar+hero+grid+
+footer) pertenece a ECOMAG y no se reutiliza para otros clientes.
+
+**Test final:** Si dos sitios lado a lado parecen del mismo diseñador → el motor
+falló o no se corrió → REDISEÑAR.
 
 ### 2. NO PARECER IA
 - Agregar asimetría intencional, espaciado no-uniforme
@@ -192,7 +198,70 @@ Cada sitio debe incluir un botón lateral oculto con acceso a:
 - Hoja membretada (si aplica)
 
 ### 5. TOKENS SINCRONIZADOS
-Si cambias colores en el sitio → actualizar brandbook + firma + tokens.ts
+Si cambias colores en el sitio → actualizar brandbook + firma + tokens.ts.
+Esto cubre también **datos de contacto** (email, teléfono, dirección): viven en
+un único `src/lib/site-config.ts` por proyecto. Nunca hardcodear contacto en
+componentes, JSON-LD, contact.php ni footer.
+
+---
+
+## QA AUTOMATIZADO (gratuito, antes de cada deploy)
+
+Herramientas open-source, cero costo, corren desde Claude Code. Ejecutar SIEMPRE
+antes del PASO 6 (Deploy) del workflow.
+
+### Accesibilidad — Pa11y
+```bash
+npx pa11y http://localhost:4321 --standard WCAG2AA
+```
+Verifica la Regla #2 de código (WCAG AA). Corregir TODO error antes de deploy.
+Foco especial: formulario de contacto y menú móvil.
+
+### Performance + SEO — Lighthouse
+```bash
+npx @lhci/cli autorun --collect.url=http://localhost:4321 \
+  --assert.assertions.categories:performance=0.95 \
+  --assert.assertions.categories:seo=0.95 \
+  --assert.assertions.categories:accessibility=0.95
+```
+Umbral mínimo de agencia premium: **95** en performance, SEO y accesibilidad.
+Si baja de 95, optimizar antes de subir a Hostinger.
+
+### Optimización de imágenes — Sharp + SVGO
+```bash
+# Convertir fotos a WebP calidad 80, redimensionar logos a 400px
+npx sharp-cli -i "public/images/**/*.{jpg,png}" -o public/images/ --format webp --quality 80
+
+# Limpiar SVGs (ej. las hojas de ECOMAG vienen sucias de Illustrator)
+npx svgo -f public/images/ -r
+```
+Cumple la Regla #12 (fotos equipo ≤100KB) y #13 (logos ≥400px) sin APIs de pago.
+
+### Validación de reglas Hostinger — script propio
+```bash
+node scripts/check-hostinger.mjs
+```
+Valida automáticamente las 8 reglas no-obvias de Hostinger antes de buildear.
+
+> Regla: **ningún deploy** sin Pa11y limpio + Lighthouse ≥95 + check-hostinger OK.
+
+---
+
+## HERRAMIENTAS / MCP CONECTABLES (gratis)
+
+| Herramienta | Tipo | Para qué |
+|---|---|---|
+| **Playwright MCP** | MCP gratis | Claude *ve* el sitio: screenshots, valida render, compara contra proyectos previos (cierra el loop de la Regla #1) |
+| **Filesystem MCP** | MCP gratis | Manejo del boilerplate centralizado y copia de templates |
+| **Pa11y / Lighthouse / Sharp / SVGO** | CLI npx | QA arriba — no requieren instalación global |
+| **Lenis** | npm | Smooth scroll opcional para Eje Movimiento "Fluido" |
+
+Instalar Playwright MCP:
+```bash
+claude mcp add playwright -- npx -y @playwright/mcp@latest
+```
+
+> Nada de esto cuesta suscripción. El único costo es el uso de tokens de Claude.
 
 ---
 

@@ -1,0 +1,13 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import Areas from '../components/Areas.astro';
+import LogoExploded from '../components/LogoExploded.svelte';
+---
+
+<Layout>
+  <Hero>
+    <LogoExploded slot="visual" client:visible />
+  </Hero>
+  <Areas />
+</Layout>

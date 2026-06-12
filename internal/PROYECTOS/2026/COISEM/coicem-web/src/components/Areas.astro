@@ -1,0 +1,175 @@
+---
+/**
+ * Areas.astro — Índice técnico de las 5 áreas operativas de COICEM.
+ * Estética: datasheet / despiece brutalista. NO cards con sombra.
+ * Columna de margen con número mono naranja + columna principal editorial.
+ * Cada bloque lleva id={area.id} para el scroll-spy del Sidebar.
+ */
+import { siteConfig } from '../lib/site-config';
+
+const descriptions: Record<string, string> = {
+  operacion:
+    'Operación de activos industriales, energéticos y de infraestructura con disponibilidad y continuidad.',
+  mantenimiento:
+    'Mantenimiento preventivo, correctivo y predictivo especializado para sector petrolero, petroquímico y energético.',
+  construccion:
+    'Construcción y montaje de obra civil, mecánica y eléctrica para proyectos industriales.',
+  energia:
+    'Soluciones de energía e instrumentación industrial, incluyendo eficiencia y energías renovables.',
+  infraestructura:
+    'Infraestructura industrial y conexa, con gestión ambiental y seguridad.',
+};
+
+const total = String(siteConfig.areas.length).padStart(2, '0');
+---
+
+<section id="areas" class="areas" aria-labelledby="areas-title">
+  <div class="areas__inner">
+    <header class="areas__head">
+      <p class="areas__eyebrow mono">ÍNDICE DE ÁREAS · 01&ndash;{total}</p>
+      <h2 id="areas-title" class="areas__title">Áreas Operativas</h2>
+    </header>
+
+    <ol class="areas__list" role="list">
+      {siteConfig.areas.map((area) => (
+        <li id={area.id} class="area" role="listitem">
+          <div class="area__num mono" aria-hidden="true">{area.n}</div>
+          <div class="area__body">
+            <h3 class="area__name">{area.name}</h3>
+            <p class="area__desc">{descriptions[area.id]}</p>
+          </div>
+          <div class="area__ref mono" aria-hidden="true">{area.id}</div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .areas {
+    background: var(--c-base);
+    color: var(--c-light);
+    border-top: 1px solid var(--c-metal);
+    padding: clamp(3.5rem, 8vw, 7rem) 0;
+  }
+
+  .areas__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 clamp(1.25rem, 4vw, 3rem);
+  }
+
+  /* ── Encabezado ─────────────────────────────────────────────── */
+  .areas__head {
+    border-bottom: 1px solid var(--c-metal);
+    padding-bottom: 1.5rem;
+    margin-bottom: 0;
+  }
+
+  .areas__eyebrow {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    letter-spacing: 0.18em;
+    color: var(--c-accent);
+    margin: 0 0 0.75rem;
+  }
+
+  .areas__title {
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    line-height: 1.02;
+    font-size: clamp(2rem, 6vw, 4.25rem);
+    color: var(--c-light);
+    margin: 0;
+  }
+
+  /* ── Lista / despiece ───────────────────────────────────────── */
+  .areas__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    counter-reset: area;
+  }
+
+  .area {
+    display: grid;
+    grid-template-columns: 5.5rem 1fr auto;
+    align-items: start;
+    gap: clamp(1rem, 3vw, 2.5rem);
+    padding: clamp(1.75rem, 4vw, 2.75rem) 0;
+    border-bottom: 1px solid var(--c-metal);
+    position: relative;
+  }
+
+  /* leader-line dura entre número y cuerpo */
+  .area::before {
+    content: '';
+    position: absolute;
+    left: 5.5rem;
+    top: 0;
+    bottom: 0;
+    border-left: 1px solid var(--c-metal);
+  }
+
+  .area__num {
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: clamp(1.5rem, 4vw, 2.25rem);
+    color: var(--c-accent);
+    line-height: 1;
+    letter-spacing: 0.02em;
+  }
+
+  .area__body {
+    padding-left: clamp(1rem, 3vw, 2.5rem);
+    max-width: 60ch;
+  }
+
+  .area__name {
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+    line-height: 1.05;
+    font-size: clamp(1.35rem, 3.5vw, 2.1rem);
+    color: var(--c-light);
+    margin: 0 0 0.65rem;
+  }
+
+  .area__desc {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+    line-height: 1.55;
+    color: #C9CCC4;
+    margin: 0;
+  }
+
+  /* referencia técnica (id) en la columna de la derecha */
+  .area__ref {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--c-metal);
+    align-self: center;
+    white-space: nowrap;
+  }
+
+  /* ── Responsivo ─────────────────────────────────────────────── */
+  @media (max-width: 720px) {
+    .area {
+      grid-template-columns: 3.25rem 1fr;
+      gap: 1rem;
+    }
+    .area::before { left: 3.25rem; }
+    .area__body { padding-left: 1rem; }
+    .area__ref { display: none; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .areas { scroll-behavior: auto; }
+  }
+</style>

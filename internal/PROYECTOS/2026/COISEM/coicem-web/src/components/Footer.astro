@@ -1,0 +1,293 @@
+---
+/**
+ * Footer.astro — Footer brutalista de COICEM.
+ * Borde superior duro, fondo negro del logo. Datos técnicos en mono.
+ * ⚠️ Contacto puede ser null → "PENDIENTE" (mono #4B6881). Cero datos inventados.
+ */
+import { siteConfig } from '../lib/site-config';
+
+const { contact, tagline, areas, credit } = siteConfig;
+
+// Saneo de WhatsApp: solo dígitos para wa.me/
+const waDigits = contact.whatsapp ? String(contact.whatsapp).replace(/\D/g, '') : null;
+const telDigits = contact.phone ? String(contact.phone).replace(/[^\d+]/g, '') : null;
+
+const year = 2026;
+---
+
+<footer class="ftr" role="contentinfo">
+  <div class="ftr__inner">
+
+    <!-- Identidad -->
+    <div class="ftr__brand">
+      <p class="ftr__wordmark">COICEM</p>
+      <p class="ftr__tagline mono">{tagline}</p>
+    </div>
+
+    <!-- Contacto -->
+    <section id="contacto" class="ftr__col" aria-labelledby="ftr-contacto">
+      <h2 id="ftr-contacto" class="ftr__h">Contacto</h2>
+      <dl class="ftr__data">
+        <div class="ftr__row">
+          <dt class="mono ftr__dt">Email</dt>
+          <dd class="ftr__dd">
+            {contact.email
+              ? <a href={`mailto:${contact.email}`} class="ftr__link">{contact.email}</a>
+              : <span class="mono ftr__pending">PENDIENTE</span>}
+          </dd>
+        </div>
+        <div class="ftr__row">
+          <dt class="mono ftr__dt">Tel</dt>
+          <dd class="ftr__dd">
+            {contact.phone
+              ? <a href={`tel:${telDigits}`} class="ftr__link mono">{contact.phone}</a>
+              : <span class="mono ftr__pending">PENDIENTE</span>}
+          </dd>
+        </div>
+        <div class="ftr__row">
+          <dt class="mono ftr__dt">WhatsApp</dt>
+          <dd class="ftr__dd">
+            {waDigits
+              ? <a href={`https://wa.me/${waDigits}`} class="ftr__link mono" rel="noopener" target="_blank">{contact.whatsapp}</a>
+              : <span class="mono ftr__pending">PENDIENTE</span>}
+          </dd>
+        </div>
+        <div class="ftr__row">
+          <dt class="mono ftr__dt">Dirección</dt>
+          <dd class="ftr__dd">
+            {contact.address
+              ? <span class="ftr__addr">{contact.address}</span>
+              : <span class="mono ftr__pending">PENDIENTE</span>}
+          </dd>
+        </div>
+        <div class="ftr__row">
+          <dt class="mono ftr__dt">Horario</dt>
+          <dd class="ftr__dd">
+            {contact.schedule
+              ? <span class="mono ftr__addr">{contact.schedule}</span>
+              : <span class="mono ftr__pending">PENDIENTE</span>}
+          </dd>
+        </div>
+      </dl>
+      <p class="ftr__note mono">Datos de contacto en confirmación con el cliente.</p>
+    </section>
+
+    <!-- Áreas -->
+    <nav class="ftr__col" aria-label="Áreas operativas">
+      <h2 class="ftr__h">Áreas</h2>
+      <ul class="ftr__areas">
+        {areas.map((area) => (
+          <li>
+            <a href={`#${area.id}`} class="ftr__link ftr__area-link">
+              <span class="mono ftr__area-n">{area.n}</span>
+              <span>{area.name}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+  </div>
+
+  <!-- Línea legal -->
+  <div class="ftr__legal">
+    <div class="ftr__legal-inner">
+      <p class="mono ftr__legal-txt">© {year} COICEM S.A.S</p>
+      <p class="mono ftr__legal-txt">NIT: PENDIENTE</p>
+      <p class="mono ftr__legal-txt">coicem.com</p>
+      <p class="ftr__credit">
+        Desarrollado por
+        <a href={credit.url} class="ftr__link" rel="noopener" target="_blank">YaDev</a>
+      </p>
+    </div>
+  </div>
+</footer>
+
+<style>
+  .ftr {
+    background: #000000;
+    color: var(--c-light);
+    border-top: 1px solid var(--c-metal);
+  }
+
+  .ftr__inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 4vw, 3rem);
+    display: grid;
+    grid-template-columns: 1.2fr 1.4fr 0.9fr;
+    gap: clamp(2rem, 5vw, 4rem);
+    align-items: start;
+  }
+
+  /* ── Marca ──────────────────────────────────────────────────── */
+  .ftr__wordmark {
+    font-family: var(--font-display);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    line-height: 1;
+    margin: 0 0 0.75rem;
+    color: var(--c-light);
+  }
+
+  .ftr__tagline {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #8A93A0;
+    margin: 0;
+    max-width: 24ch;
+    line-height: 1.5;
+  }
+
+  /* ── Columnas ───────────────────────────────────────────────── */
+  .ftr__h {
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.95rem;
+    color: var(--c-light);
+    margin: 0 0 1.25rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--c-metal);
+  }
+
+  /* ── Contacto ───────────────────────────────────────────────── */
+  .ftr__data { margin: 0; }
+
+  .ftr__row {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: 0.75rem;
+    padding: 0.55rem 0;
+    border-bottom: 1px solid #161B24;
+    align-items: baseline;
+  }
+
+  .ftr__dt {
+    font-family: var(--font-mono);
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #4B6881;
+    margin: 0;
+  }
+
+  .ftr__dd {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    word-break: break-word;
+  }
+
+  .ftr__addr { color: #C9CCC4; }
+
+  .ftr__pending {
+    font-family: var(--font-mono);
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    color: #4B6881;
+  }
+
+  .ftr__note {
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.04em;
+    color: #4B6881;
+    margin: 1rem 0 0;
+    line-height: 1.5;
+  }
+
+  /* ── Áreas ──────────────────────────────────────────────────── */
+  .ftr__areas {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .ftr__areas li { border-bottom: 1px solid #161B24; }
+
+  .ftr__area-link {
+    display: flex;
+    align-items: baseline;
+    gap: 0.85rem;
+    padding: 0.6rem 0;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+  }
+
+  .ftr__area-n {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    color: var(--c-accent);
+    letter-spacing: 0.04em;
+  }
+
+  /* ── Links ──────────────────────────────────────────────────── */
+  .ftr__link {
+    color: var(--c-light);
+    text-decoration: none;
+    transition: color 0.2s var(--ease-quint);
+  }
+
+  .ftr__link:hover,
+  .ftr__link:focus-visible {
+    color: var(--c-accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .ftr__link:focus-visible {
+    outline: 2px solid var(--c-accent);
+    outline-offset: 2px;
+  }
+
+  /* ── Legal ──────────────────────────────────────────────────── */
+  .ftr__legal {
+    border-top: 1px solid var(--c-metal);
+  }
+
+  .ftr__legal-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.25rem clamp(1.25rem, 4vw, 3rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.75rem 1.75rem;
+  }
+
+  .ftr__legal-txt {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    color: #8A93A0;
+    margin: 0;
+  }
+
+  .ftr__credit {
+    font-family: var(--font-mono);
+    font-size: 0.72rem;
+    letter-spacing: 0.06em;
+    color: #8A93A0;
+    margin: 0;
+    margin-left: auto;
+  }
+
+  /* ── Responsivo ─────────────────────────────────────────────── */
+  @media (max-width: 880px) {
+    .ftr__inner { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 520px) {
+    .ftr__row { grid-template-columns: 6rem 1fr; }
+    .ftr__credit { margin-left: 0; }
+  }
+</style>
