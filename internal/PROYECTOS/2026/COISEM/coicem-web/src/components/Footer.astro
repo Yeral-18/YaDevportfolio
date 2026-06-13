@@ -130,6 +130,11 @@ const socials = [
         loading="lazy"
         decoding="async"
       />
+      <ul class="chips chips--stack" aria-label="Certificaciones adicionales">
+        {certifications.filter((c) => !c.code.startsWith('ISO')).map((c) => (
+          <li class="chip mono">+ {c.code}</li>
+        ))}
+      </ul>
       <p class="cert__cap mono">Certificado por {certifier}</p>
     </div>
 
