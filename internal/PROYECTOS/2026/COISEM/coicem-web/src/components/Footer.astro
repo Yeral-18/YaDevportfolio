@@ -61,8 +61,13 @@ const socials = [
 
     <!-- Brand -->
     <div class="col col--brand">
-      <p class="brand__mark">COICEM</p>
-      <p class="brand__tag mono">{tagline}</p>
+      <img
+        class="brand__logo"
+        src="/images/coicem-logo.png"
+        alt={`${shortName} S.A.S — ${tagline}`}
+        loading="lazy"
+        decoding="async"
+      />
 
       <ul class="chips" aria-label="Certificaciones">
         {certifications.map((c) => (
@@ -293,15 +298,12 @@ const socials = [
   }
 
   /* ── Brand ──────────────────────────────────────────────── */
-  .brand__mark {
-    font-family: var(--font-display);
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
-    line-height: 1;
-    margin: 0 0 0.75rem;
-    color: var(--c-light);
+  .brand__logo {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    margin: 0 0 1.25rem;
   }
   .brand__tag {
     font-family: var(--font-mono);
