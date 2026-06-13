@@ -1,0 +1,77 @@
+---
+/**
+ * MisionVision — texto oficial del cliente (site-config.mission / .vision).
+ * Brutalist editorial: dos columnas con reglas duras, labels mono, sin sombras.
+ */
+import { siteConfig } from '../lib/site-config';
+---
+
+<section id="nosotros" class="mv" aria-labelledby="mv-title">
+  <div class="mv__inner">
+    <header class="mv__head">
+      <p class="mv__eyebrow">// PROPÓSITO · COICEM S.A.S</p>
+      <h2 id="mv-title" class="mv__title">Quiénes somos</h2>
+    </header>
+
+    <div class="mv__grid">
+      <article class="mv__col">
+        <div class="mv__tag"><span class="mv__n">M—01</span> MISIÓN</div>
+        <p class="mv__text">{siteConfig.mission}</p>
+      </article>
+      <article class="mv__col mv__col--alt">
+        <div class="mv__tag"><span class="mv__n">V—2030</span> VISIÓN</div>
+        <p class="mv__text">{siteConfig.vision}</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<style>
+  .mv {
+    background: var(--c-black);
+    border-top: 1px solid var(--c-metal);
+    border-bottom: 1px solid var(--c-metal);
+    padding: clamp(3.5rem, 8vw, 7rem) clamp(1.25rem, 4vw, 4rem);
+  }
+  .mv__inner { max-width: 1320px; margin: 0 auto; }
+
+  .mv__head { margin-bottom: clamp(2rem, 5vw, 3.5rem); }
+  .mv__eyebrow {
+    font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.18em;
+    color: var(--c-accent); text-transform: uppercase; margin: 0 0 0.75rem;
+  }
+  .mv__title {
+    font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+    font-size: clamp(1.8rem, 5vw, 3.25rem); color: var(--c-highlight);
+    margin: 0; letter-spacing: -0.01em; line-height: 1.02;
+  }
+
+  .mv__grid {
+    display: grid; grid-template-columns: 1fr; gap: 0;
+    border: 1px solid var(--c-metal);
+  }
+  @media (min-width: 860px) {
+    .mv__grid { grid-template-columns: 1fr 1fr; }
+    .mv__col--alt { border-left: 1px solid var(--c-metal); }
+  }
+  .mv__col {
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border-top: 0;
+  }
+  @media (max-width: 859px) {
+    .mv__col--alt { border-top: 1px solid var(--c-metal); }
+  }
+
+  .mv__tag {
+    font-family: var(--font-mono); font-size: 0.85rem; letter-spacing: 0.1em;
+    color: var(--c-highlight); text-transform: uppercase;
+    border-bottom: 1px solid var(--c-metal); padding-bottom: 0.85rem; margin-bottom: 1.25rem;
+    display: flex; align-items: baseline; gap: 0.6rem;
+  }
+  .mv__n { color: var(--c-accent); font-size: 0.72rem; }
+
+  .mv__text {
+    font-family: var(--font-body); font-size: clamp(0.95rem, 1.4vw, 1.08rem);
+    line-height: 1.6; color: rgba(237, 237, 232, 0.82); margin: 0;
+  }
+</style>

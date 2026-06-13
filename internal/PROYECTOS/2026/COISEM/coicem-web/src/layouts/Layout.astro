@@ -4,6 +4,8 @@ import { siteConfig } from '../lib/site-config';
 import Sidebar from '../components/Sidebar.svelte';
 import Footer from '../components/Footer.astro';
 import CrosshairCursor from '../components/CrosshairCursor.svelte';
+import WhatsAppButton from '../components/WhatsAppButton.svelte';
+import ScrollToTop from '../components/ScrollToTop.svelte';
 
 interface Props {
   title?: string;
@@ -81,6 +83,8 @@ const siteJsonLd = {
       <Footer />
     </div>
 
+    <WhatsAppButton client:idle />
+    <ScrollToTop client:idle />
     <CrosshairCursor client:idle />
 
     <style>

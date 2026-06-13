@@ -130,6 +130,11 @@ Cada proyecto SIEMPRE incluye estos 8 entregables:
 7. **Formulario de contacto** — 2 botones: email (PHP mail()) + WhatsApp (formateado)
 8. **OG Image** — 1200x630, logo grande centrado, fondo blanco/marca
 
+> 📘 **Catálogo COMPLETO y replicable de TODO lo que lleva cada sitio** (componentes
+> obligatorios, footer + certificaciones Bureau Veritas, panel YaDev, los 8 entregables y
+> sus scripts Python, SEO, checklist "no puede faltar"): ver **`.claude/YADEV_STANDARD.md`**.
+> Es el estándar de SISTEMA para COICEM y todo cliente futuro.
+
 ---
 
 ## REGLAS CRÍTICAS

@@ -1,103 +1,204 @@
 ---
 /**
- * Footer.astro — Footer brutalista de COICEM.
- * Borde superior duro, fondo negro del logo. Datos técnicos en mono.
- * ⚠️ Contacto puede ser null → "PENDIENTE" (mono #4B6881). Cero datos inventados.
+ * Footer.astro — Footer COMPLETO estándar YaDev en estilo BRUTALIST técnico de COICEM.
+ * Negro del logo (#000), bloques #0B0E14, naranja hi-vis solo como acento (~10%).
+ * Bordes duros (sin radius), sin gradientes ni sombras blandas. WCAG AA.
+ * ⚠️ Contacto puede ser null → "PENDIENTE" (mono). Cero datos inventados.
  */
 import { siteConfig } from '../lib/site-config';
 
-const { contact, tagline, areas, credit } = siteConfig;
+const {
+  legalName,
+  tagline,
+  areas,
+  certifications,
+  certifier,
+  contact,
+  credit,
+} = siteConfig;
 
-// Saneo de WhatsApp: solo dígitos para wa.me/
-const waDigits = contact.whatsapp ? String(contact.whatsapp).replace(/\D/g, '') : null;
+// Saneo para enlaces (solo si hay dato real)
 const telDigits = contact.phone ? String(contact.phone).replace(/[^\d+]/g, '') : null;
+const waDigits = contact.whatsapp ? String(contact.whatsapp).replace(/\D/g, '') : null;
 
 const year = 2026;
+
+// Navegación empresa
+const empresaLinks = [
+  { label: 'Inicio', href: '#inicio' },
+  { label: 'Nosotros', href: '#nosotros' },
+  { label: 'Áreas', href: '#areas' },
+  { label: 'Contacto', href: '#contacto' },
+];
+
+// Redes (placeholder href="#" hasta confirmar con cliente)
+const socials = [
+  { label: 'Facebook', href: '#', d: 'M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12Z' },
+  { label: 'Instagram', href: '#', d: 'M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16Zm0 1.8c-3.15 0-3.52.01-4.76.07-.9.04-1.39.19-1.71.32-.43.17-.74.37-1.06.69-.32.32-.52.63-.69 1.06-.13.32-.28.81-.32 1.71-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.04.9.19 1.39.32 1.71.17.43.37.74.69 1.06.32.32.63.52 1.06.69.32.13.81.28 1.71.32 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c.9-.04 1.39-.19 1.71-.32.43-.17.74-.37 1.06-.69.32-.32.52-.63.69-1.06.13-.32.28-.81.32-1.71.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.04-.9-.19-1.39-.32-1.71a2.86 2.86 0 0 0-.69-1.06 2.86 2.86 0 0 0-1.06-.69c-.32-.13-.81-.28-1.71-.32-1.24-.06-1.61-.07-4.76-.07Zm0 3.06a4.98 4.98 0 1 1 0 9.96 4.98 4.98 0 0 1 0-9.96Zm0 8.21a3.23 3.23 0 1 0 0-6.46 3.23 3.23 0 0 0 0 6.46Zm6.34-8.41a1.16 1.16 0 1 1-2.32 0 1.16 1.16 0 0 1 2.32 0Z' },
+  { label: 'LinkedIn', href: '#', d: 'M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14ZM7.12 20.45H3.55V9h3.57v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z' },
+  { label: 'WhatsApp', href: waDigits ? `https://wa.me/${waDigits}` : '#', d: 'M17.47 14.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.01-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.09 3.2 5.07 4.49.71.3 1.26.49 1.69.62.71.23 1.36.2 1.87.12.57-.08 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.13-.27-.2-.57-.35ZM12.04 21.5h-.01a9.46 9.46 0 0 1-4.82-1.32l-.35-.21-3.58.94.96-3.49-.23-.36a9.43 9.43 0 0 1-1.45-5.03c0-5.22 4.25-9.47 9.48-9.47 2.53 0 4.91.99 6.7 2.78a9.42 9.42 0 0 1 2.77 6.7c0 5.22-4.25 9.47-9.47 9.47ZM20.5 3.49A11.2 11.2 0 0 0 12.04.99C5.85.99.8 6.04.8 12.23c0 1.97.51 3.9 1.5 5.6L.7 23.5l5.8-1.52a11.2 11.2 0 0 0 5.53 1.41h.01c6.19 0 11.24-5.05 11.24-11.24 0-3-1.17-5.82-3.29-7.94Z' },
+];
 ---
 
 <footer class="ftr" role="contentinfo">
-  <div class="ftr__inner">
 
-    <!-- Identidad -->
-    <div class="ftr__brand">
-      <p class="ftr__wordmark">COICEM</p>
-      <p class="ftr__tagline mono">{tagline}</p>
+  <!-- ── 1. CTA BANNER ───────────────────────────────────────── -->
+  <div class="cta">
+    <div class="cta__inner">
+      <div class="cta__copy">
+        <h2 class="cta__title">¿Listo para su proyecto?</h2>
+        <p class="cta__sub mono">Operación · Mantenimiento · Energía · Infraestructura</p>
+      </div>
+      <div class="cta__actions">
+        <a href="#contacto" class="btn btn--solid mono">Cotizar</a>
+        <a href="#contacto" class="btn btn--ghost mono">WhatsApp</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── 2. GRID DE COLUMNAS ─────────────────────────────────── -->
+  <div class="grid">
+
+    <!-- Brand -->
+    <div class="col col--brand">
+      <p class="brand__mark">COICEM</p>
+      <p class="brand__tag mono">{tagline}</p>
+
+      <ul class="chips" aria-label="Certificaciones">
+        {certifications.map((c) => (
+          <li class="chip mono">{c.code}</li>
+        ))}
+      </ul>
+
+      <ul class="social" aria-label="Redes sociales">
+        {socials.map((s) => (
+          <li>
+            <a
+              href={s.href}
+              class="social__link"
+              aria-label={s.label}
+              rel="noopener"
+              target="_blank"
+            >
+              <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true" focusable="false">
+                <path d={s.d} fill="currentColor" />
+              </svg>
+            </a>
+          </li>
+        ))}
+      </ul>
     </div>
 
-    <!-- Contacto -->
-    <section id="contacto" class="ftr__col" aria-labelledby="ftr-contacto">
-      <h2 id="ftr-contacto" class="ftr__h">Contacto</h2>
-      <dl class="ftr__data">
-        <div class="ftr__row">
-          <dt class="mono ftr__dt">Email</dt>
-          <dd class="ftr__dd">
-            {contact.email
-              ? <a href={`mailto:${contact.email}`} class="ftr__link">{contact.email}</a>
-              : <span class="mono ftr__pending">PENDIENTE</span>}
-          </dd>
-        </div>
-        <div class="ftr__row">
-          <dt class="mono ftr__dt">Tel</dt>
-          <dd class="ftr__dd">
-            {contact.phone
-              ? <a href={`tel:${telDigits}`} class="ftr__link mono">{contact.phone}</a>
-              : <span class="mono ftr__pending">PENDIENTE</span>}
-          </dd>
-        </div>
-        <div class="ftr__row">
-          <dt class="mono ftr__dt">WhatsApp</dt>
-          <dd class="ftr__dd">
-            {waDigits
-              ? <a href={`https://wa.me/${waDigits}`} class="ftr__link mono" rel="noopener" target="_blank">{contact.whatsapp}</a>
-              : <span class="mono ftr__pending">PENDIENTE</span>}
-          </dd>
-        </div>
-        <div class="ftr__row">
-          <dt class="mono ftr__dt">Dirección</dt>
-          <dd class="ftr__dd">
-            {contact.address
-              ? <span class="ftr__addr">{contact.address}</span>
-              : <span class="mono ftr__pending">PENDIENTE</span>}
-          </dd>
-        </div>
-        <div class="ftr__row">
-          <dt class="mono ftr__dt">Horario</dt>
-          <dd class="ftr__dd">
-            {contact.schedule
-              ? <span class="mono ftr__addr">{contact.schedule}</span>
-              : <span class="mono ftr__pending">PENDIENTE</span>}
-          </dd>
-        </div>
-      </dl>
-      <p class="ftr__note mono">Datos de contacto en confirmación con el cliente.</p>
-    </section>
-
     <!-- Áreas -->
-    <nav class="ftr__col" aria-label="Áreas operativas">
-      <h2 class="ftr__h">Áreas</h2>
-      <ul class="ftr__areas">
-        {areas.map((area) => (
+    <nav class="col" aria-label="Áreas operativas">
+      <h2 class="col__h">Áreas</h2>
+      <ul class="list">
+        {areas.map((a) => (
           <li>
-            <a href={`#${area.id}`} class="ftr__link ftr__area-link">
-              <span class="mono ftr__area-n">{area.n}</span>
-              <span>{area.name}</span>
+            <a href={`#${a.id}`} class="link link--area">
+              <span class="link__n mono">{a.n}</span>
+              <span>{a.name}</span>
             </a>
           </li>
         ))}
       </ul>
     </nav>
 
+    <!-- Empresa -->
+    <nav class="col" aria-label="Navegación de empresa">
+      <h2 class="col__h">Empresa</h2>
+      <ul class="list">
+        {empresaLinks.map((l) => (
+          <li><a href={l.href} class="link">{l.label}</a></li>
+        ))}
+      </ul>
+    </nav>
+
+    <!-- Certificaciones -->
+    <div class="col col--cert">
+      <h2 class="col__h">Certificaciones</h2>
+      <div class="seal">
+        <img
+          src="/images/bureau-veritas.png"
+          alt="Sello Bureau Veritas"
+          width="90"
+          height="90"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+      <ul class="chips chips--stack" aria-label="Normas certificadas">
+        {certifications.map((c) => (
+          <li class="chip mono">{c.code}</li>
+        ))}
+      </ul>
+      <p class="cert__cap mono">Certificado por {certifier}</p>
+    </div>
+
+    <!-- Contacto -->
+    <section id="contacto" class="col col--contact" aria-labelledby="ftr-contacto">
+      <h2 id="ftr-contacto" class="col__h">Contacto</h2>
+      <dl class="data">
+        <div class="data__row">
+          <dt class="data__dt mono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm9 7L4 7v11h16V7l-8 5Zm0-2 8-5H4l8 5Z"/></svg>
+            Email
+          </dt>
+          <dd class="data__dd">
+            {contact.email
+              ? <a href={`mailto:${contact.email}`} class="link">{contact.email}</a>
+              : <span class="pending mono">PENDIENTE</span>}
+          </dd>
+        </div>
+
+        <div class="data__row">
+          <dt class="data__dt mono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25c1.1.37 2.3.57 3.5.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.2.2 2.4.57 3.5a1 1 0 0 1-.25 1l-2.2 2.3Z"/></svg>
+            Tel
+          </dt>
+          <dd class="data__dd">
+            {contact.phone
+              ? <a href={`tel:${telDigits}`} class="link mono">{contact.phone}</a>
+              : <span class="pending mono">PENDIENTE</span>}
+          </dd>
+        </div>
+
+        <div class="data__row">
+          <dt class="data__dt mono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2a8 8 0 0 0-8 8c0 5.25 7 11.5 7.3 11.76a1 1 0 0 0 1.4 0C13 21.5 20 15.25 20 10a8 8 0 0 0-8-8Zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6Z"/></svg>
+            Dirección
+          </dt>
+          <dd class="data__dd">
+            {contact.address
+              ? <span class="data__txt">{contact.address}</span>
+              : <span class="pending mono">PENDIENTE</span>}
+          </dd>
+        </div>
+
+        <div class="data__row">
+          <dt class="data__dt mono" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm1 10.4-4.2 2.5-1-1.7 3.2-1.9V6h2v6.4Z"/></svg>
+            Horario
+          </dt>
+          <dd class="data__dd">
+            {contact.schedule
+              ? <span class="data__txt mono">{contact.schedule}</span>
+              : <span class="pending mono">PENDIENTE</span>}
+          </dd>
+        </div>
+      </dl>
+      <p class="note mono">Datos de contacto en confirmación con el cliente.</p>
+    </section>
+
   </div>
 
-  <!-- Línea legal -->
-  <div class="ftr__legal">
-    <div class="ftr__legal-inner">
-      <p class="mono ftr__legal-txt">© {year} COICEM S.A.S</p>
-      <p class="mono ftr__legal-txt">NIT: PENDIENTE</p>
-      <p class="mono ftr__legal-txt">coicem.com</p>
-      <p class="ftr__credit">
+  <!-- ── 3. BARRA COPYRIGHT ──────────────────────────────────── -->
+  <div class="legal">
+    <div class="legal__inner">
+      <p class="legal__txt mono">© {year} {legalName} · NIT: PENDIENTE</p>
+      <p class="legal__credit mono">
         Desarrollado por
-        <a href={credit.url} class="ftr__link" rel="noopener" target="_blank">YaDev</a>
+        <a href={credit.url} class="link link--credit" rel="noopener" target="_blank">{credit.dev}</a>
       </p>
     </div>
   </div>
@@ -105,189 +206,284 @@ const year = 2026;
 
 <style>
   .ftr {
+    --ft-block: #0B0E14;
+    --ft-blue:  #025199;
+    --ft-metal: #313F50;
+    --ft-metal-l: #4B6881;
+    --ft-mute:  #C9CCC4;   /* secundario AA sobre negro */
     background: #000000;
     color: var(--c-light);
-    border-top: 1px solid var(--c-metal);
+    border-top: 1px solid var(--ft-metal);
   }
 
-  .ftr__inner {
+  /* ══ 1. CTA BANNER ══════════════════════════════════════════ */
+  .cta {
+    background: var(--ft-block);
+    border-top: 1px solid var(--ft-metal);
+    border-bottom: 1px solid var(--ft-metal);
+  }
+  .cta__inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: clamp(2.5rem, 6vw, 4.5rem) clamp(1.25rem, 4vw, 3rem);
+    padding: clamp(2rem, 5vw, 3.25rem) clamp(1.25rem, 4vw, 3rem);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem 2.5rem;
+  }
+  .cta__title {
+    font-family: var(--font-display);
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+    font-size: clamp(1.5rem, 3.5vw, 2.5rem);
+    line-height: 1.02;
+    margin: 0;
+    color: var(--c-light);
+  }
+  .cta__sub {
+    font-family: var(--font-mono);
+    font-size: 0.74rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--ft-mute);
+    margin: 0.75rem 0 0;
+  }
+  .cta__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.85rem 1.6rem;
+    font-family: var(--font-mono);
+    font-weight: 600;
+    font-size: 0.8rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    text-decoration: none;
+    border: 1px solid transparent;
+    transition: background 0.2s var(--ease-quint), color 0.2s var(--ease-quint), border-color 0.2s var(--ease-quint);
+  }
+  .btn--solid { background: var(--c-accent); color: #000; }
+  .btn--solid:hover,
+  .btn--solid:focus-visible { background: var(--c-accent-600); }
+  .btn--ghost { background: transparent; border-color: var(--c-light); color: var(--c-light); }
+  .btn--ghost:hover,
+  .btn--ghost:focus-visible { background: var(--c-light); color: #000; }
+  .btn:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 3px; }
+
+  /* ══ 2. GRID ════════════════════════════════════════════════ */
+  .grid {
+    max-width: 1200px;
+    margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.2fr 1.4fr 0.9fr;
-    gap: clamp(2rem, 5vw, 4rem);
-    align-items: start;
+    grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr 1.3fr;
+  }
+  .col {
+    padding: clamp(2rem, 4vw, 3rem) clamp(1.25rem, 2.5vw, 2rem);
+    border-left: 1px solid var(--ft-metal);
+    min-width: 0;
+  }
+  .col:first-child { border-left: 0; }
+
+  .col__h {
+    font-family: var(--font-display);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-size: 0.9rem;
+    color: var(--c-light);
+    margin: 0 0 1.25rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid var(--ft-metal);
   }
 
-  /* ── Marca ──────────────────────────────────────────────────── */
-  .ftr__wordmark {
+  /* ── Brand ──────────────────────────────────────────────── */
+  .brand__mark {
     font-family: var(--font-display);
     font-weight: 900;
     text-transform: uppercase;
     letter-spacing: 0.04em;
-    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-size: clamp(1.75rem, 3.5vw, 2.5rem);
     line-height: 1;
     margin: 0 0 0.75rem;
     color: var(--c-light);
   }
-
-  .ftr__tagline {
+  .brand__tag {
     font-family: var(--font-mono);
-    font-size: 0.78rem;
+    font-size: 0.76rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: #8A93A0;
-    margin: 0;
-    max-width: 24ch;
+    color: var(--ft-mute);
+    margin: 0 0 1.5rem;
+    max-width: 26ch;
     line-height: 1.5;
   }
 
-  /* ── Columnas ───────────────────────────────────────────────── */
-  .ftr__h {
-    font-family: var(--font-display);
-    font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    font-size: 0.95rem;
-    color: var(--c-light);
-    margin: 0 0 1.25rem;
-    padding-bottom: 0.6rem;
-    border-bottom: 1px solid var(--c-metal);
-  }
-
-  /* ── Contacto ───────────────────────────────────────────────── */
-  .ftr__data { margin: 0; }
-
-  .ftr__row {
-    display: grid;
-    grid-template-columns: 7rem 1fr;
-    gap: 0.75rem;
-    padding: 0.55rem 0;
-    border-bottom: 1px solid #161B24;
-    align-items: baseline;
-  }
-
-  .ftr__dt {
+  .chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .chips--stack { margin: 1rem 0; }
+  .chip {
     font-family: var(--font-mono);
-    font-size: 0.7rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    color: #4B6881;
-    margin: 0;
+    font-size: 0.66rem;
+    letter-spacing: 0.06em;
+    color: var(--ft-mute);
+    border: 1px solid var(--ft-metal);
+    padding: 0.32rem 0.55rem;
+    white-space: nowrap;
   }
 
-  .ftr__dd {
-    margin: 0;
-    font-size: 0.9rem;
-    line-height: 1.4;
-    word-break: break-word;
+  .social { list-style: none; margin: 1.75rem 0 0; padding: 0; display: flex; gap: 0.6rem; }
+  .social__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    color: var(--ft-mute);
+    border: 1px solid var(--ft-metal);
+    transition: color 0.2s var(--ease-quint), border-color 0.2s var(--ease-quint);
   }
+  .social__link:hover,
+  .social__link:focus-visible { color: var(--c-accent); border-color: var(--c-accent); }
+  .social__link:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 2px; }
 
-  .ftr__addr { color: #C9CCC4; }
+  /* ── Listas (Áreas / Empresa) ───────────────────────────── */
+  .list { list-style: none; margin: 0; padding: 0; }
+  .list li { border-bottom: 1px solid #161B24; }
 
-  .ftr__pending {
-    font-family: var(--font-mono);
-    font-size: 0.78rem;
-    letter-spacing: 0.08em;
-    color: #4B6881;
-  }
-
-  .ftr__note {
-    font-family: var(--font-mono);
-    font-size: 0.68rem;
-    letter-spacing: 0.04em;
-    color: #4B6881;
-    margin: 1rem 0 0;
-    line-height: 1.5;
-  }
-
-  /* ── Áreas ──────────────────────────────────────────────────── */
-  .ftr__areas {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  .ftr__areas li { border-bottom: 1px solid #161B24; }
-
-  .ftr__area-link {
-    display: flex;
-    align-items: baseline;
-    gap: 0.85rem;
-    padding: 0.6rem 0;
-    text-transform: uppercase;
-    font-family: var(--font-display);
-    font-weight: 600;
-    font-size: 0.95rem;
-    letter-spacing: 0.02em;
-  }
-
-  .ftr__area-n {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    color: var(--c-accent);
-    letter-spacing: 0.04em;
-  }
-
-  /* ── Links ──────────────────────────────────────────────────── */
-  .ftr__link {
+  .link {
     color: var(--c-light);
     text-decoration: none;
     transition: color 0.2s var(--ease-quint);
   }
-
-  .ftr__link:hover,
-  .ftr__link:focus-visible {
+  .link:hover,
+  .link:focus-visible {
     color: var(--c-accent);
     text-decoration: underline;
     text-underline-offset: 3px;
   }
+  .link:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 2px; }
 
-  .ftr__link:focus-visible {
-    outline: 2px solid var(--c-accent);
-    outline-offset: 2px;
+  .link--area {
+    display: flex;
+    align-items: baseline;
+    gap: 0.8rem;
+    padding: 0.6rem 0;
+    text-transform: uppercase;
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 0.92rem;
+    letter-spacing: 0.02em;
+  }
+  .link__n { font-family: var(--font-mono); font-size: 0.7rem; color: var(--c-accent); }
+
+  .list .link:not(.link--area) {
+    display: block;
+    padding: 0.6rem 0;
+    font-family: var(--font-mono);
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
   }
 
-  /* ── Legal ──────────────────────────────────────────────────── */
-  .ftr__legal {
-    border-top: 1px solid var(--c-metal);
+  /* ── Certificaciones ────────────────────────────────────── */
+  .seal {
+    display: inline-flex;
+    background: var(--c-light);
+    padding: 0.5rem;
+    border: 1px solid var(--ft-metal);
+  }
+  .seal img { display: block; width: 90px; height: auto; }
+  .cert__cap {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.04em;
+    color: var(--ft-metal-l);
+    line-height: 1.5;
+    margin: 0;
   }
 
-  .ftr__legal-inner {
+  /* ── Contacto ───────────────────────────────────────────── */
+  .data { margin: 0; }
+  .data__row {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    gap: 0.75rem;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid #161B24;
+    align-items: baseline;
+  }
+  .data__dt {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    font-family: var(--font-mono);
+    font-size: 0.68rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ft-metal-l);
+    margin: 0;
+  }
+  .data__dt svg { flex-shrink: 0; }
+  .data__dd { margin: 0; font-size: 0.88rem; line-height: 1.4; word-break: break-word; }
+  .data__txt { color: var(--ft-mute); }
+  .pending {
+    font-family: var(--font-mono);
+    font-size: 0.76rem;
+    letter-spacing: 0.08em;
+    color: var(--ft-metal-l);
+  }
+  .note {
+    font-family: var(--font-mono);
+    font-size: 0.66rem;
+    letter-spacing: 0.04em;
+    color: var(--ft-metal-l);
+    margin: 1rem 0 0;
+    line-height: 1.5;
+  }
+
+  /* ══ 3. LEGAL ═══════════════════════════════════════════════ */
+  .legal { border-top: 1px solid var(--ft-metal); background: var(--ft-block); }
+  .legal__inner {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1.25rem clamp(1.25rem, 4vw, 3rem);
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
     gap: 0.75rem 1.75rem;
   }
-
-  .ftr__legal-txt {
-    font-family: var(--font-mono);
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    color: #8A93A0;
-    margin: 0;
-  }
-
-  .ftr__credit {
+  .legal__txt,
+  .legal__credit {
     font-family: var(--font-mono);
     font-size: 0.72rem;
     letter-spacing: 0.06em;
-    color: #8A93A0;
+    color: var(--ft-mute);
     margin: 0;
-    margin-left: auto;
   }
+  .link--credit { color: var(--c-light); font-weight: 600; }
 
-  /* ── Responsivo ─────────────────────────────────────────────── */
-  @media (max-width: 880px) {
-    .ftr__inner { grid-template-columns: 1fr; }
+  /* ══ RESPONSIVO ═════════════════════════════════════════════ */
+  @media (max-width: 1080px) {
+    .grid { grid-template-columns: 1fr 1fr; }
+    .col { border-left: 0; border-top: 1px solid var(--ft-metal); }
+    .col:first-child,
+    .col:nth-child(2) { border-top: 0; }
+    .col--brand { grid-column: 1 / -1; }
+    .col--contact { grid-column: 1 / -1; }
   }
-
-  @media (max-width: 520px) {
-    .ftr__row { grid-template-columns: 6rem 1fr; }
-    .ftr__credit { margin-left: 0; }
+  @media (max-width: 620px) {
+    .grid { grid-template-columns: 1fr; }
+    .col,
+    .col:nth-child(2) { border-top: 1px solid var(--ft-metal); }
+    .col--brand { border-top: 0; }
+    .cta__inner { flex-direction: column; align-items: flex-start; }
+    .cta__actions { width: 100%; }
+    .btn { flex: 1; }
+    .data__row { grid-template-columns: 6.5rem 1fr; }
+    .legal__inner { justify-content: flex-start; }
   }
 </style>

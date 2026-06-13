@@ -21,6 +21,23 @@ export const siteConfig = {
   sector: 'Mantenimiento industrial especializado · energía · petróleo/petroquímico · construcción · infraestructura',
   foundingDate: null,            // ❌ PENDIENTE cliente
 
+  // ─── Misión / Visión (texto oficial del cliente) ─────────────
+  mission:
+    'En COICEM diseñamos y ejecutamos soluciones integrales de operación, mantenimiento, construcción, energía e infraestructura, respaldadas por servicios técnicos avanzados, gestión ambiental responsable y actividades industriales conexas. Nuestro propósito es optimizar la productividad y sostenibilidad de los proyectos del sector industrial, energético y civil.',
+  vision:
+    'Para el año 2030, COICEM será reconocida como la empresa líder en Colombia en soluciones integrales de ingeniería, energía e infraestructura industrial, destacándonos por nuestra excelencia operativa, innovación constante y compromiso con la sostenibilidad. Aspiramos a ser el aliado estratégico preferido en proyectos de gran impacto, aportando conocimiento técnico de vanguardia y prácticas responsables que impulsen el desarrollo sostenible del país y fortalezcan el crecimiento del sector industrial y energético.',
+
+  // ─── Certificaciones REALES (de los PDFs del cliente) ────────
+  // Certificador: BVQI Colombia Ltda. (Bureau Veritas). Cert. Nº CO26… (plantilla oct-2025).
+  // Acrónimo COICEM = "Compañía Colombiana de Ingeniería Civil, Eléctrica…" (según certificado).
+  certifier: 'Bureau Veritas (BVQI Colombia Ltda.)',
+  certifications: [
+    { code: 'ISO 9001:2015',     scope: 'Sistema de Gestión de Calidad' },
+    { code: 'ISO 14001:2015',    scope: 'Sistema de Gestión Ambiental' },
+    { code: 'ISO 45001:2018',    scope: 'Seguridad y Salud en el Trabajo' },
+    { code: 'NORSOK S-WA-006',   scope: 'Estándar petrolero (ambiente de trabajo)' },
+  ],
+
   // ─── 5 áreas operativas (de misión/visión) ──────────────────
   areas: [
     { id: 'operacion',      name: 'Operación',      n: '01' },
@@ -55,7 +72,7 @@ export const siteConfig = {
     contact:       null,  // ❌ email/tel/WhatsApp/dirección reales
     telemetry:     null,  // ❌ cifras reales del hero
     realProjects:  null,  // ❌ proyectos/clientes reales
-    certifications:null,  // ❌ ¿ISO? confirmar
+    certifications:'OK', // ✅ ISO 9001/14001/45001 + NORSOK (Bureau Veritas) — ver `certifications`
     /**
      * ❌ LOGO VECTORIAL — crítico para la idea de autor (despiece SVG).
      * Solo tenemos un JPEG de WhatsApp (mapa de bits → NO se puede despiezar).
