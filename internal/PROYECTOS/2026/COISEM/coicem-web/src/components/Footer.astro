@@ -117,21 +117,13 @@ const socials = [
     <!-- Certificaciones -->
     <div class="col col--cert">
       <h2 class="col__h">Certificaciones</h2>
-      <div class="seal">
-        <img
-          src="/images/bureau-veritas.png"
-          alt="Sello Bureau Veritas"
-          width="90"
-          height="90"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-      <ul class="chips chips--stack" aria-label="Normas certificadas">
-        {certifications.map((c) => (
-          <li class="chip mono">{c.code}</li>
-        ))}
-      </ul>
+      <img
+        class="cert-banner"
+        src="/images/bureau-veritas.png"
+        alt={`Certificación de COICEM por Bureau Veritas — ${certifications.map((c) => c.code).join(', ')}`}
+        loading="lazy"
+        decoding="async"
+      />
       <p class="cert__cap mono">Certificado por {certifier}</p>
     </div>
 
@@ -389,13 +381,14 @@ const socials = [
   }
 
   /* ── Certificaciones ────────────────────────────────────── */
-  .seal {
-    display: inline-flex;
-    background: var(--c-light);
-    padding: 0.5rem;
+  .cert-banner {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
     border: 1px solid var(--ft-metal);
+    margin: 0.5rem 0 0.9rem;
   }
-  .seal img { display: block; width: 90px; height: auto; }
   .cert__cap {
     font-family: var(--font-mono);
     font-size: 0.66rem;
