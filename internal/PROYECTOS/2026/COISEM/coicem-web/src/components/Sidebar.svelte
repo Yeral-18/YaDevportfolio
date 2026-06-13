@@ -86,10 +86,9 @@
 
 <!-- ════════════════ RIEL VERTICAL FIJO (DESKTOP ≥1024px) ════════════════ -->
 <nav class="rail" aria-label="Índice de navegación principal">
-  <div class="rail-head">
-    <span class="wordmark">{siteConfig.shortName}</span>
-    <span class="tagline">MANT. ESPECIALIZADO</span>
-  </div>
+  <a class="rail-head" href="#inicio" aria-label={`${siteConfig.shortName} S.A.S — inicio`}>
+    <img class="rail-logo" src="/images/coicem-logo.png" alt={`${siteConfig.shortName} S.A.S`} />
+  </a>
 
   <ul class="rail-list">
     {#each items as item (item.href)}
@@ -110,7 +109,7 @@
 
 <!-- ════════════════ TOP-BAR SLIM (MÓVIL <1024px) ════════════════ -->
 <div class="topbar" role="banner">
-  <span class="wordmark wordmark--bar">{siteConfig.shortName}</span>
+  <img class="bar-logo" src="/images/coicem-logo.png" alt={`${siteConfig.shortName} S.A.S`} />
   <button
     class="burger"
     type="button"
@@ -136,7 +135,7 @@
   aria-hidden={!open}
 >
   <div class="overlay-head">
-    <span class="wordmark wordmark--bar">{siteConfig.shortName}</span>
+    <img class="bar-logo" src="/images/coicem-logo.png" alt={`${siteConfig.shortName} S.A.S`} />
     <button class="close" type="button" aria-label="Cerrar menú" onclick={close}>
       <span class="close-x" aria-hidden="true">✕</span>
     </button>
@@ -214,6 +213,11 @@
     padding: 24px 20px 20px;
     border-bottom: 1px solid var(--metal-border);
   }
+
+  .rail-head { display: block; text-decoration: none; }
+  .rail-logo { display: block; width: 100%; max-width: 160px; height: auto; }
+  .bar-logo { display: block; height: 30px; width: auto; }
+  .overlay-head .bar-logo { height: 34px; }
 
   .wordmark {
     font-family: var(--font-display);
