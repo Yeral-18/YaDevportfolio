@@ -34,7 +34,7 @@ Ninguna fila puede repetir la combinación de las 3 primeras columnas.
 | **ECOMAG S.A.S** | Patagonia | Centrado clásico | Orgánico | Sticky | Datos/autoridad | 7 hojas SVG flotantes + cursor hoja |
 | **Multiservicios P&J** | Stripe | Split-screen 55/45 | Mecánico/preciso | Sticky | Showcase/portafolio | Cursor engranaje + zigzag L-R + wave SVG |
 | **Luqra S.A.S** | Linear | Bento asimétrico | Físico (lerp) | Sticky | Datos/autoridad | Cursor triángulo dual + dot-grid parallax + diagonal cut |
-| **COICEM S.A.S** | Brutalist | Editorial/columnas | Tipográfico | Sidebar vertical | Datos/autoridad | Despiece explotado del logo (engranaje+llave+destornillador) que se re-ensambla al scroll + cursor crosshair/calibre |
+| **COICEM S.A.S** | Brutalist | Editorial/columnas | Tipográfico | Navbar horizontal técnico (datasheet header, NO glassy) | Datos/autoridad | Despiece explotado del logo (engranaje+llave+destornillador) que se re-ensambla al scroll + cursor crosshair/calibre |
 
 ### Lectura de colisiones actuales
 - Tripletas únicas ✓ — ninguna se repite. El sistema está sano en el eje creativo.

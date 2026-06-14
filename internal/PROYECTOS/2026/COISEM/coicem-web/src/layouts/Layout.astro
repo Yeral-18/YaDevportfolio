@@ -1,8 +1,9 @@
 ---
 import '../styles/global.css';
 import { siteConfig } from '../lib/site-config';
-import Sidebar from '../components/Sidebar.svelte';
+import Navbar from '../components/Navbar.svelte';
 import Footer from '../components/Footer.astro';
+import ProgressBar from '../components/ProgressBar.svelte';
 import CrosshairCursor from '../components/CrosshairCursor.svelte';
 import WhatsAppButton from '../components/WhatsAppButton.svelte';
 import ScrollToTop from '../components/ScrollToTop.svelte';
@@ -90,7 +91,8 @@ const siteJsonLd = {
   <body>
     <a href="#main-content" class="skip-link">Ir al contenido principal</a>
 
-    <Sidebar client:load />
+    <ProgressBar client:load />
+    <Navbar client:load />
 
     <div class="content-shell">
       <main id="main-content">
@@ -104,11 +106,8 @@ const siteJsonLd = {
     <CrosshairCursor client:idle />
 
     <style>
-      /* Offset por el riel-índice (desktop) y la top-bar móvil del Sidebar. */
-      .content-shell { padding-top: 52px; }            /* top-bar móvil (52px) */
-      @media (min-width: 1024px) {
-        .content-shell { padding-top: 0; margin-left: 210px; }  /* riel 210px */
-      }
+      /* Offset por el navbar horizontal fijo (64px de alto, full-width). */
+      .content-shell { padding-top: 64px; }
     </style>
   </body>
 </html>

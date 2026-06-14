@@ -11,6 +11,10 @@ import { siteConfig } from '../lib/site-config';
     <header class="mv__head">
       <p class="mv__eyebrow">// PROPÓSITO · COICEM S.A.S</p>
       <h2 id="mv-title" class="mv__title">Quiénes somos</h2>
+      <p class="mv__lead">
+        Disponibilidad, confiabilidad y continuidad operativa para la industria
+        petrolera, petroquímica y energética de Colombia.
+      </p>
     </header>
 
     <div class="mv__grid">
@@ -23,6 +27,20 @@ import { siteConfig } from '../lib/site-config';
         <p class="mv__text">{siteConfig.vision}</p>
       </article>
     </div>
+
+    <!-- Compromiso HSEQ — marco "Cero" (estándar del sector O&M, ver INVESTIGACION-SECTOR.md R3) -->
+    <section class="mv__zero" aria-labelledby="mv-zero-title">
+      <div class="mv__zero-head">
+        <p class="mv__zero-tag">// COMPROMISO HSEQ · NORSOK + ISO 9001/14001/45001</p>
+        <h3 id="mv-zero-title" class="mv__zero-title">Política de los cuatro ceros</h3>
+      </div>
+      <ul class="mv__zero-grid" role="list">
+        <li class="mv__zero-cell"><span class="mv__zero-n">00</span><span class="mv__zero-l">Cero accidentes</span></li>
+        <li class="mv__zero-cell"><span class="mv__zero-n">00</span><span class="mv__zero-l">Cero incidentes ambientales</span></li>
+        <li class="mv__zero-cell"><span class="mv__zero-n">00</span><span class="mv__zero-l">Cero paradas no programadas</span></li>
+        <li class="mv__zero-cell"><span class="mv__zero-n">00</span><span class="mv__zero-l">Cero defectos de calidad</span></li>
+      </ul>
+    </section>
   </div>
 </section>
 
@@ -73,5 +91,63 @@ import { siteConfig } from '../lib/site-config';
   .mv__text {
     font-family: var(--font-body); font-size: clamp(0.95rem, 1.4vw, 1.08rem);
     line-height: 1.6; color: rgba(237, 237, 232, 0.82); margin: 0;
+  }
+
+  .mv__lead {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 1.8vw, 1.3rem);
+    line-height: 1.5;
+    color: var(--c-highlight);
+    max-width: 60ch;
+    margin: 1.5rem 0 0;
+  }
+
+  /* ── Compromiso "Cero" (marco HSEQ del sector) ── */
+  .mv__zero {
+    margin-top: clamp(2rem, 5vw, 3.5rem);
+    border: 1px solid var(--c-metal);
+  }
+  .mv__zero-head {
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border-bottom: 1px solid var(--c-metal);
+  }
+  .mv__zero-tag {
+    font-family: var(--font-mono); font-size: 0.7rem; letter-spacing: 0.16em;
+    color: var(--c-accent); text-transform: uppercase; margin: 0 0 0.6rem;
+  }
+  .mv__zero-title {
+    font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
+    font-size: clamp(1.3rem, 3vw, 2rem); color: var(--c-highlight);
+    margin: 0; letter-spacing: -0.01em; line-height: 1.05;
+  }
+  .mv__zero-grid {
+    list-style: none; margin: 0; padding: 0;
+    display: grid; grid-template-columns: repeat(4, 1fr);
+  }
+  .mv__zero-cell {
+    display: flex; flex-direction: column; gap: 0.5rem;
+    padding: clamp(1.25rem, 3vw, 2rem);
+    border-left: 1px solid var(--c-metal);
+  }
+  .mv__zero-cell:first-child { border-left: 0; }
+  .mv__zero-n {
+    font-family: var(--font-mono); font-weight: 600;
+    font-size: clamp(1.6rem, 3.5vw, 2.6rem); line-height: 1; color: var(--c-accent);
+  }
+  .mv__zero-l {
+    font-family: var(--font-mono); font-size: clamp(0.7rem, 1vw, 0.82rem);
+    letter-spacing: 0.08em; text-transform: uppercase; color: rgba(237, 237, 232, 0.82);
+  }
+  @media (max-width: 859px) {
+    .mv__zero-grid { grid-template-columns: 1fr 1fr; }
+    .mv__zero-cell:nth-child(2) { border-left: 1px solid var(--c-metal); }
+    .mv__zero-cell:nth-child(3) { border-left: 0; border-top: 1px solid var(--c-metal); }
+    .mv__zero-cell:nth-child(4) { border-top: 1px solid var(--c-metal); }
+  }
+  @media (max-width: 520px) {
+    .mv__zero-grid { grid-template-columns: 1fr; }
+    .mv__zero-cell { border-left: 0; border-top: 1px solid var(--c-metal); }
+    .mv__zero-cell:first-child { border-top: 0; }
+    .mv__zero-cell:nth-child(2) { border-left: 0; }
   }
 </style>

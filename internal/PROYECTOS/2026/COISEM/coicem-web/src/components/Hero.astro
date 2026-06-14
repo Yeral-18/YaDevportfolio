@@ -20,10 +20,11 @@ const { shortName, legalName, tagline, sector, domain } = siteConfig;
 const domainLabel = domain.replace(/^https?:\/\//, '');
 
 // Telemetría: cada celda resuelve a un valor o al placeholder "—".
+// Métricas que el sector O&M industrial exhibe (ver INVESTIGACION-SECTOR.md R4).
 const telemetryCells = [
-  { value: siteConfig.telemetry.continuidad,  label: '% CONTINUIDAD OPERATIVA' },
-  { value: siteConfig.telemetry.mwMantenidos, label: 'MW MANTENIDOS' },
-  { value: siteConfig.telemetry.plantas,      label: 'PLANTAS INTERVENIDAS' },
+  { value: siteConfig.telemetry.experiencia,    label: 'AÑOS DE EXPERIENCIA' },
+  { value: siteConfig.telemetry.paradas,        label: 'PARADAS DE PLANTA EJECUTADAS' },
+  { value: siteConfig.telemetry.disponibilidad, label: '% DISPONIBILIDAD OPERATIVA' },
 ];
 ---
 

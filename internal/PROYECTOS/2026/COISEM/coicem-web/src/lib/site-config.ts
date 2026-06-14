@@ -59,10 +59,12 @@ export const siteConfig = {
 
   // ─── Telemetría del hero (idea de autor: panel de instrumentos) ─
   // ⚠️ CONDICIÓN #2: cero números inventados. Vienen de aquí o se muestran "—".
+  // Cifras que el sector O&M industrial sí exhibe (ver INVESTIGACION-SECTOR.md R4):
+  // años de experiencia · paradas de planta ejecutadas · disponibilidad operativa.
   telemetry: {
-    continuidad:  null,  // ❌ % continuidad operativa
-    mwMantenidos: null,  // ❌ MW mantenidos
-    plantas:      null,  // ❌ plantas intervenidas
+    experiencia:    null,  // ❌ años de experiencia
+    paradas:        null,  // ❌ paradas de planta ejecutadas
+    disponibilidad: null,  // ❌ % disponibilidad operativa
   },
 
   // ─── Pendientes P0 (NO ir a producción sin esto) ─────────────

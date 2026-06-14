@@ -159,6 +159,33 @@ oficial en documento, la reemplazamos por la tuya.
 
 ---
 
+### Política de los "Cuatro Ceros" (compromiso HSEQ del sector) — NUEVO
+
+Las empresas de O&M industrial/petrolero (OMIA, etc.) publican un compromiso HSEQ
+en formato "Cero" — es un patrón fuerte y memorable del rubro, encaja con NORSOK.
+Lo añadimos a la sección "Quiénes somos" como cuatro celdas:
+
+| | Compromiso |
+|---|---|
+| 00 | **Cero accidentes** |
+| 00 | **Cero incidentes ambientales** |
+| 00 | **Cero paradas no programadas** |
+| 00 | **Cero defectos de calidad** |
+
+☐ dejar ☐ cambiar (otros "ceros") → _____________________________________________
+
+---
+
+### Promesa de valor (trío del sector) — NUEVO
+
+Línea bajo "Quiénes somos": _"Disponibilidad, confiabilidad y continuidad operativa
+para la industria petrolera, petroquímica y energética de Colombia."_ Es el trío que
+vende el sector O&M.
+
+☐ dejar ☐ cambiar → _____________________________________________
+
+---
+
 ### Frase de hero (propuesta de bienvenida)
 
 La frase grande con la que abre el sitio. Tres opciones; elige una o pídenos otra.

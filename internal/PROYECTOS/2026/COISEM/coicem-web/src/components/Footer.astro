@@ -285,7 +285,7 @@ const socials = [
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.4fr 0.8fr 0.8fr 1fr 1.3fr;
+    grid-template-columns: 1.3fr 1fr 0.9fr 1fr 1.3fr;
   }
   .col {
     padding: clamp(2rem, 4vw, 3rem) clamp(1.25rem, 2.5vw, 2rem);
@@ -372,15 +372,17 @@ const socials = [
   .link--area {
     display: flex;
     align-items: baseline;
-    gap: 0.8rem;
+    gap: 0.65rem;
     padding: 0.6rem 0;
     text-transform: uppercase;
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: 0.92rem;
-    letter-spacing: 0.02em;
+    font-size: 0.78rem;
+    letter-spacing: 0;
+    min-width: 0;
   }
-  .link__n { font-family: var(--font-mono); font-size: 0.7rem; color: var(--c-accent); }
+  .link--area span:last-child { min-width: 0; overflow-wrap: anywhere; }
+  .link__n { font-family: var(--font-mono); font-size: 0.7rem; color: var(--c-accent); flex-shrink: 0; }
 
   .list .link:not(.link--area) {
     display: block;
@@ -438,6 +440,7 @@ const socials = [
     font-size: 0.76rem;
     letter-spacing: 0.08em;
     color: var(--ft-metal-l);
+    white-space: nowrap;
   }
   .note {
     font-family: var(--font-mono);
