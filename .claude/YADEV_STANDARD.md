@@ -88,7 +88,18 @@ Inline en `index.astro` (HTML + vanilla JS). Tab fijo a la **izquierda, centrado
 - `ECOMAG02/RECURSOS/bureau-veritas-iso.png`
 - `LUQRA/luqra-web/public/images/bureau-veritas-iso.png`
 
-> ⚠️ Cada cliente puede tener un set DISTINTO de certificaciones (p. ej. COICEM tiene ISO 9001:2015 + 14001:2015 + 45001:2018 **+ NORSOK S-WA-006**). Si las normas difieren del banner reutilizado, generar el banner correcto o renderizar chips nativos con las normas reales. Nunca afirmar una certificación que el cliente no tenga (verificar en sus PDFs).
+> ⚠️ Cada cliente puede tener un set DISTINTO de certificaciones (p. ej. COICEM tiene ISO 9001:2015 + 14001:2015 + 45001:2018 **+ NORSOK 006:2020**). Si las normas difieren del banner reutilizado, generar el banner correcto o renderizar chips nativos con las normas reales. Nunca afirmar una certificación que el cliente no tenga (verificar en sus PDFs).
+
+### Cómo AMPLIAR el banner BV (añadir una certificación) — lección COICEM 2026-06
+Cuando el cliente tiene una norma extra (NORSOK, otra ISO) y la quiere DENTRO del
+banner rojo (no como chip suelto), reconstruir el banner con PIL — NO insertar una
+franja parcial (deja un escalón en el borde rojo). Receta (`brand/rebuild-bv-banner.py`):
+1. Recortar el **sello/óvalo BV** del banner original (detectar gris en la mitad derecha).
+2. **Cuadro rojo UNIFORME** = rectángulo sólido completo (`Image.new(RED)`), color real `#D2213C` (210,33,60). Nunca un rojo parcial.
+3. **Escalar el óvalo para que quede CONTENIDO** dentro del alto del rojo (no debe sobresalir arriba/abajo) y pegarlo a la derecha centrado.
+4. Texto Arial Bold blanco, **grande** (las normas a ~64px, "BUREAU VERITAS" ~82px) — el cliente nota si queda pequeño.
+5. Quitar el chip de texto redundante del footer si la norma ya está en el banner.
+> Errores que el cliente reportó y hay que evitar: "escalón en el rojo" (franja parcial), "óvalo sobresale" (no contenido), "texto muy pequeño" (mucho padding).
 
 **En `site-config.ts`:**
 ```ts

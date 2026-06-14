@@ -35,7 +35,7 @@ export const siteConfig = {
     { code: 'ISO 9001:2015',     scope: 'Sistema de Gestión de Calidad' },
     { code: 'ISO 14001:2015',    scope: 'Sistema de Gestión Ambiental' },
     { code: 'ISO 45001:2018',    scope: 'Seguridad y Salud en el Trabajo' },
-    { code: 'NORSOK S-WA-006',   scope: 'Estándar petrolero (ambiente de trabajo)' },
+    { code: 'NORSOK 006:2020',   scope: 'Estándar petrolero (ambiente de trabajo)' },
   ],
 
   // ─── 5 áreas operativas (de misión/visión) ──────────────────
