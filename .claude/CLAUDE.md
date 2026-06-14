@@ -2,6 +2,9 @@
 
 > Sistema de desarrollo web automatizado de la agencia **YA Dev**.
 > Lee este archivo COMPLETO antes de cualquier tarea.
+>
+> 🗺️ **Guía maestra del sistema** (4 motores + scripts + flujo `/nuevo-cliente`, cómo
+> encaja todo): **`.claude/YADEV_SISTEMA.md`** — empieza ahí para entender el conjunto.
 
 ---
 
