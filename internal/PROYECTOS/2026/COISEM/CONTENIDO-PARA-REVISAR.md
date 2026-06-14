@@ -213,8 +213,13 @@ sitio no se publica sin ellos (o los ocultamos si prefieres lanzar sin mostrarlo
   - MW mantenidos / atendidos
   - número de plantas o proyectos intervenidos
 - [ ] **Proyectos o clientes** que podamos mostrar (con tu permiso) + fotos de planta
-- [ ] **Logo en vector** (.ai / .svg / .pdf) — el original del diseñador. Solo
-      tenemos una imagen de WhatsApp y para el sitio necesitamos el archivo editable.
+- [ ] **Logo en vector** (.ai / .svg / .pdf) — el original del diseñador.
+      📌 Mientras tanto **reconstruimos tu logo en vector** (versión limpia y
+      escalable) a partir de la imagen de WhatsApp. Ya lo estamos usando en el
+      sitio (navbar, footer, favicon) y te preparamos un manual de marca.
+      **Necesitamos que valides la reconstrucción** (¿se parece a tu logo?) y, si
+      tienes el archivo original del diseñador, lo usamos en su lugar.
+      Ver `brand/compare-AB-light.png` y `brand/manual-marca.html`.
 
 > Mientras no lleguen las cifras del tablero ni los proyectos, esas secciones
 > quedan ocultas (no ponemos números inventados). En cuanto nos los pases, se

@@ -76,14 +76,13 @@ export const siteConfig = {
     realProjects:  null,  // ❌ proyectos/clientes reales
     certifications:'OK', // ✅ ISO 9001/14001/45001 + NORSOK (Bureau Veritas) — ver `certifications`
     /**
-     * ❌ LOGO VECTORIAL — crítico para la idea de autor (despiece SVG).
-     * Solo tenemos un JPEG de WhatsApp (mapa de bits → NO se puede despiezar).
-     * ACCIÓN: pedir al cliente el archivo original del logo en .ai/.svg/.pdf.
-     * Mientras llega, el despiece se PROTOTIPA con un SVG redibujado por YaDev,
-     * marcado como reconstrucción aproximada — el cliente debe validarlo antes
-     * de que sea el héroe del sitio.
+     * ✅ LOGO VECTORIAL — reconstruido por LOGO_ENGINE (Versión B flat, aprobada
+     * por el fundador 2026-06-14). Vector limpio en brand/paquete-*.svg; alimenta
+     * navbar, footer, favicon y OG. La tipografía del wordmark es APROXIMADA
+     * (Arial/Archivo bold). IDEAL aún: el .ai/.svg original del diseñador del
+     * cliente — si llega, reemplaza la reconstrucción.
      */
-    logoVector:    null,  // ❌ archivo original .ai/.svg/.pdf — usando redibujo provisional
+    logoVector:    'brand/paquete-isotipo.svg (reconstrucción B)',  // ✅ vector propio B
   },
 
   // ─── Atribución ──────────────────────────────────────────────

@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <g>
+    
+      <radialGradient id="gMetal" cx="40%" cy="30%" r="80%">
+        <stop offset="0%" stop-color="#6B7C90"/><stop offset="100%" stop-color="#26303D"/>
+      </radialGradient>
+      <linearGradient id="gOrange" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#FFB13D"/><stop offset="100%" stop-color="#D87C00"/>
+      </linearGradient>
+      <linearGradient id="gBlue" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#1E6FB8"/><stop offset="100%" stop-color="#013366"/>
+      </linearGradient>
+
+    <!-- Engranaje -->
+    <path d="M182.00 100.00 L197.57 109.22 L196.63 116.34 L179.21 121.22 L171.01 141.00 L179.88 156.77 L175.51 162.47 L157.98 157.98 L141.00 171.01 L140.80 189.11 L134.16 191.85 L121.22 179.21 L100.00 182.00 L90.78 197.57 L83.66 196.63 L78.78 179.21 L59.00 171.01 L43.23 179.88 L37.53 175.51 L42.02 157.98 L28.99 141.00 L10.89 140.80 L8.15 134.16 L20.79 121.22 L18.00 100.00 L2.43 90.78 L3.37 83.66 L20.79 78.78 L28.99 59.00 L20.12 43.23 L24.49 37.53 L42.02 42.02 L59.00 28.99 L59.20 10.89 L65.84 8.15 L78.78 20.79 L100.00 18.00 L109.22 2.43 L116.34 3.37 L121.22 20.79 L141.00 28.99 L156.77 20.12 L162.47 24.49 L157.98 42.02 L171.01 59.00 L189.11 59.20 L191.85 65.84 L179.21 78.78 Z" fill="url(#gMetal)"/>
+    <circle cx="100" cy="100" r="80" fill="#1A2230"/>
+    <!-- Cara -->
+    <circle cx="100" cy="100" r="74" fill="#FFFFFF"/>
+    <!-- Arco naranja superior -->
+    <path d="M 153.51 51.82 A 72 72 0 0 1 55.67 156.74 L 62.44 148.07 A 61 61 0 0 0 145.33 59.18 Z" fill="url(#gOrange)"/>
+    <!-- Onda azul (solo A) -->
+    <clipPath id="face"><circle cx="100" cy="100" r="74"/></clipPath><g clip-path="url(#face)"><path d="M 36 126 q 64 26 128 0 q -20 22 -64 22 q -44 0 -64 -22 Z" fill="#013366" stroke="#FFFFFF" stroke-width="2"/></g>
+    <!-- Edificios -->
+    
+    <g>
+      <rect x="62" y="64" width="17" height="44" rx="1.5" fill="url(#gBlue)"/>
+      <rect x="81" y="76" width="14" height="32" rx="1.5" fill="url(#gBlue)"/>
+      <g fill="#FFFFFF">
+        <rect x="65.5" y="69" width="3.5" height="3.5"/><rect x="72" y="69" width="3.5" height="3.5"/>
+        <rect x="65.5" y="77" width="3.5" height="3.5"/><rect x="72" y="77" width="3.5" height="3.5"/>
+        <rect x="65.5" y="85" width="3.5" height="3.5"/><rect x="72" y="85" width="3.5" height="3.5"/>
+        <rect x="65.5" y="93" width="3.5" height="3.5"/><rect x="72" y="93" width="3.5" height="3.5"/>
+        <rect x="84" y="81" width="3" height="3"/><rect x="89.5" y="81" width="3" height="3"/>
+        <rect x="84" y="88" width="3" height="3"/><rect x="89.5" y="88" width="3" height="3"/>
+        <rect x="84" y="95" width="3" height="3"/><rect x="89.5" y="95" width="3" height="3"/>
+      </g>
+    </g>
+    <!-- Herramientas cruzadas -->
+    
+    <!-- Llave inglesa: cabeza abierta (anillo con boca) arriba-izq, mango abajo-der -->
+    <g transform="translate(104 102) rotate(-42)" fill="#6B7C90">
+      <rect x="-4.5" y="-2" width="9" height="40" rx="4.5"/>
+      <path fill-rule="evenodd" d="
+        M 0 -26 a 13 13 0 1 0 0.01 0 Z
+        M 0 -19 a 6 6 0 1 1 -0.01 0 Z
+        M -6 -30 L 6 -30 L 6 -19 L -6 -19 Z"/>
+    </g>
+    <!-- Destornillador: mango naranja abajo-izq, punta plana arriba-der -->
+    <g transform="translate(96 104) rotate(42)">
+      <rect x="-6" y="6" width="12" height="22" rx="6" fill="#F79204"/>
+      <rect x="-2.6" y="-16" width="5.2" height="24" fill="#C9CCC4"/>
+      <rect x="-3.6" y="-20" width="7.2" height="5" rx="1" fill="#C9CCC4"/>
+    </g>
+  </g></svg>
