@@ -164,6 +164,14 @@ footer) pertenece a ECOMAG y no se reutiliza para otros clientes.
 **Test final:** Si dos sitios lado a lado parecen del mismo diseñador → el motor
 falló o no se corrió → REDISEÑAR.
 
+**Contenido por cliente (CONTENT_ENGINE):** todo cliente nuevo pasa por
+`/nuevo-cliente`, que primero revisa TODO el material del cliente (fuente #1),
+investiga el sector como complemento, y garantiza el esqueleto completo de
+contenido (`.claude/CONTENT_ENGINE.md`). El contenido generado es un borrador
+específico del sector que el cliente aprueba o reemplaza — se lista en
+`CONTENIDO-PARA-REVISAR.md`. **Nunca inventar datos del cliente** (cifras,
+certificaciones, clientes, NIT): van a `pending` (bloquea producción) u ocultos.
+
 ### 2. NO PARECER IA
 - Agregar asimetría intencional, espaciado no-uniforme
 - Micro-interacciones únicas con propósito
