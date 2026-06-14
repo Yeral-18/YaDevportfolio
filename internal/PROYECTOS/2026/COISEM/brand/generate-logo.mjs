@@ -42,40 +42,44 @@ function gearPath(cx, cy, teeth, rOut, rIn) {
   return d + 'Z';
 }
 
-// ─── Edificios (2 torres con ventanas) ───────────────────────────
+// ─── Edificios (skyline 3 torres, apoyadas en la línea base y=109) ──
 function buildings(fill, win) {
+  // ventanas: filas alineadas, mismo tamaño
+  const w = (x, y) => `<rect x="${x}" y="${y}" width="3" height="3.4" fill="${win}"/>`;
+  let windows = '';
+  // Torre 1 (x76–90): 2 cols
+  for (const y of [62, 70, 78, 86, 94]) windows += w(79, y) + w(85, y);
+  // Torre 2 (x92–110): 2 cols (más baja)
+  for (const y of [76, 84, 92, 100]) windows += w(96, y) + w(103, y);
+  // Torre 3 (x112–124): 1 col
+  for (const y of [86, 94, 102]) windows += w(116, y);
   return `
     <g>
-      <rect x="62" y="64" width="17" height="44" rx="1.5" fill="${fill}"/>
-      <rect x="81" y="76" width="14" height="32" rx="1.5" fill="${fill}"/>
-      <g fill="${win}">
-        <rect x="65.5" y="69" width="3.5" height="3.5"/><rect x="72" y="69" width="3.5" height="3.5"/>
-        <rect x="65.5" y="77" width="3.5" height="3.5"/><rect x="72" y="77" width="3.5" height="3.5"/>
-        <rect x="65.5" y="85" width="3.5" height="3.5"/><rect x="72" y="85" width="3.5" height="3.5"/>
-        <rect x="65.5" y="93" width="3.5" height="3.5"/><rect x="72" y="93" width="3.5" height="3.5"/>
-        <rect x="84" y="81" width="3" height="3"/><rect x="89.5" y="81" width="3" height="3"/>
-        <rect x="84" y="88" width="3" height="3"/><rect x="89.5" y="88" width="3" height="3"/>
-        <rect x="84" y="95" width="3" height="3"/><rect x="89.5" y="95" width="3" height="3"/>
-      </g>
+      <rect x="76" y="56" width="14" height="53" fill="${fill}"/>
+      <rect x="92" y="70" width="18" height="39" fill="${fill}"/>
+      <rect x="112" y="80" width="12" height="29" fill="${fill}"/>
+      <g>${windows}</g>
     </g>`;
 }
 
-// ─── Llave inglesa + destornillador cruzados ─────────────────────
+// ─── Llave + destornillador cruzados en X (zona inferior, bajo la línea base) ──
 function tools(wrenchFill, driverHandle, driverShaft) {
   return `
-    <!-- Llave inglesa: cabeza abierta (anillo con boca) arriba-izq, mango abajo-der -->
-    <g transform="translate(104 102) rotate(-42)" fill="${wrenchFill}">
-      <rect x="-4.5" y="-2" width="9" height="40" rx="4.5"/>
-      <path fill-rule="evenodd" d="
-        M 0 -26 a 13 13 0 1 0 0.01 0 Z
-        M 0 -19 a 6 6 0 1 1 -0.01 0 Z
-        M -6 -30 L 6 -30 L 6 -19 L -6 -19 Z"/>
-    </g>
-    <!-- Destornillador: mango naranja abajo-izq, punta plana arriba-der -->
-    <g transform="translate(96 104) rotate(42)">
-      <rect x="-6" y="6" width="12" height="22" rx="6" fill="${driverHandle}"/>
-      <rect x="-2.6" y="-16" width="5.2" height="24" fill="${driverShaft}"/>
-      <rect x="-3.6" y="-20" width="7.2" height="5" rx="1" fill="${driverShaft}"/>
+    <g transform="translate(100 134)">
+      <!-- Llave inglesa: cabeza abierta abajo-izq, mango arriba-der -->
+      <g transform="rotate(-34)" fill="${wrenchFill}">
+        <rect x="-3.2" y="-26" width="6.4" height="30" rx="3.2"/>
+        <path fill-rule="evenodd" d="
+          M 0 14 a 10 10 0 1 0 0.01 0 Z
+          M 0 19 a 4.6 4.6 0 1 1 -0.01 0 Z
+          M -4.8 10 L 4.8 10 L 4.8 19 L -4.8 19 Z"/>
+      </g>
+      <!-- Destornillador: mango naranja abajo-der, punta plana arriba-izq -->
+      <g transform="rotate(34)">
+        <rect x="-4" y="6" width="8" height="20" rx="4" fill="${driverHandle}"/>
+        <rect x="-2.1" y="-22" width="4.2" height="28" fill="${driverShaft}"/>
+        <rect x="-3" y="-26" width="6" height="4.5" fill="${driverShaft}"/>
+      </g>
     </g>`;
 }
 
@@ -113,19 +117,25 @@ function emblem(variant) {
         <stop offset="0%" stop-color="${C.blueL}"/><stop offset="100%" stop-color="${C.blueD}"/>
       </linearGradient>`}
 
-    <!-- Engranaje -->
-    <path d="${gearPath(100, 100, 12, 98, 82)}" fill="${gearFill}"/>
-    <circle cx="100" cy="100" r="80" fill="${flat ? C.metalD : '#1A2230'}"/>
+    <!-- Engranaje (14 dientes, perfil fino) -->
+    <path d="${gearPath(100, 100, 14, 98, 87)}" fill="${gearFill}"/>
+    <circle cx="100" cy="100" r="82" fill="${flat ? C.metalD : '#1A2230'}"/>
     <!-- Cara -->
-    <circle cx="100" cy="100" r="74" fill="${faceFill}"/>
-    <!-- Arco naranja superior -->
-    ${arc(100, 100, 72, 11, -42, 128, arcFill)}
-    <!-- Onda azul (solo A) -->
-    ${flat ? '' : `<clipPath id="face"><circle cx="100" cy="100" r="74"/></clipPath><g clip-path="url(#face)">${wave}</g>`}
-    <!-- Edificios -->
-    ${buildings(bFill, C.white)}
-    <!-- Herramientas cruzadas -->
-    ${tools(flat ? C.metal : C.metalL, C.orange, flat ? C.metalL : '#C9CCC4')}
+    <circle cx="100" cy="100" r="76" fill="${faceFill}"/>
+
+    <clipPath id="face${variant}"><circle cx="100" cy="100" r="76"/></clipPath>
+    <g clip-path="url(#face${variant})">
+      <!-- Arco naranja superior-derecho -->
+      ${arc(100, 100, 74, 8, -102, 34, arcFill)}
+      <!-- Onda azul de la base (solo A — fiel) -->
+      ${flat ? '' : wave}
+      <!-- Herramientas cruzadas (zona inferior, detrás de la línea base) -->
+      ${tools(flat ? C.metal : C.metalL, C.orange, flat ? C.metalD : '#9AA7B5')}
+      <!-- Línea base / suelo: separa construcción (arriba) de mantenimiento (abajo) -->
+      <rect x="44" y="108" width="112" height="2" fill="${flat ? C.metalL : '#9AA7B5'}"/>
+      <!-- Edificios (delante, apoyados en la línea base) -->
+      ${buildings(bFill, faceFill)}
+    </g>
   </g>`;
 }
 

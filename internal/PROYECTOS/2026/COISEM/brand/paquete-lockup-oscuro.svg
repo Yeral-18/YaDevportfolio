@@ -4,45 +4,46 @@
   <g>
     
 
-    <!-- Engranaje -->
-    <path d="M182.00 100.00 L197.57 109.22 L196.63 116.34 L179.21 121.22 L171.01 141.00 L179.88 156.77 L175.51 162.47 L157.98 157.98 L141.00 171.01 L140.80 189.11 L134.16 191.85 L121.22 179.21 L100.00 182.00 L90.78 197.57 L83.66 196.63 L78.78 179.21 L59.00 171.01 L43.23 179.88 L37.53 175.51 L42.02 157.98 L28.99 141.00 L10.89 140.80 L8.15 134.16 L20.79 121.22 L18.00 100.00 L2.43 90.78 L3.37 83.66 L20.79 78.78 L28.99 59.00 L20.12 43.23 L24.49 37.53 L42.02 42.02 L59.00 28.99 L59.20 10.89 L65.84 8.15 L78.78 20.79 L100.00 18.00 L109.22 2.43 L116.34 3.37 L121.22 20.79 L141.00 28.99 L156.77 20.12 L162.47 24.49 L157.98 42.02 L171.01 59.00 L189.11 59.20 L191.85 65.84 L179.21 78.78 Z" fill="#3A4A5E"/>
-    <circle cx="100" cy="100" r="80" fill="#26303D"/>
+    <!-- Engranaje (14 dientes, perfil fino) -->
+    <path d="M187.00 100.00 L197.68 107.91 L196.99 114.03 L184.82 119.36 L178.38 137.75 L184.58 149.51 L181.30 154.72 L168.02 154.24 L154.24 168.02 L154.72 181.30 L149.51 184.58 L137.75 178.38 L119.36 184.82 L114.03 196.99 L107.91 197.68 L100.00 187.00 L80.64 184.82 L70.55 193.47 L64.74 191.44 L62.25 178.38 L45.76 168.02 L32.91 171.44 L28.56 167.09 L31.98 154.24 L21.62 137.75 L8.56 135.26 L6.53 129.45 L15.18 119.36 L13.00 100.00 L2.32 92.09 L3.01 85.97 L15.18 80.64 L21.62 62.25 L15.42 50.49 L18.70 45.28 L31.98 45.76 L45.76 31.98 L45.28 18.70 L50.49 15.42 L62.25 21.62 L80.64 15.18 L85.97 3.01 L92.09 2.32 L100.00 13.00 L119.36 15.18 L129.45 6.53 L135.26 8.56 L137.75 21.62 L154.24 31.98 L167.09 28.56 L171.44 32.91 L168.02 45.76 L178.38 62.25 L191.44 64.74 L193.47 70.55 L184.82 80.64 Z" fill="#3A4A5E"/>
+    <circle cx="100" cy="100" r="82" fill="#26303D"/>
     <!-- Cara -->
-    <circle cx="100" cy="100" r="74" fill="#FFFFFF"/>
-    <!-- Arco naranja superior -->
-    <path d="M 153.51 51.82 A 72 72 0 0 1 55.67 156.74 L 62.44 148.07 A 61 61 0 0 0 145.33 59.18 Z" fill="#F79204"/>
-    <!-- Onda azul (solo A) -->
-    
-    <!-- Edificios -->
-    
-    <g>
-      <rect x="62" y="64" width="17" height="44" rx="1.5" fill="#025199"/>
-      <rect x="81" y="76" width="14" height="32" rx="1.5" fill="#025199"/>
-      <g fill="#FFFFFF">
-        <rect x="65.5" y="69" width="3.5" height="3.5"/><rect x="72" y="69" width="3.5" height="3.5"/>
-        <rect x="65.5" y="77" width="3.5" height="3.5"/><rect x="72" y="77" width="3.5" height="3.5"/>
-        <rect x="65.5" y="85" width="3.5" height="3.5"/><rect x="72" y="85" width="3.5" height="3.5"/>
-        <rect x="65.5" y="93" width="3.5" height="3.5"/><rect x="72" y="93" width="3.5" height="3.5"/>
-        <rect x="84" y="81" width="3" height="3"/><rect x="89.5" y="81" width="3" height="3"/>
-        <rect x="84" y="88" width="3" height="3"/><rect x="89.5" y="88" width="3" height="3"/>
-        <rect x="84" y="95" width="3" height="3"/><rect x="89.5" y="95" width="3" height="3"/>
+    <circle cx="100" cy="100" r="76" fill="#FFFFFF"/>
+
+    <clipPath id="faceB"><circle cx="100" cy="100" r="76"/></clipPath>
+    <g clip-path="url(#faceB)">
+      <!-- Arco naranja superior-derecho -->
+      <path d="M 84.61 27.62 A 74 74 0 0 1 161.35 141.38 L 154.72 136.91 A 66 66 0 0 0 86.28 35.44 Z" fill="#F79204"/>
+      <!-- Onda azul de la base (solo A — fiel) -->
+      
+      <!-- Herramientas cruzadas (zona inferior, detrás de la línea base) -->
+      
+    <g transform="translate(100 134)">
+      <!-- Llave inglesa: cabeza abierta abajo-izq, mango arriba-der -->
+      <g transform="rotate(-34)" fill="#3A4A5E">
+        <rect x="-3.2" y="-26" width="6.4" height="30" rx="3.2"/>
+        <path fill-rule="evenodd" d="
+          M 0 14 a 10 10 0 1 0 0.01 0 Z
+          M 0 19 a 4.6 4.6 0 1 1 -0.01 0 Z
+          M -4.8 10 L 4.8 10 L 4.8 19 L -4.8 19 Z"/>
+      </g>
+      <!-- Destornillador: mango naranja abajo-der, punta plana arriba-izq -->
+      <g transform="rotate(34)">
+        <rect x="-4" y="6" width="8" height="20" rx="4" fill="#F79204"/>
+        <rect x="-2.1" y="-22" width="4.2" height="28" fill="#26303D"/>
+        <rect x="-3" y="-26" width="6" height="4.5" fill="#26303D"/>
       </g>
     </g>
-    <!-- Herramientas cruzadas -->
-    
-    <!-- Llave inglesa: cabeza abierta (anillo con boca) arriba-izq, mango abajo-der -->
-    <g transform="translate(104 102) rotate(-42)" fill="#3A4A5E">
-      <rect x="-4.5" y="-2" width="9" height="40" rx="4.5"/>
-      <path fill-rule="evenodd" d="
-        M 0 -26 a 13 13 0 1 0 0.01 0 Z
-        M 0 -19 a 6 6 0 1 1 -0.01 0 Z
-        M -6 -30 L 6 -30 L 6 -19 L -6 -19 Z"/>
+      <!-- Línea base / suelo: separa construcción (arriba) de mantenimiento (abajo) -->
+      <rect x="44" y="108" width="112" height="2" fill="#6B7C90"/>
+      <!-- Edificios (delante, apoyados en la línea base) -->
+      
+    <g>
+      <rect x="76" y="56" width="14" height="53" fill="#025199"/>
+      <rect x="92" y="70" width="18" height="39" fill="#025199"/>
+      <rect x="112" y="80" width="12" height="29" fill="#025199"/>
+      <g><rect x="79" y="62" width="3" height="3.4" fill="#FFFFFF"/><rect x="85" y="62" width="3" height="3.4" fill="#FFFFFF"/><rect x="79" y="70" width="3" height="3.4" fill="#FFFFFF"/><rect x="85" y="70" width="3" height="3.4" fill="#FFFFFF"/><rect x="79" y="78" width="3" height="3.4" fill="#FFFFFF"/><rect x="85" y="78" width="3" height="3.4" fill="#FFFFFF"/><rect x="79" y="86" width="3" height="3.4" fill="#FFFFFF"/><rect x="85" y="86" width="3" height="3.4" fill="#FFFFFF"/><rect x="79" y="94" width="3" height="3.4" fill="#FFFFFF"/><rect x="85" y="94" width="3" height="3.4" fill="#FFFFFF"/><rect x="96" y="76" width="3" height="3.4" fill="#FFFFFF"/><rect x="103" y="76" width="3" height="3.4" fill="#FFFFFF"/><rect x="96" y="84" width="3" height="3.4" fill="#FFFFFF"/><rect x="103" y="84" width="3" height="3.4" fill="#FFFFFF"/><rect x="96" y="92" width="3" height="3.4" fill="#FFFFFF"/><rect x="103" y="92" width="3" height="3.4" fill="#FFFFFF"/><rect x="96" y="100" width="3" height="3.4" fill="#FFFFFF"/><rect x="103" y="100" width="3" height="3.4" fill="#FFFFFF"/><rect x="116" y="86" width="3" height="3.4" fill="#FFFFFF"/><rect x="116" y="94" width="3" height="3.4" fill="#FFFFFF"/><rect x="116" y="102" width="3" height="3.4" fill="#FFFFFF"/></g>
     </g>
-    <!-- Destornillador: mango naranja abajo-izq, punta plana arriba-der -->
-    <g transform="translate(96 104) rotate(42)">
-      <rect x="-6" y="6" width="12" height="22" rx="6" fill="#F79204"/>
-      <rect x="-2.6" y="-16" width="5.2" height="24" fill="#6B7C90"/>
-      <rect x="-3.6" y="-20" width="7.2" height="5" rx="1" fill="#6B7C90"/>
     </g>
   </g></g>
     
