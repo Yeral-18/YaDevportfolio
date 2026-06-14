@@ -58,6 +58,37 @@ elementos no cambian; la ejecución sube de nivel.
 
 ---
 
+## ⭐ MÉTODO PROFESIONAL (lección aprendida — COICEM 2026-06)
+
+**NO redibujar el logo a mano con paths SVG.** Tiene un techo de calidad bajo:
+sale "geométrico/de primaria", con elementos amontonados, y el cliente lo rechaza.
+Redibujar a ciegas un emblema con engranaje + edificios + herramientas + arco
+SIEMPRE se ve peor que el original.
+
+**El método que SÍ funciona (3 pasos):**
+
+1. **Limpiar el original** (PIL): quitar el fondo (luma bajo → alpha 0), recortar al
+   contenido, separar emblema vs wordmark. Para vectorizar bien:
+   **upscale 3× (LANCZOS) + MedianFilter (quita ruido JPEG) + quantize ~20 colores
+   + alpha BINARIO** (umbral) — esto elimina las "texturas en los bordes" que deja
+   el trazado sobre un JPEG sucio.
+2. **Vectorizar el original** con `@neplex/vectorizer` (vtracer WASM, ya en el repo):
+   `colorMode:Color, mode:Spline, filterSpeckle:12, colorPrecision:6,
+   cornerThreshold:80, layerDifference:24`. Conserva el diseño profesional REAL
+   (volumen, gradientes, detalle) en vector escalable.
+3. **Combinar lo mejor de cada uno:** emblema VECTORIZADO (real, limpio) +
+   wordmark TIPOGRÁFICO redibujado con texto (`<text>` nítido), NO el wordmark
+   vectorizado (sale con textura). Componer con SVG anidado (`<svg viewBox>`).
+
+Scripts de referencia (COICEM `brand/`): `clean-original.py`,
+`preprocess-emblema.py`, `vectorize.mjs`, `compose-lockup.mjs`.
+
+> Orden de preferencia de fuente del logo: (1) `.ai/.svg` del diseñador →
+> (2) vectorización del original limpio → (3) redibujo a mano (último recurso, evitar).
+> El wordmark vectorizado casi siempre conviene reemplazarlo por texto tipográfico.
+
+---
+
 ## 2. PROCESO DE RECONSTRUCCIÓN (lo que hace Claude Code)
 
 1. **Abrir y analizar** el archivo original (view del JPEG/PNG). Identificar:

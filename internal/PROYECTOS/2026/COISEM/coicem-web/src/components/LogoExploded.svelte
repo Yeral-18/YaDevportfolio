@@ -1,13 +1,13 @@
 <!--
-  LogoExploded — RECONSTRUCCIÓN APROXIMADA del logo COICEM en SVG por piezas.
-  ⚠️ PROTOTIPO: redibujado desde el JPEG (no es el original). Pendiente de validación
-     del cliente + del logo vectorial real (ver site-config.pending.logoVector).
-  Idea de autor: despiece (explode) → re-ensamblado al entrar en vista; toggle por click.
-  Móvil/touch: click. reduced-motion: ensamblado estático. Fallback: SVG siempre visible.
+  LogoExploded — Despiece del logo COICEM (emblema reconstruido Versión B).
+  Misma geometría que brand/generate-logo.mjs: engranaje 14 dientes + skyline +
+  línea base + herramientas cruzadas + arco naranja. Coherente con navbar/footer.
+  Idea de autor: las piezas entran ensamblándose y se despiezan (explode) al click.
+  Móvil/touch: click. reduced-motion: estático. Fallback: SVG siempre visible.
 -->
 <script lang="ts">
-  let assembled = $state(false);   // entra ensamblándose
-  let exploded  = $state(false);   // toggle manual
+  let assembled = $state(false);
+  let exploded  = $state(false);
   let host = $state<HTMLElement | null>(null);
 
   const reduced = typeof window !== 'undefined'
@@ -23,21 +23,51 @@
     return () => io.disconnect();
   });
 
-  // 12 dientes del engranaje
-  const teeth = Array.from({ length: 12 }, (_, i) => i * 30);
+  // ─── Geometría del emblema B (igual que generate-logo.mjs) ───
+  function gearPath(cx: number, cy: number, teeth: number, rOut: number, rIn: number): string {
+    const pts: [number, number][] = [];
+    const step = (Math.PI * 2) / teeth;
+    for (let i = 0; i < teeth; i++) {
+      const a = i * step;
+      pts.push([a + step * 0.00, rIn]);
+      pts.push([a + step * 0.18, rOut]);
+      pts.push([a + step * 0.32, rOut]);
+      pts.push([a + step * 0.50, rIn]);
+    }
+    return pts.map(([ang, r], i) =>
+      (i === 0 ? 'M' : 'L') + (cx + Math.cos(ang) * r).toFixed(2) + ' ' + (cy + Math.sin(ang) * r).toFixed(2)
+    ).join(' ') + 'Z';
+  }
+  function arcPath(cx: number, cy: number, r: number, w: number, a0: number, a1: number): string {
+    const rad = (d: number) => (d * Math.PI) / 180;
+    const p = (ang: number, rr: number): [string, string] =>
+      [(cx + Math.cos(ang) * rr).toFixed(2), (cy + Math.sin(ang) * rr).toFixed(2)];
+    const [x0, y0] = p(rad(a0), r), [x1, y1] = p(rad(a1), r);
+    const [x2, y2] = p(rad(a1), r - w), [x3, y3] = p(rad(a0), r - w);
+    const large = Math.abs(a1 - a0) > 180 ? 1 : 0;
+    return `M ${x0} ${y0} A ${r} ${r} 0 ${large} 1 ${x1} ${y1} L ${x2} ${y2} A ${r - w} ${r - w} 0 ${large} 0 ${x3} ${y3} Z`;
+  }
 
-  // Piezas: offset de despiece (x,y) + número de parte + etiqueta
+  const GEAR = gearPath(100, 100, 14, 98, 87);
+  const ARC  = arcPath(100, 100, 74, 8, -102, 34);
+
+  // Ventanas de los edificios (mismas posiciones que el emblema)
+  const win: [number, number][] = [];
+  for (const y of [62, 70, 78, 86, 94]) { win.push([79, y]); win.push([85, y]); }
+  for (const y of [76, 84, 92, 100]) { win.push([96, y]); win.push([103, y]); }
+  for (const y of [86, 94, 102]) { win.push([116, y]); }
+
+  // ─── Despiece: offset por pieza + nº de parte ───
   const parts = [
-    { id: 'gear',  n: '01', label: 'ENGRANAJE',    ex: 0,   ey: -54 },
-    { id: 'build', n: '02', label: 'INFRAESTRUCT', ex: -60, ey: 18 },
-    { id: 'wrench',n: '03', label: 'LLAVE',         ex: 58,  ey: 22 },
-    { id: 'screw', n: '04', label: 'DESTORNILLADOR',ex: 30,  ey: 62 },
-    { id: 'arc',   n: '05', label: 'ARCO',          ex: 64,  ey: -22 },
+    { id: 'gear',  n: '01', label: 'ENGRANAJE',     ex: 0,   ey: -30 },
+    { id: 'build', n: '02', label: 'INFRAESTRUCT.',  ex: -30, ey: 6  },
+    { id: 'wrench',n: '03', label: 'LLAVE',          ex: 30,  ey: 14 },
+    { id: 'screw', n: '04', label: 'DESTORNILLADOR', ex: 14,  ey: 32 },
+    { id: 'arc',   n: '05', label: 'ARCO',           ex: 30,  ey: -16 },
   ];
   const off = (id: string) => {
-    const show = exploded;
     const p = parts.find((q) => q.id === id)!;
-    return show ? `translate(${p.ex}px, ${p.ey}px)` : 'translate(0,0)';
+    return exploded ? `translate(${p.ex}px, ${p.ey}px)` : 'translate(0,0)';
   };
 </script>
 
@@ -47,71 +77,62 @@
   class:exploded
   bind:this={host}
   role="img"
-  aria-label="Logo de COICEM: engranaje con herramientas (reconstrucción)"
+  aria-label="Logo de COICEM: engranaje con edificios y herramientas (reconstrucción)"
   title="Click para despiezar / ensamblar"
   onclick={() => (exploded = !exploded)}
   onkeydown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); exploded = !exploded; } }}
   tabindex="0"
 >
-  <svg viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <!-- 01 engranaje + anillo + cara -->
+    <g class="part" style:transform={off('gear')}>
+      <path d={GEAR} fill="#313F50" />
+      <circle cx="100" cy="100" r="82" fill="#26303D" />
+      <circle cx="100" cy="100" r="76" fill="#FFFFFF" />
+    </g>
+
     <!-- 05 arco naranja -->
     <g class="part" style:transform={off('arc')}>
-      <path d="M 300 120 A 110 110 0 0 1 300 280" fill="none" stroke="#F79204" stroke-width="14" stroke-linecap="round" opacity="0.95"/>
+      <path d={ARC} fill="#F79204" />
     </g>
 
-    <!-- 01 engranaje (anillo + dientes) -->
-    <g class="part" style:transform={off('gear')}>
-      <g transform="translate(200,200)">
-        {#each teeth as a}
-          <rect x="-9" y="-148" width="18" height="34" rx="2" fill="#313F50" transform={`rotate(${a})`} />
-        {/each}
-        <circle r="124" fill="none" stroke="#4B6881" stroke-width="20" />
-        <circle r="104" fill="#0B0E14" stroke="#313F50" stroke-width="3" />
-      </g>
-    </g>
-
-    <!-- 02 edificios (azul) -->
-    <g class="part" style:transform={off('build')}>
-      <g transform="translate(150,168)">
-        <rect x="0"  y="20" width="26" height="70" fill="#025199" />
-        <rect x="30" y="0"  width="26" height="90" fill="#1A6FB0" />
-        <rect x="60" y="34" width="22" height="56" fill="#023F7E" />
-      </g>
-    </g>
-
-    <!-- 03 llave (metal) -->
+    <!-- 03 llave (zona inferior) -->
     <g class="part" style:transform={off('wrench')}>
-      <g transform="translate(214,150) rotate(38)">
-        <rect x="-7" y="0" width="14" height="120" rx="5" fill="#8EB9DC" />
-        <path d="M -16 -6 a 20 20 0 1 0 32 0 l -7 10 a 9 9 0 1 1 -18 0 z" fill="#8EB9DC" />
+      <g transform="translate(100 134) rotate(-34)" fill="#313F50">
+        <rect x="-3.2" y="-26" width="6.4" height="30" rx="3.2" />
+        <path fill-rule="evenodd" d="M 0 14 a 10 10 0 1 0 0.01 0 Z M 0 19 a 4.6 4.6 0 1 1 -0.01 0 Z M -4.8 10 L 4.8 10 L 4.8 19 L -4.8 19 Z" />
       </g>
     </g>
 
     <!-- 04 destornillador (mango naranja) -->
     <g class="part" style:transform={off('screw')}>
-      <g transform="translate(176,150) rotate(40)">
-        <rect x="-9" y="0"   width="18" height="64" rx="6" fill="#F79204" />
-        <rect x="-4" y="62"  width="8"  height="60" fill="#8EB9DC" />
-        <rect x="-3" y="120" width="6"  height="14" fill="#4B6881" />
+      <g transform="translate(100 134) rotate(34)">
+        <rect x="-4" y="6" width="8" height="20" rx="4" fill="#F79204" />
+        <rect x="-2.1" y="-22" width="4.2" height="28" fill="#26303D" />
+        <rect x="-3" y="-26" width="6" height="4.5" fill="#26303D" />
       </g>
     </g>
 
-    <!-- leader lines + part numbers (visibles al despiezar) -->
-    {#each parts as p}
-      <g class="leader" style:transform={off(p.id)}>
-        <text x={200 + p.ex * 0.0} y={200} font-family="'IBM Plex Mono', monospace" font-size="0"></text>
-      </g>
-    {/each}
+    <!-- 02 edificios + línea base (encima, zona superior) -->
+    <g class="part" style:transform={off('build')}>
+      <rect x="44" y="108" width="112" height="2" fill="#6B7C90" />
+      <rect x="76" y="56" width="14" height="53" fill="#025199" />
+      <rect x="92" y="70" width="18" height="39" fill="#025199" />
+      <rect x="112" y="80" width="12" height="29" fill="#025199" />
+      {#each win as [x, y]}
+        <rect x={x} y={y} width="3" height="3.4" fill="#FFFFFF" />
+      {/each}
+    </g>
   </svg>
 
-  <!-- Etiquetas de parte (HTML, mono) — sólo visibles al despiezar -->
+  <!-- Etiquetas de parte (sólo al despiezar) -->
   <ul class="legend" aria-hidden={!exploded}>
     {#each parts as p}
       <li><span class="num">{p.n}</span> {p.label}</li>
     {/each}
   </ul>
 
-  <span class="proto-tag">RECONSTRUCCIÓN · PENDIENTE VALIDACIÓN</span>
+  <span class="proto-tag">RECONSTRUCCIÓN B · PENDIENTE VALIDACIÓN</span>
 </div>
 
 <style>
@@ -127,7 +148,6 @@
 
   svg { width: 100%; height: auto; display: block; }
 
-  /* Estado inicial: piezas ligeramente separadas + transparentes; al "assembled" convergen */
   .part {
     transform-box: fill-box;
     transform-origin: center;
@@ -135,12 +155,7 @@
     opacity: 0;
   }
   .assembled .part { opacity: 1; }
-
-  /* En reposo (assembled, no exploded) las piezas están en su sitio (translate 0).
-     El style:transform inline maneja explode; aquí sólo la entrada. */
   .despiece:not(.assembled) .part { opacity: 0; }
-
-  .leader { transition: transform 700ms cubic-bezier(0.83,0,0.17,1); }
 
   .legend {
     list-style: none; margin: 14px 0 0; padding: 0;
@@ -160,6 +175,6 @@
   }
 
   @media (prefers-reduced-motion: reduce) {
-    .part, .leader, .legend { transition: none; }
+    .part, .legend { transition: none; }
   }
 </style>

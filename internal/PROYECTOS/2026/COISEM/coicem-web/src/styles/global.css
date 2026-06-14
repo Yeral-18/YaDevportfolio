@@ -40,7 +40,7 @@ html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
 /* El navbar horizontal es fijo (64px). Sin esto, al navegar por ancla las
    secciones (#inicio/#nosotros/#areas/#contacto y cada área) quedan TAPADAS
    bajo el navbar. scroll-margin-top compensa la altura del navbar + aire. */
-:where([id]) { scroll-margin-top: 80px; }
+:where([id]) { scroll-margin-top: 88px; }
 
 body {
   margin: 0;

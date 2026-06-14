@@ -181,15 +181,15 @@
   .nav__inner {
     max-width: 1320px;
     margin: 0 auto;
-    height: 64px;
+    height: 72px;
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: clamp(0.75rem, 2vw, 1.5rem);
     padding: 0 clamp(1rem, 4vw, 3rem);
   }
 
-  .nav__brand { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; }
-  .nav__logo { display: block; height: 40px; width: auto; }
+  .nav__brand { display: flex; align-items: center; text-decoration: none; flex-shrink: 0; min-width: 0; }
+  .nav__logo { display: block; height: 52px; width: auto; max-width: 100%; }
 
   .nav__links { margin-left: auto; }
   .nav__list {

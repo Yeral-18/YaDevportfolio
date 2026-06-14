@@ -143,6 +143,7 @@ const telemetryCells = [
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-width: 0;                 /* permite encoger el grid item (evita overflow móvil) */
     padding-right: clamp(1.5rem, 4vw, 3.5rem);
     border-right: 1px solid var(--c-metal);
   }
@@ -165,7 +166,8 @@ const telemetryCells = [
     color: var(--c-text);
     letter-spacing: 0.01em;
     line-height: 0.98;
-    font-size: clamp(2.4rem, 6.5vw, 5.25rem);
+    font-size: clamp(2rem, 6.5vw, 5.25rem);
+    overflow-wrap: break-word;    /* última defensa: parte palabras larguísimas */
   }
   .hero__title-key {
     color: var(--c-hivis);

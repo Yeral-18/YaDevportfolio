@@ -162,3 +162,28 @@ Skip-link CSS propio · `<main id="main-content">` · `prefers-reduced-motion` e
 - **DISEÑO (único, por el motor):** hero, composición, grids, navegación (patrón), movimiento, transiciones, cursor (estilo), tipografía. Ver `CREATIVE_ENGINE.md` + `PROJECT_DNA_LOG.md`.
 
 > En móvil: la diferenciación de navegación vive en la animación del overlay; el WhatsApp button + CTA + carga rápida son SISTEMA.
+
+---
+
+## 12. ERRORES DE LAYOUT RECURRENTES (checklist anti-bugs — COICEM 2026-06)
+
+Bugs que aparecieron repetidamente. Verificar SIEMPRE antes de dar por listo:
+
+### Navbar/header fijo (`position: fixed`)
+- [ ] **`scroll-margin-top` en TODAS las secciones ancla** (`:where([id]){scroll-margin-top: <alto navbar>+16px}`). Sin esto, al navegar por `#ancla` el navbar TAPA el inicio de la sección → "no veo contacto", "cotizar cortado".
+- [ ] **`padding-top` en el contenedor de contenido = alto del navbar** (si el navbar cubre el flujo). Sincronizar ambos valores si cambia el alto.
+- [ ] **Logo legible**: ≥48px de alto en el navbar (no 40px — "se ve muy pequeño").
+
+### Overflow horizontal en móvil ("contenido cortado a los lados", franja negra a la derecha)
+- [ ] **`min-width: 0` en grid/flex items con texto largo.** Un grid item tiene `min-width:auto` por defecto → un titular largo lo expande más allá del viewport → overflow horizontal → todo se ve cortado a la derecha. Causa #1 del bug.
+- [ ] **`overflow-wrap: break-word`** en titulares grandes; bajar el mínimo del `clamp()` para móvil.
+- [ ] **Verificar con:** `document.documentElement.scrollWidth === clientWidth` en 390px. Si difieren, hay overflow.
+
+### Footer (columnas que se desbordan)
+- [ ] **`min-width: 0` + `overflow-wrap: anywhere`** en columnas con palabras largas (MANTENIMIENTO, INFRAESTRUCTURA).
+- [ ] **`white-space: nowrap`** en valores cortos que no deben partirse ("PENDIENTE" → no "PENDIEN TE").
+- [ ] Sin el sidebar/navbar comiendo ancho, rebalancear el grid de columnas.
+
+### Verificación obligatoria (Playwright MCP)
+- [ ] Screenshot en **390px (móvil)** y **1366px (desktop)**: hero, navegación por ancla a #contacto, footer completo (hasta "Desarrollado por YaDev").
+- [ ] `scrollWidth === clientWidth` en móvil (sin overflow).
