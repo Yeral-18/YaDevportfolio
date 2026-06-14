@@ -8,16 +8,16 @@ import { readFile, writeFile } from 'node:fs/promises';
 
 const opts = {
   colorMode: ColorMode.Color,
-  colorPrecision: 6,        // menos colores → capas limpias
-  filterSpeckle: 12,        // borra motas/textura de borde
-  spliceThreshold: 60,
-  cornerThreshold: 80,      // bordes más suaves
+  colorPrecision: 6,        // preserva grises metálicos
+  filterSpeckle: 20,        // borra motas de borde sin comer detalle
+  spliceThreshold: 65,
+  cornerThreshold: 88,      // bordes suaves
   hierarchical: Hierarchical.Stacked,
   mode: PathSimplifyMode.Spline,
-  layerDifference: 24,      // menos capas
+  layerDifference: 26,
   lengthThreshold: 8,
   maxIterations: 10,
-  pathPrecision: 6,
+  pathPrecision: 5,
 };
 
 const src = await readFile(new URL('./emblema-pre.png', import.meta.url));
