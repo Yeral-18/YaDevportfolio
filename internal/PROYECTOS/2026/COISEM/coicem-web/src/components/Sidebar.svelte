@@ -108,7 +108,7 @@
 </nav>
 
 <!-- ════════════════ TOP-BAR SLIM (MÓVIL <1024px) ════════════════ -->
-<div class="topbar" role="banner">
+<div class="topbar">
   <img class="bar-logo" src="/images/coicem-logo.png" alt={`${siteConfig.shortName} S.A.S`} />
   <button
     class="burger"
@@ -219,25 +219,6 @@
   .bar-logo { display: block; height: 30px; width: auto; }
   .overlay-head .bar-logo { height: 34px; }
 
-  .wordmark {
-    font-family: var(--font-display);
-    text-transform: uppercase;
-    font-weight: 700;
-    letter-spacing: 0.08em;
-    font-size: 1.35rem;
-    line-height: 1;
-    color: var(--texto);
-  }
-
-  .tagline {
-    margin-top: 8px;
-    font-family: var(--font-mono);
-    font-size: 0.625rem;
-    letter-spacing: 0.18em;
-    text-transform: uppercase;
-    color: var(--metal-light);
-  }
-
   .rail-list {
     list-style: none;
     margin: 0;
@@ -303,10 +284,6 @@
     background: var(--metal-base);
     border-bottom: 1px solid var(--metal-border);
     z-index: 60;
-  }
-
-  .wordmark--bar {
-    font-size: 1.15rem;
   }
 
   .burger {

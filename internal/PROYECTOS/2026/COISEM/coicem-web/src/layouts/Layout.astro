@@ -65,8 +65,24 @@ const siteJsonLd = {
     <meta property="og:site_name" content={siteConfig.legalName} />
     <meta name="twitter:card" content="summary_large_image" />
 
+    <!-- Favicon (usar logo PNG hasta tener .ico dedicado) -->
+    <link rel="icon" href="/images/coicem-logo.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/images/coicem-logo.png" />
+
+    <!-- OG image (logo centrado — reemplazar por 1200×630 definitivo cuando esté listo) -->
+    <meta property="og:image" content={`${siteUrl}/images/coicem-logo.png`} />
+    <meta property="og:image:alt" content="COICEM S.A.S — Mantenimiento Industrial Especializado" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:image" content={`${siteUrl}/images/coicem-logo.png`} />
+
+    <!-- Google Fonts: preconnect + stylesheet directo en <head> (evita waterfall del @import en CSS) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Archivo+Expanded:wght@700;800;900&family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap"
+    />
 
     <script type="application/ld+json" set:html={JSON.stringify(orgJsonLd)} />
     <script type="application/ld+json" set:html={JSON.stringify(siteJsonLd)} />

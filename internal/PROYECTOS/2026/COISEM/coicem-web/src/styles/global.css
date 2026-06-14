@@ -5,7 +5,8 @@
    Tokens: ver src/design-system/tokens.ts (paleta PROVISIONAL v1).
    ══════════════════════════════════════════════════════════════════ */
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+/* Fuentes: cargadas vía <link> en Layout.astro para evitar el waterfall del @import.
+   Archivo Expanded (display) · IBM Plex Sans (body) · IBM Plex Mono (specs/datos). */
 
 @tailwind base;
 @tailwind components;

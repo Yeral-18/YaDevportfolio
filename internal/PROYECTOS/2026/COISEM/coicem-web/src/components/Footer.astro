@@ -52,7 +52,10 @@ const socials = [
       </div>
       <div class="cta__actions">
         <a href="#contacto" class="btn btn--solid mono">Cotizar</a>
-        <a href="#contacto" class="btn btn--ghost mono">WhatsApp</a>
+        {waDigits
+          ? <a href={`https://wa.me/${waDigits}`} class="btn btn--ghost mono" target="_blank" rel="noopener">WhatsApp</a>
+          : <a href="#contacto" class="btn btn--ghost mono">WhatsApp</a>
+        }
       </div>
     </div>
   </div>

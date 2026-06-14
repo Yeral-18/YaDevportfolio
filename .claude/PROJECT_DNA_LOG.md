@@ -96,7 +96,7 @@ Ninguna fila puede repetir la combinación de las 3 primeras columnas.
 - **Login corporativo:** Microsoft Entra ID branded (navy + tire-track, calidad Apple/Stripe)
 - **Rebrand de:** Multiservicios P&J
 
-### COICEM S.A.S — \`coicem.com\` · 🟡 RITUAL aprobado, en setup
+### COICEM S.A.S — \`coicem.com\` · 🟡 En Railway (staging)
 > Marca = **COICEM** (el logo dice "COICEM SAS"). Dominio correcto comprado: **coicem.com**
 > (`coisem.com` fue un typo del cliente, queda en desuso). La carpeta del repo aún se
 > llama `COISEM/` — renombrar a `COICEM/` pendiente (opcional).
