@@ -165,9 +165,10 @@ const telemetryCells = [
     text-transform: uppercase;
     color: var(--c-text);
     letter-spacing: 0.01em;
-    line-height: 0.98;
-    font-size: clamp(2rem, 6.5vw, 5.25rem);
-    overflow-wrap: break-word;    /* última defensa: parte palabras larguísimas */
+    line-height: 1.0;
+    font-size: clamp(1.7rem, 5vw, 4.25rem);   /* "MANTENIMIENTO" cabe entera */
+    overflow-wrap: normal;        /* NO partir palabras a la mitad */
+    hyphens: none;
   }
   .hero__title-key {
     color: var(--c-hivis);
