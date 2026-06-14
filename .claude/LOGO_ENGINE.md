@@ -58,6 +58,38 @@ elementos no cambian; la ejecución sube de nivel.
 
 ---
 
+## 🍌 GENERACIÓN/MEJORA CON IA — Nano Banana (Gemini) vía MCP
+
+YA Dev tiene conectado **Nano Banana 2** (Gemini Image de Google) como MCP server
+para generar y mejorar emblemas con IA. Útil para explorar conceptos o refinar un
+emblema crudo a calidad profesional.
+
+**Server:** `@ycse/nanobanana-mcp` · **Tools:** `gemini_generate_image` (texto→imagen),
+`gemini_edit_image` (imagen→imagen, transforma con instrucciones), `gemini_chat`.
+
+**Configuración** (una vez; la API key vive en `~/.claude.json`, **NUNCA** en el repo):
+```
+claude mcp add nanobanana-mcp -e GOOGLE_AI_API_KEY=<key> -- npx -y @ycse/nanobanana-mcp
+```
+API key gratis (free tier): https://aistudio.google.com/app/apikey
+> ⚠️ El MCP se carga al INICIAR Claude Code. Si se añade a mitad de sesión, hay que
+> reiniciar (`/exit`) para que las tools queden disponibles.
+
+**Flujo correcto (igual que el resto del motor):**
+1. Mandar el **emblema base** (JPEG original o el flat actual) a `gemini_edit_image`
+   con instrucciones precisas: "logo flat profesional, vectores limpios, conserva
+   engranaje + edificios + herramientas + arco naranja + onda azul, paleta
+   #025199/#F79204, fondo transparente, **sin texto**".
+2. **Solo el EMBLEMA** — la IA escribe mal el texto. El wordmark se mantiene
+   tipográfico (limpio), nunca generado por IA.
+3. **Vectorizar** el resultado (raster → SVG, ver §"Método profesional") y
+   componer con el wordmark (`compose-lockup.mjs`).
+4. Generar variaciones, el cliente elige, registrar la elegida.
+
+> Regla: la IA es para el EMBLEMA/concepto. Texto = tipografía. Entrega final = vector.
+
+---
+
 ## ⭐ MÉTODO PROFESIONAL (lección aprendida — COICEM 2026-06)
 
 **NO redibujar el logo a mano con paths SVG.** Tiene un techo de calidad bajo:
