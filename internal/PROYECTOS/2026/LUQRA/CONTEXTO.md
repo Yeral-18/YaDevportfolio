@@ -172,6 +172,9 @@ brandbook.html · firma-correo.html · firma-generador.html · hoja-membretada.h
 ### `luqra-logos/`
 favicon.ico · logo 240×240 · 245×36 · 32×32
 
+### `brand/logos-envato/` (11 variantes)
+11 logos de Envato organizados como `luqra-01 … luqra-11` (mezcla SVG/PNG) — banco de variantes de marca para selección/derivados.
+
 ---
 
 ## 9. ESTRUCTURA DE CARPETAS
