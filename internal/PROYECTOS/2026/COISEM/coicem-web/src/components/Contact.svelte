@@ -150,7 +150,6 @@
           </div>
           <div class="ct__actions">
             <button type="submit" class="ct__btn ct__btn--mail mono">Enviar por correo</button>
-            <button type="button" class="ct__btn ct__btn--wa mono" onclick={handleWhatsApp}>WhatsApp</button>
           </div>
           <p class="ct__recaptcha mono">
             Protegido por Google
@@ -207,7 +206,6 @@
   .ct__e { font-size: 0.66rem; color: #E8635B; }
 
   .ct__actions { display: grid; grid-template-columns: 1fr; gap: 0.75rem; margin-top: 0.3rem; }
-  @media (min-width: 420px) { .ct__actions { grid-template-columns: 1fr 1fr; } }
   .ct__btn {
     min-height: 48px; border: 1px solid transparent; border-radius: 0;
     font-size: 0.8rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase;
