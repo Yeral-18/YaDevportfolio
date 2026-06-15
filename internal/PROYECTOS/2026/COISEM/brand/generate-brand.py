@@ -15,8 +15,8 @@ logo = Image.open(os.path.join(here, 'logo-coicem-final.png')).convert('RGBA')
 W, H = logo.size
 # lockup ~720px (transparente) para el brandbook
 lockup = logo.resize((720, int(H*720/W)), Image.LANCZOS)
-# emblema (isotipo) ~340px
-emb = logo.crop((0, 0, H, H)); emb = emb.crop(emb.getbbox()); emb = emb.resize((340, 340), Image.LANCZOS)
+# emblema (isotipo) — usar el emblema DEDICADO (envato-emblema.svg limpio), no recortar el lockup
+emb = Image.open(os.path.join(here, 'emblema-isotipo.png')).convert('RGBA').resize((340, 340), Image.LANCZOS)
 # firma ~360px
 firma = logo.resize((360, int(H*360/W)), Image.LANCZOS)
 
