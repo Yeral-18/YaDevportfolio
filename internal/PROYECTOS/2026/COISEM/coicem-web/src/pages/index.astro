@@ -4,12 +4,17 @@ import Hero from '../components/Hero.astro';
 import MisionVision from '../components/MisionVision.astro';
 import Areas from '../components/Areas.astro';
 import Contact from '../components/Contact.svelte';
-import LogoExploded from '../components/LogoExploded.svelte';
 ---
 
 <Layout>
   <Hero>
-    <LogoExploded slot="visual" client:visible />
+    <img
+      slot="visual"
+      src="/images/coicem-emblema.png"
+      alt="Emblema COICEM S.A.S — engranaje, edificios y herramientas"
+      width="838" height="821"
+      loading="eager"
+    />
   </Hero>
   <MisionVision />
   <Areas />
