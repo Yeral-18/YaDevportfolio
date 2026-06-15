@@ -105,6 +105,42 @@ const siteJsonLd = {
     <ScrollToTop client:idle />
     <CrosshairCursor client:idle />
 
+    <!-- ── Panel YaDev oculto (entregables internos · no indexado) ── -->
+    <div id="yadev" class="yadev">
+      <button class="yadev__tab" type="button" aria-expanded="false" aria-controls="yadev-menu" aria-label="Panel YaDev — entregables">YA<br>DEV</button>
+      <div id="yadev-menu" class="yadev__menu" hidden>
+        <p class="yadev__h">ENTREGABLES · YADEV</p>
+        <a href="/internal/brandbook.html" target="_blank" rel="noopener">Brandbook</a>
+        <a href="/internal/firma-correo.html" target="_blank" rel="noopener">Firma de correo</a>
+      </div>
+    </div>
+    <style>
+      .yadev { position: fixed; left: 0; top: 50%; transform: translateY(-50%); z-index: 90; display: flex; align-items: center; }
+      .yadev__tab {
+        width: 30px; min-height: 74px; background: #313F50; color: #EDEDE8; border: 0; cursor: pointer;
+        font-family: 'IBM Plex Mono', monospace; font-size: 0.62rem; letter-spacing: 0.08em; line-height: 1.3;
+        opacity: 0.35; transition: opacity 0.18s linear; writing-mode: initial;
+      }
+      .yadev:hover .yadev__tab, .yadev__tab:focus-visible { opacity: 1; }
+      .yadev__menu { background: #0B0E14; border: 1px solid #313F50; border-left: 0; padding: 0.85rem 1rem; min-width: 180px; }
+      .yadev__h { font-family: 'IBM Plex Mono', monospace; font-size: 0.6rem; letter-spacing: 0.14em; color: #F79204; margin: 0 0 0.6rem; }
+      .yadev__menu a { display: block; color: #EDEDE8; text-decoration: none; font-family: 'IBM Plex Sans', sans-serif; font-size: 0.84rem; padding: 0.45rem 0; border-top: 1px solid #161B24; }
+      .yadev__menu a:hover { color: #F79204; }
+      @media print { .yadev { display: none; } }
+    </style>
+    <script>
+      (() => {
+        const tab = document.querySelector('.yadev__tab');
+        const menu = document.getElementById('yadev-menu');
+        if (!tab || !menu) return;
+        tab.addEventListener('click', () => {
+          const open = menu.hasAttribute('hidden');
+          if (open) { menu.removeAttribute('hidden'); tab.setAttribute('aria-expanded', 'true'); }
+          else { menu.setAttribute('hidden', ''); tab.setAttribute('aria-expanded', 'false'); }
+        });
+      })();
+    </script>
+
     <style>
       /* Offset por el navbar horizontal fijo (72px de alto, full-width). */
       .content-shell { padding-top: 72px; }
