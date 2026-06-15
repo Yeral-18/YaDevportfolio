@@ -24,7 +24,7 @@ sig = '''<!DOCTYPE html>
 
 <table cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse;background:#ffffff;font-family:Arial,Helvetica,sans-serif;color:#0B0E14;border:1px solid #E3E7EC;">
   <tr>
-    <td valign="middle" style="padding:18px 20px 18px 20px;vertical-align:middle;background:#0B0E14;">
+    <td valign="middle" style="padding:18px 24px 18px 20px;vertical-align:middle;background:#FFFFFF;">
       <img src="''' + LOGO_B64 + '''" width="190" alt="COICEM S.A.S"
         style="display:block;width:190px;height:auto;border:0;outline:none;text-decoration:none;image-rendering:-webkit-optimize-contrast;" />
     </td>
